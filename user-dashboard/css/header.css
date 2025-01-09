@@ -1,0 +1,248 @@
+.notification-dropdown {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  padding: 0 2%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+
+.paired-box {
+  width: 572px;
+  padding: 40px 30px;
+}
+
+.paired-box h5 {
+  font-size: 25px;
+  color: #0959a3 !important;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup-btn {
+  padding: 6px 34px;
+  color: #0959a3;
+  border: 1px solid #0959a3;
+  border-radius: 20px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  background: linear-gradient(to right, #0b6fc0, #0ae0fc);
+  color: white;
+  border: 1px solid white;
+}
+
+.m-remote-care-dropdown {
+  background: white;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.m-remote-care-dropdown li{
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  list-style: none;
+  color: black !important;
+}
+.m-remote-care-dropdown li:hover{
+  background: #ececec;
+}
+
+
+.sidebar.collapsed {
+  width: 100px !important;
+}
+
+.menu-item{
+  padding: 13px !important;
+}
+.menu-item-dropdown{
+  padding: 13px !important;
+}
+
+.upgrade-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px !important;
+    margin-bottom: 18px  !important;
+}
+
+.upgrade-box .upgrade-text {
+  font-size: 16px;
+}
+
+.profile-box {
+  max-width: 622px;
+  width: 100%;
+  padding: 40px 30px;
+}
+
+.profile-box h5 {
+  font-size: 25px;
+  color: #0C74C2;
+  font-weight: 500;
+}
+
+.profile-box .profile-link h6{
+  color: #555555;
+}
+
+.dropdown-content {
+    display: none; 
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-item-custom.active{
+   color: #0C75C2;
+}
+
+.sidebar-icon {
+    width: 30px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #FF4444;
+    color: white;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-item {
+    transition: background-color 0.3s;
+    border-radius: 6px;
+}
+
+.notification-item:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #E0F1FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.dropdown-divider {
+    margin: 0;
+    border-color: #e9ecef;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .notification-dropdown {
+        width: 100% !important;
+        margin: 0;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+.dropdown-toggle-custom::after {
+    display: none !important;
+}
+
+.menu-item.active svg path {
+    fill: white;
+}
+
+.menu-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.menu-icon-wrapper svg path {
+    fill: #9197B3;
+}
+
+.menu-icon-wrapper:hover svg path {
+    fill: #0C75C2;
+}
+
+.menu-icon-wrapper.active svg path {
+    fill: white;
+}
+
+.menu-icon-wrapper.active svg path:hover{
+    fill: #9197B3 !important;
+}
+
+.logo {
+  width: 190px !important;
+  height: 55px !important;
+}
+
+.notification-icon img{
+  width: 26px !important;
+  height: 30px !important;
+}
+
+.menu-item.active:hover {
+  background: #0c75c2 !important;
+  color: white !important;
+}
+
+.menu-item-dropdown.active:hover {
+  background: #0c75c2 !important;
+  color: white !important;
+}
+
+.sidebar {
+  min-height: 100vh !important;
+  height: auto !important;
+}
+
+.menu-item:hover svg path {
+  fill: #0C75C2 !important;
+}
+
+.menu-item-dropdown.active svg path{
+  fill: white !important;
+}
+
+ 
