@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/change-pin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/share.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center justify-content-between">
+        <!-- This is the Updated HTML FILE -->
+        <!-- Left side -->
+        <div class="d-flex align-items-center">
+            <div class="logo-container border-lg-end border-0">
+                <img src="assets/logo.png" alt="Health Monitor" class="logo">
+            </div>
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
+        </div>
+
+        <!-- Center navigation (visible on desktop only) -->
+        <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+            <a href="/health-monitor/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/health-monitor/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <div class="dropdown">
+                <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </button>
+                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item remote-care-btn">Call DHA</li>
+                    <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                    <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Right side with toggle button, notification and user -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Notification -->
+            <div class="position-relative d-none d-lg-block dropdown">
+                <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                    <span class="notification-badge">5</span>
+                </a>
+
+                <!-- Notification Dropdown Menu -->
+                <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted" style="font-size: 12px;">
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
+                        <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                    </div>
+                    <hr class="dropdown-divider my-2">
+
+                    <!-- Notification Items -->
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                     <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                            <small class="text-muted d-block">15 mins ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                    <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                            <small class="text-muted d-block">1 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+        <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                            <small class="text-muted d-block">8 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+             <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+      <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                            notifications</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
+
+            <!-- User Dropdown (visible on desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Change pin
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            National Policies
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/remote-care.html">
+                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
+                            Remote Care
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/health-monitor/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to DHA Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <div class="dropdown">
+                    <button id="remote-care-dropdown"
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
+                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                                           <li class=" dropdown-item
+                        remote-care-btn">
+                        Call DHA</li>
+                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-white">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/health-monitor/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/health-monitor/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <div class="">
+                        <a href="/health-monitor/user-dashboard/remote-access.html"
+                            class="mobile-menu-item d-flex align-items-center gap-2">
+                            <i class="bi bi-phone"></i>Remote Care
+                        </a>
+                        <div class="px-3 py-2">
+                            <a href="/health-monitor/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                        </div>
+                    </div>
+                    <a href="/health-monitor/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <a href="/health-monitor/user-dashboard/remote-access.html"
+                    class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </a>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted" style="color: white;">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/health-monitor/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/health-monitor/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <a href="/health-monitor/user-dashboard/remote-access.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-phone"></i>Remote Care
+                    </a>
+                    <a href="/health-monitor/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+
+
+                    <!-- Add other menu items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <div class="layout-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <a href="/health-monitor/user-dashboard/overview.html">
+                <div class="menu-item active">
+                    <img src="assets\compass-3-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    Overview
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/symptom-checker.html">
+                <div class="menu-item">
+                    <img src="assets\3d-square 1.svg" alt="" class="sidebar-icon">
+                    Symptom Checker
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <img src="assets\noun-emergency-light-6450584 1.svg" alt="" class="sidebar-icon">
+                    Emergency
+                </div>
+            </a>
+
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <img src="assets\monitor-alt-1-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    Health Monitors
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a>
+                <a href="/health-monitor/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a>
+                <a href="/health-monitor/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a>
+                <a href="/health-monitor/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a>
+                <a href="/health-monitor/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a>
+                <a href="/health-monitor/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
+                <a href="/health-monitor/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a>
+                <a href="/health-monitor/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a>
+            </div>
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <img src="assets\Group 1000011073.svg" alt="" class="sidebar-icon">
+                    Communities
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
+                <a href="/health-monitor/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                <a href="/health-monitor/user-dashboard/community-reviews.html" class="dropdown-item-custom">Reviews</a>
+                <a href="/health-monitor/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
+                <a href="/health-monitor/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
+                <a href="/health-monitor/user-dashboard/chemists.html" class="dropdown-item-custom">Chemists</a>
+                <a href="/health-monitor/user-dashboard/find-dha.html" class="dropdown-item-custom">Find DHA</a>
+                <a href="/health-monitor/user-dashboard/dha-training.html" class="dropdown-item-custom">DHA Training</a>
+                <a href="/health-monitor/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
+            </div>
+            <a href="/fact-checker.html">
+                <div class="menu-item">
+                    <img src="assets\message-question 1 (1).svg" alt="" class="sidebar-icon">
+                    Fact Checker
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/health-educate.html"></a>
+            <div class="menu-item">
+                <img src="assets\book-square-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+
+                Health Educate
+            </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/user-transfer.html">
+                <div class="menu-item">
+                    <img src="assets\transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+
+
+                    Transfer
+                </div>
+            </a>
+
+            <div class="upgrade-box">
+                <h5>Upgrade to DHA to get access all Features!</h5>
+                <button class="upgrade-button">Get DHA Now!</button>
+            </div>
+            <button class="log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Log Out
+            </button>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h5 class="fw-medium">Change Current PIN</h5>
+                </div>
+                <div class="page-input">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form class="change-pin-form">
+                                <div class="form-group d-flex flex-column position-relative">
+                                    <label for="input1" class="mb-2">Current Password</label>
+                                    <input type="password" id="input1" required>
+                                    <div class="show" id="togglePass1">
+                                        <i id="showPass1" class="bi bi-eye-slash"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group d-flex flex-column position-relative mt-3">
+                                    <label for="input2" class="mb-2">New Password</label>
+                                    <input type="password" id="input2" required>
+                                    <div class="show" id="togglePass2">
+                                        <i id="showPass2" class="bi bi-eye-slash"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-column position-relative mt-3">
+                                    <label for="input2" class="mb-2">Confirm Password</label>
+                                    <input type="password" id="input3" required>
+                                    <div class="show" id="togglePass3">
+                                        <i id="showPass3" class="bi bi-eye-slash"></i>
+                                    </div>
+                                </div>
+                                <div class="wrong-pass-error text text-danger d-none" id="wrong-pass-error">
+                                    <span>The confirm password does not match. Please try again.</span>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <button type="submit" id="change-pin-btn" class="btn-primary">Change Pin</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 mt-3">
+                            <div class="change-pin-card py-3 px-4">
+                                <p class="fw-normal">Password must contains:</p>
+                                <ul class="list-unstyled">
+                                    <li>A minimum of 8 characters</li>
+                                    <li>At least 1 number</li>
+                                    <li>At least 1 upper case & symbol</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Share Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    <h6>Copy Link</h6>
+                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/share.svg" alt="icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container">
+                <img src="assets\7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets\9b2927cddd856d755a76f05fcbd7d7d0.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets\7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Share Message start -->
+        <div class="share-message">
+            <div class="share-card p-3">
+                <div class="share-img text-end">
+                    <i class="bi-regular bi-x-lg"></i>
+                </div>
+                <div class="share-heading text-center my-4">
+                    <h4>Share My Profile</h4>
+                </div>
+                <div class="share-content d-flex">
+                    <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                    <a href="#" class="text-decoration-underline text-black mx-auto">user.bohdanpeter/123/aaaabbc</a>
+                    <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                    <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Share Message end -->
+        <script>
+            // Share Message
+            const shareMsg = document.querySelector('.share-message');
+            const crosIcon = document.querySelector('.share-img i');
+            const blockBtn = document.querySelector('#share')
+            const password = document.getElementById('input2');
+            const cPassword = document.getElementById('input3');
+            const changePinBtn = document.getElementById('change-pin-btn');
+
+            changePinBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (password.value === cPassword.value) {
+                    //   Password Message
+                    const passwordMsg = document.querySelector('.update-pass');
+                    const crossIcon = document.querySelector('.cross-icon i');
+                        passwordMsg.style.display = 'block';
+
+                    crossIcon.addEventListener('click', () => {
+                        passwordMsg.style.display = 'none';
+                    });
+                }else{
+                    const wrongPassText = document.getElementById('wrong-pass-error');
+                    wrongPassText.classList.remove('d-none')
+                }
+            })
+
+            const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+            const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+            const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+            const pairDevicePopop = document.getElementById('paired-device-popup');
+            const pairedBackBtn = document.getElementById('paired-black-btn');
+            const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+            const shareProfilePopup = document.getElementById('share-profile-popup');
+            const shareProfileBtn = document.getElementById('share-profile-btn');
+            const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+            remoteCareDropdownBtn.addEventListener('click', () => {
+                remoteCareDropdown.classList.toggle('d-none')
+            })
+
+            ProfileCloseBtn.addEventListener('click', () => {
+                shareProfilePopup.classList.toggle('d-none')
+            })
+
+            shareProfileBtn.addEventListener('click', () => {
+                shareProfilePopup.classList.remove('d-none');
+                shareProfilePopup.classList.add('d-flex');
+            })
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+                if (dropdownMenu) {
+                    dropdownMenu.classList.add("show");
+                }
+
+                const arrowIcon = document.querySelector(".menu-item-dropdown .arrow");
+                if (arrowIcon) {
+                    arrowIcon.style.transform = "rotate(90deg)";
+                }
+            });
+
+            for (let i = 0; i < remoteCareBtn.length; i++) {
+                remoteCareBtn[i].addEventListener('click', () => {
+                    pairDevicePopop.classList.remove('d-none');
+                    pairDevicePopop.classList.add('d-flex');
+                })
+            }
+
+
+            pairedBackBtn.addEventListener('click', () => {
+                pairDevicePopop.classList.add('d-none');
+            })
+            pairedCloseBtn.addEventListener('click', () => {
+                pairDevicePopop.classList.add('d-none');
+            })
+
+
+            crosIcon.addEventListener('click', () => {
+                shareMsg.style.display = 'none';
+            });
+
+            blockBtn.addEventListener('click', () => {
+                shareMsg.style.display = 'block';
+            });
+        </script>
+        <!-- Password Update start -->
+        <div class="update-pass">
+            <div class="update-card p-3">
+                <div class="cross-icon text-end">
+                    <i class="bi-regular bi-x-lg"></i>
+                </div>
+                <div class="update-img mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                        <path d="M2 8L8 14L20 2" stroke="#fff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="update-content text-center mt-3">
+                    <h4 class="fw-medium">Password Updated!</h4>
+                    <p>Your pin has been successfully updated!<br>Use your new pin to <a href="../login.html"
+                            class="text-decoration-none fw-semibold">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Password Update end -->
+    </div>
+
+    <script>
+        document.getElementById('togglePass1').addEventListener('click', function () {
+            const passwordField = document.getElementById('input1');
+            const eyeIcon = document.getElementById('showPass1');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.remove('bi-eye-slash');
+                eyeIcon.classList.add('bi-eye');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('bi-eye');
+                eyeIcon.classList.add('bi-eye-slash');
+            }
+        });
+
+        document.getElementById('togglePass3').addEventListener('click', function () {
+            const passwordField = document.getElementById('input3');
+            const eyeIcon = document.getElementById('showPass3');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.remove('bi-eye-slash');
+                eyeIcon.classList.add('bi-eye');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('bi-eye');
+                eyeIcon.classList.add('bi-eye-slash');
+            }
+        });
+
+        document.getElementById('togglePass2').addEventListener('click', function () {
+            const passwordField = document.getElementById('input2');
+            const eyeIcon = document.getElementById('showPass2');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.remove('bi-eye-slash');
+                eyeIcon.classList.add('bi-eye');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('bi-eye');
+                eyeIcon.classList.add('bi-eye-slash');
+            }
+        });
+    </script>
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user dashboard/navbar-&-sidebar.js"></script>
+</body>
+
+</html>

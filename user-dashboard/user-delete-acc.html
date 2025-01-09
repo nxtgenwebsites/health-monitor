@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/user-delete-acc.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/share.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--This is the Update Page-->
+<header class="header d-flex align-items-center justify-content-between">
+    <!-- This is the Updated HTML FILE -->
+    <!-- Left side -->
+    <div class="d-flex align-items-center">
+        <div class="logo-container border-lg-end border-0">
+            <img src="assets/logo.png" alt="Health Monitor" class="logo">
+        </div>
+        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
+    </div>
+
+    <!-- Center navigation (visible on desktop only) -->
+    <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+        <a href="/health-monitor/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
+            <img src="assets/Group.svg" alt="" style="width: 20px;">
+            Emergency
+        </a>
+        <a href="/health-monitor/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
+            <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+            Monitors
+        </a>
+        <div class="dropdown">
+            <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                Remote Care
+            </button>
+            <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
+                <li class="dropdown-item remote-care-btn">Call DHA</li>
+                <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                <li class="dropdown-item remote-care-btn">Call Doctor</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right side with toggle button, notification and user -->
+    <div class="d-flex align-items-center gap-3">
+        <!-- Notification -->
+        <div class="position-relative d-none d-lg-block dropdown">
+            <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                <span class="notification-badge">5</span>
+            </a>
+
+            <!-- Notification Dropdown Menu -->
+            <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-muted" style="font-size: 12px;">
+                        You have <strong class="text-muted">5 new</strong> notifications
+                    </span>
+                    <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                </div>
+                <hr class="dropdown-divider my-2">
+
+                <!-- Notification Items -->
+                <div class="notification-item d-flex gap-2 p-2">
+                    <div class="notification-icon">
+                        <div class="icon-circle">
+           <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                        </div>
+                    </div>
+                    <div class="notification-content">
+                        <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                        <small class="text-muted d-block">15 mins ago</small>
+                    </div>
+                </div>
+
+                <hr class="dropdown-divider my-2">
+
+                <div class="notification-item d-flex gap-2 p-2">
+                    <div class="notification-icon">
+                        <div class="icon-circle">
+                    <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                        </div>
+                    </div>
+                    <div class="notification-content">
+                        <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                        <small class="text-muted d-block">1 hr ago</small>
+                    </div>
+                </div>
+
+                <hr class="dropdown-divider my-2">
+
+                <div class="notification-item d-flex gap-2 p-2">
+                    <div class="notification-icon">
+                        <div class="icon-circle">
+      <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                        </div>
+                    </div>
+                    <div class="notification-content">
+                        <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                        <small class="text-muted d-block">8 hr ago</small>
+                    </div>
+                </div>
+
+                <hr class="dropdown-divider my-2">
+
+                <div class="notification-item d-flex gap-2 p-2">
+                    <div class="notification-icon">
+                        <div class="icon-circle">
+           <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                        </div>
+                    </div>
+                    <div class="notification-content">
+                        <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                        <small class="text-muted d-block">Yesterday</small>
+                    </div>
+                </div>
+
+                <hr class="dropdown-divider my-2">
+
+                <div class="notification-item d-flex gap-2 p-2">
+                    <div class="notification-icon">
+                        <div class="icon-circle">
+             <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                        </div>
+                    </div>
+                    <div class="notification-content">
+                        <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                        <small class="text-muted d-block">Yesterday</small>
+                    </div>
+                </div>
+
+                <hr class="dropdown-divider my-2">
+
+                <div class="text-center mt-2">
+                    <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                        notifications</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+        </button>
+
+        <!-- User Dropdown (visible on desktop) -->
+        <div class="dropdown d-none d-lg-block">
+            <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                style="cursor: pointer;">
+                <img src="assets/1.png" alt="" class="user-avatar">
+                <span class="d-none d-lg-inline">Bohdan Peter</span>
+            </div>
+            <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                <li class="dropdown-header p-0 mb-3">
+                    <div class="d-flex gap-3 align-items-center">
+                        <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                        <div>
+                            <h6 class="mb-0">Bohdan Peter</h6>
+                            <small class="text-muted">Preston, UK</small>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/user-profile.html">
+                        <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                        Profile
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/new-sponsorship.html">
+                        <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                        Sponsorship
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/user-print.html">
+                        <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                        Print
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/user-change-pin.html">
+                        <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                        Change pin
+                    </a></li>
+                <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                        <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                        Share link
+                    </button></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/user-delete-acc.html">
+                        <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                        Delete Account
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/national-policies.html">
+                        <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                        National Policies
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/remote-access.html">
+                        <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                        Access Control
+                    </a></li>
+                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                        href="/health-monitor/user-dashboard/remote-care.html">
+                        <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
+                        Remote Care
+                    </a></li>
+                <li class="border-top mt-2 pt-2">
+                    <a class="dropdown-item py-2 text-primary fw-semibold" href="/health-monitor/user-dashboard/upgrade-to-dha.html">
+                        Upgrade to DHA Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Offcanvas -->
+<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+    <div class="offcanvas-header">
+        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Navigation Links -->
+        <div class="mobile-nav mb-4">
+            <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <div class="dropdown">
+                <button id="remote-care-dropdown"
+                    class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                    <div class="d-flex gap-2 justify-content-center align-items-center">
+                        <i class="bi bi-phone"></i>
+                        <span>Remote Care</span>
+                    </div>
+                    <div class="dropdown-toggle"></div>
+                </button>
+                <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                           <li class=" dropdown-item remote-care-btn">
+                    Call DHA</li>
+                    <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                    <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User Profile for Mobile -->
+        <div class="mobile-user-profile w-100">
+            <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                <img src="assets/1.png" alt="" class="user-avatar">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-white">Preston, UK</small>
+                </div>
+            </div>
+            <!-- User Menu Items -->
+            <div class="mobile-user-menu">
+                <a href="/health-monitor/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-person-circle"></i> Profile
+                </a>
+                <a href="/health-monitor/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-star"></i> Sponsorship
+                </a>
+                <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-printer"></i> Print
+                </a>
+                <a href="/health-monitor/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-key"></i> Change Pin
+                </a>
+                <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                    <i class="bi bi-share"></i> Share Link
+                </a>
+                <a href="/health-monitor/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-trash"></i> Delete Account
+                </a>
+                <a href="/health-monitor/user-dashboard/national-policies.html"
+                    class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-flag"></i> National Policies
+                </a>
+                <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-shield-lock"></i>Access Control
+                </a>
+                <div class="">
+                    <a href="/health-monitor/user-dashboard/remote-access.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-phone"></i>Remote Care
+                    </a>
+                    <div class="px-3 py-2">
+                        <a href="/health-monitor/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                    </div>
+                </div>
+                <a href="/health-monitor/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-trash"></i>Upgrade to DHA Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Mobile Menu Offcanvas -->
+<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+    <div class="offcanvas-header">
+        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Navigation Links -->
+        <div class="mobile-nav mb-4">
+            <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <a href="/health-monitor/user-dashboard/remote-access.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                Remote Care
+            </a>
+        </div>
+
+        <!-- User Profile for Mobile -->
+        <div class="mobile-user-profile">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="assets/1.png" alt="" class="user-avatar">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted" style="color: white;">Preston, UK</small>
+                </div>
+            </div>
+            <!-- User Menu Items -->
+            <div class="mobile-user-menu">
+                <a href="/health-monitor/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-person-circle"></i> Profile
+                </a>
+                <a href="/health-monitor/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-star"></i> Sponsorship
+                </a>
+                <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-printer"></i> Print
+                </a>
+                <a href="/health-monitor/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-key"></i> Change Pin
+                </a>
+                <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                    <i class="bi bi-share"></i> Share Link
+                </a>
+                <a href="/health-monitor/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-trash"></i> Delete Account
+                </a>
+                <a href="/health-monitor/user-dashboard/national-policies.html"
+                    class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-flag"></i> National Policies
+                </a>
+                <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-shield-lock"></i>Access Control
+                </a>
+                <a href="/health-monitor/user-dashboard/remote-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-phone"></i>Remote Care
+                </a>
+                <a href="/health-monitor/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                    <i class="bi bi-trash"></i>Upgrade to DHA Now
+                </a>
+
+
+                <!-- Add other menu items as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="layout-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <a href="/health-monitor/user-dashboard/overview.html">
+                <div class="menu-item active">
+                    <img src="assets\compass-3-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    Overview
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/symptom-checker.html">
+                <div class="menu-item">
+                    <img src="assets\3d-square 1.svg" alt="" class="sidebar-icon">
+                    Symptom Checker
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <img src="assets\noun-emergency-light-6450584 1.svg" alt="" class="sidebar-icon">
+                    Emergency
+                </div>
+            </a>
+
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <img src="assets\monitor-alt-1-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    Health Monitors
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a>
+                <a href="/health-monitor/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a>
+                <a href="/health-monitor/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a>
+                <a href="/health-monitor/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a>
+                <a href="/health-monitor/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a>
+                <a href="/health-monitor/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
+                <a href="/health-monitor/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a>
+                <a href="/health-monitor/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a>
+            </div>
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <img src="assets\Group 1000011073.svg" alt="" class="sidebar-icon">
+                    Communities
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
+                <a href="/health-monitor/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                <a href="/health-monitor/user-dashboard/community-reviews.html" class="dropdown-item-custom">Reviews</a>
+                <a href="/health-monitor/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
+                <a href="/health-monitor/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
+                <a href="/health-monitor/user-dashboard/chemists.html" class="dropdown-item-custom">Chemists</a>
+                <a href="/health-monitor/user-dashboard/find-dha.html" class="dropdown-item-custom">Find DHA</a>
+                <a href="/health-monitor/user-dashboard/dha-training.html" class="dropdown-item-custom">DHA Training</a>
+                <a href="/health-monitor/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
+            </div>
+            <a href="/fact-checker.html">
+                <div class="menu-item">
+                    <img src="assets\message-question 1 (1).svg" alt="" class="sidebar-icon">
+                    Fact Checker
+                </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/health-educate.html"></a>
+            <div class="menu-item">
+                <img src="assets\book-square-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+
+                Health Educate
+            </div>
+            </a>
+            <a href="/health-monitor/user-dashboard/user-transfer.html">
+                <div class="menu-item">
+                    <img src="assets\transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+
+
+                    Transfer
+                </div>
+            </a>
+
+            <div class="upgrade-box">
+                <h5>Upgrade to DHA to get access all Features!</h5>
+                <button class="upgrade-button">Get DHA Now!</button>
+            </div>
+            <button class="log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Log Out
+            </button>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h5 class="fw-medium">Delete Account</h5>
+                </div>
+                <div class="page-input">
+                    <div class="row w-100">
+                        <div class="col-lg-6">
+                            <div class="user-details-card">
+                                <div class="personal-details d-flex position-relative gap-2">
+                                    <div class="personal-details-img">
+                                        <img src="assets/1.png" alt="IMG" class="rounded-circle" width="135px"
+                                            height="135px">
+                                    </div>
+                                    <div class="personal-details-content">
+                                        <h4 class="fw-medium">Mr. David Mctosh</h4>
+                                        <!-- IMG start -->
+                                        <a href="add-patient.html" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                    fill="#0C74C2" />
+                                            </svg>
+                                        </a>
+                                        <!-- IMG end -->
+                                        <small>Male, 35 years old</small><br>
+                                        <small>Married | Nigeria</small><br>
+                                        <small>Date of Birth: 01 Jan, 1989</small>
+                                    </div>
+                                </div>
+                                <hr class="my-4 col-divider">
+                                <div class="other-details-content">
+                                    <h6 class="fw-normal">Other details</h6>
+                                    <div class="row text-sm-start text-center">
+                                        <div class="col-sm-6">
+                                            <small class="fw-light">Contact No.</small><br>
+                                            <small class="fw-light">Email ID</small><br>
+                                            <small class="fw-light">Education Level</small><br>
+                                            <small class="fw-light">Employement Status</small>
+                                        </div>
+                                        <div class="col-sm-6 mt-lg-0 mt-3">
+                                            <small class="fw-medium">+23 456 987 56</small><br>
+                                            <small class="fw-medium">david.mc1@gmail.com</small><br>
+                                            <small class="fw-medium">Post Grade</small><br>
+                                            <small class="fw-medium">Business</small>
+                                        </div>
+                                        <div class="notes-content mt-5">
+                                            <small><a href="#" class="text-decoration-none fw-light">Notes</a></small>
+                                            <br>
+                                            <span class="notes-text">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kin-card mt-3">
+                                <div class="kin-heading d-flex position-relative">
+                                    <div class="kin-img">
+                                    <a href="add-patient.html" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                    fill="#0C74C2" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="kin-content">
+                                        <h4 class="fw-medium">Next of Kin</h4>
+                                    </div>
+                                </div>
+                                <div class="row text-sm-start text-center mt-3">
+                                    <div class="col-sm-6">
+                                        <small class="fw-light">NOK Relationship</small><br>
+                                        <small class="fw-light">Full Name</small><br>
+                                        <small class="fw-light">Gender</small><br>
+                                        <small class="fw-light">Contact</small><br>
+                                        <small class="fw-light">Email</small>
+                                    </div>
+                                    <div class="col-sm-6 mt-lg-0 mt-3">
+                                        <small class="fw-medium">Brother</small><br>
+                                        <small class="fw-medium">Mr. Oblama Kim</small><br>
+                                        <small class="fw-medium">Male</small><br>
+                                        <small class="fw-medium">+23 963 852 741</small><br>
+                                        <small class="fw-medium">oblama.87@gmail.com</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="residential-card mt-lg-0 mt-3">
+                                <div class="residential-heading position-relative d-flex">
+                                    <div class="residential-img">
+                                    <a href="add-patient.html" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                    fill="#0C74C2" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="residential-content">
+                                        <h4 class="fw-medium d-sm-block d-none">Residential Details</h4>
+                                        <h4 class="fw-medium d-sm-none">Residential <br>Details</h4>
+                                    </div>
+                                </div>
+                                <div class="row text-sm-start text-center mt-3">
+                                    <div class="col-sm-6">
+                                        <small class="fw-light">Country</small><br>
+                                        <small class="fw-light">State</small><br>
+                                        <small class="fw-light">City</small><br>
+                                        <small class="fw-light">Town</small><br>
+                                        <small class="fw-light">Address</small>
+                                    </div>
+                                    <div class="col-sm-6 mt-lg-0 mt-3">
+                                        <small class="fw-medium">Nigeria</small><br>
+                                        <small class="fw-medium">Lagos</small><br>
+                                        <small class="fw-medium">Lagos</small><br>
+                                        <small class="fw-medium">Ikeja</small><br>
+                                        <small class="fw-medium">15 Awolowo Way, Ikeja, Lagos</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="children-card mt-3">
+                                <div class="children-heading position-relative">
+                                    <div class="children-img">
+                                    <a href="add-patient.html" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                    fill="#0C74C2" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="children-content">
+                                        <h4 class="fw-medium d-sm-block d-none">Children Details</h4>
+                                        <h4 class="fw-medium d-sm-none">Children <br>Details</h4>
+                                    </div>
+                                </div>
+                                <div class="row text-sm-start text-center mt-3">
+                                    <div class="col-sm-6">
+                                        <small class="fw-light">No. of Children</small><br>
+                                        <small class="fw-light">Child's Name</small><br>
+                                        <small class="fw-light">Child's Gender</small><br>
+                                        <small class="fw-light">Date of Birth</small><br>
+                                    </div>
+                                    <div class="col-sm-6 mt-lg-0 mt-3">
+                                        <small class="fw-medium">01</small><br>
+                                        <small class="fw-medium">Lagos</small><br>
+                                        <small class="fw-medium">Male</small><br>
+                                        <small class="fw-medium">01 Jan, 2019</small><br>
+                                    </div>
+                                    <div class="add-children-content mt-3">
+                                        <small>
+                                            <a href="#" class="text-decoration-none text-black fst-italic fw-medium">Add
+                                                more children</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notes-card mt-3">
+                                <div class="notes-heading position-relative">
+                                    <div class="notes-img">
+                                    <a href="add-patient.html" class="edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                    fill="#0C74C2" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="notes-content">
+                                        <h4 class="fw-medium">Notes</h4>
+                                    </div>
+                                </div>
+                                <div class="notes mt-3">
+                                    <p>Lorem ipsum is a placeholder text commonly used to
+                                        demonstrate the visual form of a document or a typeface
+                                        without relying on meaningful content. Lorem ipsum may
+                                        be used as a placeholder before the final copy is
+                                        available.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delete-acc-button mt-3 text-center">
+                            <button type="button" class="rounded-pill">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Confirmation start -->
+        <div class="delete-confirmation">
+            <div class="delete-confirmation-card p-3">
+                <div class="cancel-btn text-end">
+                    <i class="bi-regular bi-x-lg"></i>
+                </div>
+                <div class="delete-heading text-center my-3">
+                    <h4 class="fw-medium">Delete Account?</h4>
+                    <small class="my-3">Are you sure you want to delete your account?<br>
+                        All your date might lost!</small>
+                </div>
+                <div class="confirm-cancel-btns text-center">
+                    <button type="button" class="rounded-pill me-3" id="confirmBtn">Confirm</button>
+                    <button type="button" class="rounded-pill" id="cancelBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Confirmation end -->
+        <!-- Delete Account start -->
+        <div class="password-confirmation">
+            <div class="password-confirmation-card p-3">
+                <div class="delete-btn text-end">
+                    <i class="bi-regular bi-x-lg"></i>
+                </div>
+                <div class="password-heading text-center my-3">
+                    <h4 class="fw-medium">Confirm Password</h4>
+                    <small class="my-3">In order to confirm that it’s YOU,<br>
+                        please retype your password,</small>
+                </div>
+                <form class="password-form">
+                    <div class="form-group">
+                        <input type="password" placeholder="Type password" required id="typePass">
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="password" placeholder="Re-type password" required id="retypePass">
+                        <small id="error-message">Your password doesn't match</small>
+                    </div>
+                    <div class="form-group text-center btn-group">
+                        <button type="submit" class="rounded-pill me-3" id="confirmPass">Confirm</button>
+                        <button type="button" class="rounded-pill" id="cancelPass">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Account end -->
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+<!-- Share Profile Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+    <div class="profile-box bg-white rounded text-center position-relative w-100">
+        <h5 class="mt-3">Share My Profile</h5>
+        <div
+            class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+            <h6>Copy Link</h6>
+            <h6>user.bohdanpeter/123/aaaabbc</h6>
+            <div class="d-flex">
+                <button class="btn py-0 bg-white border-0">
+                    <img src="assets/copy.svg" alt="icon">
+                </button>
+                <button class="btn py-0 bg-white border-0">
+                    <img src="assets/share.svg" alt="icon">
+                </button>
+            </div>
+        </div>
+        <div class="close-btn">
+            <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                    alt="close"></button>
+        </div>
+    </div>
+</div>
+    <!-- Share Message start -->
+    <!-- Share Message start -->
+    <div class="share-message">
+        <div class="share-card p-3">
+            <div class="share-img text-end">
+                <i class="bi-regular bi-x-lg"></i>
+            </div>
+            <div class="share-heading text-center my-4">
+                <h4>Share My Profile</h4>
+            </div>
+            <div class="share-content d-flex">
+                <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                <a href="#" class="text-decoration-underline text-black mx-auto">user.bohdanpeter/123/aaaabbc</a>
+                <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Share Message end -->
+    <!-- Share Message end -->
+    <script>
+        // Delete Acc
+        const deleteIcon = document.querySelector('.cancel-btn i');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const deleteMsg = document.querySelector('.delete-confirmation');
+        const deleteBtn = document.querySelector('.delete-acc-button button');
+        deleteIcon.addEventListener('click', () => {
+            deleteMsg.style.display = 'none';
+        });
+
+        deleteBtn.addEventListener('click', () => {
+            deleteMsg.style.display = 'block';
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            deleteMsg.style.display = 'none';
+        });
+
+        confirmBtn.addEventListener('click', () => {
+            passwordMsg.style.display = 'block';
+        })
+        // Confirm Pass
+        const passwordMsg = document.querySelector('.password-confirmation');
+        const cancelPass = document.getElementById('cancelPass');
+        const delete_ = document.querySelector('.delete-btn i');
+        const confirmPass = document.getElementById('confirmPass');
+
+        delete_.addEventListener('click', () => {
+            passwordMsg.style.display = 'none';
+            deleteMsg.style.display = 'none';
+        });
+
+        cancelPass.addEventListener('click', () => {
+            passwordMsg.style.display = 'none';
+            deleteMsg.style.display = 'none';
+        });
+        // Error Message
+        const errorMsg = document.getElementById('error-message');
+        const retypePass = document.getElementById('retypePass');
+        const typePass = document.getElementById('typePass');
+        document.querySelector(".password-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (typePass.value !== retypePass.value) {
+                errorMsg.classList.add("error-active");
+                retypePass.classList.add("error-border");
+            } else {
+                errorMsg.classList.remove("error-active");
+                retypePass.classList.remove("error-border");
+            }
+        });
+        document.querySelector(".password-form").addEventListener("submit", function (e) {
+            if (typePass.value === retypePass.value) {
+                passwordMsg.style.display = 'none';
+                deleteMsg.style.display = 'none';
+            }
+        });
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+            const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+    const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+    const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+    const pairDevicePopop = document.getElementById('paired-device-popup');
+    const pairedBackBtn = document.getElementById('paired-black-btn');
+    const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+    const shareProfilePopup = document.getElementById('share-profile-popup');
+    const shareProfileBtn = document.getElementById('share-profile-btn');
+    const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+    ProfileCloseBtn.addEventListener('click', () => {
+        shareProfilePopup.classList.toggle('d-none')
+    })
+
+    shareProfileBtn.addEventListener('click', () => {
+        shareProfilePopup.classList.remove('d-none');
+        shareProfilePopup.classList.add('d-flex');
+    })
+
+    for (let i = 0; i < remoteCareBtn.length; i++) {
+        remoteCareBtn[i].addEventListener('click', () => {
+            pairDevicePopop.classList.remove('d-none');
+            pairDevicePopop.classList.add('d-flex');
+        })
+    }
+
+    remoteCareDropdownBtn.addEventListener('click', () => {
+        remoteCareDropdown.classList.toggle('d-none')
+    })
+
+    pairedBackBtn.addEventListener('click', () => {
+        pairDevicePopop.classList.add('d-none');
+    })
+    pairedCloseBtn.addEventListener('click', () => {
+        pairDevicePopop.classList.add('d-none');
+    })
+    </script>
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/e6a713d826.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user dashboard/navbar-&-sidebar.js"></script>
+</body>
+
+</html>

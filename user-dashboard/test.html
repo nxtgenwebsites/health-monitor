@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/overview.css">
+    <link rel="stylesheet" href="css/user-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="css/share.css">
+</head>
+<body>
+    <!-- Emergency Cards -->
+    <div class="emergency-message">
+        <div class="emergency-card p-3">
+            <div class="emergency-icon text-end">
+                <img src="assets/icons/user dashboard/Cross-icon.svg" alt="IMG" class="mb-4">
+            </div>
+            <div class="emergency-content text-center">
+                <h4>Alert: Blood Pressure Threshold Exceeded</h4>
+                <p class="mt-4">Your blood pressure readings have surpassed the threshold.
+                    Immediate action is required. Please contact your healthcare
+                    provider or seek medical attention immediately.</p>
+                <button type="button" class="rounded-pill">Call Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="no-pair-message">
+        <div class="no-pair-card p-3">
+            <div class="no-pair-icon text-end">
+                <img src="assets/icons/user dashboard/Cross-icon.svg" alt="IMG" class="mb-4">
+            </div>
+            <div class="no-pair-content text-center">
+                <h4>No Paired Device!</h4>
+                <p class="mt-4">You haven't paired any device to Call your Remote Care DHA.
+                    Please connect a device to make a call.</p>
+                <button type="button" class="rounded-pill">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg px-5 navbar-background d-lg-flex d-none align-items-center">
+        <a href="index.html" class="navbar-brand">
+            <img src="assets/icons/user dashboard/user-light-logo.svg" alt="IMG">
+        </a>
+        <div class="separator mx-3"></div>
+        <img src="assets/icons/user dashboard/trustpilot.svg" alt="IMG" class="img-fluid">
+        <div class="separator mx-3"></div>
+        <a href="" class="nav-link d-flex align-items-center">
+            <h5 class="text-white navbar-text">
+                <img src="assets/icons/user dashboard/emergency-light-icon.svg" alt="IMG" class="me-2">
+                <span class="nav-info">Emergency</span>
+            </h5>
+        </a>
+        <div class="separator mx-3"></div>
+        <a href="" class="nav-link d-flex align-items-center">
+            <h5 class="text-white navbar-text">
+                <img src="assets/icons/user dashboard/monitor-light-icon.svg" alt="IMG" class="me-2">
+                <span class="nav-info">Monitors</span>
+            </h5>
+        </a>
+        <div class="separator mx-3"></div>
+        <a href="" class="nav-link d-flex align-items-center me-auto">
+            <h5 class="text-white navbar-text">
+                <img src="assets/icons/user dashboard/Mobile-light-icon.svg" alt="IMG" class="me-2">
+                <span class="nav-info">Remote Care</span>
+            </h5>
+        </a>
+        <div class="dropdown me-5">
+            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/icons/user dashboard/bell-icon.svg" alt="IMG" class="position-relative">
+                <span class="badge rounded-pill bg-danger">
+                    5
+                </span>
+            </button>
+            <ul class="dropdown-menu notification-menu dropdown-menu-end p-3">
+                <!-- Notification items -->
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn login-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/user dashboard/Login-img.svg" alt="IMG">
+            </button>
+            <div class="dropdown-menu login-menu px-4 py-3">
+                <!-- Login dropdown items -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="navbar navbar-expand-lg navbar-background d-lg-none d-block z-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/icons/user dashboard/user-light-logo.svg" alt="IMG">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-5" id="Navbar">
+                <!-- Mobile nav items -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="layout-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-section bg-white collapsed" id="sidebar">
+            <button id="toggle-sidebar" class="collapse-btn">
+                <img src="assets/icons/user dashboard/collapse-icon.svg" alt="Collapse" class="collapse-icon">
+                <img src="assets/icons/user dashboard/expand-icon.svg" alt="Expand" class="expand-icon d-none">
+            </button>
+            <ul class="navbar-nav px-4">
+                <a href="user-dashboard-overview.html" class="mb-4 mt-5 active nav-link sidebar-item px-2">
+                    <li class=""><img src="assets/icons/user dashboard/compass-icon.svg" alt="IMG" class="me-2">
+                        <span class="sidebar-span text-white">Overview</span>
+                    </li>
+                </a>
+                <!-- Add remaining sidebar items -->
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="dashboard-title mb-1">Dashboard</h2>
+                    <span class="text-muted">09 Sept, 2024</span>
+                </div>
+                <a href="/add-patient.html" class="btn btn-outline-primary">Add Details</a>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="row g-4 mb-4">
+                <!-- Systolic Card -->
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <p class="text-muted mb-1">Systolic</p>
+                                <h3 class="mb-0">150 <span class="fs-6 text-muted">mmHg</span></h3>
+                            </div>
+                            <button class="btn btn-icon"><i class="bi bi-heart text-primary"></i></button>
+                        </div>
+                        <small class="text-muted">as of 30 June, 2024</small>
+                    </div>
+                </div>
+                <!-- Add remaining stat cards -->
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="chart-card">
+                        <h5 class="card-title mb-4">Activity</h5>
+                        <div class="chart-container">
+                            <canvas id="activityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-card">
+                        <h5 class="card-title mb-4">Weight-BMI</h5>
+                        <div class="chart-container">
+                            <canvas id="weightChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lists Row -->
+            <div class="row g-4">
+                <!-- Appointments -->
+                <div class="col-md-6">
+                    <div class="list-card">
+                        <!-- Appointments content -->
+                    </div>
+                </div>
+                <!-- Medications -->
+                <div class="col-md-6">
+                    <div class="list-card">
+                        <!-- Medications content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container">
+                <img src="assets/7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add remaining ad containers -->
+        </div>
+    </div>
+    <!-- Share Message start -->
+    <div class="share-message">
+        <div class="share-card p-3">
+            <div class="share-img text-end">
+                <i class="bi-regular bi-x-lg"></i>
+            </div>
+            <div class="share-heading text-center my-4">
+                <h4>Share My Profile</h4>
+            </div>
+            <div class="share-content d-flex">
+                <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                <a href="#" class="text-decoration-underline text-black mx-auto">user.bohdanpeter/123/aaaabbc</a>
+                <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Share Message end -->
+    <script>
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

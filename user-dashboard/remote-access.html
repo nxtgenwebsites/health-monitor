@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/remote-access.css">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/share.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center justify-content-between">
+        <!-- This is the Updated HTML FILE -->
+        <!-- Left side -->
+        <div class="d-flex align-items-center">
+            <div class="logo-container border-lg-end border-0">
+                <img src="assets/logo.png" alt="Health Monitor" class="logo">
+            </div>
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
+        </div>
+
+        <!-- Center navigation (visible on desktop only) -->
+        <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+            <a href="/health-monitor/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/health-monitor/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <div class="dropdown">
+                <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </button>
+                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item remote-care-btn">Call DHA</li>
+                    <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                    <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Right side with toggle button, notification and user -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Notification -->
+            <div class="position-relative d-none d-lg-block dropdown">
+                <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                    <span class="notification-badge">5</span>
+                </a>
+
+                <!-- Notification Dropdown Menu -->
+                <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted" style="font-size: 12px;">
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
+                        <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                    </div>
+                    <hr class="dropdown-divider my-2">
+
+                    <!-- Notification Items -->
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                             <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                            <small class="text-muted d-block">15 mins ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                     <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                            <small class="text-muted d-block">1 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                     <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                            <small class="text-muted d-block">8 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                     <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                   <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                            notifications</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
+
+            <!-- User Dropdown (visible on desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Change pin
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            National Policies
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/health-monitor/user-dashboard/remote-care.html">
+                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
+                            Remote Care
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/health-monitor/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to DHA Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <div class="dropdown">
+                    <button id="remote-care-dropdown"
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
+                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                                       <li class=" dropdown-item
+                        remote-care-btn">
+                        Call DHA</li>
+                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-white">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/health-monitor/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/health-monitor/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <div class="">
+                        <a href="/health-monitor/user-dashboard/remote-access.html"
+                            class="mobile-menu-item d-flex align-items-center gap-2">
+                            <i class="bi bi-phone"></i>Remote Care
+                        </a>
+                        <div class="px-3 py-2">
+                            <a href="/health-monitor/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                        </div>
+                    </div>
+                    <a href="/health-monitor/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/health-monitor/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/health-monitor/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <a href="/health-monitor/user-dashboard/remote-access.html"
+                    class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </a>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted" style="color: white;">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/health-monitor/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/health-monitor/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/health-monitor/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/health-monitor/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <a href="/health-monitor/user-dashboard/remote-access.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-phone"></i>Remote Care
+                    </a>
+                    <a href="/health-monitor/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+
+
+                    <!-- Add other menu items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Collapse Toggle -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <!-- Menu Items -->
+            <a href="/health-monitor/user-dashboard/overview.html">
+                <div class="menu-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                        class="icon sidebar-icon">
+                        <g clip-path="url(#clip0_1304_4047)">
+                            <path
+                                d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z"
+                                fill="#9197B3" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1304_4047">
+                                <rect width="30" height="30" fill="#9197B3" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="menu-text">Overview</span>
+                </div>
+            </a>
+
+            <a href="/health-monitor/user-dashboard/symptom-checker.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M12.0006 13.0797C11.8706 13.0797 11.7406 13.0497 11.6206 12.9797L6.32061 9.9197C5.96061 9.7097 5.84059 9.2497 6.05059 8.8997C6.26059 8.5397 6.72061 8.4197 7.07061 8.6297L11.9906 11.4797L16.8806 8.6497C17.2406 8.4397 17.7006 8.5697 17.9006 8.9197C18.1006 9.2697 17.9806 9.7397 17.6306 9.9397L12.3706 12.9797C12.2606 13.0397 12.1306 13.0797 12.0006 13.0797Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M12 18.5201C11.59 18.5201 11.25 18.1801 11.25 17.7701V12.3301C11.25 11.9201 11.59 11.5801 12 11.5801C12.41 11.5801 12.75 11.9201 12.75 12.3301V17.7701C12.75 18.1801 12.41 18.5201 12 18.5201Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Symptom Checker</span>
+                </div>
+            </a>
+
+            <a href="/health-monitor/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
+                            fill="#9197B3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Emergency</span>
+                </div>
+            </a>
+
+            <!-- Health Monitors Dropdown -->
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M11.9998 14.7898C11.8788 14.7884 11.7594 14.7611 11.6498 14.7098C11.4998 14.6298 7.99985 12.7098 7.24985 10.1998C7.02031 9.56147 6.93972 8.87915 7.01425 8.20495C7.08877 7.53075 7.31644 6.88251 7.67985 6.30976C7.95022 5.95404 8.30207 5.66845 8.70579 5.47703C9.10952 5.2856 9.55332 5.19394 9.99985 5.20976C10.3747 5.19945 10.7473 5.27003 11.0925 5.41671C11.4376 5.56339 11.7471 5.78272 11.9998 6.05976C12.2525 5.78272 12.562 5.56339 12.9071 5.41671C13.2523 5.27003 13.6249 5.19945 13.9998 5.20976C14.443 5.19717 14.8828 5.29038 15.2828 5.48168C15.6828 5.67298 16.0314 5.95685 16.2998 6.30976C16.6632 6.88251 16.8909 7.53075 16.9654 8.20495C17.0399 8.87915 16.9593 9.56147 16.7298 10.1998C15.9798 12.7598 12.4798 14.6298 12.3298 14.7098C12.2263 14.7584 12.1141 14.7856 11.9998 14.7898ZM9.99985 6.70976C9.78929 6.69427 9.57821 6.73194 9.386 6.8193C9.1938 6.90667 9.02663 7.04093 8.89985 7.20976C8.67923 7.59711 8.5477 8.02876 8.51484 8.47332C8.48197 8.91788 8.54859 9.36418 8.70985 9.77976C9.12985 11.2198 10.9998 12.5798 12.0198 13.1798C13.0198 12.5698 14.9098 11.1798 15.3298 9.77976C15.4911 9.36418 15.5577 8.91788 15.5248 8.47332C15.4919 8.02876 15.3604 7.59711 15.1398 7.20976C14.9722 6.98862 14.7397 6.82541 14.4748 6.743C14.2098 6.66059 13.9258 6.6631 13.6623 6.75018C13.3989 6.83726 13.1693 7.00454 13.0056 7.22861C12.842 7.45268 12.7526 7.72232 12.7498 7.99976C12.7498 8.19867 12.6708 8.38944 12.5301 8.53009C12.3895 8.67074 12.1987 8.74976 11.9998 8.74976C11.8009 8.74976 11.6101 8.67074 11.4695 8.53009C11.3288 8.38944 11.2498 8.19867 11.2498 7.99976C11.2566 7.83192 11.2292 7.66445 11.1693 7.50751C11.1094 7.35058 11.0182 7.20745 10.9013 7.08681C10.7844 6.96618 10.6442 6.87055 10.4893 6.80574C10.3343 6.74092 10.1678 6.70827 9.99985 6.70976Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M18.7602 17.7502H5.24023C4.17936 17.7502 3.16195 17.3288 2.4118 16.5786C1.66166 15.8285 1.24023 14.8111 1.24023 13.7502V6.24023C1.24023 5.17936 1.66166 4.16195 2.4118 3.4118C3.16195 2.66166 4.17936 2.24023 5.24023 2.24023H18.7602C19.8211 2.24023 20.8385 2.66166 21.5886 3.4118C22.3388 4.16195 22.7602 5.17936 22.7602 6.24023V13.7602C22.7575 14.8193 22.3349 15.8342 21.5851 16.5822C20.8352 17.3301 19.8193 17.7502 18.7602 17.7502ZM5.24023 3.75023C4.58065 3.75286 3.94884 4.01605 3.48244 4.48244C3.01605 4.94884 2.75286 5.58065 2.75023 6.24023V13.7602C2.75286 14.4198 3.01605 15.0516 3.48244 15.518C3.94884 15.9844 4.58065 16.2476 5.24023 16.2502H18.7602C19.4198 16.2476 20.0516 15.9844 20.518 15.518C20.9844 15.0516 21.2476 14.4198 21.2502 13.7602V6.24023C21.2476 5.58065 20.9844 4.94884 20.518 4.48244C20.0516 4.01605 19.4198 3.75286 18.7602 3.75023H5.24023Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M12 21.75C11.8019 21.7474 11.6126 21.6676 11.4725 21.5275C11.3324 21.3874 11.2526 21.1981 11.25 21V17C11.25 16.8011 11.329 16.6103 11.4697 16.4697C11.6103 16.329 11.8011 16.25 12 16.25C12.1989 16.25 12.3897 16.329 12.5303 16.4697C12.671 16.6103 12.75 16.8011 12.75 17V21C12.7474 21.1981 12.6676 21.3874 12.5275 21.5275C12.3874 21.6676 12.1981 21.7474 12 21.75Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Health Monitors</span>
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a>
+                <a href="/health-monitor/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a>
+                <a href="/health-monitor/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a>
+                <a href="/health-monitor/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a>
+                <a href="/health-monitor/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a>
+                <a href="/health-monitor/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
+                <a href="/health-monitor/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a>
+                <a href="/health-monitor/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a>
+            </div>
+
+            <!-- Communities Dropdown -->
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M7.63121 8.57882C9.72404 8.57882 11.4206 6.88224 11.4206 4.78941C11.4206 2.69658 9.72404 1 7.63121 1C5.53837 1 3.8418 2.69658 3.8418 4.78941C3.8418 6.88224 5.53837 8.57882 7.63121 8.57882Z"
+                            stroke="#9197B3" stroke-width="1.5" />
+                        <path opacity="0.5"
+                            d="M10.9473 3.21776C11.4565 2.45197 12.3271 1.94727 13.3156 1.94727C14.8853 1.94727 16.1577 3.2197 16.1577 4.78932C16.1577 6.35894 14.8853 7.63138 13.3156 7.63138C12.3271 7.63138 11.4565 7.12668 10.9473 6.36089"
+                            stroke="#9197B3" stroke-width="1.5" />
+                        <path opacity="0.5"
+                            d="M16.1572 12.3682C17.8191 12.7326 18.9993 13.6555 18.9993 14.7365C18.9993 15.7117 18.039 16.5582 16.6309 16.9821"
+                            stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                        <path
+                            d="M7.63147 18.9997C11.2939 18.9997 14.2629 17.3031 14.2629 15.2103C14.2629 13.1175 11.2939 11.4209 7.63147 11.4209C3.96901 11.4209 1 13.1175 1 15.2103C1 17.3031 3.96901 18.9997 7.63147 18.9997Z"
+                            stroke="#9197B3" stroke-width="1.5" />
+                    </svg>
+                    <span class="menu-text">Communities</span>
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/health-monitor/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
+                <a href="/health-monitor/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                <a href="/health-monitor/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
+                <a href="/health-monitor/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
+                <a href="/health-monitor/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
+                <a href="/health-monitor/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a>
+                <a href="/health-monitor/user-dashboard/find-dha.html" class="dropdown-item-custom">Find DHA</a>
+                <a href="/health-monitor/user-dashboard/dha-training.html" class="dropdown-item-custom">DHA Training</a>
+                <a href="/health-monitor/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
+            </div>
+
+            <a href="/health-monitor/user-dashboard/fact-checker.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M8 22.3194C7.72 22.3194 7.42998 22.2494 7.16998 22.1094C6.59998 21.8094 6.25 21.2094 6.25 20.5694V19.1495C3.23 18.8395 1.25 16.6194 1.25 13.4394V7.43945C1.25 3.99945 3.56 1.68945 7 1.68945H17C20.44 1.68945 22.75 3.99945 22.75 7.43945V13.4394C22.75 16.8794 20.44 19.1894 17 19.1894H13.23L8.96997 22.0295C8.67997 22.2195 8.34 22.3194 8 22.3194ZM7 3.17944C4.42 3.17944 2.75 4.84944 2.75 7.42944V13.4295C2.75 16.0095 4.42 17.6795 7 17.6795C7.41 17.6795 7.75 18.0195 7.75 18.4295V20.5595C7.75 20.6895 7.83 20.7495 7.88 20.7795C7.93001 20.8095 8.03001 20.8395 8.14001 20.7695L12.59 17.8095C12.71 17.7295 12.86 17.6795 13.01 17.6795H17.01C19.59 17.6795 21.26 16.0095 21.26 13.4295V7.42944C21.26 4.84944 19.59 3.17944 17.01 3.17944H7Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M11.9998 12.1094C11.5898 12.1094 11.2498 11.7694 11.2498 11.3594V11.1494C11.2498 9.98942 12.0998 9.41941 12.4198 9.19941C12.7898 8.94941 12.9098 8.77942 12.9098 8.51942C12.9098 8.01942 12.4998 7.60938 11.9998 7.60938C11.4998 7.60938 11.0898 8.01942 11.0898 8.51942C11.0898 8.92942 10.7498 9.26942 10.3398 9.26942C9.92984 9.26942 9.58984 8.92942 9.58984 8.51942C9.58984 7.18942 10.6698 6.10938 11.9998 6.10938C13.3298 6.10938 14.4098 7.18942 14.4098 8.51942C14.4098 9.65942 13.5698 10.2294 13.2598 10.4394C12.8698 10.6994 12.7498 10.8694 12.7498 11.1494V11.3594C12.7498 11.7794 12.4098 12.1094 11.9998 12.1094Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M12 14.6006C11.58 14.6006 11.25 14.2606 11.25 13.8506C11.25 13.4406 11.59 13.1006 12 13.1006C12.41 13.1006 12.75 13.4406 12.75 13.8506C12.75 14.2606 12.42 14.6006 12 14.6006Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Fact Checker</span>
+                </div>
+            </a>
+
+            <a href="/health-monitor/user-dashboard/health-educate.html">
+                <div class="menu-item">
+                    <img src="assets/book-square-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    <span class="menu-text">Health Educate</span>
+                </div>
+            </a>
+
+            <a href="/health-monitor/user-dashboard/user-transfer.html">
+                <div class="menu-item">
+                    <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    <span class="menu-text">Transfer</span>
+                </div>
+            </a>
+
+            <!-- Upgrade Box -->
+            <div class="upgrade-box">
+                <h5 class="upgrade-text">Upgrade to DHA to get access all Features!</h5>
+                <a href="/health-monitor/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get DHA Now!</a>
+            </div>
+
+            <!-- Logout Button -->
+            <button class="log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                <span class="menu-text">Log Out</span>
+            </button>
+        </div>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <!-- Header Section -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="text-primary mb-1">Access Control</h4>
+                        <h6 class="text-muted">History</h6>
+                    </div>
+                    <a href="access control.html">
+                        <button class="btn add-new-btn px-4 ">Add new</button>
+                    </a>
+                </div>
+
+                <!-- Access Control Cards Grid -->
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card border-0 rounded-3 shadow-sm">
+                            <div class="card-body p-4">
+                                <!-- User Info -->
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="assets/doctor-photo.svg" class="me-3" alt="Doctor photo">
+                                    <div>
+                                        <h6 class="mb-1 text-primary">Dr. Mercy Goodmaya</h6>
+                                        <p class="mb-0 text-muted small">mgoogmaya@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <!-- Date Info -->
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Start Date</span>
+                                        <span>4:00pm, 01 May, 2024</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span class="text-muted">End Date</span>
+                                        <span>4:00pm, 05 May, 2024</span>
+                                    </div>
+                                </div>
+
+                                <!-- Access Tags -->
+                                <div class="mb-4 d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Access for</span>
+                                    <div class="mt-2 d-flex">
+                                        <span class="access-tag">Diabetes</span>
+                                        <span class="access-tag">Blood Pressure</span>
+                                    </div>
+                                </div>
+
+                                <!-- ID Tag -->
+                                <div class="d-flex justify-content-center mb-4">
+                                    <span class="id-tag">HP2 M33</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="d-flex justify-content-center gap-2">
+                                  <button class="btn btn-outline-primary px-4">Live</button>
+                                  <a href="access control.html"><button class="btn btn-outline-primary px-4">Revoke</button></a>
+                                   <a href="access control.html"> <button class="btn btn-outline-primary px-4">Edit</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card border-0 rounded-3 shadow-sm">
+                            <div class="card-body p-4">
+                                <!-- User Info -->
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="assets/doctor-photo.svg" class="me-3" alt="Doctor photo">
+                                    <div>
+                                        <h6 class="mb-1 text-primary">Dr. John Wellis</h6>
+                                        <p class="mb-0 text-muted small">johny_well@hotmail.com</p>
+                                    </div>
+                                </div>
+
+                                <!-- Date Info -->
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Start Date</span>
+                                        <span>2:00pm, 01 May, 2024</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span class="text-muted">End Date</span>
+                                        <span>2:00pm, 05 May, 2024</span>
+                                    </div>
+                                </div>
+
+                                <!-- Access Tags -->
+                                <div class="mb-4 d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Access for</span>
+                                    <div class="mt-2 d-flex">
+                                        <span class="access-tag">Diabetes</span>
+                                        <span class="access-tag">Blood Pressure</span>
+                                    </div>
+                                </div>
+
+                                <!-- ID Tag -->
+                                <div class="d-flex justify-content-center mb-4">
+                                    <span class="id-tag">DY2 M33</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-danger px-4">Ended</button>
+                                    <a href="access control.html"><button class="btn btn-outline-primary px-4">Renew</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card border-0 rounded-3 shadow-sm">
+                            <div class="card-body p-4">
+                                <!-- User Info -->
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="assets/doctor-photo.svg" class="me-3" alt="Doctor photo">
+                                    <div>
+                                        <h6 class="mb-1 text-primary">Dr. John Wellis</h6>
+                                        <p class="mb-0 text-muted small">johny_well@hotmail.com</p>
+                                    </div>
+                                </div>
+
+                                <!-- Date Info -->
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Start Date</span>
+                                        <span>2:00pm, 01 May, 2024</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span class="text-muted">End Date</span>
+                                        <span>2:00pm, 05 May, 2024</span>
+                                    </div>
+                                </div>
+
+                                <!-- Access Tags -->
+                                <div class="mb-4 d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Access for</span>
+                                    <div class="mt-2 d-flex">
+                                        <span class="access-tag">Diabetes</span>
+                                        <span class="access-tag">Blood Pressure</span>
+                                    </div>
+                                </div>
+
+                                <!-- ID Tag -->
+                                <div class="d-flex justify-content-center mb-4">
+                                    <span class="id-tag">DY2 M33</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-danger px-4">Ended</button>
+                                   <a href="access control.html"><button class="btn btn-outline-primary px-4">Renew</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card border-0 rounded-3 shadow-sm">
+                            <div class="card-body p-4">
+                                <!-- User Info -->
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="assets/doctor-photo.svg" class="me-3" alt="Doctor photo">
+                                    <div>
+                                        <h6 class="mb-1 text-primary">Dr. John Wellis</h6>
+                                        <p class="mb-0 text-muted small">johny_well@hotmail.com</p>
+                                    </div>
+                                </div>
+
+                                <!-- Date Info -->
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Start Date</span>
+                                        <span>2:00pm, 01 May, 2024</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span class="text-muted">End Date</span>
+                                        <span>2:00pm, 05 May, 2024</span>
+                                    </div>
+                                </div>
+
+                                <!-- Access Tags -->
+                                <div class="mb-4 d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Access for</span>
+                                    <div class="mt-2 d-flex">
+                                        <span class="access-tag">Diabetes</span>
+                                        <span class="access-tag">Blood Pressure</span>
+                                    </div>
+                                </div>
+
+                                <!-- ID Tag -->
+                                <div class="d-flex justify-content-center mb-4">
+                                    <span class="id-tag">DY2 M33</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-danger px-4">Ended</button>
+                                    <a href="access control.html"><button class="btn btn-outline-primary px-4">Renew</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional cards follow the same structure -->
+                </div>
+            </div>
+        </div>
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Share Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    <h6>Copy Link</h6>
+                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/share.svg" alt="icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container">
+                <img src="assets\7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets\9b2927cddd856d755a76f05fcbd7d7d0.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets\7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
+            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
+                <div class="modal-body p-4">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center" style="margin-top: 25px;">
+                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
+                            Alert: Blood Pressure Threshold Exceeded
+                        </h2>
+                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
+                            Your blood pressure readings have surpassed the threshold.
+                            <br>
+                            Immediate action is required. Please contact your healthcare 
+                            provider or seek medical attention immediately.
+                        </p>
+                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
+                                style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
+                                onclick="switchModals()">
+                            Call Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
+            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
+                <div class="modal-body p-4">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center" style="margin-top: 30px;">
+                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
+                            No Paired Device!
+                        </h2>
+                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
+                            You haven't paired any device to Call your Remote Care DHA.
+                            <br>
+                            Please connect a device to make a call.
+                        </p>
+                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
+                                style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
+                                data-bs-dismiss="modal">
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Share Message start -->
+    <div class="share-message">
+        <div class="share-card p-3">
+            <div class="share-img text-end">
+                <i class="bi-regular bi-x-lg"></i>
+            </div>
+            <div class="share-heading text-center my-4">
+                <h4>Share My Profile</h4>
+            </div>
+            <div class="share-content d-flex">
+                <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                <a href="#" class="text-decoration-underline text-black mx-auto">user.bohdanpeter/123/aaaabbc</a>
+                <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Share Message end -->
+    <script>
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
+
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
+        })
+
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
+
+            const arrowIcon = document.querySelector(".menu-item-dropdown .arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
+
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>
