@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+    <!-- loading Start -->
+    <div class="loading-screen fixed-top h-100 w-100">
+        <div class="container d-flex flex-column gap-5">
+            <div class="text-center">
+                <img src="assets/images/loading logo img.svg" class="img-fluid loading-logo" alt="logo_img" />
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn mouse-btn border-0">
+                    <img src="assets/icons/mouse.svg" alt="mouse_icon" />
+                </button>
+                <span class="text-primary">ENTER</span>
+            </div>
+        </div>
+    </div>
+    <!-- loading End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="190" class="img-fluid"
+                    alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="health-educate.html">Health Educate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="fact-checker.html">Fact Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                </ul>
+                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row d-flex align-items-center gap-5 gap-lg-0">
+                <div class="col-12 col-lg-6 hero-content">
+                    <h3>Monitor Your Wellbeing</h3>
+                    <h1>Enjoy Your Life</h1>
+                    <p>
+                        A smarter way to track and manage your health with our intuitive
+                        dashboard. Gain complete control over your well-being, all in one
+                        place
+                    </p>
+                    <div class="d-flex g-3 align-items-center justify-content-center justify-content-lg-start">
+                        <a href="login.html"><button class="btn primary-btn">Get Started Now</button></a>
+                        <button class="btn border-0 demo-btn" id="demo-btn">
+                            <img src="assets/icons/play icon.svg" alt="play icon" />
+                            <span class="mx-2">Request Demo</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-lg-start text-center">
+                    <img src="assets/images/hero-Img.svg" class="img-fluid" alt="Hero image" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Services Start -->
+    <section class="services-container">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class="col-lg-4 col-md-6 p-4 services-text">
+                    <h1 class="fw-bold">Different Services We Provide</h1>
+                    <p>
+                        Health Monitors bring features which help users keep track
+                        everything related to health. Have a look!
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-card p-4">
+                        <div class="service-img mb-3">
+                            <img src="assets/icons/monitor icon.svg" alt="monitor" />
+                        </div>
+                        <div class="services-content">
+                            <h3>Monitors</h3>
+                            <p>
+                                Monitors include monitoring of essential health aspects, which
+                                keeps you on track regarding your health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-card p-4">
+                        <div class="service-img mb-3">
+                            <img src="assets/icons/compass icon.svg" alt="monitor" />
+                        </div>
+                        <div class="services-content">
+                            <h3>Initiative Dashboard</h3>
+                            <p>
+                                Monitors include monitoring of essential health aspects, which
+                                keeps you on track regarding your health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-card p-4">
+                        <div class="service-img mb-3">
+                            <img src="assets/icons/message icon.svg" alt="monitor" />
+                        </div>
+                        <div class="services-content">
+                            <h3>Fact Checker</h3>
+                            <p>
+                                Monitors include monitoring of essential health aspects, which
+                                keeps you on track regarding your health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-card p-4">
+                        <div class="service-img mb-3">
+                            <img src="assets/icons/square  icon.svg" alt="monitor" />
+                        </div>
+                        <div class="services-content">
+                            <h3>Symptom Checker</h3>
+                            <p>
+                                Monitors include monitoring of essential health aspects, which
+                                keeps you on track regarding your health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-card p-3">
+                        <div class="service-img mb-4">
+                            <img src="assets/icons/book icon.svg" alt="monitor" />
+                        </div>
+                        <div class="services-content">
+                            <h3>Health Educate</h3>
+                            <p>
+                                Monitors include monitoring of essential health aspects, which
+                                keeps you on track regarding your health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+
+    <!-- About Start -->
+    <section class="about-section position-relative">
+        <div class="container">
+            <div class="row row-gap-5">
+                <div class="col-12 col-lg-6">
+                    <div class="about-content">
+                        <h1>Why Choose
+                            Health Monitor?</h1>
+                        <p class="about-text">With our Health oriented aim, there is no way
+                            to say NO to Health Monitor, as it keeps you and
+                            your family on track, send notifications, reminders
+                            etc etc.</p>
+                        <div class="row row-gap-3 number-cards-container">
+                            <div class="col-6 numbers-card">
+                                <h3 class="text-primary" id="members">5000</h3>
+                                <p>Members</p>
+                            </div>
+                            <div class="col-6 numbers-card">
+                                <h3 class="text-primary" id="hospitals-registered">1000</h3>
+                                <p>Hospitals Registered</p>
+                            </div>
+                            <div class="col-6 numbers-card">
+                                <h3 class="text-primary" id="dha-courses">100+</h3>
+                                <p>DHA Courses</p>
+                            </div>
+                            <div class="col-6 numbers-card">
+                                <h3 class="text-primary" id="hospitals-registered2">5000</h3>
+                                <p>Hospitals Registered</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 about-card-container">
+                    <div class="row row-gap-4">
+                        <div class="col-12 col-sm-6 card-cols">
+                            <div class="about-card">
+                                <div class="about-card-icon">
+                                    <img src="assets/icons/Vector.svg" alt="icon">
+                                </div>
+                                <div class="about-card-text">
+                                    <h2 class="mt-3">Real-time health
+                                        tracking</h2>
+                                    <p>We are proud to announce that we provide high quality diagnostics for DNA</p>
+                                </div>
+                            </div>
+                            <div class="about-card mt-4">
+                                <div class="about-card-icon">
+                                    <img src="assets/icons/shield.svg" alt="icon">
+                                </div>
+                                <div class="about-card-text">
+                                    <h2 class="mt-3">Emergency Location
+                                        Assistance</h2>
+                                    <p>iMedical has 12 laboratory achievements that have world level impact in medicine.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 card-cols d-flex justify-content-center align-items-center">
+                            <div class="about-card">
+                                <div class="about-card-icon">
+                                    <img src="assets/icons/Vector 2.svg" alt="icon">
+                                </div>
+                                <div class="about-card-text">
+                                    <h2 class="mt-3">Ai Powered Symptom
+                                        Checker</h2>
+                                    <p>You can get our insurance to not
+                                        care of any financial difficulties in future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-img">
+                <img src="assets/images/gradient.svg" alt="IMG">
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Review Start -->
+    <section class="review-section">
+        <div class="container">
+            <div class="review-heading text-center">
+                <h1>Our <span>Trustpilot</span> Reviews</h1>
+            </div>
+            <div class="container h-100">
+                <!-- Slider main container -->
+                <div class="swiper h-100">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="user-review d-flex justify-content-between">
+                                    <div class="review-starts d-flex gap-1">
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    <span class="review-card-time">4 days ago</span>
+                                </div>
+                                <h6 class="review-user-info"><span>by </span>Alishia Fords</h6>
+                                <h3>Great experience!</h3>
+                                <p>Lorem ipsum its simply dummy text of the app so user can see the lorem ipsum. The
+                                    ever industry standard dummy text
+                                    since the 1600’s. Highly recommended!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="user-review d-flex justify-content-between">
+                                    <div class="review-starts d-flex gap-1">
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    <span class="review-card-time">4 days ago</span>
+                                </div>
+                                <h6 class="review-user-info"><span>by </span>Alishia Fords</h6>
+                                <h3>Great experience!</h3>
+                                <p>Lorem ipsum its simply dummy text of the app so user can see the lorem ipsum. The
+                                    ever industry standard dummy text
+                                    since the 1600’s. Highly recommended!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="user-review d-flex justify-content-between">
+                                    <div class="review-starts d-flex gap-1">
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    <span class="review-card-time">4 days ago</span>
+                                </div>
+                                <h6 class="review-user-info"><span>by </span>Alishia Fords</h6>
+                                <h3>Great experience!</h3>
+                                <p>Lorem ipsum its simply dummy text of the app so user can see the lorem ipsum. The
+                                    ever industry standard dummy text
+                                    since the 1600’s. Highly recommended!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="user-review d-flex justify-content-between">
+                                    <div class="review-starts d-flex gap-1">
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                        <div class="star">
+                                            <img src="assets/icons/star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    <span class="review-card-time">4 days ago</span>
+                                </div>
+                                <h6 class="review-user-info"><span>by </span>Alishia Fords</h6>
+                                <h3>Great experience!</h3>
+                                <p>Lorem ipsum its simply dummy text of the app so user can see the lorem ipsum. The
+                                    ever industry standard dummy text
+                                    since the 1600’s. Highly recommended!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Review End -->
+
+    <!-- Fact Check Start -->
+    <section class="fact-section">
+        <div class="container">
+            <div class="row row-gap-5 d-flex align-items-center  py-5">
+                <div class="col-12 col-md-6 h-100">
+                    <div class="fact-content">
+                        <h1>Your Trusted Source for
+                            Health Information</h1>
+                        <p>Whether you're questioning a common health claim or looking for
+                            reliable answers, our <span class="fact-checker-span">“Fact Checker”</span> tool helps you separate fact
+                            from fiction, empowering you to make the best decisions for your
+                            well-being</p>
+                        <a href="fact-checker.html"><button class="btn fact-checker-btn">Start Checking Facts</button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="fact-img">
+                        <img src="assets/images/fact graphics.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fact Check End -->
+
+    <!-- Blogs Start -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-heading mb-5 text-center">
+                <h6 class="fw-bold">Blogs & News</h6>
+                <h1 class="fw-bold">Read Our Latest Blogs</h1>
+            </div>
+            <div class="row row-gap-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 1.svg" class="img-fluid w-100" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex  blog-info">
+                                <span>Medical</span>
+                                <span>|</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>6 Tips To Protect Your Mental Health When You’re Sick</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 2.svg" class="img-fluid" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex  blog-info">
+                                <span>Medical</span>
+                                <span>|</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>Quarterly Checkups May Help You
+                                    Get Treated Sooner.</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12  col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 3.svg" class="img-fluid" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex  blog-info">
+                                <span>Medical</span>
+                                    <span>|</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>New Drug Found To be Effective In
+                                    Treating Covid19 Symptoms</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blogs End -->
+    <!-- Footer start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 col-md-6 text-md-start text-center">
+                    <div class="footer-card">
+                        <div class="footer-img">
+                            <a href="">
+                                <img src="assets/icons/logo.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                                and features. You don't want to miss it!</p>
+                            <div class="footer-subscribe position-relative w-100">
+                                <input type="email" class="" placeholder="Enter your email here">
+                                <button type="submit" class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">About Us</h5>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Symptom Checker</a></li>
+                        <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Fact Checker</a></li>
+                        <li class="nav-item"><a href="health-educate.html" class="nav-link">Health Educate</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Find DHAs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">DHA Training</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Hospitals</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Complaints</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Terms</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Socials</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Version</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-2">
+        <div class="copyright-section d-flex align-items-center">
+            <p class="font-size">© Copyright 2024 HealthMonitor. All rights reserved</p>
+            <p class="ms-md-auto me-3 font-size">Share on socials</p>
+            <div class="social-media">
+                <img src="assets/icons/X.svg" alt="img" class="">
+                <img src="assets/icons/Facebook.svg" alt="img" class="">
+                <img src="assets/icons/Instagram.svg" alt="img" class="">
+                <img src="assets/icons/Telegram.svg" alt="img" class="">
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer end -->
+    <!-- Demo Video Start -->
+    <div class="demo-video d-none" id="demo-video">
+        <div class="video-popup">
+            <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+        </div>
+    </div>
+    <!-- Demo Video End -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

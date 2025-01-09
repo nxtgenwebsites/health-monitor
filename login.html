@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Monitor</title>
+  <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="190" class="img-fluid" alt="logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="health-educate.html">Health Educate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="fact-checker.html">Fact Checker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+          </li>
+        </ul>
+        <div class="login-btn">
+          <a href="login.html"><button class="btn primary-btn">Login</button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <!-- Login Start -->
+  <section class="auth-section d-flex justify-content-center align-items-center">
+    <div class="auth-border">
+      <div class="auth-container d-flex flex-column align-items-center">
+        <div class="login-heading" id="login-heading">
+          <h3>Login</h3>
+        </div>
+        <div class="login-heading d-none" id="signup-heading">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="auth-buttons">
+          <button id="login-btn" class="active-btn">Login</button>
+          <button id="signup-btn" class="text-primary">Sign Up</button>
+          <div class="btn-slider" id="btn-slider">
+          </div>
+        </div>
+        <div class="foms-container">
+          <!-- Login Form Start -->
+          <form class="login-from" id="login-form">
+            <div class="email my-4">
+              <input type="email" placeholder="Email">
+            </div>
+            <div class="password mt-4 position-relative">
+              <input type="password" placeholder="Password">
+              <img src="assets/icons/show pass.svg" width="23px" class="text-primary position-absolute hide-pass"
+                alt="">
+            </div>
+            <div class="forget-pass">
+              <a href="" class="text-decoration-none forgot-password pt-1
+                ">Forgot password?</a>
+            </div>
+            <div class="submit-button d-flex justify-content-center align-items-center">
+              <a class="btn primary-btn  m-auto mt-4 submit-button-login" href="https://muhammadp7.sg-host.com/user-dashboard/overview.html">Login</a>
+            </div>
+          </form>
+          <!-- Login Form End -->
+          <!-- Sigup Form Start -->
+          <form class="signup-from d-none" id="signup-form" onsubmit="event.preventDefault();">
+            <div class="email my-2">
+              <input type="email" placeholder="Email">
+            </div>
+            <div class="email my-2">
+              <input type="email" placeholder="Confirm Email">
+            </div>
+            <div class="password my-2 position-relative">
+              <input type="password" placeholder="Password">
+              <img src="assets/icons/show pass.svg" width="23" class="position hide-pass" alt="">
+            </div>
+            <div class="password my-2 position-relative">
+              <input type="password" placeholder="Confirm Password">
+              <img src="assets/icons/show pass.svg" width="23" class="position-absolute hide-pass" alt="">
+            </div>
+            <div class="signup-button  text-center">
+              <a href="register.html" class="btn primary-btn">Create an account</a>
+            </div>
+          </form>
+          <!-- Sigup Form End -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Login End -->
+    <!-- Footer start -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row row-gap-3">
+          <div class="col-lg-5 col-md-6 text-md-start text-center">
+            <div class="footer-card">
+              <div class="footer-img">
+                <a href="">
+                  <img src="assets/icons/logo.svg" alt="" class="img-fluid">
+                </a>
+              </div>
+              <div class="footer-content">
+                <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                  and features. You don't want to miss it!</p>
+                <div class="footer-subscribe position-relative w-100">
+                  <input type="email" class="" placeholder="Enter your email here">
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-md-start text-center">
+            <ul class="navbar-nav">
+              <h5 class="fw-bold footer-heading text-primary">About Us</h5>
+              <li class="nav-item"><a href="fact-checker.html" class="nav-link">Symptom Checker</a></li>
+              <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+              <li class="nav-item"><a href="fact-checker.html" class="nav-link">Fact Checker</a></li>
+              <li class="nav-item"><a href="health-educate.html" class="nav-link">Health Educate</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 text-md-start text-center">
+            <ul class="navbar-nav">
+              <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+              <li class="nav-item"><a href="#" class="nav-link">Find DHAs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">DHA Training</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Hospitals</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Complaints</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 text-md-start text-center">
+            <ul class="navbar-nav">
+              <h5 class="fw-bold footer-heading text-primary">Terms</h5>
+              <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Socials</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Version</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-5 mb-2">
+      <div class="copyright-section d-flex align-items-center">
+        <p class="font-size">© Copyright 2024 HealthMonitor. All rights reserved</p>
+        <p class="ms-md-auto me-3 font-size">Share on socials</p>
+        <div class="social-media">
+          <img src="assets/icons/X.svg" alt="img" class="">
+          <img src="assets/icons/Facebook.svg" alt="img" class="">
+          <img src="assets/icons/Instagram.svg" alt="img" class="">
+          <img src="assets/icons/Telegram.svg" alt="img" class="">
+        </div>
+      </div>
+    
+    </footer>
+    <!-- Footer end -->
+  <script src="js/auth.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

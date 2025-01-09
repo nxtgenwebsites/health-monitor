@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/emergency.css" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="190" class="img-fluid"
+                    alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="health-educate.html">Health Educate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary active" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="fact-checker.html">Fact Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                </ul>
+                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Emergency start -->
+    <section class="emergency-section">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class="col-lg-6">
+                    <div class="emergency-card">
+                        <div class="emergency-heading">
+                            <h1 class="first-heading">Find Nearest</h1>
+                            <h1 class="second-heading fw-medium">Emergency Help</h1>
+                            <p class="mt-5">Locate the nearest open hospital or emergency facility based
+                                on your location in just a few clicks.</p>
+                            <a href="#Map"><button type="button" class="btn text-white rounded-pill">Find Nearest
+                                    Hospital</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="emergency-card">
+                        <div class="emergency-img d-none d-lg-block">
+                            <img src="assets/images/Fact Checker img 2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="emergency-img d-block d-lg-none">
+                            <img src="assets/images/Emergency img.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Map start -->
+<div class="map-section">
+    <div class="map-heading">
+        <h2 class="fw-medium mb-3">Nearby Medical Facility</h2>
+        <div class="current-location d-flex">
+            <img src="assets/icons/current location.svg" alt="IMG" class="mb-3" id="current-location" width="26px" height="26px">
+        </div>
+    </div>
+    <div class="map">
+        <iframe id="map-iframe" class="position-relative w-100" src="https://www.google.com/maps?q=&output=embed"
+            frameborder="0" width="1224px" height="640px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+
+            <!-- Map end -->
+        </div>
+    </section>
+    <!-- Emergency End -->
+    <div id="container">
+    </div>
+    <!-- Footer start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 col-md-6 text-md-start text-center">
+                    <div class="footer-card">
+                        <div class="footer-img">
+                            <a href="">
+                                <img src="assets/icons/logo.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                                and features. You don't want to miss it!</p>
+                            <div class="footer-subscribe position-relative w-100">
+                                <input type="email" class="" placeholder="Enter your email here">
+                                <button type="submit" class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">About Us</h5>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Symptom Checker</a></li>
+                        <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Fact Checker</a></li>
+                        <li class="nav-item"><a href="health-educate.html" class="nav-link">Health Educate</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Find DHAs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">DHA Training</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Hospitals</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Complaints</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Terms</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Socials</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Version</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-2">
+        <div class="copyright-section d-flex align-items-center">
+            <p class="font-size">© Copyright 2024 HealthMonitor. All rights reserved</p>
+            <p class="ms-md-auto me-3 font-size">Share on socials</p>
+            <div class="social-media">
+                <img src="assets/icons/X.svg" alt="img" class="">
+                <img src="assets/icons/Facebook.svg" alt="img" class="">
+                <img src="assets/icons/Instagram.svg" alt="img" class="">
+                <img src="assets/icons/Telegram.svg" alt="img" class="">
+            </div>
+        </div>
+    
+    </footer>
+    <!-- Footer end -->
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initApp" async
+        defer></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/diabetes.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg nav-container">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="190" class="img-fluid"
+                    alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary active" href="health-educate.html">Health Educate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="fact-checker.html">Fact Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                </ul>
+                                                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Search start -->
+    <section class="search-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="search-card">
+                        <div class="search-content">
+                            <h1 class="fw-bold">Search Result</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="search-bar">
+                        <input type="text" class="search-input" id="search-bar" placeholder="Type your search here"
+                            value="Managing Diabetes">
+                        <a href="result-diabeties.html"><button type="button" class="search-btn"><img
+                                    src="assets/icons/search icon.svg" alt="img">
+                            </button></a>
+                        <div class="dropdown">
+                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Topic List
+                                        <img src="assets/icons/button down 2.svg" class="mx-1" alt="ICON">
+
+                            </button>
+                            <ul class="dropdown-menu px-2">
+                                <li><a href="" class="dropdown-item" id="dropdown-content">Managing Diabetes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-show d-flex align-items-center">
+                <h6 class="me-auto">56 results</h6>
+                <h6>Sort by: </h6>
+                <h6 class="sort-span ms-3">Latest</h6>
+            </div>
+            <div class="result-content d-lg-block d-none">
+                <div class="row">
+                    <div class="col-lg-12 mt-3">
+                        <div class="result-card p-4">
+                            <div class="result-heading d-flex align-items-center">
+                                <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                        class="text-decoration-none text-black">Manage your Diabetes in a 3-easy
+                                        ways!</a></h5>
+                                <h6 class="ms-auto">By Samantha Jackson <span class="mx-0 mx-md-4">|</span> Posted on 01 Jan, 2024</h6>
+                            </div>
+                            <div class="result-content mt-3">
+                                <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote weight loss
+                                    and lower the risk of diabetes. Eat a variety of healthy, fiber-rich foods, which
+                                    include: Fruits, such as tomatoes, peppers and fruit from trees. Nonstarchy
+                                    vegetables, such as leafy greens, broccoli and cauliflower vegetables, such as leafy
+                                    greens, broccoli and cauliflower</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 my-3">
+                        <div class="result-card p-4">
+                            <div class="result-heading d-flex align-items-center">
+                                <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                        class="text-decoration-none text-black">New research discovered that diabetes
+                                        can be managed with...</a></h5>
+                                <h6 class="ms-auto">By Samantha Jackson <span class="mx-0 mx-md-4">|</span> Posted on 01 Jan, 2024</h6>
+                            </div>
+                            <div class="result-content mt-3">
+                                <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote weight loss
+                                    and lower the risk of diabetes. Eat a variety of healthy, fiber-rich foods, which
+                                    include: Fruits, such as tomatoes, peppers and fruit from trees. Nonstarchy
+                                    vegetables, such as leafy greens, broccoli and cauliflower vegetables, such as leafy
+                                    greens, broccoli and cauliflower</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 my-3">
+                        <div class="result-card p-4">
+                            <div class="result-heading d-flex align-items-center">
+                                <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                        class="text-decoration-none text-black">Carbs, real or pseudo cause?</a></h5>
+                                <h6 class="ms-auto">By Samantha Jackson <span class="mx-0 mx-md-4">|</span> Posted on 01 Jan, 2024</h6>
+                            </div>
+                            <div class="result-content mt-3">
+                                <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote weight loss
+                                    and lower the risk of diabetes. Eat a variety of healthy, fiber-rich foods, which
+                                    include: Fruits, such as tomatoes, peppers and fruit from trees. Nonstarchy
+                                    vegetables, such as leafy greens, broccoli and cauliflower vegetables, such as leafy
+                                    greens, broccoli and cauliflower</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 my-3">
+                        <div class="result-card p-4">
+                            <div class="result-heading d-flex align-items-center">
+                                <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                        class="text-decoration-none text-black">Life without managing your glucose
+                                        level.</a></h5>
+                                <h6 class="ms-auto">By Samantha Jackson <span class="mx-0 mx-md-4">|</span> Posted on 01 Jan, 2024</h6>
+                            </div>
+                            <div class="result-content mt-3">
+                                <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote weight loss
+                                    and lower the risk of diabetes. Eat a variety of healthy, fiber-rich foods, which
+                                    include: Fruits, such as tomatoes, peppers and fruit from trees. Nonstarchy
+                                    vegetables, such as leafy greens, broccoli and cauliflower vegetables, such as leafy
+                                    greens, broccoli and cauliflower</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="result-card p-4">
+                            <div class="result-heading d-flex align-items-center">
+                                <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                        class="text-decoration-none text-black">Causes, symptoms, treatment, management
+                                        of Diabetes</a></h5>
+                                <h6 class="ms-auto">By Samantha Jackson <span class="mx-0 mx-md-4">|</span> Posted on 01 Jan, 2024</h6>
+                            </div>
+                            <div class="result-content mt-3">
+                                <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote weight loss
+                                    and lower the risk of diabetes. Eat a variety of healthy, fiber-rich foods, which
+                                    include: Fruits, such as tomatoes, peppers and fruit from trees. Nonstarchy
+                                    vegetables, such as leafy greens, broccoli and cauliflower vegetables, such as leafy
+                                    greens, broccoli and cauliflower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-content d-lg-none d-block">
+                <div class="row">
+                    <div class="col-lg-12 mt-3">
+                        <div class="accordion-result-card px-4">
+                            <div class="accordion p-4" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                            class="text-decoration-none text-black">Manage your Diabetes in
+                                            a 3-easy
+                                            ways!</a></h5>
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            <h6 class="result-secondary ms-auto">By Samantha Jackson | Posted on 01 Jan,
+                                                2024</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote
+                                                weight loss and lower the risk of diabetes. Eat a variety of healthy,
+                                                fiber-rich foods, which include: Fruits, such as tomatoes, peppers and
+                                                fruit from trees. Nonstarchy vegetables, such as leafy greens, broccoli
+                                                and cauliflower...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="accordion-result-card px-4">
+                            <div class="accordion p-4" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                            class="text-decoration-none text-black">New research discovered
+                                            that diabetes
+                                            can be managed with...</a></h5>
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <h6 class="result-secondary ms-auto">By Samantha Jackson | Posted on 01 Jan,
+                                                2024</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote
+                                                weight loss and lower the risk of diabetes. Eat a variety of healthy,
+                                                fiber-rich foods, which include: Fruits, such as tomatoes, peppers and
+                                                fruit from trees. Nonstarchy vegetables, such as leafy greens, broccoli
+                                                and cauliflower...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="accordion-result-card px-4">
+                            <div class="accordion p-4" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                            class="text-decoration-none text-black">Carbs, real or pseudo
+                                            cause?</a></h5>
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            <h6 class="result-secondary ms-auto">By Samantha Jackson | Posted on 01 Jan,
+                                                2024</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote
+                                                weight loss and lower the risk of diabetes. Eat a variety of healthy,
+                                                fiber-rich foods, which include: Fruits, such as tomatoes, peppers and
+                                                fruit from trees. Nonstarchy vegetables, such as leafy greens, broccoli
+                                                and cauliflower...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="accordion-result-card px-4">
+                            <div class="accordion p-4" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                            class="text-decoration-none text-black">Life without managing
+                                            your glucose
+                                            level.</a></h5>
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            <h6 class="result-secondary ms-auto">By Samantha Jackson | Posted on 01 Jan,
+                                                2024</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote
+                                                weight loss and lower the risk of diabetes. Eat a variety of healthy,
+                                                fiber-rich foods, which include: Fruits, such as tomatoes, peppers and
+                                                fruit from trees. Nonstarchy vegetables, such as leafy greens, broccoli
+                                                and cauliflower...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="accordion-result-card px-4">
+                            <div class="accordion p-4" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h5 class="fw-medium"><a href="wikipedia-diabetes.html"
+                                            class="text-decoration-none text-black">Causes, symptoms,
+                                            treatment, management
+                                            of Diabetes</a></h5>
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            <h6 class="result-secondary ms-auto">By Samantha Jackson | Posted on 01 Jan,
+                                                2024</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="result-paragraph" id="result-paragraph">Fiber-rich foods promote
+                                                weight loss and lower the risk of diabetes. Eat a variety of healthy,
+                                                fiber-rich foods, which include: Fruits, such as tomatoes, peppers and
+                                                fruit from trees. Nonstarchy vegetables, such as leafy greens, broccoli
+                                                and cauliflower...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="previous-next-content mt-5 d-flex justify-content-center align-items-center gap-4">
+                <a href="" class="text-decoration-none"><h6 class="c-change fw-normal">Previous</h6></a>
+                <a href="" class="text-decoration-none text-black"><h6 class="fw-normal">1</h6></a>
+                <a href="" class="text-decoration-none"><h6 class="c-change fw-normal">2</h6></a>
+                <a href="" class="text-decoration-none text-black"><h6 class="fw-normal">Next</h6></a>
+            </div>
+        </div>
+    </section>
+    <!-- Search end -->
+    <!-- Blogs Start -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-heading mb-5 text-center">
+                <h6 class="fw-bold">Blogs & News</h6>
+                <h1 class="fw-bold">Read Our Latest Blogs</h1>
+            </div>
+            <div class="row row-gap-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 1.svg" class="img-fluid w-100" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex justify-content-between  blog-info">
+                                <span>Medical</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>6 Tips To Protect Your Mental Health When You’re Sick</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 2.svg" class="img-fluid" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex justify-content-between  blog-info">
+                                <span>Medical</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>Quarterly Checkups May Help You
+                                    Get Treated Sooner.</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12  col-lg-4">
+                    <div class="blog-card m-auto">
+                        <div class="blog-img">
+                            <img src="assets/images/blog img 3.svg" class="img-fluid" alt="blog img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="d-flex justify-content-between  blog-info">
+                                <span>Medical</span>
+                                <span>March 31, 2022</span>
+                            </div>
+                            <div class="my-2">
+                                <h4>New Drug Found To be Effective In
+                                    Treating Covid19 Symptoms</h4>
+                            </div>
+                            <div class="blog-user">
+                                <img src="assets/images/blog user profile.svg" alt="user profile img">
+                                <span class="mx-2">Rebecca Lee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blogs End -->
+    <!-- Footer start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 col-md-6 text-md-start text-center">
+                    <div class="footer-card">
+                        <div class="footer-img">
+                            <a href="">
+                                <img src="assets/icons/logo.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                                and features. You don't want to miss it!</p>
+                            <div class="footer-subscribe position-relative w-100">
+                                <input type="email" class="" placeholder="Enter your email here">
+                                <button type="submit" class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">About Us</h5>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Symptom Checker</a></li>
+                        <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+                        <li class="nav-item"><a href="fact-checker.html" class="nav-link">Fact Checker</a></li>
+                        <li class="nav-item"><a href="health-educate.html" class="nav-link">Health Educate</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Find DHAs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">DHA Training</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Hospitals</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Complaints</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Terms</h5>
+                        <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Socials</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Version</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-2">
+        <div class="copyright-section d-flex align-items-center">
+            <p class="font-size">© Copyright 2024 HealthMonitor. All rights reserved</p>
+            <p class="ms-md-auto me-3 font-size">Share on socials</p>
+            <div class="social-media">
+                <img src="assets/icons/X.svg" alt="img" class="">
+                <img src="assets/icons/Facebook.svg" alt="img" class="">
+                <img src="assets/icons/Instagram.svg" alt="img" class="">
+                <img src="assets/icons/Telegram.svg" alt="img" class="">
+            </div>
+        </div>
+    
+    </footer>
+    <!-- Footer end -->
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/paragraph.js"></script>
+</body>
+
+</html>
