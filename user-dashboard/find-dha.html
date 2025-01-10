@@ -528,7 +528,7 @@
             </div>
 
             <!-- Communities Dropdown -->
-            <div class="menu-item-dropdown active">
+            <div class="menu-item-dropdown active menu-item-active ">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         class="icon sidebar-icon">
@@ -1135,257 +1135,257 @@
             }
         });
         document.addEventListener('DOMContentLoaded', function () {
-    // Handle dropdown menu items in sidebar
-    const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
-    const dropdownContents = document.querySelectorAll('.dropdown-content');
-    
-    // Get current page URL
-    const currentPage = window.location.pathname;
-    
-    dropdownItems.forEach(item => {
-        // Check if this dropdown contains the active page link
-        const hasActivePage = item.nextElementSibling.querySelector(`a[href="${currentPage}"]`);
-        // If this is the Communities dropdown on the Find DHA page
-        const isFindDHAPage = currentPage.includes('find-dha') && 
-                             item.querySelector('.menu-text').textContent.trim() === 'Communities';
-        
-        if (isFindDHAPage || hasActivePage) {
-            // Keep this dropdown open initially
-            item.classList.add('active');
-            const arrow = item.querySelector('.arrow');
-            if (arrow) {
-                arrow.style.transform = 'rotate(90deg)';
-            }
-            const dropdownContent = item.nextElementSibling;
-            if (dropdownContent) {
-                dropdownContent.classList.add('show');
-            }
-            // Highlight the Find DHA link
-            const findDHALink = dropdownContent.querySelector('a[href*="find-dha"]');
-            if (findDHALink) {
-                findDHALink.style.color = '#0C75C2';
-            }
-        }
+            // Handle dropdown menu items in sidebar
+            const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
+            const dropdownContents = document.querySelectorAll('.dropdown-content');
 
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            const dropdownContent = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
+            // Get current page URL
+            const currentPage = window.location.pathname;
 
-            // Close all other dropdowns
-            dropdownItems.forEach(otherItem => {
-                if (otherItem !== this) {
-                    otherItem.classList.remove('active');
-                    const otherContent = otherItem.nextElementSibling;
-                    if (otherContent) {
-                        otherContent.classList.remove('show');
+            dropdownItems.forEach(item => {
+                // Check if this dropdown contains the active page link
+                const hasActivePage = item.nextElementSibling.querySelector(`a[href="${currentPage}"]`);
+                // If this is the Communities dropdown on the Find DHA page
+                const isFindDHAPage = currentPage.includes('find-dha') &&
+                    item.querySelector('.menu-text').textContent.trim() === 'Communities';
+
+                if (isFindDHAPage || hasActivePage) {
+                    // Keep this dropdown open initially
+                    item.classList.add('active');
+                    const arrow = item.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.style.transform = 'rotate(90deg)';
                     }
-                    const otherArrow = otherItem.querySelector('.arrow');
-                    if (otherArrow) {
-                        otherArrow.style.transform = 'rotate(0deg)';
+                    const dropdownContent = item.nextElementSibling;
+                    if (dropdownContent) {
+                        dropdownContent.classList.add('show');
+                    }
+                    // Highlight the Find DHA link
+                    const findDHALink = dropdownContent.querySelector('a[href*="find-dha"]');
+                    if (findDHALink) {
+                        findDHALink.style.color = '#0C75C2';
                     }
                 }
+
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdownContent = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+
+                    // Close all other dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            otherItem.classList.remove('active');
+                            const otherContent = otherItem.nextElementSibling;
+                            if (otherContent) {
+                                otherContent.classList.remove('show');
+                            }
+                            const otherArrow = otherItem.querySelector('.arrow');
+                            if (otherArrow) {
+                                otherArrow.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    this.classList.toggle('active');
+                    if (dropdownContent) {
+                        dropdownContent.classList.toggle('show');
+                    }
+                    if (arrow) {
+                        arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                    }
+                });
             });
 
-            // Toggle current dropdown
-            this.classList.toggle('active');
-            if (dropdownContent) {
-                dropdownContent.classList.toggle('show');
-            }
-            if (arrow) {
-                arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+            // Handle mobile menu dropdowns separately
+            const mobileDropdownBtn = document.getElementById('remote-care-dropdown');
+            const mobileDropdownContent = document.getElementById('m-remote-care-dropdown');
+
+            if (mobileDropdownBtn && mobileDropdownContent) {
+                mobileDropdownBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mobileDropdownContent.classList.toggle('d-none');
+                });
             }
         });
-    });
 
-    // Handle mobile menu dropdowns separately
-    const mobileDropdownBtn = document.getElementById('remote-care-dropdown');
-    const mobileDropdownContent = document.getElementById('m-remote-care-dropdown');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle dropdown menu items in sidebar
+            const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
+            const dropdownContents = document.querySelectorAll('.dropdown-content');
 
-    if (mobileDropdownBtn && mobileDropdownContent) {
-        mobileDropdownBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            mobileDropdownContent.classList.toggle('d-none');
-        });
-    }
-});
+            // Get current page URL
+            const currentPage = window.location.pathname;
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Handle dropdown menu items in sidebar
-    const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
-    const dropdownContents = document.querySelectorAll('.dropdown-content');
-    
-    // Get current page URL
-    const currentPage = window.location.pathname;
-    
-    dropdownItems.forEach(item => {
-        // Check if this dropdown contains the active page link
-        const hasActivePage = item.nextElementSibling.querySelector(`a[href="${currentPage}"]`);
-        // If this is the Communities dropdown on the Find DHA page
-        const isFindDHAPage = currentPage.includes('find-dha') && 
-                             item.querySelector('.menu-text').textContent.trim() === 'Communities';
-        
-        if (isFindDHAPage || hasActivePage) {
-            // Keep this dropdown open initially
-            item.classList.add('active');
-            const arrow = item.querySelector('.arrow');
-            if (arrow) {
-                arrow.style.transform = 'rotate(90deg)';
-            }
-            const dropdownContent = item.nextElementSibling;
-            if (dropdownContent) {
-                dropdownContent.classList.add('show');
-            }
-            // Highlight the Find DHA link
-            const findDHALink = dropdownContent.querySelector('a[href*="find-dha"]');
-            if (findDHALink) {
-                findDHALink.style.color = '#0C75C2';
-            }
-        }
+            dropdownItems.forEach(item => {
+                // Check if this dropdown contains the active page link
+                const hasActivePage = item.nextElementSibling.querySelector(`a[href="${currentPage}"]`);
+                // If this is the Communities dropdown on the Find DHA page
+                const isFindDHAPage = currentPage.includes('find-dha') &&
+                    item.querySelector('.menu-text').textContent.trim() === 'Communities';
 
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            const dropdownContent = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
-
-            // Close all other dropdowns
-            dropdownItems.forEach(otherItem => {
-                if (otherItem !== this) {
-                    otherItem.classList.remove('active');
-                    const otherContent = otherItem.nextElementSibling;
-                    if (otherContent) {
-                        otherContent.classList.remove('show');
+                if (isFindDHAPage || hasActivePage) {
+                    // Keep this dropdown open initially
+                    item.classList.add('active');
+                    const arrow = item.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.style.transform = 'rotate(90deg)';
                     }
-                    const otherArrow = otherItem.querySelector('.arrow');
-                    if (otherArrow) {
-                        otherArrow.style.transform = 'rotate(0deg)';
+                    const dropdownContent = item.nextElementSibling;
+                    if (dropdownContent) {
+                        dropdownContent.classList.add('show');
+                    }
+                    // Highlight the Find DHA link
+                    const findDHALink = dropdownContent.querySelector('a[href*="find-dha"]');
+                    if (findDHALink) {
+                        findDHALink.style.color = '#0C75C2';
                     }
                 }
+
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdownContent = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+
+                    // Close all other dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            otherItem.classList.remove('active');
+                            const otherContent = otherItem.nextElementSibling;
+                            if (otherContent) {
+                                otherContent.classList.remove('show');
+                            }
+                            const otherArrow = otherItem.querySelector('.arrow');
+                            if (otherArrow) {
+                                otherArrow.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    this.classList.toggle('active');
+                    if (dropdownContent) {
+                        dropdownContent.classList.toggle('show');
+                    }
+                    if (arrow) {
+                        arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                    }
+                });
             });
 
-            // Toggle current dropdown
-            this.classList.toggle('active');
-            if (dropdownContent) {
-                dropdownContent.classList.toggle('show');
-            }
-            if (arrow) {
-                arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+            // Handle mobile menu dropdowns separately
+            const mobileDropdownBtn = document.getElementById('remote-care-dropdown');
+            const mobileDropdownContent = document.getElementById('m-remote-care-dropdown');
+
+            if (mobileDropdownBtn && mobileDropdownContent) {
+                mobileDropdownBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mobileDropdownContent.classList.toggle('d-none');
+                });
             }
         });
-    });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Bootstrap dropdowns
+            const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
 
-    // Handle mobile menu dropdowns separately
-    const mobileDropdownBtn = document.getElementById('remote-care-dropdown');
-    const mobileDropdownContent = document.getElementById('m-remote-care-dropdown');
+            // Handle sidebar dropdowns
+            const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
 
-    if (mobileDropdownBtn && mobileDropdownContent) {
-        mobileDropdownBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            mobileDropdownContent.classList.toggle('d-none');
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Bootstrap dropdowns
-    const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
-    const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
-    
-    // Handle sidebar dropdowns
-    const dropdownItems = document.querySelectorAll('.menu-item-dropdown');
-    
-    // Get current page URL
-    const currentPage = window.location.pathname;
-    
-    dropdownItems.forEach(item => {
-        // Find the dropdown content associated with this item
-        const dropdownContent = item.nextElementSibling;
-        const arrow = item.querySelector('.arrow');
-        
-        // Check if this is the Communities dropdown
-        const isCommunities = item.querySelector('.menu-text')?.textContent.trim() === 'Communities';
-        
-        // If this is the Communities dropdown and we're on a Communities page, open it by default
-        if (isCommunities && (currentPage.includes('find-dha') || 
-            currentPage.includes('faq') || 
-            currentPage.includes('privacy-policy') || 
-            currentPage.includes('reviews') || 
-            currentPage.includes('Medical-Labs') || 
-            currentPage.includes('hospitals') || 
-            currentPage.includes('Chemists') || 
-            currentPage.includes('dha-training') || 
-            currentPage.includes('complaints'))) {
-            
-            item.classList.add('active');
-            if (dropdownContent) {
-                dropdownContent.classList.add('show');
-            }
-            if (arrow) {
-                arrow.style.transform = 'rotate(90deg)';
-            }
-            
-            // Highlight the current page link
-            const currentLink = dropdownContent.querySelector(`a[href*="${currentPage.split('/').pop()}"]`);
-            if (currentLink) {
-                currentLink.style.color = '#0C75C2';
-            }
-        }
-        
-        // Add click event listener
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Close all other dropdowns
-            dropdownItems.forEach(otherItem => {
-                if (otherItem !== this) {
-                    otherItem.classList.remove('active');
-                    const otherContent = otherItem.nextElementSibling;
-                    const otherArrow = otherItem.querySelector('.arrow');
-                    if (otherContent) {
-                        otherContent.classList.remove('show');
+            // Get current page URL
+            const currentPage = window.location.pathname;
+
+            dropdownItems.forEach(item => {
+                // Find the dropdown content associated with this item
+                const dropdownContent = item.nextElementSibling;
+                const arrow = item.querySelector('.arrow');
+
+                // Check if this is the Communities dropdown
+                const isCommunities = item.querySelector('.menu-text')?.textContent.trim() === 'Communities';
+
+                // If this is the Communities dropdown and we're on a Communities page, open it by default
+                if (isCommunities && (currentPage.includes('find-dha') ||
+                    currentPage.includes('faq') ||
+                    currentPage.includes('privacy-policy') ||
+                    currentPage.includes('reviews') ||
+                    currentPage.includes('Medical-Labs') ||
+                    currentPage.includes('hospitals') ||
+                    currentPage.includes('Chemists') ||
+                    currentPage.includes('dha-training') ||
+                    currentPage.includes('complaints'))) {
+
+                    item.classList.add('active');
+                    if (dropdownContent) {
+                        dropdownContent.classList.add('show');
                     }
-                    if (otherArrow) {
-                        otherArrow.style.transform = 'rotate(0deg)';
+                    if (arrow) {
+                        arrow.style.transform = 'rotate(90deg)';
+                    }
+
+                    // Highlight the current page link
+                    const currentLink = dropdownContent.querySelector(`a[href*="${currentPage.split('/').pop()}"]`);
+                    if (currentLink) {
+                        currentLink.style.color = '#0C75C2';
                     }
                 }
+
+                // Add click event listener
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Close all other dropdowns
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            otherItem.classList.remove('active');
+                            const otherContent = otherItem.nextElementSibling;
+                            const otherArrow = otherItem.querySelector('.arrow');
+                            if (otherContent) {
+                                otherContent.classList.remove('show');
+                            }
+                            if (otherArrow) {
+                                otherArrow.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    this.classList.toggle('active');
+                    if (dropdownContent) {
+                        dropdownContent.classList.toggle('show');
+                    }
+                    if (arrow) {
+                        arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                    }
+                });
             });
-            
-            // Toggle current dropdown
-            this.classList.toggle('active');
-            if (dropdownContent) {
-                dropdownContent.classList.toggle('show');
+
+            // Handle sidebar collapse
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', function () {
+                    sidebar.classList.toggle('collapsed');
+                });
             }
-            if (arrow) {
-                arrow.style.transform = this.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+
+            // Handle mobile menu
+            const mobileMenuBtn = document.querySelector('.navbar-toggler');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            if (mobileMenuBtn && sidebar && sidebarOverlay) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    sidebar.classList.toggle('mobile-active');
+                    sidebarOverlay.classList.toggle('active');
+                });
+
+                sidebarOverlay.addEventListener('click', function () {
+                    sidebar.classList.remove('mobile-active');
+                    this.classList.remove('active');
+                });
             }
         });
-    });
-    
-    // Handle sidebar collapse
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    const sidebar = document.getElementById('sidebar');
-    
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('collapsed');
-        });
-    }
-    
-    // Handle mobile menu
-    const mobileMenuBtn = document.querySelector('.navbar-toggler');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    
-    if (mobileMenuBtn && sidebar && sidebarOverlay) {
-        mobileMenuBtn.addEventListener('click', function() {
-            sidebar.classList.toggle('mobile-active');
-            sidebarOverlay.classList.toggle('active');
-        });
-        
-        sidebarOverlay.addEventListener('click', function() {
-            sidebar.classList.remove('mobile-active');
-            this.classList.remove('active');
-        });
-    }
-});
     </script>
 
 

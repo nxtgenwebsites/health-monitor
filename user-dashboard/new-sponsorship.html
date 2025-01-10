@@ -964,7 +964,7 @@
             pairDevicePopop.classList.add('d-none');
         })
 
-        previewBtn.addEventListener('click', () => {
+        previewBtn.addEventListener('click', (e) => {
             previewPopup.classList.remove('d-none');
             previewPopup.classList.add('d-flex');
         });
@@ -987,8 +987,10 @@
             savePopup.classList.add('d-none')
         })
 
-        previewPopup.addEventListener('click', () => {
-            previewPopup.classList.add('d-none')
+        previewPopup.addEventListener('click', (e) => {
+            if (e.target === previewPopup) {
+                previewPopup.classList.add('d-none')
+            }
         });
 
         saveBack.addEventListener('click', () => {

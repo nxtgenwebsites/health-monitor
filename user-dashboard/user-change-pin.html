@@ -72,7 +72,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                     <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -86,7 +86,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                    <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -100,7 +100,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-        <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -114,7 +114,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-             <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -128,7 +128,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-      <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -450,7 +450,7 @@
             <div class="dropdown-content">
                 <a href="/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
                 <a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
-                <a href="/user-dashboard/community-reviews.html" class="dropdown-item-custom">Reviews</a>
+                <a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
                 <a href="/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
                 <a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
                 <a href="/user-dashboard/chemists.html" class="dropdown-item-custom">Chemists</a>
@@ -474,15 +474,13 @@
             <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item">
                     <img src="assets\transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
-
-
                     Transfer
                 </div>
             </a>
 
             <div class="upgrade-box">
-                <h5>Upgrade to DHA to get access all Features!</h5>
-                <button class="upgrade-button">Get DHA Now!</button>
+                <h5 class="upgrade-text">Upgrade to DHA to get access all Features!</h5>
+                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get DHA Now!</a>
             </div>
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -655,12 +653,14 @@
                     //   Password Message
                     const passwordMsg = document.querySelector('.update-pass');
                     const crossIcon = document.querySelector('.cross-icon i');
-                        passwordMsg.style.display = 'block';
+                    const wrongPassText = document.getElementById('wrong-pass-error');
+                    passwordMsg.style.display = 'block';
 
                     crossIcon.addEventListener('click', () => {
                         passwordMsg.style.display = 'none';
                     });
-                }else{
+                    wrongPassText.classList.add('d-none')
+                } else {
                     const wrongPassText = document.getElementById('wrong-pass-error');
                     wrongPassText.classList.remove('d-none')
                 }
@@ -692,17 +692,6 @@
                 shareProfilePopup.classList.add('d-flex');
             })
 
-            document.addEventListener("DOMContentLoaded", () => {
-                const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
-                if (dropdownMenu) {
-                    dropdownMenu.classList.add("show");
-                }
-
-                const arrowIcon = document.querySelector(".menu-item-dropdown .arrow");
-                if (arrowIcon) {
-                    arrowIcon.style.transform = "rotate(90deg)";
-                }
-            });
 
             for (let i = 0; i < remoteCareBtn.length; i++) {
                 remoteCareBtn[i].addEventListener('click', () => {
@@ -796,7 +785,7 @@
     </script>
     <!-- Javascript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/user dashboard/navbar-&-sidebar.js"></script>
+    <script src="js/sidebar.js"></script>
 </body>
 
 </html>

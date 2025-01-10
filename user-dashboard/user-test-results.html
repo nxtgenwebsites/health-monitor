@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Monitor UI</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/user-test-results.css">
 </head>
@@ -137,375 +138,389 @@
             background: linear-gradient(270.46deg, #1FDCE5 0.32%, #0C74C2 108.77%);
         }
     </style>
-<header class="header d-flex align-items-center justify-content-between">
-    <!-- This is the Updated HTML FILE -->
-    <!-- Left side -->
-    <div class="d-flex align-items-center">
-        <div class="logo-container border-lg-end border-0">
-            <img src="assets/logo.png" alt="Health Monitor" class="logo">
-        </div>
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
-    </div>
-
-    <!-- Center navigation (visible on desktop only) -->
-    <div class="nav-center d-none d-lg-flex align-items-center gap-4">
-        <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
-            <img src="assets/Group.svg" alt="" style="width: 20px;">
-            Emergency
-        </a>
-        <a href="/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
-            <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
-            Monitors
-        </a>
-        <div class="dropdown">
-            <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
-                Remote Care
-            </button>
-            <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
-                <li class="dropdown-item remote-care-btn">Call DHA</li>
-                <li class="dropdown-item remote-care-btn">Call Nurse</li>
-                <li class="dropdown-item remote-care-btn">Call Doctor</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Right side with toggle button, notification and user -->
-    <div class="d-flex align-items-center gap-3">
-        <!-- Notification -->
-        <div class="position-relative d-none d-lg-block dropdown">
-            <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
-                <span class="notification-badge">5</span>
-            </a>
-
-            <!-- Notification Dropdown Menu -->
-            <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="text-muted" style="font-size: 12px;">
-                        You have <strong class="text-muted">5 new</strong> notifications
-                    </span>
-                    <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
-                </div>
-                <hr class="dropdown-divider my-2">
-
-                <!-- Notification Items -->
-                <div class="notification-item d-flex gap-2 p-2">
-                    <div class="notification-icon">
-                        <div class="icon-circle">
-                   <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
-                        </div>
-                    </div>
-                    <div class="notification-content">
-                        <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
-                        <small class="text-muted d-block">15 mins ago</small>
-                    </div>
-                </div>
-
-                <hr class="dropdown-divider my-2">
-
-                <div class="notification-item d-flex gap-2 p-2">
-                    <div class="notification-icon">
-                        <div class="icon-circle">
-                   <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
-                        </div>
-                    </div>
-                    <div class="notification-content">
-                        <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
-                        <small class="text-muted d-block">1 hr ago</small>
-                    </div>
-                </div>
-
-                <hr class="dropdown-divider my-2">
-
-                <div class="notification-item d-flex gap-2 p-2">
-                    <div class="notification-icon">
-                        <div class="icon-circle">
-           <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
-                        </div>
-                    </div>
-                    <div class="notification-content">
-                        <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
-                        <small class="text-muted d-block">8 hr ago</small>
-                    </div>
-                </div>
-
-                <hr class="dropdown-divider my-2">
-
-                <div class="notification-item d-flex gap-2 p-2">
-                    <div class="notification-icon">
-                        <div class="icon-circle">
-       <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
-                        </div>
-                    </div>
-                    <div class="notification-content">
-                        <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
-                        <small class="text-muted d-block">Yesterday</small>
-                    </div>
-                </div>
-
-                <hr class="dropdown-divider my-2">
-
-                <div class="notification-item d-flex gap-2 p-2">
-                    <div class="notification-icon">
-                        <div class="icon-circle">
-              <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
-                        </div>
-                    </div>
-                    <div class="notification-content">
-                        <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
-                        <small class="text-muted d-block">Yesterday</small>
-                    </div>
-                </div>
-
-                <hr class="dropdown-divider my-2">
-
-                <div class="text-center mt-2">
-                    <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
-                        notifications</a>
-                </div>
+    <header class="header d-flex align-items-center justify-content-between">
+        <!-- This is the Updated HTML FILE -->
+        <!-- Left side -->
+        <div class="d-flex align-items-center">
+            <div class="logo-container border-lg-end border-0">
+                <img src="assets/logo.png" alt="Health Monitor" class="logo">
             </div>
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
 
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <i class="bi bi-list text-white" style="font-size: 24px;"></i>
-        </button>
-
-        <!-- User Dropdown (visible on desktop) -->
-        <div class="dropdown d-none d-lg-block">
-            <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                style="cursor: pointer;">
-                <img src="assets/1.png" alt="" class="user-avatar">
-                <span class="d-none d-lg-inline">Bohdan Peter</span>
-            </div>
-            <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                <li class="dropdown-header p-0 mb-3">
-                    <div class="d-flex gap-3 align-items-center">
-                        <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                        <div>
-                            <h6 class="mb-0">Bohdan Peter</h6>
-                            <small class="text-muted">Preston, UK</small>
-                        </div>
-                    </div>
-                </li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/user-profile.html">
-                        <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                        Profile
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/new-sponsorship.html">
-                        <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                        Sponsorship
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/user-print.html">
-                        <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                        Print
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/user-change-pin.html">
-                        <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                        Change pin
-                    </a></li>
-                <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                        <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                        Share link
-                    </button></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/user-delete-acc.html">
-                        <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                        Delete Account
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/national-policies.html">
-                        <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                        National Policies
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/remote-access.html">
-                        <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                        Access Control
-                    </a></li>
-                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                        href="/user-dashboard/remote-care.html">
-                        <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
-                        Remote Care
-                    </a></li>
-                <li class="border-top mt-2 pt-2">
-                    <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                        Upgrade to DHA Now
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile Menu Offcanvas -->
-<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!-- Navigation Links -->
-        <div class="mobile-nav mb-4">
-            <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+        <!-- Center navigation (visible on desktop only) -->
+        <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+            <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/Group.svg" alt="" style="width: 20px;">
                 Emergency
             </a>
-            <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+            <a href="/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
             <div class="dropdown">
-                <button id="remote-care-dropdown"
-                    class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
-                    <div class="d-flex gap-2 justify-content-center align-items-center">
-                        <i class="bi bi-phone"></i>
-                        <span>Remote Care</span>
-                    </div>
-                    <div class="dropdown-toggle"></div>
+                <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
                 </button>
-                <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                                                                           <li class=" dropdown-item remote-care-btn">
-                    Call DHA</li>
+                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item remote-care-btn">Call DHA</li>
                     <li class="dropdown-item remote-care-btn">Call Nurse</li>
                     <li class="dropdown-item remote-care-btn">Call Doctor</li>
                 </ul>
             </div>
         </div>
+        <!-- Right side with toggle button, notification and user -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Notification -->
+            <div class="position-relative d-none d-lg-block dropdown">
+                <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                    <span class="notification-badge">5</span>
+                </a>
 
-        <!-- User Profile for Mobile -->
-        <div class="mobile-user-profile w-100">
-            <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
-                <img src="assets/1.png" alt="" class="user-avatar">
-                <div>
-                    <h6 class="mb-0">Bohdan Peter</h6>
-                    <small class="text-white">Preston, UK</small>
+                <!-- Notification Dropdown Menu -->
+                <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted" style="font-size: 12px;">
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
+                        <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                    </div>
+                    <hr class="dropdown-divider my-2">
+
+                    <!-- Notification Items -->
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                            <small class="text-muted d-block">15 mins ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                            <small class="text-muted d-block">1 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                            <small class="text-muted d-block">8 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                            notifications</a>
+                    </div>
                 </div>
             </div>
-            <!-- User Menu Items -->
-            <div class="mobile-user-menu">
-                <a href="/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-person-circle"></i> Profile
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
+
+            <!-- User Dropdown (visible on desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Change pin
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            National Policies
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-care.html">
+                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
+                            Remote Care
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to DHA Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
                 </a>
-                <a href="/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-star"></i> Sponsorship
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
                 </a>
-                <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-printer"></i> Print
+                <div class="dropdown">
+                    <button id="remote-care-dropdown"
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
+                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                           <li class=" dropdown-item remote-care-btn">
+                        Call DHA</li>
+                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-white">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <div class="">
+                        <a href="/user-dashboard/remote-access.html"
+                            class="mobile-menu-item d-flex align-items-center gap-2">
+                            <i class="bi bi-phone"></i>Remote Care
+                        </a>
+                        <div class="px-3 py-2">
+                            <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                        </div>
+                    </div>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
                 </a>
-                <a href="/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-key"></i> Change Pin
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
                 </a>
-                <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
-                    <i class="bi bi-share"></i> Share Link
+                <a href="/user-dashboard/remote-access.html"
+                    class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
                 </a>
-                <a href="/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-trash"></i> Delete Account
-                </a>
-                <a href="/user-dashboard/national-policies.html"
-                    class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-flag"></i> National Policies
-                </a>
-                <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-shield-lock"></i>Access Control
-                </a>
-                <div class="">
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted" style="color: white;">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
                     <a href="/user-dashboard/remote-access.html"
                         class="mobile-menu-item d-flex align-items-center gap-2">
                         <i class="bi bi-phone"></i>Remote Care
                     </a>
-                    <div class="px-3 py-2">
-                        <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
-                    </div>
-                </div>
-                <a href="/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-trash"></i>Upgrade to DHA Now
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
 
 
-
-<!-- Mobile Menu Offcanvas -->
-<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!-- Navigation Links -->
-        <div class="mobile-nav mb-4">
-            <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
-                <img src="assets/Group.svg" alt="" style="width: 20px;">
-                Emergency
-            </a>
-            <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
-                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
-                Monitors
-            </a>
-            <a href="/user-dashboard/remote-access.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
-                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
-                Remote Care
-            </a>
-        </div>
-
-        <!-- User Profile for Mobile -->
-        <div class="mobile-user-profile">
-            <div class="d-flex align-items-center gap-3 mb-3">
-                <img src="assets/1.png" alt="" class="user-avatar">
-                <div>
-                    <h6 class="mb-0">Bohdan Peter</h6>
-                    <small class="text-muted" style="color: white;">Preston, UK</small>
+                    <!-- Add other menu items as needed -->
                 </div>
             </div>
-            <!-- User Menu Items -->
-            <div class="mobile-user-menu">
-                <a href="/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-person-circle"></i> Profile
-                </a>
-                <a href="/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-star"></i> Sponsorship
-                </a>
-                <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-printer"></i> Print
-                </a>
-                <a href="/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-key"></i> Change Pin
-                </a>
-                <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
-                    <i class="bi bi-share"></i> Share Link
-                </a>
-                <a href="/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-trash"></i> Delete Account
-                </a>
-                <a href="/user-dashboard/national-policies.html"
-                    class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-flag"></i> National Policies
-                </a>
-                <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-shield-lock"></i>Access Control
-                </a>
-                <a href="/user-dashboard/remote-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-phone"></i>Remote Care
-                </a>
-                <a href="/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                    <i class="bi bi-trash"></i>Upgrade to DHA Now
-                </a>
-
-
-                <!-- Add other menu items as needed -->
-            </div>
         </div>
     </div>
-</div>
 
 
     <div class="layout-container">
@@ -596,7 +611,7 @@
                 Log Out
             </button>
         </div>
-   
+
         <!-- Main Content -->
         <div class="main-content">
             <div class="content-wrapper">
@@ -668,29 +683,29 @@
                 </div>
             </div>
         </div>
-<!-- Share Profile Popup -->
-<div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
-    <div class="profile-box bg-white rounded text-center position-relative w-100">
-        <h5 class="mt-3">Share My Profile</h5>
-        <div
-            class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-            <h6>Copy Link</h6>
-            <h6>user.bohdanpeter/123/aaaabbc</h6>
-            <div class="d-flex">
-                <button class="btn py-0 bg-white border-0">
-                    <img src="assets/copy.svg" alt="icon">
-                </button>
-                <button class="btn py-0 bg-white border-0">
-                    <img src="assets/share.svg" alt="icon">
-                </button>
+        <!-- Share Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    <h6>Copy Link</h6>
+                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <button class="btn py-0 bg-white border-0">
+                            <img src="assets/share.svg" alt="icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
             </div>
         </div>
-        <div class="close-btn">
-            <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
-                    alt="close"></button>
-        </div>
-    </div>
-</div>
         <div class="right-sidebar">
             <div class="ad-container">
                 <img src="assets\7c730607a774a4971a56784a32c40bd1.png" alt="Advertisement">
@@ -806,46 +821,46 @@
             valueMsg.style.display = 'block';
         });
 
-            const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-    const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-    const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
-    const pairDevicePopop = document.getElementById('paired-device-popup');
-    const pairedBackBtn = document.getElementById('paired-black-btn');
-    const pairedCloseBtn = document.getElementById('paired-close-btn');
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
 
-    const shareProfilePopup = document.getElementById('share-profile-popup');
-    const shareProfileBtn = document.getElementById('share-profile-btn');
-    const ProfileCloseBtn = document.getElementById('profile-close-btn');
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
 
-    ProfileCloseBtn.addEventListener('click', () => {
-        shareProfilePopup.classList.toggle('d-none')
-    })
-
-    shareProfileBtn.addEventListener('click', () => {
-        shareProfilePopup.classList.remove('d-none');
-        shareProfilePopup.classList.add('d-flex');
-    })
-
-    for (let i = 0; i < remoteCareBtn.length; i++) {
-        remoteCareBtn[i].addEventListener('click', () => {
-            pairDevicePopop.classList.remove('d-none');
-            pairDevicePopop.classList.add('d-flex');
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
         })
-    }
 
-    remoteCareDropdownBtn.addEventListener('click', () => {
-        remoteCareDropdown.classList.toggle('d-none')
-    })
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
 
-    pairedBackBtn.addEventListener('click', () => {
-        pairDevicePopop.classList.add('d-none');
-    })
-    pairedCloseBtn.addEventListener('click', () => {
-        pairDevicePopop.classList.add('d-none');
-    })
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
     </script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/user dashboard/sidebar.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="js/user dashboard/medication.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>

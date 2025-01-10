@@ -835,26 +835,12 @@
                     shareProfilePopup.classList.add('d-flex');
                 })
 
-                document.addEventListener("DOMContentLoaded", () => {
-                    const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
-                    if (dropdownMenu) {
-                        dropdownMenu.classList.add("show");
-                    }
-
-                    const arrowIcon = document.querySelector(".menu-item-dropdown .arrow");
-                    if (arrowIcon) {
-                        arrowIcon.style.transform = "rotate(90deg)";
-                    }
-                });
-
                 for (let i = 0; i < remoteCareBtn.length; i++) {
                     remoteCareBtn[i].addEventListener('click', () => {
                         pairDevicePopop.classList.remove('d-none');
                         pairDevicePopop.classList.add('d-flex');
                     })
                 }
-
-
 
                 pairedBackBtn.addEventListener('click', () => {
                     pairDevicePopop.classList.add('d-none');
