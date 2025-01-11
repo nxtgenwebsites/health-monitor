@@ -427,8 +427,9 @@
                 </div>
             </a>
 
-            <a href="/user-dashboard/symptom-checker.html">
-                <div class="menu-item">
+            <!-- Symptom Checker Dropdown -->
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
                         <path
@@ -446,7 +447,12 @@
                     </svg>
                     <span class="menu-text">Symptom Checker</span>
                 </div>
-            </a>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summarizer</a>
+                <a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnostics</a>
+            </div>
 
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">

@@ -524,9 +524,14 @@ a {
 
 .chat-container {
   padding: 24px;
+  min-height: 60vh;
   background: white;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .chat-message {
   display: flex;
