@@ -2863,17 +2863,6 @@ line-height: normal;
     background: linear-gradient(90deg, #0C75C2 0%, #1ECEE4 100%);
 }
 
-/* Optional: Add a slight overlay to ensure text remains readable */
-.main-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Very subtle white overlay */
-    z-index: 0;
-}
 
 .content-overlay {
     text-align: center;

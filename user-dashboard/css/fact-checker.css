@@ -1424,3 +1424,7 @@ line-height: normal;
     border-radius: 15px;
     /* display: block; */
 }
+
+.sidebar-icon {
+    width: 33px !important;
+}

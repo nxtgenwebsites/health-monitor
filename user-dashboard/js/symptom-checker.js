@@ -18,15 +18,8 @@ for (let i = 0; i < allBotBtn.length; i++) {
         activeIndicator.className = "active-indicator";
         allBotBtn[i].append(activeIndicator);
     });
-    allBotBtn[0].onclick = () => {
-        const upgradeOverlay = document.getElementById('upgrade-overlay');
 
-        upgradeOverlay.classList.add('d-none');
-        upgradeOverlay.classList.remove('d-flex');
-        infoBox.innerHTML = `Summarize your symptoms into a report for medical practitioners to understand and act upon. It's
-        <span class="highlight">totally free of any charge</span>, so you can get basic help immediately!`;
-    };
-    allBotBtn[1].onclick = () => {
+    allBotBtn[0].onclick = () => {
         const upgradeOverlay = document.getElementById('upgrade-overlay');
 
         upgradeOverlay.classList.remove('d-none');
@@ -34,14 +27,14 @@ for (let i = 0; i < allBotBtn.length; i++) {
         infoBox.innerHTML = `This AI provides detailed assistance with managing medical records, allowing you to print, add comments, invite other DHAs—all at a highly <span class="highlight">competitive cost.</span> The feature is under development, and we will notify when it becomes available!`;
 
     };
-    allBotBtn[2].onclick = () => {
+    allBotBtn[1].onclick = () => {
         const upgradeOverlay = document.getElementById('upgrade-overlay');
 
         upgradeOverlay.classList.remove('d-none');
         upgradeOverlay.classList.add('d-flex');
         infoBox.innerHTML = `Azure AI helps with medical records, allowing you to print, comment, and invite DHAs at a competitive cost. <span class="highlight">The feature is in development, and we'll notify you once it's ready!</span>`;
     };
-    allBotBtn[3].onclick = () => {
+    allBotBtn[2].onclick = () => {
         const upgradeOverlay = document.getElementById('upgrade-overlay');
 
         upgradeOverlay.classList.remove('d-none');
@@ -49,7 +42,7 @@ for (let i = 0; i < allBotBtn.length; i++) {
         infoBox.innerHTML = `This AI streamlines medical records by enabling printing, commenting, and inviting DHAs, all at an affordable price.
      <span class="highlight">We'll update you once the feature is live!</span>`;
     };
-    allBotBtn[4].onclick = () => {
+    allBotBtn[3].onclick = () => {
         const upgradeOverlay = document.getElementById('upgrade-overlay');
 
         upgradeOverlay.classList.remove('d-none');

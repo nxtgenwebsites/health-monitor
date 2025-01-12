@@ -232,6 +232,14 @@
   color: white !important;
 }
 
+.menu-item-active {
+  background: #0c75c2 !important;
+  color: white !important;
+}
+.menu-item-active svg path {
+  fill: white !important;
+}
+
 .sidebar {
   min-height: 100vh !important;
   height: auto !important;
@@ -240,9 +248,30 @@
 .menu-item:hover svg path {
   fill: #0C75C2 !important;
 }
+.menu-item.active:hover svg path {
+  fill: white !important;
+}
 
 .menu-item-dropdown.active svg path{
   fill: white !important;
 }
 
- 
+.log-out-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 24px;
+    background-color: #0C75C2;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.log-out-btn:hover {
+    background-color: #0959a3;
+}
+
