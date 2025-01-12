@@ -35,18 +35,10 @@
             <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
             Monitors
         </a>
-        <div class="dropdown">
-            <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
                 Remote Care
-            </button>
-            <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
-                <li class="dropdown-item remote-care-btn">Call DHA</li>
-                <li class="dropdown-item remote-care-btn">Call Nurse</li>
-                <li class="dropdown-item remote-care-btn">Call Doctor</li>
-            </ul>
-        </div>
+            </a>
     </div>
     <!-- Right side with toggle button, notification and user -->
     <div class="d-flex align-items-center gap-3">
@@ -574,22 +566,86 @@
                             BMI
                         </div>
                     </div>
-                    <div class="time-filter">Weekly</div>
+                    <div class="time-filter">
+                        <div class="bp-dropdown">
+                            <button class="dropdown filter-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Select
+                                <img src="assets/down arrow.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><button class="dropdown-item">Monthly</button></li>
+                                <li><button class="dropdown-item">Weekly</button></li>
+                                <li><button class="dropdown-item">Yearly</button></li>
+                                <li><button class="dropdown-item">Custom</button></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="chart-container">
                     <canvas id="bmiChart"></canvas>
                 </div>
+                <div class="history-section">
+                    <div class="history-header">
+                        <div class="history-title">23 Dec, 2024 - 30 Dec, 2024</div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="threshold-icon">
+                                <img src="assets/threshold.svg" width="20" alt="icon">
+                            </div>
+                            <div class="share-icon">
+                                <i class="bi bi-share"></i>
+                                <div class="share-dropdown">
+                                    <button class="share-dropdown-item">Forward</button>
+                                    <button class="share-dropdown-item">Print</button>
+                                    <button class="share-dropdown-item">Download Pdf</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-primary">Highest</th>
+                                <th class="text-primary">Average</th>
+                                <th class="text-primary">Lowest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-bold">Systolic</td>
+                                <td>123</td>
+                                <td>87</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Diastolic</td>
+                                <td>154</td>
+                                <td>96</td>
+                                <td>85</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                
+                </div>
 
                 <div class="history-section">
                     <div class="history-header">
                         <div class="history-title">History</div>
-                        <div class="share-icon">
-                            <i class="bi bi-share"></i>
-                            <div class="share-dropdown">
-                                <button class="share-dropdown-item">Forward</button>
-                                <button class="share-dropdown-item">Print</button>
-                                <button class="share-dropdown-item">Download Pdf</button>
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="threshold-icon">
+                                <img src="assets/threshold.svg" width="20" alt="icon">
+                            </div>
+                            <div class="share-icon">
+                                <i class="bi bi-share"></i>
+                                <div class="share-dropdown">
+                                    <button class="share-dropdown-item">Forward</button>
+                                    <button class="share-dropdown-item">Print</button>
+                                    <button class="share-dropdown-item">Download Pdf</button>
+                                </div>
                             </div>
                         </div>
                     </div>

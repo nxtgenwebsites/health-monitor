@@ -227,13 +227,13 @@ a {
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 24px;
+  padding: 50px !important ;
   background-color: #f5f6fa;
   min-width: 0;
 }
 
 .heading-text h3{
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #0C74C2;
 }
@@ -263,44 +263,56 @@ a {
   font-weight: 300 !important;
 }
 
-.remote-care-table th {
-  font-size: 13px;
-  color: #2E2E2E;
+.thumbnail-card{ 
+  height: 100%;
+  padding: 20px 30px;
+  border-radius: 10px !important;
+  background: white;
+  box-shadow: 0 10px 10px #00000026;
 }
 
-.remote-care-table td {
-  padding: 10px!important;
-  font-size: 13px;
-  color: #2E2E2E;
+.add-remote-care{
+    height: 100%;
+  padding: 50px 30px;
+  border-radius: 10px !important;
+  background: white;
+  box-shadow: 0 10px 10px #00000026;
 }
 
-.action-td {
-  color: #1F9254;
+.thumbnail-card .card-top h3{
+  background: #DDF2F9;
+ padding: 7px 15px;
+  border: 1px solid #0C74C2;
+  border-radius: 6px;
+  color: #0C74C2;
+  font-size: 18px;
 }
-.table-edit-btn {
-  color: #0959a3;
-}
-  .remote-care-table tbody tr {
-    height: 50px; 
-  }
-  
-  .remote-care-table td, 
-  .remote-care-table th {
-    padding: 20px !important;
-    border-spacing: 0;
-  }
-  
-  .remote-care-table tbody tr:not(:last-child) {
-    border-bottom: 10px solid transparent;
-  }
 
-   .remote-care-table tbody tr:nth-child(2) {
-    background-color: red !important;
-  }
-  .remote-care-table {
-    border-collapse: separate !important; 
-    border-spacing: 0 10px;
-  }
+.thumbnail-card .card-top a{
+  color: #ED4C5C !important;
+  cursor: pointer;
+}
+
+.thumbnail-card .card-top a:hover{
+  text-decoration: underline;
+}
+
+.thumbnail-card .card-text{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.add-remote-care button {
+  width: 53px;
+  height: 53px;
+  background: #DDF2F9;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.add-remote-care h5{
+  color: #0C74C2;
+}
 /* Right Sidebar */
 .right-sidebar {
   width: 168px;
@@ -1540,21 +1552,4 @@ body {
 .sidebar-icon {
     width: 30px !important;
     height: 30px !important;
-}
-
-table tr td{
-  background: #F7F6FE !important;
-}
-
-table.remote-care-table .second-row  td{
-    background-color: #FFD3D7 !important;
-}
-table.remote-care-table .second-row  button{
-    background-color: #FFD3D7 !important;
-}
-.auto-call {
-  background: white;
-  padding: 3px 15px;
-  color: #1F9254;
-  border-radius: 20px;
 }
