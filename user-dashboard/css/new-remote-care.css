@@ -383,6 +383,21 @@ a {
   border: none !important;
 }
 
+.disabled-drop-down.active{
+  color: white !important;
+  background: #0b6fc0 !important;
+}
+
+.disabled-btn .active{
+  color: white !important;
+  background: #0b6fc0 !important;
+}
+
+.disabled-drop-down.active option{
+  background: white !important;
+  color: black !important;
+}
+
  /* threshold Popup */
 .threshold-box {
   width: 100%;

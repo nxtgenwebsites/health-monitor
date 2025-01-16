@@ -442,7 +442,7 @@
                             d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text">Symptoms Checker</span>
+                    <span class="menu-text">Symptoms</span>
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
@@ -619,41 +619,8 @@
                         </div>
                     </div>
                     <div id="chat-with-bot" class="chat-with-bot">
-                        <div class="user-message bot">
-                            <div class="user-icon">
-                                <img src="assets/1.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                    What is migraine headache? How often do you get it? is it treatable?
-                                </span>
-                                <span class="message-time d-block">16:23 pm</span>
-                            </div>
-                        </div>
                         <div class="chat-message bot mt-3">
-                            <div class="bot-icon">
-                                <img src="assets/chat-bot-icon.png" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                Migraine is a genetically-influenced complex neurological disorder characterized by episodes of moderate
-                                -to-severe headache, most often unilateral and generally....
-                                </span>
-                                <div class="mt-4 d-flex gap-2">
-                                    <div class="chat-img">
-                                        <img src="assets/chat img.png" alt="Img">
-                                    </div>
-                                    <div class="bot-blog">
-                                        <h6 class="text-primary">
-                                            Migraine Headaches
-                                        </h6>
-                                        <span class="chat-url mt-3">
-                                            https://my.clevelandclinic.org/health/diseases/
-                                            5005-migraine-headaches
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 
@@ -733,7 +700,7 @@
                             <i class="bi bi-share-fill"></i>
                             <span>23</span>
                         </div>
-        
+
                         <div class="stat-item">
                             <i class="bi bi-eye"></i>
                             <span>23</span>
@@ -746,7 +713,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Add Video Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
             <div class="add-video-box">
@@ -827,6 +794,7 @@
         blockBtn.addEventListener('click', () => {
             shareMsg.style.display = 'block';
         });
+
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
@@ -865,35 +833,91 @@
             pairDevicePopop.classList.add('d-none');
         })
 
-                const addImg = document.getElementById('add-1-img');
-                const addVideo = document.getElementById('add-2-video');
-                const addImgPupup = document.getElementById('add-1-popup');
-                const addVideoPupup = document.getElementById('add-2-popup');
-                const addImgClose = document.getElementById('add-close-btn');
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
 
-                addVideo.addEventListener(('click'), () => {
-                    addVideoPupup.classList.remove('d-none')
-                })
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
 
-                addVideoPupup.addEventListener(('click'), (e) => {
-                    if (e.target === addVideoPupup) {
-                        addVideoPupup.classList.add('d-none')
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
+
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
+                addImgPupup.classList.add('d-none')
+            }
+        })
+
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
+
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+
+            const sendBtn = document.getElementById('message-send-btn');
+            const userMessage = document.getElementById('message-to-bot');
+            const chatArea = document.getElementById('chat-with-bot');
+            let autoRes = false; // Tracks if the bot has already responded
+
+            sendBtn.addEventListener('click', () => {
+                const message = userMessage.value.trim();
+
+                if (message) {
+                    const userChat = document.createElement('div');
+                    userChat.classList.add('user-message')
+                    userChat.innerHTML = `
+                            <div class="user-icon">
+                                <img src="assets/1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="message-content">
+                                <span class="text-black chat-hightlight">
+                                   ${message}
+                                </span>
+                                <span class="message-time d-block">16:23 pm</span>
+                            </div>`
+                    chatArea.append(userChat)
+                    if (!autoRes) {
+                        const batChat = document.createElement('div');
+                        batChat.classList.add('chat-message')
+                        batChat.innerHTML = `<div class="bot-icon">
+                                <img src="assets/chat-bot-icon.png" alt="">
+                            </div>
+                            <div class="message-content">
+                                <span class="text-black chat-hightlight">
+                                    Migraine is a genetically-influenced complex neurological disorder characterized by
+                                    episodes of moderate
+                                    -to-severe headache, most often unilateral and generally....
+                                </span>
+                                <div class="mt-4 d-flex gap-2">
+                                    <div class="chat-img">
+                                        <img src="assets/chat img.png" alt="Img">
+                                    </div>
+                                    <div class="bot-blog">
+                                        <h6 class="text-primary">
+                                            Migraine Headaches
+                                        </h6>
+                                        <span class="chat-url mt-3">
+                                            https://my.clevelandclinic.org/health/diseases/
+                                            5005-migraine-headaches
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>`
+                        chatArea.append(batChat)
+                        autoRes = true;
                     }
-                })
-
-                addImgPupup.addEventListener(('click'), (e) => {
-                    if (e.target === addImgPupup) {
-                        addImgPupup.classList.add('d-none')
-                    }
-                })
-
-                addImg.addEventListener(('click'), () => {
-                    addImgPupup.classList.remove('d-none')
-                })
-
-                addImgClose.addEventListener(('click'), () => {
-                    addImgPupup.classList.add('d-none')
-                })
+                    userMessage.value = '';
+                }
+            });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>

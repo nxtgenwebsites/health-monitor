@@ -180,6 +180,7 @@ body {
     border: 2px solid #8A92A6;
     background: white;
     color: #8A92A6;
+    outline: none !important;
     border-radius: 6px;
     padding: 5px 15px;
 }
