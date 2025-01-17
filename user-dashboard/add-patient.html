@@ -445,8 +445,10 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content">
-                <a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summarizer</a>
-                <a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnosis</a>
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summarizer</a></li>
+                    <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnosis</a></li>
+                </ul>
             </div>
 
             <a href="/user-dashboard/emergency.html">
@@ -594,10 +596,7 @@
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Full Name">
-                    </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <select class="form-select">
                             <option selected disabled>Gender</option>
                             <option>Male</option>
@@ -605,13 +604,53 @@
                             <option>Other</option>
                         </select>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <select class="form-select">
-                            <option selected disabled>Marital Status</option>
+                            <option selected disabled>Title</option>
+                            <option>Mr</option>
+                            <option>Mrs</option>
+                            <option>Ms</option>
+                            <option>Miss</option>
+                            <option>Pst</option>
+                            <option>Rev</option>
+                            <option>Alhj</option>
+                            <option>Dr</option>
+                            <option>Prof</option>
+                            <option>Mst</option>
+                            <option>Hon</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Middle  Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Surname  Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Nationality</option>
                             <option>Single</option>
                             <option>Married</option>
                             <option>Divorced</option>
                             <option>Widowed</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Marital Status</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="us">United States</option>
+                            <option value="zambia">Zambia</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="new-zealand">New Zealand</option>
                         </select>
                     </div>
                     <div class="col-12">
@@ -659,7 +698,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary px-4">Save</button>
+                        <button class="btn btn-primary px-4">Next</button>
                     </div>
                 </div>
             </div>
@@ -733,7 +772,7 @@
                         <input type="text" class="form-control" placeholder="Address">
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary px-4">Save</button>
+                        <button class="btn btn-primary px-4">Next</button>
                     </div>
                 </div>
             </div>
@@ -760,7 +799,7 @@
                         <input type="date" class="form-control date-input" data-placeholder="Date of Birth">
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary px-4">Save</button>
+                        <button class="btn btn-primary px-4">Next</button>
                     </div>
                 </div>
             </div>
@@ -797,7 +836,7 @@
                     </div>
                     <div class="col-12 d-flex gap-2">
                         <button class="btn btn-outline-primary">Add another Next of Kin</button>
-                        <button class="btn btn-primary px-4">Save</button>
+                        <button class="btn btn-primary px-4">Next</button>
                     </div>
                 </div>
             </div>
