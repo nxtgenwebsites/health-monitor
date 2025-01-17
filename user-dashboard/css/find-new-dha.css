@@ -458,6 +458,14 @@ a {text-decoration: none;}
     font-size: 12px;
 }
 
+.cdha-tabs-btn {
+    background: rgb(238, 238, 238) !important;
+}
+.cdha-tabs-btn.active{
+    background: #0B6FC0 !important;
+    color: white !important;
+}
+
 .stat-item i {
     font-size: 14px;
 }

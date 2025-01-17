@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+                    </li>
+                </ul>
+                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Login Start -->
+    <section class="auth-section d-flex justify-content-center align-items-center">
+    <div class="auth-border">
+        <div class="auth-container d-flex flex-column align-items-center">
+            <div class="login-heading" id="login-heading" style="display: none;">
+                <h3>Login</h3>
+            </div>
+            <div class="login-heading d-none show-heading" id="signup-heading">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Login</button>
+                <button id="signup-btn" class="text-primary active-btn">Sign Up</button>
+                <div class="btn-slider slide-left" id="btn-slider">
+                </div>
+            </div>
+            <div class="foms-container">
+                <!-- Login Form Start -->
+                <form class="login-from" id="login-form"style="display: none;">
+                    <div class="email my-4">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="password mt-4 position-relative">
+                        <input type="password" placeholder="Password">
+                        <img src="assets/icons/show pass.svg" width="23px" class="text-primary position-absolute hide-pass"
+                            alt="">
+                    </div>
+                    <div class="forget-pass">
+                        <a href="" class="text-decoration-none forgot-password pt-1
+                    ">Forgot password?</a>
+                    </div>
+                    <div class="submit-button d-flex justify-content-center align-items-center">
+                        <a class="btn primary-btn  m-auto mt-4 submit-button-login"
+                            href="user-dashboard/overview.html">Login</a>
+                    </div>
+                </form>
+                <!-- Login Form End -->
+                <!-- Sigup Form Start -->
+                <form class="signup-from d-none show-form" id="signup-form" onsubmit="event.preventDefault();">
+                    <div class="email my-2">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="email my-2">
+                        <input type="email" placeholder="Confirm Email">
+                    </div>
+                    <div class="password my-2 position-relative">
+                        <input type="password" placeholder="Password">
+                        <img src="assets/icons/show pass.svg" width="23" class="position hide-pass" alt="">
+                    </div>
+                    <div class="password my-2 position-relative">
+                        <input type="password" placeholder="Confirm Password">
+                        <img src="assets/icons/show pass.svg" width="23" class="position-absolute hide-pass" alt="">
+                    </div>
+                    <div class="signup-button  text-center">
+                        <a href="register.html" class="btn primary-btn">Create an account</a>
+                    </div>
+                </form>
+                <!-- Sigup Form End -->
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Login End -->
+
+    <!-- Footer start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 col-md-6 text-md-start text-center">
+                    <div class="footer-card ps-3">
+                        <div class="footer-img">
+                            <a href="">
+                                <img src="assets/images/logo.png" width="150" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                                and features. You don't want to miss it!</p>
+                            <div class="footer-subscribe position-relative w-100">
+                                <input type="email" class="" placeholder="Enter your email here">
+                                <button type="submit" class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Home</h5>
+                        <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Symptoms</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Remote Care</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Monitors</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Health Info</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+                        <li class="nav-item"><a href="/user-dashboard/hospitals.html" class="nav-link">Hospitals</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Pharmacy</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Community Digital
+                                Health
+                                Assistants</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Tech Support</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/complaints.html" class="nav-link">Complaints</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/reviews.html" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/privacy-policy.html" class="nav-link">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Profile</h5>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Sponsorship</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Print</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Password & Pin</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Access Control</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">National Policies</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Share link</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Delete Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-2">
+        <div class="copyright-section d-flex align-items-center">
+            <p class="font-size">© Copyright 2025 HealthMonitor. All rights reserved</p>
+            <p class="ms-md-auto me-3 font-size">Share on socials</p>
+            <div class="social-media">
+                <img src="assets/icons/X.svg" alt="img" class="">
+                <img src="assets/icons/Facebook.svg" alt="img" class="">
+                <img src="assets/icons/Instagram.svg" alt="img" class="">
+                <img src="assets/icons/Telegram.svg" alt="img" class="">
+            </div>
+        </div>
+    
+    </footer>
+    <!-- Footer end -->
+
+    <script >
+        const loginBtn = document.getElementById('login-btn');
+            const signupBtn = document.getElementById('signup-btn');
+            const btnSlider = document.getElementById('btn-slider');
+            const signupForm = document.getElementById('signup-form');
+            const loginForm = document.getElementById('login-form');
+            const loginHeading = document.getElementById('login-heading');
+            const signupHeading = document.getElementById('signup-heading');
+
+
+            signupBtn.addEventListener('click', () => {
+                btnSlider.classList.add('slide-left');
+                loginBtn.classList.remove('active-btn');
+                signupBtn.classList.add('active-btn');
+                signupForm.classList.add('show-form');
+                loginForm.classList.remove('show-form');
+                loginForm.style.display = 'none';
+                loginForm.classList.remove('show-form');
+                loginForm.style.display = 'none';
+                loginHeading.style.display = 'none'
+                signupHeading.classList.add('show-heading');
+                loginHeading.classList.remove('show-heading');
+            })
+
+            loginBtn.addEventListener('click', () => {
+                btnSlider.classList.remove('slide-left');
+                loginBtn.classList.add('active-btn');
+                signupBtn.classList.remove('active-btn');
+                loginForm.classList.add('show-form');
+                signupForm.classList.remove('show-form');
+                signupForm.style.display = 'none';
+                signupHeading.style.display = 'none'
+                loginHeading.classList.add('show-heading');
+                signupHeading.classList.remove('show-heading');
+            })
+
+
+            const eyeIcon = document.querySelectorAll('.password img');
+            const inp = document.querySelectorAll('.password input');
+
+            for (let i = 0; i < eyeIcon.length; i++) {
+                eyeIcon[i].addEventListener('click', () => {
+                    if (eyeIcon[i].classList.contains('hide-pass')) {
+                        inp[i].type = 'text';
+                        eyeIcon[i].classList.replace('hide-pass', 'show-pass')
+                        eyeIcon[i].src = 'assets/icons/hide pass.svg';
+                    } else {
+                        inp[i].type = 'password';
+                        eyeIcon[i].classList.replace('show-pass', 'hide-pass')
+                        eyeIcon[i].src = 'assets/icons/show pass.svg'
+                    }
+                })
+            }
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

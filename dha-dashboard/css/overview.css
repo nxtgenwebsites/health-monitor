@@ -160,22 +160,6 @@
   font-size: 25px;
 }
 
-.primary-btn {
-  padding: 6px 20px;
-  border: 2px solid #0b6fc0;
-  background: transparent;
-  color: #0b6fc0;
-  border-radius: 20px;
-  transition: 0.2 linear;
-}
-
-.primary-btn:hover {
-  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
-    color:white;
-    border: 2px solid transparent;
-}
-
-
 .gender-chart {
     background: white !important;
     width: 430px !important;

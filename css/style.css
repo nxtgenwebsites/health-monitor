@@ -130,7 +130,7 @@ body {
 
 /* Services Start*/
 .services-container {
-  padding: 100px 0;
+  padding: 70px 0;
   padding-bottom: 85px;
 }
 
@@ -179,7 +179,7 @@ body {
 
 /* About Start */
 .about-section {
-  padding: 70px 0;
+  padding: 100px 0;
 }
 
 .about-content {
@@ -451,6 +451,10 @@ background: linear-gradient(275.33deg, #0F75BD 3.69%, #21ABE9 99.26%);
 /* demo video Start */
 
 /* Footer start */
+.footer-content {
+  margin-top: -30px !important;
+}
+
 .footer-content p {
   color: #2e2e2e !important;
 }
