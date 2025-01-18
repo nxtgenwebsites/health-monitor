@@ -1658,3 +1658,83 @@ border: 1px solid var(--Primary, #0C74C2);
 .btn-primary:hover{
     background: linear-gradient(90deg, #0C75C2 0%, #1ECEE4 100%) !important;
 }
+
+.keyword-input {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  padding: 5px;
+  border-radius: 5px;
+  gap: 5px; /* Spacing between tags */
+  position: relative;
+  display: flex !important;
+}
+
+#keywordsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+/* 
+#keywordField {
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+} */
+
+.keyword-tag {
+  display: flex;
+  align-items: center;
+  background-color: #5eb1ff !important;
+  color: white !important;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.keyword-tag span {
+  margin-right: 5px;
+}
+
+.keyword-tag .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+/* Input container styling */
+.keyword-input-container {
+  width: 100%;
+  position: relative;
+}
+
+.tags-input {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  min-height: 50px;
+}
+
+.tags-input-field {
+  /* border: none; */
+  outline: none;
+  padding: 0 10px !important;
+  flex: 1;
+  min-width: 100px;
+  padding: 5px 0;
+
+}
+
+.tags-input-field::placeholder {
+  color: #aaa;
+}
+
+.keyword-tag span {
+  margin-right: 5px;
+}

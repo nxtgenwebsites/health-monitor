@@ -661,15 +661,20 @@
 
                             </select>
                         </div>
+                        
+<div class="col-12 keyword-input-container mt-3">
+    <div class="tags-input d-flex flex-wrap align-items-center">
+        <div id="keywordsContainer" class="d-flex flex-wrap"></div>
+        <input type="text" class="form-control tags-input-field w-100" id="keywordField" placeholder="Add attendee names" />
+    </div>
+</div>
 
 
 
-                        <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Attendee Name">
-                        </div>
 
                         <div class="col-12">
                             <input type="email" class="form-control" placeholder="Attendee Email">
+
                         </div>
 
                         <div class="col-md-4">
@@ -1065,6 +1070,78 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+   
+        document.addEventListener("DOMContentLoaded", () => {
+                const keywordField = document.getElementById("keywordField");
+                const keywordsContainer = document.getElementById("keywordsContainer");
+                const keywords = [];
+
+                keywordField.addEventListener("keydown", (event) => {
+                    const keyword = keywordField.value.trim();
+
+                    // Add keyword on Enter or comma
+                    if ((event.key === "Enter" || event.key === ",") && keyword) {
+                        event.preventDefault();
+                        if (!keywords.includes(keyword)) {
+                            addKeyword(keyword);
+                            keywordField.value = "";
+                        }
+                    }
+
+                    // Remove the last keyword on Backspace if input is empty
+                    if (event.key === "Backspace" && !keyword) {
+                        event.preventDefault();
+                        removeLastKeyword();
+                    }
+                });
+
+                function addKeyword(keyword) {
+                    keywords.push(keyword);
+                    renderKeywords();
+                }
+
+                function removeKeyword(index) {
+                    keywords.splice(index, 1);
+                    renderKeywords();
+                }
+
+                function removeLastKeyword() {
+                    if (keywords.length > 0) {
+                        keywords.pop();
+                        renderKeywords();
+                    }
+                }
+
+                function renderKeywords() {
+                    keywordsContainer.innerHTML = ""; // Clear the container before re-rendering
+                    keywords.forEach((keyword, index) => {
+                        const keywordTag = document.createElement("div");
+                        keywordTag.classList.add(
+                            "keyword-tag",
+                            "d-flex",
+                            "align-items-center",
+                            "p-2",
+                            "bg-light",
+                            "rounded"
+                        );
+                        keywordTag.innerHTML = `
+        <span>${keyword}</span>
+      `;
+                        keywordsContainer.appendChild(keywordTag);
+                    });
+
+                    // Attach event listeners to the remove buttons
+                    const removeButtons = keywordsContainer.querySelectorAll(".btn-close");
+                    removeButtons.forEach((btn) => {
+                        btn.addEventListener("click", (event) => {
+                            const index = event.target.getAttribute("data-index");
+                            removeKeyword(index);
+                        });
+                    });
+                }
+            });
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
