@@ -2019,3 +2019,27 @@ background: linear-gradient(90deg, #24BEE0 0%, #0B6FC0 100%);
     width: 28px !important;
     height: 28px !important;
 }
+
+
+.complaint-type{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #8A92A6;
+    background: white;
+    color: #8A92A6;
+    outline: none !important;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.others-inp input{
+    height: 48px;
+    width: 100%;
+    padding: 8px 13px;
+    outline: none;
+    border: 2px solid #0c74c2;
+    border-radius: 10px;
+    margin-top: 15px;
+}

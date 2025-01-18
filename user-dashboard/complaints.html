@@ -146,74 +146,61 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
-                </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
+                    <div class="dropdown d-none d-lg-block">
+                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <img src="assets/1.png" alt="" class="user-avatar">
+                            <span class="d-none d-lg-inline">Bohdan Peter</span>
                         </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Change pin
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/national-policies.html">
-                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                            National Policies
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-care.html">
-                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
-                            Remote Care
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to DHA Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                            <li class="dropdown-header p-0 mb-3">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                                    <div>
+                                        <h6 class="mb-0">Bohdan Peter</h6>
+                                        <small class="text-muted">Preston, UK</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                                    Profile
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                                    Sponsorship
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                                    Print
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                                    Password & 2FA
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                                    Access Control
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                                    System
+                                </a></li>
+                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                                    Share link
+                                </button></li>
+                    
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                                    Delete Account
+                                </a></li>
+                            <li class="border-top mt-2 pt-2">
+                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                                    Upgrade to Community Edition
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
         </div>
     </header>
 
@@ -581,41 +568,47 @@
             <div class="container p-4">
                 <div class="text-center mb-4">
                     <h2 class="text-primary mb-2 page-title">Hi there, <span>Bohdan!</span></h2>
-                    <p class="fs-5 mb-3 page-sub-title">How can we help you today?</p>
-                    <p class="mb-1 para1">`e legal authorities.</p>
-                    <p class="mb-0 para2">It will be investigated with potential accountability</p>
+                    <p class="mb-2 para1">Welcome to Our Complaint Section. We take complaints seriously and may involve
+                        legal authorities if required. Our
+                        primary aim is to protect our users from harm and abuse. Every complaint will be investigated
+                        and resolved.</p>
+                    <p class="mb-2 para2">Any information you provide will be held in confidence to ensure that you can
+                        safely share your concerns with us without
+                        fear. Please provide as much information as possible and remember you can remain anonymous while
+                        we do the background
+                        work to establish the facts of the matter.</p>
+                    <p class="mb-0 para2">Please confirm that you fully understand this statement and consent to
+                        continue. “Yes! I fully understand this statement
+                        and consent to continue</p>
                 </div>
 
                 <div class="complaint-form">
                     <!-- Complaint Type Selection -->
                     <div class="mb-4">
-                        <div class="d-flex align-items-center justify-content-between " style="margin-bottom: 30px;">
+                        <div class="d-flex align-items-center justify-content-between">
                             <span class="me-4 i-was">I was</span>
                             <div class="d-flex" style="gap: 5rem; ">
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="complaintType" id="victim">
-                                    <label class="form-check-label" for="victim">Victim</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="complaintType" id="witnessed">
-                                    <label class="form-check-label" for="witnessed">I witnessed</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="complaintType" id="wasTold">
-                                    <label class="form-check-label" for="wasTold">Was told</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="complaintType" id="suspicion">
-                                    <label class="form-check-label" for="suspicion">Suspicion</label>
+                                <div>
+                                    <select class="dropdown complaint-type" aria-label="Time Filter"
+                                        id="complaintDropdown">
+                                        <option value="" hidden>Select</option>
+                                        <option value="victim">I am the victim</option>
+                                        <option value="witness">I witnessed it</option>
+                                        <option value="told">I was told about it</option>
+                                        <option value="suspicion">I have a suspicion</option>
+                                        <option value="other">Other</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
+                        <div class="w-100 mb-5 others-inp d-none" id="otherInputWrapper">
+                            <input type="text" class="w-100" id="otherInput" placeholder="Others..">
+                        </div>
                     </div>
-
                     <!-- Anonymous Option -->
                     <div class="mb-4 radio-decide">
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0">Do you want to remain anonymous</p>
+                            <p class="mb-0">Do you want to remain anonymous?</p>
                             <div class="d-flex gap-4">
                                 <div class="form-check mb-0">
                                     <input type="radio" class="form-check-input" name="anonymous" id="anonYes">
@@ -630,7 +623,7 @@
                     </div>
                     <div class="mb-4 radio-decide">
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0">Did other people witnessed it</p>
+                            <p class="mb-0">Are there witnesses to support this complaint?</p>
                             <div class="d-flex gap-4">
                                 <div class="form-check mb-0">
                                     <input type="radio" class="form-check-input" name="anonymous" id="anonYes">
@@ -675,9 +668,9 @@
                     </div>
 
                     <!-- Email Input -->
-                    <div class="mb-4">
+                    <div class="mb-4 mt-5">
                         <label class="form-label text-muted">
-
+                            If you want to be informed of the outcome – please state your email here
                         </label>
                         <input type="email" class="form-control"
                             placeholder="Provide your email for complaint confirmation. It will only be used for acknowledgement. (Optional)">
@@ -1027,6 +1020,19 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.getElementById("complaintDropdown");
+            const otherInputWrapper = document.getElementById("otherInputWrapper");
+
+            dropdown.addEventListener("change", function () {
+                if (dropdown.value === "other") {
+                    otherInputWrapper.classList.remove("d-none"); // Show the input field
+                } else {
+                    otherInputWrapper.classList.add("d-none"); // Hide the input field
+                }
+            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/overview.js"></script>

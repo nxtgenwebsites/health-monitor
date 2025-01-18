@@ -154,74 +154,61 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
-                </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
+                    <div class="dropdown d-none d-lg-block">
+                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <img src="assets/1.png" alt="" class="user-avatar">
+                            <span class="d-none d-lg-inline">Bohdan Peter</span>
                         </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Change pin
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/national-policies.html">
-                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                            National Policies
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-care.html">
-                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
-                            Remote Care
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to DHA Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                            <li class="dropdown-header p-0 mb-3">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                                    <div>
+                                        <h6 class="mb-0">Bohdan Peter</h6>
+                                        <small class="text-muted">Preston, UK</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                                    Profile
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                                    Sponsorship
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                                    Print
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                                    Password & 2FA
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                                    Access Control
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                                    System
+                                </a></li>
+                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                                    Share link
+                                </button></li>
+                    
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                                    Delete Account
+                                </a></li>
+                            <li class="border-top mt-2 pt-2">
+                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                                    Upgrade to Community Edition
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
         </div>
     </header>
 
@@ -599,7 +586,7 @@
                         </ul>
 
                         <!-- Text Editor Section -->
-                        <div class="mb-4">
+                        <!-- <div class="mb-4">
                             <div class="text-editor-container">
 
                                 <div class="text-editor-box p-3">
@@ -607,17 +594,14 @@
                                         <h6 class="text-primary">Text</h6>
                                     </div>
                                     <div class="editor-toolbar bg-light p-2 rounded-top border">
-                                        <!-- Font Family Dropdown -->
                                         <select class="btn btn-sm btn-light border me-2">
                                             <option>Roboto</option>
                                         </select>
 
-                                        <!-- Font Style Dropdown -->
                                         <select class="btn btn-sm btn-light border me-2">
                                             <option>Normal</option>
                                         </select>
 
-                                        <!-- Formatting Buttons -->
                                         <button class="btn btn-sm btn-light border"><i
                                                 class="bi bi-type-bold"></i></button>
                                         <button class="btn btn-sm btn-light border"><i
@@ -625,7 +609,6 @@
                                         <button class="btn btn-sm btn-light border"><i
                                                 class="bi bi-type-underline"></i></button>
 
-                                        <!-- Alignment Buttons -->
                                         <button class="btn btn-sm btn-light border"><i
                                                 class="bi bi-text-left"></i></button>
                                         <button class="btn btn-sm btn-light border"><i
@@ -646,10 +629,75 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="row my-5">
+                            <div class="col-12 col-md-6">
+                                <div class="goals-card">
+                                    <div class="goals-card-heading">
+                                        <h3>Choose your goal</h3>
+                                    </div>
+                                    <div class="goals-content d-flex align-items-center gap-2 mt-4">
+                                        <div>
+                                            <input type="radio" class="form-check-input" name="anonymous">
+                                        </div>
+                                        <div class="goals-text">
+                                            <h5>Get more message on messager</h5>
+                                            <p>Recommended</p>
+                                        </div>
+                                    </div>
+                                    <div class="goals-content d-flex align-items-center gap-2">
+                                        <div>
+                                            <input type="radio" class="form-check-input" name="anonymous">
+                                        </div>
+                                        <div class="goals-text">
+                                            <h5>Get more message on messager</h5>
+                                            <p>Recommended</p>
+                                        </div>
+                                    </div>
+                                    <div class="website-container w-100">
+                                        <h5>Website URL</h5>
+                                        <input type="text" placeholder="website url...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="result-card h-100">
+                                    <div class="result-heading">
+                                        <h4>Estimated daily results</h4>
+                                    </div>
+                                    <div class="result-numbers">
+                                        <h5>Impressions</h5>
+                                        <h4>6.2K - 18K</h4>
+                                    </div>
+                                    <div class="result-numbers">
+                                        <h5>Link Clicks</h5>
+                                        <h4>200 - 800</h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Form Fields -->
                         <div class="row g-3 sponsorship-form">
+                            <div class="col-12">
+                                <div class="form-group d-flex justify-content-between">
+                                    <label for="countries">Countries</label>
+                                    <select id="countries" name="countries"data-placeholder="Select countries" multiple
+                                        data-multi-select>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="India">India</option>
+                                        <option value="China">China</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Japan">Japan</option>
+                                    </select>
+
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="form-group d-flex">
                                     <label class="form-label w-100">Email (if any)</label>
@@ -882,7 +930,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
+    <!-- <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
             <div class="modal-content border-0 rounded-4"
                 style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
@@ -907,7 +955,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -947,9 +995,6 @@
         const saveBack = document.getElementById('submit-back');
         const submitBack = document.getElementById('save-back-btn');
 
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
@@ -958,11 +1003,6 @@
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
-
-
-        remoteCareDropdownBtn.addEventListener('click', () => {
-            remoteCareDropdown.classList.toggle('d-none')
-        })
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -1041,14 +1081,6 @@
             deletePopup.classList.add('d-none')
         });
 
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
-
         const addImg = document.getElementById('add-1-img');
         const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
@@ -1078,11 +1110,270 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+        /*
+     * Created by David Adams
+     * https://codeshack.io/multi-select-dropdown-html-javascript/
+     * 
+     * Released under the MIT license
+     */
+        class MultiSelect {
+
+            constructor(element, options = {}) {
+                let defaults = {
+                    placeholder: 'Select item(s)',
+                    max: null,
+                    search: true,
+                    selectAll: true,
+                    listAll: true,
+                    closeListOnItemSelect: false,
+                    name: '',
+                    width: '',
+                    height: '',
+                    dropdownWidth: '',
+                    dropdownHeight: '',
+                    data: [],
+                    onChange: function () { },
+                    onSelect: function () { },
+                    onUnselect: function () { }
+                };
+                this.options = Object.assign(defaults, options);
+                this.selectElement = typeof element === 'string' ? document.querySelector(element) : element;
+                for (const prop in this.selectElement.dataset) {
+                    if (this.options[prop] !== undefined) {
+                        this.options[prop] = this.selectElement.dataset[prop];
+                    }
+                }
+                this.name = this.selectElement.getAttribute('name') ? this.selectElement.getAttribute('name') : 'multi-select-' + Math.floor(Math.random() * 1000000);
+                if (!this.options.data.length) {
+                    let options = this.selectElement.querySelectorAll('option');
+                    for (let i = 0; i < options.length; i++) {
+                        this.options.data.push({
+                            value: options[i].value,
+                            text: options[i].innerHTML,
+                            selected: options[i].selected,
+                            html: options[i].getAttribute('data-html')
+                        });
+                    }
+                }
+                this.element = this._template();
+                this.selectElement.replaceWith(this.element);
+                this._updateSelected();
+                this._eventHandlers();
+            }
+
+            _template() {
+                let optionsHTML = '';
+                for (let i = 0; i < this.data.length; i++) {
+                    optionsHTML += `
+                <div class="multi-select-option${this.selectedValues.includes(this.data[i].value) ? ' multi-select-selected' : ''}" data-value="${this.data[i].value}">
+                    <span class="multi-select-option-radio"></span>
+                    <span class="multi-select-option-text">${this.data[i].html ? this.data[i].html : this.data[i].text}</span>
+                </div>
+            `;
+                }
+                let selectAllHTML = '';
+                if (this.options.selectAll === true || this.options.selectAll === 'true') {
+                    selectAllHTML = `<div class="multi-select-all">
+                <span class="multi-select-option-radio"></span>
+                <span class="multi-select-option-text">Select all</span>
+            </div>`;
+                }
+                let template = `
+            <div class="multi-select ${this.name}"${this.selectElement.id ? ' id="' + this.selectElement.id + '"' : ''} style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+                ${this.selectedValues.map(value => `<input type="hidden" name="${this.name}[]" value="${value}">`).join('')}
+                <div class="multi-select-header" style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+                    <span class="multi-select-header-max">${this.options.max ? this.selectedValues.length + '/' + this.options.max : ''}</span>
+                    <span class="multi-select-header-placeholder">${this.placeholder}</span>
+                </div>
+                <div class="multi-select-options" style="${this.options.dropdownWidth ? 'width:' + this.options.dropdownWidth + ';' : ''}${this.options.dropdownHeight ? 'height:' + this.options.dropdownHeight + ';' : ''}">
+                    ${this.options.search === true || this.options.search === 'true' ? '<input type="text" class="multi-select-search" placeholder="Search...">' : ''}
+                    ${selectAllHTML}
+                    ${optionsHTML}
+                </div>
+            </div>
+        `;
+                let element = document.createElement('div');
+                element.innerHTML = template;
+                return element;
+            }
+
+            _eventHandlers() {
+                let headerElement = this.element.querySelector('.multi-select-header');
+                this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                    option.onclick = () => {
+                        let selected = true;
+                        if (!option.classList.contains('multi-select-selected')) {
+                            if (this.options.max && this.selectedValues.length >= this.options.max) {
+                                return;
+                            }
+                            option.classList.add('multi-select-selected');
+                            if (this.options.listAll === true || this.options.listAll === 'true') {
+                                if (this.element.querySelector('.multi-select-header-option')) {
+                                    let opt = Array.from(this.element.querySelectorAll('.multi-select-header-option')).pop();
+                                    opt.insertAdjacentHTML('afterend', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                } else {
+                                    headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                }
+                            }
+                            this.element.querySelector('.multi-select').insertAdjacentHTML('afterbegin', `<input type="hidden" name="${this.name}[]" value="${option.dataset.value}">`);
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = true;
+                        } else {
+                            option.classList.remove('multi-select-selected');
+                            this.element.querySelectorAll('.multi-select-header-option').forEach(headerOption => headerOption.dataset.value == option.dataset.value ? headerOption.remove() : '');
+                            this.element.querySelector(`input[value="${option.dataset.value}"]`).remove();
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = false;
+                            selected = false;
+                        }
+                        if (this.options.listAll === false || this.options.listAll === 'false') {
+                            if (this.element.querySelector('.multi-select-header-option')) {
+                                this.element.querySelector('.multi-select-header-option').remove();
+                            }
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                        }
+                        if (!this.element.querySelector('.multi-select-header-option')) {
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+                        } else if (this.element.querySelector('.multi-select-header-placeholder')) {
+                            this.element.querySelector('.multi-select-header-placeholder').remove();
+                        }
+                        if (this.options.max) {
+                            this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+                        }
+                        if (this.options.search === true || this.options.search === 'true') {
+                            this.element.querySelector('.multi-select-search').value = '';
+                        }
+                        this.element.querySelectorAll('.multi-select-option').forEach(option => option.style.display = 'flex');
+                        if (this.options.closeListOnItemSelect === true || this.options.closeListOnItemSelect === 'true') {
+                            headerElement.classList.remove('multi-select-header-active');
+                        }
+                        this.options.onChange(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        if (selected) {
+                            this.options.onSelect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        } else {
+                            this.options.onUnselect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        }
+                    };
+                });
+                headerElement.onclick = () => headerElement.classList.toggle('multi-select-header-active');
+                if (this.options.search === true || this.options.search === 'true') {
+                    let search = this.element.querySelector('.multi-select-search');
+                    search.oninput = () => {
+                        this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                            option.style.display = option.querySelector('.multi-select-option-text').innerHTML.toLowerCase().indexOf(search.value.toLowerCase()) > -1 ? 'flex' : 'none';
+                        });
+                    };
+                }
+                if (this.options.selectAll === true || this.options.selectAll === 'true') {
+                    let selectAllButton = this.element.querySelector('.multi-select-all');
+                    selectAllButton.onclick = () => {
+                        let allSelected = selectAllButton.classList.contains('multi-select-selected');
+                        this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                            let dataItem = this.data.find(data => data.value == option.dataset.value);
+                            if (dataItem && ((allSelected && dataItem.selected) || (!allSelected && !dataItem.selected))) {
+                                option.click();
+                            }
+                        });
+                        selectAllButton.classList.toggle('multi-select-selected');
+                    };
+                }
+                if (this.selectElement.id && document.querySelector('label[for="' + this.selectElement.id + '"]')) {
+                    document.querySelector('label[for="' + this.selectElement.id + '"]').onclick = () => {
+                        headerElement.classList.toggle('multi-select-header-active');
+                    };
+                }
+                document.addEventListener('click', event => {
+                    if (!event.target.closest('.' + this.name) && !event.target.closest('label[for="' + this.selectElement.id + '"]')) {
+                        headerElement.classList.remove('multi-select-header-active');
+                    }
+                });
+            }
+
+            _updateSelected() {
+                if (this.options.listAll === true || this.options.listAll === 'true') {
+                    this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                        if (option.classList.contains('multi-select-selected')) {
+                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                        }
+                    });
+                } else {
+                    if (this.selectedValues.length > 0) {
+                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                    }
+                }
+                if (this.element.querySelector('.multi-select-header-option')) {
+                    this.element.querySelector('.multi-select-header-placeholder').remove();
+                }
+            }
+
+            get selectedValues() {
+                return this.data.filter(data => data.selected).map(data => data.value);
+            }
+
+            get selectedItems() {
+                return this.data.filter(data => data.selected);
+            }
+
+            set data(value) {
+                this.options.data = value;
+            }
+
+            get data() {
+                return this.options.data;
+            }
+
+            set selectElement(value) {
+                this.options.selectElement = value;
+            }
+
+            get selectElement() {
+                return this.options.selectElement;
+            }
+
+            set element(value) {
+                this.options.element = value;
+            }
+
+            get element() {
+                return this.options.element;
+            }
+
+            set placeholder(value) {
+                this.options.placeholder = value;
+            }
+
+            get placeholder() {
+                return this.options.placeholder;
+            }
+
+            set name(value) {
+                this.options.name = value;
+            }
+
+            get name() {
+                return this.options.name;
+            }
+
+            set width(value) {
+                this.options.width = value;
+            }
+
+            get width() {
+                return this.options.width;
+            }
+
+            set height(value) {
+                this.options.height = value;
+            }
+
+            get height() {
+                return this.options.height;
+            }
+
+        }
+        document.querySelectorAll('[data-multi-select]').forEach(select => new MultiSelect(select));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/overview.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
 
     </script>

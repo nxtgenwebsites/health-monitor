@@ -147,74 +147,61 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
-                </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
+                    <div class="dropdown d-none d-lg-block">
+                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <img src="assets/1.png" alt="" class="user-avatar">
+                            <span class="d-none d-lg-inline">Bohdan Peter</span>
                         </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Change pin
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/national-policies.html">
-                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                            National Policies
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-care.html">
-                            <i class="bi bi-phone text-muted" style="font-size: 20px;"></i>
-                            Remote Care
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to DHA Now
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                            <li class="dropdown-header p-0 mb-3">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                                    <div>
+                                        <h6 class="mb-0">Bohdan Peter</h6>
+                                        <small class="text-muted">Preston, UK</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                                    Profile
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                                    Sponsorship
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                                    Print
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                                    Password & 2FA
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                                    Access Control
+                                </a></li>
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                                    System
+                                </a></li>
+                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                                    Share link
+                                </button></li>
+                    
+                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                                    Delete Account
+                                </a></li>
+                            <li class="border-top mt-2 pt-2">
+                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                                    Upgrade to Community Edition
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
         </div>
     </header>
 
@@ -401,11 +388,11 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-
+        
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
-                <div class="menu-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                <div class="menu-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
                             <path
@@ -414,14 +401,35 @@
                         </g>
                         <defs>
                             <clipPath id="clip0_1304_4047">
-                                <rect width="30" height="30" fill="#9197B3" />
+                                <rect width="30" height="30" fill="white" />
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="menu-text">Overview</span>
+                    <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-
+        
+            <a href="/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
+                            fill="#9197B3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Emergency</span>
+                </div>
+            </a>
+        
             <!-- Symptom Checker Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -450,31 +458,12 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-
-            <a href="/user-dashboard/emergency.html">
-                <div class="menu-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
-                        class="icon sidebar-icon">
-                        <path
-                            d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
-                            fill="#9197B3" />
-                        <path
-                            d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
-                            fill="#9197B3" />
-                        <path
-                            d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
-                            fill="#9197B3" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
-                            fill="#9197B3" />
-                    </svg>
-                    <span class="menu-text">Emergency</span>
-                </div>
-            </a>
-
+        
+        
+        
             <!-- Health Monitors Dropdown -->
-            <div class="menu-item-dropdown monitor-nav active monitor menu-item-active ">
-                <div class="menu-icon-wrapper ">
+            <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
                         <path
@@ -490,11 +479,11 @@
                             d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text">Health Monitors</span>
+                    <span class="menu-text">Monitors</span>
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content show">
+            <div class="dropdown-content">
                 <a href="/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a>
                 <a href="/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a>
                 <a href="/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a>
@@ -502,9 +491,9 @@
                 <a href="/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a>
                 <a href="/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
                 <a href="/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a>
-                <a href="/user-dashboard/appointments.html" class="dropdown-item-custom active">Appointments</a>
+                <a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a>
             </div>
-
+        
             <!-- Communities Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -528,17 +517,20 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content">
-                <a href="/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
-                <a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
-                <a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
-                <a href="/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
                 <a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
-                <a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a>
-                <a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Find DHA</a>
-                <a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">DHA Training</a>
+                <a href="/user-dashboard/" class="dropdown-item-custom">Pharmacy</a>
+                <a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a>
+                <span class="dropdown-item-custom community-text">Community Digital Health Assistants</span>
+                <ul class="community-custom-bullets">
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
+                    <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+                </ul>
+                <a href="/user-dashboard/faq.html" class="dropdown-item-custom">Tech Support</a>
                 <a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
+                <a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
+                <a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
             </div>
-
+        
             <a href="/user-dashboard/health-info.html">
                 <div class="menu-item">
                     <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -555,20 +547,20 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-
+        
             <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item">
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                     <span class="menu-text">Transfer</span>
                 </div>
             </a>
-
+        
             <!-- Upgrade Box -->
             <div class="upgrade-box">
                 <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
                 <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get DHA Now!</a>
             </div>
-
+        
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>

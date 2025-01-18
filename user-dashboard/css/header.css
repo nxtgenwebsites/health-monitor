@@ -317,6 +317,18 @@ position: relative;
   color: black;
 }
 
+.community-custom-bullets{
+  margin: -8px 0 !important;
+  margin-bottom: 2px !important;
+}
+
+.custom-bullets{
+  margin-bottom: -14px !important;
+}
+
+.community-text:hover{
+  color: #9197B3 !important;
+}
 
 .add-video-box iframe{
   width: 600px;
