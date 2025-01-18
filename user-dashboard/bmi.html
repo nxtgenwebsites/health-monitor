@@ -147,61 +147,70 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-                    <div class="dropdown d-none d-lg-block">
-                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <img src="assets/1.png" alt="" class="user-avatar">
-                            <span class="d-none d-lg-inline">Bohdan Peter</span>
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
                         </div>
-                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                            <li class="dropdown-header p-0 mb-3">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                                    <div>
-                                        <h6 class="mb-0">Bohdan Peter</h6>
-                                        <small class="text-muted">Preston, UK</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                                    Profile
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                                    Sponsorship
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                                    Print
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                                    Password & 2FA
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                                    Access Control
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                                    System
-                                </a></li>
-                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                                    Share link
-                                </button></li>
-                    
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                                    Delete Account
-                                </a></li>
-                            <li class="border-top mt-2 pt-2">
-                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                                    Upgrade to Community Edition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -643,7 +652,7 @@
                             </tr>
                             <tr>
                                 <td class="font-weight-bold">Height</td>
-                                <td  class="text-center">154</td>
+                                <td class="text-center">154</td>
                                 <td class="text-center">96</td>
                                 <td class="text-center">85</td>
                             </tr>
@@ -734,9 +743,9 @@
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6>Copy Link</h6>
-                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <h6 id="profile-url">user.bohdanpeter/123/aaaabbc</h6>
                     <div class="d-flex">
-                        <button class="btn py-0 bg-white border-0">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
                         <button class="btn py-0 bg-white border-0">
@@ -799,8 +808,8 @@
                     <button class="popup-btn" id="done-care-btn">Done</button>
                 </div>
                 <div class="close-btn">
-                    <button class="btn border-0" type="submit" id="delete-remote-close"><img src="assets/icons/close.svg"
-                            alt="close"></button>
+                    <button class="btn border-0" type="submit" id="delete-remote-close"><img
+                            src="assets/icons/close.svg" alt="close"></button>
                 </div>
             </div>
         </div>
@@ -1242,7 +1251,7 @@
                 });
             });
         });
-        
+
         document.querySelectorAll('.share-dropdown-item').forEach(item => {
             item.addEventListener('click', function (e) {
                 e.stopPropagation();
@@ -1277,195 +1286,207 @@
         printBtn.addEventListener('click', () => {
             window.print();
         });
-            const cancleBtn = document.getElementById('cancle-care-btn');
-            const doneBtn = document.getElementById('done-care-btn');
-            const closeBtn = document.getElementById('delete-remote-close');
-            const deletePopup = document.getElementById('delete-popup')
-            const deleteBtn = document.getElementById('delete-btn');
+        const cancleBtn = document.getElementById('cancle-care-btn');
+        const doneBtn = document.getElementById('done-care-btn');
+        const closeBtn = document.getElementById('delete-remote-close');
+        const deletePopup = document.getElementById('delete-popup')
+        const deleteBtn = document.getElementById('delete-btn');
 
-            cancleBtn.addEventListener('click', () => {
-                deletePopup.classList.add('d-none')
-                deletePopup.classList.remove('d-flex')
+        cancleBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        doneBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        closeBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        deleteBtn.addEventListener('click', () => {
+            deletePopup.classList.remove('d-none')
+            deletePopup.classList.add('d-flex')
+            previewPopup.classList.add('d-none')
+            previewPopup.classList.remove('d-flex')
+        })
+
+
+        const calenderBtn = document.getElementById('calender-btn');
+        const calenderPopup = document.getElementById('calender-popup');
+        const calendarCancelBtn = document.getElementById('calendar-cancel-btn');
+        const calendarApplyBtn = document.getElementById('calendar-apply-btn');
+
+        calenderBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.remove('d-none')
+            calenderPopup.classList.add('d-flex')
+        })
+
+        calendarCancelBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.add('d-none')
+            calenderPopup.classList.remove('d-flex')
+        })
+
+        calendarApplyBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.add('d-none')
+        })
+
+        const historyPopup = document.getElementById('threshold-history-popup');
+        const thresholdDeleteBtn = document.querySelectorAll('.threshold-delete-btn');
+
+        historyPopup.addEventListener(('click'), (e) => {
+            if (e.target === historyPopup) {
+                historyPopup.classList.add('d-none')
+            }
+        })
+
+
+        for (let i = 0; i < thresholdDeleteBtn.length; i++) {
+            thresholdDeleteBtn[i].addEventListener(('click'), () => {
+                historyPopup.classList.add('d-flex')
+                historyPopup.classList.remove('d-none')
             })
+        }
 
-            doneBtn.addEventListener('click', () => {
-                deletePopup.classList.add('d-none')
-                deletePopup.classList.remove('d-flex')
-            })
+        const date = new Date();
 
-            closeBtn.addEventListener('click', () => {
-                deletePopup.classList.add('d-none')
-                deletePopup.classList.remove('d-flex')
-            })
+        const renderCalendar = () => {
+            date.setDate(1);
 
-            deleteBtn.addEventListener('click', () => {
-                deletePopup.classList.remove('d-none')
-                deletePopup.classList.add('d-flex')
-                previewPopup.classList.add('d-none')
-                previewPopup.classList.remove('d-flex')
-            })
+            const monthDays = document.querySelector(".days");
 
+            const lastDay = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDate();
 
-            const calenderBtn = document.getElementById('calender-btn');
-            const calenderPopup = document.getElementById('calender-popup');
-            const calendarCancelBtn = document.getElementById('calendar-cancel-btn');
-            const calendarApplyBtn = document.getElementById('calendar-apply-btn');
+            const prevLastDay = new Date(
+                date.getFullYear(),
+                date.getMonth(),
+                0
+            ).getDate();
 
-            calenderBtn.addEventListener(('click'), () => {
-                calenderPopup.classList.remove('d-none')
-                calenderPopup.classList.add('d-flex')
-            })
+            const firstDayIndex = date.getDay();
 
-            calendarCancelBtn.addEventListener(('click'), () => {
-                calenderPopup.classList.add('d-none')
-                calenderPopup.classList.remove('d-flex')
-            })
+            const lastDayIndex = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDay();
 
-            calendarApplyBtn.addEventListener(('click'), () => {
-                calenderPopup.classList.add('d-none')
-            })
+            const nextDays = 7 - lastDayIndex - 1;
 
-            const historyPopup = document.getElementById('threshold-history-popup');
-            const thresholdDeleteBtn = document.querySelectorAll('.threshold-delete-btn');
+            const months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
 
-            historyPopup.addEventListener(('click'), (e) => {
-                if (e.target === historyPopup) {
-                    historyPopup.classList.add('d-none')
-                }
-            })
+            document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
+            document.querySelector(".date p").innerHTML = new Date().toDateString();
 
-            for (let i = 0; i < thresholdDeleteBtn.length; i++) {
-                thresholdDeleteBtn[i].addEventListener(('click'), () => {
-                    historyPopup.classList.add('d-flex')
-                    historyPopup.classList.remove('d-none')
-                })
+            let days = "";
+
+            for (let x = firstDayIndex; x > 0; x--) {
+                days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
             }
 
-            const date = new Date();
-
-            const renderCalendar = () => {
-                date.setDate(1);
-
-                const monthDays = document.querySelector(".days");
-
-                const lastDay = new Date(
-                    date.getFullYear(),
-                    date.getMonth() + 1,
-                    0
-                ).getDate();
-
-                const prevLastDay = new Date(
-                    date.getFullYear(),
-                    date.getMonth(),
-                    0
-                ).getDate();
-
-                const firstDayIndex = date.getDay();
-
-                const lastDayIndex = new Date(
-                    date.getFullYear(),
-                    date.getMonth() + 1,
-                    0
-                ).getDay();
-
-                const nextDays = 7 - lastDayIndex - 1;
-
-                const months = [
-                    "January",
-                    "February",
-                    "March",
-                    "April",
-                    "May",
-                    "June",
-                    "July",
-                    "August",
-                    "September",
-                    "October",
-                    "November",
-                    "December",
-                ];
-
-                document.querySelector(".date h1").innerHTML = months[date.getMonth()];
-
-                document.querySelector(".date p").innerHTML = new Date().toDateString();
-
-                let days = "";
-
-                for (let x = firstDayIndex; x > 0; x--) {
-                    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+            for (let i = 1; i <= lastDay; i++) {
+                if (
+                    i === new Date().getDate() &&
+                    date.getMonth() === new Date().getMonth()
+                ) {
+                    days += `<div class="today">${i}</div>`;
+                } else {
+                    days += `<div>${i}</div>`;
                 }
+            }
 
-                for (let i = 1; i <= lastDay; i++) {
-                    if (
-                        i === new Date().getDate() &&
-                        date.getMonth() === new Date().getMonth()
-                    ) {
-                        days += `<div class="today">${i}</div>`;
-                    } else {
-                        days += `<div>${i}</div>`;
-                    }
-                }
+            for (let j = 1; j <= nextDays; j++) {
+                days += `<div class="next-date">${j}</div>`;
+                monthDays.innerHTML = days;
+            }
+        };
 
-                for (let j = 1; j <= nextDays; j++) {
-                    days += `<div class="next-date">${j}</div>`;
-                    monthDays.innerHTML = days;
-                }
-            };
-
-            document.querySelector(".prev").addEventListener("click", () => {
-                date.setMonth(date.getMonth() - 1);
-                renderCalendar();
-            });
-
-            document.querySelector(".next").addEventListener("click", () => {
-                date.setMonth(date.getMonth() + 1);
-                renderCalendar();
-            });
-
+        document.querySelector(".prev").addEventListener("click", () => {
+            date.setMonth(date.getMonth() - 1);
             renderCalendar();
+        });
 
-            document.addEventListener("DOMContentLoaded", () => {
-                const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
-                if (dropdownMenu) {
-                    dropdownMenu.classList.add("show");
-                }
+        document.querySelector(".next").addEventListener("click", () => {
+            date.setMonth(date.getMonth() + 1);
+            renderCalendar();
+        });
 
-                const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
-                if (arrowIcon) {
-                    arrowIcon.style.transform = "rotate(90deg)";
-                }
-            });
+        renderCalendar();
 
-            const addImg = document.getElementById('add-1-img');
-            const addVideo = document.getElementById('add-2-video');
-            const addImgPupup = document.getElementById('add-1-popup');
-            const addVideoPupup = document.getElementById('add-2-popup');
-            const addImgClose = document.getElementById('add-close-btn');
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
 
-            addVideo.addEventListener(('click'), () => {
-                addVideoPupup.classList.remove('d-none')
-            })
+            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
 
-            addVideoPupup.addEventListener(('click'), (e) => {
-                if (e.target === addVideoPupup) {
-                    addVideoPupup.classList.add('d-none')
-                }
-            })
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
 
-            addImgPupup.addEventListener(('click'), (e) => {
-                if (e.target === addImgPupup) {
-                    addImgPupup.classList.add('d-none')
-                }
-            })
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
 
-            addImg.addEventListener(('click'), () => {
-                addImgPupup.classList.remove('d-none')
-            })
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
 
-            addImgClose.addEventListener(('click'), () => {
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
                 addImgPupup.classList.add('d-none')
-            })
+            }
+        })
+
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
+
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("URL copied");
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

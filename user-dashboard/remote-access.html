@@ -146,61 +146,70 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-                    <div class="dropdown d-none d-lg-block">
-                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <img src="assets/1.png" alt="" class="user-avatar">
-                            <span class="d-none d-lg-inline">Bohdan Peter</span>
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
                         </div>
-                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                            <li class="dropdown-header p-0 mb-3">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                                    <div>
-                                        <h6 class="mb-0">Bohdan Peter</h6>
-                                        <small class="text-muted">Preston, UK</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                                    Profile
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                                    Sponsorship
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                                    Print
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                                    Password & 2FA
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                                    Access Control
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                                    System
-                                </a></li>
-                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                                    Share link
-                                </button></li>
-                    
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                                    Delete Account
-                                </a></li>
-                            <li class="border-top mt-2 pt-2">
-                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                                    Upgrade to Community Edition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -796,9 +805,9 @@
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6>Copy Link</h6>
-                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <h6 id="profile-url">user.bohdanpeter/123/aaaabbc</h6>
                     <div class="d-flex">
-                        <button class="btn py-0 bg-white border-0">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
                         <button class="btn py-0 bg-white border-0">
@@ -1044,6 +1053,19 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("URL copied");
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/overview.js"></script>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Health Monitor | Symptom Viewer</title>
-        <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <title>Health Monitor | Symptom Viewer</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/symptom-viewer.css">
@@ -31,11 +31,11 @@
         <div class="nav-center d-none d-lg-flex align-items-center gap-4">
             <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/Group.svg" alt="" style="width: 20px;">
-            Emergency
+                Emergency
             </a>
             <a href="/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
-            Monitors
+                Monitors
             </a>
             <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
@@ -56,8 +56,8 @@
                 <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <span class="text-muted" style="font-size: 12px;">
-                        You have <strong class="text-muted">5 new</strong> notifications
-                    </span>
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
                         <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
                     </div>
                     <hr class="dropdown-divider my-2">
@@ -141,66 +141,76 @@
             </div>
 
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <i class="bi bi-list text-white" style="font-size: 24px;"></i>
-        </button>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
 
             <!-- User Dropdown (visible on desktop) -->
-                    <div class="dropdown d-none d-lg-block">
-                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <img src="assets/1.png" alt="" class="user-avatar">
-                            <span class="d-none d-lg-inline">Bohdan Peter</span>
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
                         </div>
-                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                            <li class="dropdown-header p-0 mb-3">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                                    <div>
-                                        <h6 class="mb-0">Bohdan Peter</h6>
-                                        <small class="text-muted">Preston, UK</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                                    Profile
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                                    Sponsorship
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                                    Print
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                                    Password & 2FA
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                                    Access Control
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                                    System
-                                </a></li>
-                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                                    Share link
-                                </button></li>
-                    
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                                    Delete Account
-                                </a></li>
-                            <li class="border-top mt-2 pt-2">
-                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                                    Upgrade to Community Edition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -215,21 +225,21 @@
             <div class="mobile-nav mb-4">
                 <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
                     <img src="assets/Group.svg" alt="" style="width: 20px;">
-                Emergency
+                    Emergency
                 </a>
                 <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
                     <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
-                Monitors
+                    Monitors
                 </a>
                 <div class="dropdown">
                     <button id="remote-care-dropdown"
-                    class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
-                    <div class="d-flex gap-2 justify-content-center align-items-center">
-                        <i class="bi bi-phone"></i>
-                        <span>Remote Care</span>
-                    </div>
-                    <div class="dropdown-toggle"></div>
-                </button>
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
                     <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
                                                                            <li class=" dropdown-item remote-care-btn">
                         Call DHA</li>
@@ -310,16 +320,16 @@
             <div class="mobile-nav mb-4">
                 <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
                     <img src="assets/Group.svg" alt="" style="width: 20px;">
-                Emergency
+                    Emergency
                 </a>
                 <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
                     <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
-                Monitors
+                    Monitors
                 </a>
                 <a href="/user-dashboard/remote-access.html"
                     class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
                     <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
-                Remote Care
+                    Remote Care
                 </a>
             </div>
 
@@ -767,19 +777,19 @@
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6>Copy Link</h6>
-                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <h6 id="profile-url">user.bohdanpeter/123/aaaabbc</h6>
                     <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
                         <button class="btn py-0 bg-white border-0">
-                    <img src="assets/copy.svg" alt="icon">
-                </button>
-                        <button class="btn py-0 bg-white border-0">
-                    <img src="assets/share.svg" alt="icon">
-                </button>
+                            <img src="assets/share.svg" alt="icon">
+                        </button>
                     </div>
                 </div>
                 <div class="close-btn">
                     <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
-                    alt="close"></button>
+                            alt="close"></button>
                 </div>
             </div>
         </div>
@@ -800,7 +810,7 @@
                             <i class="bi bi-share-fill"></i>
                             <span>23</span>
                         </div>
-        
+
                         <div class="stat-item">
                             <i class="bi bi-eye"></i>
                             <span>23</span>
@@ -813,7 +823,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Add Video Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
             <div class="add-video-box">
@@ -882,72 +892,85 @@
     </div>
     <script>
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-    const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-    const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
-    const pairDevicePopop = document.getElementById('paired-device-popup');
-    const pairedBackBtn = document.getElementById('paired-black-btn');
-    const pairedCloseBtn = document.getElementById('paired-close-btn');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
 
-    const shareProfilePopup = document.getElementById('share-profile-popup');
-    const shareProfileBtn = document.getElementById('share-profile-btn');
-    const ProfileCloseBtn = document.getElementById('profile-close-btn');
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
 
-    ProfileCloseBtn.addEventListener('click', () => {
-        shareProfilePopup.classList.toggle('d-none')
-    })
-
-    shareProfileBtn.addEventListener('click', () => {
-        shareProfilePopup.classList.remove('d-none');
-        shareProfilePopup.classList.add('d-flex');
-    })
-
-    for (let i = 0; i < remoteCareBtn.length; i++) {
-        remoteCareBtn[i].addEventListener('click', () => {
-            pairDevicePopop.classList.remove('d-none');
-            pairDevicePopop.classList.add('d-flex');
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
         })
-    }
 
-    remoteCareDropdownBtn.addEventListener('click', () => {
-        remoteCareDropdown.classList.toggle('d-none')
-    })
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
 
-    pairedBackBtn.addEventListener('click', () => {
-        pairDevicePopop.classList.add('d-none');
-    })
-    pairedCloseBtn.addEventListener('click', () => {
-        pairDevicePopop.classList.add('d-none');
-    })
-    
-            const addImg = document.getElementById('add-1-img');
-            const addVideo = document.getElementById('add-2-video');
-            const addImgPupup = document.getElementById('add-1-popup');
-            const addVideoPupup = document.getElementById('add-2-popup');
-            const addImgClose = document.getElementById('add-close-btn');
-
-            addVideo.addEventListener(('click'), () => {
-                addVideoPupup.classList.remove('d-none')
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
             })
+        }
 
-            addVideoPupup.addEventListener(('click'), (e) => {
-                if (e.target === addVideoPupup) {
-                    addVideoPupup.classList.add('d-none')
-                }
-            })
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
 
-            addImgPupup.addEventListener(('click'), (e) => {
-                if (e.target === addImgPupup) {
-                    addImgPupup.classList.add('d-none')
-                }
-            })
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
 
-            addImg.addEventListener(('click'), () => {
-                addImgPupup.classList.remove('d-none')
-            })
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
 
-            addImgClose.addEventListener(('click'), () => {
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
+
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
+
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
                 addImgPupup.classList.add('d-none')
-            })
+            }
+        })
+
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
+
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("URL copied");
+        });
     </script>
     <script src="js/sysmtom-viewer.js">
     </script>
