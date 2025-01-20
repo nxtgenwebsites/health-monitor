@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Health Info</title>
+    <title>Health Monitor | Pharmacy</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="css/health-info.css">
+    <link rel="stylesheet" href="css/Chemist.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <!-- Replace your current header HTML with this -->
     <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- This is the Updated HTML FILE -->
@@ -68,7 +67,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -82,7 +81,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -96,7 +95,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -110,7 +109,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -124,7 +123,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -243,7 +242,8 @@
                         <div class="dropdown-toggle"></div>
                     </button>
                     <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                                                                           <li class=" dropdown-item remote-care-btn">
+                                                                                   <li class=" dropdown-item
+                        remote-care-btn">
                         Call DHA</li>
                         <li class="dropdown-item remote-care-btn">Call Nurse</li>
                         <li class="dropdown-item remote-care-btn">Call Doctor</li>
@@ -308,8 +308,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
@@ -506,7 +504,7 @@
             </div>
         
             <!-- Communities Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         class="icon sidebar-icon">
@@ -527,9 +525,9 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
+            <div class="dropdown-content show">
                 <a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
-                <a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a>
+                <a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom active">Pharmacy</a>
                 <a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a>
                 <span class="dropdown-item-custom community-text">Community Digital Health Assistants (CDHA)</span>
                 <ul class="community-custom-bullets">
@@ -543,7 +541,7 @@
             </div>
         
             <a href="/user-dashboard/health-info.html">
-                <div class="menu-item active">
+                <div class="menu-item">
                     <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
@@ -582,81 +580,247 @@
 
         <!-- Main Content -->
         <div class="main-content">
+            <!-- Combined White Container -->
+            <div class="unified-container">
+                <!-- Title and Search Row -->
+                <div class="title-search-container">
+                    <h1 class="page-title">Pharmacy</h1>
+                    <div class="search-bar">
+                        <i class="bi bi-record-circle-fill"></i>
+                        <input type="text" placeholder="Search" class="form-control">
 
-            <div class="welcome-box mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h4 class="text-primary">Health Info</h4>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <p>
-                        Our Health Information Service uses specially trained AI technology to provide evidence-based
-                        information about health
-                        and wellbeing.
-                    </p>
-                    <p>
-                        You can ask questions, upload a document or provide a website for the AI enabled-Health
-                        Education system to analyse and
-                        give you an opinion and their sources for you to consider.
-                    </p>
-                    <p>
-                        These opinions should be verified by your healthcare providers before you act on them.
-                    </p>
-                    <p>
-                        Please confirm that you fully understand this statement and consent to it. “Yes! I fully
-                        understand this statement and
-                        consent to it”
-                    </p>
-                </div>
-                <div class="understand-check">
-                    <input type="checkbox" id="understand" class="form-check-input">
-                    <label for="understand">I Understand</label>
-                </div>
-            </div>
 
-
-            <div class="chat-container">
-                <div>
-                    <div class="chat-message bot mt-4">
-                        <div class="bot-icon">
-                            <img src="assets/chat-bot-icon.png" alt="">
-                        </div>
-                        <div class="message-content">
-                            <span class="d-block">
-                                Hello! Welcome to Health Info.
-                            </span>
-                            <span class="d-block">
-                                I’m an AI Health Information Expert. Ask any question related to health and I’ll answer
-                                it
-                            </span>
-                            <span class="text-black chat-hightlight">
-                                Before using this information, please check with your health care provider.
-                            </span>
+                <!-- Filter Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="countrySelect">
+                                <span class="selected-text">Country</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option" data-value="nigeria">
+                                    <img src="assets/emojione_flag-for-nigeria.png" alt="Nigeria" class="country-flag">
+                                    <span class="country-name">Nigeria</span>
+                                </div>
+                                <div class="country-option" data-value="ksa">
+                                    <img src="assets/emojione_flag-for-saudi-arabia.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">Saudi Arabia</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-kingdom.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.K.</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-states.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.S.A</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-arab-emirates.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.A.E</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-south-africa.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">South Africa</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-new-zealand.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">Australia</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="chat-with-bot" class="chat-with-bot">
-                        <div class="chat-message bot mt-3">
 
+                    <div class="col-md-3">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="stateSelect">
+                                <span class="selected-text">State</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Lagos</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Abuja</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Delta</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-                <div class="chat-input">
-                    <div class="">
-                        <button class="file-btn btn bg-transparent border-0"
-                            onclick="document.getElementById('fileInput').click()">
-                            <img src="assets/pin.svg" alt="icon">
-                        </button>
-                        <input type="file" class="d-none" id="fileInput"
-                            accept=".mp4,.mkv,.doc,.docx,.pdf,.png,.jpj,.svg" multiple>
+                    <div class="col-md-3">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="citySelect">
+                                <span class="selected-text">City</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Aba</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Enugu</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Port Harcourt</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" id="message-to-bot" placeholder="I have pain in my head">
-                    <button class="send-btn" id="message-send-btn">
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
+
+                    <div class="col-md-3">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="townSelect">
+                                <span class="selected-text">Town</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Town 1</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Town 2</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Town 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="upgrade-overlay d-none" id="upgrade-overlay">
-                    <div class="h-100 w-100 d-flex justify-content-center align-items-center">
-                        <img src="assets/upgrade1.png" width="70px" alt="Img">
+                <!-- Search Button -->
+                <button class="search-hospital-btn">
+                    Search Hospital
+                </button>
+
+                <!-- Divider -->
+                <hr class="section-divider">
+
+                <!-- Facility and Map Container -->
+                <div class="facility-map-container">
+                    <!-- Facility Listing Section -->
+                    <div class="facility-section">
+                        <div class="location-header">
+                            <div class="location-text">
+                                <i class="bi bi-geo-alt"></i>
+                                Udi Road, Abia State Nigeria
+                            </div>
+                            <a href="#" class="change-location-btn">
+                                <i class="bi bi-arrow-repeat"></i>
+                                Change location
+                            </a>
+                        </div>
+
+                        <!-- Facility Cards -->
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type general">General Hospital</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type">Emergency</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type general">General Hospital</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type">Emergency</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+
+                        <!-- Additional facility cards here -->
+
+                        <div class="results-text">Showing 4 of 4 results near you</div>
+
+                        <div class="pagination">
+                            <div class="pagination-item">
+                                <i class="bi bi-chevron-left"></i>
+                            </div>
+                            <div class="pagination-item active">1</div>
+                            <div class="pagination-item">
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="map-section">
+                        <div class="map-container">
+                            <img src="assets\hospital Ibadan - Google Maps - Google Chrome 9_5_2024 6_41_48 PM.png"
+                                alt="Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -802,16 +966,9 @@
         const crossIcon = document.querySelector('.share-img i');
         const blockBtn = document.querySelector('#share')
 
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
-
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
@@ -820,6 +977,11 @@
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -837,9 +999,7 @@
             })
         }
 
-        remoteCareDropdownBtn.addEventListener('click', () => {
-            remoteCareDropdown.classList.toggle('d-none')
-        })
+
 
         pairedBackBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
@@ -847,6 +1007,65 @@
         pairedCloseBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle Country Select specifically
+            const countrySelect = document.getElementById('countrySelect');
+            const countryDropdown = countrySelect.nextElementSibling;
+
+            countrySelect.addEventListener('click', function (e) {
+                e.stopPropagation();
+                countryDropdown.style.display = countryDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            const countryOptions = countryDropdown.querySelectorAll('.country-option');
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const selectedText = this.querySelector('.country-name').textContent;
+                    countrySelect.querySelector('.selected-text').textContent = selectedText;
+                    countryDropdown.style.display = 'none';
+                });
+            });
+
+            // Handle other dropdowns (State, City, Town)
+            const otherSelects = document.querySelectorAll('#stateSelect, #citySelect, #townSelect');
+
+            otherSelects.forEach(select => {
+                const dropdown = select.nextElementSibling;
+
+                select.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                });
+
+                const options = dropdown.querySelectorAll('.country-option');
+                options.forEach(option => {
+                    option.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        const selectedText = this.querySelector('.country-name').textContent;
+                        select.querySelector('.selected-text').textContent = selectedText;
+                        dropdown.style.display = 'none';
+                    });
+                });
+            });
+
+            // Close all dropdowns when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.country-select-dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            });
+        });
+
 
         const addImg = document.getElementById('add-1-img');
         const addVideo = document.getElementById('add-2-video');
@@ -877,63 +1096,6 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
-
-        const sendBtn = document.getElementById('message-send-btn');
-        const userMessage = document.getElementById('message-to-bot');
-        const chatArea = document.getElementById('chat-with-bot');
-        let autoRes = false; // Tracks if the bot has already responded
-
-        sendBtn.addEventListener('click', () => {
-            const message = userMessage.value.trim();
-
-            if (message) {
-                const userChat = document.createElement('div');
-                userChat.classList.add('user-message')
-                userChat.innerHTML = `
-                            <div class="user-icon">
-                                <img src="assets/1.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                   ${message}
-                                </span>
-                                <span class="message-time d-block">16:23 pm</span>
-                            </div>`
-                chatArea.append(userChat)
-                if (!autoRes) {
-                    const batChat = document.createElement('div');
-                    batChat.classList.add('chat-message')
-                    batChat.innerHTML = `<div class="bot-icon">
-                                <img src="assets/chat-bot-icon.png" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                    Migraine is a genetically-influenced complex neurological disorder characterized by
-                                    episodes of moderate
-                                    -to-severe headache, most often unilateral and generally....
-                                </span>
-                                <div class="mt-4 d-flex gap-2">
-                                    <div class="chat-img">
-                                        <img src="assets/chat img.png" alt="Img">
-                                    </div>
-                                    <div class="bot-blog">
-                                        <h6 class="text-primary">
-                                            Migraine Headaches
-                                        </h6>
-                                        <span class="chat-url mt-3">
-                                            https://my.clevelandclinic.org/health/diseases/
-                                            5005-migraine-headaches
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>`
-                    chatArea.append(batChat)
-                    autoRes = true;
-                }
-                userMessage.value = '';
-            }
-        });
-
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
@@ -949,10 +1111,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="js/overview.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
+    </script>
 </body>
 
 </html>
