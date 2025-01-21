@@ -334,3 +334,7 @@ position: relative;
   width: 600px;
   height: 370px;
 }
+
+.text-primary{
+  color: #1D75C2 !important;
+}
