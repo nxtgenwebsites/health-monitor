@@ -95,7 +95,7 @@
 }
 
 .profile-box {
-  max-width: 622px;
+  max-width: 700px;
   width: 100%;
   padding: 40px 30px;
 }
@@ -108,7 +108,12 @@
 
 .profile-box .profile-link h6{
   color: #555555;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px !important;
 }
+
+.profile-box .pr
 
 .dropdown-content {
     display: none; 
