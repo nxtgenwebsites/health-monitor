@@ -597,7 +597,7 @@
 
                         <div class="col-12 col-md-4">
                             <select class="form-select">
-                                <option selected="" disabled="">Title</option>
+                                <option selected="" disabled="">Prescriber Title</option>
                                 <option>Mr</option>
                                 <option>Mrs</option>
                                 <option>Ms</option>
@@ -627,8 +627,12 @@
                             <input type="text" class="form-control" placeholder="Reason">
                         </div>
 
-                        <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Number of doses">
+                        <div class="col-12 col-md-6">
+                            <input type="number" class="form-control" min="0" placeholder="Number of doses">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <input type="number" class="form-control" min="0" placeholder="Quantity to be taken each time">
                         </div>
 
                         <div class="col-12 col-md-6">
@@ -638,18 +642,15 @@
                             <input type="date" class="form-control" placeholder="End Date">
                         </div>
 
-                        <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Quantity to be taken each time">
-                        </div>
 
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                             <select class="form-select" id="howManyTimes">
                                 <option value="" disabled selected>When</option>
                                 <option value="per_day" class="form-option">Morning</option>
                                 <option value="weekly" class="form-option">Afternoon</option>
                                 <option value="fortnight" class="form-option">Night</option>
                             </select>
-                        </div>
+                        </div> -->
 
                         <div class="col-12">
                             <select class="form-select" id="complaintDropdown">
@@ -669,9 +670,6 @@
                             <input type="text" disabled class="form-control" id="otherInput" placeholder="Other time..">
                         </div>
 
-                        <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Duration">
-                        </div>
 
                         <div class="d-flex align-items-center justify-content-between mb-4 mt-2 px-3">
                             <p class="mb-0">With Food</p>
@@ -687,19 +685,44 @@
                             </div>
                         </div>
 
+                        <div class="d-flex align-items-center justify-content-between mb-4 mt-2 px-3">
+                            <p class="mb-0">When</p>
+                            <div class="d-flex gap-4">
+                                <div class="form-check mb-0">
+                                    <input type="radio" class="form-check-input" name="anonymous" id="morning">
+                                    <label class="form-check-label" for="morning">Morning</label>
+                                </div>
+                                <div class="form-check mb-0">
+                                    <input type="radio" class="form-check-input" name="anonymous" id="afternoon">
+                                    <label class="form-check-label" for="afternoon">Afternoon</label>
+                                </div>
+                                <div class="form-check mb-0">
+                                    <input type="radio" class="form-check-input" name="anonymous" id="night">
+                                    <label class="form-check-label" for="night">Night</label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-12">
                             <textarea class="form-control" placeholder="Additional Information" rows="4"></textarea>
                         </div>
 
+                        <div class="card mb-4 border-0 rounded-3 mt-4">
+                            <div class="card-body">
+                                <div class="upload-container p-5 bg-light rounded-3 text-center">
+                                    <i class="bi bi-cloud-upload fs-1 text-primary mb-3"></i>
+                                    <h5>Upload Prescription</h5>
+                                    <input type="file" class="d-none" id="imageUpload">
+                                    <label for="imageUpload" class="btn btn-outline-primary mt-3">
+                                        Choose File
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-12 mt-4">
                             <div class="d-flex gap-3">
-                                <button class="btn btn-outline btn-preview" id="uploadBtn">
-                                    <i class="bi bi-upload me-2"></i>
-                                    Upload
-                                </button>
-                                <input type="file" id="fileInput" class="d-none"
-                                    accept="image/*,video/*,.pdf,.doc,.docx,.ppt,.pptx,.xlsx" />
-                                <button type="button" class="btn btn-preview">Preview</button>
+                                <button type="button" id="preview-button" class="btn btn-preview">Preview</button>
                                 <a href="/user-dashboard/medication.html" class="btn btn-primary">Save</a>
                                 <a href="/user-dashboard/medication.html" class="btn btn-primary">Cancel</a>
                             </div>
@@ -825,6 +848,75 @@
             </div>
         </div>
     </div>
+    <div class="modal fade show d-none" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-modal="true"
+        role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content preview-modal">
+                <!-- Close button -->
+                <button type="button" id="btn-close preview" class="btn-close preview-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+                <!-- Modal body -->
+                <div class="modal-body p-4">
+                    <!-- Title -->
+                    <h2 class="preview-title">Panadol - Completed</h2>
+    
+                    <!-- Prescribed by -->
+                    <p class="preview-text">Prescribed by Dr. Mannu</p>
+    
+                    <!-- Date Range -->
+                    <p class="preview-text">
+                        <span class="fst-italic">From</span> Tues, 12 June, 2024
+                        <span class="fst-italic">To</span> Tues, 12 July, 2024
+                    </p>
+    
+                    <!-- History Section -->
+                    <div class="preview-history">
+                        <h3 class="preview-history-title">History</h3>
+    
+                        <div class="timeline-entries">
+                            <div class="timeline-entry">
+                                <span>Tues, 12 June, 2024</span>
+                                <span>11:30 am</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 17 June 2024</span>
+                                <span>12:00 pm</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 25 June 2024</span>
+                                <span>01:30 pm</span>
+                            </div>
+                            <div class="timeline-entry fst-italic" id="addagain">
+                                Add Record
+                            </div>
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <button class="popup-btn mt-4">Live</button>
+                                <div class="preview-actions">
+                                    <a href="add-a-medicine.html">
+                                        <button class="action-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </a>
+                                    <div class="share-icon">
+                                        <i class="bi bi-share"></i>
+                                        <div class="share-dropdown">
+                                            <button class="share-dropdown-item">Forward</button>
+                                            <button class="share-dropdown-item">Print</button>
+                                            <button class="share-dropdown-item">Download Pdf</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <!-- Action buttons -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Share Message start -->
     <div class="share-message">
@@ -849,6 +941,36 @@
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');
         const blockBtn = document.querySelector('#share')
+
+            crossIcon.addEventListener('click', () => {
+                shareMsg.style.display = 'none';
+            });
+
+            blockBtn.addEventListener('click', () => {
+                shareMsg.style.display = 'block';
+            });
+
+            const previewBtn = document.getElementById('preview-button');
+
+
+
+            const panadolClosebtn  = document.getElementById('btn-close preview');
+            const panadolpopup = document.getElementById('previewModal');
+
+        previewBtn.addEventListener(('click'), () => {
+            panadolpopup.classList.remove('d-none')
+        })
+
+            panadolClosebtn.addEventListener(('click') , () => {
+                panadolpopup.classList.add('d-none')
+            } )
+
+            panadolpopup.addEventListener(('click') , (e) => {
+                if (e.target === panadolpopup) {
+                    panadolpopup.classList.add('d-none')
+                }
+            } )
+
 
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
@@ -942,16 +1064,6 @@
             shareMsg.style.display = 'block';
         });
 
-        // Initialize the preview modal when the preview button is clicked
-        document.addEventListener('DOMContentLoaded', function () {
-            const previewBtn = document.querySelector('.btn-preview');
-            if (previewBtn) {
-                previewBtn.addEventListener('click', function () {
-                    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-                    previewModal.show();
-                });
-            }
-        });
 
         const dropdown = document.getElementById('complaintDropdown');
         const otherInput = document.getElementById('otherInput');

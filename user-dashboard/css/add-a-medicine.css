@@ -349,6 +349,7 @@ textarea.form-control {
 
 /* Button Styles */
 .btn-primary {
+  width: 100px;
   padding: 8px 24px;
   border-radius: 8px;
   border-radius: 20px;
@@ -369,6 +370,7 @@ textarea.form-control {
 .btn-preview,
 .btn-outline-secondary,
 .btn-primary {
+  width: 120px;
   color: #0c75c2;
   padding: 8px 32px;
   background: white;
@@ -1477,6 +1479,16 @@ textarea.form-control {
   margin-top: 2rem;
 }
 
+.upload-container {
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: #0c75c2;
+  cursor: pointer;
+}
+
 .action-btn {
   width: 40px;
   height: 40px;
@@ -1694,4 +1706,115 @@ textarea.form-control {
 }
 .disabled-inp .active-input {
   background: white !important;
+}
+
+.preview-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+
+.share-dropdown-item:hover {
+  background: #f1f8fe;
+  color: #0c75c2;
+}
+
+.share-icon {
+  position: relative; /* Add this to make dropdown positioning work */
+}
+
+.share-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ddf2f9;
+  border-radius: 6px;
+}
+
+.share-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #ddf2f9;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 160px;
+  display: none;
+  z-index: 1000;
+}
+
+.share-dropdown.show {
+  display: block;
+}
+
+.share-dropdown-item {
+  padding: 8px 16px;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  transition: all 0.2s;
+}
+
+.share-dropdown-item:hover {
+  background: #f1f8fe;
+  color: #0c75c2;
+}
+
+.timeline-entry {
+  background-color: #f0f9ff;
+  height: 38px;
+  padding: 1rem;
+  padding-top: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  background: var(--container-fill, #ddf2f9);
+}
+
+.timeline-entry span {
+  color: var(--Font, #2e2e2e);
+
+  /* shaded text */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.timeline-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+
+.preview-history-title {
+  color: var(--Font, #2e2e2e);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.preview-history {
+  margin-top: 1rem;
+}
+
+#previewModal {
+  background: rgba(0, 0, 0, 0.5);
 }
