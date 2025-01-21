@@ -343,3 +343,21 @@ position: relative;
 .text-primary{
   color: #1D75C2 !important;
 }
+
+.profle-drop-down {
+    padding: 8px 16px;
+    color: #64748B;
+    font-size: 14px;
+    cursor: pointer;
+    /* display: block; */
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    transition: all 0.2s;
+    background: rgb(205, 253, 205) !important;
+}
+
+.profle-drop-down li{
+  background: transparent !important;
+}
