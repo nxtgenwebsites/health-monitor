@@ -2030,6 +2030,12 @@ body {
   height: 28px !important;
 }
 
+.complaint-dropdown-container {
+  /* background: red; */
+  border: 2px solid #555;
+  border-radius: 5px;
+}
+
 .complaint-type {
   width: 200px;
   display: flex;
@@ -2038,9 +2044,10 @@ body {
   border: 2px solid #8a92a6;
   background: white;
   color: #8a92a6;
-  outline: none !important;
+  border: none;
+border-right: 8px solid transparent;
   border-radius: 6px;
-  padding: 5px 15px;
+  padding: 5px 15px;   
 }
 
 .others-inp input {
@@ -2065,4 +2072,8 @@ body {
 }
 #thankYouModal {
   background: #00000075;
+}
+
+.text-inp {
+  text-align: left !important;
 }

@@ -30,7 +30,7 @@ body {
   background-size: 30%;
 }
 .community-content h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   color: var(--black-color);
 }
@@ -308,4 +308,20 @@ footer {
   background: #ddf2f9;
   border-radius: 50%;
   border: none !important;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 30px;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

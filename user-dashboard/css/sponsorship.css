@@ -1555,11 +1555,55 @@ body {
   border-radius: 5px;
 }
 
+.schedule-card{
+  background: #f5f6fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.schedule-card .duration {
+  background: white !important;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.schedule-card .budget {
+  background: white !important;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.schedule-card .budget h6{
+  color: #0959a3;
+  font-size: 1.4rem;
+}
+
+.schedule-card .budget input {
+  width: 100%;
+  padding: 6px;
+}
+
+.schedule-card .duration input{
+  padding: 6px 13px;
+  border: 2px solid #0b6fc0;
+  border-radius: 5px;
+}
+
+.schedule-card .budget input{
+  padding: 6px 13px;
+  border: 2px solid #0b6fc0;
+  border-radius: 5px;
+}
+
 .result-card {
   background: #f5f6fa;
   padding: 20px;
   border-radius: 10px;
 }
+
 
 .result-heading h4{
     color: #303030;
@@ -1591,6 +1635,8 @@ body {
   width: 420px !important;
   user-select: none;
 }
+
+
 .multi-select .multi-select-header {
   border: 1px solid #dee2e6;
   padding: 7px 30px 7px 12px;
@@ -1598,6 +1644,7 @@ body {
   gap: 7px;
   min-height: 45px;
 }
+
 .multi-select .multi-select-header::after {
   content: "";
   display: block;
@@ -1685,8 +1732,8 @@ body {
   line-height: 20px;
 }
 .multi-select .multi-select-options .multi-select-option.multi-select-selected .multi-select-option-radio, .multi-select .multi-select-options .multi-select-all.multi-select-selected .multi-select-option-radio {
-  border-color: #40c979;
-  background-color: #40c979;
+  border-color: #fff;
+  background-color: #40a3ff;
 }
 .multi-select .multi-select-options .multi-select-option.multi-select-selected .multi-select-option-radio::after, .multi-select .multi-select-options .multi-select-all.multi-select-selected .multi-select-option-radio::after {
   content: "";
@@ -1699,7 +1746,7 @@ body {
   transform: rotate(45deg);
 }
 .multi-select .multi-select-options .multi-select-option.multi-select-selected .multi-select-option-text, .multi-select .multi-select-options .multi-select-all.multi-select-selected .multi-select-option-text {
-  color: #40c979;
+  color: #000;
 }
 .multi-select .multi-select-options .multi-select-option:hover, .multi-select .multi-select-options .multi-select-option:active, .multi-select .multi-select-options .multi-select-all:hover, .multi-select .multi-select-options .multi-select-all:active {
   background-color: #f3f4f7;

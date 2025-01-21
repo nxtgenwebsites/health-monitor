@@ -259,6 +259,15 @@ a {
   margin-top: 15px;
 }
 
+.access-control-inp select {
+  width: 100%;
+  padding: 8px 13px;
+  outline: none;
+  border: 2px solid #0c74c2;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
 .select-history-checkbox {
   appearance: none;
   width: 30px;
