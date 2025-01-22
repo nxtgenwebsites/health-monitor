@@ -200,7 +200,8 @@ body {
 }
 
 .join-content button {
-  padding: 3px 33px;
+  padding: 5px 33px !important;
+  /* display: none !important; */
   border-radius: 50px;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
