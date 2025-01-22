@@ -1,59 +1,25 @@
-const allBotBtn = document.querySelectorAll('.chat-bot-btn');
 const infoBox = document.querySelector('.info-box');
 const messageInp = document.getElementById('message-to-bot');
 const messageContainer = document.getElementById('chat-with-bot');
 const sendBtn = document.getElementById('message-send-btn');
-
-for (let i = 0; i < allBotBtn.length; i++) {
-    allBotBtn[i].addEventListener("click", () => {
-        for (let e = 0; e < allBotBtn.length; e++) {
-            allBotBtn[e].classList.remove("active");
-            const existingIndicator = allBotBtn[e].querySelector(".active-indicator");
-            if (existingIndicator) {
-                existingIndicator.remove();
-            }
-        }
-        allBotBtn[i].classList.add("active");
-        const activeIndicator = document.createElement("div");
-        activeIndicator.className = "active-indicator";
-        allBotBtn[i].append(activeIndicator);
-    });
-
-    allBotBtn[0].onclick = () => {
-        const upgradeOverlay = document.getElementById('upgrade-overlay');
-
-        upgradeOverlay.classList.remove('d-none');
-        upgradeOverlay.classList.add('d-flex');
-        infoBox.innerHTML = `This AI provides detailed assistance with managing medical records, allowing you to print, add comments, invite other DHAs—all at a highly <span class="highlight">competitive cost.</span> The feature is under development, and we will notify when it becomes available!`;
-
-    };
-    allBotBtn[1].onclick = () => {
-        const upgradeOverlay = document.getElementById('upgrade-overlay');
-
-        upgradeOverlay.classList.remove('d-none');
-        upgradeOverlay.classList.add('d-flex');
-        infoBox.innerHTML = `Azure AI helps with medical records, allowing you to print, comment, and invite DHAs at a competitive cost. <span class="highlight">The feature is in development, and we'll notify you once it's ready!</span>`;
-    };
-    allBotBtn[2].onclick = () => {
-        const upgradeOverlay = document.getElementById('upgrade-overlay');
-
-        upgradeOverlay.classList.remove('d-none');
-        upgradeOverlay.classList.add('d-flex');
-        infoBox.innerHTML = `This AI streamlines medical records by enabling printing, commenting, and inviting DHAs, all at an affordable price.
-     <span class="highlight">We'll update you once the feature is live!</span>`;
-    };
-    allBotBtn[3].onclick = () => {
-        const upgradeOverlay = document.getElementById('upgrade-overlay');
-
-        upgradeOverlay.classList.remove('d-none');
-        upgradeOverlay.classList.add('d-flex');
-        infoBox.innerHTML = `This AI streamlines medical records, enabling you to print, comment, and invite DHAs at an affordable rate.
-       <span class="highlight">The feature is in development, and we'll inform you when it's live!</span>`;
-    };
-}
+const upgradeOverlay = document.getElementById('upgrade-overlay');
+const upgradeBox = document.getElementById('upgrade-box');
 
 let messageCount = 0;
 let genderMessageSent = false; 
+
+
+const checkUser = localStorage.getItem('dha-user')
+
+if (checkUser === 'true') {
+    upgradeOverlay.classList.add('d-none')
+    upgradeBox.classList.add('d-none');
+} else {
+    upgradeOverlay.classList.remove('d-none')
+    upgradeBox.classList.remove('d-none');
+
+}
+
 
 sendBtn.addEventListener('click', () => {
     if (messageInp.value === "") {

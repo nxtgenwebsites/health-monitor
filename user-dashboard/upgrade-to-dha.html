@@ -445,7 +445,7 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
+            <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
@@ -476,15 +476,18 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
-                <a href="/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a>
-                <a href="/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a>
-                <a href="/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a>
-                <a href="/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a>
-                <a href="/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a>
-                <a href="/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
-                <a href="/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a>
-                <a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a></li>
+                    <li><a href="/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a></li>
+                    <li><a href="/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a></li>
+                    <li><a href="/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a></li>
+                    <li><a href="/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a></li>
+                    <li><a href="/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
+                    </li>
+                    <li><a href="/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a></li>
+                    <li><a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a></li>
+                </ul>
             </div>
         
             <!-- Communities Dropdown -->
@@ -509,19 +512,23 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
-                <a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
-                <a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a>
-                <a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a>
-                <span class="dropdown-item-custom community-text">Community Digital Health Assistants (CDHA)</span>
-                <ul class="community-custom-bullets">
-                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
-                    <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
+                    <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a></li>
+                    <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a></li>
+                    <span class="dropdown-item-custom community-text w-100">Community Digital Health Assistants
+                        (CDHA)</span>
+                    <div class="px-4">
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
+                        <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+                    </div>
+                    <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
+                    <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
+                    <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
+                    <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                    </li>
                 </ul>
-                <a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
-                <a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
-                <a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
-                <a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
             </div>
         
             <a href="/user-dashboard/health-info.html">
@@ -785,6 +792,9 @@
         upgradeBtn.addEventListener('click', () => {
             upgradePopup.classList.remove('d-none');
             upgradePopup.classList.add('d-flex');
+
+            // Active User Dashboard 
+            localStorage.setItem('dha-user' , true)
         })
 
     ProfileCloseBtn.addEventListener('click', () => {

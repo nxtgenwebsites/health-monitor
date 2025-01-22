@@ -224,16 +224,18 @@ a {text-decoration: none;}
 
 /* Main Content */
 .main-content {
-    position: relative;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
+    padding: 20px 30px;
+}
+.bg-img-contant {
+    position: relative;
      background: url("../assets/upgrade.jpg") no-repeat center center !important;
     /* background-position: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 90px;
-
 }
 .content-overlay {
     text-align: center;
@@ -1515,31 +1517,6 @@ line-height: normal;
     background: linear-gradient(90deg, #0C75C2 0%, #1ECEE4 100%);
 }
 
-.main-content {
-    position: relative;
-    width: 100%;
-    min-height: 1200px;
-     background: url("../assets/upgrade.jpg") no-repeat center center !important;
-    background-size: 100% 100%; /* Makes image fill the entire container */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Optional: Add a slight overlay to ensure text remains readable */
-.main-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Very subtle white overlay */
-    z-index: 0;
-}
-
 .content-overlay {
     text-align: center;
     position: relative;
@@ -1555,4 +1532,123 @@ line-height: normal;
 }
 .active svg path {
     fill: none !important;
+}
+
+/* CDHA Transfer  */
+/* Main Contant Start  */
+
+
+
+.transfer-container {
+    background: white;
+    height: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+/* Transfer Card  */
+.transfer-card {
+    background: white;
+    width: 270px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0B6FC026;
+    border: none;
+}
+
+.transfer-card-text {
+    color: #9197B3;
+    text-align: left;
+}
+
+.transfer-card-text h6{
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.transfer-search input {
+    width: 280px;
+    height: 40px;
+    border: 2px solid black;
+    padding-left:  40px;
+    border-radius: 7px;
+    outline: none !important;
+}
+
+.transfer-search .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50% , -50%);
+}
+
+.results-drop-down {
+    background: #E0E0E0;
+    padding: 5px 10px;
+}
+ 
+.transfer-patients table {
+    margin-top: 50px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+.transfer-patients td, th {
+  text-align: left;
+  padding: 10px;
+}
+
+
+.transfer-patients td{
+    cursor: pointer;
+}
+
+.tansform-pages-pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+
+}
+
+.tansform-pages-pagination .pages-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+    color: #2E2E2E;
+    border-radius: 10px;
+}
+
+.tansform-pages-pagination .pages-num.active{
+    background-color: #0C74C2;
+}
+
+.tansform-pages-pagination .pages-num.active a{
+    color: #FFFFFF;
+}
+
+.tansform-pages-pagination li a{
+    color: #2E2E2E;
+}
+
+.tansform-pages-pagination .previous-page , .next-page {
+    color: #666666;
+}
+
+.transfer-patients td button {
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #1F9254;
+    background: #EBF9F1;
+    border: none !important;
+    border-radius: 20px;
+}
+
+.transfer-patients tr:nth-child(even) {
+  background-color: #F7F6FE;
 }

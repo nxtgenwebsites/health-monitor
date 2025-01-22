@@ -1867,3 +1867,246 @@ line-height: normal;
         padding: 16px;
     }
 }    
+
+/* CDHA Dashborad  */
+.main-content > p {
+  color: #2e2e2e;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Content Elements */
+.banner-image {
+  width: 100%;
+  height: 952px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+.content-heading {
+  color: #0c75c2;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 24px 0 16px;
+}
+
+.dashboard-title {
+  color: #000;
+
+  /* h2 */
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Cards */
+.stats-card,
+.chart-card,
+.list-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card {
+  background-color: #e0f1ff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  height: 100%;
+}
+
+/* Feature Elements */
+.feature-icon {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.feature-icon i {
+  font-size: 32px;
+  color: #0c75c2;
+}
+
+/* Chart Elements */
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+/* List Elements */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.list-item:hover {
+  background-color: #f5f6fa;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon i {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #0c75c2;
+}
+
+.dha-searchbar {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(36, 190, 224, 0.15) 0%,
+    rgba(11, 111, 192, 0.15) 100%
+  );
+  padding: 6px 20px;
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.dha-searchbar .search-icon {
+  margin-top: 2px;
+}
+
+.dha-searchbar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 16px;
+  color: #2e2e2e;
+  outline: none;
+}
+
+.search-input-group input:focus {
+  outline: none;
+}
+
+.total-gender {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.patients-stats-heading h2 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.gender-chart {
+    background: white !important;
+    width: 430px !important;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+
+.gender-chart-heading h6{
+    font-size: 15px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.gender-chart-heading h5{
+    font-size: 18px;
+    font-weight: 700;
+    color: #2E2E2E;
+}
+
+
+.monitor-card {
+background: white;
+border-radius: 12px;
+padding: 24px;
+height: 100%;
+transition: all 0.3s ease;
+cursor: pointer;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.24);
+}
+
+.monitor-card:hover, .monitor-card.active {
+background: #2AAFE8;
+color: white;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(42, 175, 232, 0.25);
+}
+
+.monitor-card a {
+color: #2E2E2E;
+text-decoration: none;
+}
+
+.monitor-card:hover a, .monitor-card.active a {
+color: white;
+}
+
+.monitor-icon {
+width: 48px;
+height: 48px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.monitor-card:not(.active):not(:hover) .monitor-icon {
+background: #F0F9FF;
+}
+
+.monitor-card h5 {
+font-size: 16px;
+font-weight: 500;
+margin: 0;
+}
+
+.count {
+color: rgba(255, 255, 255, 0.8);
+font-size: 14px;
+}
+
+.monitor-card:not(.active):not(:hover) .count {
+color: #6B7280;
+}
+
+
+/* Maintain hover effects across screen sizes */
+.monitor-card:hover, .monitor-card.active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(42, 175, 232, 0.25);
+}
+
+/* Ensure proper spacing for content wrapper */
+.content-wrapper {
+    height: auto;
+    min-height: calc(100vh - 180px);
+}

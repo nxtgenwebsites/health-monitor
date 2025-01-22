@@ -310,18 +310,25 @@ footer {
   border: none !important;
 }
 
-table {
-  border-collapse: collapse;
-  margin-top: 30px;
-  width: 100%;
+.community-sub-heading h3{
+  color: #303030;
+  font-size: 24px;
+  padding: 0 10px;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.community-card {
+  background: white ;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.123);
+  border-radius: 10px;
+  padding: 20px 30px;
+  height: 100%;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.community-card h5{
+  color: #0b6fc0;
+}
+
+.community-card p{
+  color: #555555;
+  font-size: 14px;
 }

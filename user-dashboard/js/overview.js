@@ -1,5 +1,5 @@
 // Add this JavaScript code for the charts using Chart.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Function to get responsive chart options
     const getResponsiveChartOptions = (type) => {
         const baseOptions = {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             family: "'Poppins', sans-serif",
                             weight: '500'
                         },
-                        generateLabels: function(chart) {
+                        generateLabels: function (chart) {
                             const datasets = chart.data.datasets;
                             const legendItems = datasets.map((dataset, i) => ({
                                 text: dataset.label,
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.style.fontSize = '12px';
                             div.style.backgroundColor = '#FFFFFF';
                             div.style.cursor = 'pointer';
-                            
+
                             const dot = document.createElement('span');
                             dot.style.width = '4px';
                             dot.style.height = '4px';
@@ -55,21 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             dot.style.backgroundColor = legendItem.strokeStyle;
                             dot.style.marginRight = '8px';
                             dot.style.display = 'inline-block';
-                            
+
                             const text = document.createElement('span');
                             text.style.color = '#6B7280';
                             text.textContent = legendItem.text;
-                            
+
                             div.appendChild(dot);
                             div.appendChild(text);
-                            
+
                             div.onclick = () => {
                                 const index = legendItem.index;
                                 const chart = legend.chart;
                                 chart.setDatasetVisibility(index, !chart.isDatasetVisible(index));
                                 chart.update();
                             };
-                            
+
                             return div;
                         }
                     }
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     padding: 10,
                     displayColors: false,
                     callbacks: {
-                        label: function(context) {
+                        label: function (context) {
                             return context.dataset.label + ': ' + context.formattedValue;
                         }
                     }
@@ -211,8 +211,123 @@ document.addEventListener('DOMContentLoaded', function() {
         options: getResponsiveChartOptions('weight')
     });
 
+
+    const ctx = document.getElementById('patientProfileChart').getContext('2d');
+    const data = {
+        labels: ['Females', 'Male'],
+        datasets: [{
+            data: [360, 230],
+            backgroundColor: ['#0C74C2', '#F0E5FC'],
+            borderRadius: 20,
+            spacing: 5,
+            borderWidth: 0
+        }]
+    };
+
+    const options = {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (context) {
+                        const label = context.label || '';
+                        const value = context.raw || '';
+                        return `${label}: ${value}`;
+                    }
+                }
+            }
+        },
+        cutout: '80%', // Makes the donut chart
+    };
+
+    new Chart(ctx, {
+        type: 'doughnut', // Doughnut chart type
+        data: data,
+        options: options
+    });
+
+    // Custom plugin for rendering labels above bars
+    const customLabelPlugin = {
+        id: 'customLabelPlugin',
+        beforeDatasetsDraw(chart) {
+            const { ctx, data, chartArea: { top, left, right } } = chart;
+            ctx.save();
+
+            // Loop through the labels
+            data.labels.forEach((label, index) => {
+                const meta = chart.getDatasetMeta(0);
+                const bar = meta.data[index];
+                const labelX = chart.chartArea.left - -5; // Move label further left from the bars
+                const labelY = bar.y;
+
+                // Render the label to the left of the bars
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'left'; // Align text to the left
+                ctx.font = '18px Arial';
+                ctx.fillText(label, labelX, labelY - 17); // Position label left of the bar
+            });
+        }
+    };
+
+    // Data for the chart
+    const careMonitorData = {
+        labels: ['Diabetes', 'Blood Pressure', 'Weight', 'Cholesterol'],
+        datasets: [{
+            data: [500, 400, 365, 200],
+            backgroundColor: ['#0C74C2', '#DDF2F9', '#DDF2F9', '#DDF2F9'], // Colors for the bars
+            borderRadius: 5, // Rounded corners
+            barThickness: 20 // Thickness of the bars
+        }]
+    };
+
+    // Chart options
+    const careMonitorOptions = {
+        indexAxis: 'y', // Horizontal bar chart
+        plugins: {
+            legend: {
+                display: false // Hide the legend
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false // Hide grid lines
+                },
+                ticks: {
+                    display: false // Hide x-axis numbers
+                }
+            },
+            y: {
+                grid: {
+                    display: false // Hide grid lines
+                },
+                ticks: {
+                    display: false // Hide y-axis labels
+                }
+            }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+    };
+
+    // Initialize the chart
+    const ctx2 = document.getElementById('careMonitorChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: careMonitorData,
+        options: careMonitorOptions,
+        plugins: [customLabelPlugin] // Include the custom plugin
+    });
+
     // Handle resize events
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         activityChart.options = getResponsiveChartOptions('activity');
         weightChart.options = getResponsiveChartOptions('weight');
         activityChart.update();
