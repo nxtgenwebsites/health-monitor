@@ -1780,3 +1780,6 @@ body {
 .editor-content textarea:focus {
   box-shadow: none;
 }
+.second-text {
+  text-align: left !important;
+}
