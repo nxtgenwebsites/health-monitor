@@ -1,4 +1,4 @@
-const infoBox = document.querySelector('.info-box');
+// const infoBox = document.querySelector('.info-box');
 const messageInp = document.getElementById('message-to-bot');
 const messageContainer = document.getElementById('chat-with-bot');
 const sendBtn = document.getElementById('message-send-btn');

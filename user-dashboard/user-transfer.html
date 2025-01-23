@@ -599,31 +599,35 @@
                         <h3>Transfer</h3>
                     </div>
                     <div>
-                        <button class="primary-btn">Transfer Request</button>
+                        <button class="primary-btn" id="transfer-request">Transfer Request</button>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center align-items-center gap-4 mt-5">
                     <div>
-                        <button class="d-flex justify-content-center align-items-center gap-2 transfer-card">
-                            <div>
-                                <img src="assets/tabler_transfer-in.svg" alt="transfer">
-                            </div>
-                            <div class="transfer-card-text">
-                                <h6>Transfer In</h6>
-                                <span>(03 new requests)</span>
-                            </div>
-                        </button>
+                        <a href="dha-transfer-in.html">
+                            <button class="d-flex justify-content-center align-items-center gap-2 transfer-card">
+                                <div>
+                                    <img src="assets/tabler_transfer-in.svg" alt="transfer">
+                                </div>
+                                <div class="transfer-card-text">
+                                    <h6>Transfer In</h6>
+                                    <span>(03 new requests)</span>
+                                </div>
+                            </button>
+                        </a>
                     </div>
                     <div>
-                        <button class="d-flex justify-content-center align-items-center gap-2 transfer-card">
-                            <div>
-                                <img src="assets/transfer out.svg" alt="transfer">
-                            </div>
-                            <div class="transfer-card-text">
-                                <h6>Transfer Out</h6>
-                                <span class="text-primary">(05)</span>
-                            </div>
-                        </button>
+                        <a href="dha-transfer-out.html">
+                            <button class="d-flex justify-content-center align-items-center gap-2 transfer-card">
+                                <div>
+                                    <img src="assets/transfer out.svg" alt="transfer">
+                                </div>
+                                <div class="transfer-card-text">
+                                    <h6>Transfer Out</h6>
+                                    <span class="text-primary">(05)</span>
+                                </div>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -657,56 +661,56 @@
                                 <th>Date</th>
                                 <th>Status</th>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Matt Dickerson</td>
                                 <td>Self</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Wiktoria</td>
                                 <td>Owner</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Matt Dickerson</td>
                                 <td>Self</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Wiktoria</td>
                                 <td>Owner</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Matt Dickerson</td>
                                 <td>Self</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Wiktoria</td>
                                 <td>Owner</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Matt Dickerson</td>
                                 <td>Self</td>
                                 <td>Dr. Fabrio Cashme</td>
                                 <td>09 March, 2024</td>
                                 <td><button>Transferred In</button></td>
                             </tr>
-                            <tr>
+                            <tr class="patient-history">
                                 <td>Wiktoria</td>
                                 <td>Owner</td>
                                 <td>Dr. Fabrio Cashme</td>
@@ -725,6 +729,78 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Transfer Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-transfer-popup">
+            <div class="add-transfer-box bg-white rounded position-relative ">
+                <h2 class="text-center">Add Transfer</h2>
+                <div class="w-100 transfer-type mt-4">
+                    <h3>Transfer Type</h3>
+                    <div class="w-75 my-4 chose-type d-flex justify-content-between">
+                        <div>
+                            <input type="radio" id="transfer-in" name="transfer">
+                            <label for="transfer-in">In</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="transfer-out" name="transfer">
+                            <label for="transfer-out">Out</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="transfer-owner" name="transfer">
+                            <label for="transfer-owner">Owner</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-4 justify-content-between align-items-center patient-row">
+                    <div class="mt-2">
+                        <h3>Patient</h3>
+                    </div>
+                    <div>
+                        <div class="form-group d-flex justify-content-between">
+                            <select id="countries" name="countries" data-placeholder=" Select" multiple
+                                data-multi-select>
+                                <option value="Alexandia Bishop">Alexandia Bishop</option>
+                                <option value="Lorem Piang">Lorem Piang</option>
+                                <option value="Samuel Butcher">Samuel Butcher</option>
+                                <option value="Walya Kate">Walya Kate</option>
+                                <option value="Peterson Black">Peterson Black</option>
+                                <option value="Anya Mith">Anya Mith</option>
+                                <option value="Doshen Fig">Doshen Fig</option>
+                                <option value="Alexandia Bishop">Alexandia Bishop</option>
+                                <option value="Walya Kate Bishop">Walya Kate Bishop</option>
+                                <option value="Lorem Piang">Lorem Piang</option>
+                                <option value="Doshen Fig">Doshen Fig</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex justify-content-center">
+                    <button class="btn primary-btn" id="patient-details-btn">View Details</button>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="transfer-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Select Patient Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="select-patient-popup">
+            <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
+                <div>
+                    <img src="assets/patient profile pic.png" alt="Profile Pic">
+                </div>
+                <div class="mt-4 profile-box-content">
+                    <h5>Ms. Randy Orton</h5>
+                    <h6>34 years, Female</h6>
+                    <h6>20 Richard Street&nbsp; Enugu</h6>
+                    <h6>Registered on 12 January 2024</h6>
+                    <h6>200 Activities performed</h6>
+                </div>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="popup-btn" id="patient-cancle-btn">Cancel</button>
+                    <a href="dha-patient-profile.html"><button class="popup-btn">View Details</button></a>
                 </div>
             </div>
         </div>
@@ -895,8 +971,256 @@
             </div>
         </div>
     </div>
+    <!-- Transfer Popup -->
+    <div class="popup d-none justify-content-center align-items-center" id="transfer-popup">
+        <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
+            <div>
+                <img src="assets/patient profile pic.png" alt="Profile Pic">
+            </div>
+            <div class="mt-4 profile-box-content">
+                <h5>Ms. Randy Orton</h5>
+                <h6>34 years, Female</h6>
+                <h6>20 Richard Street&nbsp; Enugu</h6>
+                <h6>Registered on 12 January 2024</h6>
+                <h6>200 Activities performed</h6>
+            </div>
+            <div class="mt-3">
+                <span><span class="highlight-text">Approved</span> : 03 March, 2024</span>
+            </div>
+        </div>
+    </div>
     <!-- Share Message end -->
     <script>
+
+        // History Drop Down  
+        class MultiSelect {
+
+            constructor(element, options = {}) {
+                let defaults = {
+                    placeholder: 'Select item(s)',
+                    max: null,
+                    search: true,
+                    selectAll: true,
+                    listAll: true,
+                    closeListOnItemSelect: false,
+                    name: '',
+                    width: '',
+                    height: '',
+                    dropdownWidth: '',
+                    dropdownHeight: '',
+                    data: [],
+                    onChange: function () { },
+                    onSelect: function () { },
+                    onUnselect: function () { }
+                };
+                this.options = Object.assign(defaults, options);
+                this.selectElement = typeof element === 'string' ? document.querySelector(element) : element;
+                for (const prop in this.selectElement.dataset) {
+                    if (this.options[prop] !== undefined) {
+                        this.options[prop] = this.selectElement.dataset[prop];
+                    }
+                }
+                this.name = this.selectElement.getAttribute('name') ? this.selectElement.getAttribute('name') : 'multi-select-' + Math.floor(Math.random() * 1000000);
+                if (!this.options.data.length) {
+                    let options = this.selectElement.querySelectorAll('option');
+                    for (let i = 0; i < options.length; i++) {
+                        this.options.data.push({
+                            value: options[i].value,
+                            text: options[i].innerHTML,
+                            selected: options[i].selected,
+                            html: options[i].getAttribute('data-html')
+                        });
+                    }
+                }
+                this.element = this._template();
+                this.selectElement.replaceWith(this.element);
+                this._updateSelected();
+                this._eventHandlers();
+            }
+
+            _template() {
+                let optionsHTML = '';
+                for (let i = 0; i < this.data.length; i++) {
+                    optionsHTML += `
+    <div class="multi-select-option${this.selectedValues.includes(this.data[i].value) ? ' multi-select-selected' : ''}" data-value="${this.data[i].value}">
+        <span class="multi-select-option-radio"></span>
+        <span class="multi-select-option-text">${this.data[i].html ? this.data[i].html : this.data[i].text}</span>
+    </div>
+`;
+                }
+                let selectAllHTML = '';
+                let template = `
+<div class="multi-select ${this.name}"${this.selectElement.id ? ' id="' + this.selectElement.id + '"' : ''} style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+    ${this.selectedValues.map(value => `<input type="hidden" name="${this.name}[]" value="${value}">`).join('')}
+    <div class="multi-select-header" style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+        <span class="multi-select-header-max">${this.options.max ? this.selectedValues.length + '/' + this.options.max : ''}</span>
+        <span class="multi-select-header-placeholder">${this.placeholder}</span>
+    </div>
+    <div class="multi-select-options" style="${this.options.dropdownWidth ? 'width:' + this.options.dropdownWidth + ';' : ''}${this.options.dropdownHeight ? 'height:' + this.options.dropdownHeight + ';' : ''}">
+        ${selectAllHTML}
+        ${optionsHTML}
+    </div>
+</div>
+`;
+                let element = document.createElement('div');
+                element.innerHTML = template;
+                return element;
+            }
+
+            _eventHandlers() {
+                let headerElement = this.element.querySelector('.multi-select-header');
+                this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                    option.onclick = () => {
+                        let selected = true;
+                        if (!option.classList.contains('multi-select-selected')) {
+                            if (this.options.max && this.selectedValues.length >= this.options.max) {
+                                return;
+                            }
+                            option.classList.add('multi-select-selected');
+                            if (this.options.listAll === true || this.options.listAll === 'true') {
+                                if (this.element.querySelector('.multi-select-header-option')) {
+                                    let opt = Array.from(this.element.querySelectorAll('.multi-select-header-option')).pop();
+                                    opt.insertAdjacentHTML('afterend', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                } else {
+                                    headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                }
+                            }
+                            this.element.querySelector('.multi-select').insertAdjacentHTML('afterbegin', `<input type="hidden" name="${this.name}[]" value="${option.dataset.value}">`);
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = true;
+                        } else {
+                            option.classList.remove('multi-select-selected');
+                            this.element.querySelectorAll('.multi-select-header-option').forEach(headerOption => headerOption.dataset.value == option.dataset.value ? headerOption.remove() : '');
+                            this.element.querySelector(`input[value="${option.dataset.value}"]`).remove();
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = false;
+                            selected = false;
+                        }
+                        if (this.options.listAll === false || this.options.listAll === 'false') {
+                            if (this.element.querySelector('.multi-select-header-option')) {
+                                this.element.querySelector('.multi-select-header-option').remove();
+                            }
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                        }
+                        if (!this.element.querySelector('.multi-select-header-option')) {
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+                        } else if (this.element.querySelector('.multi-select-header-placeholder')) {
+                            this.element.querySelector('.multi-select-header-placeholder').remove();
+                        }
+                        if (this.options.max) {
+                            this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+                        }
+                        this.element.querySelectorAll('.multi-select-option').forEach(option => option.style.display = 'flex');
+                        if (this.options.closeListOnItemSelect === true || this.options.closeListOnItemSelect === 'true') {
+                            headerElement.classList.remove('multi-select-header-active');
+                        }
+                        this.options.onChange(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        if (selected) {
+                            this.options.onSelect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        } else {
+                            this.options.onUnselect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        }
+                    };
+                });
+                headerElement.onclick = () => headerElement.classList.toggle('multi-select-header-active');
+                if (this.options.selectAll === true || this.options.selectAll === 'true') {
+                    let selectAllButton = this.element.querySelector('.multi-select-all');
+                }
+                if (this.selectElement.id && document.querySelector('label[for="' + this.selectElement.id + '"]')) {
+                    document.querySelector('label[for="' + this.selectElement.id + '"]').onclick = () => {
+                        headerElement.classList.toggle('multi-select-header-active');
+                    };
+                }
+                document.addEventListener('click', event => {
+                    if (!event.target.closest('.' + this.name) && !event.target.closest('label[for="' + this.selectElement.id + '"]')) {
+                        headerElement.classList.remove('multi-select-header-active');
+                    }
+                });
+            }
+
+            _updateSelected() {
+                if (this.options.listAll === true || this.options.listAll === 'true') {
+                    this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                        if (option.classList.contains('multi-select-selected')) {
+                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                        }
+                    });
+                } else {
+                    if (this.selectedValues.length > 0) {
+                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                    }
+                }
+                if (this.element.querySelector('.multi-select-header-option')) {
+                    this.element.querySelector('.multi-select-header-placeholder').remove();
+                }
+            }
+
+            get selectedValues() {
+                return this.data.filter(data => data.selected).map(data => data.value);
+            }
+
+            get selectedItems() {
+                return this.data.filter(data => data.selected);
+            }
+
+            set data(value) {
+                this.options.data = value;
+            }
+
+            get data() {
+                return this.options.data;
+            }
+
+            set selectElement(value) {
+                this.options.selectElement = value;
+            }
+
+            get selectElement() {
+                return this.options.selectElement;
+            }
+
+            set element(value) {
+                this.options.element = value;
+            }
+
+            get element() {
+                return this.options.element;
+            }
+
+            set placeholder(value) {
+                this.options.placeholder = value;
+            }
+
+            get placeholder() {
+                return this.options.placeholder;
+            }
+
+            set name(value) {
+                this.options.name = value;
+            }
+
+            get name() {
+                return this.options.name;
+            }
+
+            set width(value) {
+                this.options.width = value;
+            }
+
+            get width() {
+                return this.options.width;
+            }
+
+            set height(value) {
+                this.options.height = value;
+            }
+
+            get height() {
+                return this.options.height;
+            }
+
+        }
+        document.querySelectorAll('[data-multi-select]').forEach(select => new MultiSelect(select));
+
+
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');
@@ -909,6 +1233,21 @@
         blockBtn.addEventListener('click', () => {
             shareMsg.style.display = 'block';
         });
+
+        const patientHistory = document.querySelectorAll('.patient-history');
+        const transferPopup = document.getElementById('transfer-popup');
+        for (let i = 0; i < patientHistory.length; i++) {
+            patientHistory[i].addEventListener(('click'), () => {
+                transferPopup.classList.remove('d-none')
+            })
+        }
+
+        transferPopup.addEventListener(('click'), (e) => {
+            if (e.target === transferPopup) {
+                transferPopup.classList.add('d-none')
+            }
+        })
+
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
@@ -1001,6 +1340,32 @@
         } else {
             cdhaTransfer.classList.add('d-none');
         }
+
+        const detailsBtn = document.getElementById('patient-details-btn');
+        const transferCloseBtn= document.getElementById('transfer-close-btn');
+        
+        const patientPopup = document.getElementById('select-patient-popup');
+        const patientCancleBtn= document.getElementById('patient-cancle-btn');
+        
+        const addTransferPopup= document.getElementById('add-transfer-popup');
+        const transferRequestBtn = document.getElementById('transfer-request');
+
+        transferRequestBtn.addEventListener(('click') , () => {
+            addTransferPopup.classList.remove('d-none')
+        })
+
+        patientCancleBtn.addEventListener(('click') , () => {
+            patientPopup.classList.add('d-none')
+        })
+
+        transferCloseBtn.addEventListener(('click'), () => {
+            addTransferPopup.classList.add('d-none')
+        })
+
+        detailsBtn.addEventListener(('click'), () => {
+            patientPopup.classList.remove('d-none')
+            addTransferPopup.classList.add('d-none')
+        })
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -37,18 +37,10 @@
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
-            <div class="dropdown">
-                <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
-                    Remote Care
-                </button>
-                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
-                    <li class="dropdown-item remote-care-btn">Call DHA</li>
-                    <li class="dropdown-item remote-care-btn">Call Nurse</li>
-                    <li class="dropdown-item remote-care-btn">Call Doctor</li>
-                </ul>
-            </div>
+            <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                Remote Care
+            </a>
         </div>
         <!-- Right side with toggle button, notification and user -->
         <div class="d-flex align-items-center gap-3">
@@ -1113,8 +1105,6 @@
                 modal.hide();
             });
         });
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
@@ -1151,10 +1141,6 @@
                 arrowIcon.style.transform = "rotate(90deg)";
             }
         });
-
-        remoteCareDropdownBtn.addEventListener('click', () => {
-            remoteCareDropdown.classList.toggle('d-none')
-        })
 
         pairedBackBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');

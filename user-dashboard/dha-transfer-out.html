@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Transfer In</title>
+    <title>Health Monitor | Transfer Out</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -571,6 +571,7 @@
                 </div>
             </a>
 
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -583,7 +584,7 @@
             <div class="transfer-container">
                 <div class="transfer-heading d-flex justify-content-between align-items-center">
                     <div>
-                        <h3>Transfer In</h3>
+                        <h3>Transfer Out Patients</h3>
                         <p class="mt-3">Requests</p>
                     </div>
                     <div>
@@ -753,7 +754,7 @@
                                 <th>Type</th>
                                 <th>Transferred On</th>
                             </tr>
-                            <tr  class="patient-history">
+                            <tr class="patient-history">
                                 <td>
                                     <div class="d-flex align-items-center gap-3">
                                         <img src="assets/patient.png" alt="">
@@ -764,7 +765,7 @@
                                 <td>Self</td>
                                 <td>02 March, 2024</td>
                             </tr>
-                            <tr  class="patient-history">
+                            <tr class="patient-history">
                                 <td>
                                     <div class="d-flex align-items-center gap-3">
                                         <img src="assets/Ellipse 65 (3).png" alt="">
@@ -775,7 +776,7 @@
                                 <td>Self</td>
                                 <td>02 March, 2024</td>
                             </tr>
-                            <tr  class="patient-history">
+                            <tr class="patient-history">
                                 <td>
                                     <div class="d-flex align-items-center gap-3">
                                         <img src="assets/Ellipse 65 (4).png" alt="">
@@ -802,7 +803,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Transfer Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="transfer-popup">
             <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
@@ -817,10 +818,10 @@
                     <h6>200 Activities performed</h6>
                 </div>
                 <div class="mt-3">
-                    <span><span class="highlight-text">Approved</span>  : 03 March, 2024</span>
+                    <span><span class="highlight-text">Approved</span> : 03 March, 2024</span>
                 </div>
             </div>
-            </div>
+        </div>
         <!-- Call Remote Care Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
             <div class="paired-box bg-white rounded text-center position-relative ">
@@ -1014,19 +1015,19 @@
         </div>
     </div>
     <script>
-    const patientHistory = document.querySelectorAll('.patient-history');
-    const transferPopup = document.getElementById('transfer-popup');
-    for (let i = 0; i < patientHistory.length; i++) {
-        patientHistory[i].addEventListener(('click'), () => {
-            transferPopup.classList.remove('d-none')
-        })
-    }
-
-    transferPopup.addEventListener(('click') , (e) => {
-        if (e.target === transferPopup) {
-            transferPopup.classList.add('d-none')
+        const patientHistory = document.querySelectorAll('.patient-history');
+        const transferPopup = document.getElementById('transfer-popup');
+        for (let i = 0; i < patientHistory.length; i++) {
+            patientHistory[i].addEventListener(('click'), () => {
+                transferPopup.classList.remove('d-none')
+            })
         }
-    })
+
+        transferPopup.addEventListener(('click'), (e) => {
+            if (e.target === transferPopup) {
+                transferPopup.classList.add('d-none')
+            }
+        })
 
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const accessPopup = document.getElementById('access-confirmation-popup');

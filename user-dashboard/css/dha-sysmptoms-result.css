@@ -2057,111 +2057,63 @@ z
   height: 370px;
 }
 
-/* Main Contant Start  */
+
+/* Main content styles */
 .main-content {
   flex: 1;
   padding: 24px;
-  background-color: #f5f6fa;
+  background-color: #f9f9f9;
   min-width: 0;
 }
 
-.transfer-container {
+.result-heading {
+    color: #0C74C2;
+    font-weight: 500;
+}
+
+.result-row h3{
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.result-row h4{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.result-row button {
     background: white;
-    height: 100%;
+    color: #0C74C2;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    padding: 8px 14px;
+
+}
+.result-container {
     padding: 20px 30px;
+    background: white;
+}
+
+.result-row {
+    background: #DDF2F9;
+    padding: 10px 20px;
     border-radius: 10px;
 }
 
-.transfer-heading h3{
-    color: black;
-    font-weight: 500;
-    font-size: 25px;
+.confirm-patient {
+    margin-top: 50px !important;
 }
 
-.transfer-heading p{
-    color: #0C74C2;
-}
-
-.transfer-user-card {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px #00000026;
-}
-
-
-.user-info h3{
-    color: #0C74C2;
-    font-size: 23px;
-}
-
-.user-info span{
-    color: #2E2E2E;
-    font-size: 17px;
-
-}
-
-.transfer-info h3{
+.confirm-patient h5{
+    color: #666666;
+    font-size: 16px;
     font-weight: 400;
-    color: #2E2E2E;
-    font-size: 16px;
 }
 
-.transfer-info h4{
-    font-weight: 300;
-    color: #2E2E2E;
-    font-size: 16px;
-}
-
-.transfer-patients table {
-    margin-top: 50px;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.transfer-patients tr{
-  border-top: 15px solid white;
-  border-bottom: 15px solid white;
-}
-
-.transfer-patients th {
-  padding: 17px 20px;
-  margin-top: 20px;
-  background: #DDF2F9;
-  margin-bottom: 10px !important;
-}
-
-.transfer-patients td {
-  padding: 10px 20px;
-  background: #DDF2F9;
-  margin-top: 20px !important;
-}
-
-
-.transfer-patients table h5{
-  font-size: 18px;
-  color: #2E2E2E;
-}
-
-.transfer-patients td{
-    cursor: pointer;
-}
-
-.profile-box-content h5{
-    font-weight: 500;
-    color: #0C74C2;
-}
-
-.patient-profile-box {
-max-width: 450px;
-  width: 100%;
-  padding: 40px 30px;
-}
-.profile-box-content h6{
-  font-weight: 400;
-}
-
-.highlight-text {
-  font-weight: 600;
-  font-style: italic;
+.confirm-patient a{
+    color: #666666;
+    margin: 0 5px;
 }

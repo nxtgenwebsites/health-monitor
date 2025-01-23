@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Transfer In</title>
+    <title>Health Monitor | Patient's Profile</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dha-transfer-in.css">
+    <link rel="stylesheet" href="css/patient.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
 
+</head>
+
 <body>
     <!-- Header -->
+    <!-- Replace your current header HTML with this -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- This is the Updated HTML FILE -->
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <a href="/"><a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a></a>
+                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -34,14 +37,19 @@
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
-
-            <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
-                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
-                Remote Care
-            </a>
-
+            <div class="dropdown">
+                <button class="nav-link d-flex align-items-center gap-2" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </button>
+                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item remote-care-btn">Call DHA</li>
+                    <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                    <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                </ul>
+            </div>
         </div>
-
         <!-- Right side with toggle button, notification and user -->
         <div class="d-flex align-items-center gap-3">
             <!-- Notification -->
@@ -231,27 +239,15 @@
                     <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                     Monitors
                 </a>
-                <div class="dropdown">
-                    <button id="remote-care-dropdown"
-                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
-                        <div class="d-flex gap-2 justify-content-center align-items-center">
-                            <i class="bi bi-phone"></i>
-                            <span>Remote Care</span>
-                        </div>
-                        <div class="dropdown-toggle"></div>
-                    </button>
-                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                   <li class=" dropdown-item remote-care-btn">
-                        Call DHA</li>
-                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
-                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
-                    </ul>
-                </div>
+                <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </a>
             </div>
 
             <!-- User Profile for Mobile -->
-            <div class="mobile-user-profile">
-                <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
                     <img src="assets/1.png" alt="" class="user-avatar">
                     <div>
                         <h6 class="mb-0">Bohdan Peter</h6>
@@ -571,6 +567,12 @@
                 </div>
             </a>
 
+            <!-- Upgrade Box -->
+            <div class="upgrade-box">
+                <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
+                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
+            </div>
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -578,249 +580,305 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <!-- Main Content -->
+
         <div class="main-content">
-            <div class="transfer-container">
-                <div class="transfer-heading d-flex justify-content-between align-items-center">
-                    <div>
-                        <h3>Transfer In</h3>
-                        <p class="mt-3">Requests</p>
-                    </div>
-                    <div>
-                        <a href="dha-add-patient.html">
-                            <button class="primary-btn">Transfer Request</button>
-                        </a>
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="profile-title">Patient's Profile</h1>
+                <button class="btn primary-btn mb-4" id="transfer-btn">Transfer</button>
+            </div>
+
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Personal Info Card -->
+                    <div class="profile-card">
+                        <div class="profile-header d-flex">
+                            <img src="assets/Ellipse 73.png" alt="David Mctosh" class="profile-image">
+                            <div class="basic-info">
+                                <h2 class="d-flex">Mr. David Mctosh
+                                    <a href="add-patient.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" class="pencil-icon"
+                                            style="margin-left: 70px;">
+                                            <path
+                                                d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
+                                                fill="#0C74C2" />
+                                        </svg>
+                                    </a>
+                                </h2>
+                                <div class="basic-info-text">Male, 35 years old</div>
+                                <div class="basic-info-text">Married | Nigeria</div>
+                                <div class="basic-info-text">Date of Birth: 01 Jan, 1989</div>
+                            </div>
+                        </div>
+
+                        <div class="section-header">
+                            <h3 class="section-title">Other details</h3>
+
+                        </div>
+
+                        <div class="profile-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Contact No.</div>
+                                <div class="detail-value">+23 456 987 56</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Email ID</div>
+                                <div class="detail-value">david.mc1@gmail.com</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Education Level</div>
+                                <div class="detail-value">Post Grad</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Employment Status</div>
+                                <div class="detail-value">Business</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Country</div>
+                                <div class="detail-value">Zambia</div>
+                            </div>
+                            <p class="notes">Notes
+                                <br />
+                                <span class="notes-text">Lorem ipsum is a placeholder text commonly used to demonstrate
+                                    the visual form of a document or a typeface without relying on meaningful
+                                    content.</span>
+                            </p>
+                        </div>
+
                     </div>
                 </div>
-                <div class="mt-4">
-                    <div class="row row-gap-5">
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 311.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Darlene Robert</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-4">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Residential Details Card -->
+                    <div class="profile-card">
+                        <div class="section-header">
+                            <h3 class="section-title">Residential Details</h3>
+                            <a href="add-patient.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" class="pencil-icon" style="margin-left: 70px;">
+                                    <path
+                                        d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
+                                        fill="#0C74C2" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="profile-details">
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Country</div>
+                                <div class="detail-value residential-value">Nigeria</div>
+                            </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">State</div>
+                                <div class="detail-value residential-value">Lagos</div>
+                            </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">City</div>
+                                <div class="detail-value residential-value">Lagos</div>
+                            </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Town</div>
+                                <div class="detail-value residential-value">Ikeja</div>
+                            </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Address</div>
+                                <div class="detail-value residential-value">15 Awolowo Way, Ikeja, Lagos</div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 313.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Alex Bishop</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-4">
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
-                            </div>
+                    </div>
+
+                    <!-- Children Details Card -->
+                    <div class="profile-card">
+                        <div class="section-header">
+                            <h3 class="section-title">Children Details</h3>
+                            <a href="add-patient.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" class="pencil-icon" style="margin-left: 70px;">
+                                    <path
+                                        d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
+                                        fill="#0C74C2" />
+                                </svg>
+                            </a>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 313.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Chris Churs</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-5">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
+
+                        <div class="profile-details">
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">No. of Children</div>
+                                <div class="detail-value">01</div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 314.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Chris Churs</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-5">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Child's Name</div>
+                                <div class="detail-value">Lagos</div>
                             </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Child's Gender</div>
+                                <div class="detail-value">Male</div>
+                            </div>
+                            <div class="detail-row residential-row">
+                                <div class="detail-label residential-label">Date of Birth</div>
+                                <div class="detail-value">01 Jan, 2019</div>
+                            </div>
+                            <a href="#" class="children">Add more children</a>
                         </div>
                     </div>
                 </div>
-                <!-- Transfer History -->
-                <div class="mt-5">
-                    <div class="">
-                        <h4 class="text-primary">History</h4>
+
+
+                <!-- Life Monitors Section -->
+                <div class="life-monitors">
+                    <div class="monitor-header">
+                        <h3 class="section-title">Monitors</h3>
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4 add-new-btn"
+                            data-bs-toggle="modal" data-bs-target="#addMonitorModal">
+                            Add new
+                        </button>
                     </div>
-                    <div class="w-100 bg-danger mt-3 transfer-patients">
-                        <table class="w-100">
-                            <tr>
-                                <th>Patient Name</th>
-                                <th>Transfer Management</th>
-                                <th>Type</th>
-                                <th>Transferred On</th>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/patient.png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (3).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (4).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (1).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
+
+                    <!-- Blood Pressure -->
+                    <div class="monitor-section">
+                        <h4 class="monitor-title">Blood Pressure</h4>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Results</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jan 12, 2023</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-up">↑ 15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2022</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-down">↓ 6%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2020</td>
+                                    <td>243 mg</td>
+                                    <td class="improvement-up">↑ 10%</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
+                    <div class="monitor-section">
+                        <h4 class="monitor-title">BMI</h4>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Results</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jan 12, 2023</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-up">↑ 15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2022</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-down">↓ 6%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2020</td>
+                                    <td>243 mg</td>
+                                    <td class="improvement-up">↑ 10%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="monitor-section">
+                        <h4 class="monitor-title">Diabetes</h4>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Results</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jan 12, 2023</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-up">↑ 15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2022</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-down">↓ 6%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2020</td>
+                                    <td>243 mg</td>
+                                    <td class="improvement-up">↑ 10%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="monitor-section">
+                        <h4 class="monitor-title">Cholesterol</h4>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Results</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jan 12, 2023</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-up">↑ 15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2022</td>
+                                    <td>126 mg</td>
+                                    <td class="improvement-down">↓ 6%</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 02, 2020</td>
+                                    <td>243 mg</td>
+                                    <td class="improvement-up">↑ 10%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!-- BMI, Diabetes, and Cholesterol sections with same structure -->
+                    <!-- ... Repeat the monitor-section structure for each ... -->
+
+                    <button class="add-more-btn">Add new monitor</button>
                 </div>
             </div>
         </div>
-        
-        <!-- Transfer Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="transfer-popup">
-            <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
-                <div>
-                    <img src="assets/patient profile pic.png" alt="Profile Pic">
+
+        <!-- Patient Transferred Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="patient-transferred-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <div class="">
+                    <img src="assets/Mask group.png" alt="">
                 </div>
-                <div class="mt-4 profile-box-content">
-                    <h5>Ms. Randy Orton</h5>
-                    <h6>34 years, Female</h6>
-                    <h6>20 Richard Street&nbsp; Enugu</h6>
-                    <h6>Registered on 12 January 2024</h6>
-                    <h6>200 Activities performed</h6>
+                <div class="mt-4">
+                    <h4>Patient Transferred!</h4>
+                    <p>You’ve successfully transferred your patient!</p>
                 </div>
-                <div class="mt-3">
-                    <span><span class="highlight-text">Approved</span>  : 03 March, 2024</span>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="patient-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
                 </div>
             </div>
-            </div>
+        </div>
         <!-- Call Remote Care Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
             <div class="paired-box bg-white rounded text-center position-relative ">
@@ -840,23 +898,21 @@
             <div class="profile-box bg-white rounded text-center position-relative w-100">
                 <h5 class="mt-3">Share My Profile</h5>
                 <div
-                    class="profile-link w-100 mt-5 d-flex align-items-center flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                        <div>
-
-                            <div class="dropdown">
-                                <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/share.svg" alt="icon">
-                                </button>
-                                <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Forward</a></li>
-                                </ul>
-                            </div>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -946,55 +1002,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
-                            Alert: Blood Pressure Threshold Exceeded
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
-                            Your blood pressure readings have surpassed the threshold.
-                            <br>
-                            Immediate action is required. Please contact your healthcare 
-                            provider or seek medical attention immediately.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
-                                style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
-                                onclick="switchModals()">
-                            Call Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 30px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
-                            No Paired Device!
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
-                            You haven't paired any device to Call your Remote Care DHA.
-                            <br>
-                            Please connect a device to make a call.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
-                                style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
-                                data-bs-dismiss="modal">
-                            Go Back
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -1013,43 +1020,132 @@
             </div>
         </div>
     </div>
-    <script>
-    const patientHistory = document.querySelectorAll('.patient-history');
-    const transferPopup = document.getElementById('transfer-popup');
-    for (let i = 0; i < patientHistory.length; i++) {
-        patientHistory[i].addEventListener(('click'), () => {
-            transferPopup.classList.remove('d-none')
-        })
-    }
+    <div class="modal fade" id="addMonitorModal" tabindex="-1" aria-labelledby="addMonitorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fs-4" id="addMonitorModalLabel">Add New Monitor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="addMonitorForm">
+                        <!-- Form Fields -->
+                        <div class="form-fields-container">
+                            <!-- Monitor Name -->
+                            <div class="form-group-inline">
+                                <label class="form-label text-secondary">Monitor Name</label>
+                                <input type="text" class="form-control bg-light custom-input" placeholder="e.g hba1c">
+                            </div>
 
-    transferPopup.addEventListener(('click') , (e) => {
-        if (e.target === transferPopup) {
-            transferPopup.classList.add('d-none')
-        }
-    })
+                            <!-- Date -->
+                            <div class="form-group-inline">
+                                <label class="form-label text-secondary">Date</label>
+                                <input type="text" class="form-control bg-light custom-input" placeholder="MM/DD/YYYY">
+                            </div>
+
+                            <!-- Requestor Organisation -->
+                            <div class="form-group-inline">
+                                <label class="form-label text-secondary">Requestor Org.</label>
+                                <input type="text" class="form-control bg-light custom-input" placeholder="e.g Dr. XYZ">
+                            </div>
+
+                            <!-- Notes -->
+                            <div class="form-group-inline">
+                                <label class="form-label text-secondary">Notes</label>
+                                <input type="text" class="form-control bg-light custom-input" placeholder="--">
+                            </div>
+
+                            <!-- Values -->
+                            <div class="form-group-inline">
+                                <label class="form-label text-secondary">Value(s)</label>
+                                <input type="text" class="form-control bg-light custom-input">
+                            </div>
+
+                            <!-- Value Fields Header -->
+                            <!-- <div class="value-fields-header">
+                    <div class="value-field-label">Value Name</div>
+                    <div class="value-field-label">Date Type</div>
+                    <div class="value-field-label">Unit</div>
+                  </div> -->
+
+                            <!-- Value Fields Container -->
+                            <!-- <div id="valueFieldsContainer">
+                    <div class="value-row">
+                      <input type="text" class="form-control">
+                      <input type="text" class="form-control">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+       -->
+
+                        </div>
+                        <button type="button" class="btn btn-light w-100 text-start bg-light mt-3" id="addValueBtn">
+                            Add +
+                        </button>
+
+                        <!-- Save Button -->
+                        <div class="text-center mt-4">
+                            <button type="submit"
+                                class="btn btn-outline-primary rounded-pill px-5 modal-button">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Share Message end -->
+    <script>
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add new value fields
+            const addValueBtn = document.getElementById('addValueBtn');
+            const valueFieldsContainer = document.getElementById('valueFieldsContainer');
+
+            addValueBtn.addEventListener('click', function () {
+                const newRow = document.createElement('div');
+                newRow.className = 'value-row';
+                newRow.innerHTML = `
+            <input type="text" class="form-control">
+            <input type="text" class="form-control">
+            <input type="text" class="form-control">
+        `;
+                valueFieldsContainer.appendChild(newRow);
+            });
+
+            // Form submission
+            const form = document.getElementById('addMonitorForm');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Add your form submission logic here
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addMonitorModal'));
+                modal.hide();
+            });
+        });
 
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
-        const accessPopup = document.getElementById('access-confirmation-popup');
-        const grantedPopup = document.getElementById('access-granted-popup');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
         const pairedCloseBtn = document.getElementById('paired-close-btn');
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
 
-        for (let i = 0; i < remoteCareBtn.length; i++) {
-            remoteCareBtn[i].addEventListener('click', () => {
-                pairDevicePopop.classList.remove('d-none');
-                pairDevicePopop.classList.add('d-flex');
-            })
-        }
-
-        remoteCareDropdownBtn.addEventListener('click', () => {
-            remoteCareDropdown.classList.toggle('d-none')
-        })
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
         })
@@ -1058,12 +1154,34 @@
             shareProfilePopup.classList.remove('d-none');
             shareProfilePopup.classList.add('d-flex');
         })
+
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
+
+            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
+
+
         pairedBackBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
         pairedCloseBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
+
         const addImg = document.getElementById('add-1-img');
         const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
@@ -1093,11 +1211,45 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
-    </script>
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
 
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
+
+        const transferCloseBtn = document.getElementById('patient-close-btn');
+        const patientTransferredPopup = document.getElementById('patient-transferred-popup');
+        const transferBtn = document.getElementById('transfer-btn');
+
+             transferBtn.addEventListener('click', () => {
+                    patientTransferredPopup.classList.remove('d-none')
+                })
+
+        patientTransferredPopup.addEventListener(('click') , (e) => {
+            if (e.target === patientTransferredPopup) {
+                patientTransferredPopup.classList.add('d-none');
+            }
+        })
+
+        transferCloseBtn.addEventListener('click', ()=> {
+            patientTransferredPopup.classList.add('d-none')
+        })
+
+        
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </body>
 
 </html>

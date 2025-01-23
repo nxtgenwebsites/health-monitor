@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Transfer In</title>
+    <title>Health Monitor | Add Patient</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dha-transfer-in.css">
+    <link rel="stylesheet" href="css/dha-add-patient.css">
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
+</head>
 
 <body>
     <!-- Header -->
@@ -19,7 +21,7 @@
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <a href="/"><a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a></a>
+                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -34,14 +36,11 @@
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
-
             <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
                 Remote Care
             </a>
-
         </div>
-
         <!-- Right side with toggle button, notification and user -->
         <div class="d-flex align-items-center gap-3">
             <!-- Notification -->
@@ -241,7 +240,8 @@
                         <div class="dropdown-toggle"></div>
                     </button>
                     <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                   <li class=" dropdown-item remote-care-btn">
+                                                                               <li class=" dropdown-item
+                        remote-care-btn">
                         Call DHA</li>
                         <li class="dropdown-item remote-care-btn">Call Nurse</li>
                         <li class="dropdown-item remote-care-btn">Call Doctor</li>
@@ -250,8 +250,8 @@
             </div>
 
             <!-- User Profile for Mobile -->
-            <div class="mobile-user-profile">
-                <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
                     <img src="assets/1.png" alt="" class="user-avatar">
                     <div>
                         <h6 class="mb-0">Bohdan Peter</h6>
@@ -400,7 +400,7 @@
 
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
-                <div class="menu-item">
+                <div class="menu-item active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
@@ -565,11 +565,17 @@
             </a>
 
             <a href="/user-dashboard/user-transfer.html">
-                <div class="menu-item active">
+                <div class="menu-item">
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                     <span class="menu-text">Transfers</span>
                 </div>
             </a>
+
+            <!-- Upgrade Box -->
+            <div class="upgrade-box">
+                <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
+                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
+            </div>
 
             <!-- Logout Button -->
             <button class="log-out-btn">
@@ -578,249 +584,293 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <!-- Main Content -->
         <div class="main-content">
-            <div class="transfer-container">
-                <div class="transfer-heading d-flex justify-content-between align-items-center">
-                    <div>
-                        <h3>Transfer In</h3>
-                        <p class="mt-3">Requests</p>
-                    </div>
-                    <div>
-                        <a href="dha-add-patient.html">
-                            <button class="primary-btn">Transfer Request</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <div class="row row-gap-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="dashboard-title">Add New Patient</h2>
+            </div>
+
+            <!-- Personal Details Section -->
+            <div class="details-section mb-4">
+                <div class="">
+                    <div class="row">
                         <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 311.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Darlene Robert</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-4">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
+                            <div
+                                class="w-100 h-100 d-flex justify-content-center  align-items-center upload-image-container">
+                                <img src="assets/add selfie.png" alt="">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 313.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Alex Bishop</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-4">
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-1">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
+                            <div id="upload-img"
+                                class="h-100 w-100 d-flex justify-content-center align-items-center upload-image-container"
+                                onclick="document.getElementById('file-input').click()">
+                                <img src="assets/add img.png" alt="">
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 313.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Chris Churs</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-5">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
-                                    <div>
-                                        <img src="assets/Ellipse 314.png" alt="IMG">
-                                    </div>
-                                    <div class="user-info">
-                                        <h3>Chris Churs</h3>
-                                        <div class="d-flex justify-content-between my-2 w-100">
-                                            <span>Sex: Female</span>
-                                            <span>Age: 26</span>
-                                        </div>
-                                        <span>Managed by: Dr. Kroff</span>
-                                    </div>
-                                </div>
-                                <div class="transfer-info mt-5">
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Type</h3>
-                                        <h4>Self</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>Start Date</h3>
-                                        <h4>03 March, 2024</h4>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                        <h3>End Date</h3>
-                                        <h4>------</h4>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
-                                    <button class="primary-btn">Reject</button>
-                                    <button class="primary-btn">View</button>
-                                </div>
-                            </div>
+                            <input type="file" id="file-input" style="display: none;"
+                                onchange="handleFileChange(event)">
+
                         </div>
                     </div>
                 </div>
-                <!-- Transfer History -->
-                <div class="mt-5">
-                    <div class="">
-                        <h4 class="text-primary">History</h4>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Title</option>
+                            <option>Mr</option>
+                            <option>Mrs</option>
+                            <option>Ms</option>
+                            <option>Miss</option>
+                            <option>Pst</option>
+                            <option>Rev</option>
+                            <option>Alhj</option>
+                            <option>Dr</option>
+                            <option>Prof</option>
+                            <option>Mst</option>
+                            <option>Hon</option>
+                        </select>
                     </div>
-                    <div class="w-100 bg-danger mt-3 transfer-patients">
-                        <table class="w-100">
-                            <tr>
-                                <th>Patient Name</th>
-                                <th>Transfer Management</th>
-                                <th>Type</th>
-                                <th>Transferred On</th>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/patient.png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Middle  Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Surname  Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Nationality</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                            <option>Divorced</option>
+                            <option>Widowed</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Marital Status</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="us">United States</option>
+                            <option value="zambia">Zambia</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="new-zealand">New Zealand</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="date" class="form-control date-input" data-placeholder="Date of Birth">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Relationship</option>
+                            <option>Self</option>
+                            <option>Spouse</option>
+                            <option>Child</option>
+                            <option>Parent</option>
+                            <option>Sibling</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Contact No.">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Confirm Contact No.">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Confirm Email">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Education Level</option>
+                            <option>High School</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                            <option>Doctorate</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Employment Status</option>
+                            <option>Employed</option>
+                            <option>Self-Employed</option>
+                            <option>Unemployed</option>
+                            <option>Student</option>
+                            <option>Retired</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Residential Details Section -->
+            <div class="details-section mb-4">
+                <h6 class="main-title mb-4">Residential Details</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select form-control" tabindex="0">
+                                <div class="selected-option">
+                                    <option selected disabled>Country</option>
+                                </div>
+                                <div class="options-container">
+                                    <div class="option" data-value="NG">
+                                        <img src="assets/emojione_flag-for-nigeria.png" alt="Nigeria flag">
+                                        <span>Nigeria</span>
                                     </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (3).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
+                                    <div class="option" data-value="SA">
+                                        <img src="assets/emojione_flag-for-saudi-arabia.png" alt="KSA flag">
+                                        <span>KSA</span>
                                     </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr  class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (4).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
+                                    <div class="option" data-value="AU">
+                                        <img src="assets/emojione_flag-for-australia.png" alt="Australia flag">
+                                        <span>Australia</span>
                                     </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (1).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
+                                    <div class="option" data-value="ZA">
+                                        <img src="assets/emojione_flag-for-south-africa.png" alt="South Africa flag">
+                                        <span>South Africa</span>
                                     </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                        </table>
+                                    <div class="option" data-value="AE">
+                                        <img src="assets/emojione_flag-for-united-arab-emirates.png" alt="UAE flag">
+                                        <span>UAE</span>
+                                    </div>
+                                    <div class="option" data-value="US">
+                                        <img src="assets/emojione_flag-for-united-states.png" alt="USA flag">
+                                        <span>USA</span>
+                                    </div>
+                                    <div class="option" data-value="GB">
+                                        <img src="assets/emojione_flag-for-united-kingdom.png" alt="UK flag">
+                                        <span>United Kingdom</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="country" class="country-input">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>State</option>
+                            <option>State 1</option>
+                            <option>State 2</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>City</option>
+                            <option>City 1</option>
+                            <option>City 2</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Town</option>
+                            <option>Town 1</option>
+                            <option>Town 2</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Address">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Children Details Section -->
+            <div class="details-section mb-4">
+                <h6 class="main-title mb-4">Children Details</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="number" class="form-control" placeholder="No. of Children">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Name of First Child">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="date" class="form-control date-input" data-placeholder="Date of Birth">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next of Kin Section -->
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Next of Kin</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Kin's Relationship">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Contact No.">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Confirm Contact No.">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Confirm Email">
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                        <button class="btn btn-outline-primary">Add another Next of Kin</button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="details-section">
+                <h6 class="main-title mb-4">Notes</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Add any information">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary px-4">Save</button>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Transfer Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="transfer-popup">
-            <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
-                <div>
-                    <img src="assets/patient profile pic.png" alt="Profile Pic">
-                </div>
-                <div class="mt-4 profile-box-content">
-                    <h5>Ms. Randy Orton</h5>
-                    <h6>34 years, Female</h6>
-                    <h6>20 Richard Street&nbsp; Enugu</h6>
-                    <h6>Registered on 12 January 2024</h6>
-                    <h6>200 Activities performed</h6>
-                </div>
-                <div class="mt-3">
-                    <span><span class="highlight-text">Approved</span>  : 03 March, 2024</span>
-                </div>
-            </div>
-            </div>
         <!-- Call Remote Care Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
             <div class="paired-box bg-white rounded text-center position-relative ">
@@ -840,23 +890,20 @@
             <div class="profile-box bg-white rounded text-center position-relative w-100">
                 <h5 class="mt-3">Share My Profile</h5>
                 <div
-                    class="profile-link w-100 mt-5 d-flex align-items-center flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                        <div>
-
-                            <div class="dropdown">
-                                <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/share.svg" alt="icon">
-                                </button>
-                                <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Forward</a></li>
-                                </ul>
-                            </div>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -946,55 +993,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
-                            Alert: Blood Pressure Threshold Exceeded
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
-                            Your blood pressure readings have surpassed the threshold.
-                            <br>
-                            Immediate action is required. Please contact your healthcare 
-                            provider or seek medical attention immediately.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
-                                style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
-                                onclick="switchModals()">
-                            Call Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 30px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
-                            No Paired Device!
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
-                            You haven't paired any device to Call your Remote Care DHA.
-                            <br>
-                            Please connect a device to make a call.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
-                                style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
-                                data-bs-dismiss="modal">
-                            Go Back
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -1013,32 +1011,32 @@
             </div>
         </div>
     </div>
+    <!-- Share Message end -->
     <script>
-    const patientHistory = document.querySelectorAll('.patient-history');
-    const transferPopup = document.getElementById('transfer-popup');
-    for (let i = 0; i < patientHistory.length; i++) {
-        patientHistory[i].addEventListener(('click'), () => {
-            transferPopup.classList.remove('d-none')
-        })
-    }
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
 
-    transferPopup.addEventListener(('click') , (e) => {
-        if (e.target === transferPopup) {
-            transferPopup.classList.add('d-none')
-        }
-    })
-
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
-        const accessPopup = document.getElementById('access-confirmation-popup');
-        const grantedPopup = document.getElementById('access-granted-popup');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
         const pairedCloseBtn = document.getElementById('paired-close-btn');
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
+        })
+
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
 
         for (let i = 0; i < remoteCareBtn.length; i++) {
             remoteCareBtn[i].addEventListener('click', () => {
@@ -1050,20 +1048,33 @@
         remoteCareDropdownBtn.addEventListener('click', () => {
             remoteCareDropdown.classList.toggle('d-none')
         })
-        ProfileCloseBtn.addEventListener('click', () => {
-            shareProfilePopup.classList.toggle('d-none')
-        })
 
-        shareProfileBtn.addEventListener('click', () => {
-            shareProfilePopup.classList.remove('d-none');
-            shareProfilePopup.classList.add('d-flex');
-        })
         pairedBackBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
         pairedCloseBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
+
+            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
+
         const addImg = document.getElementById('add-1-img');
         const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
@@ -1094,10 +1105,93 @@
             addImgPupup.classList.add('d-none')
         })
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateInputs = document.querySelectorAll('.date-input');
+
+            dateInputs.forEach(input => {
+                // Get placeholder from data attribute
+                const placeholder = input.getAttribute('data-placeholder');
+
+                // Set min attribute to allow all past dates
+                input.setAttribute('max', '9999-12-31');
+
+                // Remove the value when it's the default value
+                input.addEventListener('change', function (e) {
+                    if (!e.target.value) {
+                        e.target.type = 'text';
+                        e.target.type = 'date';
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const customSelect = document.querySelector('.custom-select');
+            const selectedOption = customSelect.querySelector('.selected-option');
+            const optionsContainer = customSelect.querySelector('.options-container');
+            const options = customSelect.querySelectorAll('.option');
+            const hiddenInput = document.querySelector('.country-input');
+
+            customSelect.addEventListener('click', function () {
+                this.classList.toggle('open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const value = this.dataset.value;
+                    const img = this.querySelector('img').cloneNode(true);
+                    const text = this.querySelector('span').textContent;
+
+                    selectedOption.innerHTML = '';
+                    selectedOption.appendChild(img);
+                    selectedOption.appendChild(document.createTextNode(text));
+                    hiddenInput.value = value;
+
+                    customSelect.classList.remove('open');
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!customSelect.contains(e.target)) {
+                    customSelect.classList.remove('open');
+                }
+            });
+        });
+
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
+
+        function handleFileChange(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    // Change the image source to display the selected image
+                    document.querySelector('#upload-img img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+    </script>
+
+
 </body>
 
 </html>
