@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/search-patient.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dha-patient.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
@@ -566,7 +567,7 @@
             </a>
 
             <!-- Upgrade Box -->
-            <div class="upgrade-box" id="upgrade-box">
+            <div class="upgrade-box">
                 <h5 class="upgrade-text">Upgrade to DHA now & Support Others!</h5>
                 <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get DHA Now!</a>
             </div>
@@ -583,7 +584,7 @@
             <div class="result-container">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <div>
-                        <h3 class="dashboard-title mb-1">Search results</h3>
+                        <h3 class="dashboard-title mb-1">Patient</h3>
                     </div>
                     <div class="dha-searchbar">
                         <span class="search-icon">
@@ -596,94 +597,134 @@
                     </div>
                 </div>
                 <div class="mt-5">
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                            <div class="d-flex justify-content-center align-items-center gap-3">
-                                <div>
-                                    <img src="assets/patient.png" alt="patient">
-                                </div>
-                                <div class="mt-2">
-                                    <h5>Ronaldo Jr</h5>
-                                </div>
+                    <div class="row g-4 row-gap-3 mt-4">
+                        <!-- Blood Pressure Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card active">
+                                <a href="blood-pressure.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\bp.svg" alt="Blood Pressure">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Blood Pressure</h5>
+                                            <span class="count">(30)</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
                         </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
-                        </div>
-                    </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                            <div class="d-flex justify-content-center align-items-center gap-3">
-                                <div>
-                                    <img src="assets/patient.png" alt="patient">
-                                </div>
-                                <div class="mt-2">
-                                    <h5>Ronaldo Jr</h5>
-                                </div>
+
+                        <!-- Appointments Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="appointments.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\Frame 301.svg" alt="Appointments">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Appointments</h5>
+                                            <span class="count">(07)</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
                         </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
-                        </div>
-                    </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                            <div class="d-flex justify-content-center align-items-center gap-3">
-                                <div>
-                                    <img src="assets/patient.png" alt="patient">
-                                </div>
-                                <div class="mt-2">
-                                    <h5>Ronaldo Jr</h5>
-                                </div>
+
+                        <!-- Episodes Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="episodes.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\checkup-doctor-health-healthcare-hospital-medical-svgrepo-com 1.svg"
+                                                alt="Episodes">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Episodes</h5>
+                                            <span class="count">(01)</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
                         </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
-                        </div>
-                    </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                            <div class="d-flex justify-content-center align-items-center gap-3">
-                                <div>
-                                    <img src="assets/patient.png" alt="patient">
-                                </div>
-                                <div class="mt-2">
-                                    <h5>Ronaldo Jr</h5>
-                                </div>
+
+                        <!-- Medications Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="medication.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\medication.svg" alt="Medications">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Medications</h5>
+                                            <span class="count">(23)</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
                         </div>
-                        <div>
-                            <span>9th June, 2024</span>
+
+                        <!-- Diabetes Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="diabetes.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\Frame 302.svg" alt="Diabetes">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Diabetes</h5>
+                                            <span class="count">(00)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <button>200 Activities</button>
+
+                        <!-- BMI Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="bmi.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\Frame 300.svg" alt="BMI">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">BMI</h5>
+                                            <span class="count">(23)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+
+                        <!-- Tests Card -->
+                        <div class="col-md-4">
+                            <div class="monitor-card">
+                                <a href="results.html">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="monitor-icon">
+                                            <img src="assets\test-tube-svgrepo-com 1.svg" alt="Tests">
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Tests</h5>
+                                            <span class="count">(01)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
+                <div class="d-flex justify-content-between mt-5">
+                    <button class="primary-btn py-2 px-4">Add New</button>
+                    <a href="user-transfer.html"><button class="primary-btn py-2 px-4">Transfer Patient</button></a>
+                    <a href="add-new-patient.html"><button class="primary-btn py-2 px-4">Edit Patient</button></a>
+                    <button class="primary-btn py-2 px-4">Delete Patient</button>
                 </div>
             </div>
         </div>
@@ -704,7 +745,7 @@
                 </div>
                 <div class="d-flex justify-content-center gap-3 mt-4">
                     <button class="popup-btn" id="profile-cancle-btn">Cancel</button>
-                   <a href=""><button class="popup-btn">Select</button></a>
+                    <a href=""><button class="popup-btn">Select</button></a>
                 </div>
             </div>
         </div>
@@ -939,39 +980,6 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
-
-    const profilePopup = document.getElementById('patient-profile-box');
-    const profileCancleBtn= document.getElementById('profile-cancle-btn');
-    const resultCard = document.querySelectorAll('.result-card');
-
-
-    for (let i = 0; i < resultCard.length; i++) {
-        resultCard[i].addEventListener(('click'), () => {
-            profilePopup.classList.remove('d-none')
-        })
-    }
-
-    profileCancleBtn.addEventListener(('click') , () => {
-            profilePopup.classList.add('d-none')
-    })
-    profilePopup.addEventListener(('click') , (e) => {
-        if (e.target === profilePopup) {
-            profilePopup.classList.add('d-none')
-        }
-    })
-
-
-            // CDHA Dashbord 
-                const upgradeBox = document.getElementById('upgrade-box');
-                const checkUser = localStorage.getItem('dha-user')
-
-                console.log(typeof checkUser);
-
-                if (checkUser === 'true') {
-                    upgradeBox.classList.add('d-none');
-                } else {
-                    upgradeBox.classList.remove('d-none');
-                }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
