@@ -1,24 +1,10 @@
-// const infoBox = document.querySelector('.info-box');
+const infoBox = document.querySelector('.info-box');
 const messageInp = document.getElementById('message-to-bot');
 const messageContainer = document.getElementById('chat-with-bot');
 const sendBtn = document.getElementById('message-send-btn');
-const upgradeOverlay = document.getElementById('upgrade-overlay');
-const upgradeBox = document.getElementById('upgrade-box');
 
 let messageCount = 0;
 let genderMessageSent = false; 
-
-
-const checkUser = localStorage.getItem('dha-user')
-
-if (checkUser === 'true') {
-    upgradeOverlay.classList.add('d-none')
-    upgradeBox.classList.add('d-none');
-} else {
-    upgradeOverlay.classList.remove('d-none')
-    upgradeBox.classList.remove('d-none');
-
-}
 
 
 sendBtn.addEventListener('click', () => {
