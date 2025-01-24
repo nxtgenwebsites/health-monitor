@@ -63,3 +63,20 @@
     border-radius: 20px;
 }
 
+.card-heading {
+    color: #000;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.card-text {
+    color: var(--Primary, #0C74C2) !important;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
