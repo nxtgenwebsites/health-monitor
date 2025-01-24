@@ -1,0 +1,65 @@
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle i {
+    font-size: 24px;
+}
+
+.search-box .form-control {
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.table th {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+}
+
+.badge.bg-primary {
+    background-color: #0c75c2 !important;
+}
+
+.pagination .page-link {
+    border: none;
+    color: #6c757d;
+    padding: 0.5rem 0.75rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0c75c2;
+    color: white;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #e9ecef;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.dropdown-toggle {
+    border-radius: 20px;
+}
+
