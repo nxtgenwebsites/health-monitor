@@ -23,13 +23,23 @@
 }
 
 .badge {
-    padding: 0.5em 1em;
-    border-radius: 20px;
+padding: 0.5em 1em;
+    
+color: var(--Secondary, #3ED2E7);
+font-family: Poppins;
+font-size: 13.089px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.131px;
+background-color: none !important;
+background: none !important;
+
 }
 
-.badge.bg-primary {
+/* .badge.bg-primary {
     background-color: #0c75c2 !important;
-}
+} */
 
 .pagination .page-link {
     border: none;
@@ -79,4 +89,34 @@ font-size: 14px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
+}
+
+.card-title {
+    color: #000;
+font-family: Poppins;
+font-size: 20.568px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.206px;
+}
+
+th {
+color: var(--for-textfields, #666);
+font-family: Poppins;
+font-size: 13.089px;
+font-style: normal;
+font-weight: 700 !important;
+line-height: normal;
+letter-spacing: -0.131px;
+}
+
+td {
+    color: #292D32;
+font-family: Poppins;
+font-size: 13.089px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.131px;
 }
