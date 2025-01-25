@@ -1,0 +1,21 @@
+/* User Card */
+.user-card{
+    padding: 20px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px #0000001f;
+    background: white !important;
+}
+.user-card p {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.user-chart-card {
+    background: white;
+     padding: 20px;
+     border-radius: 10px;
+}
+
+.user-chart-card .grow-text {
+    color: #04CE00;
+}

@@ -48,7 +48,7 @@
 .popup-btn:hover {
   background: linear-gradient(to right, #0b6fc0, #0ae0fc);
   color: white;
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 
 .m-remote-care-dropdown {
