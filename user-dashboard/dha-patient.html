@@ -906,6 +906,16 @@
         </div>
     </div> -->
     <script>
+        
+            const upgradeBox = document.querySelector('.upgrade-box');
+            const checkUser = localStorage.getItem('dha-user')
+
+            if (checkUser === 'true') {
+                upgradeBox.classList.add('d-none');
+            } else {
+                upgradeBox.classList.remove('d-none');
+            }
+
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Health Monitor | Test Results</title>
-        <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <title>Health Monitor | Test Results</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -269,61 +269,70 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-                    <div class="dropdown d-none d-lg-block">
-                        <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <img src="assets/1.png" alt="" class="user-avatar">
-                            <span class="d-none d-lg-inline">Bohdan Peter</span>
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
                         </div>
-                        <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                            <li class="dropdown-header p-0 mb-3">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                                    <div>
-                                        <h6 class="mb-0">Bohdan Peter</h6>
-                                        <small class="text-muted">Preston, UK</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                                    <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                                    Profile
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                                    <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                                    Sponsorship
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                                    <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                                    Print
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                                    <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                                    Password & 2FA
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                                    <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                                    Access Control
-                                </a></li>
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                                    <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                                    System
-                                </a></li>
-                            <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                                    <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                                    Share link
-                                </button></li>
-                    
-                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                                    <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                                    Delete Account
-                                </a></li>
-                            <li class="border-top mt-2 pt-2">
-                                <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                                    Upgrade to Community Edition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -510,7 +519,7 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-        
+
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
                 <div class="menu-item active">
@@ -530,7 +539,7 @@
                     <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-        
+
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -551,7 +560,7 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-        
+
             <!-- Symptom Checker Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -580,9 +589,9 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-        
-        
-        
+
+
+
             <!-- Health Monitors Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -618,7 +627,7 @@
                     <li><a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a></li>
                 </ul>
             </div>
-        
+
             <!-- Communities Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -659,7 +668,7 @@
                     </li>
                 </ul>
             </div>
-        
+
             <a href="/user-dashboard/health-info.html">
                 <div class="menu-item">
                     <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -676,20 +685,20 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-        
+
             <!-- <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item">
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                     <span class="menu-text">Transfers</span>
                 </div>
             </a> -->
-        
+
             <!-- Upgrade Box -->
             <div class="upgrade-box">
                 <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
                 <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
             </div>
-        
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -773,20 +782,21 @@
                 <h5 class="mt-3">Share My Profile</h5>
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-                    
+
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                            <div class="dropdown">
-                                <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/share.svg" alt="icon">
-                                </button>
-                                <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Forward</a></li>
-                                </ul>
-                            </div>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="close-btn">
@@ -796,85 +806,85 @@
             </div>
         </div>
 
-                <!-- First Add Img Popup -->
-                <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-                    <div class="add-box bg-white rounded text-center w-100 position-relative">
-                        <div class="add-img-container">
-                            <img src="assets/add popup.jpg" class="img-fluid" alt="">
-                            <div class="learn-more">
-                                <a href="">Click to Learn More</a>
-                            </div>
-                            <div class="add-stats-container">
-                                <div class="stat-item">
-                                    <i class="bi bi-hand-thumbs-up"></i>
-                                    <span>22</span>
-                                </div>
-                                <div class="stat-item">
-                                    <i class="bi bi-share-fill"></i>
-                                    <span>23</span>
-                                </div>
-                
-                                <div class="stat-item">
-                                    <i class="bi bi-eye"></i>
-                                    <span>23</span>
-                                </div>
-                            </div>
+        <!-- First Add Img Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+            <div class="add-box bg-white rounded text-center w-100 position-relative">
+                <div class="add-img-container">
+                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
+                    <div class="learn-more">
+                        <a href="">Click to Learn More</a>
+                    </div>
+                    <div class="add-stats-container">
+                        <div class="stat-item">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>22</span>
                         </div>
-                        <div class="add-close-btn">
-                            <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
-                                    alt="close"></button>
+                        <div class="stat-item">
+                            <i class="bi bi-share-fill"></i>
+                            <span>23</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="bi bi-eye"></i>
+                            <span>23</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Add Video Popup -->
-                <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-                    <div class="add-video-box">
-                        <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+                <div class="add-close-btn">
+                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Video Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+            <div class="add-video-box">
+                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container" id="add-1-img">
+                <img src="assets/add img 1.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
                     </div>
                 </div>
-                <!-- Right Sidebar -->
-                <div class="right-sidebar">
-                    <div class="ad-container" id="add-1-img">
-                        <img src="assets/add img 1.jpg" alt="Advertisement">
-                        <div class="stats-container">
-                            <div class="stat-item">
-                                <i class="bi bi-eye-fill"></i>
-                                <span>22</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="bi bi-heart-fill"></i>
-                                <span>23</span>
-                            </div>
-                        </div>
+            </div>
+            <div class="ad-container" id="add-2-video">
+                <img src="assets/add img 2.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
                     </div>
-                    <div class="ad-container" id="add-2-video">
-                        <img src="assets/add img 2.jpg" alt="Advertisement">
-                        <div class="stats-container">
-                            <div class="stat-item">
-                                <i class="bi bi-eye-fill"></i>
-                                <span>22</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="bi bi-heart-fill"></i>
-                                <span>23</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ad-container">
-                        <img src="assets/add img 3.jpg" alt="Advertisement">
-                        <div class="stats-container">
-                            <div class="stat-item">
-                                <i class="bi bi-eye-fill"></i>
-                                <span>22</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="bi bi-heart-fill"></i>
-                                <span>23</span>
-                            </div>
-                        </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
                     </div>
                 </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets/add img 3.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- Add Values start -->
@@ -933,6 +943,16 @@
     </div>
     <!-- Add Values end -->
     <script>
+
+        const upgradeBox = document.querySelector('.upgrade-box');
+        const checkUser = localStorage.getItem('dha-user')
+
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
+        } else {
+            upgradeBox.classList.remove('d-none');
+        }
+
         const addBtn = document.getElementById('addNew');
         const saveBtn = document.querySelector('.value-content button');
         const valueMsg = document.querySelector('.value-message');
@@ -987,47 +1007,47 @@
             pairDevicePopop.classList.add('d-none');
         })
 
-                const addImg = document.getElementById('add-1-img');
-                const addVideo = document.getElementById('add-2-video');
-                const addImgPupup = document.getElementById('add-1-popup');
-                const addVideoPupup = document.getElementById('add-2-popup');
-                const addImgClose = document.getElementById('add-close-btn');
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
 
-                addVideo.addEventListener(('click'), () => {
-                    addVideoPupup.classList.remove('d-none')
-                })
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
 
-                addVideoPupup.addEventListener(('click'), (e) => {
-                    if (e.target === addVideoPupup) {
-                        addVideoPupup.classList.add('d-none')
-                    }
-                })
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
 
-                addImgPupup.addEventListener(('click'), (e) => {
-                    if (e.target === addImgPupup) {
-                        addImgPupup.classList.add('d-none')
-                    }
-                })
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
+                addImgPupup.classList.add('d-none')
+            }
+        })
 
-                addImg.addEventListener(('click'), () => {
-                    addImgPupup.classList.remove('d-none')
-                })
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
 
-                addImgClose.addEventListener(('click'), () => {
-                    addImgPupup.classList.add('d-none')
-                })
-                        const closeButton = document.getElementById("prfile-copy-btn");
-                            const profileUrl = document.getElementById("profile-url");
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
 
-                            closeButton.addEventListener("click", () => {
-                                const tempInput = document.createElement("textarea");
-                                tempInput.value = profileUrl.textContent;
-                                document.body.appendChild(tempInput);
-                                tempInput.select();
-                                document.execCommand("copy");
-                                document.body.removeChild(tempInput);
-                                alert("Link copied to clipboard.");
-                            });
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
     </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sidebar.js"></script>

@@ -601,7 +601,8 @@
                 <div class="d-flex justify-content-center align-items-center gap-3 confirm-patient">
                     <h5 class="mt-2">Is this the right patient you’re looking for?</h5>
                     <div>
-                        <a href="symptom-viewer.html" class="text-primary"><button class="primary-btn mt-1">YES</button></a>
+                        <a href="symptom-viewer.html" class="text-primary"><button
+                                class="primary-btn mt-1">YES</button></a>
                         <a href="symptom-checker.html"><button class="primary-btn mt-1">NO</button></a>
                     </div>
                 </div>
@@ -750,6 +751,16 @@
     </div>
     <!-- Share Message end -->
     <script>
+
+        const upgradeBox = document.querySelector('.upgrade-box');
+        const checkUser = localStorage.getItem('dha-user')
+
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
+        } else {
+            upgradeBox.classList.remove('d-none');
+        }
+
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');

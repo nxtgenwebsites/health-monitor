@@ -743,25 +743,25 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Results</th>
-                                    <th>Improvement</th>
+                                    <th class="text-center">Results</th>
+                                    <th class="text-center">Improvement</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Jan 12, 2023</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-up">↑ 15%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-up text-center">↑ 15%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2022</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-down">↓ 6%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-down text-center">↓ 6%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2020</td>
-                                    <td>243 mg</td>
-                                    <td class="improvement-up">↑ 10%</td>
+                                    <td class="text-center">243 mg</td>
+                                    <td class="improvement-up text-center">↑ 10%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -772,25 +772,25 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Results</th>
-                                    <th>Improvement</th>
+                                    <th class="text-center">Results</th>
+                                    <th class="text-center">Improvement</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Jan 12, 2023</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-up">↑ 15%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-up text-center">↑ 15%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2022</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-down">↓ 6%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-down text-center">↓ 6%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2020</td>
-                                    <td>243 mg</td>
-                                    <td class="improvement-up">↑ 10%</td>
+                                    <td class="text-center">243 mg</td>
+                                    <td class="improvement-up text-center">↑ 10%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -801,25 +801,25 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Results</th>
-                                    <th>Improvement</th>
+                                    <th class="text-center">Results</th>
+                                    <th class="text-center">Improvement</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Jan 12, 2023</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-up">↑ 15%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-up text-center">↑ 15%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2022</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-down">↓ 6%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-down text-center">↓ 6%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2020</td>
-                                    <td>243 mg</td>
-                                    <td class="improvement-up">↑ 10%</td>
+                                    <td class="text-center">243 mg</td>
+                                    <td class="improvement-up text-center">↑ 10%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -830,25 +830,25 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Results</th>
-                                    <th>Improvement</th>
+                                    <th class="text-center">Results</th>
+                                    <th class="text-center">Improvement</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Jan 12, 2023</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-up">↑ 15%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-up text-center">↑ 15%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2022</td>
-                                    <td>126 mg</td>
-                                    <td class="improvement-down">↓ 6%</td>
+                                    <td class="text-center">126 mg</td>
+                                    <td class="improvement-down text-center">↓ 6%</td>
                                 </tr>
                                 <tr>
                                     <td>Feb 02, 2020</td>
-                                    <td>243 mg</td>
-                                    <td class="improvement-up">↑ 10%</td>
+                                    <td class="text-center">243 mg</td>
+                                    <td class="improvement-up text-center">↑ 10%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -858,7 +858,7 @@
                     <!-- BMI, Diabetes, and Cholesterol sections with same structure -->
                     <!-- ... Repeat the monitor-section structure for each ... -->
 
-                    <button class="add-more-btn">Add new monitor</button>
+                    <!-- <button class="add-more-btn">Add new monitor</button> -->
                 </div>
             </div>
         </div>
@@ -1098,6 +1098,16 @@
 
     <!-- Share Message end -->
     <script>
+        
+            const upgradeBox = document.querySelector('.upgrade-box');
+            const checkUser = localStorage.getItem('dha-user')
+
+            if (checkUser === 'true') {
+                upgradeBox.classList.add('d-none');
+            } else {
+                upgradeBox.classList.remove('d-none');
+            }
+
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');

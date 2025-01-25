@@ -1216,6 +1216,16 @@
         </div>
     </div>
     <script>
+
+            const upgradeBox = document.querySelector('.upgrade-box');
+            const checkUser = localStorage.getItem('dha-user')
+
+            if (checkUser === 'true') {
+                upgradeBox.classList.add('d-none');
+            } else {
+                upgradeBox.classList.remove('d-none');
+            }
+
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');
@@ -1509,6 +1519,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/blood-pressure.js"></script>
     <script>
+
         const swiper = new Swiper('.swiper', {
             // If we need pagination
             pagination: {

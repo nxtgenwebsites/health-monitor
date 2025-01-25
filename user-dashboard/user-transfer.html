@@ -991,7 +991,6 @@
     </div>
     <!-- Share Message end -->
     <script>
-
         // History Drop Down  
         class MultiSelect {
 
@@ -1342,19 +1341,19 @@
         }
 
         const detailsBtn = document.getElementById('patient-details-btn');
-        const transferCloseBtn= document.getElementById('transfer-close-btn');
-        
+        const transferCloseBtn = document.getElementById('transfer-close-btn');
+
         const patientPopup = document.getElementById('select-patient-popup');
-        const patientCancleBtn= document.getElementById('patient-cancle-btn');
-        
-        const addTransferPopup= document.getElementById('add-transfer-popup');
+        const patientCancleBtn = document.getElementById('patient-cancle-btn');
+
+        const addTransferPopup = document.getElementById('add-transfer-popup');
         const transferRequestBtn = document.getElementById('transfer-request');
 
-        transferRequestBtn.addEventListener(('click') , () => {
+        transferRequestBtn.addEventListener(('click'), () => {
             addTransferPopup.classList.remove('d-none')
         })
 
-        patientCancleBtn.addEventListener(('click') , () => {
+        patientCancleBtn.addEventListener(('click'), () => {
             patientPopup.classList.add('d-none')
         })
 

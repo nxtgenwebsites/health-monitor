@@ -535,10 +535,10 @@
                     <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a></li>
                     <span class="dropdown-item-custom community-text w-100">Community Digital Health Assistants
                         (CDHA)</span>
-                        <div class="px-4">
-                            <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
-                            <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
-                        </div>
+                    <div class="px-4">
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
+                        <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+                    </div>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -707,7 +707,8 @@
             <div class="access-box bg-white rounded position-relative ">
                 <h5 class="my-3">New Access Control Confirmation</h5>
                 <div class="w-100">
-                    <p class="my-3 second-text">I have <span class="highlight-text">granted access</span> to view my health records.</p>
+                    <p class="my-3 second-text">I have <span class="highlight-text">granted access</span> to view my
+                        health records.</p>
                 </div>
                 <p class="my-3"><span class="highlight-text">I confirm</span> that I am aware of the implications of
                     granting this access and understand my right to extend, edit, or revoke this
@@ -923,6 +924,16 @@
         </div>
     </div>
     <script>
+
+        const upgradeBox = document.querySelector('.upgrade-box');
+        const checkUser = localStorage.getItem('dha-user')
+
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
+        } else {
+            upgradeBox.classList.remove('d-none');
+        }
+
 
         // History Drop Down  
         class MultiSelect {
@@ -1275,10 +1286,10 @@
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/overview.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 </body>
 
 </html>

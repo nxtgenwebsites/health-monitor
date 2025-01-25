@@ -868,6 +868,16 @@
 
     <!-- Share Message end -->
     <script>
+        
+            const upgradeBox = document.querySelector('.upgrade-box');
+            const checkUser = localStorage.getItem('dha-user')
+
+            if (checkUser === 'true') {
+                upgradeBox.classList.add('d-none');
+            } else {
+                upgradeBox.classList.remove('d-none');
+            }
+
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');

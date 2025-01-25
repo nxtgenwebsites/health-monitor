@@ -563,7 +563,7 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-<!-- 
+            <!-- 
             <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item active">
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
@@ -1015,6 +1015,16 @@
         </div>
     </div>
     <script>
+
+        const upgradeBox = document.querySelector('.upgrade-box');
+        const checkUser = localStorage.getItem('dha-user')
+
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
+        } else {
+            upgradeBox.classList.remove('d-none');
+        }
+
         const patientHistory = document.querySelectorAll('.patient-history');
         const transferPopup = document.getElementById('transfer-popup');
         for (let i = 0; i < patientHistory.length; i++) {
