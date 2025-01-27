@@ -1,21 +1,308 @@
 /* User Card */
-.user-card{
-    padding: 20px 15px;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px #0000001f;
-    background: white !important;
+.user-card {
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px #0000001f;
+  background: white !important;
 }
 .user-card p {
-    font-size: 14px;
-    margin-top: -5px;
+  font-size: 14px;
+  margin-top: -5px;
 }
 
 .user-chart-card {
-    background: white;
-     padding: 20px;
-     border-radius: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .user-chart-card .grow-text {
-    color: #04CE00;
+  color: #04ce00;
+}
+
+/* Revenue Card  */
+.revenue-status .blue-dot {
+  width: 15px;
+  height: 15px;
+  background: #4a3aff;
+  border-radius: 50%;
+}
+
+.revenue-status .pink-dot {
+  width: 15px;
+  height: 15px;
+  background: #c893fd;
+  border-radius: 50%;
+}
+
+.revenue-status span {
+  font-size: 14px;
+}
+
+/* Registered Users Card */
+
+.registered-users-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.heading-text h5 {
+  font-weight: 600;
+}
+
+.registered-users-card .label-btns button {
+  background: transparent !important;
+  border: 1px solid #e5e5ef;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.registered-users-card .label-btns .color-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.color-1 {
+  background: #962dff;
+  /* display: none; */
+}
+.color-2 {
+  background: #ff718b !important;
+}
+.color-3 {
+  background: #93aafd;
+}
+
+.filter-btn {
+  background: #f8f8ff;
+  border-radius: 10px;
+}
+
+.filter-btn button {
+  font-size: 13px;
+  background: #f8f8ff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.filter-btn button.active {
+  background: #0c74c2;
+  color: white;
+}
+
+/* Review Card */
+.review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Sign-up Card */
+.heading h5 {
+  font-weight: 600;
+}
+
+.second-text {
+    font-weight: 400;
+    color: #666666;
+}
+
+.signup-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Monthly Activity Card */
+.monthly-activity-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.monthly-status .leagend .dot-color-1{
+    width: 15px;
+    height: 15px;
+    background: #4A3AFF;
+    border-radius: 50%;
+}
+.monthly-status .leagend .dot-color-2{
+    width: 15px;
+    height: 15px;
+    background: #E0C6FD;
+    border-radius: 50%;
+}
+.monthly-status .leagend .dot-color-3{
+    width: 15px;
+    height: 15px;
+    background: #962DFF;
+    border-radius: 50%;
+}
+.monthly-status .leagend .dot-color-4{
+    width: 15px;
+    height: 15px;
+    background: #C6D2FD;
+    border-radius: 50%;
+}
+
+.monthly-status span {
+   color: #615E83;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i {
+  font-size: 24px;
+}
+
+.search-box .form-control {
+  border-radius: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.table th {
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.badge {
+  padding: 0.5em 1em;
+
+  color: var(--Secondary, #3ed2e7);
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.131px;
+  background-color: none !important;
+  background: none !important;
+}
+
+/* .badge.bg-primary {
+    background-color: #0c75c2 !important;
+} */
+
+.pagination .page-link {
+  border: none;
+  color: #6c757d;
+  padding: 0.5rem 0.75rem;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #0c75c2;
+  color: white;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.btn-light:hover {
+  background-color: #e9ecef;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.filter-drop-down{
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #8A92A6;
+    background: #F9FBFF;
+    color: #8A92A6;
+    outline: none !important;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.card-heading {
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.card-text {
+  color: var(--Primary, #0c74c2) !important;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.card-title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20.568px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.206px;
+}
+
+th {
+  color: var(--for-textfields, #666);
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: -0.131px;
+}
+
+td {
+  color: #292d32;
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.131px;
+}
+
+.approved-status-btn{
+  padding: 4px 8px;
+  color: #008767;
+  border: 2px solid #008767;
+  background: #16C09861;
+  border-radius: 5px;
+}
+
+.pending-status-btn{
+  padding: 4px 8px;
+  color: #FBD100;
+  border: 2px solid #FBD100;
+  background: #FFF5C5;
+  border-radius: 5px;
+}
+
+.rejected-status-btn{
+  padding: 4px 8px;
+  color: #DF0404;
+  border: 2px solid #DF0404;
+  background: #FFC5C5;
+  border-radius: 5px;
 }

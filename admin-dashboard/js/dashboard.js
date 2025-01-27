@@ -128,10 +128,7 @@ const getResponsiveChartOptions = (type) => {
         }
     };
 
-    if (type === 'activity') {
-        baseOptions.scales.y.max = 160;
-        baseOptions.scales.y.ticks.stepSize = 20;
-    } else if (type === 'weight') {
+     if (type === 'weight') {
         baseOptions.scales.y.max = 90;
         baseOptions.scales.y.ticks.stepSize = 10;
     }
@@ -139,23 +136,85 @@ const getResponsiveChartOptions = (type) => {
     return baseOptions;
 };
 
-const userChart = new Chart(document.getElementById('user-chart').getContext('2d'), {
+// Activity Chart
+const activityChart = new Chart(document.getElementById('registered-users').getContext('2d'), {
     type: 'line',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
         datasets: [{
-            label: 'Weight',
-            data: [10, 45, 30, 60, 30, 45],
-            borderColor: '#FF6B6B',
+            label: 'Single Registered',
+            data: [0, 120, 140, 145, 135, 140 , 135 , 120 , 135, 110 , 125 , 130],
+            borderColor: '#962DFF',
+            borderWidth: 2,
+            borderDash: [5, 5],
+            tension: 0.4,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#962DFF',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+        }, {
+            label: 'Guest Users',
+            data: [0, 90, 130, 120, 120, 95 , 80 , 90 , 95, 90, 100, 95],
+            borderColor: '#FF718B',
             borderWidth: 2,
             tension: 0.4,
             fill: false,
             pointRadius: 0,
             pointHoverRadius: 6,
-            pointHoverBackgroundColor: '#FF6B6B',
+            pointHoverBackgroundColor: '#FF718B',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+        }, {
+            label: 'DHA Users',
+            data: [0, 80, 110, 120, 110, 85 , 90 , 95, 100, 105 , 110 , 115],
+            borderColor: '#93AAFD',
+            borderWidth: 2,
+            borderDash: [5, 5],
+            tension: 0.4,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#93AAFD',
             pointHoverBorderColor: '#fff',
             pointHoverBorderWidth: 2
         }]
     },
-    options: getResponsiveChartOptions('weight')
+    options: getResponsiveChartOptions('activity')
+});
+
+// Sign-up Chart
+const signupChart = new Chart(document.getElementById('signup-users').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+            label: 'Last Month',
+            data: [2100, 3400, 2000, 1800, 3500],
+            borderColor: '#962DFF',
+            borderWidth: 2,
+            // borderDash: [5, 5],
+            tension: 0.4,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#962DFF',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+        }, {
+            label: 'This Month',
+            data: [1600, 3000, 2300, 3000, 4000],
+            borderColor: '#FF718B',
+            borderWidth: 2,
+            tension: 0.4,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#FF718B',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+        }]
+    },
+    options: getResponsiveChartOptions('activity')
 });

@@ -1,40 +1,39 @@
 .icon-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-circle i {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .search-box .form-control {
-    border-radius: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  border-radius: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .table th {
-    font-weight: 500;
-    color: #6c757d;
+  font-weight: 500;
+  color: #6c757d;
 }
 
 .badge {
-padding: 0.5em 1em;
-    
-color: var(--Secondary, #3ED2E7);
-font-family: Poppins;
-font-size: 13.089px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: -0.131px;
-background-color: none !important;
-background: none !important;
+  padding: 0.5em 1em;
 
+  color: var(--Secondary, #3ed2e7);
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.131px;
+  background-color: none !important;
+  background: none !important;
 }
 
 /* .badge.bg-primary {
@@ -42,81 +41,81 @@ background: none !important;
 } */
 
 .pagination .page-link {
-    border: none;
-    color: #6c757d;
-    padding: 0.5rem 0.75rem;
+  border: none;
+  color: #6c757d;
+  padding: 0.5rem 0.75rem;
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #0c75c2;
-    color: white;
+  background-color: #0c75c2;
+  color: white;
 }
 
 .btn-light {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
 }
 
 .btn-light:hover {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
 .card {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .btn {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .dropdown-toggle {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .card-heading {
-    color: #000;
-font-family: Poppins;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .card-text {
-    color: var(--Primary, #0C74C2) !important;
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+  color: var(--Primary, #0c74c2) !important;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .card-title {
-    color: #000;
-font-family: Poppins;
-font-size: 20.568px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: -0.206px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 20.568px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.206px;
 }
 
 th {
-color: var(--for-textfields, #666);
-font-family: Poppins;
-font-size: 13.089px;
-font-style: normal;
-font-weight: 700 !important;
-line-height: normal;
-letter-spacing: -0.131px;
+  color: var(--for-textfields, #666);
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: -0.131px;
 }
 
 td {
-    color: #292D32;
-font-family: Poppins;
-font-size: 13.089px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: -0.131px;
+  color: #292d32;
+  font-family: Poppins;
+  font-size: 13.089px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.131px;
 }
