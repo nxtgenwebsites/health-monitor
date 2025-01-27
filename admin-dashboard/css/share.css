@@ -1,0 +1,23 @@
+.share-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000041;
+    display: none;
+}
+
+.share-card {
+    width: 572px;
+    height: 252px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+
+.share-img i {
+    cursor: pointer;
+}
