@@ -146,8 +146,10 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+            <!-- User Dashborad User Dropdown -->
+            <div class="dropdown d-none d-lg-block" id="user-profile">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
                     <img src="assets/1.png" alt="" class="user-avatar">
                     <span class="d-none d-lg-inline">Bohdan Peter</span>
                 </div>
@@ -161,27 +163,33 @@
                             </div>
                         </div>
                     </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
                             <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
                             Profile
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Sponsorship
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
                             <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
                             Print
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
                             <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
                             Password & 2FA
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -189,13 +197,104 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- CDHA Dashborad User Dropdown -->
+            <div class="dropdown d-none d-lg-block" id="cdha-profile">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-in.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
+                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Transfer In
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-out.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
+                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Transfer Out
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to Community Edition
                         </a>
                     </li>
@@ -420,7 +519,7 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-        
+
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
                 <div class="menu-item active">
@@ -440,7 +539,7 @@
                     <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-        
+
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -461,7 +560,7 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-        
+
             <!-- Symptom Checker Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -490,9 +589,9 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-        
-        
-        
+
+
+
             <!-- Health Monitors Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -528,7 +627,7 @@
                     <li><a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a></li>
                 </ul>
             </div>
-        
+
             <!-- Communities Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -569,7 +668,7 @@
                     </li>
                 </ul>
             </div>
-        
+
             <a href="/user-dashboard/health-info.html">
                 <div class="menu-item">
                     <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -586,20 +685,20 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-        
+
             <!-- <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item">
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                     <span class="menu-text">Transfers</span>
                 </div>
             </a> -->
-        
+
             <!-- Upgrade Box -->
             <div class="upgrade-box">
                 <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
                 <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
             </div>
-        
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -620,7 +719,7 @@
                     Mrs Jones, Female, Engu
                 </div>
 
-                <div class="appointment-form mb-5">
+                <div class="appointment-form mb-5" id="appointment-form">
                     <div class="row g-3">
                         <div class="col-12">
                             <input type="text" class="form-control" placeholder="Appointment subject">
@@ -658,16 +757,14 @@
 
                             </select>
                         </div>
-                        
-<div class="col-12 keyword-input-container mt-3">
-    <div class="tags-input d-flex flex-wrap align-items-center">
-        <div id="keywordsContainer" class="d-flex flex-wrap"></div>
-        <input type="text" class="form-control tags-input-field w-100" id="keywordField" placeholder="Add attendee names" />
-    </div>
-</div>
 
-
-
+                        <div class="col-12 keyword-input-container mt-3">
+                            <div class="tags-input d-flex flex-wrap align-items-center">
+                                <div id="keywordsContainer" class="d-flex flex-wrap"></div>
+                                <input type="text" class="form-control tags-input-field w-100" id="keywordField"
+                                    placeholder="Add attendee names" />
+                            </div>
+                        </div>
 
                         <div class="col-12">
                             <input type="email" class="form-control" placeholder="Attendee Email">
@@ -675,7 +772,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" id="date-inp">
                         </div>
 
                         <div class="col-md-4">
@@ -701,7 +798,7 @@
                     </div>
                 </div>
 
-                <div class="appointment-outcomes">
+                <div class="appointment-outcomes" id="appointment-outcomes">
                     <h3 class="mb-4">Appointment's Outcomes</h3>
 
                     <div class="row g-3">
@@ -733,9 +830,8 @@
                             <button class="btn btn-outline upload-btn">
                                 <i class="bi bi-upload me-2"></i>
                                 Upload
-
                             </button>
-                            <a class="btn btn-primary" href="/user-dashboard/appointments.html">Save</a>
+                            <a class="btn btn-primary mx-3" href="/user-dashboard/appointments.html">Save</a>
                         </div>
                     </div>
                 </div>
@@ -756,38 +852,39 @@
             </div>
         </div>
         <!-- Share Profile Popup -->
-            <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
-                <div class="profile-box bg-white rounded text-center position-relative w-100">
-                    <h5 class="mt-3">Share My Profile</h5>
-                    <div
-                        class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-                        <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
-                        <div class="d-flex">
-                            <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
-                                <img src="assets/copy.svg" alt="icon">
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+                    <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
                             </button>
-                                                <div class="dropdown">
-                                                    <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <img src="assets/share.svg" alt="icon">
-                                                    </button>
-                                                    <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                                        <li><a class="dropdown-item" href="#">Forward</a></li>
-                                                    </ul>
-                                                </div>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="close-btn">
-                        <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
-                                alt="close"></button>
-                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
                 </div>
             </div>
+        </div>
         <!-- First Add Img Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
             <div class="add-box bg-white rounded text-center w-100 position-relative">
                 <div class="add-img-container">
-                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
-                    <div class="learn-more">
+                    <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
+                    <div class="learn-more mt-2">
                         <a href="">Click to Learn More</a>
                     </div>
                     <div class="add-stats-container">
@@ -819,36 +916,20 @@
                 <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
             </div>
         </div>
+        <!-- Inactivity Modal -->
+        <div id="logoutModal">
+            <div class="modal-content">
+                <h4>Session Expired</h4>
+                <p>You have been inactive for 2 minutes. Please log in again.</p>
+                <a href="/login.html">
+                    <button class="btn primary-btn w-100">Login Again</button>
+                </a>
+            </div>
+        </div>
         <!-- Right Sidebar -->
         <div class="right-sidebar">
             <div class="ad-container" id="add-1-img">
-                <img src="assets/add img 1.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container" id="add-2-video">
-                <img src="assets/add img 2.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container">
-                <img src="assets/add img 3.jpg" alt="Advertisement">
+                <img src="assets/add scapper.png" alt="Advertisement">
                 <div class="stats-container">
                     <div class="stat-item">
                         <i class="bi bi-eye-fill"></i>
@@ -873,7 +954,8 @@
             </div>
             <div class="share-content d-flex">
                 <a href="#" class="text-decoration-none text-black">Copy Link</a>
-                <a href="#" class="text-decoration-underline text-black mx-auto">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</a>
+                <a href="#"
+                    class="text-decoration-underline text-black mx-auto">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</a>
                 <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
                 <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
             </div>
@@ -881,15 +963,39 @@
     </div>
     <!-- Share Message end -->
     <script>
-        
-            const upgradeBox = document.querySelector('.upgrade-box');
-            const checkUser = localStorage.getItem('dha-user')
+        const upgradeBox = document.querySelector('.upgrade-box');
+        const cdhaProfile = document.getElementById('cdha-profile');
+        const userProfile = document.getElementById('user-profile');
 
-            if (checkUser === 'true') {
-                upgradeBox.classList.add('d-none');
-            } else {
-                upgradeBox.classList.remove('d-none');
-            }
+        const checkUser = localStorage.getItem('dha-user')
+
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
+            userProfile.classList.add('d-lg-none');
+        } else {
+            upgradeBox.classList.remove('d-none');
+            cdhaProfile.classList.add('d-lg-none');
+        }
+
+        let inactivityTime = 120000;
+        let timeout;
+
+        function resetTimer() {
+            clearTimeout(timeout);
+            document.getElementById("logoutModal").style.display = "none";
+            timeout = setTimeout(showLogoutScreen, inactivityTime);
+        }
+
+        function showLogoutScreen() {
+            document.getElementById("logoutModal").classList.add('d-flex');
+        }
+
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+        document.addEventListener("scroll", resetTimer);
+        document.addEventListener("click", resetTimer);
+
+        resetTimer();
 
         // Share Message
         const shareMsg = document.querySelector('.share-message');
@@ -1053,20 +1159,9 @@
         });
 
         const addImg = document.getElementById('add-1-img');
-        const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
-        const addVideoPupup = document.getElementById('add-2-popup');
         const addImgClose = document.getElementById('add-close-btn');
 
-        addVideo.addEventListener(('click'), () => {
-            addVideoPupup.classList.remove('d-none')
-        })
-
-        addVideoPupup.addEventListener(('click'), (e) => {
-            if (e.target === addVideoPupup) {
-                addVideoPupup.classList.add('d-none')
-            }
-        })
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1081,89 +1176,131 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
-   
+
         document.addEventListener("DOMContentLoaded", () => {
-                const keywordField = document.getElementById("keywordField");
-                const keywordsContainer = document.getElementById("keywordsContainer");
-                const keywords = [];
+            const keywordField = document.getElementById("keywordField");
+            const keywordsContainer = document.getElementById("keywordsContainer");
+            const keywords = [];
 
-                keywordField.addEventListener("keydown", (event) => {
-                    const keyword = keywordField.value.trim();
+            keywordField.addEventListener("keydown", (event) => {
+                const keyword = keywordField.value.trim();
 
-                    // Add keyword on Enter or comma
-                    if ((event.key === "Enter" || event.key === ",") && keyword) {
-                        event.preventDefault();
-                        if (!keywords.includes(keyword)) {
-                            addKeyword(keyword);
-                            keywordField.value = "";
-                        }
-                    }
-
-                    // Remove the last keyword on Backspace if input is empty
-                    if (event.key === "Backspace" && !keyword) {
-                        event.preventDefault();
-                        removeLastKeyword();
-                    }
-                });
-
-                function addKeyword(keyword) {
-                    keywords.push(keyword);
-                    renderKeywords();
-                }
-
-                function removeKeyword(index) {
-                    keywords.splice(index, 1);
-                    renderKeywords();
-                }
-
-                function removeLastKeyword() {
-                    if (keywords.length > 0) {
-                        keywords.pop();
-                        renderKeywords();
+                // Add keyword on Enter or comma
+                if ((event.key === "Enter" || event.key === ",") && keyword) {
+                    event.preventDefault();
+                    if (!keywords.includes(keyword)) {
+                        addKeyword(keyword);
+                        keywordField.value = "";
                     }
                 }
 
-                function renderKeywords() {
-                    keywordsContainer.innerHTML = ""; // Clear the container before re-rendering
-                    keywords.forEach((keyword, index) => {
-                        const keywordTag = document.createElement("div");
-                        keywordTag.classList.add(
-                            "keyword-tag",
-                            "d-flex",
-                            "align-items-center",
-                            "p-2",
-                            "bg-light",
-                            "rounded"
-                        );
-                        keywordTag.innerHTML = `
-        <span>${keyword}</span>
-      `;
-                        keywordsContainer.appendChild(keywordTag);
-                    });
-
-                    // Attach event listeners to the remove buttons
-                    const removeButtons = keywordsContainer.querySelectorAll(".btn-close");
-                    removeButtons.forEach((btn) => {
-                        btn.addEventListener("click", (event) => {
-                            const index = event.target.getAttribute("data-index");
-                            removeKeyword(index);
-                        });
-                    });
+                // Remove the last keyword on Backspace if input is empty
+                if (event.key === "Backspace" && !keyword) {
+                    event.preventDefault();
+                    removeLastKeyword();
                 }
             });
 
-                const closeButton = document.getElementById("prfile-copy-btn");
-                const profileUrl = document.getElementById("profile-url");
+            function addKeyword(keyword) {
+                keywords.push(keyword);
+                renderKeywords();
+            }
 
-                closeButton.addEventListener("click", () => {
-                    const tempInput = document.createElement("textarea");
-                    tempInput.value = profileUrl.textContent;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(tempInput);
-                    alert("Link copied to clipboard.");
+            function removeKeyword(index) {
+                keywords.splice(index, 1);
+                renderKeywords();
+            }
+
+            function removeLastKeyword() {
+                if (keywords.length > 0) {
+                    keywords.pop();
+                    renderKeywords();
+                }
+            }
+
+            function renderKeywords() {
+                keywordsContainer.innerHTML = ""; // Clear the container before re-rendering
+                keywords.forEach((keyword, index) => {
+                    const keywordTag = document.createElement("div");
+                    keywordTag.classList.add(
+                        "keyword-tag",
+                        "d-flex",
+                        "align-items-center",
+                        "p-2",
+                        "bg-light",
+                        "rounded"
+                    );
+                    keywordTag.innerHTML = `
+        <span>${keyword}</span>
+      `;
+                    keywordsContainer.appendChild(keywordTag);
                 });
+
+                // Attach event listeners to the remove buttons
+                const removeButtons = keywordsContainer.querySelectorAll(".btn-close");
+                removeButtons.forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.getAttribute("data-index");
+                        removeKeyword(index);
+                    });
+                });
+            }
+        });
+
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
+
+        // Reset appointment-attended to false when navigating directly to edit page
+        if (window.location.pathname.includes("add-an-appointment.html")) {
+            const isAttended = localStorage.getItem('appointment-attended');
+            if (!isAttended) {
+                localStorage.setItem('appointment-attended', false);
+            }
+
+            // Reset on page unload
+            window.addEventListener('beforeunload', () => {
+                localStorage.setItem('appointment-attended', false);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const isAttended = localStorage.getItem("appointment-attended") === "true";
+            const formElements = document.querySelectorAll("#appointment-form input, #appointment-form select, #appointment-form textarea, #appointment-form button");
+
+            formElements.forEach(element => {
+                if (isAttended) {
+                    element.disabled = true;
+                    element.classList.add("disabled-type");
+                } else {
+                    element.disabled = false;
+                    element.classList.remove("disabled-type");
+                }
+            });
+        });
+
+        document.getElementById("date-inp").addEventListener("change", function () {
+            let selectedDate = new Date(this.value);
+            let currentDate = new Date();
+
+            selectedDate.setHours(0, 0, 0, 0);
+            currentDate.setHours(0, 0, 0, 0);
+
+            if (selectedDate < currentDate) {
+                alert("Past dates cannot be selected.");
+                this.value = "";
+            }
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>

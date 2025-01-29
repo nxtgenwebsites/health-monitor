@@ -1,0 +1,106 @@
+.heading-text h2{
+    font-size: 28px;
+}
+
+.add-img{
+    height: 300px;
+    width: 385px;
+}
+
+.form-select, .form-control {
+height: 48px;
+border: 1px solid #0C74C2 !important;
+border-radius: 8px;
+padding: 12px;
+color: #2E2E2E !important;
+font-family: 'Poppins', sans-serif;
+}
+
+
+/* Style for the placeholder */
+.country-select option:first-child {
+color: #6B7280;
+opacity: 0.8;
+}
+
+/* Style for selected option */
+.country-select option:checked {
+background-color: #E8F3F9;
+color: #2E2E2E;
+}
+
+.country-flag-option {
+display: flex;
+align-items: center;
+}
+.custom-select-wrapper {
+position: relative;
+width: 100%;
+}
+
+.custom-select {
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px;
+background-color: white;
+position: relative;
+height: 48px;  /* Match form-control height */
+border: 1px solid #0C74C2 !important;
+border-radius: 8px;
+color: #2E2E2E !important;
+font-family: 'Poppins', sans-serif;
+}
+
+.custom-select::after {
+content: '';
+width: 10px;
+height: 6px;
+background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+position: absolute;
+right: 12px;
+transition: transform 0.3s ease;
+}
+
+.custom-select.open::after {
+transform: rotate(180deg);
+}
+
+
+.options-container {
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+background: white;
+border: 1px solid #0C74C2;
+border-radius: 8px;
+margin-top: 4px;
+max-height: 0;
+overflow: hidden;
+opacity: 0;
+transition: all 0.3s ease;
+z-index: 1000;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select.open .options-container {
+max-height: 300px;
+opacity: 1;
+overflow-y: auto;
+}
+
+.custom-select.open::after {
+transform: rotate(180deg);
+}
+
+.option {
+display: flex;
+align-items: center;
+padding: 12px;
+gap: 8px;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}

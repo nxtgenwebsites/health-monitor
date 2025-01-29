@@ -149,70 +149,138 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+<!-- User Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="user-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
                 </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Password & 2FA
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
-                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to Community Edition
-                        </a>
-                    </li>
-                </ul>
             </div>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to Community Edition
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- CDHA Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="cdha-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
+                </div>
+            </div>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-in.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer In
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-out.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer Out
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to Community Edition
+            </a>
+        </li>
+    </ul>
+</div>
         </div>
     </header>
 
@@ -712,85 +780,69 @@
                 </div>
             </div>
         </div>
-        <!-- First Add Img Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-            <div class="add-box bg-white rounded text-center w-100 position-relative">
-                <div class="add-img-container">
-                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
-                    <div class="learn-more">
-                        <a href="">Click to Learn More</a>
-                    </div>
-                    <div class="add-stats-container">
-                        <div class="stat-item">
-                            <i class="bi bi-hand-thumbs-up"></i>
-                            <span>22</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-share-fill"></i>
-                            <span>23</span>
-                        </div>
+<!-- First Add Img Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+    <div class="add-box bg-white rounded text-center w-100 position-relative">
+        <div class="add-img-container">
+            <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
+            <div class="learn-more mt-2">
+                <a href="">Click to Learn More</a>
+            </div>
+            <div class="add-stats-container">
+                <div class="stat-item">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <span>22</span>
+                </div>
+                <div class="stat-item">
+                    <i class="bi bi-share-fill"></i>
+                    <span>23</span>
+                </div>
 
-                        <div class="stat-item">
-                            <i class="bi bi-eye"></i>
-                            <span>23</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="add-close-btn">
-                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
-                            alt="close"></button>
+                <div class="stat-item">
+                    <i class="bi bi-eye"></i>
+                    <span>23</span>
                 </div>
             </div>
         </div>
+        <div class="add-close-btn">
+            <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                    alt="close"></button>
+        </div>
+    </div>
+</div>
 
-        <!-- Add Video Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-            <div class="add-video-box">
-                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+<!-- Add Video Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+    <div class="add-video-box">
+        <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+    </div>
+</div>
+<!-- Inactivity Modal -->
+<div id="logoutModal">
+    <div class="modal-content">
+        <h4>Session Expired</h4>
+        <p>You have been inactive for 2 minutes. Please log in again.</p>
+        <a href="/login.html">
+            <button class="btn primary-btn w-100">Login Again</button>
+        </a>
+    </div>
+</div>
+<!-- Right Sidebar -->
+<div class="right-sidebar">
+    <div class="ad-container" id="add-1-img">
+        <img src="assets/add scapper.png" alt="Advertisement">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="bi bi-eye-fill"></i>
+                <span>22</span>
+            </div>
+            <div class="stat-item">
+                <i class="bi bi-heart-fill"></i>
+                <span>23</span>
             </div>
         </div>
-        <!-- Right Sidebar -->
-        <div class="right-sidebar">
-            <div class="ad-container" id="add-1-img">
-                <img src="assets/add img 1.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container" id="add-2-video">
-                <img src="assets/add img 2.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container">
-                <img src="assets/add img 3.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
     </div>
     <!-- Share Message start -->
     <div class="share-message">
@@ -812,15 +864,39 @@
     </div>
     <!-- Share Message end -->
     <script>
+    const upgradeBox = document.querySelector('.upgrade-box');
+    const cdhaProfile = document.getElementById('cdha-profile');
+    const userProfile = document.getElementById('user-profile');
 
-        const upgradeBox = document.querySelector('.upgrade-box');
-        const checkUser = localStorage.getItem('dha-user')
+    const checkUser = localStorage.getItem('dha-user')
 
-        if (checkUser === 'true') {
-            upgradeBox.classList.add('d-none');
-        } else {
-            upgradeBox.classList.remove('d-none');
-        }
+    if (checkUser === 'true') {
+        upgradeBox.classList.add('d-none');
+        userProfile.classList.add('d-lg-none');
+    } else {
+        upgradeBox.classList.remove('d-none');
+        cdhaProfile.classList.add('d-lg-none');
+    }
+
+    let inactivityTime = 120000;
+    let timeout;
+
+    function resetTimer() {
+        clearTimeout(timeout);
+        document.getElementById("logoutModal").style.display = "none";
+        timeout = setTimeout(showLogoutScreen, inactivityTime);
+    }
+
+    function showLogoutScreen() {
+        document.getElementById("logoutModal").classList.add('d-flex');
+    }
+
+    document.addEventListener("mousemove", resetTimer);
+    document.addEventListener("keydown", resetTimer);
+    document.addEventListener("scroll", resetTimer);
+    document.addEventListener("click", resetTimer);
+
+    resetTimer();
 
         // Share Message
         const shareMsg = document.querySelector('.share-message');
@@ -874,20 +950,8 @@
         })
 
         const addImg = document.getElementById('add-1-img');
-        const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
-        const addVideoPupup = document.getElementById('add-2-popup');
         const addImgClose = document.getElementById('add-close-btn');
-
-        addVideo.addEventListener(('click'), () => {
-            addVideoPupup.classList.remove('d-none')
-        })
-
-        addVideoPupup.addEventListener(('click'), (e) => {
-            if (e.target === addVideoPupup) {
-                addVideoPupup.classList.add('d-none')
-            }
-        })
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {

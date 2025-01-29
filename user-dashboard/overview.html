@@ -146,70 +146,138 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <div class="dropdown d-none d-lg-block">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+<!-- User Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="user-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
                 </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Password & 2FA
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
-                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to Community Edition
-                        </a>
-                    </li>
-                </ul>
             </div>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to Community Edition
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- CDHA Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="cdha-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
+                </div>
+            </div>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-in.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer In
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-out.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer Out
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to Community Edition
+            </a>
+        </li>
+    </ul>
+</div>
         </div>
     </header>
 
@@ -584,404 +652,403 @@
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
         <!-- Main Content -->
         <div class="main-content">
-            <!-- User Dashboard Header -->
-            <div id="user-dashboard-heading" class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <h2 class="dashboard-title mb-1">Dashboard</h2>
-                    <span class="text-muted dated">09 Sept, 2024</span>
-                </div>
-                <a href="/user-dashboard/add-patient.html" class="btn btn-outline-primary add-detail">Add Details</a>
-            </div>
-
-            <!-- CDHA Dashboard Header -->
-            <div id="cdha-dashboard-heading" class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <h2 class="dashboard-title mb-1">DHA Dashboard</h2>
-                    <span class="text-muted dated">09 Sept, 2024</span>
-                </div>
-                <div class="dha-searchbar">
-                    <a href="dha-search-patient.html">
-                        <span class="search-icon">
-                            <i class="bi bi-record-circle-fill"></i>
-                        </span>
-                    </a>
-                    <input type="text" placeholder="Search">
-                    <div class="">
-                        <img src="assets/search icon.svg" alt="">
+            <!-- User Dashboard -->
+            <div id="user-dashboard">
+                <div id="user-dashboard-heading" class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="dashboard-title mb-1">Dashboard</h2>
+                        <span class="text-muted dated">09 Sept, 2024</span>
                     </div>
+                    <a href="/user-dashboard/add-patient.html" class="btn btn-outline-primary add-detail">Add
+                        Details</a>
                 </div>
-            </div>
+                <!-- Stats Grid -->
+                <div class="row g-4 mb-4">
 
-            <!-- Stats Grid -->
-            <div class="row g-4 mb-4">
-                <!-- Systolic Card -->
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <p class="text-muted mb-1">Systolic</p>
-                                <h3 class="mb-0 card-value">150 <span class="fs-6 text-muted card-unit">mmHg</span></h3>
-                            </div>
-                            <button class="btn btn-icon"><i class="bi bi-heart text-primary"></i></button>
-                        </div>
-                        <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
-                    </div>
-                </div>
-
-                <!-- Diastolic Card -->
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <p class="text-muted mb-1">Diastolic</p>
-                                <h3 class="mb-0 card-value">89 <span class="fs-6 text-muted card-unit">mmHg</span></h3>
-                            </div>
-                            <button class="btn btn-icon"><i class="bi bi-heart text-primary"></i></button>
-                        </div>
-                        <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
-                    </div>
-                </div>
-
-                <!-- Pulse Card -->
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <p class="text-muted mb-1">Pulse</p>
-                                <h3 class="mb-0 card-value">78 <span class="fs-6 text-muted card-unit">BPM</span></h3>
-                            </div>
-                            <button class="btn btn-icon"><i class="bi bi-activity text-primary"></i></button>
-                        </div>
-                        <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
-                    </div>
-                </div>
-
-                <!-- Weight Card -->
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <p class="text-muted mb-1">Weight</p>
-                                <h3 class="mb-0 card-value">100.0 <span class="fs-6 text-muted card-unit">kgs</span>
-                                </h3>
-                            </div>
-                            <button class="btn btn-icon"><i class="bi bi-speedometer2 text-primary"></i></button>
-                        </div>
-                        <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Charts Row -->
-            <div class="row g-4 mb-4">
-                <!-- Activity Chart -->
-                <div class="col-md-6">
-                    <div class="chart-card">
-                        <h5 class="card-title mb-4">Blood Pressure</h5>
-                        <div class="chart-container">
-                            <canvas id="activityChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Weight Chart -->
-                <div class="col-md-6">
-                    <div class="chart-card">
-                        <h5 class="card-title mb-4">Weight-BMI</h5>
-                        <div class="chart-container">
-                            <canvas id="weightChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lists Row -->
-            <div class="row g-4">
-                <!-- Appointments -->
-                <div class="col-md-6">
-                    <div class="list-card">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="card-title mb-0">Appointments</h5>
-                            <a href="/user-dashboard/appointments.html" class="text-primary small">View all</a>
-                        </div>
-                        <!-- Appointment Items -->
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                        fill="none">
-                                        <path
-                                            d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
-                                            fill="#0C74C2" />
-                                    </svg>
-                                </div>
+                    <!-- Systolic Card -->
+                    <div class="col-md-4">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div>
-                                    <h6 class="mb-1">Dr. Alexa Quín</h6>
-                                    <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
-                                    <small class="text-muted medication-date"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Due in 35m</small>
+                                    <p class="text-muted mb-1">Blood Pressure</p>
+                                    <h3 class="mb-0 card-value">123 <span class="fs-6 text-muted card-unit">Sys</span>
+                                    <h3 class="mb-0 card-value">150 <span class="fs-6 text-muted card-unit">Dias</span>
+                                    <h3 class="mb-0 card-value">120 <span class="fs-6 text-muted card-unit">Pulse</span>
+                                    </h3>
                                 </div>
+                                <button class="btn btn-icon"><i class="bi bi-heart text-primary"></i></button>
                             </div>
-
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
+                            <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
                         </div>
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                        fill="none">
-                                        <path
-                                            d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
-                                            fill="#0C74C2" />
-                                    </svg>
-                                </div>
+                    </div>
+
+                    <!-- Diastolic Card -->
+                    <div class="col-md-4">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div>
-                                    <h6 class="mb-1">Dr. Alexa Quín</h6>
-                                    <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
-                                    <small class="text-muted medication-date"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Due in 35m</small>
+                                    <p class="text-muted mb-1">BMI</p>
+                                    <h3 class="mb-0 card-value">123 <span class="fs-6 text-muted card-unit">Weight</span>
+                                    <h3 class="mb-0 card-value">154 <span class="fs-6 text-muted card-unit">Height</span>
+                                    <h3 class="mb-0 card-value">154<span class="fs-6 text-muted card-unit">BMI</span>
+                                    </h3>
                                 </div>
+                                <button class="btn btn-icon"><i class="bi bi-heart text-primary"></i></button>
                             </div>
-
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
+                            <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
                         </div>
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box  bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                        fill="none">
-                                        <path
-                                            d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
-                                            fill="#0C74C2" />
-                                    </svg>
-                                </div>
+                    </div>
+
+                    <!-- Pulse Card -->
+                    <div class="col-md-4">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between mb-3">
                                 <div>
-                                    <h6 class="mb-1">Dr. Alexa Quín</h6>
-                                    <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
-                                    <small class="text-muted medication-date"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Due in 35m</small>
+                                    <p class="text-muted mb-1">Diabetes</p>
+                                    <h3 class="mb-0 card-value">98 <span class="fs-6 text-muted card-unit">Sugar level</span>
+                                    </h3>
                                 </div>
+                                <button class="btn btn-icon"><i class="bi bi-activity text-primary"></i></button>
                             </div>
-
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
+                            <small class="text-muted metric-date">1 Jan 2025 to 31 Jan 2025</small>
                         </div>
-                        <!-- More appointment items... -->
+                    </div>
+
+                </div>
+
+                <!-- Charts Row -->
+                <div class="row g-4 mb-4">
+                    <!-- Activity Chart -->
+                    <div class="col-md-6">
+                        <div class="chart-card">
+                            <h5 class="card-title mb-4">Blood Pressure</h5>
+                            <div class="chart-container">
+                                <canvas id="activityChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weight Chart -->
+                    <div class="col-md-6">
+                        <div class="chart-card">
+                            <h5 class="card-title mb-4">Weight-BMI</h5>
+                            <div class="chart-container">
+                                <canvas id="weightChart"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Medications -->
-                <div class="col-md-6">
-                    <div class="list-card">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="card-title mb-0">Medications</h5>
-                            <a href="/user-dashboard/medication.html" class="text-primary small">View all</a>
-                        </div>
-                        <!-- Medication Items -->
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51" viewBox="0 0 45 51"
-                                        fill="none">
-                                        <path
-                                            d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <g filter="url(#filter0_f_1319_4397)">
-                                            <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727" fill="#0C74C2"
-                                                fill-opacity="0.3" />
-                                        </g>
-                                        <defs>
-                                            <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
-                                                height="7.5459" filterUnits="userSpaceOnUse"
-                                                color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                    result="shape" />
-                                                <feGaussianBlur stdDeviation="1.5"
-                                                    result="effect1_foregroundBlur_1319_4397" />
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
-                                    <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun, 2024
-                                    </p>
-                                    <small class="text-muted medication-date"> <svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Course completed</small>
-                                </div>
+                <!-- Lists Row -->
+                <div class="row g-4">
+                    <!-- Appointments -->
+                    <div class="col-md-6">
+                        <div class="list-card">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="card-title mb-0">Appointments</h5>
+                                <a href="/user-dashboard/appointments.html" class="text-primary small">View all</a>
                             </div>
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
-                        </div>
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51" viewBox="0 0 45 51"
-                                        fill="none">
-                                        <path
-                                            d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <g filter="url(#filter0_f_1319_4397)">
-                                            <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727" fill="#0C74C2"
-                                                fill-opacity="0.3" />
-                                        </g>
-                                        <defs>
-                                            <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
-                                                height="7.5459" filterUnits="userSpaceOnUse"
-                                                color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                    result="shape" />
-                                                <feGaussianBlur stdDeviation="1.5"
-                                                    result="effect1_foregroundBlur_1319_4397" />
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
-                                    <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun, 2024
-                                    </p>
-                                    <small class="text-muted medication-date"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <!-- Appointment Items -->
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 40 40" fill="none">
                                             <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Course completed</small>
+                                                d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
+                                                fill="#0C74C2" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Alexa Quín</h6>
+                                        <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
+                                        <small class="text-muted medication-date"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Due in 35m</small>
+                                    </div>
                                 </div>
+
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
                             </div>
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
-                        </div>
-                        <div class="list-item">
-                            <div class="d-flex gap-3">
-                                <div class="icon-box bg-opacity-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51" viewBox="0 0 45 51"
-                                        fill="none">
-                                        <path
-                                            d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
-                                            stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <g filter="url(#filter0_f_1319_4397)">
-                                            <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727" fill="#0C74C2"
-                                                fill-opacity="0.3" />
-                                        </g>
-                                        <defs>
-                                            <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
-                                                height="7.5459" filterUnits="userSpaceOnUse"
-                                                color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                    result="shape" />
-                                                <feGaussianBlur stdDeviation="1.5"
-                                                    result="effect1_foregroundBlur_1319_4397" />
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
-                                    <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun, 2024
-                                    </p>
-                                    <small class="text-muted medication-date"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 40 40" fill="none">
                                             <path
-                                                d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
-                                                fill="#666666" />
-                                        </svg> Course completed</small>
+                                                d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
+                                                fill="#0C74C2" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Alexa Quín</h6>
+                                        <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
+                                        <small class="text-muted medication-date"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Due in 35m</small>
+                                    </div>
                                 </div>
+
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
                             </div>
-                            <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none">
-                                    <path
-                                        d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
-                                        stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
-                                        stroke="#666666" />
-                                </svg></button>
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box  bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 40 40" fill="none">
+                                            <path
+                                                d="M31.25 28.75H31.2238C30.9566 28.7442 30.6984 28.6529 30.4869 28.4896C30.2755 28.3263 30.1219 28.0995 30.0487 27.8425L26.0875 13.9875L23.6687 20.4375C23.5797 20.6758 23.4202 20.8812 23.2113 21.0264C23.0025 21.1715 22.7543 21.2496 22.5 21.25H17.5V18.75H21.6337L25.08 9.56125C25.1723 9.31488 25.3399 9.1039 25.5591 8.95836C25.7782 8.81282 26.0377 8.74013 26.3006 8.75066C26.5635 8.76119 26.8163 8.85438 27.0232 9.01698C27.23 9.17958 27.3802 9.40329 27.4525 9.65625L31.3412 23.2713L33.815 15.855C33.8979 15.6062 34.0569 15.3898 34.2696 15.2363C34.4822 15.0829 34.7378 15.0002 35 15H40V17.5H35.9L32.435 27.895C32.3521 28.1438 32.1931 28.3602 31.9804 28.5137C31.7678 28.6671 31.5122 28.7498 31.25 28.75ZM18.75 37.5H16.25V28.75C16.249 27.7557 15.8536 26.8025 15.1506 26.0994C14.4475 25.3964 13.4943 25.001 12.5 25H7.5C6.50574 25.001 5.55249 25.3964 4.84945 26.0994C4.1464 26.8025 3.75099 27.7557 3.75 28.75V37.5H1.25V28.75C1.25198 27.093 1.9111 25.5044 3.08277 24.3328C4.25445 23.1611 5.84301 22.502 7.5 22.5H12.5C14.157 22.502 15.7456 23.1611 16.9172 24.3328C18.0889 25.5044 18.748 27.093 18.75 28.75V37.5ZM10 10C10.7417 10 11.4667 10.2199 12.0834 10.632C12.7001 11.044 13.1807 11.6297 13.4645 12.3149C13.7484 13.0002 13.8226 13.7542 13.6779 14.4816C13.5333 15.209 13.1761 15.8772 12.6517 16.4017C12.1272 16.9261 11.459 17.2833 10.7316 17.4279C10.0042 17.5726 9.25016 17.4984 8.56494 17.2145C7.87971 16.9307 7.29404 16.4501 6.88199 15.8334C6.46993 15.2167 6.25 14.4917 6.25 13.75C6.25 12.7554 6.64509 11.8016 7.34835 11.0983C8.05161 10.3951 9.00544 10 10 10ZM10 7.5C8.76387 7.5 7.55549 7.86656 6.52769 8.55331C5.49988 9.24007 4.6988 10.2162 4.22575 11.3582C3.75271 12.5003 3.62893 13.7569 3.87009 14.9693C4.11125 16.1817 4.7065 17.2953 5.58058 18.1694C6.45466 19.0435 7.5683 19.6388 8.78069 19.8799C9.99307 20.1211 11.2497 19.9973 12.3918 19.5242C13.5338 19.0512 14.5099 18.2501 15.1967 17.2223C15.8834 16.1945 16.25 14.9861 16.25 13.75C16.25 12.0924 15.5915 10.5027 14.4194 9.33058C13.2473 8.15848 11.6576 7.5 10 7.5Z"
+                                                fill="#0C74C2" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Alexa Quín</h6>
+                                        <p class="text-muted small mb-1 medication-date">Appointment on 29/06/2024</p>
+                                        <small class="text-muted medication-date"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Due in 35m</small>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
+                            </div>
+                            <!-- More appointment items... -->
                         </div>
-                        <!-- More medication items... -->
+                    </div>
+
+                    <!-- Medications -->
+                    <div class="col-md-6">
+                        <div class="list-card">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="card-title mb-0">Medications</h5>
+                                <a href="/user-dashboard/medication.html" class="text-primary small">View all</a>
+                            </div>
+                            <!-- Medication Items -->
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51"
+                                            viewBox="0 0 45 51" fill="none">
+                                            <path
+                                                d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <g filter="url(#filter0_f_1319_4397)">
+                                                <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727"
+                                                    fill="#0C74C2" fill-opacity="0.3" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
+                                                    height="7.5459" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                        result="shape" />
+                                                    <feGaussianBlur stdDeviation="1.5"
+                                                        result="effect1_foregroundBlur_1319_4397" />
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
+                                        <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun,
+                                            2024
+                                        </p>
+                                        <small class="text-muted medication-date"> <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Course completed</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
+                            </div>
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51"
+                                            viewBox="0 0 45 51" fill="none">
+                                            <path
+                                                d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <g filter="url(#filter0_f_1319_4397)">
+                                                <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727"
+                                                    fill="#0C74C2" fill-opacity="0.3" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
+                                                    height="7.5459" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                        result="shape" />
+                                                    <feGaussianBlur stdDeviation="1.5"
+                                                        result="effect1_foregroundBlur_1319_4397" />
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
+                                        <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun,
+                                            2024
+                                        </p>
+                                        <small class="text-muted medication-date"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Course completed</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
+                            </div>
+                            <div class="list-item">
+                                <div class="d-flex gap-3">
+                                    <div class="icon-box bg-opacity-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="51"
+                                            viewBox="0 0 45 51" fill="none">
+                                            <path
+                                                d="M19.119 9.97546L10.0347 19.025C8.9655 20.0581 8.1133 21.2927 7.52766 22.6569C6.94202 24.0211 6.63462 25.4877 6.62337 26.9714C6.61211 28.455 6.89722 29.926 7.46209 31.2989C8.02697 32.6718 8.86033 33.919 9.9137 34.9682C10.9671 36.0173 12.2194 36.8473 13.5978 37.4099C14.9763 37.9725 16.4533 38.2564 17.9429 38.2452C19.4326 38.234 20.9051 37.9278 22.2749 37.3446C23.6446 36.7613 24.8842 35.9125 25.9215 34.8477L35.0059 25.8C37.0765 23.6943 38.2292 20.86 38.2139 17.9127C38.1985 14.9655 37.0162 12.1433 34.9238 10.0591C32.8314 7.97489 29.9979 6.79706 27.0387 6.78141C24.0795 6.76575 21.2335 7.91353 19.119 9.97546Z"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M31.588 29.2044C27.9624 27.8601 24.7134 25.6694 22.1137 22.8159C19.2493 20.2265 17.0503 16.9906 15.7012 13.3798M22.513 13.3798C22.9592 12.9323 23.4898 12.5772 24.0744 12.3349C24.6589 12.0925 25.2858 11.9678 25.919 11.9678C26.5521 11.9678 27.1791 12.0925 27.7636 12.3349C28.3481 12.5772 28.8788 12.9323 29.3249 13.3798"
+                                                stroke="#0C74C2" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <g filter="url(#filter0_f_1319_4397)">
+                                                <ellipse cx="20.1716" cy="45.5911" rx="12.4138" ry="0.772727"
+                                                    fill="#0C74C2" fill-opacity="0.3" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_f_1319_4397" x="4.75781" y="41.8184" width="30.8271"
+                                                    height="7.5459" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                        result="shape" />
+                                                    <feGaussianBlur stdDeviation="1.5"
+                                                        result="effect1_foregroundBlur_1319_4397" />
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1 btn-preview" style="cursor: pointer;">Probiotic</h6>
+                                        <p class="text-muted small mb-1 medication-date">From 01 Jun, 2024 | To 01 Jun,
+                                            2024
+                                        </p>
+                                        <small class="text-muted medication-date"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.00065 13.334C9.41514 13.334 10.7717 12.7721 11.7719 11.7719C12.7721 10.7717 13.334 9.41514 13.334 8.00065C13.334 6.58616 12.7721 5.22961 11.7719 4.22941C10.7717 3.22922 9.41514 2.66732 8.00065 2.66732C6.58616 2.66732 5.22961 3.22922 4.22941 4.22941C3.22922 5.22961 2.66732 6.58616 2.66732 8.00065C2.66732 9.41514 3.22922 10.7717 4.22941 11.7719C5.22961 12.7721 6.58616 13.334 8.00065 13.334ZM8.00065 1.33398C8.87613 1.33398 9.74304 1.50642 10.5519 1.84145C11.3607 2.17649 12.0956 2.66755 12.7147 3.28661C13.3338 3.90566 13.8248 4.64059 14.1598 5.44943C14.4949 6.25827 14.6673 7.12517 14.6673 8.00065C14.6673 9.76876 13.9649 11.4645 12.7147 12.7147C11.4645 13.9649 9.76876 14.6673 8.00065 14.6673C4.31398 14.6673 1.33398 11.6673 1.33398 8.00065C1.33398 6.23254 2.03636 4.53685 3.28661 3.28661C4.53685 2.03636 6.23254 1.33398 8.00065 1.33398ZM8.33398 4.66732V8.16732L11.334 9.94732L10.834 10.7673L7.33398 8.66732V4.66732H8.33398Z"
+                                                    fill="#666666" />
+                                            </svg> Course completed</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M3.99935 12.667V6.66699C3.99935 5.60613 4.42078 4.58871 5.17092 3.83857C5.92107 3.08842 6.93848 2.66699 7.99935 2.66699C9.06022 2.66699 10.0776 3.08842 10.8278 3.83857C11.5779 4.58871 11.9993 5.60613 11.9993 6.66699V12.667M3.99935 12.667H11.9993M3.99935 12.667H2.66602M11.9993 12.667H13.3327M7.33268 14.667H8.66602"
+                                            stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.9987 2.66732C8.36689 2.66732 8.66536 2.36884 8.66536 2.00065C8.66536 1.63246 8.36689 1.33398 7.9987 1.33398C7.63051 1.33398 7.33203 1.63246 7.33203 2.00065C7.33203 2.36884 7.63051 2.66732 7.9987 2.66732Z"
+                                            stroke="#666666" />
+                                    </svg></button>
+                            </div>
+                            <!-- More medication items... -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <img src="assets\Group 1000011227.jpg" alt="Banner" class="banner-image rounded">
                     </div>
                 </div>
             </div>
-            <div class="row mt-4" id="dashbord-lock-feature">
-                <div class="col-12">
-                    <img src="assets\Group 1000011227.jpg" alt="Banner" class="banner-image rounded">
-                </div>
-            </div>
-            <div class="mt-5" id="cdha-dashbord-feature">
+            <!-- CDHA Dashboard -->
+            <div id="cdha-dashbord-feature">
                 <div class="d-flex justify-content-between align-items-center patients-stats-heading">
                     <div>
-                        <h2>Patients Stats</h2>
+                        <h2 class="dashboard-title mb-1">DHA Dashboard</h2>
+                        <span class="text-muted dated">09 Sept, 2024</span>
+                    </div>
+                    <div class="dha-searchbar">
+                        <a href="dha-search-patient.html">
+                            <span class="search-icon">
+                                <i class="bi bi-record-circle-fill"></i>
+                            </span>
+                        </a>
+                        <input type="text" placeholder="Search">
+                        <div class="">
+                            <img src="assets/search icon.svg" alt="">
+                        </div>
                     </div>
                     <div>
                         <a href="dha-add-patient.html"><button class="primary-btn">Add Patient</button></a>
@@ -1001,6 +1068,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-12 col-md-6">
                         <div class="gender-chart" style="width: 300px; margin: 0 auto;">
                             <div class="gender-chart-heading">
@@ -1016,155 +1084,137 @@
                 <div class="row g-4 mt-4">
                     <!-- Blood Pressure Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card active">
-                            <a href="blood-pressure.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\bp.svg" alt="Blood Pressure">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Blood Pressure</h5>
-                                        <span class="count">(30)</span>
-                                    </div>
+                        <div class="monitor-card active" onclick="redirectToPatientSearch('blood-pressure.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets\bp.svg" alt="Blood Pressure">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Blood Pressure</h5>
+                                    <span class="count">(30)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Appointments Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="appointments.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\Frame 301.svg" alt="Appointments">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Appointments</h5>
-                                        <span class="count">(07)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('appointments.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/Frame 301.svg" alt="Appointments">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Appointments</h5>
+                                    <span class="count">(07)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Episodes Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="episodes.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\checkup-doctor-health-healthcare-hospital-medical-svgrepo-com 1.svg"
-                                            alt="Episodes">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Episodes</h5>
-                                        <span class="count">(01)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('episodes.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/checkup-doctor-health-healthcare-hospital-medical-svgrepo-com 1.svg"
+                                        alt="Episodes">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Episodes</h5>
+                                    <span class="count">(01)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Medications Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="medication.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\medication.svg" alt="Medications">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Medications</h5>
-                                        <span class="count">(23)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('medication.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/medication.svg" alt="Medications">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Medications</h5>
+                                    <span class="count">(23)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Diabetes Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="diabetes.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\Frame 302.svg" alt="Diabetes">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Diabetes</h5>
-                                        <span class="count">(00)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('diabetes.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/Frame 302.svg" alt="Diabetes">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Diabetes</h5>
+                                    <span class="count">(00)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- BMI Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="bmi.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\Frame 300.svg" alt="BMI">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">BMI</h5>
-                                        <span class="count">(23)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('bmi.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/Frame 300.svg" alt="BMI">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">BMI</h5>
+                                    <span class="count">(23)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Tests Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="results.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets\test-tube-svgrepo-com 1.svg" alt="Tests">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Tests</h5>
-                                        <span class="count">(01)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('results.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/test-tube-svgrepo-com 1.svg" alt="Tests">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Tests</h5>
+                                    <span class="count">(01)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Transfer In Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="results.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets/tabler_transfer-in.svg" alt="Tests">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Transfer In</h5>
-                                        <span class="count">(01)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('dha-transfer-in.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/tabler_transfer-in.svg" alt="Transfer In">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Transfer In</h5>
+                                    <span class="count">(01)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Transfer Out Card -->
                     <div class="col-md-4">
-                        <div class="monitor-card">
-                            <a href="results.html">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="monitor-icon">
-                                        <img src="assets/transfer out.svg" alt="Tests">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Transfer Out</h5>
-                                        <span class="count">(01)</span>
-                                    </div>
+                        <div class="monitor-card" onclick="redirectToPatientSearch('dha-transfer-out.html')">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="monitor-icon">
+                                    <img src="assets/transfer out.svg" alt="Transfer Out">
                                 </div>
-                            </a>
+                                <div>
+                                    <h5 class="mb-1">Transfer Out</h5>
+                                    <span class="count">(01)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1373,9 +1423,9 @@
                                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
                                                         result="shape">
                                                     </feBlend>
-                                                    <feGaussianBlur stdDeviation="1.5"
+                                                    <feGaussiaBlur stdDeviation="1.5"
                                                         result="effect1_foregroundBlur_1319_4397">
-                                                    </feGaussianBlur>
+                                                    </feGaussiaBlur>
                                                 </filter>
                                             </defs>
                                         </svg>
@@ -1553,85 +1603,69 @@
                 </div>
             </div>
         </div>
-        <!-- First Add Img Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-            <div class="add-box bg-white rounded text-center w-100 position-relative">
-                <div class="add-img-container">
-                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
-                    <div class="learn-more">
-                        <a href="">Click to Learn More</a>
-                    </div>
-                    <div class="add-stats-container">
-                        <div class="stat-item">
-                            <i class="bi bi-hand-thumbs-up"></i>
-                            <span>22</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-share-fill"></i>
-                            <span>23</span>
-                        </div>
+<!-- First Add Img Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+    <div class="add-box bg-white rounded text-center w-100 position-relative">
+        <div class="add-img-container">
+            <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
+            <div class="learn-more mt-2">
+                <a href="">Click to Learn More</a>
+            </div>
+            <div class="add-stats-container">
+                <div class="stat-item">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <span>22</span>
+                </div>
+                <div class="stat-item">
+                    <i class="bi bi-share-fill"></i>
+                    <span>23</span>
+                </div>
 
-                        <div class="stat-item">
-                            <i class="bi bi-eye"></i>
-                            <span>23</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="add-close-btn">
-                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
-                            alt="close"></button>
+                <div class="stat-item">
+                    <i class="bi bi-eye"></i>
+                    <span>23</span>
                 </div>
             </div>
         </div>
+        <div class="add-close-btn">
+            <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                    alt="close"></button>
+        </div>
+    </div>
+</div>
 
-        <!-- Add Video Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-            <div class="add-video-box">
-                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+<!-- Add Video Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+    <div class="add-video-box">
+        <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+    </div>
+</div>
+<!-- Inactivity Modal -->
+<div id="logoutModal">
+    <div class="modal-content">
+        <h4>Session Expired</h4>
+        <p>You have been inactive for 2 minutes. Please log in again.</p>
+        <a href="/login.html">
+            <button class="btn primary-btn w-100">Login Again</button>
+        </a>
+    </div>
+</div>
+<!-- Right Sidebar -->
+<div class="right-sidebar">
+    <div class="ad-container" id="add-1-img">
+        <img src="assets/add scapper.png" alt="Advertisement">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="bi bi-eye-fill"></i>
+                <span>22</span>
+            </div>
+            <div class="stat-item">
+                <i class="bi bi-heart-fill"></i>
+                <span>23</span>
             </div>
         </div>
-        <!-- Right Sidebar -->
-        <div class="right-sidebar">
-            <div class="ad-container" id="add-1-img">
-                <img src="assets/add img 1.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container" id="add-2-video">
-                <img src="assets/add img 2.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ad-container">
-                <img src="assets/add img 3.jpg" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
     </div>
     <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
@@ -1707,6 +1741,36 @@
     </div>
     <!-- Share Message end -->
     <script>
+            const cdhaProfile = document.getElementById('cdha-profile');
+            const userProfile = document.getElementById('user-profile');
+
+            const checkUsers = localStorage.getItem('dha-user')
+
+            if (checkUsers === 'true') {
+                userProfile.classList.add('d-lg-none');
+            } else {
+                cdhaProfile.classList.add('d-lg-none');
+            }
+
+            let inactivityTime = 120000;
+            let timeout;
+
+            function resetTimer() {
+                clearTimeout(timeout);
+                document.getElementById("logoutModal").style.display = "none";
+                timeout = setTimeout(showLogoutScreen, inactivityTime);
+            }
+
+            function showLogoutScreen() {
+                document.getElementById("logoutModal").classList.add('d-flex');
+            }
+
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+            document.addEventListener("scroll", resetTimer);
+            document.addEventListener("click", resetTimer);
+
+            resetTimer();
         // Share Message
         const shareMsg = document.querySelector('.share-message');
         const crossIcon = document.querySelector('.share-img i');
@@ -1764,20 +1828,8 @@
         });
 
         const addImg = document.getElementById('add-1-img');
-        const addVideo = document.getElementById('add-2-video');
         const addImgPupup = document.getElementById('add-1-popup');
-        const addVideoPupup = document.getElementById('add-2-popup');
         const addImgClose = document.getElementById('add-close-btn');
-
-        addVideo.addEventListener(('click'), () => {
-            addVideoPupup.classList.remove('d-none')
-        })
-
-        addVideoPupup.addEventListener(('click'), (e) => {
-            if (e.target === addVideoPupup) {
-                addVideoPupup.classList.add('d-none')
-            }
-        })
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1806,21 +1858,22 @@
         });
 
         // CDHA Dashbord 
-        const userDashboardHeading = document.getElementById('user-dashboard-heading');
-        const cdhaDashboardHeading = document.getElementById('cdha-dashboard-heading');
-        const dashboardLockFeature = document.getElementById('dashbord-lock-feature');
+        const dashboardLockFeature = document.getElementById('user-dashboard');
         const cdhaDashboardFeature = document.getElementById('cdha-dashbord-feature');
         const upgradeBox = document.getElementById('upgrade-box');
 
         const checkUser = localStorage.getItem('dha-user')
 
         if (checkUser === 'true') {
-            userDashboardHeading.classList.add('d-none');
             dashboardLockFeature.classList.add('d-none');
             upgradeBox.classList.add('d-none');
         } else {
-            cdhaDashboardHeading.classList.add('d-none');
             cdhaDashboardFeature.classList.add('d-none');
+        }
+
+        function redirectToPatientSearch(pageURL) {
+            localStorage.setItem("redirectAfterPopup", pageURL); // Save URL to localStorage
+            window.location.href = "/user-dashboard/dha-search-patient.html"; // Redirect
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

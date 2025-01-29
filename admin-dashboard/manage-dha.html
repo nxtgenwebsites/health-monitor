@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/share.css"> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/manage-dha.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center justify-content-between mb-0">
+        <!-- This is the Updated HTML FILE -->
+        <!-- Left side -->
+        <div class="d-flex align-items-center">
+            <div class="logo-container border-lg-end border-0">
+                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
+            </div>
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
+        </div>
+
+        <!-- Center navigation (visible on desktop only) -->
+        <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+            <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                Remote Care
+            </a>
+        </div>
+        <!-- Right side with toggle button, notification and user -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Notification -->
+            <div class="position-relative d-none d-lg-block dropdown">
+                <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                    <span class="notification-badge">5</span>
+                </a>
+
+                <!-- Notification Dropdown Menu -->
+                <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted" style="font-size: 12px;">
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
+                        <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                    </div>
+                    <hr class="dropdown-divider my-2">
+
+                    <!-- Notification Items -->
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                            <small class="text-muted d-block">15 mins ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                            <small class="text-muted d-block">1 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                            <small class="text-muted d-block">8 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                            notifications</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
+
+            <!-- User Dropdown (visible on desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <div class="dropdown">
+                    <button id="remote-care-dropdown"
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
+                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                                       <li class=" dropdown-item
+                        remote-care-btn">
+                        Call DHA</li>
+                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-white">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <div class="">
+                        <a href="/user-dashboard/remote-access.html"
+                            class="mobile-menu-item d-flex align-items-center gap-2">
+                            <i class="bi bi-phone"></i>Remote Care
+                        </a>
+                        <div class="px-3 py-2">
+                            <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                        </div>
+                    </div>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <a href="/user-dashboard/remote-access.html"
+                    class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </a>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted" style="color: white;">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <a href="/user-dashboard/remote-access.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-phone"></i>Remote Care
+                    </a>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+
+
+                    <!-- Add other menu items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Collapse Toggle -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+        
+            <!-- Menu Items -->
+            <a href="/admin-dashboard/dashboard.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
+                        class="icon sidebar-icon">
+                        <g clip-path="url(#clip0_1304_4047)">
+                            <path
+                                d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z"
+                                fill="#9197B3" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1304_4047">
+                                <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="menu-text">Dashboard</span>
+                </div>
+            </a>
+            
+            <a href="/admin-dashboard/users.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.8333 13.0002C9.64163 13.0002 8.62149 12.5759 7.77288 11.7272C6.92426 10.8786 6.49996 9.8585 6.49996 8.66683C6.49996 7.47516 6.92426 6.45502 7.77288 5.60641C8.62149 4.7578 9.64163 4.3335 10.8333 4.3335C12.025 4.3335 13.0451 4.7578 13.8937 5.60641C14.7423 6.45502 15.1666 7.47516 15.1666 8.66683C15.1666 9.8585 14.7423 10.8786 13.8937 11.7272C13.0451 12.5759 12.025 13.0002 10.8333 13.0002ZM2.16663 19.5002V18.6335C2.16663 18.0377 2.3201 17.4779 2.62704 16.9543C2.93399 16.4307 3.35829 16.0335 3.89996 15.7627C4.94718 15.2391 6.03051 14.8281 7.14996 14.5298C8.2694 14.2316 9.41593 14.0828 10.5895 14.0835C10.8965 14.0835 11.154 14.1918 11.362 14.4085C11.57 14.6252 11.6736 14.887 11.6729 15.1939C11.6722 15.5009 11.5682 15.7583 11.3609 15.9663C11.1536 16.1743 10.8965 16.278 10.5895 16.2772C9.57843 16.2772 8.59874 16.4036 7.65046 16.6564C6.70218 16.9092 5.77701 17.2613 4.87496 17.7127C4.6944 17.8029 4.55899 17.9293 4.46871 18.0918C4.37843 18.2543 4.33329 18.4349 4.33329 18.6335V19.5002H10.5895C10.8965 19.5002 11.154 19.6042 11.362 19.8122C11.57 20.0202 11.6736 20.2773 11.6729 20.5835C11.6722 20.8897 11.5682 21.1472 11.3609 21.3559C11.1536 21.5646 10.8965 21.6683 10.5895 21.6668H4.33329C3.73746 21.6668 3.22757 21.4549 2.80363 21.0309C2.37968 20.607 2.16735 20.0967 2.16663 19.5002ZM17.1708 21.8835L17.0083 21.1252C16.7916 21.0349 16.5887 20.9403 16.3995 20.8413C16.2102 20.7424 16.016 20.6203 15.8166 20.4752L15.0312 20.7189C14.7965 20.7911 14.5665 20.7821 14.3411 20.6918C14.1158 20.6016 13.9396 20.4571 13.8125 20.2585L13.5958 19.8793C13.4694 19.6627 13.4243 19.4279 13.4604 19.1752C13.4965 18.9224 13.6138 18.7147 13.8125 18.5522L14.4083 18.0377C14.3722 17.7849 14.3541 17.5502 14.3541 17.3335C14.3541 17.1168 14.3722 16.8821 14.4083 16.6293L13.8125 16.1147C13.6138 15.9522 13.4965 15.7489 13.4604 15.5048C13.4243 15.2607 13.4694 15.0307 13.5958 14.8147L13.8395 14.4085C13.9659 14.2099 14.1375 14.0654 14.3541 13.9752C14.5708 13.8849 14.7965 13.8759 15.0312 13.9481L15.8166 14.1918C16.0152 14.0474 16.2095 13.9253 16.3995 13.8257C16.5894 13.726 16.7923 13.6314 17.0083 13.5418L17.1708 12.7564C17.225 12.5036 17.347 12.3007 17.537 12.1476C17.7269 11.9945 17.9479 11.9176 18.2 11.9168H18.6333C18.8861 11.9168 19.1074 11.9981 19.2974 12.1606C19.4873 12.3231 19.609 12.5307 19.6625 12.7835L19.825 13.5418C20.0416 13.6321 20.2446 13.7314 20.4338 13.8397C20.623 13.9481 20.8173 14.0835 21.0166 14.246L21.7479 14.0022C22.0007 13.912 22.2444 13.912 22.4791 14.0022C22.7138 14.0925 22.8944 14.246 23.0208 14.4627L23.2375 14.8418C23.3638 15.0585 23.409 15.2932 23.3729 15.546C23.3368 15.7988 23.2194 16.0064 23.0208 16.1689L22.425 16.6835C22.4611 16.9002 22.4791 17.1259 22.4791 17.3606C22.4791 17.5953 22.4611 17.821 22.425 18.0377L23.0208 18.5522C23.2194 18.7147 23.3368 18.918 23.3729 19.1622C23.409 19.4063 23.3638 19.6363 23.2375 19.8522L22.9937 20.2585C22.8673 20.4571 22.6958 20.6016 22.4791 20.6918C22.2625 20.7821 22.0368 20.7911 21.802 20.7189L21.0166 20.4752C20.818 20.6196 20.6237 20.7413 20.4338 20.8402C20.2438 20.9392 20.0409 21.0342 19.825 21.1252L19.6625 21.9106C19.6083 22.1634 19.4866 22.3667 19.2974 22.5205C19.1082 22.6743 18.8868 22.7509 18.6333 22.7502H18.2C17.9472 22.7502 17.7262 22.6689 17.537 22.5064C17.3477 22.3439 17.2257 22.1363 17.1708 21.8835ZM18.4166 19.5002C19.0125 19.5002 19.5227 19.2882 19.9474 18.8642C20.372 18.4403 20.584 17.9301 20.5833 17.3335C20.5826 16.7369 20.3706 16.2271 19.9474 15.8038C19.5242 15.3806 19.0139 15.1683 18.4166 15.1668C17.8193 15.1654 17.3095 15.3777 16.887 15.8038C16.4645 16.2299 16.2521 16.7398 16.25 17.3335C16.2478 17.9272 16.4601 18.4374 16.887 18.8642C17.3138 19.2911 17.8237 19.5031 18.4166 19.5002ZM10.8333 10.8335C11.4291 10.8335 11.9394 10.6215 12.364 10.1976C12.7887 9.77363 13.0007 9.26338 13 8.66683C12.9992 8.07027 12.7873 7.56038 12.364 7.13716C11.9408 6.71394 11.4306 6.50161 10.8333 6.50016C10.236 6.49872 9.72613 6.71105 9.30363 7.13716C8.88113 7.56327 8.66879 8.07316 8.66663 8.66683C8.66446 9.2605 8.87679 9.77075 9.30363 10.1976C9.73046 10.6244 10.2403 10.8364 10.8333 10.8335Z"
+                            fill="#9197B3" />
+                    </svg>
+            
+                    <span class="menu-text">Manage Users</span>
+                </div>
+            </a>
+            
+            <a href="/admin-dashboard/roles-permissions.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1497_8726)">
+                            <path
+                                d="M15.6869 2.60795C15.5611 2.06506 15.2476 1.58406 14.8016 1.24982C14.3557 0.915584 13.8061 0.749592 13.2497 0.781137C12.6933 0.812682 12.166 1.03974 11.7607 1.42224C11.3554 1.80473 11.0983 2.31809 11.0346 2.87172C10.971 3.42534 11.105 3.98366 11.4129 4.44814C11.7208 4.91262 12.1829 5.2534 12.7176 5.41037C13.2523 5.56733 13.8253 5.53038 14.3354 5.30604C14.8455 5.0817 15.26 4.68438 15.5057 4.1842C17.0015 4.52481 18.3919 5.22416 19.5572 6.22195C20.7224 7.21973 21.6274 8.48599 22.1942 9.91151L23.6364 9.34439C22.9688 7.65357 21.8938 6.15389 20.5069 4.97866C19.1201 3.80343 17.4643 2.98906 15.6869 2.60795ZM13.394 3.93882C13.2884 3.94221 13.1833 3.92435 13.0847 3.88629C12.9862 3.84823 12.8963 3.79075 12.8204 3.71727C12.7446 3.64379 12.6842 3.5558 12.643 3.45854C12.6018 3.36128 12.5806 3.25673 12.5806 3.1511C12.5806 3.04548 12.6018 2.94093 12.643 2.84367C12.6842 2.74641 12.7446 2.65842 12.8204 2.58494C12.8963 2.51146 12.9862 2.45398 13.0847 2.41592C13.1833 2.37786 13.2884 2.35999 13.394 2.36338C13.603 2.36338 13.8035 2.44642 13.9513 2.59422C14.0991 2.74202 14.1821 2.94249 14.1821 3.15151C14.1821 3.36053 14.0991 3.561 13.9513 3.7088C13.8035 3.8566 13.603 3.93882 13.394 3.93882ZM9.92707 4.5937L9.34451 3.15232C7.65369 3.81992 6.15401 4.89492 4.97878 6.28178C3.80355 7.66864 2.98918 9.32438 2.60807 11.1018C2.06518 11.2276 1.58418 11.5412 1.24994 11.9871C0.915706 12.433 0.749714 12.9826 0.781259 13.539C0.812804 14.0954 1.03986 14.6227 1.42236 15.028C1.80486 15.4333 2.31821 15.6904 2.87184 15.7541C3.42547 15.8177 3.98378 15.6837 4.44826 15.3758C4.91274 15.0679 5.25353 14.6058 5.41049 14.0711C5.56746 13.5364 5.53051 12.9634 5.30616 12.4533C5.08182 11.9432 4.6845 11.5287 4.18432 11.283C4.52633 9.78547 5.22797 8.39377 6.22856 7.22826C7.22914 6.06274 8.49857 5.15849 9.92707 4.5937ZM3.15082 14.1828C3.04732 14.1828 2.94484 14.1624 2.84922 14.1228C2.7536 14.0832 2.66672 14.0252 2.59353 13.952C2.52035 13.8788 2.46229 13.7919 2.42269 13.6963C2.38308 13.6007 2.36269 13.4982 2.36269 13.3947C2.36269 13.2912 2.38308 13.1887 2.42269 13.0931C2.46229 12.9975 2.52035 12.9106 2.59353 12.8374C2.66672 12.7642 2.7536 12.7062 2.84922 12.6666C2.94484 12.627 3.04732 12.6066 3.15082 12.6066C3.35984 12.6066 3.56031 12.6896 3.70811 12.8374C3.85591 12.9852 3.93894 13.1857 3.93894 13.3947C3.93894 13.6037 3.85591 13.8042 3.70811 13.952C3.56031 14.0998 3.35984 14.1828 3.15082 14.1828ZM13.394 21.2735C12.9545 21.2749 12.524 21.3989 12.151 21.6314C11.778 21.8639 11.4772 22.1958 11.2823 22.5898C9.78632 22.2492 8.39563 21.5498 7.23024 20.5518C6.06485 19.5539 5.15974 18.2874 4.59301 16.8616L3.15163 17.4442C3.8214 19.1379 4.90001 20.6394 6.29122 21.8148C7.68243 22.9903 9.34297 23.803 11.1247 24.1806C11.227 24.6144 11.4499 25.0104 11.7676 25.323C12.0853 25.6356 12.4848 25.852 12.9202 25.9473C13.3556 26.0427 13.809 26.013 14.2282 25.8617C14.6475 25.7105 15.0154 25.4439 15.2897 25.0925C15.5639 24.7412 15.7332 24.3195 15.7782 23.8761C15.8232 23.4327 15.7419 22.9857 15.5437 22.5864C15.3456 22.1872 15.0386 21.8522 14.6583 21.6199C14.2779 21.3876 13.8396 21.2675 13.394 21.2735ZM13.394 24.4252C13.185 24.4252 12.9845 24.3422 12.8367 24.1944C12.6889 24.0466 12.6059 23.8461 12.6059 23.6371C12.6059 23.428 12.6889 23.2276 12.8367 23.0798C12.9845 22.932 13.185 22.8489 13.394 22.8489C13.603 22.8489 13.8035 22.932 13.9513 23.0798C14.0991 23.2276 14.1821 23.428 14.1821 23.6371C14.1821 23.8461 14.0991 24.0466 13.9513 24.1944C13.8035 24.3422 13.603 24.4252 13.394 24.4252ZM25.9999 13.3939C26.0014 12.972 25.8899 12.5575 25.6771 12.1932C25.4643 11.8289 25.158 11.5282 24.7898 11.3223C24.4216 11.1164 24.005 11.0127 23.5833 11.022C23.1615 11.0314 22.7499 11.1534 22.3912 11.3754C22.0325 11.5974 21.7397 11.9114 21.5433 12.2847C21.3468 12.658 21.2538 13.0771 21.2739 13.4985C21.294 13.9199 21.4265 14.3282 21.6576 14.6811C21.8887 15.034 22.21 15.3187 22.5883 15.5056C22.2476 17.0014 21.5481 18.3919 20.5502 19.5572C19.5522 20.7224 18.2858 21.6274 16.8601 22.1941L17.4435 23.6363C19.1372 22.9665 20.6387 21.8879 21.8141 20.4967C22.9896 19.1055 23.8024 17.4449 24.1799 15.6632C24.6928 15.5419 25.1505 15.2527 25.4802 14.8416C25.81 14.4304 25.9929 13.9209 25.9999 13.3939ZM23.6356 14.182C23.4265 14.182 23.2261 14.099 23.0783 13.9512C22.9305 13.8034 22.8474 13.6029 22.8474 13.3939C22.8474 13.1849 22.9305 12.9844 23.0783 12.8366C23.2261 12.6888 23.4265 12.6058 23.6356 12.6058C23.8446 12.6058 24.0451 12.6888 24.1929 12.8366C24.3407 12.9844 24.4237 13.1849 24.4237 13.3939C24.4237 13.6029 24.3407 13.8034 24.1929 13.9512C24.0451 14.099 23.8446 14.182 23.6356 14.182Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M15.5918 13.2846C16.0401 12.8469 16.3478 12.2855 16.4755 11.6721C16.6032 11.0587 16.5452 10.4212 16.3089 9.84088C16.0726 9.26061 15.6687 8.76395 15.1488 8.41431C14.6288 8.06467 14.0165 7.87793 13.39 7.87793C12.7634 7.87793 12.1511 8.06467 11.6312 8.41431C11.1113 8.76395 10.7074 9.26061 10.4711 9.84088C10.2347 10.4212 10.1767 11.0587 10.3045 11.6721C10.4322 12.2855 10.7398 12.8469 11.1881 13.2846C10.6546 13.6452 10.2176 14.131 9.91538 14.6995C9.61312 15.2681 9.45478 15.9021 9.45422 16.546V18.1214H17.333V16.5451C17.3317 15.9006 17.1722 15.2662 16.8686 14.6976C16.5651 14.129 16.1267 13.6443 15.5918 13.2846ZM11.8178 11.0299C11.8178 10.8229 11.8586 10.6179 11.9378 10.4267C12.017 10.2355 12.1331 10.0617 12.2795 9.91532C12.4258 9.76895 12.5996 9.65285 12.7908 9.57363C12.9821 9.49442 13.187 9.45365 13.394 9.45365C13.601 9.45365 13.806 9.49442 13.9972 9.57363C14.1885 9.65285 14.3622 9.76895 14.5086 9.91532C14.655 10.0617 14.7711 10.2355 14.8503 10.4267C14.9295 10.6179 14.9703 10.8229 14.9703 11.0299C14.9703 11.4479 14.8042 11.8489 14.5086 12.1445C14.213 12.4401 13.8121 12.6061 13.394 12.6061C12.976 12.6061 12.5751 12.4401 12.2795 12.1445C11.9839 11.8489 11.8178 11.4479 11.8178 11.0299ZM11.0297 16.5451C11.0238 16.231 11.0807 15.9189 11.1969 15.627C11.313 15.3351 11.4862 15.0692 11.7063 14.845C11.9264 14.6208 12.189 14.4427 12.4787 14.3211C12.7684 14.1996 13.0794 14.1369 13.3936 14.1369C13.7078 14.1369 14.0188 14.1996 14.3085 14.3211C14.5983 14.4427 14.8608 14.6208 15.0809 14.845C15.301 15.0692 15.4742 15.3351 15.5904 15.627C15.7066 15.9189 15.7634 16.231 15.7576 16.5451H11.0297Z"
+                                fill="#9197B3" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1497_8726">
+                                <rect width="26" height="26" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+            
+                    <span class="menu-text">Roles & Permissions</span>
+                </div>
+            </a>
+            
+            <a href="/admin-dashboard/manage-dha.html">
+                <div class="menu-item active">
+                  <img src="assets/dha icon.png" class="icon sidebar-icon" alt="icon">
+            
+                    <span class="menu-text">Manage DHAs</span>
+                </div>
+            </a>
+        
+            <a href="/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.1667 10.8333H3.25V13H15.1667V10.8333ZM15.1667 6.5H3.25V8.66667H15.1667V6.5ZM3.25 17.3333H10.8333V15.1667H3.25V17.3333ZM23.2917 12.4583L24.9167 14.0833L17.3333 21.6667L12.4583 16.7917L14.0833 15.1667L17.3333 18.4167L23.2917 12.4583Z"
+                            fill="#9197B3" />
+                    </svg>
+        
+                    <span class="menu-text">Manage Subscription</span>
+                </div>
+            </a>
+        
+            <a href="/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.6372 5.11998C15.2447 5.21636 14.8706 5.22793 14.5003 5.08143C14.4188 5.05059 14.3854 5.00047 14.3892 4.90795C14.3929 4.56484 14.3929 4.22558 14.3892 3.88247C14.3743 2.40979 13.3077 1.30336 11.893 1.30336C9.96343 1.30336 8.03759 1.30336 6.10805 1.30336C5.82288 1.30336 5.81177 1.31492 5.81177 1.61948C5.81177 2.11295 5.81177 2.60641 5.81177 3.09987C5.80807 4.36822 5.19698 5.22022 4.13407 5.75994C3.80075 5.92957 3.44151 5.99511 3.07115 6.00667C2.52674 6.0221 1.98232 6.04908 1.4416 6.05679C1.29346 6.06065 1.24902 6.11847 1.25642 6.25726C1.26013 6.31894 1.25642 6.38063 1.25642 6.44231C1.25642 9.66524 1.25642 12.8882 1.25642 16.1111C1.25642 17.4064 2.10453 18.4512 3.3304 18.6632C3.48965 18.6902 3.65261 18.6941 3.81186 18.6941C6.48952 18.6941 9.16347 18.6825 11.8411 18.7018C13.1374 18.7095 14.0447 17.8189 14.2892 16.8513C14.3521 16.6046 14.3743 16.3424 14.3854 16.088C14.4003 15.7294 14.3929 15.3709 14.3892 15.0124C14.3892 14.9083 14.4151 14.862 14.5188 14.8466C14.8595 14.7888 15.1965 14.7926 15.5261 14.889C15.5706 14.9006 15.6335 14.9623 15.6335 14.9969C15.6187 15.6176 15.6558 16.2499 15.5632 16.859C15.3187 18.4705 14.0114 19.7504 12.4596 19.9586C12.2781 19.9817 12.0967 19.9971 11.9115 19.9971C9.18198 20.001 6.45248 20.001 3.71927 19.9971C1.94158 19.9933 0.456461 18.748 0.0861074 16.9477C0.0268509 16.6662 0.00462925 16.3694 0.00462925 16.0802C-0.00277782 12.8303 0.000926053 9.57657 0.000926053 6.32665C0.000926053 5.76765 0.189806 5.30503 0.574974 4.91566C2.04157 3.42756 3.50076 1.93561 4.96366 0.443653C5.24883 0.154515 5.58215 0.00416344 5.97843 0.00416344C7.97463 0.00416344 9.97454 -0.00740186 11.9707 0.00801885C14.0188 0.0234396 15.6261 1.72357 15.6335 3.85548C15.6409 4.27184 15.6372 4.69206 15.6372 5.11998Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M11.967 13.8288C11.967 13.5281 12.0078 13.2197 11.9596 12.9306C11.793 11.9437 11.3078 11.188 10.3967 10.7832C10.1708 10.683 10.1449 10.656 10.1486 10.3977C10.1523 10.0623 10.1597 9.72692 10.1597 9.38767C10.1597 9.20262 10.2375 9.09853 10.4004 9.03685C11.3263 8.67061 11.8744 7.96511 12.0744 6.96662C12.1226 6.71603 12.0967 6.44231 12.0781 6.18016C12.0596 5.92572 12.0707 5.87175 12.2855 5.74838C12.5596 5.59032 12.83 5.43226 13.104 5.2742C13.2929 5.16625 13.3707 5.16625 13.541 5.3166C14.3891 6.07222 15.3298 6.07607 16.3113 5.68284C16.4668 5.62116 16.6002 5.49009 16.7409 5.386C16.9335 5.2395 17.015 5.23179 17.2112 5.35515C17.4816 5.52478 17.752 5.70212 18.026 5.86789C18.1779 5.95656 18.2408 6.07607 18.1964 6.25727C17.9334 7.30973 18.6667 8.85565 19.8148 9.23732C19.9482 9.28358 20 9.38767 20 9.51874C19.9963 9.91197 19.9852 10.3013 19.9741 10.6946C19.9704 10.8256 19.9 10.9066 19.7815 10.9297C18.8556 11.1148 17.9149 12.5104 18.0334 13.6245C18.0334 13.6399 18.0334 13.6592 18.0371 13.6746C18.089 14.1218 18.089 14.1218 17.7038 14.3416C17.4779 14.4726 17.252 14.6037 17.0261 14.7348C16.8853 14.8196 16.752 14.8235 16.6298 14.6924C16.2446 14.2799 15.752 14.118 15.2224 14.0679C14.7225 14.0216 14.2299 14.0794 13.7781 14.33C13.6336 14.411 13.4966 14.5151 13.3707 14.6269C13.2522 14.7309 13.1411 14.7618 13.004 14.6731C12.6929 14.4765 12.3744 14.2837 12.067 14.0756C11.9967 14.0293 11.9596 13.9291 11.9078 13.852C11.9189 13.8443 11.9411 13.8365 11.967 13.8288ZM12.5263 9.98137C12.5226 11.4078 13.6447 12.6106 14.9669 12.6376C16.4594 12.6684 17.5964 11.4425 17.6075 9.99293C17.6149 8.5511 16.4446 7.33671 15.0706 7.34057C13.6781 7.34057 12.5263 8.53567 12.5263 9.98137Z"
+                            fill="#9197B3" />
+                    </svg>
+        
+                    <span class="menu-text">Content Management</span>
+                </div>
+            </a>
+        
+            <a href="/user-dashboard/user-transfer.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.056 19.515L8.144 13.365L11.434 16.515L15.455 13L17.695 15.184M22 5.5C22 5.10218 21.842 4.72064 21.5607 4.43934C21.2794 4.15804 20.8978 4 20.5 4H3.5C3.10218 4 2.72064 4.15804 2.43934 4.43934C2.15804 4.72064 2 5.10218 2 5.5V10H22V5.5Z"
+                            stroke="#9197B3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M22 9V18.5C22 18.8978 21.842 19.2794 21.5607 19.5607C21.2794 19.842 20.8978 20 20.5 20H6M9.556 7H18.556M5.555 7H6.555M2 9V13.5"
+                            stroke="#9197B3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+        
+                    <span class="menu-text">Manage Ads</span>
+                </div>
+            </a>
+        
+            <a href="/user-dashboard/user-transfer.html">
+                <div class="menu-item">
+                    <svg class="icon sidebar-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.4 16.5H13.75C17.202 16.5 20 13.702 20 10.25C20 6.798 17.202 4 13.75 4H10.25C6.798 4 4 6.798 4 10.25C4 14.28 6.298 16.69 8.715 18.143C9.928 18.872 11.15 19.343 12.0735 19.6315C12.1872 19.6672 12.296 19.7 12.4 19.73V16.5ZM13.4 21C13.4 21 13.018 20.9355 12.4 20.7685C9.795 20.0625 3 17.525 3 10.25C3 6.246 6.246 3 10.25 3H13.75C17.754 3 21 6.246 21 10.25C21 14.254 17.754 17.5 13.75 17.5H13.4V21Z"
+                            fill="#9197B3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.8456 6.24105C14.3606 6.58305 14.7486 7.13755 14.7486 7.88105C14.7486 8.67005 14.4306 9.25004 13.9151 9.60504C13.7116 9.74301 13.487 9.84672 13.2501 9.91205V10.678C13.2501 10.877 13.171 11.0677 13.0304 11.2084C12.8897 11.349 12.699 11.428 12.5001 11.428C12.3011 11.428 12.1104 11.349 11.9697 11.2084C11.8291 11.0677 11.7501 10.877 11.7501 10.678V9.27955C11.75 9.08926 11.8223 8.90607 11.9523 8.76709C12.0823 8.62811 12.2602 8.54373 12.4501 8.53105C12.7271 8.51255 12.9371 8.45755 13.0636 8.37005C13.1148 8.33604 13.1562 8.28914 13.1836 8.23405C13.2136 8.17405 13.2486 8.06705 13.2486 7.88055C13.2486 7.72455 13.1876 7.60455 13.0151 7.48955C12.8191 7.35955 12.5041 7.26355 12.1256 7.25155C11.7516 7.23955 11.3881 7.31255 11.1206 7.44205C10.8526 7.57205 10.7541 7.71805 10.7266 7.82555C10.7021 7.92095 10.659 8.0106 10.5999 8.08937C10.5407 8.16814 10.4667 8.23449 10.3819 8.28463C10.2971 8.33478 10.2033 8.36773 10.1058 8.38161C10.0083 8.3955 9.90896 8.39004 9.81356 8.36555C9.71815 8.34105 9.6285 8.29801 9.54973 8.23887C9.47096 8.17974 9.40461 8.10566 9.35447 8.02088C9.30432 7.9361 9.27137 7.84228 9.25749 7.74476C9.2436 7.64725 9.24907 7.54795 9.27356 7.45255C9.44606 6.78205 9.94756 6.34405 10.4666 6.09255C10.9866 5.84005 11.5981 5.73355 12.1731 5.75205C12.7446 5.77005 13.3546 5.91405 13.8456 6.24105Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M13.5 13.5C13.5 13.7652 13.3946 14.0196 13.2071 14.2071C13.0196 14.3946 12.7652 14.5 12.5 14.5C12.2348 14.5 11.9804 14.3946 11.7929 14.2071C11.6054 14.0196 11.5 13.7652 11.5 13.5C11.5 13.2348 11.6054 12.9804 11.7929 12.7929C11.9804 12.6054 12.2348 12.5 12.5 12.5C12.7652 12.5 13.0196 12.6054 13.2071 12.7929C13.3946 12.9804 13.5 13.2348 13.5 13.5Z"
+                            fill="#9197B3" />
+                    </svg>
+        
+                    <span class="menu-text">Support</span>
+                </div>
+            </a>
+        
+            <!-- Logout Button -->
+            <button class="log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                <span class="menu-text">Log Out</span>
+            </button>
+        </div>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Main Content -->
+        <div class="main-content p-4">
+            <!-- Stats Cards Row -->
+            <div class="row g-4 mb-4">
+                <!-- Total Users Card -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle me-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M30.2099 29.6389C29.3132 30.7042 28.4307 31.7406 27.5341 32.8059C28.5588 34.0439 29.1993 35.3683 29.4128 36.9086C29.9252 40.7522 27.1213 44.4662 23.321 44.9413C19.3073 45.4451 15.6351 42.6524 15.2651 38.708C15.1654 37.7291 15.4216 36.7215 15.4643 35.7282C15.4786 35.469 15.4074 35.066 15.2366 34.9652C13.9556 34.1591 12.6462 33.4105 11.3225 32.6475C10.9809 32.446 10.7104 32.518 10.3831 32.8059C8.4616 34.519 5.61496 34.2454 4.09201 32.2301C2.5833 30.2147 3.05299 27.4364 5.1168 25.9537C5.35877 25.7809 5.60073 25.421 5.62919 25.1187C5.82846 23.1322 5.65766 21.1456 5.25913 19.2022C1.8147 18.3097 0.234822 16.7981 0.0213241 14.2789C-0.17794 11.8893 1.03188 9.74438 3.12416 8.77988C5.4584 7.71462 7.65031 8.33363 9.97031 10.8096C11.8776 9.85954 13.856 8.88065 15.8059 7.87297C15.9625 7.80099 16.0336 7.39792 16.0052 7.16759C15.6494 4.63399 16.8165 2.15798 18.9799 0.862386C21.1576 -0.433204 23.9188 -0.26046 25.9257 1.32304C28.5019 3.3528 29.0428 7.1388 27.1498 9.84515C27.0359 10.0035 26.9363 10.1618 26.7939 10.3634C27.164 10.824 27.5198 11.2991 27.9184 11.7453C28.5304 12.4363 29.1851 13.0985 29.8114 13.7607C34.6791 10.4929 39.9596 12.0333 42.6924 15.2722C45.6387 18.7559 45.781 23.8663 43.0197 27.494C40.3154 31.0065 35.0634 32.5756 30.2099 29.6389ZM6.88171 18.9287C7.02405 21.0016 7.43681 23.017 8.17693 24.946C8.26233 25.1619 8.56123 25.3347 8.80319 25.4066C10.8528 26.1264 12.0911 28.113 11.7352 30.2435C11.6641 30.7042 11.7495 30.9921 12.1338 31.1936C13.5001 31.9134 14.8523 32.6188 16.2329 33.2953C16.3752 33.3673 16.7026 33.2665 16.8022 33.1226C18.9087 30.5458 22.7232 29.7541 25.7264 31.4239C25.8688 31.4959 26.1819 31.4815 26.2531 31.3951C27.0644 30.3731 27.833 29.3222 28.63 28.2713C26.8509 26.3567 26.0253 24.1686 25.8972 21.6494C24.9721 21.6494 24.1039 21.6494 23.2356 21.6494C22.3816 24.183 20.6879 25.3922 18.5529 25.0036C16.546 24.6437 15.1654 22.9306 15.2081 20.8721C15.2508 18.8423 16.7453 17.2012 18.7806 16.9421C20.9299 16.6686 22.5809 18.0074 23.3068 20.6849C24.1466 20.6849 25.0148 20.6849 25.9542 20.6849C26.1677 18.54 27.0074 16.611 28.5161 14.9123C27.5341 13.7031 26.5804 12.5227 25.641 11.3711C22.3532 13.1561 19.5777 12.6667 17.2008 10.0035C17.0584 9.84515 16.6884 9.77317 16.5033 9.84515C14.6815 10.5793 12.8596 11.3423 11.052 12.0908C10.682 12.2492 10.5539 12.4363 10.625 12.9114C10.9951 15.3442 9.71412 17.6331 7.49374 18.6408C7.29448 18.7415 7.10945 18.8279 6.88171 18.9287ZM43.6318 21.5343C43.6175 16.9709 39.9881 13.3001 35.4762 13.3001C31.007 13.3001 27.3348 17.0285 27.3348 21.563C27.3348 26.0976 31.0212 29.8116 35.4904 29.7972C40.0023 29.7828 43.646 26.0832 43.6318 21.5343ZM28.0607 37.7723C28.0322 34.5333 25.4418 31.9566 22.2251 31.9853C19.108 32.0141 16.546 34.6341 16.546 37.7867C16.546 41.0113 19.1792 43.6601 22.3532 43.6169C25.5129 43.5881 28.0891 40.9537 28.0607 37.7723ZM22.0543 11.04C24.6732 11.0832 26.8509 8.98142 26.9078 6.33266C26.9647 3.6695 24.844 1.4382 22.1966 1.38062C19.6062 1.32304 17.4143 3.46796 17.3573 6.11673C17.3146 8.80867 19.3927 10.9824 22.0543 11.04ZM9.30135 13.6887C9.28712 11.4862 7.53644 9.70119 5.373 9.6868C3.16686 9.6724 1.38771 11.4718 1.40194 13.7031C1.40194 15.9344 3.20956 17.7483 5.40146 17.7051C7.56491 17.6763 9.30135 15.8768 9.30135 13.6887ZM10.4258 29.6101C10.44 27.9978 9.17326 26.6734 7.57914 26.6446C5.94233 26.6158 4.61864 27.9114 4.59017 29.5525C4.57594 31.1792 5.91386 32.5468 7.50798 32.5468C9.08786 32.5324 10.3973 31.2224 10.4258 29.6101ZM19.2219 23.6648C20.6594 23.6792 21.8408 22.4987 21.8693 21.0448C21.8977 19.5909 20.7306 18.3673 19.293 18.3385C17.827 18.3097 16.6172 19.5045 16.6172 21.0016C16.6172 22.47 17.7843 23.6504 19.2219 23.6648Z"
+                                            fill="#9197B3" />
+                                        <path
+                                            d="M6.88171 18.9287C7.09521 18.8279 7.29448 18.7415 7.47951 18.6552C9.69989 17.6475 10.9809 15.3586 10.6108 12.9258C10.5396 12.4651 10.6677 12.2636 11.0378 12.1052C12.8597 11.3567 14.6673 10.5793 16.4891 9.85955C16.6741 9.78757 17.0584 9.87395 17.1865 10.0179C19.5635 12.6811 22.3389 13.1705 25.6268 11.3855C26.5662 12.5371 27.5198 13.7175 28.5019 14.9268C27.0074 16.6398 26.1534 18.5544 25.9399 20.6993C25.0148 20.6993 24.1466 20.6993 23.2926 20.6993C22.5667 18.0218 20.9156 16.683 18.7664 16.9565C16.7311 17.2156 15.2366 18.8567 15.1939 20.8865C15.1512 22.945 16.5318 24.6581 18.5387 25.018C20.6737 25.4066 22.3674 24.183 23.2214 21.6638C24.0754 21.6638 24.9436 21.6638 25.883 21.6638C26.0111 24.183 26.8366 26.3711 28.6158 28.2857C27.8187 29.3366 27.0501 30.3875 26.2388 31.4095C26.1677 31.5103 25.8403 31.5247 25.7122 31.4383C22.7232 29.7685 18.8945 30.5602 16.788 33.137C16.6741 33.2666 16.3468 33.3673 16.2187 33.3097C14.8381 32.6332 13.4717 31.9134 12.1195 31.208C11.7352 31.0065 11.6498 30.7186 11.721 30.2579C12.0768 28.113 10.8385 26.1264 8.78897 25.421C8.547 25.3347 8.23387 25.1619 8.16271 24.9604C7.43681 23.017 7.03828 21.016 6.88171 18.9287Z"
+                                            fill="white" />
+                                        <path
+                                            d="M43.6318 21.5343C43.646 26.0832 40.0023 29.7828 35.5046 29.7972C31.0354 29.8116 27.349 26.0976 27.349 21.563C27.349 17.0285 31.007 13.3 35.4904 13.3C39.9739 13.3 43.6175 16.9709 43.6318 21.5343ZM30.7081 18.6983C30.6511 18.6839 30.6084 18.6695 30.5515 18.6552C30.5088 18.7127 30.4376 18.7559 30.4234 18.8135C29.6548 20.9728 29.9395 23.0026 31.3913 24.7588C32.9 26.5727 34.9353 27.1629 37.2126 26.8894C37.6681 26.8318 37.9385 26.5007 37.7962 26.0112C37.6396 25.4786 37.2126 25.4786 36.7429 25.5506C32.8003 26.184 29.8825 23.1609 30.6369 19.2022C30.6654 19.0438 30.6796 18.8711 30.7081 18.6983Z"
+                                            fill="white" />
+                                        <path
+                                            d="M28.0607 37.7723C28.0891 40.9537 25.513 43.588 22.3532 43.6312C19.1792 43.66 16.5603 41.0256 16.5461 37.8011C16.5461 34.6485 19.0938 32.0285 22.2251 31.9997C25.4418 31.9565 28.0322 34.5189 28.0607 37.7723ZM24.2747 33.612C23.4349 33.2233 22.6094 33.3673 21.7981 33.5976C19.0653 34.3749 17.5282 36.9517 18.2825 39.4853C18.4106 39.9028 18.5387 40.3922 19.1223 40.2051C19.6489 40.018 19.4923 39.5861 19.3358 39.183C18.7807 37.6859 19.108 36.3615 20.1898 35.2243C21.0722 34.2886 22.1966 33.8135 23.4634 33.6984C23.7338 33.6696 24.0042 33.6408 24.2747 33.612Z"
+                                            fill="white" />
+                                        <path
+                                            d="M22.0543 11.04C19.3784 10.9968 17.3146 8.80867 17.3573 6.11673C17.4 3.48236 19.6062 1.32304 22.1966 1.38062C24.844 1.4382 26.9647 3.6695 26.9078 6.33266C26.8509 8.96702 24.6732 11.0832 22.0543 11.04ZM25.1571 4.64834C25.1856 4.90746 25.2141 5.16658 25.2425 5.4113C25.3564 7.32589 24.0469 8.80862 22.1682 8.895C21.912 8.90939 21.6415 8.80862 21.3996 8.85181C21.1434 8.90939 20.9299 9.09653 20.6879 9.22609C20.9156 9.38444 21.1149 9.62916 21.3569 9.67235C21.67 9.74433 22.0116 9.70114 22.339 9.65796C24.7586 9.34126 26.2673 6.72128 25.1571 4.64834Z"
+                                            fill="white" />
+                                        <path
+                                            d="M9.30135 13.6887C9.31559 15.8768 7.56491 17.6763 5.40147 17.7195C3.22379 17.7483 1.41618 15.9344 1.40195 13.7175C1.40195 11.4862 3.16686 9.6868 5.373 9.7012C7.53645 9.7012 9.28712 11.4862 9.30135 13.6887ZM3.67926 15.9344C3.46576 15.4306 3.12416 14.8836 3.0103 14.3077C2.78257 13.0553 3.39459 12.1052 4.64711 11.4287C4.83214 11.3279 4.93178 11.04 5.07411 10.8384C4.81791 10.8384 4.49055 10.7233 4.33398 10.8528C3.85005 11.2271 3.33766 11.6158 3.0103 12.1052C2.15631 13.4296 2.55483 15.2434 3.67926 15.9344Z"
+                                            fill="white" />
+                                        <path
+                                            d="M10.4258 29.6101C10.4115 31.208 9.1021 32.5324 7.52222 32.5324C5.92811 32.5324 4.59019 31.1648 4.60442 29.5381C4.61865 27.897 5.95657 26.6014 7.59339 26.6302C9.17327 26.6734 10.44 27.9978 10.4258 29.6101ZM9.54333 29.1638C8.98824 30.8913 8.03462 31.3519 6.32663 30.7185C6.1843 30.6609 5.99927 30.7473 5.84271 30.7617C5.94234 30.9201 5.99927 31.1504 6.1416 31.2224C7.70725 32.0429 9.51487 30.9489 9.54333 29.1638Z"
+                                            fill="white" />
+                                        <path
+                                            d="M19.2219 23.6648C17.7701 23.6504 16.6172 22.47 16.6172 21.0016C16.6172 19.5045 17.827 18.3097 19.293 18.3385C20.7164 18.3673 21.8977 19.5909 21.8693 21.0448C21.8408 22.4987 20.6594 23.6792 19.2219 23.6648Z"
+                                            fill="white" />
+                                        <path
+                                            d="M30.7081 18.6983C30.6796 18.8711 30.6796 19.0438 30.6369 19.2166C29.8825 23.1753 32.8003 26.1983 36.7429 25.5649C37.1984 25.493 37.6254 25.4786 37.7962 26.0256C37.9385 26.515 37.6681 26.8605 37.2126 26.9037C34.9353 27.1628 32.9 26.587 31.3912 24.7732C29.9252 23.0169 29.6548 20.9872 30.4234 18.8279C30.4519 18.7703 30.5088 18.7127 30.5515 18.6695C30.6084 18.6695 30.6511 18.6839 30.7081 18.6983Z"
+                                            fill="#9197B3" />
+                                        <path
+                                            d="M24.2747 33.612C24.0042 33.6408 23.7338 33.6696 23.4634 33.684C22.1966 33.8136 21.0722 34.2742 20.1897 35.2099C19.108 36.3472 18.7807 37.6716 19.3358 39.1687C19.4923 39.5718 19.6489 40.0036 19.1223 40.1908C18.5387 40.3923 18.4106 39.9029 18.2825 39.471C17.5424 36.9518 19.0796 34.3606 21.7981 33.5832C22.5951 33.3673 23.4207 33.2233 24.2747 33.612Z"
+                                            fill="#9197B3" />
+                                        <path
+                                            d="M25.1571 4.64834C26.2673 6.73568 24.7586 9.34128 22.3389 9.67238C22.0116 9.71556 21.67 9.75875 21.3569 9.68677C21.1149 9.62919 20.9156 9.39886 20.6879 9.24051C20.9156 9.11096 21.1434 8.92382 21.3996 8.86623C21.6415 8.80865 21.912 8.92382 22.1681 8.90942C24.0612 8.80865 25.3564 7.34031 25.2425 5.42572C25.2141 5.15221 25.1856 4.90746 25.1571 4.64834Z"
+                                            fill="#9197B3" />
+                                        <path
+                                            d="M3.67926 15.9344C2.55483 15.2578 2.15631 13.444 3.0103 12.1052C3.33766 11.6014 3.85005 11.2127 4.33398 10.8528C4.49055 10.7377 4.81791 10.8384 5.07411 10.8384C4.93178 11.04 4.84638 11.3279 4.64711 11.4287C3.39459 12.0908 2.78257 13.0553 3.0103 14.3077C3.12416 14.8836 3.46576 15.4306 3.67926 15.9344Z"
+                                            fill="#9197B3" />
+                                        <path
+                                            d="M9.54333 29.1638C9.51487 30.9489 7.70724 32.0429 6.14159 31.2367C5.99926 31.1648 5.94232 30.9344 5.84269 30.7761C6.01349 30.7617 6.19852 30.6897 6.32662 30.7329C8.0346 31.3519 8.98824 30.8913 9.54333 29.1638Z"
+                                            fill="#9197B3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 class="mb-0 fw-bold card-heading">36</h2>
+                                    <p class="text-muted mb-0 card-text">Total number of DHA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registered Users Card -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle me-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.5 13.125C7.5 9.58875 7.5 7.8225 8.59875 6.72375C9.6975 5.625 11.4637 5.625 15 5.625H30C33.5363 5.625 35.3025 5.625 36.4012 6.72375C37.5 7.8225 37.5 9.58875 37.5 13.125V28.125C37.5 33.4275 37.5 36.0806 35.8519 37.7269C34.2056 39.375 31.5525 39.375 26.25 39.375H18.75C13.4475 39.375 10.7944 39.375 9.14813 37.7269C7.5 36.0806 7.5 33.4275 7.5 28.125V13.125Z"
+                                            stroke="#9197B3" />
+                                        <path
+                                            d="M28.125 33.75V39.375M16.875 33.75V39.375M16.875 15H28.125M16.875 22.5H28.125"
+                                            stroke="#9197B3" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 class="mb-0 fw-bold card-heading">11</h2>
+                                    <p class="text-muted mb-0 card-text single-reg">New DHA requests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DHA Users Card -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle me-3">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22.5056 39.375C20.1731 39.375 17.9794 38.9325 15.9244 38.0475C13.8706 37.1612 12.0837 35.9587 10.5637 34.44C9.04375 32.9212 7.84063 31.1362 6.95438 29.085C6.06813 27.0338 5.625 24.8406 5.625 22.5056C5.625 20.1706 6.06813 17.9769 6.95438 15.9244C7.83938 13.8706 9.04 12.0837 10.5563 10.5637C12.0725 9.04375 13.8581 7.84063 15.9131 6.95438C17.9681 6.06813 20.1619 5.625 22.4944 5.625C24.8269 5.625 27.0206 6.06813 29.0756 6.95438C31.1294 7.83938 32.9162 9.04063 34.4362 10.5581C35.9562 12.0756 37.1594 13.8612 38.0456 15.915C38.9319 17.9688 39.375 20.1619 39.375 22.4944C39.375 24.8269 38.9325 27.0206 38.0475 29.0756C37.1625 31.1306 35.96 32.9175 34.44 34.4362C32.92 35.955 31.135 37.1581 29.085 38.0456C27.035 38.9331 24.8419 39.3763 22.5056 39.375ZM22.5 37.5C24.3312 37.5 26.0938 37.1788 27.7875 36.5363C29.4837 35.8925 31.0244 34.9588 32.4094 33.735L11.265 12.5925C10.065 13.9762 9.1375 15.5156 8.4825 17.2106C7.8275 18.9056 7.5 20.6687 7.5 22.5C7.5 26.6875 8.95312 30.2344 11.8594 33.1406C14.7656 36.0469 18.3125 37.5 22.5 37.5ZM33.735 32.4075C34.96 31.0238 35.8931 29.4844 36.5344 27.7894C37.1781 26.0944 37.5 24.3312 37.5 22.5C37.5 18.3125 36.0469 14.7656 33.1406 11.8594C30.2344 8.95312 26.6875 7.5 22.5 7.5C20.6613 7.5 18.89 7.81563 17.1863 8.44688C15.4838 9.07688 13.9525 10.0162 12.5925 11.265L33.735 32.4075Z"
+                                            fill="#9197B3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 class="mb-0 fw-bold card-heading">3</h2>
+                                    <p class="text-muted mb-0 card-text">Blocked DHAs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Table Section -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="card-title mb-0">Registered DHAs<br> <span class="all-users">All Users</span></h5>
+
+                        <div class="d-flex align-items-center">
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown">
+                                    Sort by : <span style="font-weight: bold; color:black;">Newest</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Newest</a></li>
+                                    <li><a class="dropdown-item" href="#">Oldest</a></li>
+                                </ul>
+                            </div>
+                            <a href="/admin-dashboard/add-dha-user.html">
+                                <button class="btn btn-primary ms-3 add-icon text-black">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </a>
+                            </div>
+                    </div>
+
+                    <div>
+                        <table class="table dha-table">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap alagn">Name</th>
+                                    <th class="text-nowrap">Registered on</th>
+                                    <th class="text-nowrap">Contact</th>
+                                    <th class="text-nowrap">Email</th>
+                                    <th class="text-nowrap">Location</th>
+                                    <th class="text-nowrap">Status</th>
+                                    <th class="action text-nowrap">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="center-align-row">
+                                    <td class="text-nowrap">Brandon</td>
+                                    <td class="text-nowrap">01/01/2024</td>
+                                    <td class="text-nowrap">+234 5687552</td>
+                                    <td class="text-nowrap">jane@microsoft.com</td>
+                                    <td class="text-nowrap">Niger</td>
+                                    <td class="text-nowrap"><button class="approved-status-btn">Active</button></td>
+                                    <td>
+                                        <div class="d-flex action-btns">
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M17.0834 5H2.91669M15.6942 7.08333L15.3109 12.8333C15.1634 15.045 15.09 16.1508 14.3692 16.825C13.6484 17.4992 12.54 17.5 10.3225 17.5H9.67752C7.46085 17.5 6.35252 17.5 5.63085 16.825C4.91002 16.1508 4.83669 15.045 4.68919 12.8333L4.30585 7.08333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path opacity="0.5"
+                                                        d="M5.41669 5H5.50835C5.84373 4.99143 6.1687 4.88185 6.44079 4.68559C6.71287 4.48934 6.9194 4.21553 7.03335 3.9L7.06169 3.81417L7.14252 3.57167C7.21169 3.36417 7.24669 3.26083 7.29252 3.1725C7.38269 2.99949 7.51211 2.84999 7.67042 2.73597C7.82872 2.62194 8.01152 2.54655 8.20419 2.51583C8.30169 2.5 8.41085 2.5 8.62919 2.5H11.3709C11.5892 2.5 11.6984 2.5 11.7959 2.51583C11.9885 2.54655 12.1713 2.62194 12.3296 2.73597C12.4879 2.84999 12.6173 2.99949 12.7075 3.1725C12.7534 3.26083 12.7884 3.36417 12.8575 3.57167L12.9384 3.81417C13.044 4.16523 13.2624 4.47167 13.5598 4.68605C13.8571 4.90043 14.2169 5.01077 14.5834 5"
+                                                        stroke="#9197B3" stroke-width="1.5" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M2.5 10.8333C5.5 4.16659 14.5 4.16659 17.5 10.8333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10 14.1665C9.6717 14.1665 9.34661 14.1018 9.04329 13.9762C8.73998 13.8506 8.46438 13.6664 8.23223 13.4343C8.00009 13.2021 7.81594 12.9265 7.6903 12.6232C7.56466 12.3199 7.5 11.9948 7.5 11.6665C7.5 11.3382 7.56466 11.0131 7.6903 10.7098C7.81594 10.4065 8.00009 10.1309 8.23223 9.89874C8.46438 9.66659 8.73998 9.48244 9.04329 9.3568C9.34661 9.23117 9.6717 9.1665 10 9.1665C10.663 9.1665 11.2989 9.4299 11.7678 9.89874C12.2366 10.3676 12.5 11.0035 12.5 11.6665C12.5 12.3295 12.2366 12.9654 11.7678 13.4343C11.2989 13.9031 10.663 14.1665 10 14.1665Z"
+                                                        fill="#9197B3" stroke="#9197B3" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M10.0025 17.5C8.96583 17.5 7.99083 17.3033 7.0775 16.91C6.16472 16.5161 5.37056 15.9817 4.695 15.3067C4.01944 14.6317 3.48472 13.8383 3.09083 12.9267C2.69694 12.015 2.5 11.0403 2.5 10.0025C2.5 8.96472 2.69694 7.98972 3.09083 7.0775C3.48417 6.16472 4.01778 5.37056 4.69167 4.695C5.36556 4.01944 6.15917 3.48472 7.0725 3.09083C7.98583 2.69694 8.96083 2.5 9.9975 2.5C11.0342 2.5 12.0092 2.69694 12.9225 3.09083C13.8353 3.48417 14.6294 4.01806 15.305 4.6925C15.9806 5.36694 16.5153 6.16056 16.9092 7.07333C17.3031 7.98611 17.5 8.96083 17.5 9.9975C17.5 11.0342 17.3033 12.0092 16.91 12.9225C16.5167 13.8358 15.9822 14.63 15.3067 15.305C14.6311 15.98 13.8378 16.5147 12.9267 16.9092C12.0156 17.3036 11.0408 17.5006 10.0025 17.5ZM10 16.6667C10.8139 16.6667 11.5972 16.5239 12.35 16.2383C13.1039 15.9522 13.7886 15.5372 14.4042 14.9933L5.00667 5.59667C4.47333 6.21167 4.06111 6.89583 3.77 7.64917C3.47889 8.4025 3.33333 9.18611 3.33333 10C3.33333 11.8611 3.97917 13.4375 5.27083 14.7292C6.5625 16.0208 8.13889 16.6667 10 16.6667ZM14.9933 14.4033C15.5378 13.7883 15.9525 13.1042 16.2375 12.3508C16.5236 11.5975 16.6667 10.8139 16.6667 10C16.6667 8.13889 16.0208 6.5625 14.7292 5.27083C13.4375 3.97917 11.8611 3.33333 10 3.33333C9.18278 3.33333 8.39556 3.47361 7.63833 3.75417C6.88167 4.03417 6.20111 4.45167 5.59667 5.00667L14.9933 14.4033Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="center-align-row">
+                                    <td class="text-nowrap">Chang Ho</td>
+                                    <td class="text-nowrap">01/01/2024</td>
+                                    <td class="text-nowrap">+234 5687552</td>
+                                    <td class="text-nowrap">floyd@yahoo.com</td>
+                                    <td class="text-nowrap">Abia</td>
+                                    <td class="text-nowrap"><button class="blocked-status-btn">Blocked</button></td>
+                                    <td>
+                                        <div class="d-flex action-btns">
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M17.0834 5H2.91669M15.6942 7.08333L15.3109 12.8333C15.1634 15.045 15.09 16.1508 14.3692 16.825C13.6484 17.4992 12.54 17.5 10.3225 17.5H9.67752C7.46085 17.5 6.35252 17.5 5.63085 16.825C4.91002 16.1508 4.83669 15.045 4.68919 12.8333L4.30585 7.08333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path opacity="0.5"
+                                                        d="M5.41669 5H5.50835C5.84373 4.99143 6.1687 4.88185 6.44079 4.68559C6.71287 4.48934 6.9194 4.21553 7.03335 3.9L7.06169 3.81417L7.14252 3.57167C7.21169 3.36417 7.24669 3.26083 7.29252 3.1725C7.38269 2.99949 7.51211 2.84999 7.67042 2.73597C7.82872 2.62194 8.01152 2.54655 8.20419 2.51583C8.30169 2.5 8.41085 2.5 8.62919 2.5H11.3709C11.5892 2.5 11.6984 2.5 11.7959 2.51583C11.9885 2.54655 12.1713 2.62194 12.3296 2.73597C12.4879 2.84999 12.6173 2.99949 12.7075 3.1725C12.7534 3.26083 12.7884 3.36417 12.8575 3.57167L12.9384 3.81417C13.044 4.16523 13.2624 4.47167 13.5598 4.68605C13.8571 4.90043 14.2169 5.01077 14.5834 5"
+                                                        stroke="#9197B3" stroke-width="1.5" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M2.5 10.8333C5.5 4.16659 14.5 4.16659 17.5 10.8333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10 14.1665C9.6717 14.1665 9.34661 14.1018 9.04329 13.9762C8.73998 13.8506 8.46438 13.6664 8.23223 13.4343C8.00009 13.2021 7.81594 12.9265 7.6903 12.6232C7.56466 12.3199 7.5 11.9948 7.5 11.6665C7.5 11.3382 7.56466 11.0131 7.6903 10.7098C7.81594 10.4065 8.00009 10.1309 8.23223 9.89874C8.46438 9.66659 8.73998 9.48244 9.04329 9.3568C9.34661 9.23117 9.6717 9.1665 10 9.1665C10.663 9.1665 11.2989 9.4299 11.7678 9.89874C12.2366 10.3676 12.5 11.0035 12.5 11.6665C12.5 12.3295 12.2366 12.9654 11.7678 13.4343C11.2989 13.9031 10.663 14.1665 10 14.1665Z"
+                                                        fill="#9197B3" stroke="#9197B3" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M10.0025 17.5C8.96583 17.5 7.99083 17.3033 7.0775 16.91C6.16472 16.5161 5.37056 15.9817 4.695 15.3067C4.01944 14.6317 3.48472 13.8383 3.09083 12.9267C2.69694 12.015 2.5 11.0403 2.5 10.0025C2.5 8.96472 2.69694 7.98972 3.09083 7.0775C3.48417 6.16472 4.01778 5.37056 4.69167 4.695C5.36556 4.01944 6.15917 3.48472 7.0725 3.09083C7.98583 2.69694 8.96083 2.5 9.9975 2.5C11.0342 2.5 12.0092 2.69694 12.9225 3.09083C13.8353 3.48417 14.6294 4.01806 15.305 4.6925C15.9806 5.36694 16.5153 6.16056 16.9092 7.07333C17.3031 7.98611 17.5 8.96083 17.5 9.9975C17.5 11.0342 17.3033 12.0092 16.91 12.9225C16.5167 13.8358 15.9822 14.63 15.3067 15.305C14.6311 15.98 13.8378 16.5147 12.9267 16.9092C12.0156 17.3036 11.0408 17.5006 10.0025 17.5ZM10 16.6667C10.8139 16.6667 11.5972 16.5239 12.35 16.2383C13.1039 15.9522 13.7886 15.5372 14.4042 14.9933L5.00667 5.59667C4.47333 6.21167 4.06111 6.89583 3.77 7.64917C3.47889 8.4025 3.33333 9.18611 3.33333 10C3.33333 11.8611 3.97917 13.4375 5.27083 14.7292C6.5625 16.0208 8.13889 16.6667 10 16.6667ZM14.9933 14.4033C15.5378 13.7883 15.9525 13.1042 16.2375 12.3508C16.5236 11.5975 16.6667 10.8139 16.6667 10C16.6667 8.13889 16.0208 6.5625 14.7292 5.27083C13.4375 3.97917 11.8611 3.33333 10 3.33333C9.18278 3.33333 8.39556 3.47361 7.63833 3.75417C6.88167 4.03417 6.20111 4.45167 5.59667 5.00667L14.9933 14.4033Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="center-align-row">
+                                    <td class="text-nowrap">Rishiya K.</td>
+                                    <td class="text-nowrap">01/01/2024</td>
+                                    <td class="text-nowrap">+234 5687552</td>
+                                    <td class="text-nowrap">ronald@adobe.com</td>
+                                    <td class="text-nowrap">Ekiti</td>
+                                    <td class="text-nowrap"><button class="inactive-status-btn">Inactive</button></td>
+                                    <td>
+                                        <div class="d-flex action-btns">
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M17.0834 5H2.91669M15.6942 7.08333L15.3109 12.8333C15.1634 15.045 15.09 16.1508 14.3692 16.825C13.6484 17.4992 12.54 17.5 10.3225 17.5H9.67752C7.46085 17.5 6.35252 17.5 5.63085 16.825C4.91002 16.1508 4.83669 15.045 4.68919 12.8333L4.30585 7.08333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path opacity="0.5"
+                                                        d="M5.41669 5H5.50835C5.84373 4.99143 6.1687 4.88185 6.44079 4.68559C6.71287 4.48934 6.9194 4.21553 7.03335 3.9L7.06169 3.81417L7.14252 3.57167C7.21169 3.36417 7.24669 3.26083 7.29252 3.1725C7.38269 2.99949 7.51211 2.84999 7.67042 2.73597C7.82872 2.62194 8.01152 2.54655 8.20419 2.51583C8.30169 2.5 8.41085 2.5 8.62919 2.5H11.3709C11.5892 2.5 11.6984 2.5 11.7959 2.51583C11.9885 2.54655 12.1713 2.62194 12.3296 2.73597C12.4879 2.84999 12.6173 2.99949 12.7075 3.1725C12.7534 3.26083 12.7884 3.36417 12.8575 3.57167L12.9384 3.81417C13.044 4.16523 13.2624 4.47167 13.5598 4.68605C13.8571 4.90043 14.2169 5.01077 14.5834 5"
+                                                        stroke="#9197B3" stroke-width="1.5" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M2.5 10.8333C5.5 4.16659 14.5 4.16659 17.5 10.8333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10 14.1665C9.6717 14.1665 9.34661 14.1018 9.04329 13.9762C8.73998 13.8506 8.46438 13.6664 8.23223 13.4343C8.00009 13.2021 7.81594 12.9265 7.6903 12.6232C7.56466 12.3199 7.5 11.9948 7.5 11.6665C7.5 11.3382 7.56466 11.0131 7.6903 10.7098C7.81594 10.4065 8.00009 10.1309 8.23223 9.89874C8.46438 9.66659 8.73998 9.48244 9.04329 9.3568C9.34661 9.23117 9.6717 9.1665 10 9.1665C10.663 9.1665 11.2989 9.4299 11.7678 9.89874C12.2366 10.3676 12.5 11.0035 12.5 11.6665C12.5 12.3295 12.2366 12.9654 11.7678 13.4343C11.2989 13.9031 10.663 14.1665 10 14.1665Z"
+                                                        fill="#9197B3" stroke="#9197B3" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M10.0025 17.5C8.96583 17.5 7.99083 17.3033 7.0775 16.91C6.16472 16.5161 5.37056 15.9817 4.695 15.3067C4.01944 14.6317 3.48472 13.8383 3.09083 12.9267C2.69694 12.015 2.5 11.0403 2.5 10.0025C2.5 8.96472 2.69694 7.98972 3.09083 7.0775C3.48417 6.16472 4.01778 5.37056 4.69167 4.695C5.36556 4.01944 6.15917 3.48472 7.0725 3.09083C7.98583 2.69694 8.96083 2.5 9.9975 2.5C11.0342 2.5 12.0092 2.69694 12.9225 3.09083C13.8353 3.48417 14.6294 4.01806 15.305 4.6925C15.9806 5.36694 16.5153 6.16056 16.9092 7.07333C17.3031 7.98611 17.5 8.96083 17.5 9.9975C17.5 11.0342 17.3033 12.0092 16.91 12.9225C16.5167 13.8358 15.9822 14.63 15.3067 15.305C14.6311 15.98 13.8378 16.5147 12.9267 16.9092C12.0156 17.3036 11.0408 17.5006 10.0025 17.5ZM10 16.6667C10.8139 16.6667 11.5972 16.5239 12.35 16.2383C13.1039 15.9522 13.7886 15.5372 14.4042 14.9933L5.00667 5.59667C4.47333 6.21167 4.06111 6.89583 3.77 7.64917C3.47889 8.4025 3.33333 9.18611 3.33333 10C3.33333 11.8611 3.97917 13.4375 5.27083 14.7292C6.5625 16.0208 8.13889 16.6667 10 16.6667ZM14.9933 14.4033C15.5378 13.7883 15.9525 13.1042 16.2375 12.3508C16.5236 11.5975 16.6667 10.8139 16.6667 10C16.6667 8.13889 16.0208 6.5625 14.7292 5.27083C13.4375 3.97917 11.8611 3.33333 10 3.33333C9.18278 3.33333 8.39556 3.47361 7.63833 3.75417C6.88167 4.03417 6.20111 4.45167 5.59667 5.00667L14.9933 14.4033Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="center-align-row">
+                                    <td class="text-nowrap">David Kam...</td>
+                                    <td class="text-nowrap">01/01/2024</td>
+                                    <td class="text-nowrap">+234 5687552</td>
+                                    <td class="text-nowrap">marvin@tesla.com</td>
+                                    <td class="text-nowrap">Ondo</td>
+                                    <td class="text-nowrap"><button class="approved-status-btn">Active</button></td>
+                                    <td>
+                                        <div class="d-flex action-btns">
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M12.922 2.87165C13.4799 2.31364 14.2366 2.00009 15.0256 2C15.8147 1.99991 16.5715 2.31327 17.1295 2.87115C17.6875 3.42903 18.0011 4.18574 18.0012 4.9748C18.0012 5.76386 17.6879 6.52064 17.13 7.07865L7.772 16.4367C7.43412 16.7762 7.00579 17.0115 6.538 17.1147L2.612 17.9877C2.52981 18.006 2.44432 18.0033 2.36345 17.9798C2.28258 17.9563 2.20896 17.9128 2.14941 17.8532C2.08987 17.7937 2.04632 17.7201 2.02283 17.6392C1.99933 17.5583 1.99664 17.4728 2.015 17.3907L2.892 13.4407C2.993 12.9887 3.221 12.5737 3.548 12.2467L12.922 2.87165ZM16.457 3.61465C16.2754 3.42361 16.0574 3.27084 15.8159 3.16535C15.5744 3.05986 15.3141 3.00379 15.0506 3.00043C14.787 2.99708 14.5255 3.04651 14.2813 3.14581C14.0372 3.24512 13.8154 3.39229 13.629 3.57865L12.958 4.25065L15.751 7.04265L16.421 6.37165C17.179 5.61365 17.195 4.39165 16.457 3.61465ZM15.044 7.74965L12.25 4.95865L4.254 12.9547C4.06083 13.1479 3.9266 13.392 3.867 13.6587L3.16 16.8417L6.319 16.1397C6.601 16.0767 6.859 15.9347 7.063 15.7307L15.044 7.74965ZM2.5 2.99865H11.38L10.38 3.99865H2.5C2.36739 3.99865 2.24021 3.94597 2.14645 3.85221C2.05268 3.75844 2 3.63126 2 3.49865C2 3.36604 2.05268 3.23887 2.14645 3.1451C2.24021 3.05133 2.36739 2.99865 2.5 2.99865ZM2.5 5.99865H8.38L7.378 6.99865H2.5C2.36739 6.99865 2.24021 6.94597 2.14645 6.85221C2.05268 6.75844 2 6.63126 2 6.49865C2 6.36604 2.05268 6.23887 2.14645 6.1451C2.24021 6.05133 2.36739 5.99865 2.5 5.99865ZM2.5 8.99865H5.379L4.379 9.99865H2.5C2.36739 9.99865 2.24021 9.94597 2.14645 9.85221C2.05268 9.75844 2 9.63126 2 9.49865C2 9.36604 2.05268 9.23887 2.14645 9.1451C2.24021 9.05133 2.36739 8.99865 2.5 8.99865Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                            <button class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M17.0834 5H2.91669M15.6942 7.08333L15.3109 12.8333C15.1634 15.045 15.09 16.1508 14.3692 16.825C13.6484 17.4992 12.54 17.5 10.3225 17.5H9.67752C7.46085 17.5 6.35252 17.5 5.63085 16.825C4.91002 16.1508 4.83669 15.045 4.68919 12.8333L4.30585 7.08333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                                                    <path opacity="0.5"
+                                                        d="M5.41669 5H5.50835C5.84373 4.99143 6.1687 4.88185 6.44079 4.68559C6.71287 4.48934 6.9194 4.21553 7.03335 3.9L7.06169 3.81417L7.14252 3.57167C7.21169 3.36417 7.24669 3.26083 7.29252 3.1725C7.38269 2.99949 7.51211 2.84999 7.67042 2.73597C7.82872 2.62194 8.01152 2.54655 8.20419 2.51583C8.30169 2.5 8.41085 2.5 8.62919 2.5H11.3709C11.5892 2.5 11.6984 2.5 11.7959 2.51583C11.9885 2.54655 12.1713 2.62194 12.3296 2.73597C12.4879 2.84999 12.6173 2.99949 12.7075 3.1725C12.7534 3.26083 12.7884 3.36417 12.8575 3.57167L12.9384 3.81417C13.044 4.16523 13.2624 4.47167 13.5598 4.68605C13.8571 4.90043 14.2169 5.01077 14.5834 5"
+                                                        stroke="#9197B3" stroke-width="1.5" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M2.5 10.8333C5.5 4.16659 14.5 4.16659 17.5 10.8333"
+                                                        stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10 14.1665C9.6717 14.1665 9.34661 14.1018 9.04329 13.9762C8.73998 13.8506 8.46438 13.6664 8.23223 13.4343C8.00009 13.2021 7.81594 12.9265 7.6903 12.6232C7.56466 12.3199 7.5 11.9948 7.5 11.6665C7.5 11.3382 7.56466 11.0131 7.6903 10.7098C7.81594 10.4065 8.00009 10.1309 8.23223 9.89874C8.46438 9.66659 8.73998 9.48244 9.04329 9.3568C9.34661 9.23117 9.6717 9.1665 10 9.1665C10.663 9.1665 11.2989 9.4299 11.7678 9.89874C12.2366 10.3676 12.5 11.0035 12.5 11.6665C12.5 12.3295 12.2366 12.9654 11.7678 13.4343C11.2989 13.9031 10.663 14.1665 10 14.1665Z"
+                                                        fill="#9197B3" stroke="#9197B3" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg></button>
+                                            <button class="btn btn-sm "><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M10.0025 17.5C8.96583 17.5 7.99083 17.3033 7.0775 16.91C6.16472 16.5161 5.37056 15.9817 4.695 15.3067C4.01944 14.6317 3.48472 13.8383 3.09083 12.9267C2.69694 12.015 2.5 11.0403 2.5 10.0025C2.5 8.96472 2.69694 7.98972 3.09083 7.0775C3.48417 6.16472 4.01778 5.37056 4.69167 4.695C5.36556 4.01944 6.15917 3.48472 7.0725 3.09083C7.98583 2.69694 8.96083 2.5 9.9975 2.5C11.0342 2.5 12.0092 2.69694 12.9225 3.09083C13.8353 3.48417 14.6294 4.01806 15.305 4.6925C15.9806 5.36694 16.5153 6.16056 16.9092 7.07333C17.3031 7.98611 17.5 8.96083 17.5 9.9975C17.5 11.0342 17.3033 12.0092 16.91 12.9225C16.5167 13.8358 15.9822 14.63 15.3067 15.305C14.6311 15.98 13.8378 16.5147 12.9267 16.9092C12.0156 17.3036 11.0408 17.5006 10.0025 17.5ZM10 16.6667C10.8139 16.6667 11.5972 16.5239 12.35 16.2383C13.1039 15.9522 13.7886 15.5372 14.4042 14.9933L5.00667 5.59667C4.47333 6.21167 4.06111 6.89583 3.77 7.64917C3.47889 8.4025 3.33333 9.18611 3.33333 10C3.33333 11.8611 3.97917 13.4375 5.27083 14.7292C6.5625 16.0208 8.13889 16.6667 10 16.6667ZM14.9933 14.4033C15.5378 13.7883 15.9525 13.1042 16.2375 12.3508C16.5236 11.5975 16.6667 10.8139 16.6667 10C16.6667 8.13889 16.0208 6.5625 14.7292 5.27083C13.4375 3.97917 11.8611 3.33333 10 3.33333C9.18278 3.33333 8.39556 3.47361 7.63833 3.75417C6.88167 4.03417 6.20111 4.45167 5.59667 5.00667L14.9933 14.4033Z"
+                                                        fill="#9197B3" />
+                                                </svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="text-muted pagination-info">
+                            Showing data 1 to 4 of 500 entries
+                        </div>
+                        <nav>
+                            <ul class="pagination mb-0">
+                                <li class="page-item"><a class="page-link" href="#"><i
+                                            class="bi bi-chevron-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">20</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i
+                                            class="bi bi-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Share Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+
+                    <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- First Add Img Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+            <div class="add-box bg-white rounded text-center w-100 position-relative">
+                <div class="add-img-container">
+                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
+                    <div class="learn-more">
+                        <a href="">Click to Learn More</a>
+                    </div>
+                    <div class="add-stats-container">
+                        <div class="stat-item">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>22</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="bi bi-share-fill"></i>
+                            <span>23</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="bi bi-eye"></i>
+                            <span>23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-close-btn">
+                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Video Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+            <div class="add-video-box">
+                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container" id="add-1-img">
+                <img src="assets/add img 1.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container" id="add-2-video">
+                <img src="assets/add img 2.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets/add img 3.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
+
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
+        })
+
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
+
+
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+
+
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
+
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
+
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
+
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
+                addImgPupup.classList.add('d-none')
+            }
+        })
+
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
+
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+
+</html>

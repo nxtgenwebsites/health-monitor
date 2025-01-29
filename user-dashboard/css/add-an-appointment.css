@@ -1259,7 +1259,7 @@ textarea.form-control {
 
 .ad-container {
     width: 100%;
-    max-width: 168px;
+    /* max-width: 168px; */
     margin: 0 auto 16px;
 }
 

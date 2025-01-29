@@ -518,7 +518,7 @@ a {
 
 .ad-container img {
   width: 168px;
-  height: 168px;
+  /* height: 168px; */
   object-fit: cover;
 }
 
@@ -604,9 +604,8 @@ a {
   flex-direction: column;
 }
 
-.ad-container img {
+.add-container img {
   width: 168px;
-  height: 168px;
   object-fit: cover;
 }
 
