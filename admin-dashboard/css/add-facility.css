@@ -1,0 +1,447 @@
+.drag-area {
+    border: 2px dashed #444444;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.drag-area.active {
+    border: 2px solid #505050;
+    background: #e9ecef;
+}
+
+.field-mapping {
+    display: none;
+}
+
+/* Add transition for smooth column resizing */
+.col-md-6 {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Class for full-width state */
+.col-md-6.full-width {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.mapping-row {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Progress bar and steps styling */
+.step-indicator {
+    color: #6c757d;
+    font-weight: 500;
+    position: relative;
+}
+
+.step-indicator.active {
+    color: #0b6fc0;
+}
+
+.step-indicator.completed {
+    color: #0b6fc0;
+}
+
+/* Time schedule styling */
+.time-slot {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.time-slot-header {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.time-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.uploadbtn, .browsebtn {
+  background:  linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+  border: none;
+  padding: 6px 23px;
+}
+
+#nextBtn, #prevBtn {
+    background:  linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+    border: none;
+    padding: 6px 23px;
+}
+.progress-bar {
+    background:  linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+}
+.time-slot {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.time-slot-header {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.time-inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.time-inputs .form-group {
+    flex: 1;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.col-12 {
+    
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 7em !important;
+    padding-right: 4.5em !important;
+}
+.page-head > span {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #0b6fc0;
+}
+.page-head {
+    font-size: 2.5rem;
+}
+.card-header {
+    background: #0b6fc0;
+    padding: 15px;
+    
+}
+.card-header > .card-title {
+    color: #fff !important;
+}
+
+.time-slots {
+    background: #fff;
+    border-radius: 8px;
+}
+
+.time-slot {
+    padding: 8px 12px;
+    transition: background-color 0.2s;
+}
+
+.time-slot:hover {
+    background-color: #f8f9fa;
+}
+
+.day-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.time-input-group {
+    gap: 10px;
+    align-items: center;
+}
+
+.time-separator {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.form-control-sm {
+    height: 35px;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Make time inputs more compact */
+input[type="time"] {
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+input[type="time"]:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.time-slots {
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.time-slot {
+    padding: 8px 12px;
+    transition: background-color 0.2s;
+}
+
+.time-slot:hover {
+    background-color: #f8f9fa;
+}
+
+.day-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.time-input-group {
+    gap: 10px;
+    align-items: center;
+}
+
+.time-separator {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.form-control-sm {
+    height: 35px;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Make time inputs more compact */
+input[type="time"] {
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+input[type="time"]:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.drag-area {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drag-area:hover {
+    border-color: #3B82F6;
+    background: #F1F5F9 !important;
+}
+
+.drag-area.active {
+    border-color: #515151;
+    background: #F1F5F9 !important;
+}
+
+.browsebtn {
+    background: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+    border: none;
+}
+
+.browsebtn:hover {
+    opacity: 0.9;
+}
+
+.text-muted {
+    color: #8B98A5 !important;
+}
+.right-col {
+ padding-left: 15em !important;
+ padding-right: 15em !important;
+}
+
+.mapping-row {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mapping-row:hover {
+    background: #f1f5f9;
+}
+
+.mapping-row select.is-invalid {
+    border-color: #dc3545;
+}
+
+#fieldMapping {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.or-divider {
+    margin: 2rem 0;
+}
+
+/* Tab Styling */
+.nav-tabs {
+border-bottom: none;
+padding: 0.5rem 1rem 0;
+background: #f8f9fa;
+border-top-left-radius: 0.5rem;
+border-top-right-radius: 0.5rem;
+}
+
+.nav-tabs .nav-link {
+border: none;
+color: #495057;
+padding: 1rem 2rem;
+border-radius: 0.5rem 0.5rem 0 0;
+font-weight: 500;
+transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link.active {
+background: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+color: white !important;
+border: none;
+font-weight: 500 !important;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+background: #e9ecef;
+border: none;
+}
+
+.tab-content {
+padding: 2rem;
+}
+
+/* Add or update these styles in your existing CSS */
+
+.nav-tabs {
+display: flex;
+width: 100%;
+border-bottom: none;
+padding: 0;
+background: #f8f9fa;
+border-top-left-radius: 0.5rem;
+border-top-right-radius: 0.5rem;
+}
+
+.nav-tabs .nav-item {
+width: 50%; /* Make each tab take up 50% width */
+margin: 0; /* Remove any margins */
+}
+
+.nav-tabs .nav-link {
+width: 100%;
+border: none;
+color: #495057;
+padding: 1rem;
+text-align: center;
+font-weight: 500;
+transition: all 0.2s ease;
+border-radius: 0;
+margin: 0; /* Remove any margins */
+}
+
+.nav-tabs .nav-link.active {
+background: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+color: white;
+border: none;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+background: #e9ecef;
+border: none;
+}
+
+/* Ensure the tab content takes full width */
+.tab-content {
+width: 100%;
+padding: 2rem;
+}
+
+/* Remove any padding from the card that might affect width */
+.card {
+padding: 0;
+}
+
+.card-body {
+padding: 0;
+}
+.upload-progress {
+display: none;
+padding: 20px;
+}
+
+.upload-progress .progress {
+height: 20px;
+margin-bottom: 10px;
+}
+
+.upload-progress .progress-bar {
+background: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+transition: width 0.5s ease;
+}
+.download-btn {
+font-weight: 500;
+color: #0b6fc0;
+}
+
+.upload-txt {
+color: black !important;
+}
+
+/* Add this to your existing CSS */
+select.form-select option:first-child {
+color: #6c757d;  /* This is Bootstrap's default placeholder color */
+}
+
+select.form-select {
+color: #6c757d;  /* Initial state color */
+}
+
+/* When an actual option is selected (not the placeholder) */
+select.form-select:not(:invalid) {
+color: #212529;  /* Bootstrap's default text color */
+}
+
+/* Add to your existing CSS */
+.form-check-inline {
+margin-right: 0;
+}
+
+.form-check-input {
+cursor: pointer;
+}
+
+.form-check-label {
+cursor: pointer;
+color: #495057;
+font-weight: 400;
+}
+
+.form-check-input:checked {
+background-color: #0b6fc0;
+border-color: #0b6fc0;
+}
+
+.gap-3 {
+gap: 1rem !important;
+}
+
+.radio-label {
+font-weight: 500 !important;
+color: #495057 !important;
+
+}
+.right-column {
+padding-left: 2em;
+padding-right:2em;
+}
