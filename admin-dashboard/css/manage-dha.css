@@ -108,7 +108,6 @@
   letter-spacing: -0.206px;
 }
 
-
 /* Table base styles */
 .dha-table th {
   font-size: 14px;
@@ -120,42 +119,41 @@
 }
 
 .center-align-row td {
-    text-align: center; 
-    vertical-align: middle; 
+  text-align: center;
+  vertical-align: middle;
 }
 
-
-.action-btns button{
+.action-btns button {
   padding: 3px;
   margin: 0 5px;
   border: none !important;
 }
 
-.action-btns button svg{
+.action-btns button svg {
   width: 18px;
 }
 
-.approved-status-btn{
+.approved-status-btn {
   padding: 4px 8px;
   color: #008767;
   border: 2px solid #008767;
-  background: #16C09861;
+  background: #16c09861;
   border-radius: 5px;
 }
 
-.inactive-status-btn{
+.inactive-status-btn {
   padding: 4px 8px;
-  color: #FBD100;
-  border: 2px solid #FBD100;
-  background: #FFF5C5;
+  color: #fbd100;
+  border: 2px solid #fbd100;
+  background: #fff5c5;
   border-radius: 5px;
 }
 
-.blocked-status-btn{
+.blocked-status-btn {
   padding: 4px 8px;
-  color: #DF0404;
-  border: 2px solid #DF0404;
-  background: #FFC5C5;
+  color: #df0404;
+  border: 2px solid #df0404;
+  background: #ffc5c5;
   border-radius: 5px;
 }
 
@@ -269,4 +267,28 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+.role-box {
+  width: 450px;
+  padding: 40px 30px;
+}
+
+.role-box h3 {
+  color: #0C74C2;
+  font-weight: 400;
+}
+
+.role-box h6 {
+  font-weight: 400;
+  color: #666666;
+}
+
+.role-box h4 {
+  font-size: 19px;
+  color: #9197B3;
+}
+
+.role-box h4 span {
+  color: #3ED2E7;
 }
