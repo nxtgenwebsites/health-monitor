@@ -1,44 +1,3 @@
-.icon-circle {
-  width: 44px;
-  height: 44xpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-circle i {
-  font-size: 24px;
-}
-
-.search-box .form-control {
-  border-radius: 20px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.table th {
-  font-weight: 500;
-  color: #6c757d;
-}
-
-.badge {
-  padding: 0.5em 1em;
-
-  color: var(--Secondary, #3ed2e7);
-  font-family: Poppins;
-  font-size: 13.089px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.131px;
-  background-color: none !important;
-  background: none !important;
-}
-
-/* .badge.bg-primary {
-    background-color: #0c75c2 !important;
-} */
-
 .pagination .page-link {
   border: none;
   color: #6c757d;
@@ -133,7 +92,7 @@
   width: 18px;
 }
 
-.approved-status-btn {
+.paid-btn {
   padding: 4px 8px;
   color: #008767;
   border: 2px solid #008767;
@@ -141,7 +100,7 @@
   border-radius: 5px;
 }
 
-.inactive-status-btn {
+.upcoming-renewal-btn {
   padding: 4px 8px;
   color: #fbd100;
   border: 2px solid #fbd100;
@@ -149,7 +108,7 @@
   border-radius: 5px;
 }
 
-.blocked-status-btn {
+.exceeding-limit-btn {
   padding: 4px 8px;
   color: #df0404;
   border: 2px solid #df0404;
@@ -204,11 +163,11 @@
   align-items: center;
   gap: 4px;
   border: none;
-  background: #f9fafb;
+  background: #f9fafb !important;
   padding: 8px 14px;
   border-radius: 8px;
   font-size: 14px;
-  color: #667085;
+  color: #667085 !important;
 }
 
 .dropdown .btn-outline-secondary::after {
@@ -291,4 +250,95 @@
 
 .role-box h4 span {
   color: #3ED2E7;
+}
+
+.pricing-card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-sizing: 0 3px 6px #0000003b;
+}
+
+.pricing-card .subscription h6{
+  font-size: 16px;
+  color: #0C74C2;
+  font-weight: 700 !important;
+}
+
+.pricing-card .subscription button {
+  background: #0C74C2;
+  color: #fff;
+  box-shadow: 0 10px 20px #274A6680;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+}
+
+.pricing-card .price h3{
+  color: #9197B3;
+  font-size: 30px;
+}
+
+.pricing-card .price h3 span{
+  color: #3ED2E7;
+  font-size: 50px;
+}
+
+.pricing-card .price p {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.pricing-card .offers img{
+  width: 12px;
+}
+
+.pricing-card .offers h6{
+  color: #666666;
+  font-weight: 300;
+}
+
+
+.subscription-activity {
+    background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-sizing: 0 3px 6px #0000003b;
+}
+
+.subscription-activity .heading h4{
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.subscription-activity .heading h3{
+  font-weight: 700;
+  color: #1E1B39;
+  font-size: 18px;
+}
+
+
+.subscription-activity .time-filter {
+  background: #F8F8FF;
+  border-radius: 10px;
+}
+
+.subscription-activity .time-filter button {
+  border: none;
+  background: #F8F8FF;
+  color: #9291A5;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  margin: 0 2px;
+}
+
+.subscription-activity .time-filter .active{
+  background: #000;
+  color: #fff;
 }
