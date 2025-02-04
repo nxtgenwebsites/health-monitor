@@ -130,7 +130,6 @@ body {
 
 /* Services Start*/
 .services-container {
-  padding: 70px 0;
   padding-bottom: 85px;
 }
 
@@ -149,7 +148,6 @@ body {
 
 .services-content h3 {
   font-size: 25px;
-  text-wrap: nowrap;
 }
 
 .services-content p {
