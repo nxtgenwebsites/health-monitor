@@ -1,0 +1,104 @@
+.pages-btns button {
+  padding: 2px 5px;
+  border: none !important;
+  background: transparent !important;
+}
+
+.pages-btns .active {
+  font-weight: 800;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 300px;
+  height: 40px;
+  padding: 0  50px 0 10px;
+  border-radius: 5px;
+  background: white;
+  border: none !important;
+  outline: none;
+}
+
+.search-box button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  background: #0c74c2;
+  border: none !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.search-box svg {
+  width: 15px;
+}
+
+.add-new-btn {
+  border: none !important;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 5px;
+}
+
+.post-content {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post-content .options button{
+    border: none !important;
+    height: 50px;
+    width: 120px;
+    background: #DDEBF4;
+    color: #0C74C2;
+}
+.post-content .options .active{
+    background: #FFFFFF;
+}
+
+.post-content .content-box {
+    padding: 20px 25px;
+}
+
+.post-content .post-writing {
+    padding: 20px 25px;
+    background: #EAF1F5;
+    border-radius: 10px;
+}
+
+
+.editor-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.editor-container {
+  background-color: #fff;
+}
+
+.editor-toolbar select {
+  background: transparent;
+  font-size: 14px;
+}
+
+.editor-toolbar .btn-link {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.editor-toolbar .btn-link:hover {
+  background-color: #f8f9fa;
+  color: #0c75c2;
+}
+
+.editor-toolbar .vr {
+  height: 20px;
+}

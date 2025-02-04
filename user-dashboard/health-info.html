@@ -563,17 +563,23 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content ps-4">
-                <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/patient.html" class="dropdown-item-custom">Patient</a></li>
-                    <li><a href="/user-dashboard/blood-pressure.html" class="dropdown-item-custom">BP</a></li>
-                    <li><a href="/user-dashboard/bmi.html" class="dropdown-item-custom">BMI</a></li>
-                    <li><a href="/user-dashboard/episodes.html" class="dropdown-item-custom">Episodes</a></li>
-                    <li><a href="/user-dashboard/diabetes.html" class="dropdown-item-custom">Diabetes</a></li>
-                    <li><a href="/user-dashboard/results.html" class="dropdown-item-custom">Tests</a>
-                    </li>
-                    <li><a href="/user-dashboard/medication.html" class="dropdown-item-custom">Medications</a></li>
-                    <li><a href="/user-dashboard/appointments.html" class="dropdown-item-custom">Appointments</a></li>
-                </ul>
+                    <ul class="custom-bullets">
+                        <li><a class="dropdown-item-custom" onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a>
+                        </li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')" class="dropdown-item-custom">BP</a>
+                        </li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')" class="dropdown-item-custom">BMI</a></li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')" class="dropdown-item-custom">Episodes</a>
+                        </li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')" class="dropdown-item-custom">Diabetes</a>
+                        </li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')" class="dropdown-item-custom">Tests</a>
+                        </li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
+                                class="dropdown-item-custom">Medications</a></li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
+                                class="dropdown-item-custom">Appointments</a></li>
+                    </ul>
             </div>
 
             <!-- Communities Dropdown -->
@@ -863,6 +869,11 @@
     </div>
     <!-- Share Message end -->
     <script>
+                function redirectToPatientSearch(pageURL) {
+                        localStorage.setItem("redirectAfterPopup", pageURL);
+                        window.location.href = "/user-dashboard/dha-search-patient.html";
+                    }
+
     const upgradeBox = document.querySelector('.upgrade-box');
     const cdhaProfile = document.getElementById('cdha-profile');
     const userProfile = document.getElementById('user-profile');

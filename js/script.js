@@ -11,9 +11,9 @@ mouseBtn.addEventListener('click', () => {
 window.onload = function () {
     const animations = [
         { element: document.getElementById('members'), startValue: 4000, endValue: 5000, duration: 1500, addPlus: true },
-        { element: document.getElementById('hospitals-registered'), startValue: 800, endValue: 1000, duration: 1500, addPlus: false },
+        { element: document.getElementById('hospitals-registered'), startValue: 800, endValue: 1000, duration: 1500, addPlus: true },
         { element: document.getElementById('dha-courses'), startValue: 80, endValue: 100, duration: 1500, addPlus: true },
-        { element: document.getElementById('hospitals-registered2'), startValue: 800, endValue: 1000, duration: 1500, addPlus: false }
+        { element: document.getElementById('hospitals-registered2'), startValue: 800, endValue: 1000, duration: 1500, addPlus: true }
     ];
 
     animations.forEach(anim => {
