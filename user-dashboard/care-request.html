@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Add A Medicine</title>
+    <title>Health Monitor | Care Request</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/add-a-medicine.css" />
+    <link rel="stylesheet" href="css/care-request.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -553,10 +553,11 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content ps-4">
-                <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
-                    <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
-                </ul>
+                            <ul class="custom-bullets">
+                                <!-- <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
+                                                <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li> -->
+                                <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom active">Care Request</a></li>
+                            </ul>
             </div>
 
 
@@ -690,60 +691,73 @@
 
         <!-- Main Content -->
         <div class="main-content">
-            <h4 class="text-primary">Care Request Form</h4>
+            <h4 class="text-primary">Care Request</h4>
             <div class="bg-white p-4 rounded-2 mt-4">
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <input type="text" class="form-control" placeholder="First Name">
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <input type="text" class="form-control" placeholder="Last Name">
                     </div>
-                    <div class="col-12">
-                        <input type="date" class="form-control">
+                    <div class="col-12 col-md-4"">
+                        <input type="text" placeholder="Date of birth" class="form-control">
                     </div>
                     <div class="col-12">
                         <textarea placeholder="In your own words state your symptoms" class="form-control" id=""
                             cols="20" rows="5"></textarea>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <input type="text" class="form-control" placeholder="When did your symptoms start? ">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">When did your symptoms start?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <input type="text" class="form-control" placeholder="How long have you had these symptoms?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">How long have you had these symptoms?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Have you had this symptom before? If yes, how long did it last?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Have you had this symptom before? If yes, how long did it last?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="What treatment did you take for those previous symptoms?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">What treatment did you take for those previous symptoms?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="How would you rate your pain on a scale of 1 to 10? ">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">How would you rate your pain on a scale of 1 to 10?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Have your symptoms changed since they started? If yes, how? ">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Have your symptoms changed since they started? If yes, how?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="What do you think caused your symptoms?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Have your symptoms changed since they started? If yes, how?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="How would you rate your pain on a scale of 1 to 10? ">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">What do you think caused your symptoms?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Do you have any pre-existing medical conditions?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Do you have any pre-existing medical conditions?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Are you currently taking any medications? If yes, please list them.">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Are you currently taking any medications? If yes, please list them.</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Do you have any allergies? If yes, please specify">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Do you have any allergies? If yes, please specify.</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Have you experienced any recent hospitalizations or surgeries?">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Have you experienced any recent hospitalizations or surgeries?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Is there anything else you would like to mention regarding your">
+                    <div class="col-12 inp-container">
+                        <h5 class="my-2">Is there anything else you would like to mention regarding your health?</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
                     </div>
                     <div class="mt-4">
                         <button class="primary-btn">Submit</button>
