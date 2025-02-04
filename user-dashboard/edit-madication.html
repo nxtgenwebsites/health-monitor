@@ -837,7 +837,9 @@
                             <div class="d-flex gap-3">
                                 <button type="button" id="preview-button" class="primary-btn">Preview</button>
                                 <a href="/user-dashboard/medication.html"><button
-                                        class="primary-btn">Update</button></a>
+                                        class="primary-btn" id="upate-btn">Update</button></a>
+                                <a href="/user-dashboard/medication.html"><button
+                                        class="primary-btn" id="save-btn">Save</button></a>
                                 <a href="/user-dashboard/medication.html"><button
                                         class="primary-btn">Cancle</button></a>
                             </div>
@@ -1050,14 +1052,18 @@
 
         const isMedicationComplete = localStorage.getItem("madication-complete") === 'true';
         const formElements = document.querySelectorAll(".row input, .row select, .row textarea, .row button");
+        const saveBtn = document.getElementById('save-btn');
+        const updateBtn = document.getElementById('upate-btn');
 
         formElements.forEach(element => {
             if (isMedicationComplete) {
                 element.setAttribute("disabled", "true");
                 element.classList.add("disabled-type");
+                updateBtn.classList.add('d-none')
             } else {
                 element.removeAttribute("disabled");
                 element.classList.remove("disabled-type");
+                saveBtn.classList.add('d-none')
             }
         });
 
