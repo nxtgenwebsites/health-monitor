@@ -272,12 +272,16 @@ a {
 
 .inp-container h5{
   color: #666666;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .chk-container h5{
   color: #666666;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.disabled-inp{
+background: #e9ecef;
 }
 
 .inp-container textarea{
@@ -1838,4 +1842,16 @@ textarea.form-control {
 
 #previewModal {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.submitted-box {
+  max-width: 572px;
+  width: 100%;
+  padding: 40px 30px;
+}
+
+.submitted-box h5 {
+  font-size: 25px;
+  color: #00B67B;
+  font-weight: 500;
 }
