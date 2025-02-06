@@ -762,19 +762,22 @@
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">State any medication you are taking.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
+                        <select class="form-select" id="medication-dropdown">
+                            <option value="" disabled selected>Select</option>
+                            <option value="yes" class="form-option">Yes</option>
+                            <option value="no" class="form-option">No</option>
+                        </select>
                     </div>
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">State any allergies you have.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                        <textarea placeholder="Write your answer here." class="medication-dependent form-control"
                             disabled></textarea>
                     </div>
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">Give detail of any illness in the last 4 weeks.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                        <textarea placeholder="Write your answer here." class="medication-dependent form-control"
                             disabled></textarea>
                     </div>
 
@@ -1000,6 +1003,15 @@
     </div>
     <!-- Share Message end -->
     <script>
+        document.getElementById("medication-dropdown").addEventListener("change", function () {
+            let isYesSelected = this.value === "yes";
+            let dependentInputs = document.querySelectorAll(".medication-dependent");
+
+            dependentInputs.forEach(input => {
+                input.disabled = !isYesSelected; 
+            });
+        });
+
         document.getElementById("symptoms-dropdown").addEventListener("change", function () {
             let isYesSelected = this.value === "yes";
             let dependentInputs = document.querySelectorAll(".symptom-dependent");
