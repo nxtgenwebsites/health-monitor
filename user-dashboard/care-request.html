@@ -553,11 +553,12 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content ps-4">
-                            <ul class="custom-bullets">
-                                <!-- <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
+                <ul class="custom-bullets">
+                    <!-- <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
                                                 <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li> -->
-                                <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom active">Care Request</a></li>
-                            </ul>
+                    <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom active">Care Request</a>
+                    </li>
+                </ul>
             </div>
 
 
@@ -695,69 +696,106 @@
             <div class="bg-white p-4 rounded-2 mt-4">
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <input type="text" class="form-control" placeholder="First Name">
+                        <input type="text" class="form-control" value="Bahdon" placeholder="First Name" readonly>
                     </div>
                     <div class="col-12 col-md-4">
-                        <input type="text" class="form-control" placeholder="Last Name">
+                        <input type="text" class="form-control" value="Peter" placeholder="Last Name" readonly>
                     </div>
                     <div class="col-12 col-md-4"">
-                        <input type="text" placeholder="Date of birth" class="form-control">
+                        <input type=" date" value="2005-01-01" class="form-control" readonly>
                     </div>
                     <div class="col-12">
                         <textarea placeholder="In your own words state your symptoms" class="form-control" id=""
                             cols="20" rows="5"></textarea>
                     </div>
-                    <div class="col-12 inp-container">
+                    <div class="col-12 col-md-6 inp-container">
                         <h5 class="my-2">When did your symptoms start?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <input type="date" id="startDate" class="form-control" />
                     </div>
-                    <div class="col-12 inp-container">
+                    <div class="col-12 col-md-6 inp-container">
                         <h5 class="my-2">How long have you had these symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <input id="duration" class="form-control text-area" readonly disabled />
                     </div>
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Have you had this symptom before? If yes, how long did it last?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                    <div class="col-12 col-md-6 inp-container">
+                        <h5 class="my-2">Have you had this symptom before?</h5>
+                        <select class="form-select" id="symptoms-dropdown">
+                            <option value="" disabled selected>Select</option>
+                            <option value="yes" class="form-option">Yes</option>
+                            <option value="no" class="form-option">No</option>
+                        </select>
                     </div>
+
+                    <div class="col-12 col-md-6 inp-container">
+                        <h5 class="my-2">How long did it last?</h5>
+                        <input type="date" class="form-control symptom-dependent" disabled>
+                    </div>
+
                     <div class="col-12 inp-container">
                         <h5 class="my-2">What treatment did you take for those previous symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
                         <h5 class="my-2">How would you rate your pain on a scale of 1 to 10?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Have your symptoms changed since they started? If yes, how?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">Describe any changes in the symptom since it started.</h5>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Have your symptoms changed since they started? If yes, how?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
-                    </div>
+
                     <div class="col-12 inp-container">
                         <h5 class="my-2">What do you think caused your symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Do you have any pre-existing medical conditions?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">Describe any existing health issues.</h5>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Are you currently taking any medications? If yes, please list them.</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">State any medication you are taking.</h5>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Do you have any allergies? If yes, please specify.</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">State any allergies you have.</h5>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Have you experienced any recent hospitalizations or surgeries?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">Give detail of any illness in the last 4 weeks.</h5>
+                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
+                            disabled></textarea>
                     </div>
+
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">Is there anything else you would like to mention regarding your health?</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area" ></textarea>
+                        <h5 class="my-2">What help do you need with this symptoms</h5>
+                        <textarea placeholder="Write your answer here." class="form-control text-area"></textarea>
+                    </div>
+                    <div class="col-12 chk-container d-flex gap-5 align-items-center">
+                        <h5 class="my-2">In order for healthcare professionals to understand your situation better, it
+                            is advisable to add your last 4 weeks
+                            health monitor scores with this care request, are you happy for them to be included?</h5>
+                        <div class="d-flex gap-4">
+                            <div class="form-check mb-0">
+                                <input type="radio" name="remote-care" class="form-check-input" id="yes">
+                                <label class="form-check-label" for="yes">yes</label>
+                            </div>
+                            <div class="form-check mb-0">
+                                <input type="radio" name="remote-care" class="form-check-input" id="no">
+                                <label class="form-check-label" for="no">No</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-4">
                         <button class="primary-btn">Submit</button>
@@ -962,6 +1000,55 @@
     </div>
     <!-- Share Message end -->
     <script>
+        document.getElementById("symptoms-dropdown").addEventListener("change", function () {
+            let isYesSelected = this.value === "yes";
+            let dependentInputs = document.querySelectorAll(".symptom-dependent");
+
+            dependentInputs.forEach(input => {
+                input.disabled = !isYesSelected; // Enable if "Yes", Disable if "No"
+            });
+        });
+
+        document.getElementById("startDate").addEventListener("change", function () {
+            let startDate = new Date(this.value);
+            let today = new Date();
+            today.setHours(0, 0, 0, 0); // Ensure time doesn't affect comparison
+
+            let durationInput = document.getElementById("duration");
+
+            if (startDate > today) {
+                alert("Future dates cannot be selected.");
+                this.value = "";
+                durationInput.value = "";
+                durationInput.disabled = true;
+                return;
+            }
+
+            durationInput.disabled = false; // Enable input
+
+            let years = today.getFullYear() - startDate.getFullYear();
+            let months = today.getMonth() - startDate.getMonth();
+            let days = today.getDate() - startDate.getDate();
+
+            if (days < 0) {
+                months--;
+                let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            let durationText = "";
+            if (years > 0) durationText += years + (years > 1 ? " years " : " year ");
+            if (months > 0) durationText += months + (months > 1 ? " months " : " month ");
+            if (days > 0) durationText += days + (days > 1 ? " days" : " day");
+
+            durationInput.value = durationText.trim();
+        });
+
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
