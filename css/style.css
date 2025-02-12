@@ -71,6 +71,10 @@ body {
 /* Loading Screen End*/
 
 /* Navbar Start*/
+.navbar-brand img{
+  width: 150px !important;
+  height: 100px !important;
+}
 .navbar {
   height: 120px;
 }
@@ -361,84 +365,6 @@ body {
 
 /* Review End */
 
-/* Fact Start */
-
-.fact-content h1 {
-  font-weight: 800;
-  font-size: 40px;
-}
-.fact-content p {
-  margin: 30px 0;
-  font-size: 18px;
-}
-
-.fact-content button {
-  width: 225px;
-  height: 40px;
-  padding: 0 !important;
-}
-
-.fact-checker-btn {
-   padding: 3px 33px;
-  border-radius: 50px;
-  color: var(--white-color) !important;
-  font-size: 18px;
-  outline: none !important;
-background: linear-gradient(275.33deg, #0F75BD 3.69%, #21ABE9 99.26%);
-}
-.fact-checker-span{
-  color: #0B6FC0;
-  font-style: italic;
-  font-weight: 500;
-}
-/* Fact End */
-
-/* Blog Start */
-.blog-section {
-  padding: 130px 0;
-}
-
-.blog-heading h6 {
-  color: #2aa7ff !important;
-}
-
-.blog-heading h1 {
-  color: #1B3C74 !important;
-}
-.blog-card {
-  background: white;
-  border-radius: 7px;
-}
-
-.blog-content {
-  padding: 10px;
-}
-
-.blog-info span {
-  color: var(--light-gray);
-}
-
-.blog-content h4 {
-  color: #1b3c74;
-  font-size: 19px;
-}
-
-.blog-content h4 {
-  color: #1b3c74;
-  font-size: 19px;
-}
-
-.blog-user span {
-  font-size: 18px;
-  color: #1b3c74;
-}
-.blog-info span:nth-child(2){
-  color: #DDDDDD;
-  margin: 0 7px;
-}
-
-/* Blog End */
-
 /* demo video Start */
 
 .demo-video {
@@ -463,7 +389,7 @@ background: linear-gradient(275.33deg, #0F75BD 3.69%, #21ABE9 99.26%);
 
 /* Footer start */
 .footer-content {
-  margin-top: -30px !important;
+  margin-top: -15px !important;
 }
 
 .footer-content p {

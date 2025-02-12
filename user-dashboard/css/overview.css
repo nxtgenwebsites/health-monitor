@@ -2110,3 +2110,11 @@ color: #6B7280;
     height: auto;
     min-height: calc(100vh - 180px);
 }
+
+.card-link-left {
+    text-align: right;
+}
+
+.card-link-left a{
+    cursor: pointer;
+}
