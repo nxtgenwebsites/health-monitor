@@ -1954,9 +1954,7 @@ body {
   width: 145px !important;
   height: 125px !important;
 }
-z
-
-.notification-icon img {
+z .notification-icon img {
   width: 26px !important;
   height: 30px !important;
 }
@@ -2057,7 +2055,6 @@ z
   height: 370px;
 }
 
-
 /* Main Contant Start  */
 .main-content {
   flex: 1;
@@ -2066,12 +2063,12 @@ z
   min-width: 0;
 }
 
-.result-container{
-    background: white;
-    height: 100%;
-    border-radius: 15px;
-    padding: 30px 20px;
-} 
+.result-container {
+  background: white;
+  height: 100%;
+  border-radius: 15px;
+  padding: 30px 20px;
+}
 
 .search-icon i {
   font-size: 18px;
@@ -2114,40 +2111,45 @@ z
 }
 
 /* Result Card  */
-.result-card{
-    background: #DDF2F9;
-    padding: 12px 24px;
-    border-radius: 10px;
-    margin-top: 20px;
-    cursor: pointer;
+.result-card {
+  background: #ddf2f9;
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .result-card span {
-    font-weight: 300;
-    font-size: 14px;
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.result-card h5{
-    font-size: 17px;
-    font-weight: 500;
+.result-card h5 {
+  font-size: 17px;
+  font-weight: 500;
 }
 
-.result-card button{
-    border: none;
-    background: white;
-    padding: 5px 20px;
-    color: #0C74C2;
-    border-radius: 5px;
+.result-card button {
+  border: none;
+  background: white;
+  padding: 5px 20px;
+  color: #0c74c2;
+  border-radius: 5px;
 }
 
-
-.profile-box-content h5{
-    font-weight: 500;
-    color: #0C74C2;
+.profile-box-content h5 {
+  font-weight: 500;
+  color: #0c74c2;
 }
 
 .patient-profile-box {
-max-width: 450px;
+  max-width: 450px;
   width: 100%;
   padding: 40px 30px;
+}
+
+.patient-search-box {
+  max-width: 450px;
+  width: 100%;
+  padding: 30px 30px;
 }

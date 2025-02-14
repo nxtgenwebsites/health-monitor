@@ -507,26 +507,26 @@
                 </div>
             </a>
 
-                        <a href="/user-dashboard/emergency.html">
-                            <div class="menu-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
-                                    class="icon sidebar-icon">
-                                    <path
-                                        d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
-                                        fill="#9197B3" />
-                                    <path
-                                        d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
-                                        fill="#9197B3" />
-                                    <path
-                                        d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
-                                        fill="#9197B3" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
-                                        fill="#9197B3" />
-                                </svg>
-                                <span class="menu-text">Emergency</span>
-                            </div>
-                        </a>
+            <a href="/user-dashboard/emergency.html">
+                <div class="menu-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                        class="icon sidebar-icon">
+                        <path
+                            d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
+                            fill="#9197B3" />
+                        <path
+                            d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
+                            fill="#9197B3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
+                            fill="#9197B3" />
+                    </svg>
+                    <span class="menu-text">Emergency</span>
+                </div>
+            </a>
 
             <!-- Patient Dropdown -->
             <div class="menu-item-dropdown active" id="patient-drop-down">
@@ -553,7 +553,8 @@
             <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/dha-add-patient.html" class="dropdown-item-custom">Add New</a></li>
-                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom active">Find Patient</a>
+                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom active">Find
+                            Patient</a>
                     </li>
                 </ul>
             </div>
@@ -722,12 +723,12 @@
                             <i class="bi bi-record-circle-fill"></i>
                         </span>
                         <input type="text" placeholder="Search">
-                        <div class="">
+                        <button class="bg-transparent p-0 border-0" id="search-result">
                             <img src="assets/search icon.svg" alt="">
-                        </div>
+                        </button>
                     </div>
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 d-none" id="result-container">
                     <div class="result-card d-flex justify-content-between align-items-center w-100">
                         <div>
                             <span>Female, 34</span>
@@ -821,7 +822,28 @@
         </div>
 
         <!-- Patient Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="patient-search-box">
+            <div class="patient-search-box bg-white rounded text-center position-relative w-100">
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input type="text" class="form-control" placeholder="Last Name" required>
+                        </div>
+                        <div class="col-12 col-md-12 mt-4">
+                            <input type="date" class="form-control" placeholder="Date of birth" required>
+                        </div>
+                        <div class="mt-4">
+                            <button class="primary-btn">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
+        <!-- Patient Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="patient-profile-box">
             <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
                 <div>
@@ -1005,6 +1027,29 @@
             cdhaProfile.classList.add('d-lg-none');
             cdhaProfile.classList.add('d-lg-none');
         }
+
+
+
+        const searchResult = document.getElementById('search-result');
+        const searchPopup = document.getElementById('patient-search-box');
+        const searchForm = document.getElementById('search-form');
+        const resultContainer = document.getElementById('result-container')
+
+        searchResult.addEventListener(('click') , () => {
+            searchPopup.classList.remove('d-none')    
+        })
+        
+        searchForm.addEventListener(('submit') , (e) => {
+            e.preventDefault()
+            searchPopup.classList.add('d-none')    
+            resultContainer.classList.remove('d-none')    
+        })
+        
+        searchPopup.addEventListener(('click') , (e) => {
+            if (e.target === searchPopup) {
+                searchPopup.classList.add('d-none')    
+            }
+        })
 
         let inactivityTime = 120000;
         let timeout;
