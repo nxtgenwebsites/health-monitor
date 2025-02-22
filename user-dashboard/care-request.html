@@ -491,7 +491,7 @@
 
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
-                <div class="menu-item active">
+                <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
@@ -559,7 +559,7 @@
                 </ul>
             </div>
             <!-- Symptom Checker Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
@@ -580,11 +580,12 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4">
+            <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
                     <!-- <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
                                                 <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li> -->
-                    <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom active">Care Request</a>
+                        <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom active">Care Request</a></li>
+                        <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage Care Requests</a></li>
                     </li>
                 </ul>
             </div>
@@ -723,10 +724,10 @@
                 <a href="/user-dashboard/care-request.html">
                     <h4 class="active">Care Request</h4>
                 </a>
-                <a href="upload-details.html">
+                <a href="/user-dashboard/upload-details.html">
                     <h4>Upload Details</h4>
                 </a>
-                <a href="">
+                <a href="/user-dashboard/grant-access.html">
                     <h4>Grant Access</h4>
                 </a>
             </div>
@@ -834,23 +835,10 @@
                     </div>
                     <div class="mt-5 d-flex gap-4">
                         <button class="primary-btn" id="submit-btn">Submit</button>
-                        <button class="primary-btn">Next</button>
+                        <a href="/user-dashboard/upload-details.html">
+                            <button class="primary-btn">Next</button>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Form Submitted Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="submitted-popup">
-            <div class="submitted-box bg-white rounded text-center position-relative ">
-                <h5 class="my-3 test-primary">Care Request Submitted</h5>
-                <p class="my-3">Your care request has been submitted successfully. Please check your registered email.
-                </p>
-                <div class="d-flex  gap-4 justify-content-center mt-4">
-                    <button class="popup-btn" id="submitted-back">Back</button>
-                </div>
-                <div class="close-btn">
-                    <button class="btn border-0" type="submit" id="submitted-close"><img src="assets/icons/close.svg"
-                            alt="close"></button>
                 </div>
             </div>
         </div>
@@ -1260,35 +1248,6 @@
             document.body.removeChild(tempInput);
             alert("Link copied to clipboard.");
         });
-
-        const submitBtn = document.getElementById('submit-btn');
-        const submittedPopup = document.getElementById('submitted-popup');
-        const submittedBack = document.getElementById('submitted-back');
-        const submittedClose = document.getElementById('submitted-close');
-
-
-
-        submittedClose.addEventListener(('click'), () => {
-            submittedPopup.classList.add('d-none');
-        })
-
-        submittedBack.addEventListener(('click'), () => {
-            submittedPopup.classList.add('d-none');
-        })
-
-        submitBtn.addEventListener(('click'), () => {
-            submittedPopup.classList.add('d-none');
-        })
-
-        submittedPopup.addEventListener(('click'), (e) => {
-            if (e.target === submittedPopup) {
-                submittedPopup.classList.add('d-none');
-            }
-        })
-
-        submitBtn.addEventListener(('click'), () => {
-            submittedPopup.classList.remove('d-none');
-        })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>

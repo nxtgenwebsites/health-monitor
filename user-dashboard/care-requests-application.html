@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Overview</title>
+    <title>Health Monitor | Care Request</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/search-patient.css">
+    <link rel="stylesheet" href="css/manage-care-request.css">
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
-
+    <link rel="stylesheet" href="css/navbar.css">
+    <style>
+        /* Font Imports */
+    </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- This is the Updated HTML FILE -->
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <img src="assets/logo.png" alt="Health Monitor" class="logo">
+                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -320,17 +323,18 @@
                     <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                     Monitors
                 </a>
-                <i class="bi bi-phone"></i>
                 <div class="dropdown">
                     <button id="remote-care-dropdown"
                         class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
                         <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
                             <span>Remote Care</span>
                         </div>
                         <div class="dropdown-toggle"></div>
                     </button>
                     <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                                                                           <li class=" dropdown-item remote-care-btn">
+                                                                                       <li class=" dropdown-item
+                        remote-care-btn">
                         Call DHA</li>
                         <li class="dropdown-item remote-care-btn">Call Nurse</li>
                         <li class="dropdown-item remote-care-btn">Call Doctor</li>
@@ -395,8 +399,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
@@ -490,7 +492,7 @@
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
                 <div class="menu-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
                             <path
@@ -503,7 +505,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="menu-text">Overview</span>
+                    <span class="menu-text">Dashboard</span>
                 </div>
             </a>
 
@@ -527,9 +529,8 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-
             <!-- Patient Dropdown -->
-            <div class="menu-item-dropdown active" id="patient-drop-down">
+            <div class="menu-item-dropdown" id="patient-drop-down">
                 <div class="menu-icon-wrapper">
                     <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24"
                         viewBox="0 0 46 47" fill="none">
@@ -550,16 +551,15 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4 show">
+            <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/dha-add-patient.html" class="dropdown-item-custom">Add New</a></li>
-                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom active">Find
-                            Patient</a>
+                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom">Find Patient</a>
                     </li>
                 </ul>
             </div>
             <!-- Symptom Checker Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
@@ -576,18 +576,21 @@
                             d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text">Symptoms Checker</span>
+                    <span class="menu-text">Symptoms</span>
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
+            <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
                     <!-- <li><a href="/user-dashboard/symptom-checker.html" class="dropdown-item-custom">Summariser</a></li>
                                                 <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li> -->
-                     <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom">Care Request</a></li>
-                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage Care Requests</a></li>
+                    <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom">Care Request</a></li>
+                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom active">Manage Care Requests</a></li>
+                    </li>
                 </ul>
             </div>
+
+
 
             <!-- Health Monitors Dropdown -->
             <div class="menu-item-dropdown">
@@ -607,11 +610,11 @@
                             d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text">Health Monitors</span>
+                    <span class="menu-text">Monitors</span>
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
+            <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
                     <li id="patient-link"><a class="dropdown-item-custom"
                             onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
@@ -658,16 +661,23 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content">
-                <a href="/user-dashboard/faq.html" class="dropdown-item-custom">Help</a>
-                <a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
-                <a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a>
-                <a href="/user-dashboard/Medical-Labs.html" class="dropdown-item-custom">Medical Labs</a>
-                <a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a>
-                <a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a>
-                <a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Find DHA</a>
-                <a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">DHA Training</a>
-                <a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
+                    <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a></li>
+                    <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a></li>
+                    <span class="dropdown-item-custom community-text w-100">Community Digital Health Assistants
+                        (CDHA)</span>
+                    <div class="px-4">
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
+                        <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+                    </div>
+                    <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
+                    <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
+                    <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
+                    <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                    </li>
+                </ul>
             </div>
 
             <a href="/user-dashboard/health-info.html">
@@ -689,20 +699,15 @@
 
             <!-- <a href="/user-dashboard/user-transfer.html">
                 <div class="menu-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M20 10H4L9.5 4" stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M4 14H20L14.5 20" stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                    <span class="menu-text">Transfer</span>
+                    <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    <span class="menu-text">Transfers</span>
                 </div>
             </a> -->
 
             <!-- Upgrade Box -->
-            <div class="upgrade-box" id="upgrade-box">
-                <h5 class="upgrade-text">Upgrade to DHA now & Support Others!</h5>
-                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get DHA Now!</a>
+            <div class="upgrade-box">
+                <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
+                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
             </div>
 
             <!-- Logout Button -->
@@ -712,173 +717,302 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <!-- Main Content -->
         <div class="main-content">
-            <div class="result-container">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div>
-                        <h3 class="dashboard-title mb-1">Search results</h3>
+            <div class="page-heading">
+                <h4>Care Requests Application</h4>
+            </div>
+            <div class="mt-4">
+                <div class="request-box">
+                    <div class="d-flex justify-content-between align-items-center text-primary request-info">
+                        <h6 class="mb-0">Request ID: 321654</h6>
+                        <h6 class="mb-0">Created: 01 Jan, 2025</h6>
                     </div>
-                    <div class="dha-searchbar">
-                        <span class="search-icon">
-                            <i class="bi bi-record-circle-fill"></i>
+                    <div class="mt-3">
+                        <p>
+                            Having high temperature for two days, no previous case or symptoms, pain 8/10. Lorem ipsum
+                            is non-localized, pseudo
+                            Latin sample text that is often hold in design and publishing. To inset lorem ipsum text in
+                            word, type where you want
+                            the text to appear. The test results and everything indicate lorem ipsum lorem ipsum
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-4 request-status">
+                        <h6 class="mb-0">Status</h6>
+                        <div class="dropdown request-dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Symptoms Off
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Symptoms On</a></li>
+                                <li><a class="dropdown-item" href="#">Symptoms Off</a></li>
+                                <li><a class="dropdown-item" href="#">Symptoms Treated</a></li>
+                                <li><a class="dropdown-item" href="#">Treating Symptoms</a></li>
+                                <li><a class="dropdown-item" href="#">Cancelled</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="monitor-section">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="monitor-title">Blood Pressure</h4>
+                            <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                        </div>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center text-primary">Highest</th>
+                                    <th class="text-center text-primary">Average</th>
+                                    <th class="text-center text-primary">Lowest</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Systolic</td>
+                                    <td class="text-center">123</td>
+                                    <td class="text-center">87</td>
+                                    <td class="text-center">100</td>
+                                </tr>
+                                <tr>
+                                    <td>Diastolic</td>
+                                    <td class="text-center">154</td>
+                                    <td class="text-center">96</td>
+                                    <td class="text-center">85</td>
+                                </tr>
+                                <tr>
+                                    <td>Pulse</td>
+                                    <td class="text-center">123</td>
+                                    <td class="text-center">87</td>
+                                    <td class="text-center">100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="monitor-section">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="monitor-title">Diabetes</h4>
+                            <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                        </div>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center text-primary">Highest</th>
+                                    <th class="text-center text-primary">Average</th>
+                                    <th class="text-center text-primary">Lowest</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sugar Level</td>
+                                    <td class="text-center">123</td>
+                                    <td class="text-center">87</td>
+                                    <td class="text-center">100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="monitor-section">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="monitor-title">Medication</h4>
+                            <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                        </div>
+                        <table class="monitor-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center text-primary">Dose</th>
+                                    <th class="text-center text-primary">Frequency</th>
+                                    <th class="text-center text-primary">Started</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ProsPane</td>
+                                    <td class="text-center">10mg</td>
+                                    <td class="text-center">Once a day</td>
+                                    <td class="text-center">24 Dec, 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex gap-3 mt-5">
+                    <div class="view-box">
+                        <span>
+                            Click to view results
                         </span>
-                        <input type="text" placeholder="Search">
-                        <button class="bg-transparent p-0 border-0" id="search-result">
-                            <img src="assets/search icon.svg" alt="">
-                        </button>
+                    </div>
+                    <div class="view-box">
+                        <span>
+                            Click to view image
+                        </span>
                     </div>
                 </div>
-                <div class="mt-5 d-none" id="result-container">
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-3">
-                            <div>
-                                <img src="assets/patient.png" alt="patient">
+                <div class="mt-5">
+                    <div class="user-comment">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-3 gap-2">
+                                <div>
+                                    <img src="assets/Ellipse 336.png" alt="USER">
+                                </div>
+                                <div class="user-info">
+                                    <h5>User xyz_abc</h5>
+                                    <h6>01 Jan, 2025</h6>
+                                </div>
                             </div>
-                            <div class="mt-2">
-                                <h5>Ronaldo Jr</h5>
+                            <div class="request-type">
+                                <h6>Report</h6>
                             </div>
                         </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
-                        </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
+                        <div class="user-comment mt-4">
+                            <p>Having high temperature for two days, no previous case or symptoms, pain 8/10. Lorem
+                                ipsum is non-localized, pseudo
+                                Latin sample text that is often hold in design and publishing. To inset lorem ipsum text
+                                in word, type where you want
+                                the text to appear. The test results and everything indicate lorem ipsum lorem ipsum</p>
+                            <div class="d-flex justify-content-between align-items-center action-btns">
+                                <div class="d-flex gap-2">
+                                    <div class="like d-flex gap-2 align-items-center">
+                                        <img src="assets/bxs_like.svg" alt="LIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                    <div class="dislike d-flex gap-2 align-items-center">
+                                        <img src="assets/dislike.svg" alt="DISLIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                    <div class="comment d-flex gap-2 align-items-center">
+                                        <img src="assets/comment.svg" alt="COMMENT">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                </div>
+                                <div class="reply">
+                                    <span class="text-decoration-underline mb-0">Reply</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-3">
-                            <div>
-                                <img src="assets/patient.png" alt="patient">
+                    <div class="user-reply">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-3 gap-2">
+                                <div>
+                                    <img src="assets/Ellipse 337.png" alt="USER">
+                                </div>
+                                <div class="user-info">
+                                    <h5>User xyz_abc</h5>
+                                    <h6>01 Jan, 2025</h6>
+                                </div>
                             </div>
-                            <div class="mt-2">
-                                <h5>Ronaldo Jr</h5>
+                            <div class="request-type">
+                                <h6>Report</h6>
                             </div>
                         </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
-                        </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
+                        <div class="user-comment mt-4">
+                            <p>Having high temperature for two days, no previous case or symptoms, pain 8/10. Lorem
+                                ipsum is non-localized, pseudo
+                                Latin sample text that is often hold in design and publishing. To inset lorem ipsum text
+                                in word, type where you want
+                                the text to appear. The test results and everything indicate lorem ipsum lorem ipsum</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="like d-flex gap-2 align-items-center">
+                                        <img src="assets/bxs_like.svg" alt="LIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                    <div class="dislike d-flex gap-2 align-items-center">
+                                        <img src="assets/dislike.svg" alt="DISLIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                </div>
+                                <div class="reply">
+                                    <span class="text-decoration-underline mb-0">Reply</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-3">
-                            <div>
-                                <img src="assets/patient.png" alt="patient">
+                    <div class="user-comment">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-3 gap-2">
+                                <div>
+                                    <img src="assets/Ellipse 336.png" alt="USER">
+                                </div>
+                                <div class="user-info">
+                                    <h5>User xyz_abc</h5>
+                                    <h6>01 Jan, 2025</h6>
+                                </div>
                             </div>
-                            <div class="mt-2">
-                                <h5>Ronaldo Jr</h5>
+                            <div class="request-type">
+                                <h6>Report</h6>
                             </div>
                         </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
-                        </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
+                        <div class="user-comment mt-4">
+                            <p>Having high temperature for two days, no previous case or symptoms, pain 8/10. Lorem
+                                ipsum is non-localized, pseudo
+                                Latin sample text that is often hold in design and publishing. To inset lorem ipsum text
+                                in word, type where you want
+                                the text to appear. The test results and everything indicate lorem ipsum lorem ipsum</p>
+                            <div class="d-flex justify-content-between align-items-center action-btns">
+                                <div class="d-flex gap-2">
+                                    <div class="like d-flex gap-2 align-items-center">
+                                        <img src="assets/bxs_like.svg" alt="LIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                    <div class="dislike d-flex gap-2 align-items-center">
+                                        <img src="assets/dislike.svg" alt="DISLIKE">
+                                        <h6 class="mb-0">1</h6>
+                                    </div>
+                                </div>
+                                <div class="reply">
+                                    <span class="text-decoration-underline mb-0">Reply</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="result-card d-flex justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-3">
-                            <div>
-                                <img src="assets/patient.png" alt="patient">
-                            </div>
-                            <div class="mt-2">
-                                <h5>Ronaldo Jr</h5>
-                            </div>
-                        </div>
-                        <div>
-                            <span>Niger state Nigeria</span>
-                        </div>
-                        <div>
-                            <span>9th June, 2024</span>
-                        </div>
-                        <div>
-                            <button>200 Activities</button>
-                        </div>
+                    <div class="mt-5 reply-inp-container position-relative">
+                        <textarea class="w-100" placeholder="write your reply here"></textarea>
+                        <button class="send-btn"><img src="assets/send-icon.svg" alt="Send"></button>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Patient Profile Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="patient-search-box">
-            <div class="patient-search-box bg-white rounded text-center position-relative w-100">
-                <form id="search-form">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" placeholder="Full Name" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" placeholder="Last Name" required>
-                        </div>
-                        <div class="col-12 col-md-12 mt-4">
-                            <input type="date" class="form-control" placeholder="Date of birth" required>
-                        </div>
-                        <div class="mt-4">
-                            <button class="primary-btn">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Patient Profile Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="patient-profile-box">
-            <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
-                <div>
-                    <img src="assets/patient profile pic.png" alt="Profile Pic">
-                </div>
-                <div class="mt-4 profile-box-content">
-                    <h5>Ms. Randy Orton</h5>
-                    <h6>34 years, Female</h6>
-                    <h6>20 Richard Street  Enugu</h6>
-                    <h6>Registered on 12 January 2024</h6>
-                    <h6>200 Activities performed</h6>
-                </div>
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <button class="popup-btn" id="profile-cancle-btn">Cancel</button>
-                    <button class="popup-btn" id="select-popup-btn">Select</button>
                 </div>
             </div>
         </div>
-
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
-                <h5 class="mt-3">Share My Profile</h5>
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6>Copy Link</h6>
-                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+                    <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
-                        <button class="btn py-0 bg-white border-0">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                        <button class="btn py-0 bg-white border-0">
-                            <img src="assets/share.svg" alt="icon">
-                        </button>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="close-btn">
@@ -951,106 +1085,121 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
+    <div class="modal fade show d-none" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel"
+        aria-modal="true" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content preview-modal">
+                <!-- Close button -->
+                <button type="button" id="btn-close preview" class="btn-close preview-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+
+                <!-- Modal body -->
                 <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <h2 class="modal-title fw-bold mb-3"
-                            style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
-                            Alert: Blood Pressure Threshold Exceeded
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
-                            Your blood pressure readings have surpassed the threshold.
-                            <br>
-                            Immediate action is required. Please contact your healthcare
-                            provider or seek medical attention immediately.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
-                            onclick="switchModals()">
-                            Call Now
-                        </button>
+                    <!-- Title -->
+                    <h2 class="preview-title">Panadol - Completed</h2>
+
+                    <!-- Prescribed by -->
+                    <p class="preview-text">Prescribed by Dr. Mannu</p>
+
+                    <!-- Date Range -->
+                    <p class="preview-text">
+                        <span class="fst-italic">From</span> Tues, 12 June, 2024
+                        <span class="fst-italic">To</span> Tues, 12 July, 2024
+                    </p>
+
+                    <!-- History Section -->
+                    <div class="preview-history">
+                        <h3 class="preview-history-title">History</h3>
+
+                        <div class="timeline-entries">
+                            <div class="timeline-entry">
+                                <span>Tues, 12 June, 2024</span>
+                                <span>11:30 am</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 17 June 2024</span>
+                                <span>12:00 pm</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 25 June 2024</span>
+                                <span>01:30 pm</span>
+                            </div>
+                            <div class="timeline-entry fst-italic" id="addagain">
+                                Add Record
+                            </div>
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <button class="popup-btn mt-4">Live</button>
+                                <div class="preview-actions">
+                                    <a href="add-a-medicine.html">
+                                        <button class="action-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </a>
+                                    <div class="share-icon">
+                                        <i class="bi bi-share"></i>
+                                        <div class="share-dropdown">
+                                            <button class="share-dropdown-item">Forward</button>
+                                            <button class="share-dropdown-item">Print</button>
+                                            <button class="share-dropdown-item">Download Pdf</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- Action buttons -->
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 30px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
-                            No Paired Device!
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
-                            You haven't paired any device to Call your Remote Care DHA.
-                            <br>
-                            Please connect a device to make a call.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
-                            data-bs-dismiss="modal">
-                            Go Back
-                        </button>
-                    </div>
-                </div>
+
+    <!-- Share Message start -->
+    <div class="share-message">
+        <div class="share-card p-3">
+            <div class="share-img text-end">
+                <i class="bi-regular bi-x-lg"></i>
+            </div>
+            <div class="share-heading text-center my-4">
+                <h4>Share My Profile</h4>
+            </div>
+            <div class="share-content d-flex">
+                <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                <a href="#"
+                    class="text-decoration-underline text-black mx-auto">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</a>
+                <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
             </div>
         </div>
-    </div> -->
+    </div>
+    <!-- Share Message end -->
     <script>
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
         }
 
+        const upgradeBox = document.querySelector('.upgrade-box');
         const cdhaProfile = document.getElementById('cdha-profile');
-        const userProfile = document.getElementById('user-profile')
+        const userProfile = document.getElementById('user-profile');
 
         const patientLink = document.getElementById('patient-link');
         const patientDropDown = document.getElementById('patient-drop-down');
 
-        const checkUsers = localStorage.getItem('dha-user');
+        const checkUser = localStorage.getItem('dha-user')
 
-        if (checkUsers === 'true') {
-            patientLink.classList.add('d-none')
-            // upgradeBox.classList.add('d-none');
+        if (checkUser === 'true') {
+            upgradeBox.classList.add('d-none');
             userProfile.classList.add('d-lg-none');
+            patientLink.classList.add('d-none')
+
         } else {
-            // upgradeBox.classList.remove('d-none');
-            cdhaProfile.classList.add('d-lg-none');
+            upgradeBox.classList.remove('d-none');
+            patientDropDown.classList.add('d-none')
             cdhaProfile.classList.add('d-lg-none');
         }
-
-
-
-        const searchResult = document.getElementById('search-result');
-        const searchPopup = document.getElementById('patient-search-box');
-        const searchForm = document.getElementById('search-form');
-        const resultContainer = document.getElementById('result-container')
-
-        searchResult.addEventListener(('click') , () => {
-            searchPopup.classList.remove('d-none')    
-        })
-        
-        searchForm.addEventListener(('submit') , (e) => {
-            e.preventDefault()
-            searchPopup.classList.add('d-none')    
-            resultContainer.classList.remove('d-none')    
-        })
-        
-        searchPopup.addEventListener(('click') , (e) => {
-            if (e.target === searchPopup) {
-                searchPopup.classList.add('d-none')    
-            }
-        })
 
         let inactivityTime = 120000;
         let timeout;
@@ -1071,9 +1220,39 @@
         document.addEventListener("click", resetTimer);
 
         resetTimer();
+
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
+        const previewBtn = document.getElementById('preview-button');
+
+
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -1083,25 +1262,6 @@
             shareProfilePopup.classList.remove('d-none');
             shareProfilePopup.classList.add('d-flex');
         })
-
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
-
-        // Medication Preview Modal
-        document.addEventListener('DOMContentLoaded', function () {
-            const previewBtns = document.querySelectorAll('.btn-preview');
-
-            previewBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-                    const medicationName = this.textContent;
-                    const modalTitle = document.querySelector('.preview-title');
-                    modalTitle.textContent = `${medicationName} - Completed`;
-                    previewModal.show();
-                });
-            });
-        });
 
         document.addEventListener("DOMContentLoaded", () => {
             const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
@@ -1134,63 +1294,45 @@
             addImgPupup.classList.add('d-none')
         })
 
-        const profilePopup = document.getElementById('patient-profile-box');
-        const profileCancleBtn = document.getElementById('profile-cancle-btn');
-        const resultCard = document.querySelectorAll('.result-card');
-
-
-        for (let i = 0; i < resultCard.length; i++) {
-            resultCard[i].addEventListener(('click'), () => {
-                profilePopup.classList.remove('d-none')
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
             })
         }
 
-        profileCancleBtn.addEventListener(('click'), () => {
-            profilePopup.classList.add('d-none')
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
         })
-        profilePopup.addEventListener(('click'), (e) => {
-            if (e.target === profilePopup) {
-                profilePopup.classList.add('d-none')
-            }
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
         })
 
-
-        // CDHA Dashbord 
-        const upgradeBox = document.getElementById('upgrade-box');
-        const checkUser = localStorage.getItem('dha-user')
-
-        console.log(typeof checkUser);
-
-        if (checkUser === 'true') {
-            upgradeBox.classList.add('d-none');
-        } else {
-            upgradeBox.classList.remove('d-none');
-        }
-
-        const selectBtn = document.getElementById('select-popup-btn');
-
-        selectBtn.addEventListener("click", () => {
-            let redirectURL = localStorage.getItem("redirectAfterPopup");
-
-            if (redirectURL) {
-                window.location.href = redirectURL;
-                localStorage.setItem("redirectAfterPopup", "/user-dashboard/dha-patient.html"); // Reset URL after use
-            }
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
         });
 
-        // Ensure default URL if the user visits manually or refreshes
-        document.addEventListener("DOMContentLoaded", () => {
-            let redirectURL = localStorage.getItem("redirectAfterPopup");
-
-            if (!redirectURL) {
-                localStorage.setItem("redirectAfterPopup", "/user-dashboard/dha-patient.html");
-            }
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
         });
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
 
-
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </body>
 
