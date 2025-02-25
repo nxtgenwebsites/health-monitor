@@ -102,3 +102,17 @@
 .editor-toolbar .vr {
   height: 20px;
 }
+
+.post-writing h3{
+  color: #0C74C2;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-label {
+  color: #0C74C2;
+}
+
+.author-container {
+  background: #DDF2F9;
+}
