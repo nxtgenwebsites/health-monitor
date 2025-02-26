@@ -270,7 +270,7 @@
 }
 
 .role-box {
-  width: 450px;
+  width: 500px;
   padding: 40px 30px;
 }
 
@@ -291,4 +291,15 @@
 
 .role-box h4 span {
   color: #3ED2E7;
+}
+
+.ticket-status{
+  color: #008767;
+}
+
+.ticket-info{
+  font-weight: 100 !important;
+  width: 100%;
+  /* background: red; */
+  font-size: 15px;
 }
