@@ -1,0 +1,9 @@
+
+.form-select, .form-control {
+height: 48px;
+border: 1px solid #0C74C2 !important;
+border-radius: 8px;
+padding: 12px;
+color: #2E2E2E !important;
+font-family: 'Poppins', sans-serif;
+}
