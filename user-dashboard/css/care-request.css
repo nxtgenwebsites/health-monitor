@@ -1931,3 +1931,26 @@ textarea.form-control {
 .comment-status h6{
   font-size: 14px;
 }
+
+
+.upload-box{
+  width: 120px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px dotted #0B6FC0;
+  cursor: pointer;
+}
+
+.upload-box i {
+  margin-bottom: -5px;
+}
+
+.upload-box h6{
+  margin-bottom: 10px;
+  font-size: 12px !important;
+}  
+

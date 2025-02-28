@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Health Info</title>
+    <title>Health Monitor | CareRequest</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="css/health-info.css">
+    <link rel="stylesheet" href="css/upload-details.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <style>
+        /* Font Imports */
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <!-- Replace your current header HTML with this -->
     <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- This is the Updated HTML FILE -->
@@ -149,138 +149,160 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-<!-- User Dashborad User Dropdown -->
-<div class="dropdown d-none d-lg-block" id="user-profile">
-    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-        <img src="assets/1.png" alt="" class="user-avatar">
-        <span class="d-none d-lg-inline">Bohdan Peter</span>
-    </div>
-    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-        <li class="dropdown-header p-0 mb-3">
-            <div class="d-flex gap-3 align-items-center">
-                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                <div>
-                    <h6 class="mb-0">Bohdan Peter</h6>
-                    <small class="text-muted">Preston, UK</small>
+            <!-- User Dashborad User Dropdown -->
+            <div class="dropdown d-none d-lg-block" id="user-profile">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
                 </div>
-            </div>
-        </li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                Profile
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                Sponsorship
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                Print
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                Password & 2FA
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                Access Control
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                System
-            </a></li>
-        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                Share link
-            </button></li>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
 
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                Delete Account
-            </a></li>
-        <li class="border-top mt-2 pt-2">
-            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                Upgrade to Community Edition
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- CDHA Dashborad User Dropdown -->
-<div class="dropdown d-none d-lg-block" id="cdha-profile">
-    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
-        <img src="assets/1.png" alt="" class="user-avatar">
-        <span class="d-none d-lg-inline">Bohdan Peter</span>
-    </div>
-    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-        <li class="dropdown-header p-0 mb-3">
-            <div class="d-flex gap-3 align-items-center">
-                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                <div>
-                    <h6 class="mb-0">Bohdan Peter</h6>
-                    <small class="text-muted">Preston, UK</small>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- CDHA Dashborad User Dropdown -->
+            <div class="dropdown d-none d-lg-block" id="cdha-profile">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
                 </div>
-            </div>
-        </li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
-                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                Profile
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
-                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                Sponsorship
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
-                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                Print
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
-                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                Password & 2FA
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
-                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                Access Control
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-in.html">
-                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
-                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Transfer In
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-out.html">
-                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
-                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Transfer Out
-            </a></li>
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                System
-            </a></li>
-        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                Share link
-            </button></li>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-in.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
+                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Transfer In
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-out.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
+                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Transfer Out
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
 
-        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
-                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                Delete Account
-            </a></li>
-        <li class="border-top mt-2 pt-2">
-            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                Upgrade to Community Edition
-            </a>
-        </li>
-    </ul>
-</div>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -311,7 +333,8 @@
                         <div class="dropdown-toggle"></div>
                     </button>
                     <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
-                                                                           <li class=" dropdown-item remote-care-btn">
+                                                                                       <li class=" dropdown-item
+                        remote-care-btn">
                         Call DHA</li>
                         <li class="dropdown-item remote-care-btn">Call Nurse</li>
                         <li class="dropdown-item remote-care-btn">Call Doctor</li>
@@ -376,8 +399,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
@@ -508,37 +529,37 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-        <!-- Patient Dropdown -->
-        <div class="menu-item-dropdown" id="patient-drop-down">
-            <div class="menu-icon-wrapper">
-                <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 46 47"
-                    fill="none">
-                    <path
-                        d="M17.0864 19.8076C21.2804 19.8076 24.6803 16.4077 24.6803 12.2136C24.6803 8.01957 21.2804 4.61963 17.0864 4.61963C12.8923 4.61963 9.49237 8.01957 9.49237 12.2136C9.49237 16.4077 12.8923 19.8076 17.0864 19.8076Z"
-                        stroke="#9197B3" stroke-width="1.82256"></path>
-                    <path opacity="0.5"
-                        d="M23.7311 9.06414C24.7515 7.52949 26.4962 6.51807 28.4773 6.51807C31.6229 6.51807 34.1728 9.06803 34.1728 12.2136C34.1728 15.3591 31.6229 17.909 28.4773 17.909C26.4962 17.909 24.7515 16.8976 23.7311 15.363"
-                        stroke="#9197B3" stroke-width="1.82256"></path>
-                    <path
-                        d="M17.0863 40.6909C24.4259 40.6909 30.3758 37.291 30.3758 33.0969C30.3758 28.9029 24.4259 25.5029 17.0863 25.5029C9.74678 25.5029 3.79688 28.9029 3.79688 33.0969C3.79688 37.291 9.74678 40.6909 17.0863 40.6909Z"
-                        stroke="#9197B3" stroke-width="1.82256"></path>
-                    <path opacity="0.5"
-                        d="M34.173 27.4014C37.5033 28.1317 39.8685 29.9812 39.8685 32.1476C39.8685 34.1017 37.944 35.7982 35.1222 36.6478"
-                        stroke="#9197B3" stroke-width="1.82256" stroke-linecap="round"></path>
-                </svg>
-                <span class="menu-text">Patient</span>
+            <!-- Patient Dropdown -->
+            <div class="menu-item-dropdown" id="patient-drop-down">
+                <div class="menu-icon-wrapper">
+                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24"
+                        viewBox="0 0 46 47" fill="none">
+                        <path
+                            d="M17.0864 19.8076C21.2804 19.8076 24.6803 16.4077 24.6803 12.2136C24.6803 8.01957 21.2804 4.61963 17.0864 4.61963C12.8923 4.61963 9.49237 8.01957 9.49237 12.2136C9.49237 16.4077 12.8923 19.8076 17.0864 19.8076Z"
+                            stroke="#9197B3" stroke-width="1.82256"></path>
+                        <path opacity="0.5"
+                            d="M23.7311 9.06414C24.7515 7.52949 26.4962 6.51807 28.4773 6.51807C31.6229 6.51807 34.1728 9.06803 34.1728 12.2136C34.1728 15.3591 31.6229 17.909 28.4773 17.909C26.4962 17.909 24.7515 16.8976 23.7311 15.363"
+                            stroke="#9197B3" stroke-width="1.82256"></path>
+                        <path
+                            d="M17.0863 40.6909C24.4259 40.6909 30.3758 37.291 30.3758 33.0969C30.3758 28.9029 24.4259 25.5029 17.0863 25.5029C9.74678 25.5029 3.79688 28.9029 3.79688 33.0969C3.79688 37.291 9.74678 40.6909 17.0863 40.6909Z"
+                            stroke="#9197B3" stroke-width="1.82256"></path>
+                        <path opacity="0.5"
+                            d="M34.173 27.4014C37.5033 28.1317 39.8685 29.9812 39.8685 32.1476C39.8685 34.1017 37.944 35.7982 35.1222 36.6478"
+                            stroke="#9197B3" stroke-width="1.82256" stroke-linecap="round"></path>
+                    </svg>
+                    <span class="menu-text">Patient</span>
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content ps-4">
-            <ul class="custom-bullets">
-                <li><a href="/user-dashboard/dha-add-patient.html" class="dropdown-item-custom">Add New</a></li>
-                <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom">Find Patient</a>
-                </li>
-            </ul>
-        </div>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/dha-add-patient.html" class="dropdown-item-custom">Add New</a></li>
+                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom">Find Patient</a>
+                    </li>
+                </ul>
+            </div>
             <!-- Symptom Checker Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
@@ -559,7 +580,7 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4">
+            <div class="dropdown-content ps-4 show">
     <ul class="custom-bullets">
         <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage Care Requests</a></li>
         <li><a href="/user-dashboard/care-request.html" class="dropdown-item-custom">CareRequest</a></li>
@@ -593,23 +614,28 @@
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="dropdown-content ps-4">
-                    <ul class="custom-bullets">
+                <ul class="custom-bullets">
                     <li id="patient-link"><a class="dropdown-item-custom"
                             onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')" class="dropdown-item-custom">BP</a>
-                        </li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')" class="dropdown-item-custom">BMI</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')" class="dropdown-item-custom">Episodes</a>
-                        </li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')" class="dropdown-item-custom">Diabetes</a>
-                        </li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')" class="dropdown-item-custom">Tests</a>
-                        </li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
-                                class="dropdown-item-custom">Medications</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
-                                class="dropdown-item-custom">Appointments</a></li>
-                    </ul>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
+                            class="dropdown-item-custom">BP</a>
+                    </li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
+                            class="dropdown-item-custom">BMI</a></li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
+                            class="dropdown-item-custom">Episodes</a>
+                    </li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
+                            class="dropdown-item-custom">Diabetes</a>
+                    </li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
+                            class="dropdown-item-custom">Tests</a>
+                    </li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
+                            class="dropdown-item-custom">Medications</a></li>
+                    <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
+                            class="dropdown-item-custom">Appointments</a></li>
+                </ul>
             </div>
 
             <!-- Communities Dropdown -->
@@ -654,7 +680,7 @@
             </div>
 
             <a href="/user-dashboard/health-info.html">
-                <div class="menu-item active">
+                <div class="menu-item">
                     <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
@@ -675,8 +701,8 @@
                     <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                     <span class="menu-text">Transfers</span>
                 </div>
-            </a>
-         -->
+            </a> -->
+
             <!-- Upgrade Box -->
             <div class="upgrade-box">
                 <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
@@ -693,82 +719,78 @@
 
         <!-- Main Content -->
         <div class="main-content">
-
-            <div class="welcome-box mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h4 class="text-primary">Health Info</h4>
+            <div class="d-flex justify-content-between align-items-center care-pages">
+                <a href="/user-dashboard/care-request.html">
+                    <h4>CareRequest</h4>
+                </a>
+                <a href="/user-dashboard/upload-details.html">
+                    <h4>Upload Details</h4>
+                </a>
+                <a href="/user-dashboard/preview-care-request .html">
+                    <h4 class="active">Preview CareRequest</h4>
+                </a>
+                <a href="/user-dashboard/grant-access.html">
+                    <h4>Grant Access</h4>
+                </a>
+            </div>
+            <div class="content-container bg-white mt-4 px-3 py-3">
+                <div class="request-summary">
+                    <h6>Request Summary:</h6>
+                    <p class="mt-3">Having high temperature for two days, no previous case or symptoms, pain 8/10. Lorem
+                        ipsum is non-localized, pseudo
+                        Latin sample text that is often hold in design and publishing. To inset lorem ipsum text in
+                        word, type where you want
+                        the text to appear.</p>
+                    <p class="mt-3">Lorem ipsum has reported this this in the report and lorem ipsum e so zua ki’leciaa.
+                    </p>
+                    <div class="selected-monitors d-flex align-items-center gap-4 mt-4">
+                        <h5 class="mb-0">Monitors Selected:</h5>
+                        <div class="monitor-tags d-flex gap-3">
+                            <span>Diabetes</span>
+                            <span>Blood Pressure</span>
+                            <span>Medication</span>
+                        </div>
+                    </div>
+                    <div class="included-test d-flex align-items-center gap-4 mt-4">
+                        <h5 class="mb-0">Included Tests:</h5>
+                        <button>
+                            <img src="assets/pdf icon.png" alt="PDF">
+                            <span>Blood pressure report.pdf</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <p>
-                        Our Health Information Service uses specially trained AI technology to provide evidence-based
-                        information about health
-                        and wellbeing.
-                    </p>
-                    <p>
-                        You can ask questions, upload a document or provide a website for the AI enabled-Health
-                        Education system to analyse and
-                        give you an opinion and their sources for you to consider.
-                    </p>
-                    <p>
-                        These opinions should be verified by your healthcare providers before you act on them.
-                    </p>
-                    <p>
-                        Please confirm that you fully understand this statement and consent to it. “Yes! I fully
-                        understand this statement and
-                        consent to it”
-                    </p>
-                </div>
-                <div class="understand-check">
-                    <input type="checkbox" id="understand" class="form-check-input">
-                    <label for="understand">I Understand</label>
+                <div class="mt-5">
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="/user-dashboard/care-request.html">
+                            <button class="primary-btn">Edit</button>
+                        </a>
+                        <a href="/user-dashboard/manage-care-requests.html">
+                            <button class="primary-btn">Save</button>
+                            </a>
+                        <button class="primary-btn">Print</button>
+                        <a href="grant-access.html">
+                            <button class="primary-btn">Share</button>
+                        </a>
+                        <button class="primary-btn">Delete</button>
+                        <!-- <button class="primary-btn" id="submit-btn">Grant Access</button>
+                        <button class="primary-btn">Cancel</button> -->
+                    </div>
                 </div>
             </div>
-
-
-            <div class="chat-container">
-                <div>
-                    <div class="chat-message bot mt-4">
-                        <div class="bot-icon">
-                            <img src="assets/chat-bot-icon.png" alt="">
-                        </div>
-                        <div class="message-content">
-                            <span class="d-block">
-                                Hello! Welcome to Health Info.
-                            </span>
-                            <span class="d-block">
-                                I’m an AI Health Information Expert. Ask any question related to health and I’ll answer
-                                it
-                            </span>
-                            <span class="text-black chat-hightlight">
-                                Before using this information, please check with your health care provider.
-                            </span>
-                        </div>
-                    </div>
-                    <div id="chat-with-bot" class="chat-with-bot">
-                        <div class="chat-message bot mt-3">
-
-                        </div>
-                    </div>
-
+        </div>
+        <!-- Form Submitted Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="submitted-popup">
+            <div class="submitted-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">Grant Access Request Created</h5>
+                <p class="my-3">An email has been sent to <b>(XYZ_abc@gmail.com)</b> with the link
+                    to your CareRequest!
+                </p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <button class="popup-btn" id="submitted-back">Done</button>
                 </div>
-                <div class="chat-input">
-                    <div class="">
-                        <button class="file-btn btn bg-transparent border-0"
-                            onclick="document.getElementById('fileInput').click()">
-                            <img src="assets/pin.svg" alt="icon">
-                        </button>
-                        <input type="file" class="d-none" id="fileInput"
-                            accept=".mp4,.mkv,.doc,.docx,.pdf,.png,.jpj,.svg" multiple>
-                    </div>
-                    <input type="text" id="message-to-bot" placeholder="I have pain in my head">
-                    <button class="send-btn" id="message-send-btn">
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-                <div class="upgrade-overlay d-none" id="upgrade-overlay">
-                    <div class="h-100 w-100 d-flex justify-content-center align-items-center">
-                        <img src="assets/upgrade1.png" width="70px" alt="Img">
-                    </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="submitted-close"><img src="assets/icons/close.svg"
+                            alt="close"></button>
                 </div>
             </div>
         </div>
@@ -789,10 +811,9 @@
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
-                <h5 class="mt-3">Share My Profile</h5>
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-
+                    <h6>Copy Link</h6>
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
@@ -815,70 +836,141 @@
                 </div>
             </div>
         </div>
-<!-- First Add Img Popup -->
-<div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-    <div class="add-box bg-white rounded text-center w-100 position-relative">
-        <div class="add-img-container">
-            <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
-            <div class="learn-more mt-2">
-                <a href="">Click to Learn More</a>
-            </div>
-            <div class="add-stats-container">
-                <div class="stat-item">
-                    <i class="bi bi-hand-thumbs-up"></i>
-                    <span>22</span>
-                </div>
-                <div class="stat-item">
-                    <i class="bi bi-share-fill"></i>
-                    <span>23</span>
-                </div>
+        <!-- First Add Img Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+            <div class="add-box bg-white rounded text-center w-100 position-relative">
+                <div class="add-img-container">
+                    <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
+                    <div class="learn-more mt-2">
+                        <a href="">Click to Learn More</a>
+                    </div>
+                    <div class="add-stats-container">
+                        <div class="stat-item">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>22</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="bi bi-share-fill"></i>
+                            <span>23</span>
+                        </div>
 
-                <div class="stat-item">
-                    <i class="bi bi-eye"></i>
-                    <span>23</span>
+                        <div class="stat-item">
+                            <i class="bi bi-eye"></i>
+                            <span>23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-close-btn">
+                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                            alt="close"></button>
                 </div>
             </div>
         </div>
-        <div class="add-close-btn">
-            <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
-                    alt="close"></button>
-        </div>
-    </div>
-</div>
 
-<!-- Add Video Popup -->
-<div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-    <div class="add-video-box">
-        <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
-    </div>
-</div>
-<!-- Inactivity Modal -->
-<div id="logoutModal">
-    <div class="modal-content">
-        <h4>Session Expired</h4>
-        <p>You have been inactive for 2 minutes. Please log in again.</p>
-        <a href="/login.html">
-            <button class="btn primary-btn w-100">Login Again</button>
-        </a>
-    </div>
-</div>
-<!-- Right Sidebar -->
-<div class="right-sidebar">
-    <div class="ad-container" id="add-1-img">
-        <img src="assets/add scapper.png" alt="Advertisement">
-        <div class="stats-container">
-            <div class="stat-item">
-                <i class="bi bi-eye-fill"></i>
-                <span>22</span>
+        <!-- Add Video Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+            <div class="add-video-box">
+                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
             </div>
-            <div class="stat-item">
-                <i class="bi bi-heart-fill"></i>
-                <span>23</span>
+        </div>
+        <!-- Inactivity Modal -->
+        <div id="logoutModal">
+            <div class="modal-content">
+                <h4>Session Expired</h4>
+                <p>You have been inactive for 2 minutes. Please log in again.</p>
+                <a href="/login.html">
+                    <button class="btn primary-btn w-100">Login Again</button>
+                </a>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container" id="add-1-img">
+                <img src="assets/add scapper.png" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="modal fade show d-none" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel"
+        aria-modal="true" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content preview-modal">
+                <!-- Close button -->
+                <button type="button" id="btn-close preview" class="btn-close preview-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+
+                <!-- Modal body -->
+                <div class="modal-body p-4">
+                    <!-- Title -->
+                    <h2 class="preview-title">Panadol - Completed</h2>
+
+                    <!-- Prescribed by -->
+                    <p class="preview-text">Prescribed by Dr. Mannu</p>
+
+                    <!-- Date Range -->
+                    <p class="preview-text">
+                        <span class="fst-italic">From</span> Tues, 12 June, 2024
+                        <span class="fst-italic">To</span> Tues, 12 July, 2024
+                    </p>
+
+                    <!-- History Section -->
+                    <div class="preview-history">
+                        <h3 class="preview-history-title">History</h3>
+
+                        <div class="timeline-entries">
+                            <div class="timeline-entry">
+                                <span>Tues, 12 June, 2024</span>
+                                <span>11:30 am</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 17 June 2024</span>
+                                <span>12:00 pm</span>
+                            </div>
+                            <div class="timeline-entry">
+                                <span>Tues, 25 June 2024</span>
+                                <span>01:30 pm</span>
+                            </div>
+                            <div class="timeline-entry fst-italic" id="addagain">
+                                Add Record
+                            </div>
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <button class="popup-btn mt-4">Live</button>
+                                <div class="preview-actions">
+                                    <a href="add-a-medicine.html">
+                                        <button class="action-btn">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </a>
+                                    <div class="share-icon">
+                                        <i class="bi bi-share"></i>
+                                        <div class="share-dropdown">
+                                            <button class="share-dropdown-item">Forward</button>
+                                            <button class="share-dropdown-item">Print</button>
+                                            <button class="share-dropdown-item">Download Pdf</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Action buttons -->
+
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -899,10 +991,10 @@
     </div>
     <!-- Share Message end -->
     <script>
-                function redirectToPatientSearch(pageURL) {
-                        localStorage.setItem("redirectAfterPopup", pageURL);
-                        window.location.href = "/user-dashboard/dha-search-patient.html";
-                    }
+        function redirectToPatientSearch(pageURL) {
+            localStorage.setItem("redirectAfterPopup", pageURL);
+            window.location.href = "/user-dashboard/dha-search-patient.html";
+        }
 
         const upgradeBox = document.querySelector('.upgrade-box');
         const cdhaProfile = document.getElementById('cdha-profile');
@@ -924,25 +1016,25 @@
             cdhaProfile.classList.add('d-lg-none');
         }
 
-    let inactivityTime = 120000;
-    let timeout;
+        let inactivityTime = 120000;
+        let timeout;
 
-    function resetTimer() {
-        clearTimeout(timeout);
-        document.getElementById("logoutModal").style.display = "none";
-        timeout = setTimeout(showLogoutScreen, inactivityTime);
-    }
+        function resetTimer() {
+            clearTimeout(timeout);
+            document.getElementById("logoutModal").style.display = "none";
+            timeout = setTimeout(showLogoutScreen, inactivityTime);
+        }
 
-    function showLogoutScreen() {
-        document.getElementById("logoutModal").classList.add('d-flex');
-    }
+        function showLogoutScreen() {
+            document.getElementById("logoutModal").classList.add('d-flex');
+        }
 
-    document.addEventListener("mousemove", resetTimer);
-    document.addEventListener("keydown", resetTimer);
-    document.addEventListener("scroll", resetTimer);
-    document.addEventListener("click", resetTimer);
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+        document.addEventListener("scroll", resetTimer);
+        document.addEventListener("click", resetTimer);
 
-    resetTimer();
+        resetTimer();
 
         // Share Message
         const shareMsg = document.querySelector('.share-message');
@@ -957,8 +1049,12 @@
             shareMsg.style.display = 'block';
         });
 
+        const previewBtn = document.getElementById('preview-button');
+
+
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
@@ -967,6 +1063,11 @@
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        remoteCareDropdownBtn.addEventListener('click', () => {
+            remoteCareDropdown.classList.toggle('d-none')
+        })
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -977,27 +1078,22 @@
             shareProfilePopup.classList.add('d-flex');
         })
 
-        for (let i = 0; i < remoteCareBtn.length; i++) {
-            remoteCareBtn[i].addEventListener('click', () => {
-                pairDevicePopop.classList.remove('d-none');
-                pairDevicePopop.classList.add('d-flex');
-            })
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
 
-        remoteCareDropdownBtn.addEventListener('click', () => {
-            remoteCareDropdown.classList.toggle('d-none')
-        })
-
-        pairedBackBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-        pairedCloseBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
+            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
 
         const addImg = document.getElementById('add-1-img');
         const addImgPupup = document.getElementById('add-1-popup');
         const addImgClose = document.getElementById('add-close-btn');
+
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1013,62 +1109,27 @@
             addImgPupup.classList.add('d-none')
         })
 
-        const sendBtn = document.getElementById('message-send-btn');
-        const userMessage = document.getElementById('message-to-bot');
-        const chatArea = document.getElementById('chat-with-bot');
-        let autoRes = false; // Tracks if the bot has already responded
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
 
-        sendBtn.addEventListener('click', () => {
-            const message = userMessage.value.trim();
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
 
-            if (message) {
-                const userChat = document.createElement('div');
-                userChat.classList.add('user-message')
-                userChat.innerHTML = `
-                            <div class="user-icon">
-                                <img src="assets/1.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                   ${message}
-                                </span>
-                                <span class="message-time d-block">16:23 pm</span>
-                            </div>`
-                chatArea.append(userChat)
-                if (!autoRes) {
-                    const batChat = document.createElement('div');
-                    batChat.classList.add('chat-message')
-                    batChat.innerHTML = `<div class="bot-icon">
-                                <img src="assets/chat-bot-icon.png" alt="">
-                            </div>
-                            <div class="message-content">
-                                <span class="text-black chat-hightlight">
-                                    Migraine is a genetically-influenced complex neurological disorder characterized by
-                                    episodes of moderate
-                                    -to-severe headache, most often unilateral and generally....
-                                </span>
-                                <div class="mt-4 d-flex gap-2">
-                                    <div class="chat-img">
-                                        <img src="assets/chat img.png" alt="Img">
-                                    </div>
-                                    <div class="bot-blog">
-                                        <h6 class="text-primary">
-                                            Migraine Headaches
-                                        </h6>
-                                        <span class="chat-url mt-3">
-                                            https://my.clevelandclinic.org/health/diseases/
-                                            5005-migraine-headaches
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>`
-                    chatArea.append(batChat)
-                    autoRes = true;
-                }
-                userMessage.value = '';
-            }
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
         });
 
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
@@ -1081,6 +1142,34 @@
             document.body.removeChild(tempInput);
             alert("Link copied to clipboard.");
         });
+
+        const submitBtn = document.getElementById('submit-btn');
+        const submittedPopup = document.getElementById('submitted-popup');
+        const submittedBack = document.getElementById('submitted-back');
+        const submittedClose = document.getElementById('submitted-close');
+
+
+        submittedClose.addEventListener(('click'), () => {
+            submittedPopup.classList.add('d-none');
+        })
+
+        submittedBack.addEventListener(('click'), () => {
+            submittedPopup.classList.add('d-none');
+        })
+
+        submitBtn.addEventListener(('click'), () => {
+            submittedPopup.classList.add('d-none');
+        })
+
+        submittedPopup.addEventListener(('click'), (e) => {
+            if (e.target === submittedPopup) {
+                submittedPopup.classList.add('d-none');
+            }
+        })
+
+        submitBtn.addEventListener(('click'), () => {
+            submittedPopup.classList.remove('d-none');
+        })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
