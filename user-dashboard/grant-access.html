@@ -786,7 +786,7 @@
             </div>
         </div>
         <!-- Form Submitted Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="send-access-popup">
+        <!-- <div class="popup d-none justify-content-center align-items-center" id="send-access-popup">
             <div class="submitted-box bg-white rounded-3 text-center position-relative ">
                 <p class="my-3 text-muted">
                 We will send an email to Cuz to grant access to your CareRequest, the attached documents, and the specified health
@@ -797,14 +797,13 @@
                         <button class="popup-btn" id="send-access-no">No</button>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Form Submitted Popup -->
         <div class="popup d-flex justify-content-center align-items-center" id="user-consent-popup">
             <div class="submitted-box bg-white rounded-3 text-center position-relative ">
                 <h5 class="my-3 text-primary">Bohdan Peter</h5>
-                <p class="my-3 text-muted">We would like to inform you that you are about to share selected medical data with a third party known to you. The third
-                party will have access to view the medical details stated herein, but they will not have the ability to change or delete
-                them. They will be able to comment on the CareRequest to assist you in managing your symptoms.
+                <p class="my-3 text-muted">We will send an email to Cuz to grant access to your CareRequest, the attached documents, and the specified health
+                monitor data. Are you happy to continue?
                 </p>
                 <div class="mt-4">
                     <p>
@@ -1200,14 +1199,6 @@
         const submittedBack = document.getElementById('submitted-back');
         const submittedClose = document.getElementById('submitted-close');
 
-        const sendAccessPopup = document.getElementById('send-access-popup');
-        const sendAccessNo = document.getElementById('send-access-no');
-        const sendAccessYes = document.getElementById('send-access-yes');
-                
-        sendAccessNo.addEventListener(('click'), () => {
-            sendAccessPopup.classList.add('d-none')
-        })
-
         submittedClose.addEventListener(('click'), () => {
             submittedPopup.classList.add('d-none');
         })
@@ -1219,20 +1210,9 @@
         submitBtn.addEventListener(('click'), () => {
             submittedPopup.classList.add('d-none');
         })
-
-        submittedPopup.addEventListener(('click'), (e) => {
-            if (e.target === submittedPopup) {
-                submittedPopup.classList.add('d-none');
-            }
-        })
-
-        sendAccessYes.addEventListener(('click') , () => {
-            submittedPopup.classList.remove('d-none');
-            sendAccessPopup.classList.add('d-none')
-        })
-
+        
         submitBtn.addEventListener(('click'), () => {
-            sendAccessPopup.classList.remove('d-none')
+            submittedPopup.classList.remove('d-none');
         })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
