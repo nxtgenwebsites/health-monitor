@@ -582,7 +582,7 @@
             </div>
             <div class="dropdown-content ps-4 show">
     <ul class="custom-bullets">
-        <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage CareRequests</a></li>
+        <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a></li>
         <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a></li>
         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
     </ul>
@@ -723,7 +723,7 @@
                             <h4 class="active text-decoration-underline">CareRequest</h4>
                         </a>
                         <a href="/user-dashboard/upload-details.html">
-                            <h4>Upload Details</h4>
+                            <h4>Select Monitor</h4>
                         </a>
                         <a href="/user-dashboard/preview-care-request .html">
                             <h4>Preview CareRequest</h4>
@@ -820,7 +820,7 @@
                         <textarea placeholder="Write your answer here." class="form-control text-area"></textarea>
                     </div>
                     <div class="col-12 chk-container">
-                        <h5 class="my-2">Do you have any any images of your symptoms?</h5>
+                        <h5 class="my-2">Do you have any images of your symptoms?</h5>
                         <div class="d-flex gap-4 mt-4">
                             <div class="form-check mb-0">
                                 <input type="radio" name="symptoms-images" class="form-check-input" id="yes">
@@ -839,28 +839,8 @@
                                 <input class="d-none" type="file" accept="image/*">
                             </div>
                             <div class="upload-box">
-                                <i class="bi bi-cloud-upload fs-3"></i>
-                                <h6>Click to <br> upload</h6>
-                                <input class="d-none" type="file" accept="image/*">
-                            </div>
-                            <div class="upload-box">
-                                <i class="bi bi-cloud-upload fs-3"></i>
-                                <h6>Click to <br> upload</h6>
-                                <input class="d-none" type="file" accept="image/*">
-                            </div>
-                            <div class="upload-box">
-                                <i class="bi bi-cloud-upload fs-3"></i>
-                                <h6>Click to <br> upload</h6>
-                                <input class="d-none" type="file" accept="image/*">
-                            </div>
-                            <div class="upload-box">
-                                <i class="bi bi-cloud-upload fs-3"></i>
-                                <h6>Click to <br> upload</h6>
-                                <input class="d-none" type="file" accept="image/*">
-                            </div>
-                            <div class="upload-box">
-                                <i class="bi bi-cloud-upload fs-3"></i>
-                                <h6>Click to <br> upload</h6>
+                                <i class="bi bi-plus-circle fs-3"></i>
+                                <h6 class="mt-2">Add More</h6>
                                 <input class="d-none" type="file" accept="image/*">
                             </div>
                         </div>
@@ -1085,6 +1065,17 @@
     </div>
     <!-- Share Message end -->
     <script>
+    document.querySelectorAll(".upload-box").forEach(box => {
+        let input = box.querySelector("input");
+
+        box.addEventListener("click", () => {
+            input.click();
+        });
+
+        input.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+        });
+    });
 
         document.addEventListener("DOMContentLoaded", function () {
                 const yesRadio = document.getElementById("yes");

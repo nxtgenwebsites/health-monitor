@@ -582,9 +582,11 @@
             </div>
             <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage CareRequests</a></li>
-                    
-                    <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a></li>
+                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">Manage
+                            CareRequests</a></li>
+
+                    <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a>
+                    </li>
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
@@ -719,44 +721,45 @@
 
         <!-- Main Content -->
         <div class="main-content">
-                    <div class="d-flex justify-content-between align-items-center care-pages">
-                        <a href="/user-dashboard/care-request.html">
-                            <h4>CareRequest</h4>
-                        </a>
-                        <a href="/user-dashboard/upload-details.html">
-                            <h4 class="active text-decoration-underline">Upload Details</h4>
-                        </a>
-                        <a href="/user-dashboard/preview-care-request .html">
-                            <h4>Preview CareRequest</h4>
-                        </a>
-                        <a href="/user-dashboard/grant-access.html">
-                            <h4>Grant Access</h4>
-                        </a>
-                    </div>
+            <div class="d-flex justify-content-between align-items-center care-pages">
+                <a href="/user-dashboard/care-request.html">
+                    <h4>CareRequest</h4>
+                </a>
+                <a href="/user-dashboard/upload-details.html">
+                    <h4 class="active text-decoration-underline">Select Monitor</h4>
+                </a>
+                <a href="/user-dashboard/preview-care-request .html">
+                    <h4>Preview CareRequest</h4>
+                </a>
+                <a href="/user-dashboard/grant-access.html">
+                    <h4>Grant Access</h4>
+                </a>
+            </div>
             <div class="user-info mt-3 text-center my-4">
                 <h2>Brandon Peters</h2>
                 <h5>Lagos, Nigeria | Male | June 28, 1985</h5>
             </div>
             <div class="content-container bg-white mt-4">
                 <div class="text-center heading-box">
-                    <h6 class="mb-0">CareRequest Attachment(s)</h6>
+                    <h6 class="mb-0">CareRequest Monitor Attachment(s)</h6>
                 </div>
                 <div class="px-4 py-3">
                     <div class="inp-container mt-2">
-                                    <div class="select-monitor d-flex align-items-center  gap-4">
-                                        <h5 class="mb-0">Select Monitor:</h5>
-                                        <div>
-                                            <div class="form-group d-flex justify-content-between ms-4">
-                                                <select id="countries" name="countries" data-placeholder=" Select Monitor" multiple data-multi-select>
-                                                    <option value="BMI">BMI</option>
-                                                    <option value="Blood Pressure">Blood Pressure</option>
-                                                    <option value="Diabetes">Diabetes</option>
-                                                    <option value="Tests">Tests</option>
-                                                    <option value="Medication">Medication</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="select-monitor d-flex align-items-center  gap-4">
+                            <h5 class="mb-0">Select Monitor:</h5>
+                            <div>
+                                <div class="form-group d-flex justify-content-between ms-4">
+                                    <select id="countries" name="countries" data-placeholder=" Select Monitor" multiple
+                                        data-multi-select>
+                                        <option value="BMI">BMI</option>
+                                        <option value="Blood Pressure">Blood Pressure</option>
+                                        <option value="Diabetes">Diabetes</option>
+                                        <option value="Tests">Tests</option>
+                                        <option value="Medication">Medication</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <div class="select-date d-flex align-items-center gap-4 mt-4">
                             <h5 class="mb-0">Select Date Range:</h5>
                             <input type="date">
@@ -1078,20 +1081,6 @@
     </div>
     <!-- Share Message end -->
     <script>
-
-        document.querySelectorAll(".upload-box").forEach(box => {
-            let input = box.querySelector("input");
-
-            box.addEventListener("click", () => {
-                input.click();
-            });
-
-            input.addEventListener("change", (event) => {
-                const file = event.target.files[0];
-            });
-        });
-
-
         // History Drop Down  
         class MultiSelect {
 
