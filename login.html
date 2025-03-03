@@ -10,41 +10,42 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/login.css" />
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/toastr.min.css">
 </head>
 
 <body>
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-                  <a class="navbar-brand" href="/">
-                    <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
-                  </a>
-                  <dv class="mx-3 trustpilot">
-                    <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
-                  </dv>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
-              </li>
-            </ul>
-            <div class="login-btn">
-              <a href="login.html"><button class="btn primary-btn">Login</button></a>
-            </div>
-          </div>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
+      </a>
+      <dv class="mx-3 trustpilot">
+        <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
+      </dv>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+          </li>
+        </ul>
+        <div class="login-btn">
+          <a href="login.html"><button class="btn primary-btn">Login</button></a>
         </div>
-      </nav>
-      <!-- Navbar End -->
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
   <!-- Login Start -->
   <section class="auth-section d-flex justify-content-center align-items-center">
     <div class="auth-border">
@@ -63,12 +64,12 @@
         </div>
         <div class="foms-container">
           <!-- Login Form Start -->
-          <form class="login-from" id="login-form">
+          <form id="login-form" class="login-from" id="login-form">
             <div class="email my-4">
-              <input type="email" placeholder="Email">
+              <input type="email" placeholder="Email" required id="login-email">
             </div>
             <div class="password mt-4 position-relative">
-              <input type="password" placeholder="Password">
+              <input type="password" placeholder="Password" required id="login-password">
               <img src="assets/icons/show pass.svg" width="23px" class="text-primary position-absolute hide-pass"
                 alt="">
             </div>
@@ -77,28 +78,20 @@
                 ">Forgot password?</a>
             </div>
             <div class="submit-button d-flex justify-content-center align-items-center">
-              <a class="btn primary-btn  m-auto mt-4 submit-button-login" href="user-dashboard/overview.html">Login</a>
+              <button class="btn primary-btn  m-auto mt-4 submit-button-login">Login</button>
             </div>
           </form>
           <!-- Login Form End -->
           <!-- Sigup Form Start -->
-          <form class="signup-from d-none" id="signup-form" onsubmit="event.preventDefault();">
-            <div class="email my-2">
-              <input type="email" placeholder="Email">
+          <form class="signup-from d-none" id="signup-form">
+            <div class="email my-4">
+              <input type="text" placeholder="Username" id="signup-username" required>
             </div>
             <div class="email my-2">
-              <input type="email" placeholder="Confirm Email">
+              <input type="email" placeholder="Email" id="signup-email" required>
             </div>
-            <div class="password my-2 position-relative">
-              <input type="password" placeholder="Password">
-              <img src="assets/icons/show pass.svg" width="23" class="position hide-pass" alt="">
-            </div>
-            <div class="password my-2 position-relative">
-              <input type="password" placeholder="Confirm Password">
-              <img src="assets/icons/show pass.svg" width="23" class="position-absolute hide-pass" alt="">
-            </div>
-            <div class="signup-button  text-center">
-              <a href="register.html" class="btn primary-btn">Create an account</a>
+            <div class="signup-button  text-center mt-4">
+              <button class="btn primary-btn py-1">Create an account</button>
             </div>
           </form>
           <!-- Sigup Form End -->
@@ -108,127 +101,257 @@
   </section>
   <!-- Login End -->
 
-    <!-- Footer start -->
-    <!-- Footer start -->
-    <footer class="footer-section">
-      <div class="container">
-        <div class="row row-gap-3">
-          <div class="col-lg-5 col-md-6 text-md-start text-center">
-            <div class="footer-card">
-              <div class="footer-img">
-                <a href="">
-                  <img src="assets/images/logo.png" width="150" alt="" class="img-fluid">
-                </a>
-              </div>
-              <div class="footer-content">
-                <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
-                  and features. You don't want to miss it!</p>
-                <div class="footer-subscribe position-relative w-100">
-                  <input type="email" class="" placeholder="Enter your email here">
-                  <button type="submit" class="btn">Subscribe</button>
-                </div>
+  <!-- Footer start -->
+  <!-- Footer start -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row row-gap-3">
+        <div class="col-lg-5 col-md-6 text-md-start text-center">
+          <div class="footer-card">
+            <div class="footer-img">
+              <a href="">
+                <img src="assets/images/logo.png" width="150" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="footer-content">
+              <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                and features. You don't want to miss it!</p>
+              <div class="footer-subscribe position-relative w-100">
+                <input type="email" class="" placeholder="Enter your email here">
+                <button type="submit" class="btn">Subscribe</button>
               </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 text-md-start text-center">
-            <ul class="navbar-nav">
-              <h5 class="fw-bold footer-heading text-primary">Home</h5>
-              <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Symptoms</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Remote Care</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Monitors</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Health Info</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 text-md-start text-center">
-            <ul class="navbar-nav">
-              <h5 class="fw-bold footer-heading text-primary">Communities</h5>
-              <li class="nav-item"><a href="/user-dashboard/hospitals.html" class="nav-link">Hospitals</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Pharmacies</a></li>
-              <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Community Digital
-                  Health Assistants</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Tech Support</a></li>
-              <li class="nav-item"><a href="/user-dashboard/complaints.html" class="nav-link">Complaints</a>
-              </li>
-              <li class="nav-item"><a href="/user-dashboard/reviews.html" class="nav-link">Reviews</a></li>
-              <li class="nav-item"><a href="/user-dashboard/privacy-policy.html" class="nav-link">Privacy
-                  Policy</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 text-md-start text-center">
-            <ul class="navbar-nav">
-              <h5 class="fw-bold footer-heading text-primary">User Dashboard</h5>
-              <li class="nav-item"><a href="login.html" class="nav-link">Sponsorship</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Print</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Password & 2FA</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Access Control</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">National Policies</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Upgrade to Community Edition</a></li>
-              <li class="nav-item"><a href="login.html" class="nav-link">Delete Account</a></li>
-            </ul>
-          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 text-md-start text-center">
+          <ul class="navbar-nav">
+            <h5 class="fw-bold footer-heading text-primary">Home</h5>
+            <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Symptoms</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Remote Care</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Monitors</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Health Info</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 text-md-start text-center">
+          <ul class="navbar-nav">
+            <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+            <li class="nav-item"><a href="/user-dashboard/hospitals.html" class="nav-link">Hospitals</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Pharmacies</a></li>
+            <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Community Digital
+                Health Assistants</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Tech Support</a></li>
+            <li class="nav-item"><a href="/user-dashboard/complaints.html" class="nav-link">Complaints</a>
+            </li>
+            <li class="nav-item"><a href="/user-dashboard/reviews.html" class="nav-link">Reviews</a></li>
+            <li class="nav-item"><a href="/user-dashboard/privacy-policy.html" class="nav-link">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 text-md-start text-center">
+          <ul class="navbar-nav">
+            <h5 class="fw-bold footer-heading text-primary">User Dashboard</h5>
+            <li class="nav-item"><a href="login.html" class="nav-link">Sponsorship</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Print</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Password & 2FA</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Access Control</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">National Policies</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Upgrade to Community Edition</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Delete Account</a></li>
+          </ul>
         </div>
       </div>
-      <hr class="mt-5 mb-2">
-      <div class="copyright-section d-flex align-items-center">
-        <p class="font-size">© Copyright 2025 HealthMonitor. All rights reserved</p>
-        <p class="ms-md-auto me-3 font-size">Share on socials</p>
-        <div class="social-media">
-          <button id="x-share-btn" class="btn p-0 border-0">
-            <img src="assets/icons/X.svg" alt="img" class="">
+    </div>
+    <hr class="mt-5 mb-2">
+    <div class="copyright-section d-flex align-items-center">
+      <p class="font-size">© Copyright 2025 HealthMonitor. All rights reserved</p>
+      <p class="ms-md-auto me-3 font-size">Share on socials</p>
+      <div class="social-media">
+        <button id="x-share-btn" class="btn p-0 border-0">
+          <img src="assets/icons/X.svg" alt="img" class="">
+        </button>
+        <button id="fb-share-btn" class="btn p-0 border-0">
+          <img src="assets/icons/Facebook.svg" alt="img" class="">
+        </button>
+        <a href="https://www.instagram.com/" target="">
+          <button id="Instagram-share-btn" class="btn p-0 border-0">
+            <img src="assets/icons/Instagram.svg" alt="img" class="">
           </button>
-          <button id="fb-share-btn" class="btn p-0 border-0">
-            <img src="assets/icons/Facebook.svg" alt="img" class="">
-          </button>
-          <a href="https://www.instagram.com/" target="">
-            <button id="Instagram-share-btn" class="btn p-0 border-0">
-              <img src="assets/icons/Instagram.svg" alt="img" class="">
-            </button>
-          </a>
-          <button id="linkedin-share-btn" class="btn p-0 border-0">
-            <img src="assets/icons/linkedin.svg" alt="img" class="">
-          </button>
-        </div>
+        </a>
+        <button id="linkedin-share-btn" class="btn p-0 border-0">
+          <img src="assets/icons/linkedin.svg" alt="img" class="">
+        </button>
       </div>
-    
-    </footer>
-    <!-- Footer end -->
-    <!-- Footer end -->
-    <script>
-      document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
-        const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
+    </div>
 
-        const params = new URLSearchParams({
-          url: "https://health-monitor-sa.vercel.app/",
-          title: "Health Monitor",
-          summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
-          source: "Health Monitor"
-        }).toString();
-
-        window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
-      })
-
-      document.getElementById('x-share-btn').addEventListener(('click'), () => {
-        const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #healthMonitor");
-        const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
-        window.open(tweetUrl, "_blank", "width=600,height=400");
-      })
-
-      document.getElementById('fb-share-btn').addEventListener(('click'), () => {
-        const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
-        const params = new URLSearchParams({
-          u: "https://health-monitor-sa.vercel.app/", // Your website URL
-          quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
-          hashtag: "#healthMonitor", // Optional hashtag
-        }).toString();
-
-        const shareUrl = `${fbShareUrl}?${params}`;
-        window.open(shareUrl, "_blank", "width=600,height=400");
-      })
-    </script>
-  <script src="js/auth.js"></script>
+  </footer>
+  <!-- Footer end -->
+  <!-- Footer end -->
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/toastr.min.js"></script>
+  <script>
+    const signupForm = document.getElementById('signup-form');
+
+    signupForm.addEventListener(('submit'), (e) => {
+      e.preventDefault()
+
+      const signupEmail = document.getElementById('signup-email').value
+      const signupUsername = document.getElementById('signup-username').value;
+
+      const signupData = {
+        email: signupEmail,
+        username: signupUsername,
+      }
+
+      console.log(signupData);
+
+      axios.post('http://localhost:3000/api/email_verification', signupData).then((res) => {
+        console.log(res.data);
+
+      }).catch((error) => {
+        console.log(error);
+        toastr.error(`Something went wrong.`, "Error", {
+          "closeButton": true,
+          "progressBar": true,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "2000",
+          "extendedTimeOut": "1000",
+        })
+      })
+
+    })
+
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener(('submit'), (e) => {
+      e.preventDefault()
+      const loginEmail = document.getElementById('login-email').value;
+      const loginPass = document.getElementById('login-password').value
+
+      const loginData = {
+        email: loginEmail,
+        password: loginPass,
+      }
+
+      axios.post('http://localhost:3000/api/login', loginData).then((res) => {
+        toastr.success(`${res.data.message || 'User blocked successfully'}`, "Success", {
+          "closeButton": true,
+          "progressBar": true,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "2000",
+          "extendedTimeOut": "1000",
+        })
+
+        console.log(res.data);
+        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('u_id', res.data.user.id);
+
+      }).catch((error) => {
+        console.log(error);
+        toastr.error(`${error.response?.data?.message || 'Something went wrong.'}`, "Error", {
+          "closeButton": true,
+          "progressBar": true,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "2000",
+          "extendedTimeOut": "1000",
+        })
+      })
+
+    })
+
+
+  const loginBtn = document.getElementById('login-btn');
+  const signupBtn = document.getElementById('signup-btn');
+  const btnSlider = document.getElementById('btn-slider');
+  const loginHeading = document.getElementById('login-heading');
+  const signupHeading = document.getElementById('signup-heading');
+
+
+  signupBtn.addEventListener('click', () => {
+    btnSlider.classList.add('slide-left');
+    loginBtn.classList.remove('active-btn');
+    signupBtn.classList.add('active-btn');
+    signupForm.classList.add('show-form');
+    loginForm.classList.remove('show-form');
+    loginForm.style.display = 'none';
+    loginForm.classList.remove('show-form');
+    loginForm.style.display = 'none';
+    loginHeading.style.display = 'none'
+    signupHeading.classList.add('show-heading');
+    loginHeading.classList.remove('show-heading');
+    loginForm.reset();
+  })
+  
+  loginBtn.addEventListener('click', () => {
+    btnSlider.classList.remove('slide-left');
+    loginBtn.classList.add('active-btn');
+    signupBtn.classList.remove('active-btn');
+    loginForm.classList.add('show-form');
+    signupForm.classList.remove('show-form');
+    signupForm.style.display = 'none';
+    signupHeading.style.display = 'none'
+    loginHeading.classList.add('show-heading');
+    signupHeading.classList.remove('show-heading');
+    signupForm.reset();
+  })
+
+
+  const eyeIcon = document.querySelectorAll('.password img');
+  const inp = document.querySelectorAll('.password input');
+
+  for (let i = 0; i < eyeIcon.length; i++) {
+    eyeIcon[i].addEventListener('click', () => {
+      if (eyeIcon[i].classList.contains('hide-pass')) {
+        inp[i].type = 'text';
+        eyeIcon[i].classList.replace('hide-pass', 'show-pass')
+        eyeIcon[i].src = 'assets/icons/hide pass.svg';
+      } else {
+        inp[i].type = 'password';
+        eyeIcon[i].classList.replace('show-pass', 'hide-pass')
+        eyeIcon[i].src = 'assets/icons/show pass.svg'
+      }
+    })
+  }
+
+    document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
+      const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
+
+      const params = new URLSearchParams({
+        url: "https://health-monitor-sa.vercel.app/",
+        title: "Health Monitor",
+        summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
+        source: "Health Monitor"
+      }).toString();
+
+      window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
+    })
+
+    document.getElementById('x-share-btn').addEventListener(('click'), () => {
+      const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #healthMonitor");
+      const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+      window.open(tweetUrl, "_blank", "width=600,height=400");
+    })
+
+    document.getElementById('fb-share-btn').addEventListener(('click'), () => {
+      const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
+      const params = new URLSearchParams({
+        u: "https://health-monitor-sa.vercel.app/", // Your website URL
+        quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
+        hashtag: "#healthMonitor", // Optional hashtag
+      }).toString();
+
+      const shareUrl = `${fbShareUrl}?${params}`;
+      window.open(shareUrl, "_blank", "width=600,height=400");
+    })
+  </script>
 </body>
 
 </html>

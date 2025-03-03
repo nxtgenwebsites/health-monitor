@@ -10,20 +10,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/toastr.min.css">
 </head>
 
 <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-                    <a class="navbar-brand" href="/">
-                        <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
-                    </a>
-                    <dv class="mx-3 trustpilot">
-                        <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
-                    </dv>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">
+                <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
+            </a>
+            <dv class="mx-3 trustpilot">
+                <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
+            </dv>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,71 +48,62 @@
         </div>
     </nav>
     <!-- Navbar End -->
-
     <!-- Login Start -->
     <section class="auth-section d-flex justify-content-center align-items-center">
-    <div class="auth-border">
-        <div class="auth-container d-flex flex-column align-items-center">
-            <div class="login-heading" id="login-heading" style="display: none;">
-                <h3>Login</h3>
-            </div>
-            <div class="login-heading d-none show-heading" id="signup-heading">
-                <h3>Sign Up</h3>
-            </div>
-            <div class="auth-buttons">
-                <button id="login-btn">Login</button>
-                <button id="signup-btn" class="text-primary active-btn">Sign Up</button>
-                <div class="btn-slider slide-left" id="btn-slider">
+        <div class="auth-border">
+            <div class="auth-container d-flex flex-column align-items-center">
+                <div class="login-heading" id="login-heading">
+                    <h3>Login</h3>
+                </div>
+                <div class="login-heading d-none" id="signup-heading">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="auth-buttons">
+                    <button id="login-btn" class="active-btn">Login</button>
+                    <button id="signup-btn" class="text-primary">Sign Up</button>
+                    <div class="btn-slider" id="btn-slider">
+                    </div>
+                </div>
+                <div class="foms-container">
+                    <!-- Login Form Start -->
+                    <form id="login-form" class="login-from" id="login-form">
+                        <div class="email my-4">
+                            <input type="email" placeholder="Email" required id="login-email">
+                        </div>
+                        <div class="password mt-4 position-relative">
+                            <input type="password" placeholder="Password" required id="login-password">
+                            <img src="assets/icons/show pass.svg" width="23px"
+                                class="text-primary position-absolute hide-pass" alt="">
+                        </div>
+                        <div class="forget-pass">
+                            <a href="" class="text-decoration-none forgot-password pt-1
+                ">Forgot password?</a>
+                        </div>
+                        <div class="submit-button d-flex justify-content-center align-items-center">
+                            <button class="btn primary-btn  m-auto mt-4 submit-button-login">Login</button>
+                        </div>
+                    </form>
+                    <!-- Login Form End -->
+                    <!-- Sigup Form Start -->
+                    <form class="signup-from d-none" id="signup-form">
+                        <div class="email my-4">
+                            <input type="text" placeholder="Username" id="signup-username" required>
+                        </div>
+                        <div class="email my-2">
+                            <input type="email" placeholder="Email" id="signup-email" required>
+                        </div>
+                        <div class="signup-button  text-center mt-4">
+                            <button class="btn primary-btn py-1">Create an account</button>
+                        </div>
+                    </form>
+                    <!-- Sigup Form End -->
                 </div>
             </div>
-            <div class="foms-container">
-                <!-- Login Form Start -->
-                <form class="login-from" id="login-form"style="display: none;">
-                    <div class="email my-4">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="password mt-4 position-relative">
-                        <input type="password" placeholder="Password">
-                        <img src="assets/icons/show pass.svg" width="23px" class="text-primary position-absolute hide-pass"
-                            alt="">
-                    </div>
-                    <div class="forget-pass">
-                        <a href="" class="text-decoration-none forgot-password pt-1
-                    ">Forgot password?</a>
-                    </div>
-                    <div class="submit-button d-flex justify-content-center align-items-center">
-                        <a class="btn primary-btn  m-auto mt-4 submit-button-login"
-                            href="user-dashboard/overview.html">Login</a>
-                    </div>
-                </form>
-                <!-- Login Form End -->
-                <!-- Sigup Form Start -->
-                <form class="signup-from d-none show-form" id="signup-form" onsubmit="event.preventDefault();">
-                    <div class="email my-2">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="email my-2">
-                        <input type="email" placeholder="Confirm Email">
-                    </div>
-                    <div class="password my-2 position-relative">
-                        <input type="password" placeholder="Password">
-                        <img src="assets/icons/show pass.svg" width="23" class="position hide-pass" alt="">
-                    </div>
-                    <div class="password my-2 position-relative">
-                        <input type="password" placeholder="Confirm Password">
-                        <img src="assets/icons/show pass.svg" width="23" class="position-absolute hide-pass" alt="">
-                    </div>
-                    <div class="signup-button  text-center">
-                        <a href="register.html" class="btn primary-btn">Create an account</a>
-                    </div>
-                </form>
-                <!-- Sigup Form End -->
-            </div>
         </div>
-    </div>
     </section>
     <!-- Login End -->
 
+    <!-- Footer start -->
     <!-- Footer start -->
     <footer class="footer-section">
         <div class="container">
@@ -193,29 +186,169 @@
                 </button>
             </div>
         </div>
-    
+
     </footer>
     <!-- Footer end -->
-    <script >
+    <!-- Footer end -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script>
+        const signupForm = document.getElementById('signup-form');
+
+        signupForm.addEventListener(('submit'), (e) => {
+            e.preventDefault()
+
+            const signupEmail = document.getElementById('signup-email').value
+            const signupUsername = document.getElementById('signup-username').value;
+
+            const signupData = {
+                email: signupEmail,
+                username: signupUsername,
+            }
+
+            console.log(signupData);
+
+            axios.post('http://localhost:3000/api/email_verification', signupData).then((res) => {
+                console.log(res.data);
+                signupForm.reset();
+
+            }).catch((error) => {
+                console.log(error);
+                toastr.error(`Something went wrong.`, "Error", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                })
+            })
+
+        })
+
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener(('submit'), (e) => {
+            e.preventDefault()
+            const loginEmail = document.getElementById('login-email').value;
+            const loginPass = document.getElementById('login-password').value
+
+            const loginData = {
+                email: loginEmail,
+                password: loginPass,
+            }
+
+            axios.post('http://localhost:3000/api/login', loginData).then((res) => {
+                toastr.success(`${res.data.message || 'User blocked successfully'}`, "Success", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                })
+
+                console.log(res.data);
+                localStorage.setItem('token', res.data.token);
+                localStorage.setItem('u_id', res.data.user.id);
+                loginForm.reset();
+
+            }).catch((error) => {
+                console.log(error);
+                toastr.error(`${error.response?.data?.message || 'Something went wrong.'}`, "Error", {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                })
+            })
+
+        })
+
+
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const btnSlider = document.getElementById('btn-slider');
+        const loginHeading = document.getElementById('login-heading');
+        const signupHeading = document.getElementById('signup-heading');
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            signupBtn.click();
+        });
+
+
+        signupBtn.addEventListener('click', () => {
+            btnSlider.classList.add('slide-left');
+            loginBtn.classList.remove('active-btn');
+            signupBtn.classList.add('active-btn');
+            signupForm.classList.add('show-form');
+            loginForm.classList.remove('show-form');
+            loginForm.style.display = 'none';
+            loginForm.classList.remove('show-form');
+            loginForm.style.display = 'none';
+            loginHeading.style.display = 'none'
+            signupHeading.classList.add('show-heading');
+            loginHeading.classList.remove('show-heading');
+            loginForm.reset();
+        })
+
+        loginBtn.addEventListener('click', () => {
+            btnSlider.classList.remove('slide-left');
+            loginBtn.classList.add('active-btn');
+            signupBtn.classList.remove('active-btn');
+            loginForm.classList.add('show-form');
+            signupForm.classList.remove('show-form');
+            signupForm.style.display = 'none';
+            signupHeading.style.display = 'none'
+            loginHeading.classList.add('show-heading');
+            signupHeading.classList.remove('show-heading');
+            signupForm.reset();
+        })
+
+
+        const eyeIcon = document.querySelectorAll('.password img');
+        const inp = document.querySelectorAll('.password input');
+
+        for (let i = 0; i < eyeIcon.length; i++) {
+            eyeIcon[i].addEventListener('click', () => {
+                if (eyeIcon[i].classList.contains('hide-pass')) {
+                    inp[i].type = 'text';
+                    eyeIcon[i].classList.replace('hide-pass', 'show-pass')
+                    eyeIcon[i].src = 'assets/icons/hide pass.svg';
+                } else {
+                    inp[i].type = 'password';
+                    eyeIcon[i].classList.replace('show-pass', 'hide-pass')
+                    eyeIcon[i].src = 'assets/icons/show pass.svg'
+                }
+            })
+        }
+
         document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
             const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
-    
+
             const params = new URLSearchParams({
                 url: "https://health-monitor-sa.vercel.app/",
                 title: "Health Monitor",
                 summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
                 source: "Health Monitor"
             }).toString();
-    
+
             window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
         })
-    
+
         document.getElementById('x-share-btn').addEventListener(('click'), () => {
             const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #healthMonitor");
             const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
             window.open(tweetUrl, "_blank", "width=600,height=400");
         })
-    
+
         document.getElementById('fb-share-btn').addEventListener(('click'), () => {
             const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
             const params = new URLSearchParams({
@@ -223,66 +356,11 @@
                 quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
                 hashtag: "#healthMonitor", // Optional hashtag
             }).toString();
-    
+
             const shareUrl = `${fbShareUrl}?${params}`;
             window.open(shareUrl, "_blank", "width=600,height=400");
         })
-
-        
-        const loginBtn = document.getElementById('login-btn');
-            const signupBtn = document.getElementById('signup-btn');
-            const btnSlider = document.getElementById('btn-slider');
-            const signupForm = document.getElementById('signup-form');
-            const loginForm = document.getElementById('login-form');
-            const loginHeading = document.getElementById('login-heading');
-            const signupHeading = document.getElementById('signup-heading');
-
-
-            signupBtn.addEventListener('click', () => {
-                btnSlider.classList.add('slide-left');
-                loginBtn.classList.remove('active-btn');
-                signupBtn.classList.add('active-btn');
-                signupForm.classList.add('show-form');
-                loginForm.classList.remove('show-form');
-                loginForm.style.display = 'none';
-                loginForm.classList.remove('show-form');
-                loginForm.style.display = 'none';
-                loginHeading.style.display = 'none'
-                signupHeading.classList.add('show-heading');
-                loginHeading.classList.remove('show-heading');
-            })
-
-            loginBtn.addEventListener('click', () => {
-                btnSlider.classList.remove('slide-left');
-                loginBtn.classList.add('active-btn');
-                signupBtn.classList.remove('active-btn');
-                loginForm.classList.add('show-form');
-                signupForm.classList.remove('show-form');
-                signupForm.style.display = 'none';
-                signupHeading.style.display = 'none'
-                loginHeading.classList.add('show-heading');
-                signupHeading.classList.remove('show-heading');
-            })
-
-
-            const eyeIcon = document.querySelectorAll('.password img');
-            const inp = document.querySelectorAll('.password input');
-
-            for (let i = 0; i < eyeIcon.length; i++) {
-                eyeIcon[i].addEventListener('click', () => {
-                    if (eyeIcon[i].classList.contains('hide-pass')) {
-                        inp[i].type = 'text';
-                        eyeIcon[i].classList.replace('hide-pass', 'show-pass')
-                        eyeIcon[i].src = 'assets/icons/hide pass.svg';
-                    } else {
-                        inp[i].type = 'password';
-                        eyeIcon[i].classList.replace('show-pass', 'hide-pass')
-                        eyeIcon[i].src = 'assets/icons/show pass.svg'
-                    }
-                })
-            }
     </script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
