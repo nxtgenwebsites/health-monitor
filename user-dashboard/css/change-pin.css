@@ -1299,3 +1299,8 @@ a {
     color:white;
     border: 2px solid transparent;
 }
+@media (max-width: 991px) {
+    #sidebar{
+        display: none;
+    }
+}

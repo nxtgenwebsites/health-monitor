@@ -231,16 +231,16 @@ a {text-decoration: none;}
 .bg-img-contant {
     position: relative;
      background: url("../assets/upgrade.jpg") no-repeat center center !important;
+     background-size: 100%;
     /* background-position: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 90px;
 }
+
 .content-overlay {
     text-align: center;
-   
-    
 }
 
 .overlay-logo {
@@ -1865,3 +1865,20 @@ max-width: 450px;
 .patient-row {
     margin-top: 40px !important;
 }
+
+@media (max-width: 1024px) {
+    .bg-img-contant {
+        background: url("../assets/upgrade.jpg") no-repeat center center;
+        background-size: 100% 100% !important; /* Width 100% aur Height 100% */
+    }
+}
+
+@media (max-width: 991px) {
+    .content-overlay img{
+            width: 100px;
+    }
+    .content-overlay p{
+         font-size: 20px;
+    }
+}
+

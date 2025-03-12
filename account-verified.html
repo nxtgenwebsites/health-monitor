@@ -8,9 +8,8 @@
     <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/account-verified.css" />
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/toastr.min.css">
 </head>
 
 <body>
@@ -48,62 +47,16 @@
         </div>
     </nav>
     <!-- Navbar End -->
-    <!-- Login Start -->
-    <section class="auth-section d-flex justify-content-center align-items-center">
-        <div class="auth-border">
-            <div class="auth-container d-flex flex-column align-items-center">
-                <div class="login-heading" id="login-heading">
-                    <h3>Login</h3>
-                </div>
-                <div class="login-heading d-none" id="signup-heading">
-                    <h3>Sign Up</h3>
-                </div>
-                <div class="auth-buttons">
-                    <button id="login-btn" class="active-btn">Login</button>
-                    <button id="signup-btn" class="text-primary">Sign Up</button>
-                    <div class="btn-slider" id="btn-slider">
-                    </div>
-                </div>
-                <div class="foms-container">
-                    <!-- Login Form Start -->
-                    <form id="login-form" class="login-from" id="login-form">
-                        <div class="email my-4">
-                            <input type="email" placeholder="Email" required id="login-email">
-                        </div>
-                        <div class="password mt-4 position-relative">
-                            <input type="password" placeholder="Password" required id="login-password">
-                            <img src="assets/icons/show pass.svg" width="23px"
-                                class="text-primary position-absolute hide-pass" alt="">
-                        </div>
-                        <div class="forget-pass">
-                            <a href="" class="text-decoration-none forgot-password pt-1
-                ">Forgot password?</a>
-                        </div>
-                        <div class="submit-button d-flex justify-content-center align-items-center">
-                            <button class="btn primary-btn  m-auto mt-4 submit-button-login">Login</button>
-                        </div>
-                    </form>
-                    <!-- Login Form End -->
-                    <!-- Sigup Form Start -->
-                    <form class="signup-from d-none" id="signup-form">
-                        <div class="email my-4">
-                            <input type="text" placeholder="Username" id="signup-username" required>
-                        </div>
-                        <div class="email my-2">
-                            <input type="email" placeholder="Email" id="signup-email" required>
-                        </div>
-                        <div class="signup-button  text-center mt-4">
-                            <button class="btn primary-btn py-1">Create an account</button>
-                        </div>
-                    </form>
-                    <!-- Sigup Form End -->
-                </div>
-            </div>
+    <div class="main-content">
+        <div class="card main-card">
+            <h2>Congratulations! 🎉</h2>
+            <p class="mt-2">Health Monitor System account has been successfully activated. You can now access all available features, manage your
+            health records, and stay connected with your healthcare needs.</p>
+            <a href="/user-dashboard/overview.html">
+                <button class="primary-btn py-1 w-50 mx-auto">Go to your dashboard</button>
+            </a>
         </div>
-    </section>
-    <!-- Login End -->
-
-    <!-- Footer start -->
+    </div>
     <!-- Footer start -->
     <footer class="footer-section">
         <div class="container">
@@ -189,134 +142,11 @@
 
     </footer>
     <!-- Footer end -->
-    <!-- Footer end -->
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/toastr.min.js"></script>
     <script>
-        const signupForm = document.getElementById('signup-form');
-
-        signupForm.addEventListener(('submit'), (e) => {
-            e.preventDefault()
-
-            const signupEmail = document.getElementById('signup-email').value
-            const signupUsername = document.getElementById('signup-username').value;
-
-            const signupData = {
-                email: signupEmail,
-                username: signupUsername,
-            }
-
-            localStorage.setItem('email' , signupEmail);
-            localStorage.setItem('username' , signupUsername);
-
-            window.location.href = '/register.html';
-
-        })
-
-        const loginForm = document.getElementById('login-form');
-
-        loginForm.addEventListener(('submit'), (e) => {
-            e.preventDefault()
-            const loginEmail = document.getElementById('login-email').value;
-            const loginPass = document.getElementById('login-password').value
-
-            const loginData = {
-                email: loginEmail,
-                password: loginPass,
-            }
-
-            axios.post('https://health-monitor-backend.vercel.app/api/login', loginData).then((res) => {
-                toastr.success(`${res.data.message || 'User blocked successfully'}`, "Success", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "2000",
-                    "extendedTimeOut": "1000",
-                })
-
-                console.log(res.data);
-                localStorage.setItem('token', res.data.token);
-                localStorage.setItem('u_id', res.data.user.id);
-                loginForm.reset();
-
-            }).catch((error) => {
-                console.log(error);
-                toastr.error(`${error.response?.data?.message || 'Something went wrong.'}`, "Error", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "2000",
-                    "extendedTimeOut": "1000",
-                })
-            })
-
-        })
-
-
-        const loginBtn = document.getElementById('login-btn');
-        const signupBtn = document.getElementById('signup-btn');
-        const btnSlider = document.getElementById('btn-slider');
-        const loginHeading = document.getElementById('login-heading');
-        const signupHeading = document.getElementById('signup-heading');
-
-
-        window.addEventListener('DOMContentLoaded', () => {
-            signupBtn.click();
-        });
-
-
-        signupBtn.addEventListener('click', () => {
-            btnSlider.classList.add('slide-left');
-            loginBtn.classList.remove('active-btn');
-            signupBtn.classList.add('active-btn');
-            signupForm.classList.add('show-form');
-            loginForm.classList.remove('show-form');
-            loginForm.style.display = 'none';
-            loginForm.classList.remove('show-form');
-            loginForm.style.display = 'none';
-            loginHeading.style.display = 'none'
-            signupHeading.classList.add('show-heading');
-            loginHeading.classList.remove('show-heading');
-            loginForm.reset();
-        })
-
-        loginBtn.addEventListener('click', () => {
-            btnSlider.classList.remove('slide-left');
-            loginBtn.classList.add('active-btn');
-            signupBtn.classList.remove('active-btn');
-            loginForm.classList.add('show-form');
-            signupForm.classList.remove('show-form');
-            signupForm.style.display = 'none';
-            signupHeading.style.display = 'none'
-            loginHeading.classList.add('show-heading');
-            signupHeading.classList.remove('show-heading');
-            signupForm.reset();
-        })
-
-
-        const eyeIcon = document.querySelectorAll('.password img');
-        const inp = document.querySelectorAll('.password input');
-
-        for (let i = 0; i < eyeIcon.length; i++) {
-            eyeIcon[i].addEventListener('click', () => {
-                if (eyeIcon[i].classList.contains('hide-pass')) {
-                    inp[i].type = 'text';
-                    eyeIcon[i].classList.replace('hide-pass', 'show-pass')
-                    eyeIcon[i].src = 'assets/icons/hide pass.svg';
-                } else {
-                    inp[i].type = 'password';
-                    eyeIcon[i].classList.replace('show-pass', 'hide-pass')
-                    eyeIcon[i].src = 'assets/icons/show pass.svg'
-                }
-            })
-        }
-
         document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
             const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
 

@@ -1205,3 +1205,10 @@ a {
     .sidebar-icon {
         width: 35px !important;
     }
+
+
+@media (max-width: 991px) {
+    #sidebar{
+        display: none;
+    }
+}

@@ -2034,3 +2034,21 @@ a {
   background: #f1f8fe;
   color: #0c75c2;
 }
+
+
+@media (max-width : 768px) {
+  .appointment-card {
+    text-align: center;
+  }
+
+  .doctor-info img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .status-badge {
+    margin: auto;
+  }
+}

@@ -1856,7 +1856,8 @@ textarea.form-control {
 
 .care-pages h4 {
   color: #9197b3;
-  font-size: 20px;
+  font-size: 19px;
+  text-wrap: nowrap;
 }
 
 .care-pages .active {
@@ -1954,3 +1955,51 @@ textarea.form-control {
   font-size: 12px !important;
 }  
 
+@media (max-width: 992px) {
+.care-pages h4{
+      font-size: 15px !important;
+}
+}
+
+@media (max-width: 590px) {
+  .care-pages h4{
+    font-size: 12px !important;
+  }
+  .comment-box h5{
+    font-size: 14px;
+  }
+  .comment-box h6{
+    font-size: 14px;
+  }
+  .comment-box p{
+    font-size: 14px;
+  }
+  .heading-page h4{
+    font-size: 18px;
+  }
+  .add-new-btn{
+    padding: 4px 10px !important;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+.care-pages h4{
+      font-size: 11px !important;
+}
+}
+
+@media (max-width: 375px) {
+.care-pages h4{
+      font-size: 11px !important;
+}
+  .comment-box h5{
+    font-size: 13px;
+  }
+  .comment-box h6{
+    font-size: 13px;
+  }
+  .comment-box p{
+    font-size: 12px;
+  }
+}

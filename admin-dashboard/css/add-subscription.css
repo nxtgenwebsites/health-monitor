@@ -84,3 +84,11 @@ font-family: 'Poppins', sans-serif;
   opacity: 1;
   right: auto;
 }
+
+.offers-container .offers{
+  width: 100% !important;
+}
+
+.offers-container .offers h6{
+  font-size: 14px;
+}

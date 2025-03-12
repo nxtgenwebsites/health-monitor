@@ -525,7 +525,7 @@ a {
 }
 
 .medications-table {
-  width: 100%;
+  width: 800px !important;
   border-collapse: separate;
   border-spacing: 0 8px;
 }
@@ -988,7 +988,7 @@ a {
 
 /* Responsive Table Styles */
 .medications-table {
-  width: 100%;
+  width: 800px !important;
   min-width: 800px; /* Ensures table content doesn't get too squeezed */
   border-collapse: separate;
   border-spacing: 0 8px;
@@ -1578,7 +1578,7 @@ a {
 
   .medications-table {
     display: block;
-    width: 100%;
+    width: 800px !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1914,3 +1914,37 @@ a {
   background: #f1f8fe;
   color: #0c75c2;
 }
+.medications-table-container{
+ width: 100%;
+ overflow: scroll;
+}
+
+.medications-table{
+  width: 800px !important;
+}
+
+@media (max-width: 991px) {
+  .medications-table-container {
+    width: 100% !important;
+    overflow-x: auto !important; /* Ensure horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    display: block;
+    max-width: 100%; /* Ensure it doesn’t exceed screen size */
+    white-space: nowrap; /* Prevent content wrapping */
+    position: relative; /* Ensure it respects the content inside */
+  }
+
+  .medications-table {
+    min-width: 150% !important; /* Ensure enough space for buttons */
+    width: auto !important;
+    display: table;
+  }
+}
+
+@media (max-width: 600px) {
+  .medications-table {
+    min-width: 200% !important; /* Ensure enough space for buttons */
+  }
+}
+
+

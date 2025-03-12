@@ -2070,3 +2070,36 @@ textarea.form-control {
   border: none;
   outline: none;
 }
+
+@media (max-width: 590px) {
+.request-box p {
+  font-size: 14px;
+}
+.request-status h6 {
+  font-size: 14px;
+}
+.monitor-title{
+  font-size: 14px;
+}
+.monitor-date{
+  font-size: 14px;
+}
+.monitor-table th{
+  font-size: 14px;
+}
+.monitor-table td{
+  font-size: 14px;
+}
+.user-comment p{
+  font-size: 14px;
+}
+.user-reply p{
+  font-size: 14px;
+}
+.reply span{
+  font-size: 14px;
+}
+.request-type h6{
+  font-size: 14px;
+}
+}

@@ -1503,3 +1503,9 @@ transition: background-color 0.3s ease;
     .sidebar-icon {
         width: 35px !important;
     }
+
+    @media (max-width: 991px) {
+    #sidebar{
+        display: none;
+    }
+}

@@ -64,7 +64,7 @@
         </div>
         <div class="foms-container">
           <!-- Login Form Start -->
-          <form id="login-form" class="login-from">
+          <form id="login-form" class="login-from" id="login-form">
             <div class="email my-4">
               <input type="email" placeholder="Email" required id="login-email">
             </div>
@@ -78,7 +78,7 @@
                 ">Forgot password?</a>
             </div>
             <div class="submit-button d-flex justify-content-center align-items-center">
-              <a  href="/user-dashboard/overview.html" class="btn primary-btn  m-auto mt-4 submit-button-login">Login</a>
+              <a href="/user-dashboard/overview.html" class="btn primary-btn  m-auto mt-4 submit-button-login">Login</a>
             </div>
           </form>
           <!-- Login Form End -->
@@ -208,22 +208,10 @@
         username: signupUsername,
       }
 
-      console.log(signupData);
+      localStorage.setItem('email', signupEmail);
+      localStorage.setItem('username', signupUsername);
 
-      axios.post('http://localhost:3000/api/email_verification', signupData).then((res) => {
-        console.log(res.data);
-
-      }).catch((error) => {
-        console.log(error);
-        toastr.error(`Something went wrong.`, "Error", {
-          "closeButton": true,
-          "progressBar": true,
-          "showDuration": "300",
-          "hideDuration": "1000",
-          "timeOut": "2000",
-          "extendedTimeOut": "1000",
-        })
-      })
+      window.location.href = '/register.html';
 
     })
 
@@ -239,19 +227,17 @@
         password: loginPass,
       }
 
-      axios.post('http://localhost:3000/api/login', loginData).then((res) => {
-        toastr.success(`${res.data.message || 'User blocked successfully'}`, "Success", {
-          "closeButton": true,
-          "progressBar": true,
-          "showDuration": "300",
-          "hideDuration": "1000",
-          "timeOut": "2000",
-          "extendedTimeOut": "1000",
-        })
+      axios.post('https://health-monitor-backend.vercel.app/api/login', loginData).then((res) => {
 
         console.log(res.data);
-        localStorage.setItem('token', res.data.token);
-        localStorage.setItem('u_id', res.data.user.id);
+        if (res.data.user.isActive === false) {
+          return location.href = '/nonacticve-user.html'; 
+        }else{
+          localStorage.setItem('token', res.data.token);
+          localStorage.setItem('u_id', res.data.user.id);
+          location.href = '/admin-dashboard/manage-users.html'; 
+        }
+
 
       }).catch((error) => {
         console.log(error);

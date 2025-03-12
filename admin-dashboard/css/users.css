@@ -435,20 +435,20 @@ th {
     /* Column widths */
     .table th:nth-child(1),
     .table td:nth-child(1) {
-        width: 15%;
+        width: 12%;
         padding-left: 16px;
     }
     
     .table th:nth-child(2),
     .table td:nth-child(2) {
-        width: 15%;
+        width: 34%;
         padding-left: 24px;
     }
     
     .table th:nth-child(3),
     .table td:nth-child(3) {
+        text-align: left !important;
         width: 15%;
-        text-align: center;
     }
     
     .table th:nth-child(4),
@@ -932,4 +932,25 @@ line-height: normal;
 #viewFacilityModal .bi {
     font-size: 14px;
     margin-right: 4px;
+}
+
+
+.status-facility-btn {
+    width: 100px;
+}
+
+#sort-filter{
+    width: 230px;
+    justify-content: center ;
+}
+
+.search-box input{
+    padding: 8px 12px !important;
+}
+.search-box::before {
+    background-image: none !important;
+}
+
+.user-filter-cards {
+    cursor: pointer;
 }

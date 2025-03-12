@@ -15,7 +15,7 @@
 .search-box input {
   width: 300px;
   height: 40px;
-  padding: 0  50px 0 10px;
+  padding: 0 50px 0 10px;
   border-radius: 5px;
   background: white;
   border: none !important;
@@ -47,32 +47,31 @@
 }
 
 .post-content {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.post-content .options button{
-    border: none !important;
-    height: 50px;
-    width: 120px;
-    background: #DDEBF4;
-    color: #0C74C2;
+.post-content .options button {
+  border: none !important;
+  height: 50px;
+  width: 120px;
+  background: #ddebf4;
+  color: #0c74c2;
 }
-.post-content .options .active{
-    background: #FFFFFF;
+.post-content .options .active {
+  background: #ffffff;
 }
 
 .post-content .content-box {
-    padding: 20px 25px;
+  padding: 20px 25px;
 }
 
 .post-content .post-writing {
-    padding: 20px 25px;
-    background: #EAF1F5;
-    border-radius: 10px;
+  padding: 20px 25px;
+  background: #eaf1f5;
+  border-radius: 10px;
 }
-
 
 .editor-container {
   border: 1px solid #e5e7eb;
@@ -103,22 +102,22 @@
   height: 20px;
 }
 
-.post-writing h3{
-  color: #0C74C2;
+.post-writing h3 {
+  color: #0c74c2;
   font-size: 16px;
   font-weight: 400;
 }
 
 .info-label {
-  color: #0C74C2;
+  color: #0c74c2;
 }
 
 .author-container {
-  background: #DDF2F9;
+  background: #ddf2f9;
 }
 
 .post-inp {
-  background: #DDF2F9;
+  background: #ddf2f9;
   border: none;
   padding: 6px 15px;
   border-radius: 5px;
@@ -127,24 +126,22 @@
 }
 
 .post-date {
-  background: #DDF2F9;
+  background: #ddf2f9;
   border: none;
   padding: 6px 7px;
   border-radius: 5px;
   outline: none;
-  color: #0C74C2;
+  color: #0c74c2;
 }
 
 .post-time {
-  background: #DDF2F9;
+  background: #ddf2f9;
   border: none;
   padding: 6px 7px;
   border-radius: 5px;
   outline: none;
-  color: #0C74C2;
+  color: #0c74c2;
 }
-
-
 
 .switch {
   font-size: 17px;
@@ -187,11 +184,11 @@
 }
 
 .switch input:checked + .slider {
-  background-color: #76EE59;
+  background-color: #76ee59;
 }
 
 .switch input:focus + .slider {
-  box-shadow: 0 0 1px #76EE59;
+  box-shadow: 0 0 1px #76ee59;
 }
 
 .switch input:checked + .slider:before {
@@ -217,4 +214,38 @@
   left: 0.5em;
   opacity: 1;
   right: auto;
+}
+@media (max-width: 600px) {
+ .author-box .author{
+    width: 100% !important;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .primary-btn {
+    padding: 3px 14px !important;
+    font-size: 14px;
+  }
+  .search-box input {
+    padding-left: 0 !important;
+    width: 250px;
+  }
+  .pages-btn-container {
+    font-size: 14px;
+  }
+  .main-content {
+    padding: 20px !important;
+  }
+  .post-content .options button {
+    height: 50px;
+    width: 80px;
+    font-size: 14px;
+  }
+  .editor-toolbar{
+    display: none !important;
+  }
+  .text-area-container textarea{
+    font-size: 14px;
+  }
 }

@@ -1607,3 +1607,27 @@ body {
     width: 30px !important;
     height: 30px !important;
 }
+
+@media (max-width: 500px) {
+    .access-card span{
+        font-size: 14px;
+    }
+    .access-card .user-info p{
+        font-size: 12px;
+    }
+    .access-card h5{
+        font-size: 17px;
+    }
+    .access-card .card-body{
+        padding: 15px !important;
+    }
+    .page-heading h4{
+        font-size: 17px;
+    }
+    .page-heading h6{
+        font-size: 14px;
+    }
+    .access-tag{
+        text-wrap: nowrap;
+    }
+}

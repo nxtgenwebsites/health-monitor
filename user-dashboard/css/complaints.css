@@ -2077,3 +2077,24 @@ border-right: 8px solid transparent;
 .text-inp {
   text-align: left !important;
 }
+
+@media (max-width: 991px) {
+  #sidebar{
+    display: none;
+  }
+  .main-content{
+    padding: 10px 16px;
+  }
+    .complaint-form{
+    padding: 0 !important;
+  }
+  .radio-decide p{
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .main-content .container{
+    padding: 0 !important;
+    /* padding-top: 10px !important; */
+    margin-top: 0;
+  }
+}

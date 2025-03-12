@@ -1841,3 +1841,41 @@ color: white;
   .sidebar-icon {
       width: 35px !important;
   }
+
+  @media (max-width: 576px) {
+    .chart-container {
+        width: auto !important;
+    }
+  #cholesterolChart{
+    width: 350px !important;
+    height: 200px  !important;
+  }
+  .time-filter {
+    display: none;
+    /* width: auto; */
+
+  }
+}
+
+@media (max-width: 425px) {
+  #cholesterolChart{
+    width: 300px !important;
+    height: 170px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  #cholesterolChart{
+    width: 290px !important;
+    height: 160px !important;
+  }
+}
+
+.history-table-container{
+    width: 100%;
+    overflow-x: scroll;
+     -webkit-overflow-scrolling: touch;
+}
+.history-table{
+    width: 750px !important;
+}

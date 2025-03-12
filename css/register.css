@@ -204,3 +204,8 @@ padding: 12px;
 color: #2E2E2E !important;
 font-family: 'Poppins', sans-serif;
 }
+
+#toast-container > .toast-warning {
+    background-color: #0C74C2 !important; /* Yellow */
+    color: white !important;
+}

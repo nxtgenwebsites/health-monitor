@@ -587,9 +587,6 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
             </div>
-
-
-
             <!-- Health Monitors Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -727,7 +724,7 @@
                     <div class="row row-gap-5">
                         <div class="col-12 col-md-6">
                             <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
+                                <div class="d-flex flex-column flex-md-row gap-5 align-items-center">
                                     <div>
                                         <img src="assets/Ellipse 311.png" alt="IMG">
                                     </div>
@@ -754,8 +751,8 @@
                                         <h4>------</h4>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <a href="dha-add-patient.html"><button class="primary-btn">Accept</button></a>
+                                <div class="d-flex justify-content-between mt-4 btn-container">
+                                    <a href="dha-add-patient.html"><button class="primary-btn w-100">Accept</button></a>
                                     <button class="primary-btn">Reject</button>
                                     <button class="primary-btn">View</button>
                                 </div>
@@ -763,7 +760,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
+                                <div class="d-flex flex-column flex-md-row gap-5 align-items-center">
                                     <div>
                                         <img src="assets/Ellipse 313.png" alt="IMG">
                                     </div>
@@ -799,7 +796,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
+                                <div class="d-flex flex-column flex-md-row gap-5 align-items-center">
                                     <div>
                                         <img src="assets/Ellipse 313.png" alt="IMG">
                                     </div>
@@ -835,7 +832,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="transfer-user-card">
-                                <div class="d-flex gap-5 align-items-center">
+                                <div class="d-flex flex-column flex-md-row gap-5 align-items-center">
                                     <div>
                                         <img src="assets/Ellipse 314.png" alt="IMG">
                                     </div>
@@ -876,59 +873,61 @@
                     <div class="">
                         <h4 class="text-primary">History</h4>
                     </div>
-                    <div class="w-100 bg-danger mt-3 transfer-patients">
-                        <table class="w-100">
-                            <tr>
-                                <th>Patient Name</th>
-                                <th>Transfer Management</th>
-                                <th>Type</th>
-                                <th>Transferred On</th>
-                            </tr>
-                            <tr class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/patient.png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (3).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr class="patient-history">
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (4).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="assets/Ellipse 65 (1).png" alt="">
-                                        <h5 class="mt-2">Ronaldo Jr</h5>
-                                    </div>
-                                </td>
-                                <td>Dr. Fabrino K.</td>
-                                <td>Self</td>
-                                <td>02 March, 2024</td>
-                            </tr>
-                        </table>
+                    <div class="w-100 mt-3 transfer-patients">
+                        <div class="transfer-table-container">
+                            <table class="w-100 transfer-table">
+                                <tr>
+                                    <th>Patient Name</th>
+                                    <th>Transfer Management</th>
+                                    <th>Type</th>
+                                    <th>Transferred On</th>
+                                </tr>
+                                <tr class="patient-history">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="assets/patient.png" alt="">
+                                            <h5 class="mt-2">Ronaldo Jr</h5>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Fabrino K.</td>
+                                    <td>Self</td>
+                                    <td>02 March, 2024</td>
+                                </tr>
+                                <tr class="patient-history">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="assets/Ellipse 65 (3).png" alt="">
+                                            <h5 class="mt-2">Ronaldo Jr</h5>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Fabrino K.</td>
+                                    <td>Self</td>
+                                    <td>02 March, 2024</td>
+                                </tr>
+                                <tr class="patient-history">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="assets/Ellipse 65 (4).png" alt="">
+                                            <h5 class="mt-2">Ronaldo Jr</h5>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Fabrino K.</td>
+                                    <td>Self</td>
+                                    <td>02 March, 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="assets/Ellipse 65 (1).png" alt="">
+                                            <h5 class="mt-2">Ronaldo Jr</h5>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Fabrino K.</td>
+                                    <td>Self</td>
+                                    <td>02 March, 2024</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

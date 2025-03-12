@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/toastr.min.css">
+    <link rel="stylesheet" href="css/edit-users.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/users.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center justify-content-between mb-0">
+        <!-- This is the Updated HTML FILE -->
+        <!-- Left side -->
+        <div class="d-flex align-items-center">
+            <div class="logo-container border-lg-end border-0">
+                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
+            </div>
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
+        </div>
+
+        <!-- Center navigation (visible on desktop only) -->
+        <div class="nav-center d-none d-lg-flex align-items-center gap-4">
+            <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/Group.svg" alt="" style="width: 20px;">
+                Emergency
+            </a>
+            <a href="/user-dashboard/monitors.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                Monitors
+            </a>
+            <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
+                <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                Remote Care
+            </a>
+        </div>
+        <!-- Right side with toggle button, notification and user -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Notification -->
+            <div class="position-relative d-none d-lg-block dropdown">
+                <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
+                    <span class="notification-badge">5</span>
+                </a>
+
+                <!-- Notification Dropdown Menu -->
+                <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted" style="font-size: 12px;">
+                            You have <strong class="text-muted">5 new</strong> notifications
+                        </span>
+                        <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
+                    </div>
+                    <hr class="dropdown-divider my-2">
+
+                    <!-- Notification Items -->
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">New reports have been updated</div>
+                            <small class="text-muted d-block">15 mins ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your profile was successfully updated</div>
+                            <small class="text-muted d-block">1 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">ABC commented on your post</div>
+                            <small class="text-muted d-block">8 hr ago</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">More hospitals have been added</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="notification-item d-flex gap-2 p-2">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <div class="text-dark" style="font-size: 14px;">Your downloads are pending</div>
+                            <small class="text-muted d-block">Yesterday</small>
+                        </div>
+                    </div>
+
+                    <hr class="dropdown-divider my-2">
+
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
+                            notifications</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            </button>
+
+            <!-- User Dropdown (visible on desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+                </div>
+                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+                    <li class="dropdown-header p-0 mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                            <div>
+                                <h6 class="mb-0">Bohdan Peter</h6>
+                                <small class="text-muted">Preston, UK</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password & 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to Community Edition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <div class="dropdown">
+                    <button id="remote-care-dropdown"
+                        class="btn mobile-menu-item align-items-center gap-2 d-flex justify-content-between w-100 border-0 text-white dropdown-toggle-btn">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <i class="bi bi-phone"></i>
+                            <span>Remote Care</span>
+                        </div>
+                        <div class="dropdown-toggle"></div>
+                    </button>
+                    <ul class="d-none m-remote-care-dropdown" id="m-remote-care-dropdown"">
+                                                                                       <li class=" dropdown-item
+                        remote-care-btn">
+                        Call DHA</li>
+                        <li class="dropdown-item remote-care-btn">Call Nurse</li>
+                        <li class="dropdown-item remote-care-btn">Call Doctor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile w-100">
+                <div class="d-flex align-items-center w-100 justify-content-start gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-white">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <div class="">
+                        <a href="/user-dashboard/remote-access.html"
+                            class="mobile-menu-item d-flex align-items-center gap-2">
+                            <i class="bi bi-phone"></i>Remote Care
+                        </a>
+                        <div class="px-3 py-2">
+                            <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
+                        </div>
+                    </div>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
+        <div class="offcanvas-header">
+            <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="btn-close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <a href="/user-dashboard/emergency.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/Group.svg" alt="" style="width: 20px;">
+                    Emergency
+                </a>
+                <a href="/user-dashboard/monitors.html" class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
+                    Monitors
+                </a>
+                <a href="/user-dashboard/remote-access.html"
+                    class="mobile-nav-link d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
+                    Remote Care
+                </a>
+            </div>
+
+            <!-- User Profile for Mobile -->
+            <div class="mobile-user-profile">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/1.png" alt="" class="user-avatar">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted" style="color: white;">Preston, UK</small>
+                    </div>
+                </div>
+                <!-- User Menu Items -->
+                <div class="mobile-user-menu">
+                    <a href="/user-dashboard/user-profile.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-person-circle"></i> Profile
+                    </a>
+                    <a href="/user-dashboard/new-sponsorship.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-star"></i> Sponsorship
+                    </a>
+                    <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-printer"></i> Print
+                    </a>
+                    <a href="/user-dashboard/user-change-pin.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-key"></i> Change Pin
+                    </a>
+                    <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
+                        <i class="bi bi-share"></i> Share Link
+                    </a>
+                    <a href="/user-dashboard/user-delete-acc.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i> Delete Account
+                    </a>
+                    <a href="/user-dashboard/national-policies.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-flag"></i> National Policies
+                    </a>
+                    <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock"></i>Access Control
+                    </a>
+                    <a href="/user-dashboard/remote-access.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-phone"></i>Remote Care
+                    </a>
+                    <a href="/user-dashboard/upgrade-to-dha.html"
+                        class="mobile-menu-item d-flex align-items-center gap-2">
+                        <i class="bi bi-trash"></i>Upgrade to DHA Now
+                    </a>
+
+
+                    <!-- Add other menu items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Collapse Toggle -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <!-- Menu Items -->
+                <a href="/admin-dashboard/manage-users.html">
+                    <div class="menu-item active">
+                        <svg class="icon sidebar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.8333 13.0002C9.64163 13.0002 8.62149 12.5759 7.77288 11.7272C6.92426 10.8786 6.49996 9.8585 6.49996 8.66683C6.49996 7.47516 6.92426 6.45502 7.77288 5.60641C8.62149 4.7578 9.64163 4.3335 10.8333 4.3335C12.025 4.3335 13.0451 4.7578 13.8937 5.60641C14.7423 6.45502 15.1666 7.47516 15.1666 8.66683C15.1666 9.8585 14.7423 10.8786 13.8937 11.7272C13.0451 12.5759 12.025 13.0002 10.8333 13.0002ZM2.16663 19.5002V18.6335C2.16663 18.0377 2.3201 17.4779 2.62704 16.9543C2.93399 16.4307 3.35829 16.0335 3.89996 15.7627C4.94718 15.2391 6.03051 14.8281 7.14996 14.5298C8.2694 14.2316 9.41593 14.0828 10.5895 14.0835C10.8965 14.0835 11.154 14.1918 11.362 14.4085C11.57 14.6252 11.6736 14.887 11.6729 15.1939C11.6722 15.5009 11.5682 15.7583 11.3609 15.9663C11.1536 16.1743 10.8965 16.278 10.5895 16.2772C9.57843 16.2772 8.59874 16.4036 7.65046 16.6564C6.70218 16.9092 5.77701 17.2613 4.87496 17.7127C4.6944 17.8029 4.55899 17.9293 4.46871 18.0918C4.37843 18.2543 4.33329 18.4349 4.33329 18.6335V19.5002H10.5895C10.8965 19.5002 11.154 19.6042 11.362 19.8122C11.57 20.0202 11.6736 20.2773 11.6729 20.5835C11.6722 20.8897 11.5682 21.1472 11.3609 21.3559C11.1536 21.5646 10.8965 21.6683 10.5895 21.6668H4.33329C3.73746 21.6668 3.22757 21.4549 2.80363 21.0309C2.37968 20.607 2.16735 20.0967 2.16663 19.5002ZM17.1708 21.8835L17.0083 21.1252C16.7916 21.0349 16.5887 20.9403 16.3995 20.8413C16.2102 20.7424 16.016 20.6203 15.8166 20.4752L15.0312 20.7189C14.7965 20.7911 14.5665 20.7821 14.3411 20.6918C14.1158 20.6016 13.9396 20.4571 13.8125 20.2585L13.5958 19.8793C13.4694 19.6627 13.4243 19.4279 13.4604 19.1752C13.4965 18.9224 13.6138 18.7147 13.8125 18.5522L14.4083 18.0377C14.3722 17.7849 14.3541 17.5502 14.3541 17.3335C14.3541 17.1168 14.3722 16.8821 14.4083 16.6293L13.8125 16.1147C13.6138 15.9522 13.4965 15.7489 13.4604 15.5048C13.4243 15.2607 13.4694 15.0307 13.5958 14.8147L13.8395 14.4085C13.9659 14.2099 14.1375 14.0654 14.3541 13.9752C14.5708 13.8849 14.7965 13.8759 15.0312 13.9481L15.8166 14.1918C16.0152 14.0474 16.2095 13.9253 16.3995 13.8257C16.5894 13.726 16.7923 13.6314 17.0083 13.5418L17.1708 12.7564C17.225 12.5036 17.347 12.3007 17.537 12.1476C17.7269 11.9945 17.9479 11.9176 18.2 11.9168H18.6333C18.8861 11.9168 19.1074 11.9981 19.2974 12.1606C19.4873 12.3231 19.609 12.5307 19.6625 12.7835L19.825 13.5418C20.0416 13.6321 20.2446 13.7314 20.4338 13.8397C20.623 13.9481 20.8173 14.0835 21.0166 14.246L21.7479 14.0022C22.0007 13.912 22.2444 13.912 22.4791 14.0022C22.7138 14.0925 22.8944 14.246 23.0208 14.4627L23.2375 14.8418C23.3638 15.0585 23.409 15.2932 23.3729 15.546C23.3368 15.7988 23.2194 16.0064 23.0208 16.1689L22.425 16.6835C22.4611 16.9002 22.4791 17.1259 22.4791 17.3606C22.4791 17.5953 22.4611 17.821 22.425 18.0377L23.0208 18.5522C23.2194 18.7147 23.3368 18.918 23.3729 19.1622C23.409 19.4063 23.3638 19.6363 23.2375 19.8522L22.9937 20.2585C22.8673 20.4571 22.6958 20.6016 22.4791 20.6918C22.2625 20.7821 22.0368 20.7911 21.802 20.7189L21.0166 20.4752C20.818 20.6196 20.6237 20.7413 20.4338 20.8402C20.2438 20.9392 20.0409 21.0342 19.825 21.1252L19.6625 21.9106C19.6083 22.1634 19.4866 22.3667 19.2974 22.5205C19.1082 22.6743 18.8868 22.7509 18.6333 22.7502H18.2C17.9472 22.7502 17.7262 22.6689 17.537 22.5064C17.3477 22.3439 17.2257 22.1363 17.1708 21.8835ZM18.4166 19.5002C19.0125 19.5002 19.5227 19.2882 19.9474 18.8642C20.372 18.4403 20.584 17.9301 20.5833 17.3335C20.5826 16.7369 20.3706 16.2271 19.9474 15.8038C19.5242 15.3806 19.0139 15.1683 18.4166 15.1668C17.8193 15.1654 17.3095 15.3777 16.887 15.8038C16.4645 16.2299 16.2521 16.7398 16.25 17.3335C16.2478 17.9272 16.4601 18.4374 16.887 18.8642C17.3138 19.2911 17.8237 19.5031 18.4166 19.5002ZM10.8333 10.8335C11.4291 10.8335 11.9394 10.6215 12.364 10.1976C12.7887 9.77363 13.0007 9.26338 13 8.66683C12.9992 8.07027 12.7873 7.56038 12.364 7.13716C11.9408 6.71394 11.4306 6.50161 10.8333 6.50016C10.236 6.49872 9.72613 6.71105 9.30363 7.13716C8.88113 7.56327 8.66879 8.07316 8.66663 8.66683C8.66446 9.2605 8.87679 9.77075 9.30363 10.1976C9.73046 10.6244 10.2403 10.8364 10.8333 10.8335Z"
+                                fill="#9197B3" />
+                        </svg>
+                
+                        <span class="menu-text">Manage Users</span>
+                    </div>
+                </a>
+
+            <!-- Logout Button -->
+            <button class="log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                <span class="menu-text">Log Out</span>
+            </button>
+        </div>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Main Content -->
+        <div class="main-content p-4">
+            <div class="main-content">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="page-title mx-2">Edit User</h2>
+                </div>
+
+                <form id="edit-user">
+                    <div class="content-wrapper">
+                        <div class="row">
+                            <!-- Organization Details -->
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="first-name" name="first-name"
+                                    placeholder="First Name*" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="middle-name" name="middle-name"
+                                    placeholder="Middle Name*" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <input type="text" class="form-control" id="last-name" name="last-name"
+                                    placeholder="Last Name*" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <input type="tel" class="form-control" id="username" name="username" disabled
+                                    placeholder="Username*" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <input type="email" class="form-control" disabled name="email" id="email"
+                                    placeholder="Email*" required>
+                            </div>
+
+                            <!-- <div class="col-12 country-drop-down-container">
+                                <select id="country" class="form-select country-drop-down" name="country" required>
+                                    <option value="">Select Country*</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <select id="state-drop-down" name="state" class="form-select select-state" required>
+                                    <option value="">Select State*</option>
+                                </select>
+                            </div> -->
+
+                            <!-- <div class="col-12">
+                                <input type="text" class="form-control" id="city" name="city" placeholder="City*"
+                                    required>
+                            </div> -->
+                            <div class="col-12">
+                                <select class="form-select select-role" name="role" id="role" required>
+                                    <option value="">Role*</option>
+                                    <option value="patient">Patient</option>
+                                    <option value="cdha">CDHA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="page-title mx-2 mt-3">Change Password</h2>
+                    <div class="content-wrapper">
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="current-password" name="current-password"
+                                    placeholder="Current Password" required>
+                            </div>
+                            <div class="col-12 password-container">
+                                <div class="password-container position-relative">
+                                    <input type="text" class="form-control" id="password" name="password"
+                                        placeholder="Password*" autocomplete="new-password" required>
+                                    <button type="button" id="apply-button" onclick="applyRandomPassword()">Generate
+                                        Password</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="confirm_password" name="confirm_password"
+                                    placeholder="Confirm Password*" required>
+                            </div>
+
+                            <div id="actionButtons" class="col-12 mt-4">
+                                <div class="d-flex gap-3">
+                                    <button type="submit" id="update-btn"
+                                        class="btn popup-btn">Update</button>
+                                    <a href="/admin-dashboard/manage-users.html">
+                                        <button type="button" class="btn popup-btn"
+                                            id="cancelButton">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- View Facility Modal -->
+        <div class="modal fade" id="viewFacilityModal" tabindex="-1" aria-labelledby="viewFacilityModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-white rounded-4">
+                    <!-- Header -->
+                    <!-- <div class="modal-header border-bottom">
+                        <h5 class="modal-title w-100 text-center text-danger">Organization's details.</h5>
+                    </div> -->
+
+                    <div class="modal-body p-4">
+                        <!-- Title and Meta -->
+                        <div class="text-center mb-3">
+                            <h2 class="user-full-name mb-1">
+
+                            </h2>
+                            <p class="user-address mb-1"></p>
+                            <p class="user-role mb-1"></p>
+                        </div>
+
+                        <!-- Address Section -->
+                        <div class="text-center mb-3">
+                            <p class="user-phone mb-1"></p>
+                            <p class="user-email mb-1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Share Profile Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
+            <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
+                <div
+                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
+
+                    <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
+                    <div class="d-flex">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
+                            <img src="assets/copy.svg" alt="icon">
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- First Add Img Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+            <div class="add-box bg-white rounded text-center w-100 position-relative">
+                <div class="add-img-container">
+                    <img src="assets/add popup.jpg" class="img-fluid" alt="">
+                    <div class="learn-more">
+                        <a href="">Click to Learn More</a>
+                    </div>
+                    <div class="add-stats-container">
+                        <div class="stat-item">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>22</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="bi bi-share-fill"></i>
+                            <span>23</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="bi bi-eye"></i>
+                            <span>23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-close-btn">
+                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Video Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+            <div class="add-video-box">
+                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="ad-container" id="add-1-img">
+                <img src="assets/add img 1.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container" id="add-2-video">
+                <img src="assets/add img 2.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ad-container">
+                <img src="assets/add img 3.jpg" alt="Advertisement">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span>22</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Share Message end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/toastr.min.js"></script>
+        <script src="js/country-states.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <script>
+            const u_id = localStorage.getItem('u_id');
+            const token = localStorage.getItem('token');
+
+            const headers = {
+                id: u_id,
+                authorization: `Bearer ${token}`
+            }
+
+        // var user_country_code = "";
+
+        // (() => {
+        //     const country_list = country_and_states.country;
+        //     const state_list = country_and_states.states;
+
+        //     const id_state_option = document.getElementById("state-drop-down");
+        //     const id_country_option = document.getElementById("country");
+
+        //     // Initially disable the state dropdown
+        //     id_state_option.innerHTML = '<option>select state</option>';
+        //     id_state_option.setAttribute("disabled", "disabled");
+
+        //     const create_country_selection = () => {
+        //         let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+        //         for (const country_code in country_list) {
+        //             option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
+        //         }
+        //         id_country_option.innerHTML = option;
+        //     };
+
+        //     const create_states_selection = () => {
+        //         let selected_country_code = id_country_option.value;
+        //         let state_names = state_list[selected_country_code];
+
+        //         if (!state_names) {
+        //             id_state_option.innerHTML = '<option>select state</option>';
+        //             id_state_option.setAttribute("disabled", "disabled");
+        //             return;
+        //         }
+
+        //         let option = '<option>select state</option>';
+        //         state_names.forEach(state => {
+        //             option += '<option value="' + state.code + '">' + state.name + '</option>';
+        //         });
+
+        //         id_state_option.innerHTML = option;
+        //         id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
+        //     };
+
+        //     // Country select change event update state dropdown
+        //     id_country_option.addEventListener('change', create_states_selection);
+
+        //     // Initialize country dropdown with placeholder
+        //     create_country_selection();
+        // })();
+
+
+        // Function to generate a random password
+        function generateRandomPassword(length = 12) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<>?';
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                password += characters[randomIndex];
+            }
+            return password;
+        }
+
+        // Function to handle the random password generation and filling the inputs
+        function applyRandomPassword() {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirm_password');
+            const applyButton = document.getElementById('apply-button');
+
+            // Generate random password and set both password and confirm password fields
+            const randomPassword = generateRandomPassword();
+            passwordField.value = randomPassword;
+            confirmPasswordField.value = randomPassword;
+        }
+
+        const id = localStorage.getItem('userId');
+
+        document.addEventListener("DOMContentLoaded", async function () {
+            await axios.get(`https://health-monitor-backend.vercel.app/api/get-user/${id}`).then((res) => {
+                console.log(res.data);
+                document.getElementById('first-name').value = res.data.data.name;
+                document.getElementById('last-name').value = res.data.data.last_name;
+                document.getElementById('middle-name').value = res.data.data.middle_name;
+                document.getElementById('username').value = res.data.data.username;
+                document.querySelector('#email').value = res.data.data.email;
+                document.querySelector('#role option:checked').innerText = res.data.data.role;
+
+            }).catch((err) => {
+                console.log(err);
+            })
+        });
+
+        const updateBtn = document.getElementById('update-btn')
+
+        updateBtn.addEventListener(('click'), async (e) => {
+            e.preventDefault()
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.')
+                return
+            }
+
+            const formData = {
+                password: document.querySelector('input[name="password"]').value,
+                name: document.querySelector('input[name="first-name"]').value,
+                last_name: document.querySelector('input[name="last-name"]').value,
+                last_name: document.querySelector('input[name="middle-name"]').value,
+                role: document.querySelector('#role option:checked').innerText
+
+            };
+            console.log(formData);
+            await axios.put(`https://health-monitor-backend.vercel.app/api/edit/${id}`, formData, {
+               headers
+            }).then((res) => {
+               document.getElementById('edit-user').reset()
+            }).catch((err) => {
+                console.log(err);
+            })
+        })
+
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
+        })
+
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
+
+
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
+
+        const addImg = document.getElementById('add-1-img');
+        const addVideo = document.getElementById('add-2-video');
+        const addImgPupup = document.getElementById('add-1-popup');
+        const addVideoPupup = document.getElementById('add-2-popup');
+        const addImgClose = document.getElementById('add-close-btn');
+
+        addVideo.addEventListener(('click'), () => {
+            addVideoPupup.classList.remove('d-none')
+        })
+
+        addVideoPupup.addEventListener(('click'), (e) => {
+            if (e.target === addVideoPupup) {
+                addVideoPupup.classList.add('d-none')
+            }
+        })
+
+        addImgPupup.addEventListener(('click'), (e) => {
+            if (e.target === addImgPupup) {
+                addImgPupup.classList.add('d-none')
+            }
+        })
+
+        addImg.addEventListener(('click'), () => {
+            addImgPupup.classList.remove('d-none')
+        })
+
+        addImgClose.addEventListener(('click'), () => {
+            addImgPupup.classList.add('d-none')
+        })
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
+
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
+        });
+    </script>
+
+
+</body>
+
+</html>

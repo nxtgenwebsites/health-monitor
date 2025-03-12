@@ -383,7 +383,6 @@
   border: 2px solid transparent;
 }
 
-
 #logoutModal {
   display: none;
   position: fixed;
@@ -432,4 +431,34 @@
   height: 620px !important;
   max-height: 800px !important;
   object-fit: cover;
+}
+
+@media (max-width: 1144px) {
+  .nav-center a {
+    font-size: 15px !important;
+  }
+  
+  .logo-container{
+    padding: 0;
+  }
+  .nav-center {
+    gap: 1rem;
+  }
+  .logo {
+    width: 110px !important;
+    height: 80px !important;
+  }
+  .trustpilot {
+    width: 100px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    width: 100px !important;
+    height: 60px !important;
+  }
+  .ad-container {
+    position: unset;
+  }
 }

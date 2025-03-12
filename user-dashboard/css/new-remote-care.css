@@ -401,7 +401,7 @@ a {
  /* threshold Popup */
 .threshold-box {
   width: 100%;
-  width: 427px !important;
+  max-width: 427px !important;
   padding: 30px 25px;
   padding-top: 20px;
   z-index: 100 !important;
@@ -1708,4 +1708,17 @@ body {
 .sidebar-icon {
   width: 30px !important;
   height: 30px !important;
+}
+
+
+@media (max-width: 500px) {
+   .granted-box h5 {
+    font-size: 20px;
+   }
+   .granted-box p {
+    font-size: 15px;
+   }
+   .thumbnail-card .card-text {
+    font-size: 14px;
+   }
 }

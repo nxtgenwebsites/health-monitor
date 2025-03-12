@@ -2177,3 +2177,18 @@ transition: background-color 0.3s ease;
     width: 38px !important;
     height: 30px !important;
 }
+
+@media (max-width: 768px) {
+    .still-questions {
+        display: grid;
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 375px) {
+    .faq-title {
+        font-size: 20px;
+      }
+      .faq-subtitle {
+    font-size: 15px;
+}
+}

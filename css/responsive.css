@@ -29,6 +29,14 @@
     width: 600px;
     height: 350px;
   }
+  .navbar-brand img {
+    width: 120px !important;
+    height: 90px !important;
+  }
+
+  .trustpilot img {
+    width: 120px !important;
+  }
 }
 @media (max-width: 991px) {
   .hero-content {
@@ -90,7 +98,7 @@
 @media (max-width: 950px) {
   .auth-section {
     width: 100%;
-    padding: 8% 5%;
+    padding: 10% 5%;
   }
   .auth-container {
     width: auto;
@@ -131,9 +139,27 @@
     width: 500px;
     padding: 50px 30px;
   }
+
   .video-popup iframe {
     width: 500px;
     height: 300px;
+  }
+
+  .community-content p{
+    text-align: center !important;
+  }
+
+  .community-img {
+    text-align: end !important;
+  }
+
+  .community-section {
+    padding: 5% 0;
+  }
+
+  .community-card-container{
+    margin-top: 20px !important;
+    /* display: ; */
   }
 }
 
@@ -186,8 +212,8 @@
     margin: 15px 0 !important;
   }
   .fact-content p {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -228,7 +254,7 @@
 
   .auth-section {
     width: 100%;
-    padding: 10% 2%;
+    padding: 12% 2%;
   }
 
   .banner-right-icon {
@@ -258,7 +284,7 @@
   }
   .auth-section {
     width: 100%;
-    padding: 5% 0;
+    padding: 10% 0;
   }
   .auth-container {
     padding: 40px 30px;
@@ -356,6 +382,17 @@
     margin-right: 0px !important;
     padding-right: 0px !important;
   }
+  .navbar-brand img {
+    width: 110px !important;
+    height: 75px !important;
+  }
+
+  .trustpilot img {
+    width: 100px !important;
+  }
+  .review-heading h1 {
+    font-size: 35px !important;
+  }
 }
 
 @media (max-width: 425px) {
@@ -415,6 +452,10 @@
     margin: 1px 0;
   }
 
+  .trustpilot {
+    margin: 0 10px !important;
+  }
+
   .review-card p {
     color: #2e2e2e;
     font-size: 17px;
@@ -424,10 +465,12 @@
     width: 300px;
     padding: 30px 20px;
   }
+
   .auth-section {
     width: 100%;
-    padding: 8%;
+    padding: 10% 0 13%  !important;
   }
+
   .auth-border {
     background: #0b6fc01e;
     padding: 15px;
@@ -455,6 +498,12 @@
     width: 300px;
     height: 180px;
   }
+.community-content h2 {
+  font-size: 40px ;
+}
+.community-content h1 {
+  font-size: 30px;
+}
 }
 
 @media (max-width: 390px) {
@@ -471,6 +520,19 @@
   .hero-content button {
     padding: 4px 18px;
     font-size: 14px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn-container button{
+    margin-top: 10px;
+  }
+
+  
+.review-heading h1 {
+    font-size: 30px !important;
   }
 
   .banner-right-icon {
@@ -550,6 +612,14 @@
   }
   .form-box {
     width: 350px;
+  }
+  .navbar-brand img {
+    width: 100px !important;
+    height: 70px !important;
+  }
+
+  .trustpilot img {
+    width: 80px !important;
   }
 }
 

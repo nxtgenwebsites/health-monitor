@@ -1954,9 +1954,7 @@ body {
   width: 145px !important;
   height: 125px !important;
 }
-z
-
-.notification-icon img {
+z .notification-icon img {
   width: 26px !important;
   height: 30px !important;
 }
@@ -2066,60 +2064,58 @@ z
 }
 
 .transfer-container {
-    background: white;
-    height: 100%;
-    padding: 20px 30px;
-    border-radius: 10px;
+  background: white;
+  height: 100%;
+  padding: 20px 30px;
+  border-radius: 10px;
 }
 
-.transfer-heading h3{
-    color: black;
-    font-weight: 500;
-    font-size: 25px;
+.transfer-heading h3 {
+  color: black;
+  font-weight: 500;
+  font-size: 25px;
 }
 
-.transfer-heading p{
-    color: #0C74C2;
+.transfer-heading p {
+  color: #0c74c2;
 }
 
 .transfer-user-card {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px #00000026;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px #00000026;
 }
 
-
-.user-info h3{
-    color: #0C74C2;
-    font-size: 23px;
+.user-info h3 {
+  color: #0c74c2;
+  font-size: 23px;
 }
 
-.user-info span{
-    color: #2E2E2E;
-    font-size: 17px;
-
+.user-info span {
+  color: #2e2e2e;
+  font-size: 17px;
 }
 
-.transfer-info h3{
-    font-weight: 400;
-    color: #2E2E2E;
-    font-size: 16px;
+.transfer-info h3 {
+  font-weight: 400;
+  color: #2e2e2e;
+  font-size: 16px;
 }
 
-.transfer-info h4{
-    font-weight: 300;
-    color: #2E2E2E;
-    font-size: 16px;
+.transfer-info h4 {
+  font-weight: 300;
+  color: #2e2e2e;
+  font-size: 16px;
 }
 
 .transfer-patients table {
-    margin-top: 50px;
+  margin-top: 50px;
   border-collapse: collapse;
   width: 100%;
 }
 
-.transfer-patients tr{
+.transfer-patients tr {
   border-top: 15px solid white;
   border-bottom: 15px solid white;
 }
@@ -2127,41 +2123,93 @@ z
 .transfer-patients th {
   padding: 17px 20px;
   margin-top: 20px;
-  background: #DDF2F9;
+  background: #ddf2f9;
   margin-bottom: 10px !important;
 }
 
 .transfer-patients td {
   padding: 10px 20px;
-  background: #DDF2F9;
+  background: #ddf2f9;
   margin-top: 20px !important;
 }
 
-
-.transfer-patients table h5{
+.transfer-patients table h5 {
   font-size: 18px;
-  color: #2E2E2E;
+  color: #2e2e2e;
 }
 
-.transfer-patients td{
-    cursor: pointer;
+.transfer-patients td {
+  cursor: pointer;
 }
 
-.profile-box-content h5{
-    font-weight: 500;
-    color: #0C74C2;
+.profile-box-content h5 {
+  font-weight: 500;
+  color: #0c74c2;
 }
 
 .patient-profile-box {
-max-width: 450px;
+  max-width: 450px;
   width: 100%;
   padding: 40px 30px;
 }
-.profile-box-content h6{
+.profile-box-content h6 {
   font-weight: 400;
 }
 
 .highlight-text {
   font-weight: 600;
   font-style: italic;
+}
+
+.transfer-table-container{
+  width: 100%;
+  overflow: scroll;
+  background-color: transparent !important;
+}
+.transfer-table{
+  margin-top: 0 !important;
+  width: 800px;
+  background-color: transparent !important;
+  overflow: scroll;
+}
+
+@media (max-width: 1300px) {
+    .primary-btn {
+    padding: 3px 14px !important;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .transfer-user-card {
+    padding: 10px 15px;
+  }
+  .transfer-container {
+    padding: 15px 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .transfer-info h3 {
+    font-size: 13px;
+  }
+  .transfer-info h4 {
+    font-size: 13px;
+  }
+  .user-info span {
+    font-size: 15px;
+  }
+  .user-info h3 {
+    font-size: 20px;
+  }
+  .primary-btn {
+    padding: 3px 14px !important;
+  }
+  .transfer-heading h3 {
+    font-size: 20px;
+    margin-bottom: 0 !important;
+  }
+  .transfer-heading p {
+    margin: 0 !important;
+  }
 }
