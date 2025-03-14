@@ -58,6 +58,9 @@
   .nav-container {
     padding: 1.5rem 10px;
   }
+  #navbarSupportedContent{
+  z-index: 100;
+}
   .navbar-collapse {
     width: 100%;
     position: absolute;
@@ -145,7 +148,7 @@
     height: 300px;
   }
 
-  .community-content p{
+  .community-content p {
     text-align: center !important;
   }
 
@@ -157,7 +160,7 @@
     padding: 5% 0;
   }
 
-  .community-card-container{
+  .community-card-container {
     margin-top: 20px !important;
     /* display: ; */
   }
@@ -393,6 +396,16 @@
   .review-heading h1 {
     font-size: 35px !important;
   }
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn-container button {
+    margin-top: 10px;
+  }
+  .loading-logo {
+  width: 300px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -468,7 +481,7 @@
 
   .auth-section {
     width: 100%;
-    padding: 10% 0 13%  !important;
+    padding: 10% 0 13% !important;
   }
 
   .auth-border {
@@ -498,12 +511,12 @@
     width: 300px;
     height: 180px;
   }
-.community-content h2 {
-  font-size: 40px ;
-}
-.community-content h1 {
-  font-size: 30px;
-}
+  .community-content h2 {
+    font-size: 40px;
+  }
+  .community-content h1 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -522,16 +535,7 @@
     font-size: 14px;
   }
 
-  .btn-container {
-    flex-direction: column;
-  }
-
-  .btn-container button{
-    margin-top: 10px;
-  }
-
-  
-.review-heading h1 {
+  .review-heading h1 {
     font-size: 30px !important;
   }
 

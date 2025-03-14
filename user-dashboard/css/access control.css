@@ -1782,3 +1782,9 @@ body {
 .second-text {
   text-align: left !important;
 }
+
+@media (max-width: 450px) {
+  .multi-select {
+      width: 300px !important;
+  }
+}

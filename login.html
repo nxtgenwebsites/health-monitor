@@ -64,7 +64,7 @@
         </div>
         <div class="foms-container">
           <!-- Login Form Start -->
-          <form id="login-form" class="login-from" id="login-form">
+          <form id="login-form" class="login-from">
             <div class="email my-4">
               <input type="email" placeholder="Email" required id="login-email">
             </div>
@@ -78,7 +78,7 @@
                 ">Forgot password?</a>
             </div>
             <div class="submit-button d-flex justify-content-center align-items-center">
-              <a href="/user-dashboard/overview.html" class="btn primary-btn  m-auto mt-4 submit-button-login">Login</a>
+              <button id="login-button" class="btn primary-btn  m-auto mt-4 submit-button-login">Login</button>
             </div>
           </form>
           <!-- Login Form End -->
@@ -101,7 +101,6 @@
   </section>
   <!-- Login End -->
 
-  <!-- Footer start -->
   <!-- Footer start -->
   <footer class="footer-section">
     <div class="container">
@@ -187,7 +186,6 @@
 
   </footer>
   <!-- Footer end -->
-  <!-- Footer end -->
   <script src="js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -215,44 +213,10 @@
 
     })
 
-    const loginForm = document.getElementById('login-form');
-
-    loginForm.addEventListener(('submit'), (e) => {
-      e.preventDefault()
-      const loginEmail = document.getElementById('login-email').value;
-      const loginPass = document.getElementById('login-password').value
-
-      const loginData = {
-        email: loginEmail,
-        password: loginPass,
-      }
-
-      axios.post('https://health-monitor-backend.vercel.app/api/login', loginData).then((res) => {
-
-        console.log(res.data);
-        if (res.data.user.isActive === false) {
-          return location.href = '/nonacticve-user.html'; 
-        }else{
-          localStorage.setItem('token', res.data.token);
-          localStorage.setItem('u_id', res.data.user.id);
-          location.href = '/admin-dashboard/manage-users.html'; 
-        }
-
-
-      }).catch((error) => {
-        console.log(error);
-        toastr.error(`${error.response?.data?.message || 'Something went wrong.'}`, "Error", {
-          "closeButton": true,
-          "progressBar": true,
-          "showDuration": "300",
-          "hideDuration": "1000",
-          "timeOut": "2000",
-          "extendedTimeOut": "1000",
-        })
-      })
-
+    const login = document.getElementById('login-button').addEventListener(('click') , () =>{
+      localStorage.removeItem('dha-user');
+      location.href = 'user-dashboard/overview.html';
     })
-
 
   const loginBtn = document.getElementById('login-btn');
   const signupBtn = document.getElementById('signup-btn');

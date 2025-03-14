@@ -231,8 +231,8 @@
 }
 
 .menu-item-dropdown.active:hover {
-  background: #0c75c2 !important;
-  color: white !important;
+  background: #0c75c2 ;
+  color: white ;
 }
 
 .menu-item-active {
@@ -461,4 +461,59 @@
   .ad-container {
     position: unset;
   }
+}
+
+#dha-monitors-menu a{
+  cursor: pointer;
+}
+
+#dashboardMenu{
+  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
+  color: white !important;
+}
+#profileMenu{
+  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
+  color: white !important;
+}
+
+#profileMenu a{
+  color: white !important;
+}
+
+.mobile-menu-item-dropdown{
+  background: transparent !important;
+  color: white !important;
+  margin-top: 10px;
+}
+.mobile-menu-item-dropdown .active{
+  background: transparent !important;
+}
+.mobile-menu-item-dropdown .active:hover{
+  background: transparent !important;
+}
+.mobile-menu-item-dropdown:hover{
+  background: transparent !important;
+}
+
+.mobile-dropdown-content{
+  padding-top: 0 !important;
+}
+
+.mobile-dropdown-content a{
+  color: white !important;
+}
+
+.health-info-icon{
+  margin-left: -4px;
+  margin-right: 4px;
+}
+.mobile-menu-item{
+  margin-top: 10px;
+}
+.mobile-menu-item .menu-text{
+  color: white !important;
+}
+
+.mobile-nav-link-button i{
+  font-size: 22px;
 }
