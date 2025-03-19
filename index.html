@@ -597,6 +597,7 @@
             <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
         </div>
     </div>
+
     <script>
         const cookiesAccepted = localStorage.getItem('cookiesAccepted');
 
@@ -646,9 +647,9 @@
         document.getElementById('fb-share-btn').addEventListener(('click'), () => {
             const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
             const params = new URLSearchParams({
-                u: "https://health-monitor-sa.vercel.app/", // Your website URL
+                u: "https://health-monitor-sa.vercel.app/", 
                 quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
-                hashtag: "#healthMonitor", // Optional hashtag
+                hashtag: "#healthMonitor",
             }).toString();
 
             const shareUrl = `${fbShareUrl}?${params}`;
