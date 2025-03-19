@@ -74,10 +74,13 @@ body {
 /* Cookies Banner Start */
 .cookies-banner {
   width: 100%;
+  position: fixed;
+  bottom: 0;
   background: #1e9eff;
   color: white;
   padding: 10px;
   height: auto;
+  z-index: 100;
 }
 
 .cookies-banner  p{
