@@ -2144,56 +2144,54 @@ canvas {
 
 /* Calender Popup  */
 .calendar {
-  width: 45rem;
-  height: 550px;
-  padding: 20px 0;
+  width: 36rem;
+  height: 440px; 
+  padding: 16px 0;
   background-color: white;
-  /* box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4); */
 }
 
 .month {
   width: 100%;
-  height: 100px;
+  height: 80px; /* Reduced by 20% */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1.6rem;
   text-align: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.075);
 }
 
 .month i {
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
 .month h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.16rem;
+  margin-bottom: 0.8rem;
 }
 
 .month p {
-  font-size: 1rem;
-  margin-top: -10px;
+  font-size: 0.8rem;
+  margin-top: -8px;
 }
 
 .weekdays {
   width: 100%;
-  height: 100px;
+  height: 80px; /* Reduced by 20% */
   font-size: 1px;
-  /* padding: 0 0.4rem; */
   display: flex;
   align-items: center;
 }
 
 .weekdays div {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  letter-spacing: 0.08rem;
+  width: calc(35.36rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2204,25 +2202,21 @@ canvas {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.2rem;
+  padding: 0.16rem;
 }
 
 .days div {
-  font-size: 1rem;
-  margin: 0.3rem;
-  width: calc(40.2rem / 7);
-  height: 50px;
+  font-size: 16px; /* Set to 16px */
+  margin: 0.24rem;
+  width: calc(32.16rem / 7);
+  height: 40px; /* Reduced by 20% */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
-  /* transition: background-color 0.2s; */
 }
 
 .days div:hover:not(.today) {
   background-color: #e2e1e1;
-  /* color: white !important; */
-  /* border: 0.2rem solid #777; */
   cursor: pointer;
 }
 
@@ -2237,18 +2231,18 @@ canvas {
 }
 
 .calender-popup-btns button {
-  padding: 5px 10px !important;
+  padding: 4px 8px !important;
 }
 
 .calender-popup-btns button:nth-child(1) {
-  padding: 5px 15px !important;
+  padding: 4px 12px !important;
   background: #f5f7fa;
   border: none !important;
   border-radius: 4px;
 }
 
 .calender-popup-btns button:nth-child(2) {
-  padding: 5px 15px !important;
+  padding: 4px 12px !important;
   background: #004ea2;
   color: white;
   border: none !important;
@@ -2256,7 +2250,7 @@ canvas {
 }
 
 .calender-btn button {
-  padding: 5px 10px;
+  padding: 4px 8px;
   border: 2px solid #bfbfbf !important;
 }
 
