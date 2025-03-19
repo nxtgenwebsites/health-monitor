@@ -2261,9 +2261,9 @@ canvas {
 }
 
 @media (max-width: 992px) {
-    .time-filter{
-        padding: 0;
-    }
+  .time-filter {
+    padding: 0;
+  }
   .calender-btn button {
     margin-top: 5px;
     padding: 4px 10px;
@@ -2276,8 +2276,54 @@ canvas {
   }
 }
 
+@media (max-width: 786px) {
+  .swiper {
+    width: 600px;
+    height: 550px;
+  }
+}
+@media (max-width: 670px) {
+  .swiper {
+    width: 400px;
+    height: 550px;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .thumbnail-card {
+    width: 320px;
+  }
+  .thumbnail-card .card-text {
+    font-size: 15px;
+  }
+  .thumbnail-card span {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 500px) {
   .history-title {
     font-size: 14px;
+  }
+  .swiper {
+    width: 360px;
+    height: 550px;
+  }
+  .thumbnail-card {
+    width: 290px;
+  }
+  .thumbnail-card .card-text {
+    font-size: 14px;
+  }
+  .thumbnail-card span {
+    font-size: 14px;
+  }
+  .thumbnail-card .threshold-copy-btn {
+    display: none !important;
   }
 }

@@ -630,35 +630,40 @@
             </div>
 
             <!-- Users Table Section -->
-            <div class="card border-0 shadow-sm">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h5 class="card-title mb-0">Banner Ads History<br> <span class="all-users">All Ads</span></h5>
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between w-100 bgf align-items-center mb-4">
+            <h5 class="card-title mb-0 text-center text-md-start">
+                Banner Ads History<br> <span class="all-users">All Ads</span>
+            </h5>
 
-                        <div class="d-flex align-items-center">
-                            <div class="search-box">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown">
-                                    Sort by : <span style="font-weight: bold; color:black;">Newest</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Newest</a></li>
-                                    <li><a class="dropdown-item" href="#">Oldest</a></li>
-                                </ul>
-                            </div>
-                            <a href="/admin-dashboard/add-dha-user.html">
-                                <button class="btn btn-primary ms-3 add-icon text-black">
-                                    <i class="bi bi-plus"></i>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
+<div class="d-flex flex-column flex-sm-row align-items-center gap-2 mt-3 mt-md-0 w-100">
+    <div class="search-box">
+        <input type="text" class="form-control w-100" placeholder="Search">
+    </div>
+    <div class="w-100 d-flex gap-2">
+        <div class="dropdown  w-sm-auto">
+            <button class="btn btn-outline-secondary justify-content-center dropdown-toggle w-100 w-sm-auto" type="button"
+                data-bs-toggle="dropdown">
+                Sort by : <span style="font-weight: bold; color:black;">Newest</span>
+            </button>
+            <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="#">Newest</a></li>
+                <li><a class="dropdown-item" href="#">Oldest</a></li>
+            </ul>
+        </div>
+        <a href="/admin-dashboard/add-dha-user.html">
+            <button class="btn btn-primary add-icon text-black w-100 w-sm-auto">
+                <i class="bi bi-plus"></i>
+            </button>
+        </a>
+    </div>
+</div>
 
-                    <div>
-                        <table class="table dha-table">
+        </div>
+
+<div class="table-container" style="width: 100%; overflow-x: auto;">
+                        <table class="table dha-table" style="min-width: 800px;">
                             <thead>
                                 <tr>
                                     <th class="text-nowrap alagn">Ad Tittle</th>
@@ -826,7 +831,7 @@
                         </table>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
                         <div class="text-muted pagination-info">
                             Showing data 1 to 4 of 500 entries
                         </div>

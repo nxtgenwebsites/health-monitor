@@ -196,7 +196,7 @@
             </a></li>
         <li class="border-top mt-2 pt-2">
             <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                Upgrade to Community Edition
+                Upgrade to CDHA
             </a>
         </li>
     </ul>
@@ -272,7 +272,7 @@
             </a></li>
         <li class="border-top mt-2 pt-2">
             <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
-                Upgrade to Community Edition
+                Upgrade to CDHA
             </a>
         </li>
     </ul>
@@ -483,8 +483,8 @@
         <div class="dropdown-content mobile-dropdown-content ps-4">
             <ul class="custom-bullets">
                 <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
-                <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a></li>
-                <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a></li>
+                <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacies </a></li>
+                <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a></li>
                 <span class="dropdown-item-custom community-text w-100 text-white">Community Digital Health
                     Assistants
                     (CDHA)</span>
@@ -775,8 +775,8 @@
             <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
-                    <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacy</a></li>
-                    <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemist</a></li>
+                    <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacies </a></li>
+                    <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a></li>
                     <span class="dropdown-item-custom community-text w-100">Community Digital Health Assistants
                         (CDHA)</span>
                     <div class="px-4">
@@ -1495,11 +1495,6 @@
             const pairedBackBtn = document.getElementById('paired-black-btn');
             const pairedCloseBtn = document.getElementById('paired-close-btn');
 
-            if (remoteCareDropdownBtn) {
-                remoteCareDropdownBtn.addEventListener('click', () => {
-                    remoteCareDropdown.classList.toggle('d-none');
-                });
-            }
 
             // Remote Care Buttons
             remoteCareBtns.forEach(btn => {

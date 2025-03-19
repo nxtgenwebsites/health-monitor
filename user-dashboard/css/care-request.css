@@ -1933,6 +1933,9 @@ textarea.form-control {
   font-size: 14px;
 }
 
+.clickable-card {
+    cursor: pointer !important;
+}
 
 .upload-box{
   width: 120px;
@@ -1982,7 +1985,6 @@ textarea.form-control {
     font-size: 14px;
   }
 }
-
 @media (max-width: 425px) {
 .care-pages h4{
       font-size: 11px !important;

@@ -13,7 +13,7 @@
   --green-color: #40a737;
   --light-gray: #555555;
   --bg-color: #f6f6f6;
-   --btn-gradient: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
+  --btn-gradient: linear-gradient(93.22deg, #0b6fc0 1.06%, #1fd2e5 97.02%);
 }
 
 body {
@@ -48,6 +48,7 @@ body {
   align-items: center;
   background: url("../assets/images/loading\ bg\ gradient.svg") bottom no-repeat;
   background-size: cover;
+    z-index: 10000;
 }
 
 @keyframes zoomIn {
@@ -70,18 +71,123 @@ body {
 }
 /* Loading Screen End*/
 
+/* Cookies Banner Start */
+.cookies-banner {
+  width: 100%;
+  background: #1e9eff;
+  color: white;
+  padding: 10px;
+  height: auto;
+}
+
+.cookies-banner  p{
+  /* display: none; */
+  font-size: 14px;
+}
+
+.cookies-banner button {
+  background: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cookies-banner button:nth-child(1) {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.cookies-banner button:nth-child(2) {
+  background: white;
+  color: black;
+  border: 2px solid white;
+}
+
+/* Cookies Banner End */
+
+/* Cookies Popup Start*/
+.cookies-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cookies-popup {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 420px;
+  border-radius: 10px;
+}
+.cookies-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.cookies-popup button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.allow-btn {
+  background: #1e9eff;
+  color: white;
+}
+.decline-btn {
+  background: #0d0c220d;
+  color: black;
+}
+@media (max-width: 767px) {
+  .cookies-banner {
+    display: none;
+  }
+  .cookies-overlay {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .cookies-banner {
+    display: none;
+  }
+  .cookies-popup {
+    display: flex;
+  }
+}
+@media (max-width: 400px) {
+  .cookies-popup p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+/* Cookies Popup Start*/
+
 /* Navbar Start*/
-.navbar-brand img{
+.navbar-brand img {
   width: 150px !important;
   height: 100px !important;
 }
 
-.trustpilot img{
+.trustpilot img {
   width: 130px !important;
 }
 
 .navbar {
   height: 120px;
+  /* background-color: red; */
 }
 
 .dropdown-menu {
@@ -98,8 +204,8 @@ body {
 }
 
 .active {
-    color: var(--primary-color) !important;
-    font-weight: bold !important;
+  color: var(--primary-color) !important;
+  font-weight: bold !important;
 }
 
 /* Navbar End*/
@@ -208,7 +314,7 @@ body {
   margin-top: 60px;
 }
 
-.numbers-card{
+.numbers-card {
   background: white;
   padding: 20px 20px;
   border-radius: 5px;
@@ -222,7 +328,6 @@ body {
 .numbers-card p {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
-
 }
 .about-text {
   margin: 30px 0;
@@ -230,7 +335,7 @@ body {
 .about-card-container {
   padding: 30px 20px;
 }
-.about-section .gradient-img{
+.about-section .gradient-img {
   height: 750px;
   position: absolute;
   z-index: -1;
@@ -328,11 +433,11 @@ body {
   font-size: 17px;
 }
 
-.review-card-time{
+.review-card-time {
   font-weight: 300;
 }
 
-.review-user-info span{
+.review-user-info span {
   font-weight: 300 !important;
 }
 
@@ -349,13 +454,13 @@ body {
 .swiper .swiper-pagination .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
-  background-color: #0B6FC0;
+  background-color: #0b6fc0;
   opacity: 20%;
   margin: 0px 5px;
   transition: all 0.3s ease;
 }
 .swiper-scrollbar {
-    display: none;
+  display: none;
 }
 .swiper {
   padding: 45px 0px;
@@ -440,7 +545,7 @@ body {
 }
 
 .p {
-  color: #9197B3;
+  color: #9197b3;
   font-size: 14px;
 }
 
@@ -454,6 +559,6 @@ body {
 }
 
 .copyright-section p {
-  color: #9197B3 !important;
+  color: #9197b3 !important;
 }
 /* Footer end */

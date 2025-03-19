@@ -1064,8 +1064,9 @@ a {
 }
 
 .bmi-card {
-    width: 775px;
-    height: 699px;
+    max-width: 770px;
+    width: 80%;
+    max-height: 699px;
     border-radius: 50px 0px 0px 50px;
     background: #fff;
     position: absolute;
@@ -1211,4 +1212,17 @@ a {
     #sidebar{
         display: none;
     }
+}
+
+.date-range label {
+    font-weight: 500;
+}
+
+.date-range input {
+    padding: 8px 15px;
+    background: white;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 5px;
 }
