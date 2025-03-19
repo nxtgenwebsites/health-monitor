@@ -2053,56 +2053,57 @@ color: white;
   border: 2px solid #bfbfbf !important;
 }
 
-/* Calender Popup  */
+/* Calendar Popup */
 .calendar {
-  width: 36rem;
-  height: 440px; 
-  padding: 16px 0;
+  width: 26rem; /* Further reduced */
+  height: 300px; /* Further reduced */
+  padding: 10px 0;
   background-color: white;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .month {
   width: 100%;
-  height: 80px; /* Reduced by 20% */
+  height: 60px; /* Further reduced */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.6rem;
+  padding: 0 1rem;
   text-align: center;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.075);
 }
 
 .month i {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 .month h1 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.16rem;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.12rem;
+  margin-bottom: 0.5rem;
 }
 
 .month p {
-  font-size: 0.8rem;
-  margin-top: -8px;
+  font-size: 0.6rem;
+  margin-top: -5px;
 }
 
 .weekdays {
   width: 100%;
-  height: 80px; /* Reduced by 20% */
+  height: 60px; /* Further reduced */
   font-size: 1px;
   display: flex;
   align-items: center;
 }
 
 .weekdays div {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 400;
-  letter-spacing: 0.08rem;
-  width: calc(35.36rem / 7);
+  letter-spacing: 0.06rem;
+  width: calc(25rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2113,14 +2114,14 @@ color: white;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.16rem;
+  padding: 0.1rem;
 }
 
 .days div {
-  font-size: 16px; /* Set to 16px */
-  margin: 0.24rem;
-  width: calc(32.16rem / 7);
-  height: 40px; /* Reduced by 20% */
+  font-size: 16px; /* Kept at 16px */
+  margin: 0.15rem;
+  width: calc(23rem / 7);
+  height: 30px; /* Further reduced */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2142,18 +2143,18 @@ color: white;
 }
 
 .calender-popup-btns button {
-  padding: 4px 8px !important;
+  padding: 2px 5px !important;
 }
 
 .calender-popup-btns button:nth-child(1) {
-  padding: 4px 12px !important;
+  padding: 2px 8px !important;
   background: #f5f7fa;
   border: none !important;
   border-radius: 4px;
 }
 
 .calender-popup-btns button:nth-child(2) {
-  padding: 4px 12px !important;
+  padding: 2px 8px !important;
   background: #004ea2;
   color: white;
   border: none !important;
@@ -2161,10 +2162,72 @@ color: white;
 }
 
 .calender-btn button {
-  padding: 4px 8px;
+  padding: 2px 5px;
   border: 2px solid #bfbfbf !important;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendar {
+    width: 20rem;
+    height: 250px;
+    padding: 8px 0;
+  }
+  .month {
+    height: 50px;
+    padding: 0 0.8rem;
+  }
+  .month h1 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  .weekdays {
+    height: 50px;
+  }
+  .weekdays div {
+    font-size: 0.5rem;
+    width: calc(19rem / 7);
+  }
+  .days div {
+    font-size: 14px;
+    width: calc(18rem / 7);
+    height: 25px;
+  }
+  .calender-popup-btns button {
+    padding: 2px 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    width: 16rem;
+    height: 250px;
+    padding: 6px 0;
+  }
+  .month {
+    height: 45px;
+    padding: 0 0.6rem;
+  }
+  .month h1 {
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
+  }
+  .weekdays {
+    height: 45px;
+  }
+  .weekdays div {
+    font-size: 0.4rem;
+    width: calc(15rem / 7);
+  }
+  .days div {
+    font-size: 12px;
+    width: calc(14rem / 7);
+    height: 22px;
+  }
+  .calender-popup-btns button {
+    padding: 2px 4px !important;
+  }
+}
 
 @media (max-width: 670px) {
   .swiper {
