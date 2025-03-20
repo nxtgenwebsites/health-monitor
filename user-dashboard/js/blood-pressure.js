@@ -12,7 +12,7 @@ function initializeBMIChart() {
             datasets: [
                 {
                     label: 'Weight',
-                    data: [60, 85, 75, 65, 80, 35, 70, 75, 45, 75, 65, 70],
+                    data: [125, 140, 135, 150, 160, 170, 145, 155, 130, 175, 165, 120],
                     borderColor: '#9333EA',
                     borderWidth: 2,
                     tension: 0.4,
@@ -22,7 +22,7 @@ function initializeBMIChart() {
                 },
                 {
                     label: 'Height',
-                    data: [70, 80, 90, 95, 85, 80, 75, 70, 75, 85, 90, 85],
+                    data: [75, 85, 95, 100, 90, 85, 80, 75, 80, 90, 100, 95],
                     borderColor: '#EC4899',
                     borderWidth: 2,
                     tension: 0.4,
@@ -32,7 +32,7 @@ function initializeBMIChart() {
                 },
                 {
                     label: 'BMI',
-                    data: [65, 75, 80, 70, 55, 80, 85, 50, 75, 70, 75, 40],
+                    data: [70, 80, 85, 75, 70, 85, 90, 70, 80, 75, 80, 70],
                     borderColor: '#3B82F6',
                     borderWidth: 2,
                     tension: 0.4,

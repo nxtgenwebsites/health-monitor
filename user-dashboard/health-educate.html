@@ -190,6 +190,10 @@
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
+                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                                                    App Version
+                                                </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
@@ -255,6 +259,10 @@
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
+                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                                                    App Version
+                                                </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/dha-transfer-in.html">
                             <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
@@ -844,12 +852,6 @@
                 </div>
             </a> -->
 
-            <!-- Upgrade Box -->
-            <div class="upgrade-box">
-                <h5 class="upgrade-text">Upgrade to Community Digital Health Assistant (CDHA)</h5>
-                <a href="/user-dashboard/upgrade-to-dha.html" class="upgrade-button">Get CDHA Now!</a>
-            </div>
-
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -1118,13 +1120,11 @@
         const checkUser = localStorage.getItem('dha-user')
 
         if (checkUser === 'true') {
-            upgradeBox.classList.add('d-none');
             userProfile.classList.add('d-lg-none');
             patientLink.classList.add('d-none');
             normalMonitorsMenu.classList.add('d-none');
             normalMonitorsMobile.classList.add('d-none');
         } else {
-            upgradeBox.classList.remove('d-none');
             patientDropDown.classList.add('d-none');
             cdhaProfile.classList.add('d-lg-none');
             dhaMonitorsMenu.classList.add('d-none');
