@@ -537,6 +537,7 @@
 .dropdown-btn {
   all: unset;
   cursor: pointer;
+      margin-left: -22px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -579,4 +580,5 @@
 /* Custom bullet points for list */
 .custom-list {
   list-style-type: disc;
+ padding: 0 !important;
 }

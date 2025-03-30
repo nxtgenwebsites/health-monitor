@@ -115,7 +115,7 @@
                                     from further use of our sites.</p>
                             </div>
                             <div class="proceed-btn text-center">
-                                <button class="btn primary-btn" type="submit" id="proceed-btn">Proceed</button>
+                                <button class="btn primary-btn" type="button" id="proceed-btn">Proceed</button>
                             </div>
                         </div>
                     </form>
@@ -247,85 +247,10 @@
             userId: ""
         }
 
-        registerForm.addEventListener(('submit'), (e) => {
-            e.preventDefault()
-            const password = document.getElementById('user-password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
-           const termsCondition = document.getElementById('terms-condition').checked;
-
-          if (!termsCondition) {
-                return toastr.warning(`Terms are not accepted.`, "Warning", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "2000",
-                    "extendedTimeOut": "1000",
-                });
-            }
-
-            if (password !== confirmPassword) {
-                return toastr.error(`Passwords do not match.`, "Error", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "2000",
-                    "extendedTimeOut": "1000",
-                })
-            }
-
-            const checkbox = document.getElementById('cbx-46');
-
-            console.log(checkbox);
-
-            const data = {
-                title: document.getElementById('user-title').value,
-                name: document.getElementById('first-name').value,
-                username: document.getElementById('username').value,
-                middle_name: document.getElementById('middle-name').value,
-                last_name: document.getElementById('last-name').value,
-                email: document.getElementById('user-email').value,
-                password: document.getElementById('user-password').value,
-            };
-
-            axios.post('https://health-monitor-backend.vercel.app/api/sign_up', data).then((res) => {
-                console.log(res.data);
-
-                emailData.email = res.data.user.email
-                emailData.username = res.data.user.username
-                emailData.userId = res.data.user.id
-
-                localStorage.setItem('token', res.data.token);
-                localStorage.setItem('u_id', res.data.user.id);
-                sendEmail();
-                registerForm.reset();
+        document.getElementById('proceed-btn').addEventListener(('click'), () => {
+            // e.preventDefault()
                 popup.classList.remove('d-none');
-
-            }).catch((error) => {
-                console.log(error.response?.data?.message);
-                toastr.error(`${error.response?.data?.message || 'Something went wrong.'}`, "Error", {
-                    "closeButton": true,
-                    "progressBar": true,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "2000",
-                    "extendedTimeOut": "1000",
-                })
-            })
-
-            console.log(data);
         })
-
-        const sendEmail = () => {
-            axios.post('https://health-monitor-backend.vercel.app/api/email_verification', emailData).then((res) => {
-                console.log(res.data);
-                localStorage.removeItem('email');
-                localStorage.getItem('username');
-            }).catch((error) => {
-                console.log(error);
-            })
-        }
 
         // thanks popup 
         const closeBtn = document.getElementById('close-btn');
