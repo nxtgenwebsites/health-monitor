@@ -1914,12 +1914,12 @@ a {
   background: #f1f8fe;
   color: #0c75c2;
 }
-.medications-table-container{
- width: 100%;
- overflow: scroll;
+.medications-table-container {
+  width: 100%;
+  overflow: scroll;
 }
 
-.medications-table{
+.medications-table {
   width: 800px !important;
 }
 
@@ -1947,4 +1947,24 @@ a {
   }
 }
 
+.status-dropdown-container {
+  border-radius: 10px !important;
+  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
+}
 
+.status-dropdown-container select{
+  border: none;
+  outline: none;
+  border-right: 5px solid #00000000 !important;
+  border-radius: 10px !important;
+  padding: 7px 15px;
+  background: transparent;
+  color: white;
+}
+.status-dropdown-container option{
+    background: white;
+  }
+
+.medication-row {
+  cursor: pointer;
+}

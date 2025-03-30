@@ -2052,3 +2052,38 @@ a {
     margin: auto;
   }
 }
+
+.status-dropdown-container {
+  width: fit-content;
+  border-radius: 10px !important;
+  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
+}
+
+.status-dropdown-container select{
+  border: none;
+  outline: none;
+  border-right: 5px solid #00000000 !important;
+  border-radius: 10px !important;
+  padding: 7px 15px;
+  background: transparent;
+  color: white;
+}
+.status-dropdown-container option{
+    background: white;
+  }
+
+  .appointment-details-modal .modal-content {
+    height: 536px !important;
+  }
+
+  .appointment-close-btn{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddf2f9;
+    border-radius: 6px;
+    color: #0284c7;
+    border: none;
+  }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Diabetes</title>
+    <title>HealthCentreApp | Diabetes</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -22,7 +22,7 @@
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
+                <a href="/"><img src="assets/logo.png" alt="HealthCentreApp" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -713,7 +713,7 @@
 
 
 
-            <!-- Health Monitors Dropdown -->
+            <!-- HealthCentreApps Dropdown -->
             <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -742,12 +742,12 @@
                                 onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
                                 class="dropdown-item-custom">BP</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
-                                class="dropdown-item-custom">BMI</a></li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')" class="dropdown-item-custom">BMI</a>
+                        </li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
                                 class="dropdown-item-custom">Episodes</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
-                                class="dropdown-item-custom">Diabetes</a></li>
+                                class="dropdown-item-custom active">Diabetes</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
                                 class="dropdown-item-custom">Tests</a>
                         </li>
@@ -757,12 +757,9 @@
                                 class="dropdown-item-custom">Appointments</a></li>
                     </ul>
                 </div>
-
+            
                 <div id="normal-monitors-menu">
                     <ul class="custom-bullets">
-                        <li>
-                            <a class="dropdown-item-custom" href=" /user-dashboard/patient.html">Patient</a>
-                        </li>
                         <li>
                             <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
                         </li>
@@ -773,7 +770,7 @@
                             <a href='/user-dashboard/episodes.html' class="dropdown-item-custom">Episodes</a>
                         </li>
                         <li>
-                            <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
+                            <a href='/user-dashboard/diabetes.html' class="active dropdown-item-custom">Diabetes</a>
                         </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
@@ -786,6 +783,7 @@
                         </li>
                     </ul>
                 </div>
+            
             </div>
 
             <!-- Communities Dropdown -->
@@ -1037,6 +1035,9 @@
                                         <h3 class="card-type">Threshold</h3>
                                     </div>
                                     <div class="d-flex gap-3 threshold-action-btns">
+                                                                                <a href="/user-dashboard/new-remote-care.html">
+                                                                                    <button class="add-threshold-btn"><i class="bi bi-plus h4"></i></button>
+                                                                                </a>
                                         <a href="new-remote-care.html"><button><img src="assets/edit.svg"
                                                     alt="edit"></button></a>
                                         <button id="delete-btn"><img src="assets/delete.svg" alt="delete"></button>
@@ -1128,6 +1129,9 @@
                                         <h3 class="card-type">Threshold</h3>
                                     </div>
                                     <div class="d-flex gap-3 threshold-action-btns">
+                                                                                <a href="/user-dashboard/new-remote-care.html">
+                                                                                    <button class="add-threshold-btn"><i class="bi bi-plus h4"></i></button>
+                                                                                </a>
                                         <a href="new-remote-care.html"><button><img src="assets/edit.svg"
                                                     alt="edit"></button></a>
                                         <button id="delete-btn"><img src="assets/delete.svg" alt="delete"></button>

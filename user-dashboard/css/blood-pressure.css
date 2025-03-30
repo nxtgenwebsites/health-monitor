@@ -2387,3 +2387,8 @@ canvas {
     display: none !important;
   }
 }
+
+
+.add-threshold-btn i{
+  color: #0b6fc0;
+}

@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownContent = document.getElementById("dropdownContent");
+    const dropdownArrow = document.getElementById("dropdownArrow");
+
+    dropdownBtn.addEventListener("click", function () {
+        // Toggle dropdown visibility
+        dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+
+        // Rotate arrow
+        dropdownArrow.classList.toggle("rotate");
+    });
+});
+
+
 // Handle all sidebar functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown menu items

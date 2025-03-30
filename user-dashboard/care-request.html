@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | CareRequest</title>
+    <title>HealthCentreApp | CareRequest</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -24,7 +24,7 @@
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <a href="/"><img src="assets/logo.png" alt="Health Monitor" class="logo"></a>
+                <a href="/"><img src="assets/logo.png" alt="HealthCentreApp" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -607,10 +607,10 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-
+        
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
-                <div class="menu-item">
+                <div class="menu-item active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
@@ -627,7 +627,7 @@
                     <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-
+        
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -648,11 +648,12 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
+        
             <!-- Patient Dropdown -->
             <div class="menu-item-dropdown" id="patient-drop-down">
                 <div class="menu-icon-wrapper">
-                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24"
-                        viewBox="0 0 46 47" fill="none">
+                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 46 47"
+                        fill="none">
                         <path
                             d="M17.0864 19.8076C21.2804 19.8076 24.6803 16.4077 24.6803 12.2136C24.6803 8.01957 21.2804 4.61963 17.0864 4.61963C12.8923 4.61963 9.49237 8.01957 9.49237 12.2136C9.49237 16.4077 12.8923 19.8076 17.0864 19.8076Z"
                             stroke="#9197B3" stroke-width="1.82256"></path>
@@ -677,8 +678,10 @@
                     </li>
                 </ul>
             </div>
+        
+        
             <!-- Symptom Checker Dropdown -->
-            <div class="menu-item-dropdown active">
+            <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
@@ -699,17 +702,16 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4 show">
-    <ul class="custom-bullets">
-        <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a></li>
-        <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a></li>
-        <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
-    </ul>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a></li>
+                    <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a>
+                    </li>
+                    <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
+                </ul>
             </div>
-
-
-
-            <!-- Health Monitors Dropdown -->
+        
+            <!-- HealthCentreApps Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -738,12 +740,14 @@
                                 onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
                                 class="dropdown-item-custom">BP</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')" class="dropdown-item-custom">BMI</a></li>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
+                                class="dropdown-item-custom">BMI</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
                                 class="dropdown-item-custom">Episodes</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
                                 class="dropdown-item-custom">Diabetes</a></li>
-                        <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')" class="dropdown-item-custom">Tests</a>
+                        <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
+                                class="dropdown-item-custom">Tests</a>
                         </li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
                                 class="dropdown-item-custom">Medications</a></li>
@@ -751,12 +755,9 @@
                                 class="dropdown-item-custom">Appointments</a></li>
                     </ul>
                 </div>
-                
+        
                 <div id="normal-monitors-menu">
                     <ul class="custom-bullets">
-                        <li>
-                            <a class="dropdown-item-custom" href=" /user-dashboard/patient.html">Patient</a>
-                        </li>
                         <li>
                             <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
                         </li>
@@ -780,8 +781,9 @@
                         </li>
                     </ul>
                 </div>
+        
             </div>
-
+        
             <!-- Communities Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -806,14 +808,19 @@
             </div>
             <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
-                    <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacies </a></li>
-                    <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a></li>
-                    <span class="dropdown-item-custom community-text w-100">Community Digital Health Assistants
-                        (CDHA)</span>
-                    <div class="px-4">
-                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
-                        <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a></li>
+                    <button id="dropdownBtn" class="dropdown-btn">
+                        <span>Community Digital Health Assistants (CDHA)</span>
+                        <i class="bi bi-chevron-down" id="dropdownArrow"></i>
+                    </button>
+        
+                    <!-- Dropdown content -->
+                    <div class="dropdown-content mt-2" id="dropdownContent">
+                        <ul class="custom-list">
+                            <li><a href="/user-dashboard/find-dha.html" class="dropdown-item cdn- ">Listing</a></li>
+                            <li><a href="/user-dashboard/dha-training.html" class="dropdown-item cdn-links">Training</a>
+                            </li>
+                        </ul>
                     </div>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -822,10 +829,11 @@
                     </li>
                 </ul>
             </div>
-
+        
             <a href="/user-dashboard/health-info.html">
                 <div class="menu-item">
-                    <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="icon sidebar-icon" width="25" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
                             fill="#9197B3" />
@@ -839,13 +847,14 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-
+        
             <!-- <a href="/user-dashboard/user-transfer.html">
-                <div class="menu-item">
-                    <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
-                    <span class="menu-text">Transfers</span>
-                </div>
-            </a> -->
+                        <div class="menu-item">
+                            <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                            <span class="menu-text">Transfers</span>
+                        </div>
+                    </a> -->
+        
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -985,7 +994,7 @@
                     <div class="col-12 chk-container mt-4">
                         <h5 class="my-2">In order for healthcare professionals to understand your situation better, it
                             is advisable to add your last 4 weeks
-                            health monitor scores with this CareRequest, are you happy for them to be included?</h5>
+                            HealthCentreApp scores with this CareRequest, are you happy for them to be included?</h5>
                         <div class="d-flex gap-4 mt-4">
                             <div class="form-check mb-0">
                                 <input type="radio" name="remote-care" class="form-check-input" id="yes">

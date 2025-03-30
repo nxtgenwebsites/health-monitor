@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Health Monitor</title>
+    <title>HealthCentreApp</title>
     <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -55,7 +55,7 @@
             <div class="row align-items-center row-gap-4">
                 <div class="col-12 col-md-6 mx-auto px-3">
                     <div class="community-content text-center">
-                        <h2 class="">Welcome to HealthMonitor</h2>
+                        <h2 class="">Welcome to HealthCentreApp</h2>
                         <h1 class="mt-2">Communities</h1>
                         <p>We're thrilled to have you here. This is your go-to hub for everything related to health and
                             wellness. Whether you're
@@ -70,7 +70,7 @@
                             you've come to the right
                             place. We offer comprehensive information and resources to help you on your journey.</p>
                         <p>Warm regards</p>
-                        <p>The Health Monitor Team</p>
+                        <p>The HealthCentreApp Team</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 community-img">
@@ -485,7 +485,7 @@
         </div>
         <hr class="mt-5 mb-2">
         <div class="copyright-section d-flex align-items-center">
-            <p class="font-size">© Copyright 2025 HealthMonitor. All rights reserved</p>
+            <p class="font-size">© Copyright 2025 HealthCentreApp. All rights reserved</p>
             <p class="ms-md-auto me-3 font-size">Share on socials</p>
             <div class="social-media">
                 <button id="x-share-btn" class="btn p-0 border-0">
@@ -608,16 +608,16 @@
 
             const params = new URLSearchParams({
                 url: "https://health-monitor-sa.vercel.app/",
-                title: "Health Monitor",
+                title: "HealthCentreApp",
                 summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
-                source: "Health Monitor"
+                source: "HealthCentreApp"
             }).toString();
 
             window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
         })
 
         document.getElementById('x-share-btn').addEventListener(('click'), () => {
-            const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #healthMonitor");
+            const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #HealthCentreApp");
             const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
             window.open(tweetUrl, "_blank", "width=600,height=400");
         })
@@ -627,7 +627,7 @@
             const params = new URLSearchParams({
                 u: "https://health-monitor-sa.vercel.app/", // Your website URL
                 quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
-                hashtag: "#healthMonitor", // Optional hashtag
+                hashtag: "#HealthCentreApp", // Optional hashtag
             }).toString();
 
             const shareUrl = `${fbShareUrl}?${params}`;

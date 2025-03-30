@@ -2437,3 +2437,7 @@ flex-shrink: 0;
     display: none !important;
   }
 }
+
+.add-threshold-btn i{
+  color: #0b6fc0;
+}

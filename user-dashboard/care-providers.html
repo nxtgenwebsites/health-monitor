@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCentreApp | Overview</title>
+    <title>HealthCentreApp | Hospitals</title>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/search-patient.css">
+    <link rel="stylesheet" href="css/Chemist.css">
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
+    <style>
 
+    </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- This is the Updated HTML FILE -->
         <!-- Left side -->
         <div class="d-flex align-items-center">
             <div class="logo-container border-lg-end border-0">
-                <img src="assets/logo.png" alt="HealthCentreApp" class="logo">
+                <a href="/"><img src="assets/logo.png" alt="HealthCentreApp" class="logo"></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
@@ -65,7 +67,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -79,7 +81,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -93,7 +95,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -107,7 +109,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -121,7 +123,7 @@
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
-                                <img src="assets/notification-icon-logo.png" width="25" height="30" alt="">
+                                <img src="assets/notification-icon-logo.png" width="35" height="42" alt="">
                             </div>
                         </div>
                         <div class="notification-content">
@@ -146,168 +148,146 @@
             </button>
 
             <!-- User Dropdown (visible on desktop) -->
-            <!-- User Dashborad User Dropdown -->
-            <div class="dropdown d-none d-lg-block" id="user-profile">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+<!-- User Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="user-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
                 </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Password & 2FA
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
-                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                                                    App Version
-                                                </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
-                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
-                        </a>
-                    </li>
-                </ul>
             </div>
-            <!-- CDHA Dashborad User Dropdown -->
-            <div class="dropdown d-none d-lg-block" id="cdha-profile">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
-                    style="cursor: pointer;">
-                    <img src="assets/1.png" alt="" class="user-avatar">
-                    <span class="d-none d-lg-inline">Bohdan Peter</span>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+                                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                                        <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                                        App Version
+                                    </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to CDHA
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- CDHA Dashborad User Dropdown -->
+<div class="dropdown d-none d-lg-block" id="cdha-profile">
+    <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+        <img src="assets/1.png" alt="" class="user-avatar">
+        <span class="d-none d-lg-inline">Bohdan Peter</span>
+    </div>
+    <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
+        <li class="dropdown-header p-0 mb-3">
+            <div class="d-flex gap-3 align-items-center">
+                <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                <div>
+                    <h6 class="mb-0">Bohdan Peter</h6>
+                    <small class="text-muted">Preston, UK</small>
                 </div>
-                <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li class="dropdown-header p-0 mb-3">
-                        <div class="d-flex gap-3 align-items-center">
-                            <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
-                            <div>
-                                <h6 class="mb-0">Bohdan Peter</h6>
-                                <small class="text-muted">Preston, UK</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-profile.html">
-                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
-                            Profile
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/new-sponsorship.html">
-                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
-                            Sponsorship
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-print.html">
-                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
-                            Print
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-change-pin.html">
-                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
-                            Password & 2FA
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/remote-access.html">
-                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
-                            Access Control
-                        </a></li>
-                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
-                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                                                    App Version
-                                                </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/dha-transfer-in.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
-                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Transfer In
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/dha-transfer-out.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
-                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Transfer Out
-                        </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
-                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
-                        </a></li>
-                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
-                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
-                        </button></li>
-
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/user-delete-acc.html">
-                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
-                            Delete Account
-                        </a></li>
-                    <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
-                        </a>
-                    </li>
-                </ul>
             </div>
+        </li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                Profile
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                Sponsorship
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                Print
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                Password & 2FA
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                Access Control
+            </a></li>
+                                <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                                        <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                                        App Version
+                                    </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-in.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.833 22.916L27.083 29.166L20.833 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer In
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-out.html">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.583 22.916L8.33301 29.166L14.583 35.416" stroke="#000" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Transfer Out
+            </a></li>
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                System
+            </a></li>
+        <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                Share link
+            </button></li>
+
+        <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+                <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                Delete Account
+            </a></li>
+        <li class="border-top mt-2 pt-2">
+            <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                Upgrade to CDHA
+            </a>
+        </li>
+    </ul>
+</div>
         </div>
     </header>
 
@@ -647,7 +627,8 @@
                 </div>
             </a>
         
-            <div class="menu-item-dropdown active" id="patient-drop-down">
+            <!-- Patient Dropdown -->
+            <div class="menu-item-dropdown" id="patient-drop-down">
                 <div class="menu-icon-wrapper">
                     <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 46 47"
                         fill="none">
@@ -668,10 +649,10 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4 show">
+            <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/dha-add-patient.html" class="dropdown-item-custom">Add New</a></li>
-                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom active">Find Patient</a>
+                    <li><a href="/user-dashboard/dha-search-patient.html" class="dropdown-item-custom">Find Patient</a>
                     </li>
                 </ul>
             </div>
@@ -782,7 +763,7 @@
             </div>
         
             <!-- Communities Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         class="icon sidebar-icon">
@@ -803,9 +784,9 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4">
+            <div class="dropdown-content ps-4 show">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a></li>
+                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom active">Care Providers</a></li>
                     <button id="dropdownBtn" class="dropdown-btn">
                         <span>Community Digital Health Assistants (CDHA)</span>
                         <i class="bi bi-chevron-down" id="dropdownArrow"></i>
@@ -859,108 +840,320 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <!-- Main Content -->
         <div class="main-content">
-            <div class="result-container">
-                <div class="flex-column flex-sm-row d-flex justify-content-between align-items-center mb-4">
-                    <div>
-                        <h3 class="dashboard-title mb-1">Search results</h3>
-                    </div>
-                    <div class="dha-searchbar mt-2">
-                        <span class="search-icon">
-                            <i class="bi bi-record-circle-fill"></i>
-                        </span>
-                        <input type="text" placeholder="Search">
-                        <button class="bg-transparent p-0 border-0" id="search-result">
-                            <img src="assets/search icon.svg" alt="">
-                        </button>
+            <!-- Combined White Container -->
+            <div class="unified-container">
+                <!-- Title and Search Row -->
+                <div class="title-search-container">
+                    <h1 class="page-title">Hospitals</h1>
+                    <div class="search-bar">
+                        <i class="bi bi-record-circle-fill"></i>
+                        <input type="text" placeholder="Search" class="form-control">
+
                     </div>
                 </div>
-                <div class="mt-5 d-" id="result-container">
-                    <div
-                        class="result-card d-flex flex-column flex-xl-row justify-content-between align-items-center w-100">
-                        <div>
-                            <span>Female, 34</span>
-                        </div>
-                        <div class="d-flex mt-2 mb-3 justify-content-center align-items-center gap-3">
-                            <div>
-                                <img src="assets/patient.png" alt="patient">
+
+                <!-- Filter Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="countrySelect">
+                                <span class="selected-text">Country</span>
                             </div>
-                            <div class="mt-2">
-                                <h5>Ronaldo Jr</h5>
+                            <div class="country-select-dropdown">
+                                <div class="country-option" data-value="nigeria">
+                                    <img src="assets/emojione_flag-for-nigeria.png" alt="Nigeria" class="country-flag">
+                                    <span class="country-name">Nigeria</span>
+                                </div>
+                                <div class="country-option" data-value="ksa">
+                                    <img src="assets/emojione_flag-for-saudi-arabia.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">Saudi Arabia</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-kingdom.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.K.</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-states.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.S.A</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-united-arab-emirates.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">U.A.E</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-south-africa.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">South Africa</span>
+                                </div>
+                                <div class="country-option" data-value="uk">
+                                    <img src="assets/emojione_flag-for-new-zealand.png" alt="United Kingdom"
+                                        class="country-flag">
+                                    <span class="country-name">Australia</span>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <span class="mt-4 mt-md-0">Niger state Nigeria</span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="stateSelect">
+                                <span class="selected-text">State</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Lagos</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Abuja</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Delta</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <span class="mt-4 mt-md-0">9th June, 2024</span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="citySelect">
+                                <span class="selected-text">City</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Aba</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Enugu</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Port Harcourt</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="mt-4 mt-md-0">200 Activities</button>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="townSelect">
+                                <span class="selected-text">Town</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">Town 1</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Town 2</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Town 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" id="townSelect">
+                                <span class="selected-text">Care Providers</span>
+                            </div>
+                            <div class="country-select-dropdown">
+                                <div class="country-option">
+                                    <span class="country-name">All</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Clinics</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Health Centres</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Hospitals</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Maternities</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Pharmacies</span>
+                                </div>
+                                <div class="country-option">
+                                    <span class="country-name">Pharmacies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search Button -->
+                <button class="search-hospital-btn">
+                    Search Hospital
+                </button>
+
+                <!-- Divider -->
+                <hr class="section-divider">
+
+                <!-- Facility and Map Container -->
+                <div class="facility-map-container">
+                    <!-- Facility Listing Section -->
+                    <div class="facility-section">
+                        <div class="location-header">
+                            <div class="location-text">
+                                <i class="bi bi-geo-alt"></i>
+                                Udi Road, Abia State Nigeria
+                            </div>
+                            <a href="#" class="change-location-btn">
+                                <i class="bi bi-arrow-repeat"></i>
+                                Change location
+                            </a>
+                        </div>
+
+                        <!-- Facility Cards -->
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type general">General Hospital</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type">Emergency</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type general">General Hospital</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+                        <div class="facility-card">
+                            <img src="assets\Rectangle 10807.png" alt="City Hospital" class="facility-image">
+                            <div class="facility-info">
+                                <h5 class="facility-name">City Hospital (State)</h5>
+                                <div class="facility-type">Emergency</div>
+                                <div class="facility-address">Enugu, Delta, Nigeria • (+23)567 432 8965</div>
+                                <div class="facility-status">
+                                    <span class="status-open">Open</span>
+                                    <span>-</span>
+                                    <span>Open 24 hours</span>
+                                </div>
+                                <div class="doctor-name">Dr. Jessy Goodman</div>
+                            </div>
+                            <div class="facility-distance">
+                                <div class="distance-icon">
+                                    <img src="assets\Mask group.svg" alt="distance">
+                                </div>
+                                2 Miles
+                            </div>
+                        </div>
+
+                        <!-- Additional facility cards here -->
+
+                        <div class="results-text">Showing 4 of 4 results near you</div>
+
+                        <div class="pagination">
+                            <div class="pagination-item">
+                                <i class="bi bi-chevron-left"></i>
+                            </div>
+                            <div class="pagination-item active">1</div>
+                            <div class="pagination-item">
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="map-section">
+                        <div class="map-container">
+                            <img src="assets\hospital Ibadan - Google Maps - Google Chrome 9_5_2024 6_41_48 PM.png"
+                                alt="Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Patient Profile Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="patient-search-box">
-            <div class="patient-search-box bg-white rounded text-center position-relative w-100">
-                <form id="search-form">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" placeholder="Full Name" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="text" class="form-control" placeholder="Last Name" required>
-                        </div>
-                        <div class="col-12 col-md-12 mt-4">
-                            <input type="date" class="form-control" placeholder="Date of birth" required>
-                        </div>
-                        <div class="mt-4">
-                            <button class="primary-btn">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Patient Profile Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="patient-profile-box">
-            <div class="patient-profile-box bg-white rounded text-center position-relative w-100">
-                <div>
-                    <img src="assets/patient profile pic.png" alt="Profile Pic">
+        <!-- Call Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
+            <div class="paired-box bg-white rounded text-center position-relative ">
+                <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
+                <p class="my-3">Click on call Now to initiate a call</p>
+                <div class="d-flex  gap-4 justify-content-center mt-4">
+                    <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
                 </div>
-                <div class="mt-4 profile-box-content">
-                    <h5>Ms. Randy Orton</h5>
-                    <h6>34 years, Female</h6>
-                    <h6>20 Richard Street  Enugu</h6>
-                    <h6>Registered on 12 January 2024</h6>
-                    <h6>200 Activities performed</h6>
-                </div>
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <button class="popup-btn" id="profile-cancle-btn">Cancel</button>
-                    <button class="popup-btn" id="select-popup-btn">Select</button>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="paired-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
                 </div>
             </div>
         </div>
-
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
                 <h5 class="mt-3">Share My Profile</h5>
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-                    <h6>Copy Link</h6>
-                    <h6>user.bohdanpeter/123/aaaabbc</h6>
+
+                    <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
-                        <button class="btn py-0 bg-white border-0">
+                        <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                        <button class="btn py-0 bg-white border-0">
-                            <img src="assets/share.svg" alt="icon">
-                        </button>
+                        <div class="dropdown">
+                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/share.svg" alt="icon">
+                            </button>
+                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Forward</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="close-btn">
@@ -969,191 +1162,158 @@
                 </div>
             </div>
         </div>
-        <!-- First Add Img Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-            <div class="add-box bg-white rounded text-center w-100 position-relative">
-                <div class="add-img-container">
-                    <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
-                    <div class="learn-more mt-2">
-                        <a href="">Click to Learn More</a>
-                    </div>
-                    <div class="add-stats-container">
-                        <div class="stat-item">
-                            <i class="bi bi-hand-thumbs-up"></i>
-                            <span>22</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-share-fill"></i>
-                            <span>23</span>
-                        </div>
+<!-- First Add Img Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
+    <div class="add-box bg-white rounded text-center w-100 position-relative">
+        <div class="add-img-container">
+            <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
+            <div class="learn-more mt-2">
+                <a href="">Click to Learn More</a>
+            </div>
+            <div class="add-stats-container">
+                <div class="stat-item">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <span>22</span>
+                </div>
+                <div class="stat-item">
+                    <i class="bi bi-share-fill"></i>
+                    <span>23</span>
+                </div>
 
-                        <div class="stat-item">
-                            <i class="bi bi-eye"></i>
-                            <span>23</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="add-close-btn">
-                    <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
-                            alt="close"></button>
+                <div class="stat-item">
+                    <i class="bi bi-eye"></i>
+                    <span>23</span>
                 </div>
             </div>
         </div>
+        <div class="add-close-btn">
+            <button class="btn border-0" type="submit" id="add-close-btn"><img src="assets/white close btn.svg"
+                    alt="close"></button>
+        </div>
+    </div>
+</div>
 
-        <!-- Add Video Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-            <div class="add-video-box">
-                <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+<!-- Add Video Popup -->
+<div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
+    <div class="add-video-box">
+        <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
+    </div>
+</div>
+<!-- Inactivity Modal -->
+<div id="logoutModal">
+    <div class="modal-content">
+        <h4>Session Expired</h4>
+        <p>You have been inactive for 2 minutes. Please log in again.</p>
+        <a href="/login.html">
+            <button class="btn primary-btn w-100">Login Again</button>
+        </a>
+    </div>
+</div>
+<!-- Right Sidebar -->
+<div class="right-sidebar">
+    <div class="ad-container" id="add-1-img">
+        <img src="assets/add scapper.png" alt="Advertisement">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="bi bi-eye-fill"></i>
+                <span>22</span>
             </div>
-        </div>
-        <!-- Inactivity Modal -->
-        <div id="logoutModal">
-            <div class="modal-content">
-                <h4>Session Expired</h4>
-                <p>You have been inactive for 2 minutes. Please log in again.</p>
-                <a href="/login.html">
-                    <button class="btn primary-btn w-100">Login Again</button>
-                </a>
-            </div>
-        </div>
-        <!-- Right Sidebar -->
-        <div class="right-sidebar">
-            <div class="ad-container" id="add-1-img">
-                <img src="assets/add scapper.png" alt="Advertisement">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <i class="bi bi-eye-fill"></i>
-                        <span>22</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>23</span>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <i class="bi bi-heart-fill"></i>
+                <span>23</span>
             </div>
         </div>
     </div>
-    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <h2 class="modal-title fw-bold mb-3"
-                            style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
-                            Alert: Blood Pressure Threshold Exceeded
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
-                            Your blood pressure readings have surpassed the threshold.
-                            <br>
-                            Immediate action is required. Please contact your healthcare
-                            provider or seek medical attention immediately.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
-                            onclick="switchModals()">
-                            Call Now
-                        </button>
-                    </div>
-                </div>
+</div>
+    </div>
+    <!-- Share Message start -->
+    <div class="share-message">
+        <div class="share-card p-3">
+            <div class="share-img text-end">
+                <i class="bi-regular bi-x-lg"></i>
+            </div>
+            <div class="share-heading text-center my-4">
+                <h4>Share My Profile</h4>
+            </div>
+            <div class="share-content d-flex">
+                <a href="#" class="text-decoration-none text-black">Copy Link</a>
+                <a href="#"
+                    class="text-decoration-underline text-black mx-auto">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</a>
+                <a href="#" class="text-decoration-underline text-black me-3"><i class="bi bi-files"></i></a>
+                <a href="#" class="text-decoration-underline text-black"><i class="bi bi-share-fill"></i></a>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 30px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
-                            No Paired Device!
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
-                            You haven't paired any device to Call your Remote Care DHA.
-                            <br>
-                            Please connect a device to make a call.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
-                            data-bs-dismiss="modal">
-                            Go Back
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <!-- Share Message end -->
     <script>
-        function redirectToPatientSearch(pageURL) {
-            localStorage.setItem("redirectAfterPopup", pageURL);
-            window.location.href = "/user-dashboard/dha-search-patient.html";
-        }
+                function redirectToPatientSearch(pageURL) {
+                        localStorage.setItem("redirectAfterPopup", pageURL);
+                        window.location.href = "/user-dashboard/dha-search-patient.html";
+                    }
 
-        const cdhaProfile = document.getElementById('cdha-profile');
-        const userProfile = document.getElementById('user-profile')
+            const cdhaProfile = document.getElementById('cdha-profile');
+            const userProfile = document.getElementById('user-profile');
 
-        const patientLink = document.getElementById('patient-link');
-        const patientDropDown = document.getElementById('patient-drop-down');
+            const dhaMonitorsMenu = document.getElementById('dha-monitors-menu');
+            const normalMonitorsMenu = document.getElementById('normal-monitors-menu');
 
-        const checkUsers = localStorage.getItem('dha-user');
+            const dhaMonitorsMobile = document.getElementById('dha-monitors-mobile');
+            const normalMonitorsMobile = document.getElementById('normal-monitors-mobile');
 
-        if (checkUsers === 'true') {
-            patientLink.classList.add('d-none')
-            userProfile.classList.add('d-lg-none');
-        } else {
-            cdhaProfile.classList.add('d-lg-none');
-            cdhaProfile.classList.add('d-lg-none');
-        }
+            const patientLink = document.getElementById('patient-link');
+            const patientDropDown = document.getElementById('patient-drop-down');
 
+            const checkUser = localStorage.getItem('dha-user')
 
-
-        const searchResult = document.getElementById('search-result');
-        const searchPopup = document.getElementById('patient-search-box');
-        const searchForm = document.getElementById('search-form');
-        const resultContainer = document.getElementById('result-container')
-
-        searchResult.addEventListener(('click'), () => {
-            searchPopup.classList.remove('d-none')
-        })
-
-        searchForm.addEventListener(('submit'), (e) => {
-            e.preventDefault()
-            searchPopup.classList.add('d-none')
-            resultContainer.classList.remove('d-none')
-        })
-
-        searchPopup.addEventListener(('click'), (e) => {
-            if (e.target === searchPopup) {
-                searchPopup.classList.add('d-none')
+            if (checkUser === 'true') {
+                userProfile.classList.add('d-lg-none');
+                patientLink.classList.add('d-none');
+                normalMonitorsMenu.classList.add('d-none');
+                normalMonitorsMobile.classList.add('d-none');
+            } else {
+                patientDropDown.classList.add('d-none');
+                cdhaProfile.classList.add('d-lg-none');
+                dhaMonitorsMenu.classList.add('d-none');
+                dhaMonitorsMobile.classList.add('d-none');
             }
-        })
 
-        let inactivityTime = 120000;
-        let timeout;
+    let inactivityTime = 120000;
+    let timeout;
 
-        function resetTimer() {
-            clearTimeout(timeout);
-            document.getElementById("logoutModal").style.display = "none";
-            timeout = setTimeout(showLogoutScreen, inactivityTime);
-        }
+    function resetTimer() {
+        clearTimeout(timeout);
+        document.getElementById("logoutModal").style.display = "none";
+        timeout = setTimeout(showLogoutScreen, inactivityTime);
+    }
 
-        function showLogoutScreen() {
-            document.getElementById("logoutModal").classList.add('d-flex');
-        }
+    function showLogoutScreen() {
+        document.getElementById("logoutModal").classList.add('d-flex');
+    }
 
-        document.addEventListener("mousemove", resetTimer);
-        document.addEventListener("keydown", resetTimer);
-        document.addEventListener("scroll", resetTimer);
-        document.addEventListener("click", resetTimer);
+    document.addEventListener("mousemove", resetTimer);
+    document.addEventListener("keydown", resetTimer);
+    document.addEventListener("scroll", resetTimer);
+    document.addEventListener("click", resetTimer);
 
-        resetTimer();
+    resetTimer();
+
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -1164,41 +1324,84 @@
             shareProfilePopup.classList.add('d-flex');
         })
 
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
 
-        // Medication Preview Modal
+
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
         document.addEventListener('DOMContentLoaded', function () {
-            const previewBtns = document.querySelectorAll('.btn-preview');
+            // Handle Country Select specifically
+            const countrySelect = document.getElementById('countrySelect');
+            const countryDropdown = countrySelect.nextElementSibling;
 
-            previewBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-                    const medicationName = this.textContent;
-                    const modalTitle = document.querySelector('.preview-title');
-                    modalTitle.textContent = `${medicationName} - Completed`;
-                    previewModal.show();
+            countrySelect.addEventListener('click', function (e) {
+                e.stopPropagation();
+                countryDropdown.style.display = countryDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            const countryOptions = countryDropdown.querySelectorAll('.country-option');
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const selectedText = this.querySelector('.country-name').textContent;
+                    countrySelect.querySelector('.selected-text').textContent = selectedText;
+                    countryDropdown.style.display = 'none';
+                });
+            });
+
+            // Handle other dropdowns (State, City, Town)
+            const otherSelects = document.querySelectorAll('#stateSelect, #citySelect, #townSelect');
+
+            otherSelects.forEach(select => {
+                const dropdown = select.nextElementSibling;
+
+                select.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                });
+
+                const options = dropdown.querySelectorAll('.country-option');
+                options.forEach(option => {
+                    option.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        const selectedText = this.querySelector('.country-name').textContent;
+                        select.querySelector('.selected-text').textContent = selectedText;
+                        dropdown.style.display = 'none';
+                    });
+                });
+            });
+
+            // Close all dropdowns when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.country-select-dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'none';
                 });
             });
         });
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
-            if (dropdownMenu) {
-                dropdownMenu.classList.add("show");
-            }
-
-            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
-            if (arrowIcon) {
-                arrowIcon.style.transform = "rotate(90deg)";
-            }
-        });
 
         const addImg = document.getElementById('add-1-img');
         const addImgPupup = document.getElementById('add-1-popup');
         const addImgClose = document.getElementById('add-close-btn');
-
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1213,72 +1416,22 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+        const closeButton = document.getElementById("prfile-copy-btn");
+        const profileUrl = document.getElementById("profile-url");
 
-        const profilePopup = document.getElementById('patient-profile-box');
-        const profileCancleBtn = document.getElementById('profile-cancle-btn');
-        const resultCard = document.querySelectorAll('.result-card');
-
-
-        for (let i = 0; i < resultCard.length; i++) {
-            resultCard[i].addEventListener(('click'), () => {
-                profilePopup.classList.remove('d-none')
-            })
-        }
-
-        profileCancleBtn.addEventListener(('click'), () => {
-            profilePopup.classList.add('d-none')
-        })
-        profilePopup.addEventListener(('click'), (e) => {
-            if (e.target === profilePopup) {
-                profilePopup.classList.add('d-none')
-            }
-        })
-
-        const dhaMonitorsMenu = document.getElementById('dha-monitors-menu');
-        const normalMonitorsMenu = document.getElementById('normal-monitors-menu');
-
-        const dhaMonitorsMobile = document.getElementById('dha-monitors-mobile');
-        const normalMonitorsMobile = document.getElementById('normal-monitors-mobile');
-
-
-        // CDHA Dashbord 
-        const checkUser = localStorage.getItem('dha-user')
-
-        console.log(typeof checkUser);
-
-        if (checkUser === 'true') {
-            normalMonitorsMenu.classList.add('d-none');
-            normalMonitorsMobile.classList.add('d-none');
-        } else {
-            dhaMonitorsMenu.classList.add('d-none');
-            dhaMonitorsMobile.classList.add('d-none');
-        }
-
-        const selectBtn = document.getElementById('select-popup-btn');
-
-        selectBtn.addEventListener("click", () => {
-            let redirectURL = localStorage.getItem("redirectAfterPopup");
-
-            if (redirectURL) {
-                window.location.href = redirectURL;
-                localStorage.setItem("redirectAfterPopup", "/user-dashboard/dha-patient.html"); // Reset URL after use
-            }
+        closeButton.addEventListener("click", () => {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = profileUrl.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copied to clipboard.");
         });
-
-        // Ensure default URL if the user visits manually or refreshes
-        document.addEventListener("DOMContentLoaded", () => {
-            let redirectURL = localStorage.getItem("redirectAfterPopup");
-
-            if (!redirectURL) {
-                localStorage.setItem("redirectAfterPopup", "/user-dashboard/dha-patient.html");
-            }
-        });
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
-
+    </script>
 </body>
 
 </html>
