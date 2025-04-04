@@ -2286,6 +2286,32 @@ textarea.form-control {
     font-size: 15px !important;
   }
 }
+@media (max-width: 768px) {
+  .inp-container .select-date input {
+    width: 100%;
+  }
+  .inp-container .select-date {
+    align-items: start !important;
+    gap: 10px !important;
+    flex-direction: column !important;
+  }
+  .inp-container .select-monitor {
+    align-items: start !important;
+    gap: 10px !important;
+    flex-direction: column !important;
+  }
+  .inp-container .select-monitor .form-group {
+    margin-left: 0 !important;
+  }
+  .multi-select {
+    width: 350px !important;
+  }
+
+  .test-result-card{
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
 
 @media (max-width: 590px) {
   .care-pages h4 {
@@ -2297,7 +2323,7 @@ textarea.form-control {
   .request-summary h5 {
     font-size: 14px;
   }
-  .included-test{
+  .included-test {
     flex-direction: column;
   }
   .included-test span {
@@ -2307,7 +2333,7 @@ textarea.form-control {
     width: 25px;
     height: 25px;
   }
-  .selected-monitors{
+  .selected-monitors {
     flex-direction: column;
   }
 
@@ -2322,4 +2348,38 @@ textarea.form-control {
   .care-pages h4 {
     font-size: 11px !important;
   }
+}
+
+
+@media (max-width: 590px) {
+.request-box p {
+  font-size: 14px;
+}
+.request-status h6 {
+  font-size: 14px;
+}
+.monitor-title{
+  font-size: 14px;
+}
+.monitor-date{
+  font-size: 14px;
+}
+.monitor-table th{
+  font-size: 14px;
+}
+.monitor-table td{
+  font-size: 14px;
+}
+.user-comment p{
+  font-size: 14px;
+}
+.user-reply p{
+  font-size: 14px;
+}
+.reply span{
+  font-size: 14px;
+}
+.request-type h6{
+  font-size: 14px;
+}
 }

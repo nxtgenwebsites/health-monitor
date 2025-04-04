@@ -1314,6 +1314,12 @@ a {
     padding: 20px;
   }
 
+.test-action-btns {
+  /* width: 100%;  */
+  margin: auto;
+  /* justify-content: center !important; */
+}
+
   .ad-container {
     width: calc(50% - 16px);
   }
@@ -2046,7 +2052,7 @@ a {
 }
 
 #addValuesModal .modal-content {
-  width: 485px;
+  width: 100%;
   height: 417px;
   border-radius: 10px;
   background: #fff;
@@ -2155,7 +2161,7 @@ a {
 }
 
 #addValuesModal .modal-content {
-  width: 485px;
+  width: 100% !important;
   height: 417px;
   border-radius: 24px;
   background: #fff;
@@ -2223,6 +2229,7 @@ a {
 }
 
 #addValuesModal .upload-box {
+  width: 100% !important;
   background: #ddf2f9;
   border-radius: 5px;
   margin: 24px 0;

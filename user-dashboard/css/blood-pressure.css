@@ -1720,7 +1720,7 @@ h2 {
 
   .filter-group {
     width: 100%;
-    justify-content: space-between;
+   gap: 20px;
   }
 
   .chart-container {

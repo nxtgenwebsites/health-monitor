@@ -1417,8 +1417,14 @@ body {
   .card-body {
     padding: 16px;
   }
+
 }
 
+@media (max-width: 500px) {
+    #bloodPressureAlert .modal-dialog .modal-content{
+    height: 350px !important;
+  }
+}
 @media (max-width: 576px) {
   .btn {
     padding: 6px 12px;
