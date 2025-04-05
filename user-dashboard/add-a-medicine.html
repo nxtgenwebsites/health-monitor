@@ -20,15 +20,19 @@
 <body>
     <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-menu">
+            <i class="bi bi-list text-white" style="font-size: 25px;"></i>
+        </button>
         <!-- This is the Updated HTML FILE -->
         <!-- Left side -->
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center m-logo-container">
             <div class="logo-container border-lg-end border-0">
-                <a href="/"><img src="assets/logo.png" alt="HealthCentreApp" class="logo"></a>
+                <a href="/"><a href="/"><img src="assets/logo.png" alt="HealthCentreApp" class="logo"></a></a>
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
-
+    
         <!-- Center navigation (visible on desktop only) -->
         <div class="nav-center d-none d-lg-flex align-items-center gap-4">
             <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
@@ -39,21 +43,24 @@
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
+    
             <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
                 Remote Care
             </a>
+    
         </div>
+    
         <!-- Right side with toggle button, notification and user -->
         <div class="d-flex align-items-center gap-3">
             <!-- Notification -->
-            <div class="position-relative d-none d-lg-block dropdown">
+            <div class="position-relative d-lg-block dropdown">
                 <a href="#" class="dropdown-toggle-custom text-white text-decoration-none" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
                     <span class="notification-badge">5</span>
                 </a>
-
+    
                 <!-- Notification Dropdown Menu -->
                 <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -63,7 +70,7 @@
                         <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
                     </div>
                     <hr class="dropdown-divider my-2">
-
+    
                     <!-- Notification Items -->
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
@@ -76,9 +83,9 @@
                             <small class="text-muted d-block">15 mins ago</small>
                         </div>
                     </div>
-
+    
                     <hr class="dropdown-divider my-2">
-
+    
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -90,9 +97,9 @@
                             <small class="text-muted d-block">1 hr ago</small>
                         </div>
                     </div>
-
+    
                     <hr class="dropdown-divider my-2">
-
+    
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -104,9 +111,9 @@
                             <small class="text-muted d-block">8 hr ago</small>
                         </div>
                     </div>
-
+    
                     <hr class="dropdown-divider my-2">
-
+    
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -118,9 +125,9 @@
                             <small class="text-muted d-block">Yesterday</small>
                         </div>
                     </div>
-
+    
                     <hr class="dropdown-divider my-2">
-
+    
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -132,22 +139,21 @@
                             <small class="text-muted d-block">Yesterday</small>
                         </div>
                     </div>
-
+    
                     <hr class="dropdown-divider my-2">
-
+    
                     <div class="text-center mt-2">
                         <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
                             notifications</a>
                     </div>
                 </div>
             </div>
-
+    
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu">
-                <i class="bi bi-list text-white" style="font-size: 24px;"></i>
+            <button class="navbar-toggler d-lg-none profile-toggle-btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileProfileMenu">
+                <img src="assets/1.png" alt="Img">
             </button>
-
             <!-- User Dropdown (visible on desktop) -->
             <!-- User Dashborad User Dropdown -->
             <div class="dropdown d-none d-lg-block" id="user-profile">
@@ -191,12 +197,12 @@
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
-                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
-                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                                                    App Version
-                                                </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
+                            href="/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            App Version
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -204,15 +210,14 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-
+    
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CDHA
                         </a>
                     </li>
@@ -260,14 +265,14 @@
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
-                                            <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
-                                                    <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
-                                                    App Version
-                                                </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            App Version
+                        </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/dha-transfer-in.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -278,8 +283,7 @@
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/dha-transfer-out.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -288,8 +292,7 @@
                             </svg>
                             Transfer Out
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
-                            href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -297,15 +300,14 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-
+    
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold"
-                            href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CDHA
                         </a>
                     </li>
@@ -313,578 +315,355 @@
             </div>
         </div>
     </header>
-
-    <!-- Mobile Menu Offcanvas -->
-<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!-- Navigation Links -->
-        <div class="mobile-nav mb-4">
-            <button
-                class="mobile-nav-link mobile-nav-link-button d-flex align-items-center w-100 bg-transparent border-0 text-white  gap-3"
-                data-bs-toggle="offcanvas" data-bs-target="#dashboardMenu">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-list me-2"></i>
-                    <span class="menu-text">Menu</span>
+    
+    <!-- Mobile Profile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-profile-menu" id="mobileProfileMenu" tabindex="-1"
+        style="background-color: white; height: auto; top: 60px;" aria-hidden="true">
+        <div class="offcanvas-body">
+            <div class="trustpilot-img">
+                <img src="/assets/images/trustpilot.png" alt="img">
+            </div>
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4 mt-3">
+                <div class="d-flex gap-3 align-items-center user-details">
+                    <img src="assets/1.png" alt="" style="width: 87px; height: 87px; border-radius: 50%;">
+                    <div>
+                        <h6 class="mb-0">Bohdan Peter</h6>
+                        <small class="text-muted">Preston, UK</small>
+                    </div>
                 </div>
-            </button>
-            <button
-                class="mobile-nav-link mobile-nav-link-button  d-flex  align-items-center w-100  bg-transparent border-0 text-white align-items-center gap-3"
-                data-bs-toggle="offcanvas" data-bs-target="#profileMenu">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-person-circle me-2"></i>
-                    <span class="menu-text">Profile</span>
-                </div>
-            </button>
-            <button class="mobile-nav-link mobile-logout-btn w-100 border-0 bg-white text-black">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-box-arrow-right me-2"></i>
-                    <span class="menu-text">Log Out</span>
-                </div>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Dashboard Menu -->
-<div class="offcanvas offcanvas-end" id="dashboardMenu" tabindex="-1">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <a href="/user-dashboard/overview.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30" fill="#fff">
-                    <path
-                        d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z" />
-                </svg>
-            </div>
-            <span class="menu-text">
-                Dashboard
-            </span>
-        </a>
-
-        <a href="/user-dashboard/emergency.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 24" fill="none">
-                    <path
-                        d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
-                        fill="#fff"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-            <span class="menu-text">
-                Emergency
-            </span>
-        </a>
-
-        <!-- Symptoms Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12.0006 13.0797C11.8706 13.0797 11.7406 13.0497 11.6206 12.9797L6.32061 9.9197C5.96061 9.7097 5.84059 9.2497 6.05059 8.8997C6.26059 8.5397 6.72061 8.4197 7.07061 8.6297L11.9906 11.4797L16.8806 8.6497C17.2406 8.4397 17.7006 8.5697 17.9006 8.9197C18.1006 9.2697 17.9806 9.7397 17.6306 9.9397L12.3706 12.9797C12.2606 13.0397 12.1306 13.0797 12.0006 13.0797Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 18.5201C11.59 18.5201 11.25 18.1801 11.25 17.7701V12.3301C11.25 11.9201 11.59 11.5801 12 11.5801C12.41 11.5801 12.75 11.9201 12.75 12.3301V17.7701C12.75 18.1801 12.41 18.5201 12 18.5201Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
-                        fill="#fff"></path>
-                </svg>
-                <span class="menu-text">Symptoms</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <ul class="custom-bullets">
-                <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a>
-                </li>
-                <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a>
-                </li>
-                <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
-            </ul>
-        </div>
-        <!-- Monitors Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M11.9998 14.7898C11.8788 14.7884 11.7594 14.7611 11.6498 14.7098C11.4998 14.6298 7.99985 12.7098 7.24985 10.1998C7.02031 9.56147 6.93972 8.87915 7.01425 8.20495C7.08877 7.53075 7.31644 6.88251 7.67985 6.30976C7.95022 5.95404 8.30207 5.66845 8.70579 5.47703C9.10952 5.2856 9.55332 5.19394 9.99985 5.20976C10.3747 5.19945 10.7473 5.27003 11.0925 5.41671C11.4376 5.56339 11.7471 5.78272 11.9998 6.05976C12.2525 5.78272 12.562 5.56339 12.9071 5.41671C13.2523 5.27003 13.6249 5.19945 13.9998 5.20976C14.443 5.19717 14.8828 5.29038 15.2828 5.48168C15.6828 5.67298 16.0314 5.95685 16.2998 6.30976C16.6632 6.88251 16.8909 7.53075 16.9654 8.20495C17.0399 8.87915 16.9593 9.56147 16.7298 10.1998C15.9798 12.7598 12.4798 14.6298 12.3298 14.7098C12.2263 14.7584 12.1141 14.7856 11.9998 14.7898ZM9.99985 6.70976C9.78929 6.69427 9.57821 6.73194 9.386 6.8193C9.1938 6.90667 9.02663 7.04093 8.89985 7.20976C8.67923 7.59711 8.5477 8.02876 8.51484 8.47332C8.48197 8.91788 8.54859 9.36418 8.70985 9.77976C9.12985 11.2198 10.9998 12.5798 12.0198 13.1798C13.0198 12.5698 14.9098 11.1798 15.3298 9.77976C15.4911 9.36418 15.5577 8.91788 15.5248 8.47332C15.4919 8.02876 15.3604 7.59711 15.1398 7.20976C14.9722 6.98862 14.7397 6.82541 14.4748 6.743C14.2098 6.66059 13.9258 6.6631 13.6623 6.75018C13.3989 6.83726 13.1693 7.00454 13.0056 7.22861C12.842 7.45268 12.7526 7.72232 12.7498 7.99976C12.7498 8.19867 12.6708 8.38944 12.5301 8.53009C12.3895 8.67074 12.1987 8.74976 11.9998 8.74976C11.8009 8.74976 11.6101 8.67074 11.4695 8.53009C11.3288 8.38944 11.2498 8.19867 11.2498 7.99976C11.2566 7.83192 11.2292 7.66445 11.1693 7.50751C11.1094 7.35058 11.0182 7.20745 10.9013 7.08681C10.7844 6.96618 10.6442 6.87055 10.4893 6.80574C10.3343 6.74092 10.1678 6.70827 9.99985 6.70976Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M18.7602 17.7502H5.24023C4.17936 17.7502 3.16195 17.3288 2.4118 16.5786C1.66166 15.8285 1.24023 14.8111 1.24023 13.7502V6.24023C1.24023 5.17936 1.66166 4.16195 2.4118 3.4118C3.16195 2.66166 4.17936 2.24023 5.24023 2.24023H18.7602C19.8211 2.24023 20.8385 2.66166 21.5886 3.4118C22.3388 4.16195 22.7602 5.17936 22.7602 6.24023V13.7602C22.7575 14.8193 22.3349 15.8342 21.5851 16.5822C20.8352 17.3301 19.8193 17.7502 18.7602 17.7502ZM5.24023 3.75023C4.58065 3.75286 3.94884 4.01605 3.48244 4.48244C3.01605 4.94884 2.75286 5.58065 2.75023 6.24023V13.7602C2.75286 14.4198 3.01605 15.0516 3.48244 15.518C3.94884 15.9844 4.58065 16.2476 5.24023 16.2502H18.7602C19.4198 16.2476 20.0516 15.9844 20.518 15.518C20.9844 15.0516 21.2476 14.4198 21.2502 13.7602V6.24023C21.2476 5.58065 20.9844 4.94884 20.518 4.48244C20.0516 4.01605 19.4198 3.75286 18.7602 3.75023H5.24023Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 21.75C11.8019 21.7474 11.6126 21.6676 11.4725 21.5275C11.3324 21.3874 11.2526 21.1981 11.25 21V17C11.25 16.8011 11.329 16.6103 11.4697 16.4697C11.6103 16.329 11.8011 16.25 12 16.25C12.1989 16.25 12.3897 16.329 12.5303 16.4697C12.671 16.6103 12.75 16.8011 12.75 17V21C12.7474 21.1981 12.6676 21.3874 12.5275 21.5275C12.3874 21.6676 12.1981 21.7474 12 21.75Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
-                        fill="#fff"></path>
-                </svg>
-                <span class="menu-text">Monitors</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <div id="dha-monitors-mobile">
-                <ul class="custom-bullets">
-                    <li id="patient-link"><a class="dropdown-item-custom"
-                            onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
-                            class="dropdown-item-custom">BP</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
-                            class="dropdown-item-custom">BMI</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
-                            class="dropdown-item-custom">Episodes</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
-                            class="dropdown-item-custom">Diabetes</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
-                            class="dropdown-item-custom">Tests</a>
-                    </li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
-                            class="dropdown-item-custom">Medications</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
-                            class="dropdown-item-custom">Appointments</a></li>
-                </ul>
-            </div>
-
-            <div id="normal-monitors-mobile">
-                <ul class="custom-bullets">
-                    <li>
-                        <a class="dropdown-item-custom" href=" /user-dashboard/patient.html">Patient</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/bmi.html' class="dropdown-item-custom">BMI</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/episodes.html' class="dropdown-item-custom">Episodes</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/medication.html' class="dropdown-item-custom">Medications</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/appointments.html' class="dropdown-item-custom">Appointments</a>
+                <ul>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
+                            <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
+                            Profile
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
+                            <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
+                            Sponsorship
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
+                            <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
+                            Print
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
+                            <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
+                            Password &amp; 2FA
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
+                            <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
+                            Access Control
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-care.html">
+                            <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.2724 10.8739C1.59233 10.8739 1.79038 10.8739 2.06461 10.8739C2.06461 12.5802 2.06461 14.2713 2.06461 16.0385C5.21823 16.0385 8.28044 16.0385 11.4188 16.0385C11.4188 11.3309 11.4188 6.62336 11.4188 1.90055C8.31091 1.90055 5.26393 1.90055 2.09508 1.90055C2.09508 3.14981 2.09508 4.35336 2.09508 5.57215C2.09508 6.3796 2.07984 7.20229 2.09508 8.00973C2.11031 8.52772 1.94273 8.78671 1.33334 8.6496C1.3181 8.48201 1.2724 8.28396 1.2724 8.08591C1.2724 6.05967 1.25716 4.0182 1.2724 1.99196C1.28763 0.68176 1.94273 0.0114262 3.23769 0.0114262C5.5991 -0.00380872 7.96051 -0.00380872 10.3219 0.0114262C11.6016 0.0114262 12.2872 0.71223 12.2872 1.99196C12.2872 6.66906 12.2872 11.3309 12.2872 16.008C12.2872 17.2725 11.5712 17.9733 10.2914 17.9886C7.9605 18.0038 5.61434 18.0038 3.2834 17.9886C1.95797 17.9886 1.2724 17.303 1.2724 15.9623C1.25716 14.2865 1.2724 12.6259 1.2724 10.8739Z"
+                                    fill="#bfbfbf" />
+                                <g clip-path="url(#clip0_1949_3525)">
+                                    <path
+                                        d="M9.34672 5.31767L9.23455 5.21556L9.18473 5.17021L9.17184 5.15847C9.17177 5.15841 9.17171 5.15835 9.17164 5.1583L9.18661 5.1418L9.18678 5.14199L9.18681 5.14202L9.1986 5.15496L9.23455 5.19446L9.34672 5.31767ZM9.34672 5.31767L9.45889 5.21556L9.51718 5.16249L9.52095 5.15907L9.50607 5.14263L9.5019 5.14721L9.45889 5.19446L9.34672 5.31767ZM8.19594 4.05356C8.22196 4.12057 8.25682 4.18702 8.29976 4.25393C8.41466 4.43295 8.58747 4.61526 8.80398 4.82034C8.91553 4.92601 9.03867 5.03772 9.17147 5.15814L9.18647 5.14165L8.80398 4.72148L8.34388 4.21607L8.19594 4.05356ZM9.52983 5.15101L9.5134 5.13458L9.88946 4.72148L10.3496 4.21607L10.4975 4.05356C10.4715 4.12057 10.4366 4.18702 10.3937 4.25393C10.2788 4.43295 10.106 4.61526 9.88946 4.82034C9.78012 4.92392 9.65963 5.03331 9.52983 5.15101Z"
+                                        fill="#bfbfbf" stroke="white" stroke-width="5" />
+                                </g>
+                                <path
+                                    d="M5.97039 7.71505C5.98747 7.66371 6.02687 7.61776 6.08273 7.58401C6.13859 7.55025 6.20793 7.5305 6.28045 7.52769C6.35297 7.52488 6.4248 7.53916 6.48527 7.5684C6.54575 7.59764 6.59164 7.64029 6.61614 7.69001L7.53931 9.57248C7.86804 9.57216 8.07661 9.52798 8.29756 9.40754C8.3624 9.34893 8.44065 9.29889 8.52886 9.25961L8.54844 9.24521V9.25094C8.68526 9.19355 8.84044 9.16336 8.99839 9.16339C9.15634 9.16343 9.31149 9.1937 9.44826 9.25116C9.58503 9.30862 9.6986 9.39124 9.77756 9.49073C9.85652 9.59022 9.89809 9.70307 9.89809 9.81794C9.89809 9.93281 9.85652 10.0457 9.77756 10.1451C9.6986 10.2446 9.58503 10.3273 9.44826 10.3847C9.31149 10.4422 9.15634 10.4724 8.99839 10.4725C8.84044 10.4725 8.68526 10.4423 8.54844 10.3849V10.3907L8.52841 10.3763C8.44516 10.3391 8.37091 10.2923 8.30836 10.2382C8.10361 10.1302 7.91124 10.0933 7.62639 10.0873H7.31274C7.24314 10.0873 7.17525 10.0716 7.11838 10.0424C7.0615 10.0132 7.01842 9.97198 6.99504 9.9243L6.36121 8.63158L5.27266 11.9208C5.25556 11.9723 5.216 12.0184 5.15989 12.0522C5.10378 12.086 5.03413 12.1057 4.96137 12.1084C4.8886 12.111 4.81661 12.0964 4.75617 12.0668C4.69572 12.0373 4.65006 11.9942 4.62601 11.9442L3.35499 9.29692L3.01254 9.9315C2.98776 9.97741 2.94454 10.0168 2.88852 10.0446C2.83249 10.0724 2.76625 10.0873 2.69844 10.0873H0.898438V9.59638H2.46826L3.05934 8.50099C3.08455 8.45436 3.12878 8.41446 3.18608 8.38664C3.24339 8.35883 3.31103 8.34444 3.37991 8.3454C3.4488 8.34636 3.51563 8.36263 3.57142 8.39202C3.62722 8.42142 3.66931 8.46253 3.69204 8.50983L4.88499 10.9946L5.97039 7.71505Z"
+                                    fill="#bfbfbf" />
+                                <defs>
+                                    <clipPath id="clip0_1949_3525">
+                                        <rect width="2.89463" height="2.89463" fill="white"
+                                            transform="translate(7.89844 2.74219)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+    
+                            Remote Care
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/national-policies.html">
+                            <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
+                            App Version
+                        </a></li>
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
+                            System
+                        </a></li>
+                    <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
+                            <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
+                            Share link
+                        </button></li>
+    
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
+                            <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
+                            Delete Account
+                        </a></li>
+                    <li class="border-top mt-2 pt-2">
+                        <a class="dropdown-item py-2 text-primary fw-semibold upgrade-link"
+                            href="/user-dashboard/upgrade-to-dha.html">
+                            Upgrade to CDHA
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <!-- Communities Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                        d="M7.63121 8.57882C9.72404 8.57882 11.4206 6.88224 11.4206 4.78941C11.4206 2.69658 9.72404 1 7.63121 1C5.53837 1 3.8418 2.69658 3.8418 4.78941C3.8418 6.88224 5.53837 8.57882 7.63121 8.57882Z"
-                        stroke="#ffffff" stroke-width="1.5"></path>
-                    <path opacity="0.5"
-                        d="M10.9473 3.21776C11.4565 2.45197 12.3271 1.94727 13.3156 1.94727C14.8853 1.94727 16.1577 3.2197 16.1577 4.78932C16.1577 6.35894 14.8853 7.63138 13.3156 7.63138C12.3271 7.63138 11.4565 7.12668 10.9473 6.36089"
-                        stroke="#fff" stroke-width="1.5"></path>
-                    <path opacity="0.5"
-                        d="M16.1572 12.3682C17.8191 12.7326 18.9993 13.6555 18.9993 14.7365C18.9993 15.7117 18.039 16.5582 16.6309 16.9821"
-                        stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path
-                        d="M7.63147 18.9997C11.2939 18.9997 14.2629 17.3031 14.2629 15.2103C14.2629 13.1175 11.2939 11.4209 7.63147 11.4209C3.96901 11.4209 1 13.1175 1 15.2103C1 17.3031 3.96901 18.9997 7.63147 18.9997Z"
-                        stroke="#fff" stroke-width="1.5"></path>
-                </svg>
-                <span class="menu-text">Communities</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <ul class="custom-bullets">
-                <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
-                <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacies </a></li>
-                <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a></li>
-                <span class="dropdown-item-custom community-text w-100 text-white">Community Digital Health
-                    Assistants
-                    (CDHA)</span>
-                <div class="px-4">
-                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
-                    <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
+    </div>
+    
+    <!-- Mobile Profile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-menu" id="sidebar-menu" tabindex="-1"
+        style="background-color: white; height: auto; top: 70px; width: 80%; max-width: 300px;" aria-hidden="true">
+        <div class="offcanvas-body pb-4">
+            <!-- Navigation Links -->
+            <div class="mobile-nav mb-4">
+                <!-- Menu Items -->
+                <a href="/user-dashboard/overview.html">
+                    <div class="m-menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
+                            class="icon m-sidebar-icon">
+                            <g clip-path="url(#clip0_1304_4047)">
+                                <path
+                                    d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z"
+                                    fill="#9197B3" />
+                            </g>
+                            <defs>
+                                <clipPath>
+                                    <rect width="30" height="30" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="menu-text">Dashboard</span>
+                    </div>
+                </a>
+    
+                <a href="/user-dashboard/emergency.html">
+                    <div class="m-menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                            class="icon m-sidebar-icon">
+                            <path
+                                d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
+                                fill="#9197B3" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
+                                fill="#9197B3" />
+                        </svg>
+                        <span class="menu-text">Emergency</span>
+                    </div>
+                </a>
+    
+                <a href="/user-dashboard/remote-care.html">
+                    <div class="m-menu-item">
+                        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.2724 10.8739C1.59233 10.8739 1.79038 10.8739 2.06461 10.8739C2.06461 12.5802 2.06461 14.2713 2.06461 16.0385C5.21823 16.0385 8.28044 16.0385 11.4188 16.0385C11.4188 11.3309 11.4188 6.62336 11.4188 1.90055C8.31091 1.90055 5.26393 1.90055 2.09508 1.90055C2.09508 3.14981 2.09508 4.35336 2.09508 5.57215C2.09508 6.3796 2.07984 7.20229 2.09508 8.00973C2.11031 8.52772 1.94273 8.78671 1.33334 8.6496C1.3181 8.48201 1.2724 8.28396 1.2724 8.08591C1.2724 6.05967 1.25716 4.0182 1.2724 1.99196C1.28763 0.68176 1.94273 0.0114262 3.23769 0.0114262C5.5991 -0.00380872 7.96051 -0.00380872 10.3219 0.0114262C11.6016 0.0114262 12.2872 0.71223 12.2872 1.99196C12.2872 6.66906 12.2872 11.3309 12.2872 16.008C12.2872 17.2725 11.5712 17.9733 10.2914 17.9886C7.9605 18.0038 5.61434 18.0038 3.2834 17.9886C1.95797 17.9886 1.2724 17.303 1.2724 15.9623C1.25716 14.2865 1.2724 12.6259 1.2724 10.8739Z"
+                                fill="#bfbfbf" />
+                            <g clip-path="url(#clip0_1949_3525)">
+                                <path
+                                    d="M9.34672 5.31767L9.23455 5.21556L9.18473 5.17021L9.17184 5.15847C9.17177 5.15841 9.17171 5.15835 9.17164 5.1583L9.18661 5.1418L9.18678 5.14199L9.18681 5.14202L9.1986 5.15496L9.23455 5.19446L9.34672 5.31767ZM9.34672 5.31767L9.45889 5.21556L9.51718 5.16249L9.52095 5.15907L9.50607 5.14263L9.5019 5.14721L9.45889 5.19446L9.34672 5.31767ZM8.19594 4.05356C8.22196 4.12057 8.25682 4.18702 8.29976 4.25393C8.41466 4.43295 8.58747 4.61526 8.80398 4.82034C8.91553 4.92601 9.03867 5.03772 9.17147 5.15814L9.18647 5.14165L8.80398 4.72148L8.34388 4.21607L8.19594 4.05356ZM9.52983 5.15101L9.5134 5.13458L9.88946 4.72148L10.3496 4.21607L10.4975 4.05356C10.4715 4.12057 10.4366 4.18702 10.3937 4.25393C10.2788 4.43295 10.106 4.61526 9.88946 4.82034C9.78012 4.92392 9.65963 5.03331 9.52983 5.15101Z"
+                                    fill="#bfbfbf" stroke="white" stroke-width="5" />
+                            </g>
+                            <path
+                                d="M5.97039 7.71505C5.98747 7.66371 6.02687 7.61776 6.08273 7.58401C6.13859 7.55025 6.20793 7.5305 6.28045 7.52769C6.35297 7.52488 6.4248 7.53916 6.48527 7.5684C6.54575 7.59764 6.59164 7.64029 6.61614 7.69001L7.53931 9.57248C7.86804 9.57216 8.07661 9.52798 8.29756 9.40754C8.3624 9.34893 8.44065 9.29889 8.52886 9.25961L8.54844 9.24521V9.25094C8.68526 9.19355 8.84044 9.16336 8.99839 9.16339C9.15634 9.16343 9.31149 9.1937 9.44826 9.25116C9.58503 9.30862 9.6986 9.39124 9.77756 9.49073C9.85652 9.59022 9.89809 9.70307 9.89809 9.81794C9.89809 9.93281 9.85652 10.0457 9.77756 10.1451C9.6986 10.2446 9.58503 10.3273 9.44826 10.3847C9.31149 10.4422 9.15634 10.4724 8.99839 10.4725C8.84044 10.4725 8.68526 10.4423 8.54844 10.3849V10.3907L8.52841 10.3763C8.44516 10.3391 8.37091 10.2923 8.30836 10.2382C8.10361 10.1302 7.91124 10.0933 7.62639 10.0873H7.31274C7.24314 10.0873 7.17525 10.0716 7.11838 10.0424C7.0615 10.0132 7.01842 9.97198 6.99504 9.9243L6.36121 8.63158L5.27266 11.9208C5.25556 11.9723 5.216 12.0184 5.15989 12.0522C5.10378 12.086 5.03413 12.1057 4.96137 12.1084C4.8886 12.111 4.81661 12.0964 4.75617 12.0668C4.69572 12.0373 4.65006 11.9942 4.62601 11.9442L3.35499 9.29692L3.01254 9.9315C2.98776 9.97741 2.94454 10.0168 2.88852 10.0446C2.83249 10.0724 2.76625 10.0873 2.69844 10.0873H0.898438V9.59638H2.46826L3.05934 8.50099C3.08455 8.45436 3.12878 8.41446 3.18608 8.38664C3.24339 8.35883 3.31103 8.34444 3.37991 8.3454C3.4488 8.34636 3.51563 8.36263 3.57142 8.39202C3.62722 8.42142 3.66931 8.46253 3.69204 8.50983L4.88499 10.9946L5.97039 7.71505Z"
+                                fill="#bfbfbf" />
+                            <defs>
+                                <clipPath id="clip0_1949_3525">
+                                    <rect width="2.89463" height="2.89463" fill="white"
+                                        transform="translate(7.89844 2.74219)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+    
+                        <span class="menu-text">Remote Care</span>
+                    </div>
+                </a>
+    
+                <!-- Symptom Checker Dropdown -->
+                <div class="menu-item-dropdown m-menu-dropdown">
+                    <div class="menu-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            class="icon m-sidebar-icon">
+                            <path
+                                d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M12.0006 13.0797C11.8706 13.0797 11.7406 13.0497 11.6206 12.9797L6.32061 9.9197C5.96061 9.7097 5.84059 9.2497 6.05059 8.8997C6.26059 8.5397 6.72061 8.4197 7.07061 8.6297L11.9906 11.4797L16.8806 8.6497C17.2406 8.4397 17.7006 8.5697 17.9006 8.9197C18.1006 9.2697 17.9806 9.7397 17.6306 9.9397L12.3706 12.9797C12.2606 13.0397 12.1306 13.0797 12.0006 13.0797Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M12 18.5201C11.59 18.5201 11.25 18.1801 11.25 17.7701V12.3301C11.25 11.9201 11.59 11.5801 12 11.5801C12.41 11.5801 12.75 11.9201 12.75 12.3301V17.7701C12.75 18.1801 12.41 18.5201 12 18.5201Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
+                                fill="#9197B3" />
+                        </svg>
+                        <span class="menu-text ms-3">Symptoms</span>
+                    </div>
+                    <i class="bi bi-chevron-right arrow"></i>
                 </div>
-                <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
-                <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
-                <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
-                <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
-                </li>
-            </ul>
-        </div>
-        <a href="/user-dashboard/health-info.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg class="health-info-icon" width="22" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M11.9998 12.1094C11.5898 12.1094 11.2498 11.7694 11.2498 11.3594V11.1494C11.2498 9.98942 12.0998 9.41941 12.4198 9.19941C12.7898 8.94941 12.9098 8.77942 12.9098 8.51942C12.9098 8.01942 12.4998 7.60938 11.9998 7.60938C11.4998 7.60938 11.0898 8.01942 11.0898 8.51942C11.0898 8.92942 10.7498 9.26942 10.3398 9.26942C9.92984 9.26942 9.58984 8.92942 9.58984 8.51942C9.58984 7.18942 10.6698 6.10938 11.9998 6.10938C13.3298 6.10938 14.4098 7.18942 14.4098 8.51942C14.4098 9.65942 13.5698 10.2294 13.2598 10.4394C12.8698 10.6994 12.7498 10.8694 12.7498 11.1494V11.3594C12.7498 11.7794 12.4098 12.1094 11.9998 12.1094Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-            <span class="menu-text">
-                Health Info
-            </span>
-        </a>
-    </div>
-</div>
-
-<!-- Profile Menu -->
-<div class="offcanvas offcanvas-end" id="profileMenu" tabindex="-1">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <a href="/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-person-circle"></i> Profile
-        </a>
-        <a href="/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-star"></i> Sponsorship
-        </a>
-        <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-printer"></i> Print
-        </a>
-        <a href="/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-key"></i> Change Pin
-        </a>
-        <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
-            <i class="bi bi-share"></i> Share Link
-        </a>
-        <a href="/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-trash"></i> Delete Account
-        </a>
-        <a href="/user-dashboard/national-policies.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-flag"></i> National Policies
-        </a>
-        <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-shield-lock"></i>Access Control
-        </a>
-        <div class="">
-            <a href="/user-dashboard/remote-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                <i class="bi bi-phone"></i>Remote Care
-            </a>
-            <div class="px-3 py-2">
-                <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
-            </div>
-        </div>
-        <a href="/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-trash"></i>Upgrade to DHA Now
-        </a>
-    </div>
-</div>
-
-    <!-- Mobile Menu Offcanvas -->
-<div class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1" style="color: white">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!-- Navigation Links -->
-        <div class="mobile-nav mb-4">
-            <button
-                class="mobile-nav-link mobile-nav-link-button d-flex align-items-center w-100 bg-transparent border-0 text-white  gap-3"
-                data-bs-toggle="offcanvas" data-bs-target="#dashboardMenu">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-list me-2"></i>
-                    <span class="menu-text">Menu</span>
+                <div class="dropdown-content m-dropdown-content ps-4">
+                    <ul class="custom-bullets">
+                        <li><a href="/user-dashboard/manage-care-requests.html"
+                                class="dropdown-item-custom">CareRequests</a></li>
+    
+                        <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
+                    </ul>
                 </div>
+    
+                <!-- HealthCentreApps Dropdown -->
+                <div class="menu-item-dropdown m-menu-dropdown">
+                    <div class="menu-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            class="icon m-sidebar-icon">
+                            <path
+                                d="M11.9998 14.7898C11.8788 14.7884 11.7594 14.7611 11.6498 14.7098C11.4998 14.6298 7.99985 12.7098 7.24985 10.1998C7.02031 9.56147 6.93972 8.87915 7.01425 8.20495C7.08877 7.53075 7.31644 6.88251 7.67985 6.30976C7.95022 5.95404 8.30207 5.66845 8.70579 5.47703C9.10952 5.2856 9.55332 5.19394 9.99985 5.20976C10.3747 5.19945 10.7473 5.27003 11.0925 5.41671C11.4376 5.56339 11.7471 5.78272 11.9998 6.05976C12.2525 5.78272 12.562 5.56339 12.9071 5.41671C13.2523 5.27003 13.6249 5.19945 13.9998 5.20976C14.443 5.19717 14.8828 5.29038 15.2828 5.48168C15.6828 5.67298 16.0314 5.95685 16.2998 6.30976C16.6632 6.88251 16.8909 7.53075 16.9654 8.20495C17.0399 8.87915 16.9593 9.56147 16.7298 10.1998C15.9798 12.7598 12.4798 14.6298 12.3298 14.7098C12.2263 14.7584 12.1141 14.7856 11.9998 14.7898ZM9.99985 6.70976C9.78929 6.69427 9.57821 6.73194 9.386 6.8193C9.1938 6.90667 9.02663 7.04093 8.89985 7.20976C8.67923 7.59711 8.5477 8.02876 8.51484 8.47332C8.48197 8.91788 8.54859 9.36418 8.70985 9.77976C9.12985 11.2198 10.9998 12.5798 12.0198 13.1798C13.0198 12.5698 14.9098 11.1798 15.3298 9.77976C15.4911 9.36418 15.5577 8.91788 15.5248 8.47332C15.4919 8.02876 15.3604 7.59711 15.1398 7.20976C14.9722 6.98862 14.7397 6.82541 14.4748 6.743C14.2098 6.66059 13.9258 6.6631 13.6623 6.75018C13.3989 6.83726 13.1693 7.00454 13.0056 7.22861C12.842 7.45268 12.7526 7.72232 12.7498 7.99976C12.7498 8.19867 12.6708 8.38944 12.5301 8.53009C12.3895 8.67074 12.1987 8.74976 11.9998 8.74976C11.8009 8.74976 11.6101 8.67074 11.4695 8.53009C11.3288 8.38944 11.2498 8.19867 11.2498 7.99976C11.2566 7.83192 11.2292 7.66445 11.1693 7.50751C11.1094 7.35058 11.0182 7.20745 10.9013 7.08681C10.7844 6.96618 10.6442 6.87055 10.4893 6.80574C10.3343 6.74092 10.1678 6.70827 9.99985 6.70976Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M18.7602 17.7502H5.24023C4.17936 17.7502 3.16195 17.3288 2.4118 16.5786C1.66166 15.8285 1.24023 14.8111 1.24023 13.7502V6.24023C1.24023 5.17936 1.66166 4.16195 2.4118 3.4118C3.16195 2.66166 4.17936 2.24023 5.24023 2.24023H18.7602C19.8211 2.24023 20.8385 2.66166 21.5886 3.4118C22.3388 4.16195 22.7602 5.17936 22.7602 6.24023V13.7602C22.7575 14.8193 22.3349 15.8342 21.5851 16.5822C20.8352 17.3301 19.8193 17.7502 18.7602 17.7502ZM5.24023 3.75023C4.58065 3.75286 3.94884 4.01605 3.48244 4.48244C3.01605 4.94884 2.75286 5.58065 2.75023 6.24023V13.7602C2.75286 14.4198 3.01605 15.0516 3.48244 15.518C3.94884 15.9844 4.58065 16.2476 5.24023 16.2502H18.7602C19.4198 16.2476 20.0516 15.9844 20.518 15.518C20.9844 15.0516 21.2476 14.4198 21.2502 13.7602V6.24023C21.2476 5.58065 20.9844 4.94884 20.518 4.48244C20.0516 4.01605 19.4198 3.75286 18.7602 3.75023H5.24023Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M12 21.75C11.8019 21.7474 11.6126 21.6676 11.4725 21.5275C11.3324 21.3874 11.2526 21.1981 11.25 21V17C11.25 16.8011 11.329 16.6103 11.4697 16.4697C11.6103 16.329 11.8011 16.25 12 16.25C12.1989 16.25 12.3897 16.329 12.5303 16.4697C12.671 16.6103 12.75 16.8011 12.75 17V21C12.7474 21.1981 12.6676 21.3874 12.5275 21.5275C12.3874 21.6676 12.1981 21.7474 12 21.75Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
+                                fill="#9197B3" />
+                        </svg>
+                        <span class="menu-text ms-3">Monitors</span>
+                    </div>
+                    <i class="bi bi-chevron-right arrow"></i>
+                </div>
+                <div class="dropdown-content m-dropdown-content ps-4">
+                    <div id="dha-monitors-mobile">
+                        <ul class="custom-bullets">
+                            <li id="patient-link"><a class="dropdown-item-custom"
+                                    onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
+                                    class="dropdown-item-custom">BP</a></li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
+                                    class="dropdown-item-custom">BMI</a>
+                            </li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
+                                    class="dropdown-item-custom">Episodes</a></li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
+                                    class="dropdown-item-custom">Diabetes</a></li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
+                                    class="dropdown-item-custom">Tests</a>
+                            </li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
+                                    class="dropdown-item-custom">Medications</a></li>
+                            <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
+                                    class="dropdown-item-custom">Appointments</a></li>
+                        </ul>
+                    </div>
+    
+                    <div id="normal-monitors-mobile">
+                        <ul class="custom-bullets">
+                            <li>
+                                <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/bmi.html' class="dropdown-item-custom">BMI</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/episodes.html' class="dropdown-item-custom">Episodes</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/medication.html' class="dropdown-item-custom">Medications</a>
+                            </li>
+                            <li>
+                                <a href='/user-dashboard/appointments.html' class="dropdown-item-custom">Appointments</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </div>
+    
+                <!-- Communities Dropdown -->
+                <div class="menu-item-dropdown m-menu-dropdown">
+                    <div class="menu-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            class="icon m-sidebar-icon">
+                            <path
+                                d="M7.63121 8.57882C9.72404 8.57882 11.4206 6.88224 11.4206 4.78941C11.4206 2.69658 9.72404 1 7.63121 1C5.53837 1 3.8418 2.69658 3.8418 4.78941C3.8418 6.88224 5.53837 8.57882 7.63121 8.57882Z"
+                                stroke="#9197B3" stroke-width="1.5" />
+                            <path opacity="0.5"
+                                d="M10.9473 3.21776C11.4565 2.45197 12.3271 1.94727 13.3156 1.94727C14.8853 1.94727 16.1577 3.2197 16.1577 4.78932C16.1577 6.35894 14.8853 7.63138 13.3156 7.63138C12.3271 7.63138 11.4565 7.12668 10.9473 6.36089"
+                                stroke="#9197B3" stroke-width="1.5" />
+                            <path opacity="0.5"
+                                d="M16.1572 12.3682C17.8191 12.7326 18.9993 13.6555 18.9993 14.7365C18.9993 15.7117 18.039 16.5582 16.6309 16.9821"
+                                stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M7.63147 18.9997C11.2939 18.9997 14.2629 17.3031 14.2629 15.2103C14.2629 13.1175 11.2939 11.4209 7.63147 11.4209C3.96901 11.4209 1 13.1175 1 15.2103C1 17.3031 3.96901 18.9997 7.63147 18.9997Z"
+                                stroke="#9197B3" stroke-width="1.5" />
+                        </svg>
+                        <span class="menu-text ms-3">Communities</span>
+                    </div>
+                    <i class="bi bi-chevron-right arrow"></i>
+                </div>
+                <div class="dropdown-content ps-4 m-dropdown-content">
+                    <ul class="custom-bullets">
+                        <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
+                                Providers</a>
+                        </li>
+                        <button id="dropdownBtn" class="dropdown-btn">
+                            <span>Community Digital Health Assistants (CDHA)</span>
+                            <i class="bi bi-chevron-down" id="dropdownArrow"></i>
+                        </button>
+    
+                        <!-- Dropdown content -->
+                        <div class="dropdown-content mt-2" id="dropdownContent">
+                            <ul class="custom-list">
+                                <li><a href="/user-dashboard/find-dha.html" class="dropdown-item cdn- ">Listing</a></li>
+                                <li><a href="/user-dashboard/dha-training.html" class="dropdown-item cdn-links">Training</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
+                        </li>
+                        <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
+                        <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
+                        <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy
+                                Policy</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <a href="/user-dashboard/health-info.html">
+                    <div class="m-menu-item">
+                        <svg class="icon m-sidebar-icon" width="25" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M11.9998 12.1094C11.5898 12.1094 11.2498 11.7694 11.2498 11.3594V11.1494C11.2498 9.98942 12.0998 9.41941 12.4198 9.19941C12.7898 8.94941 12.9098 8.77942 12.9098 8.51942C12.9098 8.01942 12.4998 7.60938 11.9998 7.60938C11.4998 7.60938 11.0898 8.01942 11.0898 8.51942C11.0898 8.92942 10.7498 9.26942 10.3398 9.26942C9.92984 9.26942 9.58984 8.92942 9.58984 8.51942C9.58984 7.18942 10.6698 6.10938 11.9998 6.10938C13.3298 6.10938 14.4098 7.18942 14.4098 8.51942C14.4098 9.65942 13.5698 10.2294 13.2598 10.4394C12.8698 10.6994 12.7498 10.8694 12.7498 11.1494V11.3594C12.7498 11.7794 12.4098 12.1094 11.9998 12.1094Z"
+                                fill="#9197B3" />
+                            <path
+                                d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
+                                fill="#9197B3" />
+                        </svg>
+                        <span class="menu-text">Health Info</span>
+                    </div>
+                </a>
+            </div>
+            <button class="m-log-out-btn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                <span class="menu-text">Log Out</span>
             </button>
-            <button
-                class="mobile-nav-link mobile-nav-link-button  d-flex  align-items-center w-100  bg-transparent border-0 text-white align-items-center gap-3"
-                data-bs-toggle="offcanvas" data-bs-target="#profileMenu">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-person-circle me-2"></i>
-                    <span class="menu-text">Profile</span>
-                </div>
-            </button>
-            <button class="mobile-nav-link mobile-logout-btn w-100 border-0 bg-white text-black">
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-box-arrow-right me-2"></i>
-                    <span class="menu-text">Log Out</span>
-                </div>
-            </button>
         </div>
     </div>
-</div>
-
-<!-- Dashboard Menu -->
-<div class="offcanvas offcanvas-end" id="dashboardMenu" tabindex="-1">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <a href="/user-dashboard/overview.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30" fill="#fff">
-                    <path
-                        d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z" />
-                </svg>
-            </div>
-            <span class="menu-text">
-                Dashboard
-            </span>
-        </a>
-
-        <a href="/user-dashboard/emergency.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 24" fill="none">
-                    <path
-                        d="M9.60039 2.4C10.2631 2.4 10.8004 1.86274 10.8004 1.2C10.8004 0.537258 10.2631 0 9.60039 0C8.93765 0 8.40039 0.537258 8.40039 1.2C8.40039 1.86274 8.93765 2.4 9.60039 2.4Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M15.5399 4.86006C16.0085 5.32868 16.7684 5.32868 17.237 4.86006C17.7057 4.39142 17.7057 3.63163 17.237 3.16299C16.7684 2.69437 16.0085 2.69437 15.5399 3.16299C15.0713 3.63163 15.0713 4.39142 15.5399 4.86006Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M3.66084 4.86006C4.12946 4.39142 4.12946 3.63163 3.66084 3.16299C3.1922 2.69437 2.43241 2.69437 1.96377 3.16299C1.49515 3.63163 1.49515 4.39142 1.96377 4.86006C2.43241 5.32868 3.1922 5.32868 3.66084 4.86006Z"
-                        fill="#fff"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M3.6002 10.7998C3.6002 7.4861 6.28649 4.7998 9.6002 4.7998C12.9139 4.7998 15.6002 7.4861 15.6002 10.7998V16.7998H18.0002V19.1998H1.2002V16.7998H3.6002V10.7998ZM6.0002 10.7998C6.0002 8.81158 7.61198 7.1998 9.6002 7.1998V16.7998H6.0002V10.7998Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-            <span class="menu-text">
-                Emergency
-            </span>
-        </a>
-
-        <!-- Symptoms Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12.0006 13.0797C11.8706 13.0797 11.7406 13.0497 11.6206 12.9797L6.32061 9.9197C5.96061 9.7097 5.84059 9.2497 6.05059 8.8997C6.26059 8.5397 6.72061 8.4197 7.07061 8.6297L11.9906 11.4797L16.8806 8.6497C17.2406 8.4397 17.7006 8.5697 17.9006 8.9197C18.1006 9.2697 17.9806 9.7397 17.6306 9.9397L12.3706 12.9797C12.2606 13.0397 12.1306 13.0797 12.0006 13.0797Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 18.5201C11.59 18.5201 11.25 18.1801 11.25 17.7701V12.3301C11.25 11.9201 11.59 11.5801 12 11.5801C12.41 11.5801 12.75 11.9201 12.75 12.3301V17.7701C12.75 18.1801 12.41 18.5201 12 18.5201Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12.0002 18.7498C11.4202 18.7498 10.8503 18.6198 10.3903 18.3698L7.19025 16.5898C6.23025 16.0598 5.49023 14.7898 5.49023 13.6898V10.2998C5.49023 9.20981 6.24025 7.9398 7.19025 7.3998L10.3903 5.6198C11.3103 5.1098 12.6902 5.1098 13.6102 5.6198L16.8102 7.3998C17.7702 7.9298 18.5103 9.19981 18.5103 10.2998V13.6898C18.5103 14.7798 17.7602 16.0498 16.8102 16.5898L13.6102 18.3698C13.1502 18.6298 12.5802 18.7498 12.0002 18.7498ZM12.0002 6.7498C11.6702 6.7498 11.3502 6.8098 11.1202 6.9398L7.92026 8.7198C7.43026 8.9898 6.99023 9.7498 6.99023 10.2998V13.6898C6.99023 14.2498 7.43026 14.9998 7.92026 15.2698L11.1202 17.0498C11.5802 17.3098 12.4202 17.3098 12.8802 17.0498L16.0802 15.2698C16.5702 14.9998 17.0103 14.2398 17.0103 13.6898V10.2998C17.0103 9.73981 16.5702 8.9898 16.0802 8.7198L12.8802 6.9398C12.6502 6.8098 12.3302 6.7498 12.0002 6.7498Z"
-                        fill="#fff"></path>
-                </svg>
-                <span class="menu-text">Symptoms</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <ul class="custom-bullets">
-                <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a>
-                </li>
-                <li><a href="https://symptom-checker-nine.vercel.app/" class="dropdown-item-custom">Summariser</a>
-                </li>
-                <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
-            </ul>
-        </div>
-        <!-- Monitors Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M11.9998 14.7898C11.8788 14.7884 11.7594 14.7611 11.6498 14.7098C11.4998 14.6298 7.99985 12.7098 7.24985 10.1998C7.02031 9.56147 6.93972 8.87915 7.01425 8.20495C7.08877 7.53075 7.31644 6.88251 7.67985 6.30976C7.95022 5.95404 8.30207 5.66845 8.70579 5.47703C9.10952 5.2856 9.55332 5.19394 9.99985 5.20976C10.3747 5.19945 10.7473 5.27003 11.0925 5.41671C11.4376 5.56339 11.7471 5.78272 11.9998 6.05976C12.2525 5.78272 12.562 5.56339 12.9071 5.41671C13.2523 5.27003 13.6249 5.19945 13.9998 5.20976C14.443 5.19717 14.8828 5.29038 15.2828 5.48168C15.6828 5.67298 16.0314 5.95685 16.2998 6.30976C16.6632 6.88251 16.8909 7.53075 16.9654 8.20495C17.0399 8.87915 16.9593 9.56147 16.7298 10.1998C15.9798 12.7598 12.4798 14.6298 12.3298 14.7098C12.2263 14.7584 12.1141 14.7856 11.9998 14.7898ZM9.99985 6.70976C9.78929 6.69427 9.57821 6.73194 9.386 6.8193C9.1938 6.90667 9.02663 7.04093 8.89985 7.20976C8.67923 7.59711 8.5477 8.02876 8.51484 8.47332C8.48197 8.91788 8.54859 9.36418 8.70985 9.77976C9.12985 11.2198 10.9998 12.5798 12.0198 13.1798C13.0198 12.5698 14.9098 11.1798 15.3298 9.77976C15.4911 9.36418 15.5577 8.91788 15.5248 8.47332C15.4919 8.02876 15.3604 7.59711 15.1398 7.20976C14.9722 6.98862 14.7397 6.82541 14.4748 6.743C14.2098 6.66059 13.9258 6.6631 13.6623 6.75018C13.3989 6.83726 13.1693 7.00454 13.0056 7.22861C12.842 7.45268 12.7526 7.72232 12.7498 7.99976C12.7498 8.19867 12.6708 8.38944 12.5301 8.53009C12.3895 8.67074 12.1987 8.74976 11.9998 8.74976C11.8009 8.74976 11.6101 8.67074 11.4695 8.53009C11.3288 8.38944 11.2498 8.19867 11.2498 7.99976C11.2566 7.83192 11.2292 7.66445 11.1693 7.50751C11.1094 7.35058 11.0182 7.20745 10.9013 7.08681C10.7844 6.96618 10.6442 6.87055 10.4893 6.80574C10.3343 6.74092 10.1678 6.70827 9.99985 6.70976Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M18.7602 17.7502H5.24023C4.17936 17.7502 3.16195 17.3288 2.4118 16.5786C1.66166 15.8285 1.24023 14.8111 1.24023 13.7502V6.24023C1.24023 5.17936 1.66166 4.16195 2.4118 3.4118C3.16195 2.66166 4.17936 2.24023 5.24023 2.24023H18.7602C19.8211 2.24023 20.8385 2.66166 21.5886 3.4118C22.3388 4.16195 22.7602 5.17936 22.7602 6.24023V13.7602C22.7575 14.8193 22.3349 15.8342 21.5851 16.5822C20.8352 17.3301 19.8193 17.7502 18.7602 17.7502ZM5.24023 3.75023C4.58065 3.75286 3.94884 4.01605 3.48244 4.48244C3.01605 4.94884 2.75286 5.58065 2.75023 6.24023V13.7602C2.75286 14.4198 3.01605 15.0516 3.48244 15.518C3.94884 15.9844 4.58065 16.2476 5.24023 16.2502H18.7602C19.4198 16.2476 20.0516 15.9844 20.518 15.518C20.9844 15.0516 21.2476 14.4198 21.2502 13.7602V6.24023C21.2476 5.58065 20.9844 4.94884 20.518 4.48244C20.0516 4.01605 19.4198 3.75286 18.7602 3.75023H5.24023Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 21.75C11.8019 21.7474 11.6126 21.6676 11.4725 21.5275C11.3324 21.3874 11.2526 21.1981 11.25 21V17C11.25 16.8011 11.329 16.6103 11.4697 16.4697C11.6103 16.329 11.8011 16.25 12 16.25C12.1989 16.25 12.3897 16.329 12.5303 16.4697C12.671 16.6103 12.75 16.8011 12.75 17V21C12.7474 21.1981 12.6676 21.3874 12.5275 21.5275C12.3874 21.6676 12.1981 21.7474 12 21.75Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M18 21.75H6C5.80109 21.75 5.61032 21.671 5.46967 21.5303C5.32902 21.3897 5.25 21.1989 5.25 21C5.25 20.8011 5.32902 20.6103 5.46967 20.4697C5.61032 20.329 5.80109 20.25 6 20.25H18C18.1989 20.25 18.3897 20.329 18.5303 20.4697C18.671 20.6103 18.75 20.8011 18.75 21C18.75 21.1989 18.671 21.3897 18.5303 21.5303C18.3897 21.671 18.1989 21.75 18 21.75Z"
-                        fill="#fff"></path>
-                </svg>
-                <span class="menu-text">Monitors</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <div id="dha-monitors-mobile">
-                <ul class="custom-bullets">
-                    <li id="patient-link"><a class="dropdown-item-custom"
-                            onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
-                            class="dropdown-item-custom">BP</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/bmi.html')"
-                            class="dropdown-item-custom">BMI</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/episodes.html')"
-                            class="dropdown-item-custom">Episodes</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/diabetes.html')"
-                            class="dropdown-item-custom">Diabetes</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/results.html')"
-                            class="dropdown-item-custom">Tests</a>
-                    </li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/medication.html')"
-                            class="dropdown-item-custom">Medications</a></li>
-                    <li><a onclick="redirectToPatientSearch('/user-dashboard/appointments.html')"
-                            class="dropdown-item-custom">Appointments</a></li>
-                </ul>
-            </div>
-
-            <div id="normal-monitors-mobile">
-                <ul class="custom-bullets">
-                    <li>
-                        <a class="dropdown-item-custom" href=" /user-dashboard/patient.html">Patient</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/bmi.html' class="dropdown-item-custom">BMI</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/episodes.html' class="dropdown-item-custom">Episodes</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/medication.html' class="dropdown-item-custom">Medications</a>
-                    </li>
-                    <li>
-                        <a href='/user-dashboard/appointments.html' class="dropdown-item-custom">Appointments</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Communities Dropdown -->
-        <div class="menu-item-dropdown mobile-menu-item-dropdown">
-            <div class="d-flex gap-2 align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                        d="M7.63121 8.57882C9.72404 8.57882 11.4206 6.88224 11.4206 4.78941C11.4206 2.69658 9.72404 1 7.63121 1C5.53837 1 3.8418 2.69658 3.8418 4.78941C3.8418 6.88224 5.53837 8.57882 7.63121 8.57882Z"
-                        stroke="#ffffff" stroke-width="1.5"></path>
-                    <path opacity="0.5"
-                        d="M10.9473 3.21776C11.4565 2.45197 12.3271 1.94727 13.3156 1.94727C14.8853 1.94727 16.1577 3.2197 16.1577 4.78932C16.1577 6.35894 14.8853 7.63138 13.3156 7.63138C12.3271 7.63138 11.4565 7.12668 10.9473 6.36089"
-                        stroke="#fff" stroke-width="1.5"></path>
-                    <path opacity="0.5"
-                        d="M16.1572 12.3682C17.8191 12.7326 18.9993 13.6555 18.9993 14.7365C18.9993 15.7117 18.039 16.5582 16.6309 16.9821"
-                        stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path
-                        d="M7.63147 18.9997C11.2939 18.9997 14.2629 17.3031 14.2629 15.2103C14.2629 13.1175 11.2939 11.4209 7.63147 11.4209C3.96901 11.4209 1 13.1175 1 15.2103C1 17.3031 3.96901 18.9997 7.63147 18.9997Z"
-                        stroke="#fff" stroke-width="1.5"></path>
-                </svg>
-                <span class="menu-text">Communities</span>
-            </div>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="dropdown-content mobile-dropdown-content ps-4">
-            <ul class="custom-bullets">
-                <li><a href="/user-dashboard/hospitals.html" class="dropdown-item-custom">Hospitals</a></li>
-                <li><a href="/user-dashboard/pharmacy.html" class="dropdown-item-custom">Pharmacies </a></li>
-                <li><a href="/user-dashboard/Chemists.html" class="dropdown-item-custom">Chemists</a></li>
-                <span class="dropdown-item-custom community-text w-100 text-white">Community Digital Health
-                    Assistants
-                    (CDHA)</span>
-                <div class="px-4">
-                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Listing</a></li>
-                    <li><a href="/user-dashboard/dha-training.html" class="dropdown-item-custom">Training</a></li>
-                </div>
-                <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
-                <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
-                <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
-                <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
-                </li>
-            </ul>
-        </div>
-        <a href="/user-dashboard/health-info.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <div>
-                <svg class="health-info-icon" width="22" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8 22.3214C7.72 22.3214 7.42998 22.2514 7.16998 22.1114C6.59998 21.8114 6.25 21.2114 6.25 20.5714V19.1515C3.23 18.8415 1.25 16.6214 1.25 13.4414V7.44141C1.25 4.00141 3.56 1.69141 7 1.69141H17C20.44 1.69141 22.75 4.00141 22.75 7.44141V13.4414C22.75 16.8814 20.44 19.1914 17 19.1914H13.23L8.96997 22.0315C8.67997 22.2215 8.34 22.3214 8 22.3214ZM7 3.1814C4.42 3.1814 2.75 4.8514 2.75 7.4314V13.4315C2.75 16.0115 4.42 17.6815 7 17.6815C7.41 17.6815 7.75 18.0215 7.75 18.4315V20.5615C7.75 20.6915 7.83 20.7515 7.88 20.7815C7.93001 20.8115 8.03001 20.8415 8.14001 20.7715L12.59 17.8115C12.71 17.7315 12.86 17.6815 13.01 17.6815H17.01C19.59 17.6815 21.26 16.0115 21.26 13.4315V7.4314C21.26 4.8514 19.59 3.1814 17.01 3.1814H7Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M11.9998 12.1094C11.5898 12.1094 11.2498 11.7694 11.2498 11.3594V11.1494C11.2498 9.98942 12.0998 9.41941 12.4198 9.19941C12.7898 8.94941 12.9098 8.77942 12.9098 8.51942C12.9098 8.01942 12.4998 7.60938 11.9998 7.60938C11.4998 7.60938 11.0898 8.01942 11.0898 8.51942C11.0898 8.92942 10.7498 9.26942 10.3398 9.26942C9.92984 9.26942 9.58984 8.92942 9.58984 8.51942C9.58984 7.18942 10.6698 6.10938 11.9998 6.10938C13.3298 6.10938 14.4098 7.18942 14.4098 8.51942C14.4098 9.65942 13.5698 10.2294 13.2598 10.4394C12.8698 10.6994 12.7498 10.8694 12.7498 11.1494V11.3594C12.7498 11.7794 12.4098 12.1094 11.9998 12.1094Z"
-                        fill="#fff"></path>
-                    <path
-                        d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-            <span class="menu-text">
-                Health Info
-            </span>
-        </a>
-    </div>
-</div>
-
-<!-- Profile Menu -->
-<div class="offcanvas offcanvas-end" id="profileMenu" tabindex="-1">
-    <div class="offcanvas-header">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot">
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <a href="/user-dashboard/user-profile.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-person-circle"></i> Profile
-        </a>
-        <a href="/user-dashboard/new-sponsorship.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-star"></i> Sponsorship
-        </a>
-        <a href="/user-dashboard/user-print.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-printer"></i> Print
-        </a>
-        <a href="/user-dashboard/user-change-pin.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-key"></i> Change Pin
-        </a>
-        <a href="#" class="mobile-menu-item d-flex align-items-center gap-2" id="share">
-            <i class="bi bi-share"></i> Share Link
-        </a>
-        <a href="/user-dashboard/user-delete-acc.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-trash"></i> Delete Account
-        </a>
-        <a href="/user-dashboard/national-policies.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-flag"></i> National Policies
-        </a>
-        <a href="/user-dashboard/new-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-shield-lock"></i>Access Control
-        </a>
-        <div class="">
-            <a href="/user-dashboard/remote-access.html" class="mobile-menu-item d-flex align-items-center gap-2">
-                <i class="bi bi-phone"></i>Remote Care
-            </a>
-            <div class="px-3 py-2">
-                <a href="/user-dashboard/new-remote-care.html" class="dropdown-item">Add New</a>
-            </div>
-        </div>
-        <a href="/user-dashboard/upgrade-to-dha.html" class="mobile-menu-item d-flex align-items-center gap-2">
-            <i class="bi bi-trash"></i>Upgrade to DHA Now
-        </a>
-    </div>
-</div>
 
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="layout-container">
