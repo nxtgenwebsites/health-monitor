@@ -582,3 +582,11 @@
   list-style-type: disc;
  padding: 0 !important;
 }
+
+#mobileMenu {
+  background: white !important;
+}
+
+.upgrade-link{
+  color: #0959a3 !important;
+}
