@@ -785,8 +785,8 @@
   margin-top: 0 !important;
 }
 .sidebar-menu .m-dropdown-content #dropdownBtn {
-  width: 220px;
-  margin-left: -40px;
+  width: 240px;
+  font-size: 14px;
   background: transparent;
   border: none;
   text-align: left;

@@ -2200,3 +2200,14 @@ body {
         width: 100% !important;
     }
 }
+
+#country{
+      height: 40px;
+    background: #ddf2f9;
+    color: #666666;
+    border: none;
+    width: 100% !important;
+    padding: 0 10px;
+    border-radius: 8px;
+    outline: none;
+}

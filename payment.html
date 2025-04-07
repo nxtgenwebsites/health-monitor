@@ -54,7 +54,7 @@
         <!-- Left Section -->
         <div class="left-section">
             <!-- Blur Popup -->
-            <div class="blur-overlay" id="blurPopup">
+            <div class="blur-overlay d-none" id="blurPopup">
                 <div class="popup-content" style="margin-top: 0 !important;">
                     <h3 class="popup-title">Select Who Is Paying</h3>
                     <div class="popup-buttons">
@@ -79,7 +79,7 @@
 
                 <h5 class="section-heading">Billing</h5>
                 <div class="mb-3">
-                    <select class="form-select">
+                    <select class="form-select" id="country">
                         <option selected>Country/Region</option>
                         <option>United Kingdom</option>
                         <option>United States</option>
@@ -106,7 +106,7 @@
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select class="form-select">
+                        <select class="form-select" id="state-drop-down">
                             <option selected>State</option>
                             <option>England</option>
                             <option>Scotland</option>
@@ -174,16 +174,39 @@
                     </div>
                 </div>
 
-                <select class="countries-select mt-3">
-                    <option selected>Countries</option>
-                    <option>Nigeria</option>
-                    <option>South Africa</option>
-                    <option>Uk</option>
-                    <option>Austrailia</option>
-                    <option>Australia</option>
-                    <option>Malaysia</option>
-                    <option>Scotland</option>
-                </select>
+                <div class="paypal-method-section active" id="paypal-payment">
+                    <div class="paypal-payment-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-252.3 356.1 163 80.9" class="zjrzY">
+                            <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"
+                                d="M-108.9 404.1v30c0 1.1-.9 2-2 2H-231c-1.1 0-2-.9-2-2v-75c0-1.1.9-2 2-2h120.1c1.1 0 2 .9 2 2v37m-124.1-29h124.1">
+                            </path>
+                            <circle cx="-227.8" cy="361.9" r="1.8" fill="currentColor"></circle>
+                            <circle cx="-222.2" cy="361.9" r="1.8" fill="currentColor"></circle>
+                            <circle cx="-216.6" cy="361.9" r="1.8" fill="currentColor"></circle>
+                            <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"
+                                d="M-128.7 400.1H-92m-3.6-4.1 4 4.1-4 4.1"></path>
+                        </svg>
+                        <h4>After clicking "Pay with PayPal", you will be redirected to <br>PayPal to complete your
+                            purchase securely.</h4>
+                    </div>
+                    <div class="my-2">
+                        <button class="border-0 p-0 bg-transparent"><img src="assets/images/paypal-btn.png"
+                                width="220px" alt="Pay Now"></button>
+                    </div>
+                </div>
+
+                <div class="bank-method-section" id="bank-payment">
+                    <select class="countries-select mt-3" id="country2">
+                        <option selected>Countries</option>
+                        <option>Nigeria</option>
+                        <option>South Africa</option>
+                        <option>Uk</option>
+                        <option>Austrailia</option>
+                        <option>Australia</option>
+                        <option>Malaysia</option>
+                        <option>Scotland</option>
+                    </select>
+                </div>
 
                 <button class="pay-now-btn" id="self-pay-btn">Pay Now</button>
             </div>
@@ -308,26 +331,120 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/toastr.min.js"></script>
+    <script src="js/country-states.js"></script>
     <script>
+
+        var user_country_code = "";
+
+        (() => {
+            const country_list = country_and_states.country;
+            const state_list = country_and_states.states;
+
+            const id_state_option = document.getElementById("state-drop-down");
+            const id_country_option = document.getElementById("country");
+
+            // Initially disable the state dropdown
+            id_state_option.innerHTML = '<option>select state</option>';
+            id_state_option.setAttribute("disabled", "disabled");
+
+            const create_country_selection = () => {
+                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+                for (const country_code in country_list) {
+                    option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
+                }
+                id_country_option.innerHTML = option;
+            };
+
+            const create_states_selection = () => {
+                let selected_country_code = id_country_option.value;
+                let state_names = state_list[selected_country_code];
+
+                if (!state_names) {
+                    id_state_option.innerHTML = '<option>select state</option>';
+                    id_state_option.setAttribute("disabled", "disabled");
+                    return;
+                }
+
+                let option = '<option>select state</option>';
+                state_names.forEach(state => {
+                    option += '<option value="' + state.code + '">' + state.name + '</option>';
+                });
+
+                id_state_option.innerHTML = option;
+                id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
+            };
+
+            // Country select change event update state dropdown
+            id_country_option.addEventListener('change', create_states_selection);
+
+            // Initialize country dropdown with placeholder
+            create_country_selection();
+        })();
+
+
+        (() => {
+            const country_list = country_and_states.country;
+            const state_list = country_and_states.states;
+
+            const id_state_option = document.getElementById("state-drop-down");
+            const id_country_option = document.getElementById("country2");
+
+            // Initially disable the state dropdown
+            id_state_option.innerHTML = '<option>select state</option>';
+            id_state_option.setAttribute("disabled", "disabled");
+
+            const create_country_selection = () => {
+                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+                for (const country_code in country_list) {
+                    option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
+                }
+                id_country_option.innerHTML = option;
+            };
+
+            const create_states_selection = () => {
+                let selected_country_code = id_country_option.value;
+                let state_names = state_list[selected_country_code];
+
+                if (!state_names) {
+                    id_state_option.innerHTML = '<option>select state</option>';
+                    id_state_option.setAttribute("disabled", "disabled");
+                    return;
+                }
+
+                let option = '<option>select state</option>';
+                state_names.forEach(state => {
+                    option += '<option value="' + state.code + '">' + state.name + '</option>';
+                });
+
+                id_state_option.innerHTML = option;
+                id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
+            };
+
+            // Country select change event update state dropdown
+            id_country_option.addEventListener('change', create_states_selection);
+
+            // Initialize country dropdown with placeholder
+            create_country_selection();
+        })();
 
         const selfPayment = document.getElementById('self-payment');
         const selfPaymentBack = document.getElementById('self-payment-back');
         const selfPaymentClose = document.getElementById('self-payment-close');
         const selfPayBtn = document.getElementById('self-pay-btn');
 
-        selfPayBtn.addEventListener(('click') , () => {
+        selfPayBtn.addEventListener(('click'), () => {
             selfPayment.classList.remove('d-none');
         })
 
-        selfPaymentClose.addEventListener(('click') , () => {
+        selfPaymentClose.addEventListener(('click'), () => {
             selfPayment.classList.add('d-none');
         })
 
-        selfPaymentBack.addEventListener(('click') , () => {
+        selfPaymentBack.addEventListener(('click'), () => {
             selfPayment.classList.add('d-none');
         })
 
-        selfPayment.addEventListener(('click') , (e) =>{            
+        selfPayment.addEventListener(('click'), (e) => {
             if (e.target === selfPayment) {
                 selfPayment.classList.add('d-none')
             }
@@ -338,19 +455,19 @@
         const someonePayClose = document.getElementById('someone-payment-close');
         const someonePayBtn = document.getElementById('someone-pay-btn');
 
-        someonePayBtn.addEventListener(('click') , () => {
+        someonePayBtn.addEventListener(('click'), () => {
             someonePay.classList.remove('d-none');
         })
 
-        someonePayClose.addEventListener(('click') , () => {
+        someonePayClose.addEventListener(('click'), () => {
             someonePay.classList.add('d-none');
         })
 
-        someonePayBack.addEventListener(('click') , () => {
+        someonePayBack.addEventListener(('click'), () => {
             someonePay.classList.add('d-none');
         })
 
-        someonePay.addEventListener(('click') , (e) =>{            
+        someonePay.addEventListener(('click'), (e) => {
             if (e.target === someonePay) {
                 someonePay.classList.add('d-none')
             }
@@ -403,18 +520,24 @@
         // Toggle between payment methods
         document.getElementById('bank').addEventListener('change', function () {
             if (this.checked) {
-                document.getElementById('cardPayment').classList.add('active');
+                document.getElementById('bank-payment').classList.add('active');
+                document.getElementById('cardPayment').classList.remove('active');
+                document.getElementById('paypal-payment').classList.remove('active');
             }
         });
 
         document.getElementById('stripe').addEventListener('change', function () {
             if (this.checked) {
-                document.getElementById('cardPayment').classList.remove('active');
+                document.getElementById('cardPayment').classList.add('active');
+                document.getElementById('paypal-payment').classList.remove('active');
+                document.getElementById('bank-payment').classList.remove('active');
             }
         });
 
         document.getElementById('paypal').addEventListener('change', function () {
             if (this.checked) {
+                document.getElementById('paypal-payment').classList.add('active');
+                document.getElementById('bank-payment').classList.remove('active');
                 document.getElementById('cardPayment').classList.remove('active');
             }
         });

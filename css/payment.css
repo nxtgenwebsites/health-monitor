@@ -390,6 +390,22 @@ background: linear-gradient(270.46deg, #1FDCE5 0.32%, #0C74C2 108.77%);
   display: block;
 }
 
+.paypal-method-section {
+  display: none;
+}
+
+.paypal-method-section.active {
+  display: block;
+}
+
+.bank-method-section {
+  display: none;
+}
+
+.bank-method-section.active {
+  display: block;
+}
+
 .section-title-blue {
   color: #0039a6;
   font-weight: 600;
@@ -515,4 +531,30 @@ background: linear-gradient(270.46deg, #1FDCE5 0.32%, #0C74C2 108.77%);
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+
+.paypal-payment-box {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 30px 30px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.paypal-payment-box h4{
+  color: #696984;
+  font-size: 14px;
+}
+
+.paypal-payment-box svg{
+  width: 180px ;
+  margin: auto;
+}
+.paypal-payment-box svg path{
+  stroke: #696984 !important;
 }
