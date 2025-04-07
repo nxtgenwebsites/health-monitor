@@ -216,8 +216,8 @@
 }
 
 .logo {
-  width: 140px !important;
-  height: 90px !important;
+  width: 190px !important;
+  height: 180px !important;
 }
 
 .notification-icon img {
@@ -446,8 +446,8 @@
     gap: 1rem;
   }
   .logo {
-    width: 110px !important;
-    height: 80px !important;
+    width: 120px !important;
+    height: 110px !important;
   }
   .trustpilot {
     width: 100px !important;
@@ -456,8 +456,8 @@
 
 @media (max-width: 992px) {
   .logo {
-    width: 100px !important;
-    height: 60px !important;
+    width: 110px !important;
+    height: 100px !important;
   }
   .ad-container {
     position: unset;
