@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/select-plan.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/toastr.min.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
+            </a>
+            <dv class="mx-3 trustpilot">
+                <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
+            </dv>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+                    </li>
+                </ul>
+                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Login Start -->
+    <section class="auth-section main-container">
+        <div class="heading text-center">
+            <h3>Select Account Type</h3>
+        </div>
+        <div class="container mt-4">
+            <div class="row row-gap-5 gap-4 justify-content-center">
+                <div class="col-10 col-sm-10 col-md-5 col-lg-4">
+                    <div class="plan-card free-plan">
+                        <div class="plan-info">
+                            <div class="plan-icon">
+                                <img src="/assets/icons/free-plan-icon.svg" alt="icon">
+                            </div>
+                            <div class="mt-3 plan-type">
+                                <h4>Free</h4>
+                            </div>
+                            <div class="price">
+                                <h2>£0</h2>
+                                <div class="time">
+                                    <h6>
+                                        Yearly
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="mt-3">
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Accident & Emergencies</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/Check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">CareRequests</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Remote Care</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">
+                                        Sponsored Ad
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">
+                                        Diagoniser
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Monetisation</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Data Governance</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Community Digital Health
+                                        Analyst (CDHA)</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">AI Health Information</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <div class="status-icon">
+                                        <img src="/assets/icons/cross.svg" width="15px" alt="icon">
+                                    </div>
+                                    <div class="plan-text">
+                                </div>
+                                    <h6 class="mb-0">Health Monitors</h6>
+                                </div>
+                                <div class="mt-2 monitor-included px-3">
+                                    <ul>
+                                        <li>BP</li>
+                                        <li>Diabetes</li>
+                                        <li>BMI</li>
+                                        <li>Medication</li>
+                                        <li>Medication</li>
+                                        <li>Appointments</li>
+                                        <li>More</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100 select-plan-btn">
+                            <a href="/user-dashboard/overview.html">
+                                <button>Select</button>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                <div class="col-10 col-sm-10 col-md-5 col-lg-4 paid-plan">
+                    <div class="plan-card">
+                        <div class="plan-info">
+                            <div class="plan-icon">
+                                <img src="/assets/icons/paid-icon.png" alt="icon">
+                            </div>
+                            <div class="mt-3 plan-type">
+                                <h4>Premium</h4>
+                            </div>
+                            <div class="price">
+                                <h2>£10</h2>
+                                <div class="time">
+                                    <h6>
+                                        Yearly
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="mt-3">
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Accident & Emergencies</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/Check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">CareRequests</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Remote Care</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">
+                                        Sponsored Ad
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">
+                                        Diagoniser
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Monetisation</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Data Governance</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">Community Digital Health
+                                        Analyst (CDHA)</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included d-flex gap-2 align-items-center">
+                                <div class="status-icon">
+                                    <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                </div>
+                                <div class="plan-text">
+                                    <h6 class="mb-0">AI Health Information</h6>
+                                </div>
+                            </div>
+                            <div class="plan-included">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <div class="status-icon">
+                                        <img src="/assets/icons/check.svg" width="15px" alt="icon">
+                                    </div>
+                                    <div class="plan-text">
+                                </div>
+                                    <h6 class="mb-0">Health Monitors</h6>
+                                </div>
+                                <div class="mt-2 monitor-included px-3">
+                                    <ul>
+                                        <li>BP</li>
+                                        <li>Diabetes</li>
+                                        <li>BMI</li>
+                                        <li>Medication</li>
+                                        <li>Medication</li>
+                                        <li>Appointments</li>
+                                        <li>More</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="payment.html">
+                            <div class="w-100 select-plan-btn">
+                                <button>Select</button>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Login End -->
+
+    <!-- Footer start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-5 col-md-6 text-md-start text-center">
+                    <div class="footer-card">
+                        <div class="footer-img">
+                            <a href="">
+                                <img src="assets/images/logo.png" width="150" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="mt-4 mb-3">Join our newsletter for latest updates <br>
+                                and features. You don't want to miss it!</p>
+                            <div class="footer-subscribe position-relative w-100">
+                                <input type="email" class="" placeholder="Enter your email here">
+                                <button type="submit" class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Home</h5>
+                        <li class="nav-item"><a href="emergency.html" class="nav-link">Emergency</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Symptoms</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Remote Care</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Monitors</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Health Info</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">Communities</h5>
+                        <li class="nav-item"><a href="/user-dashboard/hospitals.html" class="nav-link">Hospitals</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Pharmacies</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Community Digital
+                                Health Assistants</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Tech Support</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/complaints.html" class="nav-link">Complaints</a>
+                        </li>
+                        <li class="nav-item"><a href="/user-dashboard/reviews.html" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="/user-dashboard/privacy-policy.html" class="nav-link">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 text-md-start text-center">
+                    <ul class="navbar-nav">
+                        <h5 class="fw-bold footer-heading text-primary">User Dashboard</h5>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Sponsorship</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Print</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Password & 2FA</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Access Control</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">National Policies</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Upgrade to Community Edition</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Delete Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-2">
+        <div class="copyright-section d-flex align-items-center">
+            <p class="font-size">© Copyright 2025 HealthCentreApp. All rights reserved | Developed by <a
+                    href="https://nxtgenwebsites.com/" target="_blank"
+                    class="text-noWrap link-secondary hoverable-link">Nxt Gen
+                    Websites</a></p>
+            <p class="ms-md-auto me-3 font-size">Share on socials</p>
+            <div class="social-media">
+                <button id="x-share-btn" class="btn p-0 border-0">
+                    <img src="assets/icons/X.svg" alt="img" class="">
+                </button>
+                <button id="fb-share-btn" class="btn p-0 border-0">
+                    <img src="assets/icons/Facebook.svg" alt="img" class="">
+                </button>
+                <a href="https://www.instagram.com/" target="">
+                    <button id="Instagram-share-btn" class="btn p-0 border-0">
+                        <img src="assets/icons/Instagram.svg" alt="img" class="">
+                    </button>
+                </a>
+                <button id="linkedin-share-btn" class="btn p-0 border-0">
+                    <img src="assets/icons/linkedin.svg" alt="img" class="">
+                </button>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer end -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script>
+        document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
+            const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
+
+            const params = new URLSearchParams({
+                url: "https://health-monitor-sa.vercel.app/",
+                title: "Health Monitor",
+                summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
+                source: "Health Monitor"
+            }).toString();
+
+            window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
+        })
+
+        document.getElementById('x-share-btn').addEventListener(('click'), () => {
+            const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #HealthCentreApp");
+            const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+            window.open(tweetUrl, "_blank", "width=600,height=400");
+        })
+
+        document.getElementById('fb-share-btn').addEventListener(('click'), () => {
+            const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
+            const params = new URLSearchParams({
+                u: "https://health-monitor-sa.vercel.app/", // Your website URL
+                quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
+                hashtag: "#HealthCentreApp", // Optional hashtag
+            }).toString();
+
+            const shareUrl = `${fbShareUrl}?${params}`;
+            window.open(shareUrl, "_blank", "width=600,height=400");
+        })
+    </script>
+</body>
+
+</html>

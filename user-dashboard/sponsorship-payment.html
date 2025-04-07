@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Monitor</title>
+    <link rel="shortcut icon" href="../assets/icons/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/payment.css" />
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/toastr.min.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../../assets/images/logo.png" width="145" class="img-fluid" alt="logo">
+            </a>
+            <dv class="mx-3 trustpilot">
+                <img src="../../assets/images/trustpilot.png" class="img-fluid" alt="logo">
+            </dv>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+                    </li>
+                </ul>
+                <div class="login-btn">
+                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Content -->
+    <div class="container subscription-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <!-- Blur Popup -->
+            <div class="blur-overlay" id="blurPopup">
+                <div class="popup-content"  style="margin-top: 0 !important;">
+                    <h3 class="popup-title">Select Who Is Paying</h3>
+                    <div class="popup-buttons">
+                        <button class="popup-btn" id="popupMyselfBtn">Myself</button>
+                        <button class="popup-btn" id="popupSomeoneBtn">Someone</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex gap-2 mb-4">
+                <button class="payment-btn active" id="myselfBtn">Myself</button>
+                <button class="payment-btn" id="someoneBtn">Someone</button>
+            </div>
+
+            <!-- Myself Form Section -->
+            <div class="form-section active" id="myselfForm">
+                <h5 class="section-heading">Contact</h5>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+
+                <h5 class="section-heading">Billing</h5>
+                <div class="mb-3">
+                    <select class="form-select">
+                        <option selected>Country/Region</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <select class="form-select">
+                            <option selected>City</option>
+                            <option>London</option>
+                            <option>Manchester</option>
+                            <option>Birmingham</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select">
+                            <option selected>State</option>
+                            <option>England</option>
+                            <option>Scotland</option>
+                            <option>Wales</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Zipcode">
+                    </div>
+                </div>
+
+                <h5 class="section-heading h4">Payment Method</h5>
+                <p class="text-muted small mb-3">Choose how you'd like to pay for this charge</p>
+
+                <div class="payment-options d-flex gap-4">
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="paypal" checked>
+                        <label for="paypal">
+                            <img src="../../assets/images/logos_paypal.png" style="height: 21px;" alt="PayPal">
+                        </label>
+                    </div>
+
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="stripe">
+                        <label for="stripe">
+                            <img src="../../assets/images/logos_stripe.png" alt="Stripe" style="height: 25px;">
+                        </label>
+                    </div>
+
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="bank">
+                        <label for="bank">
+                            <img src="../../assets/images/bank.png" style="height: 25px;" alt="Icon">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Credit Card Payment Section (for PayPal and Stripe) -->
+                <div class="payment-method-section" id="cardPayment">
+                    <div class="payment-form">
+                        <div class="card-input-container">
+                            <input type="text" class="card-input" placeholder="Card Number">
+                            <div class="card-icon">
+                                <img src="../../assets/images/basil_card-outline.png" alt="icon">
+                            </div>
+                            <div class="mastercard-icon">
+                                <img src="../../assets/images/logos_mastercard.png" alt="icon">
+                            </div>
+                            <div class="visa-icon">
+                                <img src="../../assets/images/logos_visa.png" alt="icon">
+                            </div>
+                        </div>
+
+                        <div class="card-row">
+                            <input type="text" class="card-input" placeholder="Expiration Date (MM/YY)">
+                            <input type="text" class="card-input" placeholder="Security Code">
+                        </div>
+
+                        <input type="text" class="card-input" placeholder="Name on Card">
+
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="saveCard">
+                            <label for="saveCard">Save the information for a faster checkout</label>
+                        </div>
+                    </div>
+                </div>
+
+                <select class="countries-select">
+                    <option selected>Countries</option>
+                    <option>Nigeria</option>
+                    <option>South Africa</option>
+                    <option>Uk</option>
+                    <option>Austrailia</option>
+                    <option>Australia</option>
+                    <option>Malaysia</option>
+                    <option>Scotland</option>
+                </select>
+
+                <button class="pay-now-btn" id="self-pay-btn">Pay Now</button>
+            </div>
+
+            <!-- Someone Form Section -->
+            <div class="form-section" id="someoneForm">
+
+                <div class="mb-3">
+                    <select class="form-select">
+                        <option selected>Title</option>
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                        <option>Miss</option>
+                        <option>Rec</option>
+                        <option>Mr</option>
+                        <option>Pst</option>
+                        <option>Prof</option>
+                        <option>Dr</option>
+                    </select>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Confirm Email">
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="confirmPayment">
+                    <label for="confirmPayment">I confirm that the above has agreed to pay for my subscription</label>
+                </div>
+
+                <button class="submit-link-btn" id="someone-pay-btn">Submit Payment Link</button>
+            </div>
+
+            <p class="terms-text">
+                By placing this order, you agree to our <a href="#">Terms & Services</a> and understand our <a
+                    href="#">Privacy Policy</a>
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h3 class="section-title">Selected Account Type</h3>
+
+            <div class="premium-box">
+                <div class="premium-details">
+                    <div class="d-flex align-items-center">
+                        <img src="../../assets/images/premium-icon.png" alt="">
+                        <span class="premium-title">Premium <small>(Yearly)</small></span>
+                    </div>
+                    <span class="premium-price">£10.00</span>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Subscription Details</h5>
+
+            <div class="subscription-details">
+                <div class="details-row">
+                    £10.00/annually | Start Date: 20 March, 2025 | Renewal: 19 March, 2026
+                </div>
+            </div>
+
+            <div class="price-breakdown">
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span>£10.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Tax</span>
+                    <span>- £0.00</span>
+                </div>
+
+                <div class="total-row">
+                    <span>Total</span>
+                    <span>£10.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Self Payment Popup  -->
+    <div class="popup d-none" id="self-payment">
+        <div class="payment-box bg-white">
+            <h3>Thankyou!</h3>
+            <p>The relevant bank details in your region will <br class="d-none d-sm-block">
+                be sent to you.
+            </p>
+            <div class="popup-btn" id="self-payment-back">Go Back</div>
+            <div class="close-btn" id="self-payment-close">
+                <img src="/user-dashboard/assets/icons/close.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Someone Payment Popup  -->
+    <div class="popup d-none" id="someone-payment">
+        <div class="payment-box bg-white">
+            <h3>Thankyou!!</h3>
+            <p>Payment Request has been sent to XYZ, <br class="d-none d-sm-block">
+                you will be notified when your account is active.
+            </p>
+            <div class="popup-btn" id="someone-payment-back">Go Back</div>
+            <div class="close-btn" id="someone-payment-close">
+                <img src="/user-dashboard/assets/icons/close.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Someone Payment Popup  -->
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../js/toastr.min.js"></script>
+    <script>
+
+        const selfPayment = document.getElementById('self-payment');
+        const selfPaymentBack = document.getElementById('self-payment-back');
+        const selfPaymentClose = document.getElementById('self-payment-close');
+        const selfPayBtn = document.getElementById('self-pay-btn');
+
+        selfPayBtn.addEventListener(('click'), () => {
+            selfPayment.classList.remove('d-none');
+        })
+
+        selfPaymentClose.addEventListener(('click'), () => {
+            selfPayment.classList.add('d-none');
+        })
+
+        selfPaymentBack.addEventListener(('click'), () => {
+            selfPayment.classList.add('d-none');
+        })
+
+        selfPayment.addEventListener(('click'), (e) => {
+            if (e.target === selfPayment) {
+                selfPayment.classList.add('d-none')
+            }
+        })
+
+        const someonePay = document.getElementById('someone-payment');
+        const someonePayBack = document.getElementById('someone-payment-back');
+        const someonePayClose = document.getElementById('someone-payment-close');
+        const someonePayBtn = document.getElementById('someone-pay-btn');
+
+        someonePayBtn.addEventListener(('click'), () => {
+            someonePay.classList.remove('d-none');
+        })
+
+        someonePayClose.addEventListener(('click'), () => {
+            someonePay.classList.add('d-none');
+        })
+
+        someonePayBack.addEventListener(('click'), () => {
+            someonePay.classList.add('d-none');
+        })
+
+        someonePay.addEventListener(('click'), (e) => {
+            if (e.target === someonePay) {
+                someonePay.classList.add('d-none')
+            }
+        })
+
+
+        // Popup buttons functionality
+        document.getElementById('popupMyselfBtn').addEventListener('click', function () {
+            // Close popup
+            document.getElementById('blurPopup').style.display = 'none';
+
+            // Activate Myself form
+            document.getElementById('myselfBtn').classList.add('active');
+            document.getElementById('someoneBtn').classList.remove('active');
+            document.getElementById('myselfForm').classList.add('active');
+            document.getElementById('someoneForm').classList.remove('active');
+        });
+
+        document.getElementById('popupSomeoneBtn').addEventListener('click', function () {
+            // Close popup
+            document.getElementById('blurPopup').style.display = 'none';
+
+            // Activate Someone form
+            document.getElementById('someoneBtn').classList.add('active');
+            document.getElementById('myselfBtn').classList.remove('active');
+            document.getElementById('someoneForm').classList.add('active');
+            document.getElementById('myselfForm').classList.remove('active');
+        });
+
+        // Toggle between Myself and Someone forms
+        document.getElementById('myselfBtn').addEventListener('click', function () {
+            this.classList.add('active');
+            document.getElementById('someoneBtn').classList.remove('active');
+            document.getElementById('myselfForm').classList.add('active');
+            document.getElementById('someoneForm').classList.remove('active');
+        });
+
+        document.getElementById('someoneBtn').addEventListener('click', function () {
+            this.classList.add('active');
+            document.getElementById('myselfBtn').classList.remove('active');
+            document.getElementById('someoneForm').classList.add('active');
+            document.getElementById('myselfForm').classList.remove('active');
+        });
+
+        // Hide all payment method sections initially except the default one
+        document.querySelectorAll('.payment-method-section').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Toggle between payment methods
+        document.getElementById('bank').addEventListener('change', function () {
+            if (this.checked) {
+                document.getElementById('cardPayment').classList.add('active');
+            }
+        });
+
+        document.getElementById('stripe').addEventListener('change', function () {
+            if (this.checked) {
+                document.getElementById('cardPayment').classList.remove('active');
+            }
+        });
+
+        document.getElementById('paypal').addEventListener('change', function () {
+            if (this.checked) {
+                document.getElementById('cardPayment').classList.remove('active');
+            }
+        });
+
+        document.getElementById('linkedin-share-btn').addEventListener(('click'), () => {
+            const shareUrl = "https://www.linkedin.com/sharing/share-offsite";
+
+            const params = new URLSearchParams({
+                url: "https://health-monitor-sa.vercel.app/",
+                title: "Health Monitor",
+                summary: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Summary text
+                source: "Health Monitor"
+            }).toString();
+
+            window.open(`${shareUrl}?${params}`, "_blank", "width=600,height=400");
+        })
+
+        document.getElementById('x-share-btn').addEventListener(('click'), () => {
+            const tweetText = encodeURIComponent("A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place: https://health-monitor-sa.vercel.app/ #HealthCentreApp");
+            const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+            window.open(tweetUrl, "_blank", "width=600,height=400");
+        })
+
+        document.getElementById('fb-share-btn').addEventListener(('click'), () => {
+            const fbShareUrl = "https://www.facebook.com/sharer/sharer.php";
+            const params = new URLSearchParams({
+                u: "https://health-monitor-sa.vercel.app/", // Your website URL
+                quote: "A smarter way to track and manage your health with our intuitive dashboard. Gain complete control over your well-being, all in one place", // Text to share
+                hashtag: "#HealthCentreApp", // Optional hashtag
+            }).toString();
+
+            const shareUrl = `${fbShareUrl}?${params}`;
+            window.open(shareUrl, "_blank", "width=600,height=400");
+        })
+    </script>
+</body>
+
+</html>
