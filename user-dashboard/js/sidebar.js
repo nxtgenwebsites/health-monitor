@@ -1,32 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn = document.querySelector("#sidebar #dropdownBtn");
-    const dropdownContent = document.querySelector("#sidebar #dropdownContent");
-    const dropdownArrow = document.querySelector("#sidebar #dropdownArrow");
-
-    dropdownBtn.addEventListener("click", function () {
-        // Toggle dropdown visibility
-        dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-
-        // Rotate arrow
-        dropdownArrow.classList.toggle("rotate");
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownContent = document.getElementById("dropdownContent");
-    const dropdownArrow = document.getElementById("dropdownArrow");
-
-    dropdownBtn.addEventListener("click", function () {
-        // Toggle dropdown visibility
-        dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-
-        // Rotate arrow
-        dropdownArrow.classList.toggle("rotate");
-    });
-});
-
-
 // Handle all sidebar functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown menu items

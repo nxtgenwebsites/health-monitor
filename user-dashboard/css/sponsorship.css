@@ -402,8 +402,29 @@ a {
 
 .banner-view-box {
   border-radius: 7px !important;
-  width: 70%;
+  width: 50%;
   padding: 23px 26px;
+}
+
+.preview-content {
+  text-align: left !important;
+}
+.preview-content p{
+color: #6c757d;
+}
+.preview-content p b{
+  color: #4e4e4e;
+}
+.preview-content h6 b{
+  color: #4e4e4e;
+}
+.preview-content h6 {
+  font-weight: 400;
+  color: #6c757d;
+}
+.preview-content h6 span{
+  color: #32e75d;
+
 }
 
 .submit-banner-box {
