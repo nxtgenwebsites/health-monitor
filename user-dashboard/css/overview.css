@@ -1196,8 +1196,14 @@ body {
   }
 
   .stats-card .d-flex {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+  }
+  .stats-card p:nth-child(1){
+    color: #000 !important;
+  }
+  .stats-card a{
+    margin-right: 0 !important;
   }
 
   .stats-card .btn-icon {
@@ -2285,3 +2291,7 @@ body {
         align-items: center;
     }
 }
+
+  /* .stats-card a{
+    margin-right: 20px;
+  } */

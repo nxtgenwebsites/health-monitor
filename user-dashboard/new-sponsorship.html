@@ -896,7 +896,7 @@
                 <div class="row g-4">
                     <!-- Chemist Shop Card -->
                     <div class="col-md-4">
-                        <div class="sponsor-card" data-preview="assets/sponsor add.png">
+                        <div class="sponsor-card" preview-status="Expired">
                             <div class="sponsor-img">
                                 <img src="assets/sponsor 3.png" alt="Chemist Shop"
                                     style="max-width: 100%; overflow: hidden;">
@@ -910,7 +910,7 @@
 
                     <!-- Ace First Aid Card -->
                     <div class="col-md-4">
-                        <div class="sponsor-card" data-preview="assets/sponsor add.png">
+                        <div class="sponsor-card" preview-status="Live">
                             <div class="sponsor-img">
                                 <img src="assets/sponsor 2.png" alt="Ace First Aid"
                                     style="max-width: 100%; overflow: hidden;">
@@ -924,7 +924,7 @@
 
                     <!-- Southwood Pharmacy Card -->
                     <div class="col-md-4">
-                        <div class="sponsor-card" data-preview="assets/sponsor add.png">
+                        <div class="sponsor-card" preview-status="Pending">
                             <div class="sponsor-img">
                                 <img src="assets/sponsor 3.png" alt="Southwood Pharmacy"
                                     style="max-width: 100%; overflow: hidden;">
@@ -954,14 +954,66 @@
             </div>
         </div>
         <!-- Preview Popup -->
-        <div class="preview-overlay" id="previewOverlay">
-            <div class="preview-container">
-                <img src="/placeholder.svg" alt="Sponsor Preview" class="preview-image" id="previewImage">
-                <div class="d-flex justify-content-center mt-3">
-                    <button class="primary-btn m-auto" id="cancel-preview">Cancel</button>
+                <div class="preview-overlay" id="previewOverlay">
+                    <div class="banner-view-box bg-white rounded text-center position-relative ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="assets/add scapper.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-9 preview-content">
+                                <div class="row g-3 sponsorship-form">
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">Target Country</label>
+                                            <select id="country2">
+                                                <option value="">Select</option>
+                                            </select>
+                                            <select class="d-none" id="state-drop-down2">
+                                                <option value="">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">Select Number of Impression Days</label>
+                                            <input type="number" class="form-control w-100">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">Start Date</label>
+                                            <input type="date" class="form-control w-100" value="2025-04-09">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">End Date</label>
+                                            <input type="date" class="form-control w-100" value="2025-04-13">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">Website (If any)</label>
+                                            <input type="url" class="form-control w-100">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group d-flex">
+                                            <label class="form-label w-100">Status</label>
+                                            <button class="btn status-btn">LIVE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="d-flex gap-3 flex-wrap my-3 w-100">
+                                        <button class="btn action-btn" id="cancel-preview">Cancel</button>
+                                        <button class="btn action-btn" id="action-edit-btn">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
@@ -1104,26 +1156,33 @@
     <!-- Share Message end -->
     <script>
         // Get DOM elements
-        const previewOverlay = document.getElementById('previewOverlay');
-        const previewImage = document.getElementById('previewImage');
-        const sponsorCards = document.querySelectorAll('.sponsor-card:not(.create-card)');
+    const previewOverlay = document.getElementById('previewOverlay');
+    const sponsorCards = document.querySelectorAll('.sponsor-card:not(.create-card)');
+    const statusButton = document.querySelector('#previewOverlay .btn.status-btn'); // LIVE status button
+    const editButton = document.getElementById('action-edit-btn'); // Edit button
 
-        // Add click event to all sponsor cards
-        sponsorCards.forEach(card => {
-            card.addEventListener('click', function () {
-                // Get the preview image URL from data attribute
-                const previewUrl = this.getAttribute('data-preview');
+    sponsorCards.forEach(card => {
+        card.addEventListener('click', function () {
+            // Get the status from attribute
+            const status = card.getAttribute('preview-status') || 'Pending';
 
-                // Set the preview image
-                previewImage.src = previewUrl;
+            // Set status text in popup
+            statusButton.textContent = status.toUpperCase();
 
-                // Show the preview overlay
-                previewOverlay.classList.add('active');
+            // Optional: Set class for styling like LIVE, EXPIRED, etc.
+            statusButton.className = 'btn '; // reset classes
+             statusButton.classList.add(`preview-status-${status.toLowerCase() }`);
+            if (status.toLowerCase() === 'expired') {
+                editButton.style.display = 'none'; // Hide Edit button
+            } else {
+                editButton.style.display = 'inline-block'; // Show Edit button
+            }
 
-                // Prevent scrolling on the body
-                document.body.style.overflow = 'hidden';
-            });
+            // Show the preview overlay
+            previewOverlay.classList.add('active');
         });
+    });
+
 
         // Close preview when clicking the close button
         document.getElementById('cancel-preview').addEventListener('click', function () {

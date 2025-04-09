@@ -599,7 +599,7 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -846,7 +846,7 @@
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
                     </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -913,7 +913,7 @@
                         <div class="row g-3 sponsorship-form">
                             <div class="col-12">
                                 <div class="form-group d-flex">
-                                    <label class="form-label w-100">Select Number of Impression Days</label>
+                                    <label class="form-label w-100">Target Country</label>
                                     <select id="country">
                                         <option value="">Select</option>
                                     </select>
@@ -931,6 +931,12 @@
                             <div class="col-12">
                                 <div class="form-group d-flex">
                                     <label class="form-label w-100">Start Date</label>
+                                    <input type="date" class="form-control w-100">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">End Date</label>
                                     <input type="date" class="form-control w-100">
                                 </div>
                             </div>
@@ -967,41 +973,52 @@
             </div>
         </div>
         <!-- Preview Banner Popup -->
-        <div class="popup d-flex justify-content-md-center align-items-center" id="preview-banner">
+        <div class="popup d-none justify-content-md-center align-items-center" id="preview-banner">
             <div class="banner-view-box bg-white rounded text-center position-relative ">
                 <div class="row">
                     <div class="col-md-3">
                         <img src="assets/add scapper.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-9 preview-content">
-                                                <div class="row g-3 sponsorship-form">
-                                                    <div class="col-12">
-                                                        <div class="form-group d-flex">
-                                                            <label class="form-label w-100">Select Number of Impression Days</label>
-                                                            <input type="number" class="form-control w-100" placeholder="e.g 10">
+                        <div class="row g-3 sponsorship-form">
+                                                        <div class="col-12">
+                                                            <div class="form-group d-flex">
+                                                                <label class="form-label w-100">Target Country</label>
+                                                                <select id="country2">
+                                                                    <option value="">Select</option>
+                                                                </select>
+                                                                <select class="d-none" id="state-drop-down2">
+                                                                    <option value="">Select</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group d-flex">
-                                                            <label class="form-label w-100">Start Date</label>
-                                                            <input type="date" class="form-control w-100">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group d-flex">
-                                                            <label class="form-label w-100">End Date</label>
-                                                            <input type="date" class="form-control w-100">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group d-flex">
-                                                            <label class="form-label w-100">Website (If any)</label>
-                                                            <input type="url" class="form-control w-100" placeholder="e.g http//www.abc.com">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Select Number of Impression Days</label>
+                                    <input type="number" class="form-control w-100">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Start Date</label>
+                                    <input type="date" class="form-control w-100" value="2025-04-09">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">End Date</label>
+                                    <input type="date" class="form-control w-100" value="2025-04-13">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Website (If any)</label>
+                                    <input type="url" class="form-control w-100">
+                                </div>
+                            </div>
+                        </div>
                         <div class="">
-                        
+
                             <div class="d-flex gap-3 flex-wrap my-3 w-100">
                                 <a href="sponsorship-payment.html">
                                     <button class="btn action-btn" id="action-submit-btn">Submit</button>
@@ -1203,6 +1220,50 @@
 
             const id_state_option = document.getElementById("state-drop-down");
             const id_country_option = document.getElementById("country");
+
+            // Initially disable the state dropdown
+            id_state_option.innerHTML = '<option>select state</option>';
+            id_state_option.setAttribute("disabled", "disabled");
+
+            const create_country_selection = () => {
+                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+                for (const country_code in country_list) {
+                    option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
+                }
+                id_country_option.innerHTML = option;
+            };
+
+            const create_states_selection = () => {
+                let selected_country_code = id_country_option.value;
+                let state_names = state_list[selected_country_code];
+
+                if (!state_names) {
+                    id_state_option.innerHTML = '<option>select state</option>';
+                    id_state_option.setAttribute("disabled", "disabled");
+                    return;
+                }
+
+                let option = '<option>select state</option>';
+                state_names.forEach(state => {
+                    option += '<option value="' + state.code + '">' + state.name + '</option>';
+                });
+
+                id_state_option.innerHTML = option;
+                id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
+            };
+
+            // Country select change event update state dropdown
+            id_country_option.addEventListener('change', create_states_selection);
+
+            // Initialize country dropdown with placeholder
+            create_country_selection();
+        })();
+        (() => {
+            const country_list = country_and_states.country;
+            const state_list = country_and_states.states;
+
+            const id_state_option = document.getElementById("state-drop-down2");
+            const id_country_option = document.getElementById("country2");
 
             // Initially disable the state dropdown
             id_state_option.innerHTML = '<option>select state</option>';

@@ -2232,3 +2232,30 @@ body {
     border-radius: 8px;
     outline: none;
 }
+#country2{
+      height: 40px;
+    background: #ddf2f9;
+    color: #666666;
+    border: none;
+    width: 100% !important;
+    padding: 0 10px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.preview-status-live{
+  background: #28a745 !important;
+  padding: 5px 22px;
+  color: white !important;
+}
+.preview-status-pending{
+  background: #ffc107 !important;
+  padding: 5px 22px;
+  color: white !important;
+}
+
+.preview-status-expired{
+  background: #dc3545 !important;
+  padding: 5px 22px;
+  color: white !important;
+}
