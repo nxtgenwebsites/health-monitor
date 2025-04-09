@@ -1197,11 +1197,15 @@ body {
 
   .stats-card .d-flex {
     /* flex-direction: column; */
-    align-items: center;
+    align-items: center !important;
   }
   .stats-card p:nth-child(1){
     color: #000 !important;
   }
+  .stats-card h3{
+    margin-top: 5px;
+  }
+
   .stats-card a{
     margin-right: 0 !important;
   }

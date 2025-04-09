@@ -832,3 +832,10 @@
   }
 
 }
+
+#user-profile .border-top a{
+  font-size: 11px !important;
+}
+#cdha-profile .border-top a{
+  font-size: 11px !important;
+}

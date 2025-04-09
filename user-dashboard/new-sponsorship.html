@@ -218,12 +218,12 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDH Associates
+                            Upgrade to Certified Digital Health Associates
                         </a>
                     </li>
                 </ul>
             </div>
-            <!-- CDH Associates Dashborad User Dropdown -->
+            <!-- Certified Digital Health Associates Dashborad User Dropdown -->
             <div class="dropdown d-none d-lg-block" id="cdha-profile">
                 <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
                     style="cursor: pointer;">
@@ -312,7 +312,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDH Associates
+                            Upgrade to Certified Digital Health Associates
                         </a>
                     </li>
                 </ul>
@@ -385,7 +385,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold upgrade-link"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDH Associates
+                            Upgrade to Certified Digital Health Associates
                         </a>
                     </li>
                 </ul>
@@ -599,7 +599,7 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
+<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Digital Health Associates</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -846,7 +846,7 @@
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
                     </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">CDH Associates</a></li>
+<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Digital Health Associates</a></li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -960,6 +960,7 @@
                             <div class="col-md-3">
                                 <img src="assets/add scapper.png" class="img-fluid" alt="">
                             </div>
+                            
                             <div class="col-md-9 preview-content">
                                 <div class="row g-3 sponsorship-form">
                                     <div class="col-12">
@@ -976,7 +977,7 @@
                                     <div class="col-12">
                                         <div class="form-group d-flex">
                                             <label class="form-label w-100">Select Number of Impression Days</label>
-                                            <input type="number" class="form-control w-100">
+                                            <input type="number" class="form-control w-100" value="100">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -991,12 +992,12 @@
                                             <input type="date" class="form-control w-100" value="2025-04-13">
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">Website (If any)</label>
-                                            <input type="url" class="form-control w-100">
-                                        </div>
-                                    </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Website (If any)</label>
+                                    <input type="url" class="form-control w-100" placeholder="www.healthcentreapp">
+                                </div>
+                            </div>
                                     <div class="col-12">
                                         <div class="form-group d-flex">
                                             <label class="form-label w-100">Status</label>
@@ -1007,7 +1008,9 @@
                                 <div class="">
                                     <div class="d-flex gap-3 flex-wrap my-3 w-100">
                                         <button class="btn action-btn" id="cancel-preview">Cancel</button>
-                                        <button class="btn action-btn" id="action-edit-btn">Edit</button>
+                                        <a href="add-sponsorship.html">
+                                            <button class="btn action-btn" id="action-edit-btn">Edit</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1154,7 +1157,58 @@
         </div>
     </div>
     <!-- Share Message end -->
+    <script src="js/country-states.js"></script>
     <script>
+
+        (() => {
+            const country_list = country_and_states.country;
+            const state_list = country_and_states.states;
+
+            const id_state_option = document.getElementById("state-drop-down2");
+            const id_country_option = document.getElementById("country2");
+
+            // Initially disable the state dropdown
+            id_state_option.innerHTML = '<option>select state</option>';
+            id_state_option.setAttribute("disabled", "disabled");
+
+            const create_country_selection = () => {
+                let option = '<option value="" disabled>Select Country</option>'; // Placeholder (not selected)
+                for (const country_code in country_list) {
+                    const selected = country_code === "US" ? "selected" : "";
+                    option += `<option value="${country_code}" ${selected}>${country_list[country_code]}</option>`;
+                }
+                id_country_option.innerHTML = option;
+            };
+
+            const create_states_selection = () => {
+                let selected_country_code = id_country_option.value;
+                let state_names = state_list[selected_country_code];
+
+                if (!state_names) {
+                    id_state_option.innerHTML = '<option>select state</option>';
+                    id_state_option.setAttribute("disabled", "disabled");
+                    return;
+                }
+
+                let option = '<option>select state</option>';
+                state_names.forEach(state => {
+                    option += `<option value="${state.code}">${state.name}</option>`;
+                });
+
+                id_state_option.innerHTML = option;
+                id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
+            };
+
+            // Country select change event updates state dropdown
+            id_country_option.addEventListener('change', create_states_selection);
+
+            // Initialize country dropdown with placeholder and pre-select USA
+            create_country_selection();
+            create_states_selection(); // Automatically load states for the default selected country (USA)
+        })();
+
+
+
         // Get DOM elements
     const previewOverlay = document.getElementById('previewOverlay');
     const sponsorCards = document.querySelectorAll('.sponsor-card:not(.create-card)');
