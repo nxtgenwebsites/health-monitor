@@ -1220,21 +1220,7 @@
         }
 
 
-
-        pairedBackBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-        pairedCloseBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        }); document.querySelectorAll('.upload-btn').forEach((btn, index) => {
+         document.querySelectorAll('.upload-btn').forEach((btn, index) => {
             btn.insertAdjacentHTML('beforebegin', `
     <input type="file" id="fileInput${index}" class="d-none" multiple>
     <div id="filesList${index}" class="mb-3"></div>

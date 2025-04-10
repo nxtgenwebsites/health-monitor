@@ -1543,14 +1543,6 @@
         const crossIcon = document.querySelector('.share-img i');
         const blockBtn = document.querySelector('#share')
 
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
-
         const patientHistory = document.querySelectorAll('.patient-history');
         const transferPopup = document.getElementById('transfer-popup');
         for (let i = 0; i < patientHistory.length; i++) {

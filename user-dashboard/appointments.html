@@ -1190,18 +1190,6 @@
 
         resetTimer();
 
-        // Share Message
-        const shareMsg = document.querySelector('.share-message');
-        const crossIcon = document.querySelector('.share-img i');
-        const blockBtn = document.querySelector('#share')
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');

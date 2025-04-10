@@ -1563,18 +1563,6 @@
 
         resetTimer();
 
-        // Share Message
-        const shareMsg = document.querySelector('.share-message');
-        const crossIcon = document.querySelector('.share-img i');
-        const blockBtn = document.querySelector('#share')
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
         document.addEventListener('DOMContentLoaded', function () {
             const shareIcon = document.querySelector('.share-icon');
             const shareDropdown = document.querySelector('.share-dropdown');

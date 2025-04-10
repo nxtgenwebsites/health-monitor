@@ -1291,18 +1291,6 @@
 
         resetTimer();
 
-        // Share Message
-        const shareMsg = document.querySelector('.share-message');
-        const crossIcon = document.querySelector('.share-img i');
-        const blockBtn = document.querySelector('#share')
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
 
         const previewBtn = document.getElementById('preview-button');
 
@@ -1392,15 +1380,6 @@
         pairedCloseBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
-
 
         const dropdown = document.getElementById('complaintDropdown');
         const otherInput = document.getElementById('otherInput');

@@ -1365,18 +1365,6 @@
         resetTimer();
 
         // Share Message
-        const shareMsg = document.querySelector('.share-message');
-        const crossIcon = document.querySelector('.share-img i');
-        const blockBtn = document.querySelector('#share')
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
-
         const previewBtn = document.getElementById('preview-button');
 
 
@@ -1447,13 +1435,6 @@
             pairDevicePopop.classList.add('d-none');
         })
 
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
