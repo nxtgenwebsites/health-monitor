@@ -896,7 +896,7 @@
                             <h4>Grant Access</h4>
                         </a>
                     </div>
-            <div class="user-info mt-3 text-center mt-4">
+            <div class="user-info mt-3 text-center mt-4" id="user-details">
                 <h2>Brandon Peters</h2>
                 <h5>Lagos, Nigeria | Male | June 28, 1985</h5>
             </div>
@@ -914,18 +914,13 @@
                         <h5 class="my-2">How long have you had these symptoms?</h5>
                         <input id="duration" class="form-control text-area" readonly disabled />
                     </div>
-                    <div class="col-12 col-md-6 inp-container">
+                    <div class="col-12 inp-container">
                         <h5 class="my-2">Have you had this symptom before?</h5>
                         <select class="form-select" id="symptoms-dropdown">
                             <option value="" disabled selected>Select</option>
                             <option value="yes" class="form-option">Yes</option>
                             <option value="no" class="form-option">No</option>
                         </select>
-                    </div>
-
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">How long did it last?</h5>
-                        <input type="date" class="form-control symptom-dependent" disabled>
                     </div>
 
                     <div class="col-12 inp-container">
@@ -960,23 +955,18 @@
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">State any medication you are taking.</h5>
-                        <select class="form-select" id="medication-dropdown">
-                            <option value="" disabled selected>Select</option>
-                            <option value="yes" class="form-option">Yes</option>
-                            <option value="no" class="form-option">No</option>
-                        </select>
+                    <textarea placeholder="Write your answer here." class="medication-dependent form-control"></textarea>
                     </div>
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">State any allergies you have.</h5>
-                        <textarea placeholder="Write your answer here." class="medication-dependent form-control"
-                            disabled></textarea>
+                        <textarea placeholder="Write your answer here." class="medication-dependent form-control"></textarea>
                     </div>
 
                     <div class="col-12 inp-container">
                         <h5 class="my-2">Give detail of any illness in the last 4 weeks.</h5>
                         <textarea placeholder="Write your answer here." class="medication-dependent form-control"
-                            disabled></textarea>
+                            ></textarea>
                     </div>
 
                     <div class="col-12 inp-container">
@@ -1009,9 +999,8 @@
                             </div>
                         </div>
                     <div class="col-12 chk-container mt-4">
-                        <h5 class="my-2">In order for healthcare professionals to understand your situation better, it
-                            is advisable to add your last 4 weeks
-                            HealthCentreApp scores with this CareRequest, are you happy for them to be included?</h5>
+                        <h5 class="my-2">In order for healthcare professionals to understand your situation better, it is advisable to add your last 4 weeks
+                        health monitor readings with this CareRequest, are you happy for them to be included?</h5>
                         <div class="d-flex gap-4 mt-4">
                             <div class="form-check mb-0">
                                 <input type="radio" name="remote-care" class="form-check-input" id="yes">
@@ -1255,14 +1244,6 @@
                 });
             });
 
-        document.getElementById("medication-dropdown").addEventListener("change", function () {
-            let isYesSelected = this.value === "yes";
-            let dependentInputs = document.querySelectorAll(".medication-dependent");
-
-            dependentInputs.forEach(input => {
-                input.disabled = !isYesSelected;
-            });
-        });
 
         document.getElementById("symptoms-dropdown").addEventListener("change", function () {
             let isYesSelected = this.value === "yes";
@@ -1337,11 +1318,13 @@
         patientLink.classList.add('d-none');
         normalMonitorsMenu.classList.add('d-none');
         normalMonitorsMobile.classList.add('d-none');
+        document.getElementById('user-details').classList.remove('d-none');
     } else {
         patientDropDown.classList.add('d-none');
         cdhaProfile.classList.add('d-lg-none');
         dhaMonitorsMenu.classList.add('d-none');
         dhaMonitorsMobile.classList.add('d-none');
+        document.getElementById('user-details').classList.add('d-none');
     }
 
         let inactivityTime = 120000;

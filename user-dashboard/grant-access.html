@@ -896,7 +896,8 @@
                     <h4 class="active text-decoration-none">Grant Access</h4>
                 </a>
             </div>
-            <div class="content-container bg-white mt-4 px-3 py-3">
+            <h3 class="text-primary mt-4">The CareRequest Receipient Details</h3>
+            <div class="content-container bg-white mt-3 px-3 py-3">
                 <div>
                     <div class="row">
                         <div class="col-12">
@@ -921,13 +922,17 @@
                         <div class="col-12">
                             <input type="text" class="form-control"  disabled placeholder="Last Name">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-6">
                             <input type="email" class="form-control" disabled  placeholder="Email">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input type="email" class="form-control" disabled  placeholder="Confirm Email">
                         </div>
                         <div class="col-12">
                             <select class="form-select" disabled>
                                 <option selected="" disabled="">Relationship</option>
                                 <option>Self</option>
+                                <option>Carer</option>
                                 <option>Spouse</option>
                                 <option>Child</option>
                                 <option>Parent</option>
@@ -1340,14 +1345,6 @@
         pairedCloseBtn.addEventListener('click', () => {
             pairDevicePopop.classList.add('d-none');
         })
-
-        crossIcon.addEventListener('click', () => {
-            shareMsg.style.display = 'none';
-        });
-
-        blockBtn.addEventListener('click', () => {
-            shareMsg.style.display = 'block';
-        });
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
