@@ -8,7 +8,7 @@ new Chart(ctx, {
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July'],
         datasets: [{
-            data: [60, 120, 20, 200, 60, 180, 160],
+            data: [60, 120, 20, 140, 60, 130, 120],
             borderColor: gradient,
             borderWidth: 2,
             tension: 0.4,
@@ -27,7 +27,7 @@ new Chart(ctx, {
         scales: {
             y: {
                 beginAtZero: true,
-                max: 200,
+                max: 150,
                 ticks: {
                     stepSize: 40
                 },

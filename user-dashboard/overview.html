@@ -943,8 +943,24 @@
                     <div class="col-md-7">
                         <div class="chart-card">
                             <h5 class="card-title mb-4">Weight-BMI</h5>
+                            <div class="bmi-legend">
+                                <div class="filter-group">
+                                    <div class="filter-item">
+                                        <div class="filter-dot weight"></div>
+                                        Weight
+                                    </div>
+                                    <div class="filter-item">
+                                        <div class="filter-dot height"></div>
+                                        Height
+                                    </div>
+                                    <div class="filter-item">
+                                        <div class="filter-dot bmi"></div>
+                                        BMI
+                                    </div>
+                                </div>
+                            </div>
                             <div class="chart-container">
-                                <canvas id="weightChart"></canvas>
+                                <canvas id="bmiChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -954,7 +970,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between w-100 mb-3">
-                                        <h5 class=" card-title">BMI</h5>
+                                        <h5 class=" card-title">Weight-BMI</h5>
                                         <a href="/user-dashboard/bmi.html" class="text-primary small"
                                             style="margin-right: -20px;">View all</a>
                                     </div>
@@ -980,7 +996,15 @@
                     <!-- Weight Chart -->
                     <div class="col-md-7">
                         <div class="chart-card">
-                            <h5 class="mb-3 card-title">Weight-BMI</h5>
+                            <h5 class="mb-3 card-title">Diabetes</h5>
+                            <div class="bmi-legend">
+                                <div class="filter-group">
+                                    <div class="filter-item">
+                                        <div class="filter-dot weight"></div>
+                                        mg/dL
+                                    </div>
+                                </div>
+                            </div>
                             <div class="chart-container">
                                 <canvas id="cholesterolChart"></canvas>
                             </div>
@@ -1957,6 +1981,7 @@
     <script src="js/sidebar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/cholesterol.js"></script>
+    <script src="js/blood-pressure.js"></script>
 </body>
 
 </html>

@@ -1596,3 +1596,28 @@ body {
     display: none;
   }
 }
+
+.threshold-action-btns button {
+  /* display: none !important; */
+    width: 37px;
+    height: 37px;
+    background: #DDF2F9;
+    border: none !important;
+    border-radius: 5px;
+}
+
+.delete-box {
+  max-width: 572px;
+  padding: 40px 30px;
+  z-index: 1000 !important;
+}
+
+.delete-box p{
+  margin-top: 10px;
+}
+
+.delete-box h5 {
+  font-size: 25px;
+  color: #ED4C5C;
+  font-weight: 500;
+}

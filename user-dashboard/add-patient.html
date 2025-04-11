@@ -600,7 +600,8 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified
+                                Associates</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -847,7 +848,8 @@
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
                     </li>
-                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a>
+                    </li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -907,7 +909,7 @@
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12">
                         <select class="form-select">
                             <option selected disabled>Title</option>
                             <option>Mr</option>
@@ -923,6 +925,15 @@
                             <option>Hon</option>
                         </select>
                     </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Middle Name">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Surname">
+                    </div>
                     <div class="col-12 col-md-6">
                         <select class="form-select">
                             <option selected disabled>Gender</option>
@@ -930,21 +941,6 @@
                             <option>Female</option>
                             <option>Other</option>
                         </select>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <input type="text" class="form-control" placeholder="Full Name">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <input type="text" class="form-control" placeholder="Middle  Name">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <input type="text" class="form-control" placeholder="Surname  Name">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <select class="form-select" id="country">
-                            <option selected disabled>Nationality</option>
-                        </select>
-
                     </div>
                     <div class="col-12 col-md-6">
                         <select class="form-select">
@@ -955,9 +951,29 @@
                             <option>Widowed</option>
                         </select>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
                         <input type="text" class="form-control" placeholder="Date of Birth">
                     </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select" id="country">
+                            <option selected disabled>Nationality</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Contact No.">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Confirm Contact No.">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Confirm Email">
+                    </div>
+
+
                     <div class="col-12" id="cdha-relationship">
                         <select class="form-select">
                             <option selected disabled>Relationship</option>
@@ -967,18 +983,6 @@
                             <option>Parent</option>
                             <option>Sibling</option>
                         </select>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="tel" class="form-control" placeholder="Contact No.">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="tel" class="form-control" placeholder="Confirm Contact No.">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Confirm Email">
                     </div>
                     <div class="col-12">
                         <select class="form-select">
@@ -1019,26 +1023,24 @@
                     <div class="col-12">
                         <select class="form-select" id="state-drop-down">
                             <option selected disabled>State</option>
-                            <option>State 1</option>
-                            <option>State 2</option>
                         </select>
                     </div>
                     <div class="col-12">
                         <select class="form-select">
-                            <option selected disabled>City</option>
+                            <option selected disabled>City of Residence</option>
                             <option>City 1</option>
                             <option>City 2</option>
                         </select>
                     </div>
                     <div class="col-12">
                         <select class="form-select">
-                            <option selected disabled>Town</option>
+                            <option selected disabled>Town of Residence</option>
                             <option>Town 1</option>
                             <option>Town 2</option>
                         </select>
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Address">
+                        <input type="text" class="form-control" placeholder="Current Residential Address">
                     </div>
                     <div class="col-12">
                         <button class="btn btn-primary px-4">Next</button>
@@ -1095,8 +1097,11 @@
                             <option>Friend</option>
                         </select>
                     </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" placeholder="Last Name">
                     </div>
                     <div class="col-12">
                         <select class="form-select">
@@ -1276,11 +1281,11 @@
             const id_country_option = document.getElementById("country2");
 
             // Initially disable the state dropdown
-            id_state_option.innerHTML = '<option>select state</option>';
+            id_state_option.innerHTML = '<option>State of Residence</option>';
             id_state_option.setAttribute("disabled", "disabled");
 
             const create_country_selection = () => {
-                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+                let option = '<option value="" selected disabled>Country of Residence</option>'; // Placeholder option
                 for (const country_code in country_list) {
                     option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
                 }
@@ -1320,7 +1325,7 @@
             const id_country_option = document.getElementById("country");
 
             const create_country_selection = () => {
-                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
+                let option = '<option value="" selected disabled>Nationality</option>'; // Placeholder option
                 for (const country_code in country_list) {
                     option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
                 }

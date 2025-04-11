@@ -1645,6 +1645,10 @@ line-height: normal;
     .main-content {
         padding: 16px;
     }
+    .facility-image {
+    width: 100% !important;
+    height: 150px !important;
+    }
 }
 
 /* Facility container styles */

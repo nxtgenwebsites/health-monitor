@@ -2299,3 +2299,38 @@ body {
   /* .stats-card a{
     margin-right: 20px;
   } */
+
+
+  .filter-group {
+  display: flex;
+  justify-content: end;
+  margin: 10px 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.filter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.filter-dot.weight {
+  background: #9333ea;
+}
+
+.filter-dot.height {
+  background: #ec4899;
+}
+
+.filter-dot.bmi {
+  background: #3b82f6;
+}
