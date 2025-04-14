@@ -88,7 +88,7 @@
               <input type="email" placeholder="Email" id="signup-email" required>
             </div>
             <div class="signup-button  text-center mt-4">
-              <a href="/register.html" class="btn primary-btn py-1">Create an account</a>
+              <button id="register-btn" class="btn primary-btn py-1">Create an account</button>
             </div>
           </form>
           <!-- Sigup Form End -->
@@ -192,6 +192,15 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="js/toastr.min.js"></script>
   <script>
+
+
+  document.getElementById('register-btn').addEventListener(('click'), (e) => {
+    e.preventDefault()
+    const signupEmail = document.getElementById('signup-email').value;
+    localStorage.setItem('signupEmail' , signupEmail)
+    location.href = 'register.html'
+  })
+
     const signupForm = document.getElementById('signup-form');
     // signupForm.addEventListener(('submit'), (e) => {
     //   e.preventDefault()

@@ -603,7 +603,7 @@
 #mobileProfileMenu {
   background-color: white !important;
   height: auto;
-  max-height: 600px;
+  max-height: 560px;
   top: 70px !important;
   width: 80%;
   max-width: 300px;
@@ -837,5 +837,8 @@
   font-size: 11px !important;
 }
 #cdha-profile .border-top a{
+  font-size: 11px !important;
+}
+#mobileProfileMenu .border-top a{
   font-size: 11px !important;
 }

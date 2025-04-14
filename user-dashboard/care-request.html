@@ -914,13 +914,18 @@
                         <h5 class="my-2">How long have you had these symptoms?</h5>
                         <input id="duration" class="form-control text-area" readonly disabled />
                     </div>
-                    <div class="col-12 inp-container">
+                    <div class="col-12 col-md-6 inp-container">
                         <h5 class="my-2">Have you had this symptom before?</h5>
                         <select class="form-select" id="symptoms-dropdown">
                             <option value="" disabled selected>Select</option>
                             <option value="yes" class="form-option">Yes</option>
                             <option value="no" class="form-option">No</option>
                         </select>
+                    </div>
+
+                    <div class="col-12 col-md-6 inp-container">
+                        <h5 class="my-2">How long did it last?</h5>
+                        <input type="text" class="form-control symptom-dependent" disabled="">
                     </div>
 
                     <div class="col-12 inp-container">
@@ -954,7 +959,7 @@
                     </div>
 
                     <div class="col-12 inp-container">
-                        <h5 class="my-2">State any medication you are taking.</h5>
+                        <h5 class="my-2">State any medication to State any medication you have?</h5>
                     <textarea placeholder="Write your answer here." class="medication-dependent form-control"></textarea>
                     </div>
 
