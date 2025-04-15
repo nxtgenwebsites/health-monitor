@@ -1396,33 +1396,6 @@
         });
 
 
-        if (window.location.pathname.includes("add-an-appointment.html")) {
-            const isAttended = localStorage.getItem('appointment-attended');
-            if (!isAttended) {
-                localStorage.setItem('appointment-attended', false);
-            }
-
-            // Reset on page unload
-            window.addEventListener('beforeunload', () => {
-                localStorage.setItem('appointment-attended', false);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const isAttended = localStorage.getItem("appointment-attended") === "true";
-            const formElements = document.querySelectorAll("#appointment-form input, #appointment-form select, #appointment-form textarea, #appointment-form button");
-
-            formElements.forEach(element => {
-                if (isAttended) {
-                    element.disabled = true;
-                    element.classList.add("disabled-type");
-                } else {
-                    element.disabled = false;
-                    element.classList.remove("disabled-type");
-                }
-            });
-        });
-
         document.getElementById("date-inp").addEventListener("change", function () {
             let selectedDate = new Date(this.value);
             let currentDate = new Date();
