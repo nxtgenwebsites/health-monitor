@@ -2217,6 +2217,7 @@ body {
     .form-group{
      flex-direction: column;
     }
+
         .multi-select {
         width: 100% !important;
     }
@@ -2258,4 +2259,45 @@ body {
   background: #dc3545 !important;
   padding: 5px 22px;
   color: white !important;
+}
+
+@media (max-width: 991px) {
+  .banner-view-box .container-content{
+    flex-direction: column-reverse !important;
+  }
+  .banner-view-box .row img{
+    width: 130px;
+    margin-top: 20px;
+  }
+  .banner-view-box{
+    height: auto;
+    margin-top: 50%;
+    /* overflow: scroll; */
+  }
+  .preview-overlay{
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+    overflow: scroll;
+  }
+  #preview-banner{
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .sponsor-status{
+    /* display: flex; */
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 991px) {
+    .form-group{
+     flex-direction: column;
+    }
+        .form-group input{
+          width: 100%;
+        }
 }

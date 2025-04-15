@@ -886,7 +886,7 @@
 
             <div class="content-wrapper">
 
-                <div class="patient-info">
+                <div class="patient-info"  id="user-details">
                     Mrs Jones, Female, Engu
                 </div>
 
@@ -938,9 +938,11 @@
                         </div>
 
                         <div class="col-12 col-md-6">
+                            <label class="mb-2">Start Date</label>
                             <input type="date" class="form-control" placeholder="Start Date">
                         </div>
                         <div class="col-12 col-md-6">
+                            <label class="mb-2">End Date</label>
                             <input type="date" class="form-control" placeholder="End Date">
                         </div>
 
@@ -949,15 +951,15 @@
                             <p class="mb-0">When</p>
                             <div class="d-flex gap-4 chk-container">
                                 <div class="form-check mb-0 d-flex justify-content-center align-items-center">
-                                    <input type="radio" class="form-check-input" id="morning">
+                                    <input type="checkbox" class="form-check-input" id="morning">
                                     <label class="form-check-label" for="morning">Morning</label>
                                 </div>
                                 <div class="form-check mb-0 d-flex justify-content-center align-items-center">
-                                    <input type="radio" class="form-check-input" id="afternoon">
+                                    <input type="checkbox" class="form-check-input" id="afternoon">
                                     <label class="form-check-label" for="afternoon">Afternoon</label>
                                 </div>
                                 <div class="form-check mb-0 d-flex justify-content-center align-items-center">
-                                    <input type="radio" class="form-check-input" id="night">
+                                    <input type="checkbox" class="form-check-input" id="night">
                                     <label class="form-check-label" for="night">Night</label>
                                 </div>
                             </div>
@@ -995,24 +997,24 @@
                             <p class="mb-0">With Food</p>
                             <div class="d-flex gap-4 chk-container">
                                 <div class="form-check mb-0 d-flex justify-content-center align-items-center">
-                                    <input type="radio" class="form-check-input" name="anonymous" id="anonYes">
+                                    <input type="checkbox" class="form-check-input" name="anonymous" id="anonYes">
                                     <label class="form-check-label" for="anonYes">Yes</label>
                                 </div>
                                 <div class="form-check mb-0 d-flex justify-content-center align-items-center">
-                                    <input type="radio" class="form-check-input" name="anonymous" id="anonNo">
+                                    <input type="checkbox" class="form-check-input" name="anonymous" id="anonNo">
                                     <label class="form-check-label" for="anonNo">No</label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                             <select class="form-select" id="complaintDropdown">
                                 <option value="" disabled selected>Medication Status</option>
                                 <option value="per_day" class="form-option">Live</option>
                                 <option value="weekly" class="form-option">Stopped</option>
                                 <option value="fortnight" class="form-option">Completed</option>
                             </select>
-                        </div>
+                        </div> -->
 
                         <div class="col-12">
                             <textarea class="form-control" placeholder="Additional Information" rows="4"></textarea>
@@ -1239,6 +1241,21 @@
     </div>
     <!-- Share Message end -->
     <script>
+         const yesCheckbox = document.getElementById('anonYes');
+            const noCheckbox = document.getElementById('anonNo');
+
+            yesCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    noCheckbox.checked = false;
+                }
+            });
+
+            noCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    yesCheckbox.checked = false;
+                }
+            });
+
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
@@ -1263,11 +1280,13 @@
         patientLink.classList.add('d-none');
         normalMonitorsMenu.classList.add('d-none');
         normalMonitorsMobile.classList.add('d-none');
+         document.getElementById('user-details').classList.remove('d-none')
     } else {
         patientDropDown.classList.add('d-none');
         cdhaProfile.classList.add('d-lg-none');
         dhaMonitorsMenu.classList.add('d-none');
         dhaMonitorsMobile.classList.add('d-none');
+         document.getElementById('user-details').classList.add('d-none')
     }
     
 

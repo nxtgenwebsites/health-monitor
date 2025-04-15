@@ -886,7 +886,7 @@
                     
                 </div>
          -->
-                <div class="patient-info">
+                <div class="patient-info" id="user-details">
                     Mrs Jones, Female, Engu
                 </div>
 
@@ -969,43 +969,6 @@
                     </div>
                 </div>
 
-                <div class="appointment-outcomes" id="appointment-outcomes">
-                    <h3 class="mb-4">Appointment's Outcomes</h3>
-
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <select class="form-select" id="howManyTimes">
-                                <option value="" disabled selected>Outcome</option>
-                                <option value="per_day" class="form-option">Cancel</option>
-                                <option value="weekly" class="form-option">Rebooked</option>
-                                <option value="fortnight" class="form-option">Attended</option>
-                                <option value="fortnight" class="form-option">DNA</option>
-
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <select class="form-select" id="howManyTimes">
-                                <option value="" disabled selected>If cancelled</option>
-                                <option value="per_day" class="form-option">By Patient</option>
-                                <option value="weekly" class="form-option">By Attendee</option>
-
-                            </select>
-                        </div>
-
-                        <div class="col-12">
-                            <textarea class="form-control" placeholder="Provided Notes" rows="3"></textarea>
-                        </div>
-
-                        <div class="col-12 d-flex gap-6">
-                            <button class="btn btn-outline upload-btn">
-                                <i class="bi bi-upload me-2"></i>
-                                Upload
-                            </button>
-                            <a class="btn btn-primary mx-3" href="/user-dashboard/appointments.html">Save</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Call Remote Care Popup -->
@@ -1158,11 +1121,13 @@
             patientLink.classList.add('d-none');
             normalMonitorsMenu.classList.add('d-none');
             normalMonitorsMobile.classList.add('d-none');
+                document.getElementById('user-details').classList.remove('d-none')
         } else {
             patientDropDown.classList.add('d-none');
             cdhaProfile.classList.add('d-lg-none');
             dhaMonitorsMenu.classList.add('d-none');
             dhaMonitorsMobile.classList.add('d-none');
+                document.getElementById('user-details').classList.add('d-none')
         }
 
         let inactivityTime = 120000;

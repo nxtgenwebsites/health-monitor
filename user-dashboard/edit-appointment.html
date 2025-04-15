@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCentreApp | Sponsership</title>
+    <title>HealthCentreApp | Add An Appointment</title>
     <link rel="shortcut icon" href="../assets/images/logo loading screen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/sponsorship.css">
+    <link rel="stylesheet" href="css/add-an-appointment.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
-
 </head>
 
 <body>
+    <!-- Header -->
     <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- Mobile Toggle Button -->
@@ -394,7 +395,7 @@
     </div>
 
     <!-- Mobile Profile Menu Offcanvas -->
-    <div class="offcanvas offcanvas-start sidebar-menu" id="sidebar-menu" tabindex="-1"
+    <div class="offcanvas offcanvas-start sidebar-menu " id="sidebar-menu" tabindex="-1"
         style="background-color: white; height: auto; top: 70px; width: 80%; max-width: 300px;" aria-hidden="true">
         <div class="offcanvas-body pb-4">
             <!-- Navigation Links -->
@@ -599,7 +600,8 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified
+                                Associates</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -846,7 +848,8 @@
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
                     </li>
-                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a>
+                    </li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -887,146 +890,132 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <!-- Main Content -->
         <div class="main-content">
-            <div class="container-fluid">
-                <!-- Page Title -->
-                <h4 class="mb-4 text-primary" style="color: #0C75C2 !important;">New Banner Sponsorship</h4>
+            <h2 class="page-title">Add new</h2>
+            <div class="content-wrapper">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-4">
+                    
+                </div>
+         -->
+                <div class="patient-info" id="user-details">
+                    Mrs Jones, Female, Engu
+                </div>
 
-                <!-- Upload Image Section -->
-                <div class="card mb-4 border-0 rounded-3">
-                    <div class="card-body">
-                        <div class="upload-container p-5 bg-light rounded-3 text-center">
-                            <i class="bi bi-cloud-upload fs-1 text-primary mb-3"></i>
-                            <h5>Upload Image</h5>
-                            <input type="file" class="d-none" id="imageUpload">
-                            <label for="imageUpload" class="btn btn-outline-primary mt-3">
-                                Choose File
-                            </label>
+                <div class="appointment-form mb-5" id="appointment-form">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Appointment subject">
+                        </div>
+
+                        <div class="col-12">
+                            <select class="form-select" id="howManyTimes">
+                                <option value="" disabled selected>Appointment Type</option>
+                                <option value="per_day" class="form-option">Location</option>
+                                <option value="weekly" class="form-option">Call</option>
+                                <option value="fortnight" class="form-option">Video Call</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="If location, please add address">
+                        </div>
+
+                        <div class="col-12">
+
+                            <input type="text" class="form-control" placeholder="Reason/Purpose">
+
+                        </div>
+
+                        <div class="col-12">
+                            <select class="form-select" id="howManyTimes">
+                                <option value="" disabled selected>Reoccur</option>
+                                <option value="per_day" class="form-option">No</option>
+                                <option value="weekly" class="form-option">Daily</option>
+                                <option value="fortnight" class="form-option">Weekly</option>
+                                <option value="fortnight" class="form-option">Monthly</option>
+                                <option value="fortnight" class="form-option">Quarterly</option>
+                                <option value="fortnight" class="form-option">Yearly</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-12 keyword-input-container mt-3">
+                            <div class="tags-input d-flex flex-wrap align-items-center">
+                                <div id="keywordsContainer" class="d-flex flex-wrap"></div>
+                                <input type="text" class="form-control tags-input-field w-100" id="keywordField"
+                                    placeholder="Add attendee names" />
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="email" class="form-control" placeholder="Attendee Email">
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="date" class="form-control" id="date-inp">
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="time" class="form-control">
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="time" class="form-control">
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Additional Notes" rows="3"></textarea>
+                        </div>
+
+                        <div class="col-12 d-flex gap-2">
+                            <button class="btn btn-outline upload-btn">
+                                <i class="bi bi-upload me-2"></i>
+                                Upload
+                            </button>
+                            <a class="btn btn-primary" href="/user-dashboard/appointments.html">Save</a>
+                            <a class="btn btn-primary" href="/user-dashboard/appointments.html">Cancel</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Section -->
-                <div class="card mb-4 border-0 rounded-3">
-                    <div class="card-body">
-                        <div class="row g-3 sponsorship-form">
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Target Country</label>
-                                    <select id="country">
-                                        <option value="">Select</option>
-                                    </select>
-                                    <select class="d-none" id="state-drop-down">
-                                        <option value="">Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Select Number of Impression Days</label>
-                                    <input type="number" class="form-control w-100" placeholder="e.g 10">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Start Date</label>
-                                    <input type="date" class="form-control w-100">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">End Date</label>
-                                    <input type="date" class="form-control w-100">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Website (If any)</label>
-                                    <input type="url" class="form-control w-100" placeholder="e.g http//www.abc.com">
-                                </div>
-                            </div>
+                <div class="appointment-outcomes" id="appointment-outcomes">
+                    <h3 class="mb-4">Appointment's Outcomes</h3>
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <select class="form-select" id="howManyTimes">
+                                <option value="" disabled selected>Outcome</option>
+                                <option value="per_day" class="form-option">Cancel</option>
+                                <option value="weekly" class="form-option">Rebooked</option>
+                                <option value="fortnight" class="form-option">Attended</option>
+                                <option value="fortnight" class="form-option">DNA</option>
+
+                            </select>
                         </div>
 
-                    </div>
-                </div>
+                        <div class="col-12">
+                            <select class="form-select" id="howManyTimes">
+                                <option value="" disabled selected>If cancelled</option>
+                                <option value="per_day" class="form-option">By Patient</option>
+                                <option value="weekly" class="form-option">By Attendee</option>
 
-                <!-- Action Buttons -->
-                <div class="d-flex gap-3 btn-container">
-                    <button class="btn action-btn" id="action-preview-btn">Preview</button>
-                </div>
-            </div>
-        </div>
-        <!-- Delete Banner Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="delete-banner">
-            <div class="delete-banner-box bg-white rounded text-center position-relative ">
-                <h5 class="my-3">Delete Sponsor Add?</h5>
-                <p class="my-3">Are you sure you want to delete this sponsor add?</p>
-                <div class="d-flex  gap-4 justify-content-center mt-4">
-                    <button class="btn popup-btn" id="banner-delete-btn">Delete</button>
-                    <button class="btn popup-btn" id="banner-cancel-btn">Cancel</button>
-                </div>
-                <div class="close-btn">
-                    <button class="btn border-0" type="submit" id="delete-close-btn"><img src="assets/icons/close.svg"
-                            alt="close"></button>
-                </div>
-            </div>
-        </div>
-        <!-- Preview Banner Popup -->
-        <div class="popup d-none justify-content-md-center align-items-center" id="preview-banner">
-            <div class="banner-view-box bg-white rounded text-center position-relative ">
-                <div class="row container-content">
-                    <div class="col-md-3">
-                        <img src="assets/add scapper.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-9 preview-content">
-                        <div class="row g-3 sponsorship-form">
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Target Country</label>
-                                    <select id="country2">
-                                        <option value="">Select</option>
-                                    </select>
-                                    <select class="d-none" id="state-drop-down2">
-                                        <option value="">Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Select Number of Impression Days</label>
-                                    <input type="number" class="form-control w-100" value="100">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Start Date</label>
-                                    <input type="date" class="form-control w-100" value="2025-04-09">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">End Date</label>
-                                    <input type="date" class="form-control w-100" value="2025-04-13">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group d-flex">
-                                    <label class="form-label w-100">Website (If any)</label>
-                                    <input type="url" class="form-control w-100" placeholder="www.healthcentreapp">
-                                </div>
-                            </div>
+                            </select>
                         </div>
-                        <div class="">
 
-                            <div class="d-flex gap-3 flex-wrap my-3 w-100">
-                                <a href="sponsorship-payment.html">
-                                    <button class="btn action-btn" id="action-submit-btn">Submit</button>
-                                </a>
-                                <button class="btn action-btn" id="action-save-btn">Save</button>
-                                <button class="btn action-btn" id="action-edit-btn">Edit</button>
-                                <button class="btn" id="action-delete-btn">Delete</button>
-                            </div>
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Outcomes Notes" rows="3"></textarea>
+                        </div>
+
+                        <div class="col-12 d-flex gap-6">
+                            <button class="btn btn-outline upload-btn">
+                                <i class="bi bi-upload me-2"></i>
+                                Upload
+                            </button>
+                            <a class="btn btn-primary mx-3" href="/user-dashboard/appointments.html">Save</a>
                         </div>
                     </div>
                 </div>
@@ -1052,7 +1041,6 @@
                 <h5 class="mt-3">Share My Profile</h5>
                 <div
                     class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
@@ -1139,60 +1127,6 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <h2 class="modal-title fw-bold mb-3"
-                            style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
-                            Alert: Blood Pressure Threshold Exceeded
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
-                            Your blood pressure readings have surpassed the threshold.
-                            <br>
-                            Immediate action is required. Please contact your healthcare
-                            provider or seek medical attention immediately.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
-                            onclick="switchModals()">
-                            Call Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
-            <div class="modal-content border-0 rounded-4"
-                style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
-                <div class="modal-body p-4">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="text-center" style="margin-top: 30px;">
-                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
-                            No Paired Device!
-                        </h2>
-                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
-                            You haven't paired any device to Call your Remote Care DHA.
-                            <br>
-                            Please connect a device to make a call.
-                        </p>
-                        <button class="btn btn-lg px-5 rounded-pill fw-semibold"
-                            style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
-                            data-bs-dismiss="modal">
-                            Go Back
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -1211,151 +1145,8 @@
             </div>
         </div>
     </div>
-    <script src="js/country-states.js"></script>
     <!-- Share Message end -->
     <script>
-        (() => {
-            const country_list = country_and_states.country;
-            const state_list = country_and_states.states;
-
-            const id_state_option = document.getElementById("state-drop-down");
-            const id_country_option = document.getElementById("country");
-
-            // Initially disable the state dropdown
-            id_state_option.innerHTML = '<option>select state</option>';
-            id_state_option.setAttribute("disabled", "disabled");
-
-            const create_country_selection = () => {
-                let option = '<option value="" selected disabled>Select Country</option>'; // Placeholder option
-                for (const country_code in country_list) {
-                    option += '<option value="' + country_code + '">' + country_list[country_code] + '</option>';
-                }
-                id_country_option.innerHTML = option;
-            };
-
-            const create_states_selection = () => {
-                let selected_country_code = id_country_option.value;
-                let state_names = state_list[selected_country_code];
-
-                if (!state_names) {
-                    id_state_option.innerHTML = '<option>select state</option>';
-                    id_state_option.setAttribute("disabled", "disabled");
-                    return;
-                }
-
-                let option = '<option>select state</option>';
-                state_names.forEach(state => {
-                    option += '<option value="' + state.code + '">' + state.name + '</option>';
-                });
-
-                id_state_option.innerHTML = option;
-                id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
-            };
-
-            // Country select change event update state dropdown
-            id_country_option.addEventListener('change', create_states_selection);
-
-            // Initialize country dropdown with placeholder
-            create_country_selection();
-        })();
-    (() => {
-        const country_list = country_and_states.country;
-        const state_list = country_and_states.states;
-
-        const id_state_option = document.getElementById("state-drop-down2");
-        const id_country_option = document.getElementById("country2");
-
-        // Initially disable the state dropdown
-        id_state_option.innerHTML = '<option>select state</option>';
-        id_state_option.setAttribute("disabled", "disabled");
-
-        const create_country_selection = () => {
-            let option = '<option value="" disabled>Select Country</option>'; // Placeholder (not selected)
-            for (const country_code in country_list) {
-                const selected = country_code === "US" ? "selected" : "";
-                option += `<option value="${country_code}" ${selected}>${country_list[country_code]}</option>`;
-            }
-            id_country_option.innerHTML = option;
-        };
-
-        const create_states_selection = () => {
-            let selected_country_code = id_country_option.value;
-            let state_names = state_list[selected_country_code];
-
-            if (!state_names) {
-                id_state_option.innerHTML = '<option>select state</option>';
-                id_state_option.setAttribute("disabled", "disabled");
-                return;
-            }
-
-            let option = '<option>select state</option>';
-            state_names.forEach(state => {
-                option += `<option value="${state.code}">${state.name}</option>`;
-            });
-
-            id_state_option.innerHTML = option;
-            id_state_option.removeAttribute("disabled"); // Enable dropdown when country is selected
-        };
-
-        // Country select change event updates state dropdown
-        id_country_option.addEventListener('change', create_states_selection);
-
-        // Initialize country dropdown with placeholder and pre-select USA
-        create_country_selection();
-        create_states_selection(); // Automatically load states for the default selected country (USA)
-    })();
-
-        const previewBtn = document.getElementById('action-preview-btn');
-        const previewBanner = document.getElementById('preview-banner');
-        const deleteBanner = document.getElementById('delete-banner');
-        const saveBtn = document.getElementById('action-save-btn');
-        const editBtn = document.getElementById('action-edit-btn');
-        const deleteBtn = document.getElementById('action-delete-btn');
-        const bannerDeleteBtn = document.getElementById('banner-delete-btn');
-        const bannerCancelBtn = document.getElementById('banner-cancel-btn');
-        const bannerCloseBtn = document.getElementById('delete-close-btn');
-
-        bannerDeleteBtn.addEventListener(('click'), () => {
-            deleteBanner.classList.add('d-none')
-        })
-
-        bannerCloseBtn.addEventListener(('click'), () => {
-            deleteBanner.classList.add('d-none')
-        })
-
-        bannerCancelBtn.addEventListener(('click'), () => {
-            deleteBanner.classList.add('d-none')
-        })
-
-        deleteBtn.addEventListener(('click'), () => {
-            deleteBanner.classList.remove('d-none')
-            previewBanner.classList.add('d-none')
-        })
-
-        saveBtn.addEventListener(('click'), () => {
-            previewBanner.classList.add('d-none')
-        })
-
-        editBtn.addEventListener(('click'), () => {
-            previewBanner.classList.add('d-none')
-        })
-
-        previewBtn.addEventListener(('click'), () => {
-            previewBanner.classList.remove('d-none')
-        })
-
-        deleteBanner.addEventListener(('click'), (e) => {
-            if (e.target === deleteBanner) {
-                deleteBanner.classList.add('d-none')
-            }
-        })
-
-        previewBanner.addEventListener(('click'), (e) => {
-            if (e.target === previewBanner) {
-                previewBanner.classList.add('d-none')
-            }
-        })
-
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
@@ -1379,12 +1170,14 @@
             userProfile.classList.add('d-lg-none');
             patientLink.classList.add('d-none');
             normalMonitorsMenu.classList.add('d-none');
+            document.getElementById('user-details').classList.remove('d-none')
             normalMonitorsMobile.classList.add('d-none');
         } else {
             patientDropDown.classList.add('d-none');
             cdhaProfile.classList.add('d-lg-none');
             dhaMonitorsMenu.classList.add('d-none');
             dhaMonitorsMobile.classList.add('d-none');
+            document.getElementById('user-details').classList.add('d-none')
         }
 
         let inactivityTime = 120000;
@@ -1407,11 +1200,153 @@
 
         resetTimer();
 
+        // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
 
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
+
+        const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const pairDevicePopop = document.getElementById('paired-device-popup');
+        const pairedBackBtn = document.getElementById('paired-black-btn');
+        const pairedCloseBtn = document.getElementById('paired-close-btn');
+
+        const shareProfilePopup = document.getElementById('share-profile-popup');
+        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const ProfileCloseBtn = document.getElementById('profile-close-btn');
+
+
+        ProfileCloseBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.toggle('d-none')
+        })
+
+        shareProfileBtn.addEventListener('click', () => {
+            shareProfilePopup.classList.remove('d-none');
+            shareProfilePopup.classList.add('d-flex');
+        })
+
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
+
+
+        document.querySelectorAll('.upload-btn').forEach((btn, index) => {
+            btn.insertAdjacentHTML('beforebegin', `
+    <input type="file" id="fileInput${index}" class="d-none" multiple>
+    <div id="filesList${index}" class="mb-3"></div>
+  `);
+        });
+
+        // Initialize the file upload functionality
+        const initFileUpload = () => {
+            const uploadButtons = document.querySelectorAll('.upload-btn');
+            const fileStates = new Map(); // Store files for each upload button
+
+            uploadButtons.forEach((uploadBtn, index) => {
+                const fileInput = document.getElementById(`fileInput${index}`);
+                const filesList = document.getElementById(`filesList${index}`);
+                fileStates.set(index, []); // Initialize empty files array for this button
+
+                // Handle click on upload button
+                uploadBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fileInput.click();
+                });
+
+                // Handle file selection
+                fileInput.addEventListener('change', (e) => {
+                    const newFiles = Array.from(e.target.files);
+                    const currentFiles = fileStates.get(index);
+                    fileStates.set(index, [...currentFiles, ...newFiles]);
+                    displayFiles(index);
+                });
+
+                // Display selected files for this upload button
+                const displayFiles = (btnIndex) => {
+                    const filesListElement = document.getElementById(`filesList${btnIndex}`);
+                    const files = fileStates.get(btnIndex);
+                    filesListElement.innerHTML = '';
+
+                    files.forEach((file, fileIndex) => {
+                        const fileElement = document.createElement('div');
+                        fileElement.className = 'alert alert-light d-flex align-items-center justify-content-between mb-2';
+                        fileElement.innerHTML = `
+          <div class="d-flex align-items-center">
+            <i class="bi ${getFileIcon(file.type)} me-2"></i>
+            <span>${file.name}</span>
+          </div>
+          <button type="button" class="btn-close" data-btn-index="${btnIndex}" data-file-index="${fileIndex}" aria-label="Close"></button>
+        `;
+                        filesListElement.appendChild(fileElement);
+
+                        // Add remove button handler
+                        fileElement.querySelector('.btn-close').addEventListener('click', function () {
+                            const btnIndex = parseInt(this.getAttribute('data-btn-index'));
+                            const fileIndex = parseInt(this.getAttribute('data-file-index'));
+                            const currentFiles = fileStates.get(btnIndex);
+                            const updatedFiles = currentFiles.filter((_, i) => i !== fileIndex);
+                            fileStates.set(btnIndex, updatedFiles);
+                            displayFiles(btnIndex);
+                        });
+                    });
+                };
+            });
+
+            // Helper function to get appropriate icon based on file type
+            const getFileIcon = (fileType) => {
+                if (fileType.startsWith('image/')) {
+                    return 'bi-file-image';
+                } else if (fileType.startsWith('application/pdf')) {
+                    return 'bi-file-pdf';
+                } else if (fileType.startsWith('text/')) {
+                    return 'bi-file-text';
+                } else {
+                    return 'bi-file-earmark';
+                }
+            };
+
+            // Function to get all selected files for a specific upload button
+            const getSelectedFiles = (buttonIndex) => {
+                return fileStates.get(buttonIndex) || [];
+            };
+
+            // Function to get files from all upload buttons
+            const getAllSelectedFiles = () => {
+                const allFiles = {};
+                fileStates.forEach((files, index) => {
+                    allFiles[`uploadButton${index}`] = files;
+                });
+                return allFiles;
+            };
+
+            // Add to window object for external access
+            window.getSelectedFiles = getSelectedFiles;
+            window.getAllSelectedFiles = getAllSelectedFiles;
+        };
+
+        // Initialize when document is ready
+        document.addEventListener('DOMContentLoaded', initFileUpload);
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
+            if (dropdownMenu) {
+                dropdownMenu.classList.add("show");
+            }
+
+            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
+            if (arrowIcon) {
+                arrowIcon.style.transform = "rotate(90deg)";
+            }
+        });
 
         const addImg = document.getElementById('add-1-img');
         const addImgPupup = document.getElementById('add-1-popup');
         const addImgClose = document.getElementById('add-close-btn');
+
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1427,261 +1362,75 @@
             addImgPupup.classList.add('d-none')
         })
 
-        // Country Drop Down  
-        class MultiSelect {
+        document.addEventListener("DOMContentLoaded", () => {
+            const keywordField = document.getElementById("keywordField");
+            const keywordsContainer = document.getElementById("keywordsContainer");
+            const keywords = [];
 
-            constructor(element, options = {}) {
-                let defaults = {
-                    placeholder: 'Select item(s)',
-                    max: null,
-                    search: true,
-                    selectAll: true,
-                    listAll: true,
-                    closeListOnItemSelect: false,
-                    name: '',
-                    width: '',
-                    height: '',
-                    dropdownWidth: '',
-                    dropdownHeight: '',
-                    data: [],
-                    onChange: function () { },
-                    onSelect: function () { },
-                    onUnselect: function () { }
-                };
-                this.options = Object.assign(defaults, options);
-                this.selectElement = typeof element === 'string' ? document.querySelector(element) : element;
-                for (const prop in this.selectElement.dataset) {
-                    if (this.options[prop] !== undefined) {
-                        this.options[prop] = this.selectElement.dataset[prop];
+            keywordField.addEventListener("keydown", (event) => {
+                const keyword = keywordField.value.trim();
+
+                // Add keyword on Enter or comma
+                if ((event.key === "Enter" || event.key === ",") && keyword) {
+                    event.preventDefault();
+                    if (!keywords.includes(keyword)) {
+                        addKeyword(keyword);
+                        keywordField.value = "";
                     }
                 }
-                this.name = this.selectElement.getAttribute('name') ? this.selectElement.getAttribute('name') : 'multi-select-' + Math.floor(Math.random() * 1000000);
-                if (!this.options.data.length) {
-                    let options = this.selectElement.querySelectorAll('option');
-                    for (let i = 0; i < options.length; i++) {
-                        this.options.data.push({
-                            value: options[i].value,
-                            text: options[i].innerHTML,
-                            selected: options[i].selected,
-                            html: options[i].getAttribute('data-html')
-                        });
-                    }
+
+                // Remove the last keyword on Backspace if input is empty
+                if (event.key === "Backspace" && !keyword) {
+                    event.preventDefault();
+                    removeLastKeyword();
                 }
-                this.element = this._template();
-                this.selectElement.replaceWith(this.element);
-                this._updateSelected();
-                this._eventHandlers();
+            });
+
+            function addKeyword(keyword) {
+                keywords.push(keyword);
+                renderKeywords();
             }
 
-            _template() {
-                let optionsHTML = '';
-                for (let i = 0; i < this.data.length; i++) {
-                    optionsHTML += `
-                <div class="multi-select-option${this.selectedValues.includes(this.data[i].value) ? ' multi-select-selected' : ''}" data-value="${this.data[i].value}">
-                    <span class="multi-select-option-radio"></span>
-                    <span class="multi-select-option-text">${this.data[i].html ? this.data[i].html : this.data[i].text}</span>
-                </div>
-            `;
-                }
-                let selectAllHTML = '';
-                if (this.options.selectAll === true || this.options.selectAll === 'true') {
-                    selectAllHTML = `<div class="multi-select-all">
-                <span class="multi-select-option-radio"></span>
-                <span class="multi-select-option-text">Select all</span>
-            </div>`;
-                }
-                let template = `
-            <div class="multi-select ${this.name}"${this.selectElement.id ? ' id="' + this.selectElement.id + '"' : ''} style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
-                ${this.selectedValues.map(value => `<input type="hidden" name="${this.name}[]" value="${value}">`).join('')}
-                <div class="multi-select-header" style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
-                    <span class="multi-select-header-max">${this.options.max ? this.selectedValues.length + '/' + this.options.max : ''}</span>
-                    <span class="multi-select-header-placeholder">${this.placeholder}</span>
-                </div>
-                <div class="multi-select-options" style="${this.options.dropdownWidth ? 'width:' + this.options.dropdownWidth + ';' : ''}${this.options.dropdownHeight ? 'height:' + this.options.dropdownHeight + ';' : ''}">
-                    ${this.options.search === true || this.options.search === 'true' ? '<input type="text" class="multi-select-search" placeholder="Search...">' : ''}
-                    ${selectAllHTML}
-                    ${optionsHTML}
-                </div>
-            </div>
-        `;
-                let element = document.createElement('div');
-                element.innerHTML = template;
-                return element;
+            function removeKeyword(index) {
+                keywords.splice(index, 1);
+                renderKeywords();
             }
 
-            _eventHandlers() {
-                let headerElement = this.element.querySelector('.multi-select-header');
-                this.element.querySelectorAll('.multi-select-option').forEach(option => {
-                    option.onclick = () => {
-                        let selected = true;
-                        if (!option.classList.contains('multi-select-selected')) {
-                            if (this.options.max && this.selectedValues.length >= this.options.max) {
-                                return;
-                            }
-                            option.classList.add('multi-select-selected');
-                            if (this.options.listAll === true || this.options.listAll === 'true') {
-                                if (this.element.querySelector('.multi-select-header-option')) {
-                                    let opt = Array.from(this.element.querySelectorAll('.multi-select-header-option')).pop();
-                                    opt.insertAdjacentHTML('afterend', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
-                                } else {
-                                    headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
-                                }
-                            }
-                            this.element.querySelector('.multi-select').insertAdjacentHTML('afterbegin', `<input type="hidden" name="${this.name}[]" value="${option.dataset.value}">`);
-                            this.data.filter(data => data.value == option.dataset.value)[0].selected = true;
-                        } else {
-                            option.classList.remove('multi-select-selected');
-                            this.element.querySelectorAll('.multi-select-header-option').forEach(headerOption => headerOption.dataset.value == option.dataset.value ? headerOption.remove() : '');
-                            this.element.querySelector(`input[value="${option.dataset.value}"]`).remove();
-                            this.data.filter(data => data.value == option.dataset.value)[0].selected = false;
-                            selected = false;
-                        }
-                        if (this.options.listAll === false || this.options.listAll === 'false') {
-                            if (this.element.querySelector('.multi-select-header-option')) {
-                                this.element.querySelector('.multi-select-header-option').remove();
-                            }
-                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
-                        }
-                        if (!this.element.querySelector('.multi-select-header-option')) {
-                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
-                        } else if (this.element.querySelector('.multi-select-header-placeholder')) {
-                            this.element.querySelector('.multi-select-header-placeholder').remove();
-                        }
-                        if (this.options.max) {
-                            this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
-                        }
-                        if (this.options.search === true || this.options.search === 'true') {
-                            this.element.querySelector('.multi-select-search').value = '';
-                        }
-                        this.element.querySelectorAll('.multi-select-option').forEach(option => option.style.display = 'flex');
-                        if (this.options.closeListOnItemSelect === true || this.options.closeListOnItemSelect === 'true') {
-                            headerElement.classList.remove('multi-select-header-active');
-                        }
-                        this.options.onChange(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
-                        if (selected) {
-                            this.options.onSelect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
-                        } else {
-                            this.options.onUnselect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
-                        }
-                    };
+            function removeLastKeyword() {
+                if (keywords.length > 0) {
+                    keywords.pop();
+                    renderKeywords();
+                }
+            }
+
+            function renderKeywords() {
+                keywordsContainer.innerHTML = ""; // Clear the container before re-rendering
+                keywords.forEach((keyword, index) => {
+                    const keywordTag = document.createElement("div");
+                    keywordTag.classList.add(
+                        "keyword-tag",
+                        "d-flex",
+                        "align-items-center",
+                        "p-2",
+                        "bg-light",
+                        "rounded"
+                    );
+                    keywordTag.innerHTML = `
+        <span>${keyword}</span>
+      `;
+                    keywordsContainer.appendChild(keywordTag);
                 });
-                headerElement.onclick = () => headerElement.classList.toggle('multi-select-header-active');
-                if (this.options.search === true || this.options.search === 'true') {
-                    let search = this.element.querySelector('.multi-select-search');
-                    search.oninput = () => {
-                        this.element.querySelectorAll('.multi-select-option').forEach(option => {
-                            option.style.display = option.querySelector('.multi-select-option-text').innerHTML.toLowerCase().indexOf(search.value.toLowerCase()) > -1 ? 'flex' : 'none';
-                        });
-                    };
-                }
-                if (this.options.selectAll === true || this.options.selectAll === 'true') {
-                    let selectAllButton = this.element.querySelector('.multi-select-all');
-                    selectAllButton.onclick = () => {
-                        let allSelected = selectAllButton.classList.contains('multi-select-selected');
-                        this.element.querySelectorAll('.multi-select-option').forEach(option => {
-                            let dataItem = this.data.find(data => data.value == option.dataset.value);
-                            // if (dataItem && ((allSelected && dataItem.selected) || (!allSelected && !dataItem.selected))) {
-                            //     option.click();
-                            // }
-                        });
-                        selectAllButton.classList.toggle('multi-select-selected');
-                    };
-                }
-                if (this.selectElement.id && document.querySelector('label[for="' + this.selectElement.id + '"]')) {
-                    document.querySelector('label[for="' + this.selectElement.id + '"]').onclick = () => {
-                        headerElement.classList.toggle('multi-select-header-active');
-                    };
-                }
-                document.addEventListener('click', event => {
-                    if (!event.target.closest('.' + this.name) && !event.target.closest('label[for="' + this.selectElement.id + '"]')) {
-                        headerElement.classList.remove('multi-select-header-active');
-                    }
-                });
-            }
 
-            _updateSelected() {
-                if (this.options.listAll === true || this.options.listAll === 'true') {
-                    this.element.querySelectorAll('.multi-select-option').forEach(option => {
-                        if (option.classList.contains('multi-select-selected')) {
-                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
-                        }
+                // Attach event listeners to the remove buttons
+                const removeButtons = keywordsContainer.querySelectorAll(".btn-close");
+                removeButtons.forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.getAttribute("data-index");
+                        removeKeyword(index);
                     });
-                } else {
-                    if (this.selectedValues.length > 0) {
-                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
-                    }
-                }
-                if (this.element.querySelector('.multi-select-header-option')) {
-                    this.element.querySelector('.multi-select-header-placeholder').remove();
-                }
+                });
             }
-
-            get selectedValues() {
-                return this.data.filter(data => data.selected).map(data => data.value);
-            }
-
-            get selectedItems() {
-                return this.data.filter(data => data.selected);
-            }
-
-            set data(value) {
-                this.options.data = value;
-            }
-
-            get data() {
-                return this.options.data;
-            }
-
-            set selectElement(value) {
-                this.options.selectElement = value;
-            }
-
-            get selectElement() {
-                return this.options.selectElement;
-            }
-
-            set element(value) {
-                this.options.element = value;
-            }
-
-            get element() {
-                return this.options.element;
-            }
-
-            set placeholder(value) {
-                this.options.placeholder = value;
-            }
-
-            get placeholder() {
-                return this.options.placeholder;
-            }
-
-            set name(value) {
-                this.options.name = value;
-            }
-
-            get name() {
-                return this.options.name;
-            }
-
-            set width(value) {
-                this.options.width = value;
-            }
-
-            get width() {
-                return this.options.width;
-            }
-
-            set height(value) {
-                this.options.height = value;
-            }
-
-            get height() {
-                return this.options.height;
-            }
-
-        }
-        document.querySelectorAll('[data-multi-select]').forEach(select => new MultiSelect(select));
+        });
 
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
@@ -1695,9 +1444,55 @@
             document.body.removeChild(tempInput);
             alert("Link copied to clipboard.");
         });
+
+
+        if (window.location.pathname.includes("add-an-appointment.html")) {
+            const isAttended = localStorage.getItem('appointment-attended');
+            if (!isAttended) {
+                localStorage.setItem('appointment-attended', false);
+            }
+
+            // Reset on page unload
+            window.addEventListener('beforeunload', () => {
+                localStorage.setItem('appointment-attended', false);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const isAttended = localStorage.getItem("appointment-attended") === "true";
+            const formElements = document.querySelectorAll("#appointment-form input, #appointment-form select, #appointment-form textarea, #appointment-form button");
+
+            formElements.forEach(element => {
+                if (isAttended) {
+                    element.disabled = true;
+                    element.classList.add("disabled-type");
+                } else {
+                    element.disabled = false;
+                    element.classList.remove("disabled-type");
+                }
+            });
+        });
+
+        document.getElementById("date-inp").addEventListener("change", function () {
+            let selectedDate = new Date(this.value);
+            let currentDate = new Date();
+
+            selectedDate.setHours(0, 0, 0, 0);
+            currentDate.setHours(0, 0, 0, 0);
+
+            if (selectedDate < currentDate) {
+                alert("Past dates cannot be selected.");
+                this.value = "";
+            }
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </body>
 
 </html>

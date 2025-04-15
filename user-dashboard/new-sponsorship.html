@@ -599,7 +599,8 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified
+                                Associates</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -846,7 +847,8 @@
                 <ul class="custom-bullets">
                     <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
                     </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a></li>
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Associates</a>
+                    </li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Tech Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -954,69 +956,70 @@
             </div>
         </div>
         <!-- Preview Popup -->
-                <div class="preview-overlay" id="previewOverlay">
-                    <div class="banner-view-box bg-white rounded text-center position-relative ">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="assets/add scapper.png" class="img-fluid" alt="">
+        <div class="preview-overlay" id="previewOverlay">
+
+            <div class="banner-view-box bg-white rounded text-center position-relative ">
+                <div class="row container-content">
+                    <div class="col-lg-3">
+                        <img src="assets/add scapper.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-9 preview-content">
+                        <div class="row g-3 sponsorship-form">
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Target Country</label>
+                                    <select id="country2">
+                                        <option value="">Select</option>
+                                    </select>
+                                    <select class="d-none" id="state-drop-down2">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
                             </div>
-                            
-                            <div class="col-md-9 preview-content">
-                                <div class="row g-3 sponsorship-form">
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">Target Country</label>
-                                            <select id="country2">
-                                                <option value="">Select</option>
-                                            </select>
-                                            <select class="d-none" id="state-drop-down2">
-                                                <option value="">Select</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">Select Number of Impression Days</label>
-                                            <input type="number" class="form-control w-100" value="100">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">Start Date</label>
-                                            <input type="date" class="form-control w-100" value="2025-04-09">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">End Date</label>
-                                            <input type="date" class="form-control w-100" value="2025-04-13">
-                                        </div>
-                                    </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Select Number of Impression Days</label>
+                                    <input type="number" class="form-control w-100" value="100">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">Start Date</label>
+                                    <input type="date" class="form-control w-100" value="2025-04-09">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex">
+                                    <label class="form-label w-100">End Date</label>
+                                    <input type="date" class="form-control w-100" value="2025-04-13">
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="form-group d-flex">
                                     <label class="form-label w-100">Website (If any)</label>
                                     <input type="url" class="form-control w-100" placeholder="www.healthcentreapp">
                                 </div>
                             </div>
-                                    <div class="col-12">
-                                        <div class="form-group d-flex">
-                                            <label class="form-label w-100">Status</label>
-                                            <button class="btn status-btn">LIVE</button>
-                                        </div>
-                                    </div>
+                            <div class="col-12">
+                                <div class="form-group d-flex sponsor-status">
+                                    <label class="form-label w-100">Status</label>
+                                    <button class="btn status-btn">LIVE</button>
                                 </div>
-                                <div class="">
-                                    <div class="d-flex gap-3 flex-wrap my-3 w-100">
-                                        <button class="btn action-btn" id="cancel-preview">Cancel</button>
-                                        <a href="add-sponsorship.html">
-                                            <button class="btn action-btn" id="action-edit-btn">Edit</button>
-                                        </a>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="d-flex gap-3 flex-wrap my-3 w-100">
+                                <button class="btn action-btn" id="cancel-preview">Cancel</button>
+                                <a href="add-sponsorship.html">
+                                    <button class="btn action-btn" id="action-edit-btn">Edit</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
@@ -1210,32 +1213,32 @@
 
 
         // Get DOM elements
-    const previewOverlay = document.getElementById('previewOverlay');
-    const sponsorCards = document.querySelectorAll('.sponsor-card:not(.create-card)');
-    const statusButton = document.querySelector('#previewOverlay .btn.status-btn'); // LIVE status button
-    const editButton = document.getElementById('action-edit-btn'); // Edit button
+        const previewOverlay = document.getElementById('previewOverlay');
+        const sponsorCards = document.querySelectorAll('.sponsor-card:not(.create-card)');
+        const statusButton = document.querySelector('#previewOverlay .btn.status-btn'); // LIVE status button
+        const editButton = document.getElementById('action-edit-btn'); // Edit button
 
-    sponsorCards.forEach(card => {
-        card.addEventListener('click', function () {
-            // Get the status from attribute
-            const status = card.getAttribute('preview-status') || 'Pending';
+        sponsorCards.forEach(card => {
+            card.addEventListener('click', function () {
+                // Get the status from attribute
+                const status = card.getAttribute('preview-status') || 'Pending';
 
-            // Set status text in popup
-            statusButton.textContent = status.toUpperCase();
+                // Set status text in popup
+                statusButton.textContent = status.toUpperCase();
 
-            // Optional: Set class for styling like LIVE, EXPIRED, etc.
-            statusButton.className = 'btn '; // reset classes
-             statusButton.classList.add(`preview-status-${status.toLowerCase() }`);
-            if (status.toLowerCase() === 'expired') {
-                editButton.style.display = 'none'; // Hide Edit button
-            } else {
-                editButton.style.display = 'inline-block'; // Show Edit button
-            }
+                // Optional: Set class for styling like LIVE, EXPIRED, etc.
+                statusButton.className = 'btn '; // reset classes
+                statusButton.classList.add(`preview-status-${status.toLowerCase()}`);
+                if (status.toLowerCase() === 'expired') {
+                    editButton.style.display = 'none'; // Hide Edit button
+                } else {
+                    editButton.style.display = 'inline-block'; // Show Edit button
+                }
 
-            // Show the preview overlay
-            previewOverlay.classList.add('active');
+                // Show the preview overlay
+                previewOverlay.classList.add('active');
+            });
         });
-    });
 
 
         // Close preview when clicking the close button
@@ -1325,7 +1328,7 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
-        
+
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 

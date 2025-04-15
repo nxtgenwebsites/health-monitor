@@ -1297,9 +1297,13 @@ transition: background-color 0.3s ease;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 12px;
     }
+  
+.filter-btn {
+  width: 110px !important;
+}
 
     .patient-info {
         font-size: 14px;
@@ -1351,6 +1355,17 @@ transition: background-color 0.3s ease;
         width: 100%;
         text-align: center;
     }
+}
+
+@media (max-width: 992px) {
+  .time-filter {
+    padding: 0;
+  }
+  .calender-btn button {
+    /* margin-top: 5px; */
+    padding: 4px 8px;
+    border: 2px solid #bfbfbf !important;
+  }
 }
 
 /* History section styles */
@@ -2004,11 +2019,7 @@ color: white;
     width: 350px !important;
     height: 200px  !important;
   }
-  .time-filter {
-    display: none;
-    /* width: auto; */
 
-  }
 }
 
 @media (max-width: 425px) {
@@ -2018,6 +2029,13 @@ color: white;
   }
 }
 
+@media (max-width: 1024px) {
+.history-table-container{
+    width: 100%;
+    overflow-x: scroll !important;
+     -webkit-overflow-scrolling: touch;
+}
+}
 @media (max-width: 350px) {
   #cholesterolChart{
     width: 290px !important;
@@ -2027,8 +2045,6 @@ color: white;
 
 .history-table-container{
     width: 100%;
-    overflow-x: scroll;
-     -webkit-overflow-scrolling: touch;
 }
 .history-table{
     width: 750px !important;
@@ -2277,4 +2293,37 @@ color: white;
 
 .add-threshold-btn i{
   color: #0b6fc0;
+}
+  .filter-group {
+  display: flex;
+  justify-content: end;
+  margin: 10px 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.filter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.filter-dot.weight {
+  background: #9333ea;
+}
+
+.filter-dot.height {
+  background: #ec4899;
+}
+
+.filter-dot.bmi {
+  background: #3b82f6;
 }

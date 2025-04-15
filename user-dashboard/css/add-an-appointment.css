@@ -1326,6 +1326,11 @@ textarea.form-control {
         padding: 16px;
     }
 
+    .btn-primary, .upload-btn, .btn-outline-secondary {
+        width: auto !important;
+        height: auto !important;
+    }
+
     .content-wrapper {
         padding: 16px;
     }

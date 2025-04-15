@@ -814,6 +814,10 @@ transition: background-color 0.3s ease;
         padding: 0 16px;
     }
 
+.ad-container img{
+    margin: auto !important;
+}
+
     .logo {
         width: 80px;
         height: auto;

@@ -767,6 +767,18 @@ textarea.form-control {
 }
 
 /* Responsive Styles */
+@media (max-width: 768px) {
+  .btn-primary {
+  width: auto !important;
+}
+.btn-preview,
+.btn-outline-secondary,
+.btn-primary {
+  width: auto !important;
+  padding: 8px 20px !important;
+
+}
+}
 @media (max-width: 991px) {
   .header {
     height: 70px;

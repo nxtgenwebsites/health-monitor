@@ -1595,7 +1595,7 @@ a {
 
   /* Header responsive fixes */
   .d-flex.justify-content-between.align-items-center {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 16px;
   }
 

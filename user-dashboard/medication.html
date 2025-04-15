@@ -866,8 +866,8 @@
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
         <!-- Main Content -->
-        <div class="main-content">
-            <div class="content-wrapper">
+        <div class="main-content w-100">
+            <div class="content-wrapper w-100">
                 <div class="page-header">
                     <h1 class="page-title">Medications</h1>
                     <div>
@@ -1266,16 +1266,22 @@
         document.addEventListener('DOMContentLoaded', function () {
             const previewBtns = document.querySelectorAll('.complete-preview');
 
+            // const previewBtns = document.querySelectorAll('.preview-btn');
+
             previewBtns.forEach(btn => {
                 btn.addEventListener('click', function () {
                     const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
                     previewModal.show();
-                    localStorage.setItem('madication-complete', true)
+
                     const medicationName = btn.querySelector("td")?.textContent.trim();
                     const modalTitle = document.querySelector('.preview-title');
                     modalTitle.textContent = `${medicationName} - Completed`;
+
+                    // ✅ Save single value: true (overwrite)
+                    localStorage.setItem('medication-complete', true);
                 });
             });
+
         });
 
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');

@@ -1736,8 +1736,13 @@ h2 {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
+
+  
+.filter-btn {
+  width: 110px;
+}
 
   .patient-info {
     font-size: 14px;
@@ -2325,8 +2330,8 @@ canvas {
     padding: 0;
   }
   .calender-btn button {
-    margin-top: 5px;
-    padding: 4px 10px;
+    /* margin-top: 5px; */
+    padding: 4px 8px;
     border: 2px solid #bfbfbf !important;
   }
 }

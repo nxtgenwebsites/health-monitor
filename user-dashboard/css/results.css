@@ -1354,14 +1354,16 @@ a {
   }
 
   .header-container {
-    flex-direction: column;
     gap: 16px;
     margin-bottom: 20px;
     align-items: flex-start;
   }
 
   .add-new-btn {
-    width: 100%;
+    /* width: 100%; */      
+      min-height: auto !important;
+      padding: 6px 20px !important;
+
   }
 
   .ad-container {

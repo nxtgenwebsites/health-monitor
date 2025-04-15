@@ -1298,3 +1298,20 @@ a {
         font-size: 14px !important;
         margin-top: 5px;
     }
+
+    @media (max-width: 500px) {
+         small{
+            font-size: 12px;
+        }
+        .notes p{
+            text-align: left !important;
+        }
+        .notes-content .notes-text{
+            /* display: none; */
+            text-align: left !important;
+        }
+        .other-details-content{
+            /* display: none; */
+            text-align: left !important;
+        }
+    }
