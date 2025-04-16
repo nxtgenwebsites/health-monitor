@@ -1125,6 +1125,11 @@ a {
   display: inline-block;
 }
 
+.status-badge.red-active {
+  background: var(--container-fill, #ff9999);
+  color: #c20c0c;
+}
+
 .status-badge.active {
   background: var(--container-fill, #ddf2f9);
   color: #0c75c2;
@@ -1974,4 +1979,13 @@ a {
 
 .medication-row {
   cursor: pointer;
+}
+
+.miss-doses-box{
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+.miss-doses-box h4{
+  color: #dc2626;
 }

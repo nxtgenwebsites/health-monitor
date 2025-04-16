@@ -2007,7 +2007,8 @@ textarea.form-control {
 }
 
 .view-box {
-  width: 200px;
+  width: 100%;
+  cursor: pointer;
   height: 100px;
   display: flex;
   justify-content: center;
