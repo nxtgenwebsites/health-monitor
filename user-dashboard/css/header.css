@@ -834,11 +834,14 @@
 }
 
 #user-profile .border-top a{
-  font-size: 11px !important;
+  font-size: 14px !important;
+  text-align: center;
 }
 #cdha-profile .border-top a{
-  font-size: 11px !important;
+  font-size: 14px !important;
+  text-align: center;
 }
 #mobileProfileMenu .border-top a{
-  font-size: 11px !important;
+  font-size: 14px !important;
+  text-align: center;
 }
