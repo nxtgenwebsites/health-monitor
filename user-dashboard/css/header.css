@@ -836,12 +836,24 @@
 #user-profile .border-top a{
   font-size: 14px !important;
   text-align: center;
+  background: #0b6fc0;
+  font-weight: normal !important;
+  color: white !important;
+  border-radius: 8px !important;
 }
 #cdha-profile .border-top a{
   font-size: 14px !important;
   text-align: center;
+  background: #0b6fc0;
+  font-weight: normal !important;
+  color: white !important;
+  border-radius: 8px !important;
 }
 #mobileProfileMenu .border-top a{
   font-size: 14px !important;
   text-align: center;
+  background: #0b6fc0;
+  font-weight: normal !important;
+  color: white !important;
+  border-radius: 8px !important;
 }
