@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCentreApp | Patient's Profile</title>
+    <title>HealthCentreApp | Temperature</title>
     <link rel="shortcut icon" href="../assets/images/logo loading screen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/patient.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/blood-pressure.css">
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/share.css">
-
 </head>
 
 <body>
     <!-- Header -->
     <header class="header d-flex align-items-center justify-content-between">
         <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-menu">
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#sidebar-menu">
             <i class="bi bi-list text-white" style="font-size: 25px;"></i>
         </button>
         <!-- This is the Updated HTML FILE -->
@@ -29,7 +34,7 @@
             </div>
             <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot d-none d-lg-block">
         </div>
-    
+
         <!-- Center navigation (visible on desktop only) -->
         <div class="nav-center d-none d-lg-flex align-items-center gap-4">
             <a href="/user-dashboard/emergency.html" class="nav-link d-flex align-items-center gap-2">
@@ -40,14 +45,14 @@
                 <img src="assets/monitor-alt-1-svgrepo-com 1 (1).svg" alt="" style="width: 20px;">
                 Monitors
             </a>
-    
+
             <a href="/user-dashboard/remote-care.html" class="nav-link d-flex align-items-center gap-2">
                 <img src="assets/watch-smartwatch-health-svgrepo-com.png" alt="" style="width: 20px;">
                 Remote Care
             </a>
-    
+
         </div>
-    
+
         <!-- Right side with toggle button, notification and user -->
         <div class="d-flex align-items-center gap-3">
             <!-- Notification -->
@@ -57,7 +62,7 @@
                     <img src="assets/notification-svgrepo-com 1.png" alt="" style="width: 24px; height: 24px;">
                     <span class="notification-badge">5</span>
                 </a>
-    
+
                 <!-- Notification Dropdown Menu -->
                 <div class="dropdown-menu notification-dropdown p-3" style="width: 320px;">
                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -67,7 +72,7 @@
                         <a href="#" class="text-decoration-none text-primary" style="font-size: 12px;">Mark As Read</a>
                     </div>
                     <hr class="dropdown-divider my-2">
-    
+
                     <!-- Notification Items -->
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
@@ -80,9 +85,9 @@
                             <small class="text-muted d-block">15 mins ago</small>
                         </div>
                     </div>
-    
+
                     <hr class="dropdown-divider my-2">
-    
+
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -94,9 +99,9 @@
                             <small class="text-muted d-block">1 hr ago</small>
                         </div>
                     </div>
-    
+
                     <hr class="dropdown-divider my-2">
-    
+
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -108,9 +113,9 @@
                             <small class="text-muted d-block">8 hr ago</small>
                         </div>
                     </div>
-    
+
                     <hr class="dropdown-divider my-2">
-    
+
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -122,9 +127,9 @@
                             <small class="text-muted d-block">Yesterday</small>
                         </div>
                     </div>
-    
+
                     <hr class="dropdown-divider my-2">
-    
+
                     <div class="notification-item d-flex gap-2 p-2">
                         <div class="notification-icon">
                             <div class="icon-circle">
@@ -136,16 +141,16 @@
                             <small class="text-muted d-block">Yesterday</small>
                         </div>
                     </div>
-    
+
                     <hr class="dropdown-divider my-2">
-    
+
                     <div class="text-center mt-2">
                         <a href="#" class="text-primary text-decoration-none" style="font-size: 14px;">See all
                             notifications</a>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Mobile Toggle Button -->
             <button class="navbar-toggler d-lg-none profile-toggle-btn" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#mobileProfileMenu">
@@ -199,7 +204,8 @@
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -207,14 +213,15 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-    
+
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CDHA
                         </a>
                     </li>
@@ -269,7 +276,8 @@
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/dha-transfer-in.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -280,7 +288,8 @@
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/dha-transfer-out.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -289,7 +298,8 @@
                             </svg>
                             Transfer Out
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -297,14 +307,15 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-    
+
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CDHA
                         </a>
                     </li>
@@ -312,7 +323,7 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Mobile Profile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end mobile-profile-menu" id="mobileProfileMenu" tabindex="-1"
         style="background-color: white; height: auto; top: 60px;" aria-hidden="true">
@@ -360,7 +371,8 @@
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
@@ -368,7 +380,7 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-    
+
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
@@ -384,7 +396,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Mobile Profile Menu Offcanvas -->
     <div class="offcanvas offcanvas-start sidebar-menu" id="sidebar-menu" tabindex="-1"
         style="background-color: white; height: auto; top: 70px; width: 80%; max-width: 300px;" aria-hidden="true">
@@ -394,8 +406,8 @@
                 <!-- Menu Items -->
                 <a href="/user-dashboard/overview.html">
                     <div class="m-menu-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
-                            class="icon m-sidebar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="#9197B3" class="icon m-sidebar-icon">
                             <g clip-path="url(#clip0_1304_4047)">
                                 <path
                                     d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z"
@@ -410,7 +422,7 @@
                         <span class="menu-text">Dashboard</span>
                     </div>
                 </a>
-    
+
                 <a href="/user-dashboard/emergency.html">
                     <div class="m-menu-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -431,7 +443,7 @@
                         <span class="menu-text">Emergency</span>
                     </div>
                 </a>
-    
+
                 <a href="/user-dashboard/remote-care.html">
                     <div class="m-menu-item">
                         <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -453,11 +465,11 @@
                                 </clipPath>
                             </defs>
                         </svg>
-    
+
                         <span class="menu-text">Remote Care</span>
                     </div>
                 </a>
-    
+
                 <!-- Symptom Checker Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -484,16 +496,16 @@
                     <ul class="custom-bullets">
                         <li><a href="/user-dashboard/manage-care-requests.html"
                                 class="dropdown-item-custom">CareRequests</a></li>
-    
+
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-                <a href="/user-dashboard/care-requests-application.html">
-                    <div class="menu-item">
-                        <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
-                        <span class="menu-text">CareConnect</span>
-                    </div>
-                </a>
+            <a href="/user-dashboard/care-requests-application.html">
+                <div class="menu-item">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <span class="menu-text">CareConnect</span>
+                </div>
+            </a>
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -519,9 +531,9 @@
                 <div class="dropdown-content m-dropdown-content ps-4">
                     <div id="dha-monitors-mobile">
                         <ul class="custom-bullets">
-                                                    <li>
-                                                        <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
-                                                    </li>
+                            <li>
+                                <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
+                            </li>
                             <li id="patient-link"><a class="dropdown-item-custom"
                                     onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
                             <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
@@ -542,12 +554,12 @@
                                     class="dropdown-item-custom">Appointments</a></li>
                         </ul>
                     </div>
-    
+
                     <div id="normal-monitors-mobile">
                         <ul class="custom-bullets">
-                                                    <li>
-                                                        <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
-                                                    </li>
+                            <li>
+                                <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
+                            </li>
                             <li>
                                 <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
                             </li>
@@ -570,13 +582,14 @@
                                 <a href='/user-dashboard/medication.html' class="dropdown-item-custom">Medications</a>
                             </li>
                             <li>
-                                <a href='/user-dashboard/appointments.html' class="dropdown-item-custom">Appointments</a>
+                                <a href='/user-dashboard/appointments.html'
+                                    class="dropdown-item-custom">Appointments</a>
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
-    
+
                 <!-- Communities Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -604,7 +617,8 @@
                         <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care
                                 Providers</a>
                         </li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Analysts</a></li>
+                        <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Analysts</a>
+                        </li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Support</a>
                         </li>
                         <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
@@ -614,7 +628,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <a href="/user-dashboard/health-info.html">
                     <div class="m-menu-item">
                         <svg class="icon m-sidebar-icon" width="25" height="24" viewBox="0 0 24 24" fill="none"
@@ -648,10 +662,10 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-        
+
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
-                <div class="menu-item active">
+                <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
                         class="icon sidebar-icon">
                         <g clip-path="url(#clip0_1304_4047)">
@@ -668,7 +682,7 @@
                     <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-        
+
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -689,12 +703,12 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-        
+
             <!-- Patient Dropdown -->
             <div class="menu-item-dropdown" id="patient-drop-down">
                 <div class="menu-icon-wrapper">
-                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 46 47"
-                        fill="none">
+                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24"
+                        viewBox="0 0 46 47" fill="none">
                         <path
                             d="M17.0864 19.8076C21.2804 19.8076 24.6803 16.4077 24.6803 12.2136C24.6803 8.01957 21.2804 4.61963 17.0864 4.61963C12.8923 4.61963 9.49237 8.01957 9.49237 12.2136C9.49237 16.4077 12.8923 19.8076 17.0864 19.8076Z"
                             stroke="#9197B3" stroke-width="1.82256"></path>
@@ -719,8 +733,8 @@
                     </li>
                 </ul>
             </div>
-        
-        
+
+
             <!-- Symptom Checker Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -745,19 +759,20 @@
             </div>
             <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a></li>
-                    
+                    <li><a href="/user-dashboard/manage-care-requests.html"
+                            class="dropdown-item-custom">CareRequests</a></li>
+
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-                    <a href="/user-dashboard/care-requests-application.html">
-                        <div class="menu-item">
-                            <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
-                            <span class="menu-text">CareConnect</span>
-                        </div>
-                    </a>
+            <a href="/user-dashboard/care-requests-application.html">
+                <div class="menu-item">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <span class="menu-text">CareConnect</span>
+                </div>
+            </a>
             <!-- HealthCentreApps Dropdown -->
-            <div class="menu-item-dropdown">
+            <div class="menu-item-dropdown active">
                 <div class="menu-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="icon sidebar-icon">
@@ -778,13 +793,13 @@
                 </div>
                 <i class="bi bi-chevron-right arrow"></i>
             </div>
-            <div class="dropdown-content ps-4">
+            <div class="dropdown-content ps-4 show">
                 <div id="dha-monitors-menu">
                     <ul class="custom-bullets">
-                                                <li>
-                                                    <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
-                                                </li>
-                        <li id="patient-link"><a class="dropdown-item-custom"
+                        <li>
+                            <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
+                        </li>
+                        <li id="patient-link"><a class="active dropdown-item-custom"
                                 onclick="redirectToPatientSearch('/user-dashboard/patient.html')">Patient</a></li>
                         <li><a onclick="redirectToPatientSearch('/user-dashboard/blood-pressure.html')"
                                 class="dropdown-item-custom">BP</a></li>
@@ -803,14 +818,14 @@
                                 class="dropdown-item-custom">Appointments</a></li>
                     </ul>
                 </div>
-        
+
                 <div id="normal-monitors-menu">
                     <ul class="custom-bullets">
-                                                <li>
-                                                    <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
-                                                </li>
                         <li>
-                            <a href='/user-dashboard/blood-pressure.html' class="dropdown-item-custom">BP</a>
+                            <a href='/user-dashboard/monitors.html' class="dropdown-item-custom">Add New Monitor</a>
+                        </li>
+                        <li>
+                            <a href='/user-dashboard/blood-pressure.html' class="active dropdown-item-custom">BP</a>
                         </li>
                         <li>
                             <a href='/user-dashboard/bmi.html' class="dropdown-item-custom">Weight-BMI</a>
@@ -822,7 +837,7 @@
                             <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                         </li>
                                                 <li>
-                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom active">Temperature</a>
                                                 </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
@@ -835,9 +850,9 @@
                         </li>
                     </ul>
                 </div>
-        
+
             </div>
-        
+
             <!-- Communities Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -862,8 +877,10 @@
             </div>
             <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a></li>
-<li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Analysts</a></li>
+                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
+                    </li>
+                    <li><a href="/user-dashboard/find-dha.html" class="dropdown-item-custom">Certified Analysts</a>
+                    </li>
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Support</a></li>
                     <li><a href="/user-dashboard/complaints.html" class="dropdown-item-custom">Complaints</a></li>
                     <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
@@ -871,7 +888,7 @@
                     </li>
                 </ul>
             </div>
-        
+
             <a href="/user-dashboard/health-info.html">
                 <div class="menu-item">
                     <svg class="icon sidebar-icon" width="25" height="24" viewBox="0 0 24 24" fill="none"
@@ -889,14 +906,14 @@
                     <span class="menu-text ms-3">Health Info</span>
                 </div>
             </a>
-        
+
             <!-- <a href="/user-dashboard/user-transfer.html">
                         <div class="menu-item">
                             <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
                             <span class="menu-text">Transfers</span>
                         </div>
                     </a> -->
-        
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -905,301 +922,388 @@
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+        <!-- Main Content -->
         <div class="main-content">
-            <div class="d-flex justify-content-between align-items-center">
-                <h1 class="profile-title">Patient's Profile</h1>
-                <button class="btn primary-btn mb-4" id="transfer-btn">Transfer</button>
-            </div>
+            <div class="content-wrapper">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h2>Temperature</h2>
+                        <div class="patient-info">Mrs Jones/F/Enugu</div>
+                    </div>
 
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="left-column">
-                    <!-- Personal Info Card -->
-                    <div class="profile-card">
-                        <div class="profile-header d-flex">
-                            <img src="assets/Ellipse 73.png" alt="David Mctosh" class="profile-image">
-                            <div class="basic-info mx-auto">
-                                <h2 class="d-flex">Mr. David Mctosh
-                                    <a href="add-patient.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none" class="pencil-icon"
-                                            style="margin-left: 70px;">
-                                            <path
-                                                d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
-                                                fill="#0C74C2" />
-                                        </svg>
+                    <div class="d-flex align-items-center gap-3 ">
+                        <div class="calender-btn">
+                            <button id="calender-btn" class="btn"><img src="assets/calendar.svg" alt="icon"></button>
+                        </div>
+                        <div class="time-filter">
+                            <div class="bp-dropdown">
+                                <select class="dropdown filter-btn" aria-label="Time Filter">
+                                    <option value="" hidden>Select</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Weekly">Weekly</option>
+                                    <option value="Yearly">Yearly</option>
+                                    <option value="Custom">Custom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-filters justify-content-start">
+
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <div class="filter-dot celsius"></div>
+                            Celsius (°C)
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-dot fahrenheit"></div>
+                            Fahrenheit (°F)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="tempChart"></canvas>
+                </div>
+
+                <div class="history-section">
+                    <div class="history-header">
+                        <div class="history-title">23 Dec, 2024 - 30 Dec, 2024</div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="threshold-icon border-0  threshold-delete-btn">
+                                <img src="assets/threshold.svg" width="20" alt="icon">
+                            </button>
+                            <div class="share-icon">
+                                <i class="bi bi-share"></i>
+                                <div class="share-dropdown">
+                                    <a href="/user-dashboard/access%20control.html">
+                                        <button class="share-dropdown-item">Access Control</button>
                                     </a>
-                                </h2>
-                                <div class="basic-info-text">Male, 35 years old</div>
-                                <div class="basic-info-text">Married | Nigeria</div>
-                                <div class="basic-info-text">Date of Birth: 01 Jan, 1989</div>
+                                    <button class="share-dropdown-item">Print</button>
+                                    <button class="share-dropdown-item">Download Pdf</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="section-header">
-                            <h3 class="section-title">Other details</h3>
-
-                        </div>
-
-                        <div class="profile-details">
-                            <div class="detail-row">
-                                <div class="detail-label">Contact No.</div>
-                                <div class="detail-value">+23 456 987 56</div>
-                            </div>
-                            <div class="detail-row">
-                                <div class="detail-label">Email ID</div>
-                                <div class="detail-value">david.mc1@gmail.com</div>
-                            </div>
-                            <div class="detail-row">
-                                <div class="detail-label">Education Level</div>
-                                <div class="detail-value">Post Grad</div>
-                            </div>
-                            <div class="detail-row">
-                                <div class="detail-label">Employment Status</div>
-                                <div class="detail-value">Business</div>
-                            </div>
-                            <div class="detail-row">
-                                <div class="detail-label">Country</div>
-                                <div class="detail-value">Zambia</div>
-                            </div>
-                            <p class="notes">Notes
-                                <br />
-                                <span class="notes-text">Lorem ipsum is a placeholder text commonly used to demonstrate
-                                    the visual form of a document or a typeface without relying on meaningful
-                                    content.</span>
-                            </p>
-                        </div>
-
                     </div>
+
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-primary text-center">Highest</th>
+                                <th class="text-primary text-center">Average</th>
+                                <th class="text-primary text-center">Lowest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-bold">Celsius (°C)</td>
+                                <td class="text-center">92</td>
+                                <td class="text-center">87</td>
+                                <td class="text-center">97</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Fahrenheit (°F)</td>
+                                <td class="text-center">95</td>
+                                <td class="text-center">85</td>
+                                <td class="text-center">77</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
                 </div>
 
-                <!-- Right Column -->
-                <div class="right-column">
-                    <!-- Residential Details Card -->
-                    <div class="profile-card">
-                        <div class="section-header">
-                            <h3 class="section-title">Residential Details</h3>
-                            <a href="add-patient.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                    fill="none" class="pencil-icon" style="margin-left: 70px;">
-                                    <path
-                                        d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
-                                        fill="#0C74C2" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="profile-details">
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Country</div>
-                                <div class="detail-value residential-value">Nigeria</div>
+                <div class="history-section">
+                    <div class="history-header">
+                        <div class="history-title">History</div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="threshold-icon threshold-delete-btn">
+                                <img src="assets/threshold.svg" width="20" alt="icon">
                             </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">State</div>
-                                <div class="detail-value residential-value">Lagos</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">City</div>
-                                <div class="detail-value residential-value">Lagos</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Town</div>
-                                <div class="detail-value residential-value">Ikeja</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Address</div>
-                                <div class="detail-value residential-value">15 Awolowo Way, Ikeja, Lagos</div>
+                            <div class="share-icon">
+                                <i class="bi bi-share"></i>
+                                <div class="share-dropdown">
+                                    <a href="/user-dashboard/access%20control.html">
+                                        <button class="share-dropdown-item">Access Control</button>
+                                    </a>
+                                    <button class="share-dropdown-item">Print</button>
+                                    <button class="share-dropdown-item">Download Pdf</button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Children Details Card -->
-                    <div class="profile-card">
-                        <div class="section-header">
-                            <h3 class="section-title">Children Details</h3>
-                            <a href="add-patient.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                    fill="none" class="pencil-icon" style="margin-left: 70px;">
-                                    <path
-                                        d="M12.922 2.87263C13.4799 2.31461 14.2366 2.00107 15.0256 2.00098C15.8147 2.00088 16.5715 2.31425 17.1295 2.87213C17.6875 3.43001 18.0011 4.18672 18.0012 4.97577C18.0012 5.76483 17.6879 6.52161 17.13 7.07963L7.772 16.4376C7.43412 16.7772 7.00579 17.0125 6.538 17.1156L2.612 17.9886C2.52981 18.007 2.44432 18.0043 2.36345 17.9808C2.28258 17.9573 2.20896 17.9138 2.14941 17.8542C2.08987 17.7947 2.04632 17.721 2.02283 17.6402C1.99933 17.5593 1.99664 17.4738 2.015 17.3916L2.892 13.4416C2.993 12.9896 3.221 12.5746 3.548 12.2476L12.922 2.87263ZM16.457 3.61563C16.2754 3.42458 16.0574 3.27181 15.8159 3.16633C15.5744 3.06084 15.3141 3.00476 15.0506 3.00141C14.787 2.99805 14.5255 3.04749 14.2813 3.14679C14.0372 3.2461 13.8154 3.39327 13.629 3.57963L12.958 4.25163L15.751 7.04363L16.421 6.37263C17.179 5.61463 17.195 4.39263 16.457 3.61563ZM15.044 7.75063L12.25 4.95963L4.254 12.9556C4.06083 13.1488 3.9266 13.393 3.867 13.6596L3.16 16.8426L6.319 16.1406C6.601 16.0776 6.859 15.9356 7.063 15.7316L15.044 7.75063ZM2.5 2.99963H11.38L10.38 3.99963H2.5C2.36739 3.99963 2.24021 3.94695 2.14645 3.85318C2.05268 3.75941 2 3.63224 2 3.49963C2 3.36702 2.05268 3.23984 2.14645 3.14608C2.24021 3.05231 2.36739 2.99963 2.5 2.99963ZM2.5 5.99963H8.38L7.378 6.99963H2.5C2.36739 6.99963 2.24021 6.94695 2.14645 6.85318C2.05268 6.75941 2 6.63224 2 6.49963C2 6.36702 2.05268 6.23984 2.14645 6.14608C2.24021 6.05231 2.36739 5.99963 2.5 5.99963ZM2.5 8.99963H5.379L4.379 9.99963H2.5C2.36739 9.99963 2.24021 9.94695 2.14645 9.85318C2.05268 9.75941 2 9.63224 2 9.49963C2 9.36702 2.05268 9.23984 2.14645 9.14607C2.24021 9.05231 2.36739 8.99963 2.5 8.99963Z"
-                                        fill="#0C74C2" />
-                                </svg>
-                            </a>
-                        </div>
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th class="text-center">Celsius (°C)</th>
+                                <th class="text-center">Fahrenheit (°F)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jan 12, 2023</td>
+                                <td class="text-center">89</td>
+                                <td class="text-center">80</td>
+                            </tr>
+                            <tr>
+                                <td>Feb 02, 2022</td>
+                                <td class="text-center">92</td>
+                                <td class="text-center">88</td>
+                            </tr>
+                            <tr>
+                                <td>Feb 02, 2020</td>
+                                <td class="text-center">93</td>
+                                <td class="text-center">94</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                        <div class="profile-details">
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">No. of Children</div>
-                                <div class="detail-value">01</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Child's Name</div>
-                                <div class="detail-value">Lagos</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Child's Gender</div>
-                                <div class="detail-value">Male</div>
-                            </div>
-                            <div class="detail-row residential-row">
-                                <div class="detail-label residential-label">Date of Birth</div>
-                                <div class="detail-value">01 Jan, 2019</div>
-                            </div>
-                            <a href="#" class="children">Add more children</a>
-                        </div>
-                    </div>
+
                 </div>
+                <button class="add-values-btn">Add New Values</button>
+            </div>
+        </div>
 
-
-                <!-- Life Monitors Section -->
-                <div class="life-monitors">
-                    <div class="monitor-header">
-                        <h3 class="section-title">Monitors</h3>
-                        <button type="button" class="btn btn-outline-primary rounded-pill px-4 add-new-btn"
-                            data-bs-toggle="modal" data-bs-target="#addMonitorModal">
-                            Add new
-                        </button>
+        <!--  Calender Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="calender-popup">
+            <div class="p-4 calender-box bg-white rounded text-center position-relative ">
+                <div>
+                    <div class="container">
+                        <div class="calendar">
+                            <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">
+                                    <h1></h1>
+                                    <p></p>
+                                </div>
+                                <i class="fas fa-angle-right next"></i>
+                            </div>
+                            <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="days"></div>
+                        </div>
                     </div>
-
-                    <!-- Blood Pressure -->
-                    <div class="monitor-section">
-                        <h4 class="monitor-title">Blood Pressure</h4>
-                        <table class="monitor-table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th class="text-center">Results</th>
-                                    <th class="text-center">Improvement</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jan 12, 2023</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-up text-center">↑ 15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2022</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-down text-center">↓ 6%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2020</td>
-                                    <td class="text-center">243 mg</td>
-                                    <td class="improvement-up text-center">↑ 10%</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="w-100 d-flex gap-3 justify-content-end calender-popup-btns mt-3">
+                        <button id="calendar-cancel-btn">Cancel</button>
+                        <button id="calendar-apply-btn">Apply</button>
                     </div>
-                    <div class="monitor-section">
-                        <h4 class="monitor-title">BMI</h4>
-                        <table class="monitor-table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th class="text-center">Results</th>
-                                    <th class="text-center">Improvement</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jan 12, 2023</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-up text-center">↑ 15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2022</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-down text-center">↓ 6%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2020</td>
-                                    <td class="text-center">243 mg</td>
-                                    <td class="improvement-up text-center">↑ 10%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="monitor-section">
-                        <h4 class="monitor-title">Diabetes</h4>
-                        <table class="monitor-table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th class="text-center">Results</th>
-                                    <th class="text-center">Improvement</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jan 12, 2023</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-up text-center">↑ 15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2022</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-down text-center">↓ 6%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2020</td>
-                                    <td class="text-center">243 mg</td>
-                                    <td class="improvement-up text-center">↑ 10%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="monitor-section">
-                        <h4 class="monitor-title">Cholesterol</h4>
-                        <table class="monitor-table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th class="text-center">Results</th>
-                                    <th class="text-center">Improvement</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jan 12, 2023</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-up text-center">↑ 15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2022</td>
-                                    <td class="text-center">126 mg</td>
-                                    <td class="improvement-down text-center">↓ 6%</td>
-                                </tr>
-                                <tr>
-                                    <td>Feb 02, 2020</td>
-                                    <td class="text-center">243 mg</td>
-                                    <td class="improvement-up text-center">↑ 10%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    <!-- BMI, Diabetes, and Cholesterol sections with same structure -->
-                    <!-- ... Repeat the monitor-section structure for each ... -->
-
-                    <!-- <button class="add-more-btn">Add new monitor</button> -->
                 </div>
             </div>
         </div>
 
-        <!-- Patient Transferred Popup -->
-        <div class="popup d-none justify-content-center align-items-center" id="patient-transferred-popup">
-            <div class="paired-box bg-white rounded text-center position-relative ">
-                <div class="">
-                    <img src="assets/Mask group.png" alt="">
-                </div>
-                <div class="mt-4">
-                    <h4>Patient Transferred!</h4>
-                    <p>You’ve successfully transferred your patient!</p>
-                </div>
-                <div class="close-btn">
-                    <button class="btn border-0" type="submit" id="patient-close-btn"><img src="assets/icons/close.svg"
-                            alt="close"></button>
+        <!-- Threshold History Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="threshold-history-popup">
+            <div class="threshold-history-box bg-white rounded text-center position-relative ">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide threshold-history-container">
+                            <div
+                                class="threshold-history-heading d-flex justify-content-between w-100 align-items-center mb-4">
+                                <h5>Threshold History</h5>
+                                <a>Trigger Now</a>
+                            </div>
+                            <div class="thumbnail-card">
+                                <div class="d-flex justify-content-between align-items-center card-top">
+                                    <div>
+                                        <h3 class="card-type">Threshold</h3>
+                                    </div>
+
+                                </div>
+                                <div class="mt-4">
+                                    <div class="mt-1 d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <span class="card-text">Monitor</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Blood Pressure</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Threshold</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-danger">Low</span>
+                                                <span>65</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-content-center">
+                                                <span class="text-danger">Hight</span>
+                                                <span>65</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1 align-content-center">
+                                        <div class="w-100">
+                                            <span class="card-text">Name</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Mr.. Ojoko Andre</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Relation</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Next of kin</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Action</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Auto Email</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt-1 contant-btn d-flex justify-content-between align-items-center">
+                                        <div class="w-100">
+                                            <span class="card-text">Contact</span>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between gap-4">
+                                            <span class="text-nowrap">+1 (306) 5567722</span>
+                                            <button class="bg-transparent border-0 p-1">
+                                                <img src="assets/copy.svg" alt="copy">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 contant-btn d-flex justify-content-between align-items-center ">
+                                        <div class="w-100">
+                                            <span class="card-text">Email</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-center gap-4">
+                                            <span>ojko@gmail.com</span>
+                                            <button class="bg-transparent border-0 p-1">
+                                                <img src="assets/copy.svg" alt="copy">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-3 gap-4 threshold-action-btns">
+                                        <a href="/user-dashboard/new-remote-care.html">
+                                            <button class="add-threshold-btn"><i class="bi bi-plus h4"></i></button>
+                                        </a>
+                                        <a href="new-remote-care.html"><button><img src="assets/edit.svg"
+                                                    alt="edit"></button></a>
+
+                                        <button id="delete-btn"><img src="assets/delete.svg" alt="delete"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide threshold-history-container">
+                            <div
+                                class="threshold-history-heading d-flex justify-content-between w-100 align-items-center mb-4">
+                                <h5>Threshold History</h5>
+                                <a>Trigger Now</a>
+                            </div>
+                            <div class="thumbnail-card">
+                                <div class="d-flex justify-content-between align-items-center card-top">
+                                    <div>
+                                        <h3 class="card-type">Threshold</h3>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="mt-1 d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <span class="card-text">Monitor</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Blood Pressure</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Threshold</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-danger">Low</span>
+                                                <span>65</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-content-center">
+                                                <span class="text-danger">Hight</span>
+                                                <span>65</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1 align-content-center">
+                                        <div class="w-100">
+                                            <span class="card-text">Name</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Mr.. Ojoko Andre</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Relation</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Next of kin</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between mt-1">
+                                        <div class="w-100">
+                                            <span class="card-text">Action</span>
+                                        </div>
+                                        <div class="w-100">
+                                            <span>Auto Email</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt-1 contant-btn d-flex justify-content-between align-items-center">
+                                        <div class="w-100">
+                                            <span class="card-text">Contact</span>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between gap-4">
+                                            <span class="text-nowrap">+1 (306) 5567722</span>
+                                            <button class="bg-transparent border-0 p-1">
+                                                <img src="assets/copy.svg" alt="copy">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-1 d-flex justify-content-between align-items-center ">
+                                        <div class="w-100">
+                                            <span class="card-text">Email</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-center gap-4">
+                                            <span>ojko@gmail.com</span>
+                                            <button class="bg-transparent  threshold-copy-btn  border-0 p-1">
+                                                <img src="assets/copy.svg" alt="copy">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-3 gap-4 threshold-action-btns">
+                                        <a href="/user-dashboard/new-remote-care.html">
+                                            <button class="add-threshold-btn"><i class="bi bi-plus h4"></i></button>
+                                        </a>
+                                        <a href="new-remote-care.html"><button><img src="assets/edit.svg"
+                                                    alt="edit"></button></a>
+
+                                        <button id="delete-btn"><img src="assets/delete.svg" alt="delete"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        ...
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
@@ -1243,6 +1347,23 @@
                 <div class="close-btn">
                     <button class="btn border-0" type="submit" id="profile-close-btn"><img src="assets/icons/close.svg"
                             alt="close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Remote Care Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="delete-popup">
+            <div class="delete-box bg-white rounded text-center position-relative ">
+                <h5 class="mt-3">Delete Emergency Contact?</h5>
+                <p>Are you sure you want to delete this emergency contact when
+                    threshold hits?</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="popup-btn" id="cancle-care-btn">Cancel</button>
+                    <button class="popup-btn" id="done-care-btn">Done</button>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="delete-remote-close"><img
+                            src="assets/icons/close.svg" alt="close"></button>
                 </div>
             </div>
         </div>
@@ -1310,6 +1431,57 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="addValuesModal" tabindex="-1" aria-labelledby="addValuesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title w-100 text-center" id="addValuesModalLabel">Add Values</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <form>
+                        <div class="mb-4 d-flex align-items-center">
+                            <label class="form-label me-3 w-25">Date</label>
+                            <input type="date" class="form-control custom-input">
+                        </div>
+                        <div class="mb-4 d-flex align-items-center">
+                            <label class="form-label me-3 w-25">Time</label>
+                            <input type="time" class="form-control custom-input">
+                        </div>
+                        <div class="mb-4 d-flex align-items-center">
+                            <label class="form-label me-3 w-25">Celsius (°C)</label>
+                            <input type="number" class="form-control custom-input" placeholder="Enter Diastolic
+">
+                        </div>
+                        <div class="mb-4 d-flex align-items-center">
+                            <label class="form-label me-3 w-25">Fahrenheit (°F)</label>
+                            <input type="number" class="form-control custom-input" placeholder="Enter Systolic">
+                        </div>
+                        <div class="mb-4 d-flex align-items-center">
+                            <label class="form-label me-3 w-25">Visibility</label>
+                            <div
+                                class="d-flex align-items-center visibility-radio-btns justify-content-end gap-3 w-100">
+                                <div>
+                                    <input type="radio" name="visibility" id="visibility-hide"
+                                        style="transform: scale(1.15);">
+                                    <label for="visibility-hide" class="mx-1 mb-0">Hide</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="visibility" id="visibility-Un-Hide"
+                                        style="transform: scale(1.15);">
+                                    <label for="visibility-Un-Hide" class="mx-1 mb-0">Un-Hide</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <button type="button" class="btn btn-save px-5">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -1328,115 +1500,105 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="addMonitorModal" tabindex="-1" aria-labelledby="addMonitorModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title fs-4" id="addMonitorModalLabel">Add New Monitor</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Share Message end -->
+    <!-- Print Preview Popup -->
+    <div class="bmi-print">
+        <div class="bmi-card py-4 px-5">
+            <div class="bmi-heading">
+                <h4 class="fw-medium">Print BMI</h4>
+            </div>
+            <div class="bmi-content mt-5">
+                <div class="left-slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                        <path d="M6 11L1 6L6 1" stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
-                <div class="modal-body p-4">
-                    <form id="addMonitorForm">
-                        <!-- Form Fields -->
-                        <div class="form-fields-container">
-                            <!-- Monitor Name -->
-                            <div class="form-group-inline">
-                                <label class="form-label text-secondary">Monitor Name</label>
-                                <input type="text" class="form-control bg-light custom-input" placeholder="e.g hba1c">
-                            </div>
-
-                            <!-- Date -->
-                            <div class="form-group-inline">
-                                <label class="form-label text-secondary">Date</label>
-                                <input type="text" class="form-control bg-light custom-input" placeholder="MM/DD/YYYY">
-                            </div>
-
-                            <!-- Requestor Organisation -->
-                            <div class="form-group-inline">
-                                <label class="form-label text-secondary">Requestor Org.</label>
-                                <input type="text" class="form-control bg-light custom-input" placeholder="e.g Dr. XYZ">
-                            </div>
-
-                            <!-- Notes -->
-                            <div class="form-group-inline">
-                                <label class="form-label text-secondary">Notes</label>
-                                <input type="text" class="form-control bg-light custom-input" placeholder="--">
-                            </div>
-
-                            <!-- Values -->
-                            <div class="form-group-inline">
-                                <label class="form-label text-secondary">Value(s)</label>
-                                <input type="text" class="form-control bg-light custom-input">
-                            </div>
-
-                            <!-- Value Fields Header -->
-                            <!-- <div class="value-fields-header">
-                    <div class="value-field-label">Value Name</div>
-                    <div class="value-field-label">Date Type</div>
-                    <div class="value-field-label">Unit</div>
-                  </div> -->
-
-                            <!-- Value Fields Container -->
-                            <!-- <div id="valueFieldsContainer">
-                    <div class="value-row">
-                      <input type="text" class="form-control">
-                      <input type="text" class="form-control">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-       -->
-
-                        </div>
-                        <button type="button" class="btn btn-light w-100 text-start bg-light mt-3" id="addValueBtn">
-                            Add +
-                        </button>
-
-                        <!-- Save Button -->
-                        <div class="text-center mt-4">
-                            <button type="submit"
-                                class="btn btn-outline-primary rounded-pill px-5 modal-button">Save</button>
-                        </div>
-                    </form>
+                <div class="bmi-img p-4 text-center">
+                    <!-- BMI Data Table -->
+                    <table class="history-table w-100">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Weight</th>
+                                <th>Height</th>
+                                <th>BMI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jan 12, 2023</td>
+                                <td>123 lbs</td>
+                                <td>100 cm</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Feb 02, 2022</td>
+                                <td>103 lbs</td>
+                                <td>127 cm</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Feb 02, 2020</td>
+                                <td>111 lbs</td>
+                                <td>151 cm</td>
+                                <td>26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="right-slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                        <path d="M1 11L6 6L1 1" stroke="#9197B3" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons text-center mt-4">
+                    <button type="button" class="btn-primary" id="cancelBtn">Cancel</button>
+                    <button type="button" class="btn-primary" id="printBtn">Print</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Share Message end -->
     <script>
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
         }
 
+        const cdhaProfile = document.getElementById('cdha-profile');
+        const userProfile = document.getElementById('user-profile');
 
-    const cdhaProfile = document.getElementById('cdha-profile');
-    const userProfile = document.getElementById('user-profile');
+        const dhaMonitorsMenu = document.getElementById('dha-monitors-menu');
+        const normalMonitorsMenu = document.getElementById('normal-monitors-menu');
 
-    const dhaMonitorsMenu = document.getElementById('dha-monitors-menu');
-    const normalMonitorsMenu = document.getElementById('normal-monitors-menu');
+        const dhaMonitorsMobile = document.getElementById('dha-monitors-mobile');
+        const normalMonitorsMobile = document.getElementById('normal-monitors-mobile');
 
-    const dhaMonitorsMobile = document.getElementById('dha-monitors-mobile');
-    const normalMonitorsMobile = document.getElementById('normal-monitors-mobile');
+        const patientLink = document.getElementById('patient-link');
+        const patientDropDown = document.getElementById('patient-drop-down');
 
-    const patientLink = document.getElementById('patient-link');
-    const patientDropDown = document.getElementById('patient-drop-down');
+        const checkUser = localStorage.getItem('dha-user')
 
-    const checkUser = localStorage.getItem('dha-user')
+        if (checkUser === 'true') {
+            userProfile.classList.add('d-lg-none');
+            patientLink.classList.add('d-none');
+            normalMonitorsMenu.classList.add('d-none');
+            normalMonitorsMobile.classList.add('d-none');
+        } else {
+            patientDropDown.classList.add('d-none');
+            cdhaProfile.classList.add('d-lg-none');
+            dhaMonitorsMenu.classList.add('d-none');
+            dhaMonitorsMobile.classList.add('d-none');
+        }
 
-    if (checkUser === 'true') {
-        userProfile.classList.add('d-lg-none');
-        patientLink.classList.add('d-none');
-        normalMonitorsMenu.classList.add('d-none');
-        normalMonitorsMobile.classList.add('d-none');
-    } else {
-        patientDropDown.classList.add('d-none');
-        cdhaProfile.classList.add('d-lg-none');
-        dhaMonitorsMenu.classList.add('d-none');
-        dhaMonitorsMobile.classList.add('d-none');
-    }
+        document.querySelector('.btn-save').addEventListener('click', function () {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('addValuesModal'));
+            if (modal) {
+                modal.hide();
+            }
+        });
+
 
         let inactivityTime = 120000;
         let timeout;
@@ -1460,31 +1622,96 @@
 
 
         document.addEventListener('DOMContentLoaded', function () {
-            // Add new value fields
-            const addValueBtn = document.getElementById('addValueBtn');
-            const valueFieldsContainer = document.getElementById('valueFieldsContainer');
+            const shareIcons = document.querySelectorAll('.share-icon');
 
-            addValueBtn.addEventListener('click', function () {
-                const newRow = document.createElement('div');
-                newRow.className = 'value-row';
-                newRow.innerHTML = `
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
-        `;
-                valueFieldsContainer.appendChild(newRow);
+            shareIcons.forEach(icon => {
+                icon.addEventListener('click', function (e) {
+                    e.stopPropagation();
+
+                    // Pehle sab dropdowns band karo
+                    document.querySelectorAll('.share-dropdown').forEach(drop => {
+                        drop.classList.remove('d-none');
+                    });
+
+                    // Apne andar ka dropdown toggle karo
+                    const dropdown = this.querySelector('.share-dropdown');
+                    dropdown.classList.toggle('show');
+                });
             });
 
-            // Form submission
-            const form = document.getElementById('addMonitorForm');
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                // Add your form submission logic here
-                const modal = bootstrap.Modal.getInstance(document.getElementById('addMonitorModal'));
-                modal.hide();
+            // Bahar click pe sab band
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.share-dropdown').forEach(drop => {
+                    drop.classList.remove('show');
+                });
+            });
+
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!shareIcon.contains(e.target)) {
+                    shareDropdown.classList.remove('show');
+                }
+            });
+
+            // Handle dropdown item clicks
+            document.querySelectorAll('.share-dropdown-item').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const action = this.textContent.toLowerCase();
+                    switch (action) {
+                        case 'forward':
+                            // Handle forward action
+                            console.log('Forward clicked');
+                            break;
+                        case 'print':
+                            break;
+                        case 'download pdf':
+                            // Handle PDF download
+                            console.log('Download PDF clicked');
+                            break;
+                    }
+                    shareDropdown.classList.remove('show');
+                });
+            });
+        });
+        document.querySelectorAll('.share-dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const action = this.textContent.toLowerCase();
+                switch (action) {
+                    case 'print':
+                        e.preventDefault();
+                        const bmiPrint = document.querySelector('.bmi-print');
+                        bmiPrint.style.display = 'block';
+                        setTimeout(() => {
+                            bmiPrint.classList.add('animate');
+                        }, 50);
+                        break;
+                    // ... other cases remain the same
+                }
+                document.querySelector('.share-dropdown').classList.remove('show');
             });
         });
 
+        // Print popup controls
+        const cancelBtn = document.getElementById('cancelBtn');
+        const printBtn = document.getElementById('printBtn');
+
+        cancelBtn.addEventListener('click', () => {
+            const bmiPrint = document.querySelector('.bmi-print');
+            bmiPrint.classList.remove('animate');
+            setTimeout(() => {
+                bmiPrint.style.display = 'none';
+            }, 500);
+        });
+
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
@@ -1510,6 +1737,162 @@
             })
         }
 
+
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+
+        const cancleBtn = document.getElementById('cancle-care-btn');
+        const doneBtn = document.getElementById('done-care-btn');
+        const closeBtn = document.getElementById('delete-remote-close');
+        const deletePopup = document.getElementById('delete-popup')
+        const deleteBtn = document.getElementById('delete-btn');
+
+        cancleBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        doneBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        closeBtn.addEventListener('click', () => {
+            deletePopup.classList.add('d-none')
+            deletePopup.classList.remove('d-flex')
+        })
+
+        deleteBtn.addEventListener('click', () => {
+            deletePopup.classList.remove('d-none')
+            deletePopup.classList.add('d-flex')
+            previewPopup.classList.add('d-none')
+            previewPopup.classList.remove('d-flex')
+        })
+
+
+        const calenderBtn = document.getElementById('calender-btn');
+        const calenderPopup = document.getElementById('calender-popup');
+        const calendarCancelBtn = document.getElementById('calendar-cancel-btn');
+        const calendarApplyBtn = document.getElementById('calendar-apply-btn');
+
+        calenderBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.remove('d-none')
+            calenderPopup.classList.add('d-flex')
+        })
+
+        calendarCancelBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.add('d-none')
+            calenderPopup.classList.remove('d-flex')
+        })
+
+        calendarApplyBtn.addEventListener(('click'), () => {
+            calenderPopup.classList.add('d-none')
+        })
+
+        const historyPopup = document.getElementById('threshold-history-popup');
+        const thresholdDeleteBtn = document.querySelectorAll('.threshold-delete-btn');
+
+        historyPopup.addEventListener(('click'), (e) => {
+            if (e.target === historyPopup) {
+                historyPopup.classList.add('d-none')
+            }
+        })
+
+
+        for (let i = 0; i < thresholdDeleteBtn.length; i++) {
+            thresholdDeleteBtn[i].addEventListener(('click'), () => {
+                historyPopup.classList.add('d-flex')
+                historyPopup.classList.remove('d-none')
+            })
+        }
+
+        const date = new Date();
+
+        const renderCalendar = () => {
+            date.setDate(1);
+
+            const monthDays = document.querySelector(".days");
+
+            const lastDay = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDate();
+
+            const prevLastDay = new Date(
+                date.getFullYear(),
+                date.getMonth(),
+                0
+            ).getDate();
+
+            const firstDayIndex = date.getDay();
+
+            const lastDayIndex = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDay();
+
+            const nextDays = 7 - lastDayIndex - 1;
+
+            const months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
+
+            document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+
+            document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+            let days = "";
+
+            for (let x = firstDayIndex; x > 0; x--) {
+                days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+            }
+
+            for (let i = 1; i <= lastDay; i++) {
+                if (
+                    i === new Date().getDate() &&
+                    date.getMonth() === new Date().getMonth()
+                ) {
+                    days += `<div class="today">${i}</div>`;
+                } else {
+                    days += `<div>${i}</div>`;
+                }
+            }
+
+            for (let j = 1; j <= nextDays; j++) {
+                days += `<div class="next-date">${j}</div>`;
+                monthDays.innerHTML = days;
+            }
+        };
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            date.setMonth(date.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            date.setMonth(date.getMonth() + 1);
+            renderCalendar();
+        });
+
+        renderCalendar();
+
         document.addEventListener("DOMContentLoaded", () => {
             const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
             if (dropdownMenu) {
@@ -1521,14 +1904,6 @@
                 arrowIcon.style.transform = "rotate(90deg)";
             }
         });
-
-
-        pairedBackBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-        pairedCloseBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
 
         const addImg = document.getElementById('add-1-img');
         const addImgPupup = document.getElementById('add-1-popup');
@@ -1547,6 +1922,7 @@
         addImgClose.addEventListener(('click'), () => {
             addImgPupup.classList.add('d-none')
         })
+
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
@@ -1559,32 +1935,28 @@
             document.body.removeChild(tempInput);
             alert("Link copied to clipboard.");
         });
-
-        const transferCloseBtn = document.getElementById('patient-close-btn');
-        const patientTransferredPopup = document.getElementById('patient-transferred-popup');
-        const transferBtn = document.getElementById('transfer-btn');
-
-        transferBtn.addEventListener('click', () => {
-            patientTransferredPopup.classList.remove('d-none')
-        })
-
-        patientTransferredPopup.addEventListener(('click'), (e) => {
-            if (e.target === patientTransferredPopup) {
-                patientTransferredPopup.classList.add('d-none');
-            }
-        })
-
-        transferCloseBtn.addEventListener('click', () => {
-            patientTransferredPopup.classList.add('d-none')
-        })
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="js/overview.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="js/temperature.js"></script>
+    <script src="js/blood-pressure.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 
 </body>
 

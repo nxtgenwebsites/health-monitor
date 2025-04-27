@@ -1005,7 +1005,7 @@ a {
 /* Kin Card */
 .kin-card {
     padding: 24px;
-    height: 229px;
+    height: auto !important;
     border-radius: 10px;
     background: #fff;
 }

@@ -118,6 +118,21 @@ const handleBotResponse = (messageCount) => {
                     handleBotResponse(++messageCount);
                 });
                 break;
+            case 4:
+                const botMessage4 = document.createElement('div');
+                botMessage4.innerHTML = `  <div class="demo-message-4">
+                                <div class="d-flex gap-3 mt-3">
+                                    <button id="yes-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Save</button>
+                                    <a href="/user-dashboard/care-request.html">
+                                        <button id="no-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Share</button>
+                                    </a>
+                                    <button id="no-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Print</button>
+                                    <button id="no-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Delete</button>
+                                </div>
+                            </div>`;
+                botMessage4.classList.add('bot-message');
+                messageContainer.append(botMessage4);
+                break;
         }
     }
 };

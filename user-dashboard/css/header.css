@@ -857,3 +857,7 @@
   color: white !important;
   border-radius: 8px !important;
 }
+
+#sidebar-menu .menu-item{
+  display: none !important;
+}

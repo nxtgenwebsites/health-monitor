@@ -1621,3 +1621,12 @@ body {
   color: #ED4C5C;
   font-weight: 500;
 }
+
+.miss-doses-box{
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+.miss-doses-box h4{
+  color: #dc2626;
+}

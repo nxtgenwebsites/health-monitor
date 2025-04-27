@@ -1363,8 +1363,8 @@ a {
   }
 
   .filter-btn {
-  width: 120px !important;
-  padding: 3px 15px !important;
+    width: 120px !important;
+    padding: 3px 15px !important;
   }
   .calender-btn button {
     /* margin-top: 5px; */
@@ -2442,4 +2442,27 @@ a {
 
 .add-threshold-btn i {
   color: #0b6fc0;
+}
+
+.medication-textarea {
+  resize: none;
+}
+
+#addValuesModal .upload-box {
+  background: #f0f9ff;
+  margin: 24px 0;
+  transition: background-color 0.2s;
+}
+
+#addValuesModal .upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid rgb(201, 201, 201);
+  margin: 0;
+  cursor: pointer;
+  color: #0959a3;
 }

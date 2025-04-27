@@ -497,7 +497,12 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-
+            <a href="/user-dashboard/care-requests-application.html">
+                <div class="menu-item">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <span class="menu-text">CareConnect</span>
+                </div>
+            </a>
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -564,6 +569,9 @@
                             <li>
                                 <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                             </li>
+                                                    <li>
+                                                        <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                                                    </li>
                             <li>
                                 <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                             </li>
@@ -754,7 +762,12 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-
+            <a href="/user-dashboard/care-requests-application.html">
+                <div class="menu-item">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <span class="menu-text">CareConnect</span>
+                </div>
+            </a>
             <!-- HealthCentreApps Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -821,6 +834,9 @@
                         <li>
                             <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                         </li>
+                                                <li>
+                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                                                </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                         </li>
@@ -1138,6 +1154,241 @@
                     </div>
                     <div class="col-12 d-flex gap-2">
                         <button class="btn btn-outline-primary">Add another Next of Kin</button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-primary my-4 mx-2">Health Status & Lifestyle</h4>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Blood</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Blood Type</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>AB</option>
+                            <option>O</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Rh Factor</option>
+                            <option>Positive</option>
+                            <option>Negative</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Genotype</option>
+                            <option>AA</option>
+                            <option>AS</option>
+                            <option>SS</option>
+                            <option>AC</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Allergies</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Type">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Trigger ">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Disability</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Type">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Impact</option>
+                            <option>Mild</option>
+                            <option>Moderate</option>
+                            <option>Severe</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Devices Used ">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Existing Medical Conditions</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Condition ">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Cause if known">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Medication/Treatment">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Mental Health</h6>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Type">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Medication/Treatment">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Alcohol Consumption</h6>
+                <div class="row g-3">
+                                    <div class="col-12">
+                                        <select class="form-select">
+                                            <option selected disabled>Frequency</option>
+                                            <option>Daily</option>
+                                            <option>Weekly</option>
+                                            <option>Occasionally</option>
+                                            <option>Never</option>
+                                        </select>
+                                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Quantity ">
+                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select">
+                                            <option selected disabled>Type of Alcohol</option>
+                                            <option>Beer</option>
+                                            <option>Wine</option>
+                                            <option>Spirits</option>
+                                        </select>
+                                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
+                        <button class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section mb-4">
+                <h6 class="text-primary mb-4">Recreational Drug</h6>
+                <div class="row g-3">
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" placeholder="Type of Substance">
+                                        </div>
+                                    <div class="col-12">
+                                        <select class="form-select">
+                                            <option selected disabled>Frequency</option>
+                                            <option>Daily</option>
+                                            <option>Weekly</option>
+                                            <option>Occasionally</option>
+                                            <option>Never</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select">
+                                            <option selected disabled>Method of Use</option>
+                                            <option>Smoking</option>
+                                            <option>Oral</option>
+                                            <option>Injection</option>
+                                        </select>
+                                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="State Health Issues Related to Use">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="History of Treatment or Rehabilitation">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Notes">
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <input type="file" id="fileInput" style="display: none;" />
+
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click();">
+                            Upload
+                        </button>
                         <button class="btn btn-primary px-4">Next</button>
                     </div>
                 </div>

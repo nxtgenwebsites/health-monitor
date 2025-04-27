@@ -488,7 +488,12 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-    
+                <a href="/user-dashboard/care-requests-application.html">
+                    <div class="menu-item">
+                        <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                        <span class="menu-text">CareConnect</span>
+                    </div>
+                </a>
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -555,6 +560,9 @@
                             <li>
                                 <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                             </li>
+                                                    <li>
+                                                        <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                                                    </li>
                             <li>
                                 <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                             </li>
@@ -741,7 +749,12 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-        
+                    <a href="/user-dashboard/care-requests-application.html">
+                        <div class="menu-item">
+                            <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                            <span class="menu-text">CareConnect</span>
+                        </div>
+                    </a>
             <!-- HealthCentreApps Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -807,6 +820,9 @@
                         <li>
                             <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                         </li>
+                                                <li>
+                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                                                </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                         </li>
@@ -915,8 +931,7 @@
                         <div class="col-12 col-xl-6">
                             <div class="thumbnail-card ">
                                 <div class="d-flex justify-content-between align-items-center card-top">
-                                    <h3 class="card-type">A2WN</h3>
-                                    <a>Trigger Now</a>
+                                    <h3 class="card-type">LIVE</h3>
                                     <div class="d-flex gap-3 threshold-action-btns">
                                         <a href="new-remote-care.html">
                                             <button><img src="assets/edit.svg" alt="edit"></button>
@@ -971,14 +986,16 @@
                                             </button>
                                         </div>
                                     </div>
+                                    <div class="mt-2">
+                                        <button class="btn btn-outline-danger py-1 trigger-btn">Trigger Now</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-xl-6">
                             <div class="thumbnail-card">
                                 <div class="d-flex justify-content-between align-items-center card-top">
-                                    <h3 class="card-type">Threshold</h3>
-                                    <a>Trigger Now</a>
+                                    <h3 class="card-type">ON-HOLD</h3>
                                     <div class="d-flex gap-3 threshold-action-btns">
                                         <a href="new-remote-care.html">
                                             <button><img src="assets/edit.svg" alt="edit"></button>
@@ -1056,6 +1073,9 @@
                                             </button>
                                         </div>
                                     </div>
+                                                                        <div class="mt-2">
+                                                                            <button class="btn btn-outline-danger py-1 trigger-btn">Trigger Now</button>
+                                                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1084,6 +1104,27 @@
                         </div>
                         <div class="close-btn">
                             <button class="btn border-0" type="submit" id="delete-remote-close"><img src="assets/icons/close.svg"
+                                    alt="close"></button>
+                        </div>
+                    </div>
+                </div>
+                        <!-- Trigger Now Popup -->
+                <div class="popup d-none justify-content-center align-items-center" id="trigger-popup">
+                    <div class="miss-doses-box bg-white rounded text-center position-relative ">
+                        <div class="mb-3">
+                            <img width="80"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/012/042/292/small_2x/warning-sign-icon-transparent-background-free-png.png"
+                                alt="">
+                        </div>
+                        <p>Are you sure to Trigger this threshold now?
+                        </p>
+                        <div class="d-flex gap-3 justify-content-center">
+                            <button class="primary-btn" id="trigger-yes">Yes</button>
+                            <button class="primary-btn" id="trigger-no">No</button>
+
+                        </div>
+                        <div class="close-btn">
+                            <button class="btn border-0" type="submit" id="trigger-close"><img src="assets/icons/close.svg"
                                     alt="close"></button>
                         </div>
                     </div>
@@ -1264,6 +1305,37 @@
         </div>
     </div>
     <script>
+            const triggerBtn = document.querySelectorAll('.trigger-btn');
+            const triggerPopup = document.getElementById('trigger-popup');
+            const triggerYes = document.getElementById('trigger-yes');
+            const triggerNo = document.getElementById('trigger-no');
+            const triggerClose = document.getElementById('trigger-close');
+
+        
+
+            triggerPopup.addEventListener(('click') , (e) => {
+                if (e.target === triggerPopup) {
+                    triggerPopup.classList.add('d-none')
+                }
+            })
+
+            triggerNo.addEventListener(('click') , () => {
+                triggerPopup.classList.add('d-none')
+            })
+
+            triggerYes.addEventListener(('click') , () => {
+                triggerPopup.classList.add('d-none')
+            })
+
+            triggerClose.addEventListener(('click') , () => {
+                triggerPopup.classList.add('d-none')
+            })
+            
+            triggerBtn.forEach((button) => {
+                button.addEventListener(('click'), () => {
+                    triggerPopup.classList.remove('d-none')
+                })
+            })
 
             const cancleBtn = document.getElementById('cancle-care-btn');
             const doneBtn = document.getElementById('done-care-btn');
