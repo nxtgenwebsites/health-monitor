@@ -1658,6 +1658,7 @@ a {
 }
 
 .modal .form-label {
+  width: 35% !important;
   color: #374151;
   margin-bottom: 0;
 }
@@ -2417,8 +2418,16 @@ a {
     font-size: 15px;
   }
 }
+.add-value-popup{
+  width: 100% !important;
+  max-width: 600px !important;
+}
 
 @media (max-width: 500px) {
+  .add-value-popup{
+    width: auto !important;
+    max-width: 600px !important;
+  }
   .history-title {
     font-size: 14px;
   }

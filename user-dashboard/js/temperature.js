@@ -12,14 +12,14 @@ function initializeTemperatureChart() {
             datasets: [
                 {
                     label: 'Celsius (°C)',
-                    data: [0, 30, 40, 50, 40, 50, 60, 70, 80, 70, 50 , 70 , 80],
+                    data: [40.6, 40.4, 40.5, 39.2 ,38.7 , 37.5, 30.3, 30.4, 34.3, 29.1, 32.1 , 29.9 , 41.5 , 31.6],
                     backgroundColor: '#3B82F6', // Blue color
                     borderRadius: 8,
                     barPercentage: 0.4
                 },
                 {
                     label: 'Fahrenheit (°F)',
-                    data: [112, 90, 128, 156, 124, 122, 182, 158, 176, 194, 112 , 110],
+                    data: [88, 92, 94, 83, 101, 93, 97, 92, 98, 89, 90 , 103],
                     backgroundColor: '#F97316', // Orange color
                     borderRadius: 8,
                     barPercentage: 0.4
@@ -38,7 +38,7 @@ function initializeTemperatureChart() {
                 y: {
                     beginAtZero: true,
                     min: 0,
-                    max: 220, // Fahrenheit max (around 212)
+                    max: 120, // Fahrenheit max (around 212)
                     ticks: {
                         stepSize: 20
                     },

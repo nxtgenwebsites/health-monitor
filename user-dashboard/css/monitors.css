@@ -1709,15 +1709,17 @@ padding-bottom: 40px;
     padding: 30px ;
   }
 
-    .add-monitor-box input {
-        padding: 5px 15px;
-        background: #DDF2F9;
-        color: #404040;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        width: 250px;
-    }
+  .add-monitor-box input[type="text"],
+.add-monitor-box input[type="number"] {
+    padding: 5px 15px;
+    background: #DDF2F9;
+    color: #404040;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 250px;
+
+}
     .add-monitor-box textarea {
         padding: 5px 15px;
         background: #DDF2F9;

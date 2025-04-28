@@ -1550,6 +1550,7 @@ transition: background-color 0.3s ease;
 .modal .form-label {
     color: #374151;
     margin-bottom: 0;
+      width: 35% !important;
 }
 
 .custom-input {
@@ -2326,4 +2327,17 @@ color: white;
 
 .filter-dot.bmi {
   background: #3b82f6;
+}
+
+
+.add-value-popup{
+  width: 100% !important;
+  max-width: 600px !important;
+}
+
+@media (max-width: 500px) {
+  .add-value-popup{
+    width: auto !important;
+    max-width: 600px !important;
+  }
 }

@@ -123,7 +123,7 @@ const handleBotResponse = (messageCount) => {
                 botMessage4.innerHTML = `  <div class="demo-message-4">
                                 <div class="d-flex gap-3 mt-3">
                                     <button id="yes-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Save</button>
-                                    <a href="/user-dashboard/care-request.html">
+                                    <a href="/user-dashboard/care-connect.html">
                                         <button id="no-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Share</button>
                                     </a>
                                     <button id="no-btn" class="btn border border-2 px-4 rounded-0 border-black text-black">Print</button>

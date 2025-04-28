@@ -497,12 +497,13 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-            <a href="/user-dashboard/care-requests-application.html">
-                <div class="menu-item">
-                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
-                    <span class="menu-text">CareConnect</span>
-                </div>
-            </a>
+                <a href="/user-dashboard/care-requests-application.html">
+                    <div class="menu-item">
+                        <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
+                            alt="a">
+                        <span class="menu-text">CareConnect</span>
+                    </div>
+                </a>
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -569,9 +570,9 @@
                             <li>
                                 <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                             </li>
-                                                    <li>
-                                                        <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
-                                                    </li>
+                            <li>
+                                <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                            </li>
                             <li>
                                 <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                             </li>
@@ -764,7 +765,8 @@
             </div>
             <a href="/user-dashboard/care-requests-application.html">
                 <div class="menu-item">
-                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
+                        alt="a">
                     <span class="menu-text">CareConnect</span>
                 </div>
             </a>
@@ -834,9 +836,9 @@
                         <li>
                             <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                         </li>
-                                                <li>
-                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
-                                                </li>
+                        <li>
+                            <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                        </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                         </li>
@@ -1044,12 +1046,37 @@
                         <div class="col-12">
                             <textarea class="form-control" placeholder="Additional Notes" rows="3"></textarea>
                         </div>
+                        <div class="col-12 ">
+                            <div class="mt-3  d-flex align-items-center">
+                                <label class="form-label me-3 w-25">Visibility</label>
+                                <div
+                                    class="d-flex align-items-center visibility-radio-btns justify-content-end gap-3 w-100">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input type="radio" name="visibility" id="visibility-hide"
+                                            style="transform: scale(1.15);">
+                                        <label for="visibility-hide" class="mx-1 mb-0">Hide</label>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input type="radio" name="visibility" id="visibility-Un-Hide"
+                                            style="transform: scale(1.15);">
+                                        <label for="visibility-Un-Hide" class="mx-1 mb-0">Un-Hide</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-0">
+                            <div class="upload-box">
+                                <input type="file" id="file-upload" hidden="">
+                                <label for="file-upload" class="upload-label">
+                                    <i class="bi bi-upload"></i>
+                                    <span class="upload-text">Upload</span>
+                                </label>
+                            </div>
+                        </div>
 
                         <div class="col-12 d-flex gap-2">
-                            <button class="btn btn-outline upload-btn">
-                                <i class="bi bi-upload me-2"></i>
-                                Upload
-                            </button>
                             <a class="btn btn-primary" href="/user-dashboard/appointments.html">Save</a>
                             <a class="btn btn-primary" href="/user-dashboard/appointments.html">Cancel</a>
                         </div>

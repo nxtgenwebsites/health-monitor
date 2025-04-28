@@ -1003,6 +1003,12 @@
                                     <span class="fw-bold">View Attachment Images</span>
                                 </div>
                             </div>
+                            <!-- View Attachment Images Card -->
+                            <div class="col-6 col-md-4">
+                                <div class="view-box" id="openPdfModalBtn">
+                                    <span class="fw-bold">View Attachment PDF</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1134,150 +1140,88 @@
                 </div>
             </div>
         </div>
-        <!-- Modal for Image Gallery -->
-        <div class="modal" id="imageModal">
-            <div class="modal-content">
-                <button class="close-btn" id="closeImageModal">
-                    <img src="assets/icons/close.svg" alt="close">
-                </button>
-                <div class="gallery">
-                    <div class="row row-gap-3">
-                        <div class="col-12 col-md-6">
-                            <img src="https://st2.depositphotos.com/2001403/5308/v/450/depositphotos_53088729-stock-illustration-concept-for-health-care-and.jpg"
-                                alt="Image 2" class="gallery-img">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="https://st2.depositphotos.com/2001403/5308/v/450/depositphotos_53088729-stock-illustration-concept-for-health-care-and.jpg"
-                                alt="Image 2" class="gallery-img">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="https://st2.depositphotos.com/2001403/5308/v/450/depositphotos_53088729-stock-illustration-concept-for-health-care-and.jpg"
-                                alt="Image 2" class="gallery-img">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="https://st2.depositphotos.com/2001403/5308/v/450/depositphotos_53088729-stock-illustration-concept-for-health-care-and.jpg"
-                                alt="Image 2" class="gallery-img">
-                        </div>
-                    </div>
+    <!-- Modal 1: Image Gallery -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content gallery-modal">
+            <button class="close-btn" id="closeGalleryModal">
+                <span>&times;</span>
+            </button>
+            <h2>Image Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 1" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 2" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 3" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 4" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 5" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
+                        alt="Image 6" class="gallery-img">
                 </div>
             </div>
         </div>
+    </div>
+    
+    <!-- Modal 2: Image Viewer -->
+    <div class="modal" id="imageViewerModal">
+        <div class="modal-content viewer-modal">
+            <button class="close-btn" id="closeImageViewerModal">
+                <span>&times;</span>
+            </button>
+            <div class="image-viewer">
+                <button class="nav-btn prev-btn" id="prevBtn">&lt;</button>
+                <div class="main-image-container">
+                    <img src="/placeholder.svg" alt="Selected Image" id="mainImage" class="main-image">
+                </div>
+                <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+            </div>
+            <div class="image-counter">
+                <span id="currentImageIndex">1</span> / <span id="totalImages">6</span>
+            </div>
+        </div>
+    </div>
 
-        <!-- Modal for PDF -->
-        <div class="modal" id="pdfModal">
-            <div class="modal-content">
-                <button class="btn py-0 bg-white border-0" id="closePdfModal">
-                                              
-                </button>
-                <!-- <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                    frameborder="0"></iframe> -->
-            </div>
-            <!-- Call Remote Care Popup -->
-            <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
-                <div class="paired-box bg-white rounded text-center position-relative ">
-                    <h5 class="my-3 test-primary">+1 (313) 560 1122</h5>
-                    <p class="my-3">Click on call Now to initiate a call</p>
-                    <div class="d-flex  gap-4 justify-content-center mt-4">
-                        <a href="tel:+1 (313) 560 1122" id="paired-black-btn" class="btn popup-btn">Call Now</a>
-                    </div>
-                    <div class="close-btn">
-                        <button class="btn border-0" type="submit" id="paired-close-btn"><img
-                                src="assets/icons/close.svg" alt="close"></button>
-                    </div>
-                </div>
-            </div>
-            <!-- Share Profile Popup -->
-            <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
-                <div class="profile-box bg-white rounded text-center position-relative w-100">
-                    <div
-                        class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-                        <h6>Copy Link</h6>
-                        <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
-                        <div class="d-flex">
-                            <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
-                                <img src="assets/copy.svg" alt="icon">
-                            </button>
-                            <div class="dropdown">
-                                <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/share.svg" alt="icon">
-                                </button>
-                                <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Forward</a></li>
-                                </ul>
-                            </div>
+    <!-- PDF Thumbnail Modal -->
+    <div class="modal d-block" id="pdfModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closePdfModal">
+                <span>&times;</span>
+            </button>
+            <h2>PDF Document</h2>
+            <div class="pdf-container">
+                <a href="https://www.google.co.uk/" target="_blank">
+                    <div class="pdf-thumbnail" id="pdfThumbnail">
+                        <!-- PDF Thumbnail Image -->
+                        <img src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/03/2923d2_94976e4261274039a6db993d9c25eeaamv2-scaled.jpeg?fit=1568%2C2014&quality=89&ssl=1" alt="PDF Thumbnail">
+                        <div class="pdf-corner-icon">PDF</div>
+                        <div class="pdf-overlay">
+                            <div class="pdf-icon">📄</div>
+                            <div class="pdf-text">Click to open PDF</div>
                         </div>
                     </div>
-                    <div class="close-btn">
-                        <button class="btn border-0" type="submit" id="profile-close-btn"><img
-                                src="assets/icons/close.svg" alt="close"></button>
-                    </div>
-                </div>
-            </div>
-            <!-- First Add Img Popup -->
-            <div class="popup d-none justify-content-center align-items-center" id="add-1-popup">
-                <div class="add-box bg-white rounded text-center w-100 position-relative">
-                    <div class="add-img-container">
-                        <img src="assets/add scapper.png" class="img-fluid rounded" alt="">
-                        <div class="learn-more mt-2">
-                            <a href="">Click to Learn More</a>
-                        </div>
-                        <div class="add-stats-container">
-                            <div class="stat-item">
-                                <i class="bi bi-hand-thumbs-up"></i>
-                                <span>22</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="bi bi-share-fill"></i>
-                                <span>23</span>
-                            </div>
-
-                            <div class="stat-item">
-                                <i class="bi bi-eye"></i>
-                                <span>23</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="add-close-btn">
-                        <button class="btn border-0" type="submit" id="add-close-btn"><img
-                                src="assets/white close btn.svg" alt="close"></button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add Video Popup -->
-            <div class="popup d-none justify-content-center align-items-center" id="add-2-popup">
-                <div class="add-video-box">
-                    <iframe src="https://www.youtube.com/embed/1WGTftm_IEU?si=LRPCj-aTZp5tMti9"></iframe>
-                </div>
-            </div>
-            <!-- Inactivity Modal -->
-            <div id="logoutModal">
-                <div class="modal-content">
-                    <h4>Session Expired</h4>
-                    <p>You have been inactive for 2 minutes. Please log in again.</p>
-                    <a href="/login.html">
-                        <button class="btn primary-btn w-100">Login Again</button>
-                    </a>
-                </div>
-            </div>
-            <!-- Right Sidebar -->
-            <div class="right-sidebar">
-                <div class="ad-container" id="add-1-img">
-                    <img src="assets/add scapper.png" alt="Advertisement">
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <i class="bi bi-eye-fill"></i>
-                            <span>22</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-heart-fill"></i>
-                            <span>23</span>
-                        </div>
-                    </div>
+                </a>
+                <div class="pdf-info">
+                    <div class="pdf-title">Sample Document.pdf</div>
+                    <div class="pdf-description">Click on the thumbnail to open the PDF in a new tab</div>
                 </div>
             </div>
         </div>
+    </div>
+
         <div class="modal fade show d-none" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel"
             aria-modal="true" role="dialog" style="display: block;">
             <div class="modal-dialog modal-dialog-centered">
@@ -1369,21 +1313,127 @@
         </div>
         <!-- Share Message end -->
         <script>
-            // Get elements
-            const imageCard = document.getElementById("imageCard");
-            const imageModal = document.getElementById("imageModal");
-            const closeImageModal = document.getElementById("closeImageModal");
+                const openPdfModalBtn = document.getElementById('openPdfModalBtn');
+                const pdfModal = document.getElementById('pdfModal');
+                const closePdfModal = document.getElementById('closePdfModal');
 
-            // Show image modal
-            imageCard.addEventListener("click", function () {
-                imageModal.style.display = "flex";
-            });
+                closePdfModal.addEventListener(('click') , () => {
+                    pdfModal.classList.add('d-none')
+                })
 
+                openPdfModalBtn.addEventListener(('click') , () => {
+                    pdfModal.classList.remove('d-none')
+                })
+            document.addEventListener('DOMContentLoaded', function () {
+                    // Get modal elements
+                    const galleryModal = document.getElementById('galleryModal');
+                    const imageViewerModal = document.getElementById('imageViewerModal');
 
-            // Close the image modal
-            closeImageModal.addEventListener("click", function () {
-                imageModal.style.display = "none";
-            });
+                    // Get buttons
+                    const openGalleryBtn = document.getElementById('imageCard');
+                    const closeGalleryModal = document.getElementById('closeGalleryModal');
+                    const closeImageViewerModal = document.getElementById('closeImageViewerModal');
+                    const prevBtn = document.getElementById('prevBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+
+                    // Get image elements
+                    const galleryImages = document.querySelectorAll('.gallery-img');
+                    const mainImage = document.getElementById('mainImage');
+                    const currentImageIndex = document.getElementById('currentImageIndex');
+                    const totalImages = document.getElementById('totalImages');
+
+                    // Set total images count
+                    totalImages.textContent = galleryImages.length;
+
+                    // Current image index
+                    let currentIndex = 0;
+
+                    // Open gallery modal
+                    openGalleryBtn.addEventListener('click', function () {
+                        galleryModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    });
+
+                    // Close gallery modal
+                    closeGalleryModal.addEventListener('click', function () {
+                        galleryModal.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Enable scrolling
+                    });
+
+                    // Close image viewer modal
+                    closeImageViewerModal.addEventListener('click', function () {
+                        imageViewerModal.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Enable scrolling
+                    });
+
+                    // Add click event to each gallery image
+                    galleryImages.forEach((img, index) => {
+                        img.addEventListener('click', function () {
+                            openImageViewer(index);
+                        });
+                    });
+
+                    // Open image viewer with selected image
+                    function openImageViewer(index) {
+                        currentIndex = index;
+                        updateMainImage();
+                        galleryModal.style.display = 'none'; // Hide gallery modal
+                        imageViewerModal.style.display = 'block'; // Show image viewer modal
+                    }
+
+                    // Update main image and counter
+                    function updateMainImage() {
+                        const imgSrc = galleryImages[currentIndex].src;
+                        const imgAlt = galleryImages[currentIndex].alt;
+
+                        mainImage.src = imgSrc;
+                        mainImage.alt = imgAlt;
+                        currentImageIndex.textContent = currentIndex + 1;
+                    }
+
+                    // Previous image
+                    prevBtn.addEventListener('click', function () {
+                        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                        updateMainImage();
+                    });
+
+                    // Next image
+                    nextBtn.addEventListener('click', function () {
+                        currentIndex = (currentIndex + 1) % galleryImages.length;
+                        updateMainImage();
+                    });
+
+                    // Close modals when clicking outside the modal content
+                    window.addEventListener('click', function (event) {
+                        if (event.target === galleryModal) {
+                            galleryModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
+                        if (event.target === imageViewerModal) {
+                            imageViewerModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
+                    });
+
+                    // Keyboard navigation
+                    document.addEventListener('keydown', function (event) {
+                        if (imageViewerModal.style.display === 'block') {
+                            if (event.key === 'ArrowLeft') {
+                                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                                updateMainImage();
+                            } else if (event.key === 'ArrowRight') {
+                                currentIndex = (currentIndex + 1) % galleryImages.length;
+                                updateMainImage();
+                            } else if (event.key === 'Escape') {
+                                imageViewerModal.style.display = 'none';
+                                document.body.style.overflow = 'auto';
+                            }
+                        } else if (galleryModal.style.display === 'block' && event.key === 'Escape') {
+                            galleryModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
+                    });
+                });
 
 
             document.addEventListener("DOMContentLoaded", function () {

@@ -1274,7 +1274,7 @@ h2 {
 
 /* Sidebar Icons */
 .sidebar-icon {
-  width: 30px !important;
+  width: 38px !important;
   height: 30px !important;
   margin-right: 12px;
   flex-shrink: 0;
@@ -1869,6 +1869,7 @@ canvas {
 
 .modal .form-label {
   color: #374151;
+  width: 35% !important;
   margin-bottom: 0;
 }
 
@@ -2404,4 +2405,16 @@ canvas {
 
 .filter-dot.fahrenheit{
   background: #F97316;
+}
+
+.add-value-popup{
+  width: 100% !important;
+  max-width: 600px !important;
+}
+
+@media (max-width: 500px) {
+  .add-value-popup{
+    width: auto !important;
+    max-width: 600px !important;
+  }
 }
