@@ -8,7 +8,7 @@ function initializeTemperatureChart() {
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['0°', '10°', '20°', '30°', '40°', '50°', '60°', '70°', '80°', '90°', '100°'],
+            labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [
                 {
                     label: 'Celsius (°C)',
