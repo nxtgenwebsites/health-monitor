@@ -1146,7 +1146,7 @@
             <button class="close-btn" id="closeGalleryModal">
                 <span>&times;</span>
             </button>
-            <h2>Image Gallery</h2>
+            <h2>Attachment Images</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="https://media.istockphoto.com/id/852404126/photo/stethoscope-head-lying-on-medical-forms-closeup.jpg?s=612x612&w=0&k=20&c=Xf3izwlbXPQNzDWW9koBF7fEAklIRmPhLkm3r2KpMOk="
@@ -1201,7 +1201,7 @@
             <button class="close-btn" id="closePdfModal">
                 <span>&times;</span>
             </button>
-            <h2>PDF Document</h2>
+            <h2>Attachment PDF</h2>
             <div class="pdf-container">
                 <a href="https://www.google.co.uk/" target="_blank">
                     <div class="pdf-thumbnail" id="pdfThumbnail">
@@ -1322,6 +1322,7 @@
                 })
 
                 openPdfModalBtn.addEventListener(('click') , () => {
+                    pdfModal.classList.add('d-flex')
                     pdfModal.classList.remove('d-none')
                 })
             document.addEventListener('DOMContentLoaded', function () {
