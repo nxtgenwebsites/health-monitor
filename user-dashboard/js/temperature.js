@@ -12,14 +12,14 @@ function initializeTemperatureChart() {
             datasets: [
                 {
                     label: 'Celsius (°C)',
-                    data: [0, 30, 40, 50, 40, 50, 60, 70, 80, 70, 50],
+                    data: [0, 30, 40, 50, 40, 50, 60, 70, 80, 70, 50 , 70 , 80],
                     backgroundColor: '#3B82F6', // Blue color
                     borderRadius: 8,
                     barPercentage: 0.4
                 },
                 {
                     label: 'Fahrenheit (°F)',
-                    data: [112, 90, 128, 156, 124, 122, 182, 158, 176, 194, 112],
+                    data: [112, 90, 128, 156, 124, 122, 182, 158, 176, 194, 112 , 110],
                     backgroundColor: '#F97316', // Orange color
                     borderRadius: 8,
                     barPercentage: 0.4
