@@ -17,32 +17,42 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
-            </a>
-            <dv class="mx-3 trustpilot">
-                <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
-            </dv>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <div>
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/logo.png" width="145" class="img-fluid" alt="logo">
+                </a>
+                <dv class="mx-3 trustpilot">
+                    <img src="assets/images/trustpilot.png" class="img-fluid" alt="logo">
+                </dv>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul
                     class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
                     <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+                        <a class="nav-link mx-2 text-primary" href="contact-us.html">Contact us</a>
                     </li>
                 </ul>
-                <div class="login-btn">
-                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
+                <div class="dropdown">
+                    <button class="btn primary-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Register
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="login.html">Login</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

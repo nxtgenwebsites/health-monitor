@@ -1,0 +1,113 @@
+/* Contact Page Specific Styles */
+.contact-page-section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.contact-page-section h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+}
+
+.contact-info-card h3,
+.contact-form-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.contact-item .icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.contact-item .content h5 {
+  margin-bottom: 5px;
+}
+
+.contact-item .content p {
+  color: var(--gray-color);
+  margin-bottom: 0;
+}
+
+.social-links-contact {
+  margin-top: 30px;
+}
+
+.social-links-contact h5 {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.form-control {
+  padding: 12px 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(11, 111, 192, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.map-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}

@@ -219,7 +219,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -313,7 +313,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -386,7 +386,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold upgrade-link"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -497,12 +497,13 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-            <a href="/user-dashboard/care-requests-application.html">
-                <div class="menu-item">
-                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
-                    <span class="menu-text">CareConnect</span>
-                </div>
-            </a>
+                <a href="/user-dashboard/manage-careConnect.html">
+                    <div class="menu-item">
+                        <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
+                            alt="a">
+                        <span class="menu-text">CareConnect</span>
+                    </div>
+                </a>
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -569,9 +570,9 @@
                             <li>
                                 <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                             </li>
-                                                    <li>
-                                                        <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
-                                                    </li>
+                            <li>
+                                <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                            </li>
                             <li>
                                 <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                             </li>
@@ -640,7 +641,7 @@
                                 d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
                                 fill="#9197B3" />
                         </svg>
-                        <span class="menu-text">Health Info</span>
+                        <span class="menu-text">Medical Fact Checker</span>
                     </div>
                 </a>
             </div>
@@ -762,9 +763,10 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-            <a href="/user-dashboard/care-requests-application.html">
+            <a href="/user-dashboard/manage-careConnect.html">
                 <div class="menu-item">
-                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
+                        alt="a">
                     <span class="menu-text">CareConnect</span>
                 </div>
             </a>
@@ -834,9 +836,9 @@
                         <li>
                             <a href='/user-dashboard/diabetes.html' class="dropdown-item-custom">Diabetes</a>
                         </li>
-                                                <li>
-                                                    <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
-                                                </li>
+                        <li>
+                            <a href='/user-dashboard/temperature.html' class="dropdown-item-custom">Temperature</a>
+                        </li>
                         <li>
                             <a href='/user-dashboard/results.html' class="dropdown-item-custom">Tests</a>
                         </li>
@@ -901,7 +903,7 @@
                             d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text ms-3">Health Info</span>
+                    <span class="menu-text">Medical Fact Checker</span>
                 </div>
             </a>
 
@@ -1220,14 +1222,15 @@
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
+                                    <button class="btn btn-primary px-4 w-auto">Add another Allergies</button>
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
                 </div>
@@ -1253,14 +1256,15 @@
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
+                        <button class="btn btn-primary px-4 w-auto">Add another Disability</button>
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
                 </div>
@@ -1281,14 +1285,15 @@
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
+                                    <button class="btn btn-primary px-4 w-auto">Add another Medical Conditions</button>
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
                 </div>
@@ -1306,13 +1311,13 @@
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
@@ -1322,36 +1327,36 @@
             <div class="details-section mb-4">
                 <h6 class="text-primary mb-4">Alcohol Consumption</h6>
                 <div class="row g-3">
-                                    <div class="col-12 col-md-6">
-                                        <select class="form-select">
-                                            <option selected disabled>Frequency</option>
-                                            <option>Daily</option>
-                                            <option>Weekly</option>
-                                            <option>Occasionally</option>
-                                            <option>Never</option>
-                                        </select>
-                                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Frequency</option>
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Occasionally</option>
+                            <option>Never</option>
+                        </select>
+                    </div>
                     <div class="col-12 col-md-6">
                         <input type="text" class="form-control" placeholder="Quantity ">
                     </div>
-                                    <div class="col-12">
-                                        <select class="form-select">
-                                            <option selected disabled>Type of Alcohol</option>
-                                            <option>Beer</option>
-                                            <option>Wine</option>
-                                            <option>Spirits</option>
-                                        </select>
-                                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected disabled>Type of Alcohol</option>
+                            <option>Beer</option>
+                            <option>Wine</option>
+                            <option>Spirits</option>
+                        </select>
+                    </div>
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
@@ -1361,26 +1366,26 @@
             <div class="details-section mb-4">
                 <h6 class="text-primary mb-4">Recreational Drug</h6>
                 <div class="row g-3">
-                                        <div class="col-12 col-md-6">
-                                            <input type="text" class="form-control" placeholder="Type of Substance">
-                                        </div>
-                                    <div class="col-12 col-md-6">
-                                        <select class="form-select">
-                                            <option selected disabled>Frequency</option>
-                                            <option>Daily</option>
-                                            <option>Weekly</option>
-                                            <option>Occasionally</option>
-                                            <option>Never</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <select class="form-select">
-                                            <option selected disabled>Method of Use</option>
-                                            <option>Smoking</option>
-                                            <option>Oral</option>
-                                            <option>Injection</option>
-                                        </select>
-                                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" placeholder="Type of Substance">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Frequency</option>
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Occasionally</option>
+                            <option>Never</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <select class="form-select">
+                            <option selected disabled>Method of Use</option>
+                            <option>Smoking</option>
+                            <option>Oral</option>
+                            <option>Injection</option>
+                        </select>
+                    </div>
                     <div class="col-12 col-md-6">
                         <input type="text" class="form-control" placeholder="State Health Issues Related to Use">
                     </div>
@@ -1390,14 +1395,15 @@
                     <div class="col-12">
                         <input type="text" class="form-control" placeholder="Notes">
                     </div>
-                        <div class="upload-box">
-                            <input type="file" id="file-upload" hidden="">
-                            <label for="file-upload" class="upload-label">
-                                <i class="bi bi-upload"></i>
-                                <span class="upload-text">Upload</span>
-                            </label>
-                        </div>
+                    <div class="upload-box">
+                        <input type="file" id="file-upload" hidden="">
+                        <label for="file-upload" class="upload-label">
+                            <i class="bi bi-upload"></i>
+                            <span class="upload-text">Upload</span>
+                        </label>
+                    </div>
                     <div class="col-12 d-flex gap-2">
+                                    <button class="btn btn-primary px-4 w-auto">Add another Recreational Drug</button>
                         <button class="btn btn-primary px-4">Save</button>
                     </div>
                 </div>

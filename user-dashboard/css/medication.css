@@ -1989,3 +1989,8 @@ a {
 .miss-doses-box h4{
   color: #dc2626;
 }
+
+.medication-disable-row td{
+  background: rgb(211, 211, 211) !important;
+  opacity: 70% !important;
+}

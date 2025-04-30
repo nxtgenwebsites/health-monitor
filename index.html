@@ -14,7 +14,7 @@
 
 <body>
     <!-- loading Start -->
-    <div class="loading-screen fixed-top h-100 w-100">
+    <div class="loading-screen fixed-top h-100 w-100 d-none">
         <div class="container d-flex flex-column gap-5">
             <div class="text-center">
                 <img src="assets/images/logo loading screen.png" class="img-fluid loading-logo" alt="logo_img" />
@@ -76,18 +76,27 @@
                 <ul
                     class="navbar-nav align-items-lg-center justify-content-lg-center flex-lg-grow-1 mb-2 mb-lg-0 mt-lg-0 mt-4">
                     <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-primary" href="about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link mx-2 text-primary" href="emergency.html">Emergency</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2 text-primary" href="community.html">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-primary" href="signup.html">Register</a>
+                        <a class="nav-link mx-2 text-primary" href="contact-us.html">Contact us</a>
                     </li>
                 </ul>
-                <div class="login-btn">
-                    <a href="login.html"><button class="btn primary-btn">Login</button></a>
-                </div>
+        <div class="dropdown">
+            <button class="btn primary-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Register
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+            </ul>
+        </div>
             </div>
         </div>
     </nav>

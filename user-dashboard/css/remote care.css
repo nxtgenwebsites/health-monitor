@@ -1630,3 +1630,22 @@ body {
 .miss-doses-box h4{
   color: #dc2626;
 }
+
+
+.status-dropdown-container {
+  border-radius: 10px !important;
+  background: linear-gradient(90deg, #0c75c2 0%, #1ecee4 100%);
+}
+
+.status-dropdown-container select{
+  border: none;
+  outline: none;
+  border-right: 5px solid #00000000 !important;
+  border-radius: 10px !important;
+  padding: 7px 15px;
+  background: transparent;
+  color: white;
+}
+.status-dropdown-container option{
+    background: white;
+  }

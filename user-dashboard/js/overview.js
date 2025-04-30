@@ -190,26 +190,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Weight Chart
-    const weightChart = new Chart(document.getElementById('weightChart').getContext('2d'), {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-            datasets: [{
-                label: 'Weight',
-                data: [10, 45, 30, 60, 30, 45],
-                borderColor: '#FF6B6B',
-                borderWidth: 2,
-                tension: 0.4,
-                fill: false,
-                pointRadius: 0,
-                pointHoverRadius: 6,
-                pointHoverBackgroundColor: '#FF6B6B',
-                pointHoverBorderColor: '#fff',
-                pointHoverBorderWidth: 2
-            }]
-        },
-        options: getResponsiveChartOptions('weight')
-    });
+    // const weightChart = new Chart(document.getElementById('weightChart').getContext('2d'), {
+    //     type: 'line',
+    //     data: {
+    //         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    //         datasets: [{
+    //             label: 'Weight',
+    //             data: [10, 45, 30, 60, 30, 45],
+    //             borderColor: '#FF6B6B',
+    //             borderWidth: 2,
+    //             tension: 0.4,
+    //             fill: false,
+    //             pointRadius: 0,
+    //             pointHoverRadius: 6,
+    //             pointHoverBackgroundColor: '#FF6B6B',
+    //             pointHoverBorderColor: '#fff',
+    //             pointHoverBorderWidth: 2
+    //         }]
+    //     },
+    //     options: getResponsiveChartOptions('weight')
+    // });
 
 
     const ctx = document.getElementById('patientProfileChart').getContext('2d');

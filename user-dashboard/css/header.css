@@ -859,5 +859,26 @@
 }
 
 #sidebar-menu .menu-item{
-  display: none !important;
+   display: flex;
+  align-items: center;
+  gap: 15px !important;
+  padding: 8px;
 }
+
+
+#sidebar-menu .menu-item{
+  display: flex;
+  align-items: center;
+  gap: 6px !important;
+  padding: 3px !important;
+}
+
+#sidebar-menu .menu-item:hover{
+  background: transparent !important;
+}
+
+  #sidebar-menu .menu-item img{
+    padding: 0 !important;
+    width: 25px !important;
+    height: 25px !important;
+  }

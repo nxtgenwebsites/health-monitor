@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCentreApp | CareConnect</title>
+    <title>HealthCentreApp | CareRequest</title>
     <link rel="shortcut icon" href="../assets/images/logo loading screen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/care-request.css">
+    <link rel="stylesheet" href="css/upload-details.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -925,11 +925,12 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="d-flex justify-content-between align-items-center care-pages">
+           
                 <a href="/user-dashboard/care-connect.html">
-                    <h4 class="active text-decoration-underline">CareConnect</h4>
+                    <h4>CareConnect</h4>
                 </a>
                 <a href="/user-dashboard/add-medical-records.html">
-                    <h4>Add Medical Records</h4>
+                    <h4  class="active text-decoration-underline">Add Medical Records</h4>
                 </a>
                 <a href="/user-dashboard/preview-care-connect.html">
                     <h4>Preview CareConnect</h4>
@@ -938,139 +939,154 @@
                     <h4>Grant Access</h4>
                 </a>
             </div>
-            <div class="user-info mt-3 text-center mt-4" id="user-details">
+            <div class="user-info mt-3 text-center my-4" id="user-details-heading">
                 <h2>Brandon Peters</h2>
                 <h5>Lagos, Nigeria | Male | June 28, 1985</h5>
             </div>
-            <div class="bg-white p-4 rounded-2 mt-4">
-                <div class="row">
-                    <div class="col-12">
-                        <textarea placeholder="In your own words state your symptoms" class="form-control" id=""
-                            cols="20" rows="5"></textarea>
-                    </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">When did your symptoms start?</h5>
-                        <input type="date" id="startDate" class="form-control" />
-                    </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">How long have you had these symptoms?</h5>
-                        <input id="duration" class="form-control text-area" readonly disabled />
-                    </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">Have you had this symptom before?</h5>
-                        <select class="form-select" id="symptoms-dropdown">
-                            <option value="" disabled selected>Select</option>
-                            <option value="yes" class="form-option">Yes</option>
-                            <option value="no" class="form-option">No</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">How long did it last?</h5>
-                        <input type="text" class="form-control symptom-dependent" disabled="">
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What treatment did you take for those previous symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">How would you rate your pain on a scale of 1 to 10 (10 being the highest)?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Describe any changes in the symptom since it started.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What do you think caused your symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Describe any existing health issues.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">State any medication you have?</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">State any allergies you have.</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Give detail of any illness in the last 4 weeks.</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What help do you need with this symptoms</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area"></textarea>
-                    </div>
-                    <div class="col-12 chk-container">
-                        <h5 class="my-2">Do you have any images of your symptoms?</h5>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="form-check mb-0">
-                                <input type="radio" name="symptoms-images" class="form-check-input" id="yes">
-                                <label class="form-check-label" for="yes">Yes</label>
+            <div class="content-container bg-white mt-4">
+                <div class="text-center heading-box">
+                    <h6 class="mb-0">CareConnect Medical Records</h6>
+                </div>
+                <div class="px-4 py-3">
+                    <div class="inp-container mt-2">
+                        <div class="select-monitor d-flex align-items-center  gap-4">
+                            <h5 class="mb-0">Select Monitor:</h5>
+                            <div>
+                                <div class="form-group d-flex justify-content-between ms-4">
+                                    <select id="countries" name="countries" data-placeholder=" Select Monitor" multiple
+                                        data-multi-select>
+                                        <option value="BMI">BMI</option>
+                                        <option value="Blood Pressure">Blood Pressure</option>
+                                        <option value="Diabetes">Diabetes</option>
+                                        <option value="Tests">Tests</option>
+                                        <option value="Medication">Medication</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-check mb-0">
-                                <input type="radio" name="symptoms-images" class="form-check-input" id="no">
-                                <label class="form-check-label" for="no">No</label>
+                        </div>
+                        <div class="select-date d-flex align-items-center gap-4 mt-4">
+                            <h5 class="mb-0">Select Date Range:</h5>
+                            <input type="date">
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="monitor-section">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="monitor-title">Blood Pressure</h4>
+                                <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                            </div>
+                            <table class="monitor-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center text-primary">Highest</th>
+                                        <th class="text-center text-primary">Average</th>
+                                        <th class="text-center text-primary">Lowest</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Systolic</td>
+                                        <td class="text-center">123</td>
+                                        <td class="text-center">87</td>
+                                        <td class="text-center">100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Diastolic</td>
+                                        <td class="text-center">154</td>
+                                        <td class="text-center">96</td>
+                                        <td class="text-center">85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pulse</td>
+                                        <td class="text-center">123</td>
+                                        <td class="text-center">87</td>
+                                        <td class="text-center">100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="monitor-section">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="monitor-title">Diabetes</h4>
+                                <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                            </div>
+                            <table class="monitor-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center text-primary">Highest</th>
+                                        <th class="text-center text-primary">Average</th>
+                                        <th class="text-center text-primary">Lowest</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sugar Level</td>
+                                        <td class="text-center">123</td>
+                                        <td class="text-center">87</td>
+                                        <td class="text-center">100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="monitor-section">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="monitor-title">Medication</h4>
+                                <h5 class="monitor-date">23 Dec, 2024 - 30 Dec, 2024</h5>
+                            </div>
+                            <table class="monitor-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center text-primary">Dose</th>
+                                        <th class="text-center text-primary">Frequency</th>
+                                        <th class="text-center text-primary">Started</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ProsPane</td>
+                                        <td class="text-center">10mg</td>
+                                        <td class="text-center">Once a day</td>
+                                        <td class="text-center">24 Dec, 2024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="text-primary">Tests</h4>
+                        <div class="test-result-card mt-4">
+                            <div class="lab-info">
+                                <img src="/user-dashboard/assets/images/user dashboard/BioTech Ltd.svg"
+                                    alt="BioTech Ltd" class="lab-avatar">
+                                <div class="lab-details">
+                                    <h3>Lisson BioTech</h3>
+                                    <span class="lab-type">Online</span>
+                                </div>
+                            </div>
+                            <div class="test-date">Blood Pressure</div>
+                            <div class="d-flex gap-2">
+                                <button class="view-results-btn">View test results</button>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-3 d-flex gap-3 d-none" id="upload-symptoms-images">
-                        <div class="upload-box">
-                            <i class="bi bi-cloud-upload fs-3"></i>
-                            <h6>Click to <br> upload</h6>
-                            <input class="d-none" type="file" accept="image/*">
-                        </div>
-                        <div class="upload-box">
-                            <i class="bi bi-plus-circle fs-3"></i>
-                            <h6 class="mt-2">Add More</h6>
-                            <input class="d-none" type="file" accept="image/*">
-                        </div>
-                    </div>
-                    <div class="col-12 chk-container mt-4">
-                        <h5 class="my-2">In order for healthcare professionals to understand your situation better, it
-                            is advisable to add your last 4 weeks
-                            health monitor readings with this CareRequest, are you happy for them to be included?</h5>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="form-check mb-0">
-                                <input type="radio" name="remote-care" class="form-check-input" id="yes">
-                                <label class="form-check-label" for="yes">Yes</label>
-                            </div>
-                            <div class="form-check mb-0">
-                                <input type="radio" name="remote-care" class="form-check-input" id="no">
-                                <label class="form-check-label" for="no">No</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5 d-flex gap-4">
-                        <button class="primary-btn" id="submit-btn">Save</button>
-                        <a href="/user-dashboard/upload-details.html">
-                            <button class="primary-btn">Next</button>
+                    <div class="mt-4 d-flex gap-3">
+                        <a href="/user-dashboard/care-request.html">
+                            <button class="primary-btn">Edit</button>
+                        </a>
+                        <a href="/user-dashboard/preview-care-request .html">
+                            <button class="primary-btn">Preview</button>
+                        </a>
+                        <a href="/user-dashboard/manage-care-requests.html">
+                            <button class="primary-btn">Save</button>
                         </a>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- Call Remote Care Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="paired-device-popup">
@@ -1269,81 +1285,233 @@
     </div>
     <!-- Share Message end -->
     <script>
-        document.querySelectorAll(".upload-box").forEach(box => {
-            let input = box.querySelector("input");
+        // History Drop Down  
+        class MultiSelect {
 
-            box.addEventListener("click", () => {
-                input.click();
-            });
-
-            input.addEventListener("change", (event) => {
-                const file = event.target.files[0];
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const yesRadio = document.getElementById("yes");
-            const noRadio = document.getElementById("no");
-            const uploadContainer = document.getElementById("upload-symptoms-images");
-
-            yesRadio.addEventListener("change", function () {
-                uploadContainer.classList.remove("d-none");
-            });
-
-            noRadio.addEventListener("change", function () {
-                uploadContainer.classList.add("d-none");
-            });
-        });
-
-
-        document.getElementById("symptoms-dropdown").addEventListener("change", function () {
-            let isYesSelected = this.value === "yes";
-            let dependentInputs = document.querySelectorAll(".symptom-dependent");
-
-            dependentInputs.forEach(input => {
-                input.disabled = !isYesSelected; // Enable if "Yes", Disable if "No"
-            });
-        });
-
-        document.getElementById("startDate").addEventListener("change", function () {
-            let startDate = new Date(this.value);
-            let today = new Date();
-            today.setHours(0, 0, 0, 0); // Ensure time doesn't affect comparison
-
-            let durationInput = document.getElementById("duration");
-
-            if (startDate > today) {
-                alert("Future dates cannot be selected.");
-                this.value = "";
-                durationInput.value = "";
-                durationInput.disabled = true;
-                return;
+            constructor(element, options = {}) {
+                let defaults = {
+                    placeholder: 'Select item(s)',
+                    max: null,
+                    search: true,
+                    selectAll: true,
+                    listAll: true,
+                    closeListOnItemSelect: false,
+                    name: '',
+                    width: '',
+                    height: '',
+                    dropdownWidth: '',
+                    dropdownHeight: '',
+                    data: [],
+                    onChange: function () { },
+                    onSelect: function () { },
+                    onUnselect: function () { }
+                };
+                this.options = Object.assign(defaults, options);
+                this.selectElement = typeof element === 'string' ? document.querySelector(element) : element;
+                for (const prop in this.selectElement.dataset) {
+                    if (this.options[prop] !== undefined) {
+                        this.options[prop] = this.selectElement.dataset[prop];
+                    }
+                }
+                this.name = this.selectElement.getAttribute('name') ? this.selectElement.getAttribute('name') : 'multi-select-' + Math.floor(Math.random() * 1000000);
+                if (!this.options.data.length) {
+                    let options = this.selectElement.querySelectorAll('option');
+                    for (let i = 0; i < options.length; i++) {
+                        this.options.data.push({
+                            value: options[i].value,
+                            text: options[i].innerHTML,
+                            selected: options[i].selected,
+                            html: options[i].getAttribute('data-html')
+                        });
+                    }
+                }
+                this.element = this._template();
+                this.selectElement.replaceWith(this.element);
+                this._updateSelected();
+                this._eventHandlers();
             }
 
-            durationInput.disabled = false; // Enable input
-
-            let years = today.getFullYear() - startDate.getFullYear();
-            let months = today.getMonth() - startDate.getMonth();
-            let days = today.getDate() - startDate.getDate();
-
-            if (days < 0) {
-                months--;
-                let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-                days += prevMonth.getDate();
+            _template() {
+                let optionsHTML = '';
+                for (let i = 0; i < this.data.length; i++) {
+                    optionsHTML += `
+    <div class="multi-select-option${this.selectedValues.includes(this.data[i].value) ? ' multi-select-selected' : ''}" data-value="${this.data[i].value}">
+        <span class="multi-select-option-radio"></span>
+        <span class="multi-select-option-text">${this.data[i].html ? this.data[i].html : this.data[i].text}</span>
+    </div>
+`;
+                }
+                let selectAllHTML = '';
+                let template = `
+<div class="multi-select ${this.name}"${this.selectElement.id ? ' id="' + this.selectElement.id + '"' : ''} style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+    ${this.selectedValues.map(value => `<input type="hidden" name="${this.name}[]" value="${value}">`).join('')}
+    <div class="multi-select-header" style="${this.width ? 'width:' + this.width + ';' : ''}${this.height ? 'height:' + this.height + ';' : ''}">
+        <span class="multi-select-header-max">${this.options.max ? this.selectedValues.length + '/' + this.options.max : ''}</span>
+        <span class="multi-select-header-placeholder">${this.placeholder}</span>
+    </div>
+    <div class="multi-select-options" style="${this.options.dropdownWidth ? 'width:' + this.options.dropdownWidth + ';' : ''}${this.options.dropdownHeight ? 'height:' + this.options.dropdownHeight + ';' : ''}">
+        ${selectAllHTML}
+        ${optionsHTML}
+    </div>
+</div>
+`;
+                let element = document.createElement('div');
+                element.innerHTML = template;
+                return element;
             }
 
-            if (months < 0) {
-                years--;
-                months += 12;
+            _eventHandlers() {
+                let headerElement = this.element.querySelector('.multi-select-header');
+                this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                    option.onclick = () => {
+                        let selected = true;
+                        if (!option.classList.contains('multi-select-selected')) {
+                            if (this.options.max && this.selectedValues.length >= this.options.max) {
+                                return;
+                            }
+                            option.classList.add('multi-select-selected');
+                            if (this.options.listAll === true || this.options.listAll === 'true') {
+                                if (this.element.querySelector('.multi-select-header-option')) {
+                                    let opt = Array.from(this.element.querySelectorAll('.multi-select-header-option')).pop();
+                                    opt.insertAdjacentHTML('afterend', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                } else {
+                                    headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                                }
+                            }
+                            this.element.querySelector('.multi-select').insertAdjacentHTML('afterbegin', `<input type="hidden" name="${this.name}[]" value="${option.dataset.value}">`);
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = true;
+                        } else {
+                            option.classList.remove('multi-select-selected');
+                            this.element.querySelectorAll('.multi-select-header-option').forEach(headerOption => headerOption.dataset.value == option.dataset.value ? headerOption.remove() : '');
+                            this.element.querySelector(`input[value="${option.dataset.value}"]`).remove();
+                            this.data.filter(data => data.value == option.dataset.value)[0].selected = false;
+                            selected = false;
+                        }
+                        if (this.options.listAll === false || this.options.listAll === 'false') {
+                            if (this.element.querySelector('.multi-select-header-option')) {
+                                this.element.querySelector('.multi-select-header-option').remove();
+                            }
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                        }
+                        if (!this.element.querySelector('.multi-select-header-option')) {
+                            headerElement.insertAdjacentHTML('afterbegin', `<span class="multi-select-header-placeholder">${this.placeholder}</span>`);
+                        } else if (this.element.querySelector('.multi-select-header-placeholder')) {
+                            this.element.querySelector('.multi-select-header-placeholder').remove();
+                        }
+                        if (this.options.max) {
+                            this.element.querySelector('.multi-select-header-max').innerHTML = this.selectedValues.length + '/' + this.options.max;
+                        }
+                        this.element.querySelectorAll('.multi-select-option').forEach(option => option.style.display = 'flex');
+                        if (this.options.closeListOnItemSelect === true || this.options.closeListOnItemSelect === 'true') {
+                            headerElement.classList.remove('multi-select-header-active');
+                        }
+                        this.options.onChange(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        if (selected) {
+                            this.options.onSelect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        } else {
+                            this.options.onUnselect(option.dataset.value, option.querySelector('.multi-select-option-text').innerHTML, option);
+                        }
+                    };
+                });
+                headerElement.onclick = () => headerElement.classList.toggle('multi-select-header-active');
+                if (this.options.selectAll === true || this.options.selectAll === 'true') {
+                    let selectAllButton = this.element.querySelector('.multi-select-all');
+                }
+                if (this.selectElement.id && document.querySelector('label[for="' + this.selectElement.id + '"]')) {
+                    document.querySelector('label[for="' + this.selectElement.id + '"]').onclick = () => {
+                        headerElement.classList.toggle('multi-select-header-active');
+                    };
+                }
+                document.addEventListener('click', event => {
+                    if (!event.target.closest('.' + this.name) && !event.target.closest('label[for="' + this.selectElement.id + '"]')) {
+                        headerElement.classList.remove('multi-select-header-active');
+                    }
+                });
             }
 
-            let durationText = "";
-            if (years > 0) durationText += years + (years > 1 ? " years " : " year ");
-            if (months > 0) durationText += months + (months > 1 ? " months " : " month ");
-            if (days > 0) durationText += days + (days > 1 ? " days" : " day");
+            _updateSelected() {
+                if (this.options.listAll === true || this.options.listAll === 'true') {
+                    this.element.querySelectorAll('.multi-select-option').forEach(option => {
+                        if (option.classList.contains('multi-select-selected')) {
+                            this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option" data-value="${option.dataset.value}">${option.querySelector('.multi-select-option-text').innerHTML}</span>`);
+                        }
+                    });
+                } else {
+                    if (this.selectedValues.length > 0) {
+                        this.element.querySelector('.multi-select-header').insertAdjacentHTML('afterbegin', `<span class="multi-select-header-option">${this.selectedValues.length} selected</span>`);
+                    }
+                }
+                if (this.element.querySelector('.multi-select-header-option')) {
+                    this.element.querySelector('.multi-select-header-placeholder').remove();
+                }
+            }
 
-            durationInput.value = durationText.trim();
-        });
+            get selectedValues() {
+                return this.data.filter(data => data.selected).map(data => data.value);
+            }
+
+            get selectedItems() {
+                return this.data.filter(data => data.selected);
+            }
+
+            set data(value) {
+                this.options.data = value;
+            }
+
+            get data() {
+                return this.options.data;
+            }
+
+            set selectElement(value) {
+                this.options.selectElement = value;
+            }
+
+            get selectElement() {
+                return this.options.selectElement;
+            }
+
+            set element(value) {
+                this.options.element = value;
+            }
+
+            get element() {
+                return this.options.element;
+            }
+
+            set placeholder(value) {
+                this.options.placeholder = value;
+            }
+
+            get placeholder() {
+                return this.options.placeholder;
+            }
+
+            set name(value) {
+                this.options.name = value;
+            }
+
+            get name() {
+                return this.options.name;
+            }
+
+            set width(value) {
+                this.options.width = value;
+            }
+
+            get width() {
+                return this.options.width;
+            }
+
+            set height(value) {
+                this.options.height = value;
+            }
+
+            get height() {
+                return this.options.height;
+            }
+
+        }
+        document.querySelectorAll('[data-multi-select]').forEach(select => new MultiSelect(select));
 
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
@@ -1369,13 +1537,13 @@
             patientLink.classList.add('d-none');
             normalMonitorsMenu.classList.add('d-none');
             normalMonitorsMobile.classList.add('d-none');
-            document.getElementById('user-details').classList.remove('d-none');
+            document.getElementById('user-details-heading').classList.remove('d-none')
         } else {
             patientDropDown.classList.add('d-none');
+            document.getElementById('user-details-heading').classList.add('d-none')
             cdhaProfile.classList.add('d-lg-none');
             dhaMonitorsMenu.classList.add('d-none');
             dhaMonitorsMobile.classList.add('d-none');
-            document.getElementById('user-details').classList.add('d-none');
         }
 
         let inactivityTime = 120000;
@@ -1399,6 +1567,18 @@
         resetTimer();
 
         // Share Message
+        const shareMsg = document.querySelector('.share-message');
+        const crossIcon = document.querySelector('.share-img i');
+        const blockBtn = document.querySelector('#share')
+
+        crossIcon.addEventListener('click', () => {
+            shareMsg.style.display = 'none';
+        });
+
+        blockBtn.addEventListener('click', () => {
+            shareMsg.style.display = 'block';
+        });
+
         const previewBtn = document.getElementById('preview-button');
 
 

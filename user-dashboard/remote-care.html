@@ -218,7 +218,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -312,7 +312,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -385,7 +385,7 @@
                     <li class="border-top mt-2 pt-2">
                         <a class="dropdown-item py-2 text-primary fw-semibold upgrade-link"
                             href="/user-dashboard/upgrade-to-dha.html">
-                            Upgrade to CDHA
+                            Upgrade to CdHP
                         </a>
                     </li>
                 </ul>
@@ -496,7 +496,7 @@
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-                <a href="/user-dashboard/care-requests-application.html">
+                <a href="/user-dashboard/manage-careConnect.html">
                     <div class="menu-item">
                         <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
                             alt="a">
@@ -640,7 +640,7 @@
                                 d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
                                 fill="#9197B3" />
                         </svg>
-                        <span class="menu-text">Health Info</span>
+                        <span class="menu-text">Medical Fact Checker</span>
                     </div>
                 </a>
             </div>
@@ -761,7 +761,7 @@
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-            <a href="/user-dashboard/care-requests-application.html">
+            <a href="/user-dashboard/manage-careConnect.html">
                 <div class="menu-item">
                     <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
                         alt="a">
@@ -899,7 +899,7 @@
                             d="M12 14.6016C11.58 14.6016 11.25 14.2616 11.25 13.8516C11.25 13.4416 11.59 13.1016 12 13.1016C12.41 13.1016 12.75 13.4416 12.75 13.8516C12.75 14.2616 12.42 14.6016 12 14.6016Z"
                             fill="#9197B3" />
                     </svg>
-                    <span class="menu-text ms-3">Health Info</span>
+                    <span class="menu-text">Medical Fact Checker</span>
                 </div>
             </a>
 
@@ -945,7 +945,13 @@
                         <div class="col-12 col-xl-6">
                             <div class="thumbnail-card position-relative">
                                 <div class="d-flex justify-content-between align-items-center card-top">
-                                    <h3 class="card-type">LIVE</h3>
+<div class="status-dropdown-container">
+    <select id="statusDropdown">.
+        <option value="Live" class="text-black">Live</option>
+        <option value="Stopped" class="text-black">Stopped</option>
+        <option value="Completed" class="text-black">Completed</option>
+    </select>
+</div>
                                     <div class="d-flex gap-3 threshold-action-btns">
                                         <a href="new-remote-care.html">
                                             <button><img src="assets/edit.svg" alt="edit"></button>
@@ -1010,7 +1016,13 @@
                         <div class="col-12 col-xl-6">
                             <div class="thumbnail-card position-relative">
                                 <div class="d-flex justify-content-between align-items-center card-top">
-                                    <h3 class="card-type">ON-HOLD</h3>
+    <div class="status-dropdown-container">
+        <select id="statusDropdown">.
+            <option value="Live" class="text-black">Live</option>
+            <option value="Stopped" class="text-black">Stopped</option>
+            <option value="Completed" class="text-black">Completed</option>
+        </select>
+    </div>
                                     <div class="d-flex gap-3 threshold-action-btns">
                                         <a href="new-remote-care.html">
                                             <button><img src="assets/edit.svg" alt="edit"></button>

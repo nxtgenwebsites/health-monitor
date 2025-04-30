@@ -35,6 +35,12 @@ body {
   transition: 0.2s ease;
 }
 
+.register-btn{
+  background: linear-gradient(to right, #0b6fc0, #0ae0fc) !important;
+  color: white !important;
+  border: 1px solid transparent !important;
+}
+
 .primary-btn:hover {
   background: linear-gradient(to right, #0b6fc0, #0ae0fc);
   color: white;
