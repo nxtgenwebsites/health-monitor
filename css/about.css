@@ -118,8 +118,8 @@ nav .primary-btn {
     font-weight: 200;
 }
 .second-heading {
-    font-size: 50px;
-    padding-left: 45px;
+    font-size: 45px;
+    /* padding-left: 45px; */
     color: var(--primary-color);
 }
 
