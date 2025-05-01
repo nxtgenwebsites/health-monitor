@@ -47,6 +47,12 @@ section {
   transition: var(--transition);
 }
 
+
+nav .primary-btn {
+  padding: 3px 33px !important;
+  font-weight: 400 !important;
+}
+
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -83,7 +89,8 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .section-title h2 {
@@ -94,6 +101,39 @@ section {
 .navbar{
   background: white !important;
 }
+
+
+/* Emergency start */
+.about-hero-section {
+  padding: 80px 0;
+  background: var(--primary-color) !important;
+}
+.about-hero-section img{
+  width: 90% !important;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.first-heading {
+    font-weight: 200;
+}
+.second-heading {
+    font-size: 50px;
+    padding-left: 45px;
+    color: var(--primary-color);
+}
+
+.emergency-heading p {
+    color: #2e2e2e !important;
+    font-size: 18px;
+}
+
+.emergency-heading button {
+    border: 0;
+    background: var(--btn-gradient) !important;
+    padding: 9px 13px;
+}
+
 
 /* About Section */
 .about-section {
@@ -195,6 +235,10 @@ section {
   margin-bottom: 5px;
 }
 
+.credential-card img{
+  margin-bottom: 10px;
+  width: 35px;
+}
 .credential-card p {
   color: var(--gray-color);
   margin-bottom: 0;
@@ -202,11 +246,27 @@ section {
 
 /* Mission Section */
 .mission-section {
-  background-color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.mission-section .divider{
+  background: white !important;
+}
+
+.text-para {
+  font-size: 18px !important;
+}
+
+.mission-section .section-title h6{
+  color: white !important;
 }
 
 .mission-stats {
   margin-top: 50px;
+}
+
+.plan-included  img{
+  display: none;
 }
 
 .stat-card {
