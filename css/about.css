@@ -115,12 +115,23 @@ nav .primary-btn {
 }
 
 .first-heading {
-    font-weight: 200;
+    font-weight: 400;
 }
 .second-heading {
     font-size: 45px;
     /* padding-left: 45px; */
     color: var(--primary-color);
+}
+
+
+.emergency-img{
+  position: relative;
+}
+.emergency-img img{
+  position: absolute;
+  margin-left: 120px;
+  margin-top: -80px;
+  width: 485px;
 }
 
 .emergency-heading p {
@@ -138,7 +149,7 @@ nav .primary-btn {
 /* About Section */
 .about-section {
   background-color: white;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 .about-section h1 {
