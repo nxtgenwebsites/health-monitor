@@ -150,6 +150,7 @@ nav .primary-btn {
 .about-section {
   background-color: white;
   padding-top: 140px;
+  padding-bottom: 25px  !important;
 }
 
 .about-section h1 {
@@ -177,10 +178,12 @@ nav .primary-btn {
   overflow: hidden;
   box-shadow: var(--box-shadow);
 }
-
+.about-image {
+  height: 82% !important;
+}
 .about-image img {
   width: 100%;
-  height: 100%;
+  height: 130% !important;
   object-fit: cover;
   object-position: center;
 }
@@ -258,6 +261,7 @@ nav .primary-btn {
 /* Mission Section */
 .mission-section {
   background-color: var(--primary-color);
+  color: white !important;
 }
 
 .mission-section .divider{
