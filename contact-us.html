@@ -45,15 +45,11 @@
                         <a class="nav-link mx-2 text-primary" href="contact-us.html">Contact us</a>
                     </li>
                 </ul>
-                <div class="dropdown">
-                    <button class="btn primary-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Register
+                <a href="login.html">
+                    <button class="btn primary-btn" type="button">
+                        Login
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="signup.html">Get Registered</a></li>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
-                    </ul>
-                </div>
+                </a>
             </div>
         </div>
     </nav>
@@ -61,68 +57,77 @@
 
 
     <!-- Contact Section -->
-    <section class="contact-page-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="section-title">
-                        <h1>Contact Us</h1>
-                        <div class="divider mx-auto"></div>
-                        <p class="lead">We'd love to hear from you. Get in touch with our team.</p>
+    <div class="container-fluid p-0">
+        <div class="contact-container">
+            <div class="row g-0">
+                <!-- Left Column - Contact Info -->
+                <div class="col-md-6 contact-info">
+                    <div class="content-wrapper">
+                        <h1><span class="blue-text">Connect</span> with Our<br>Team of Experts</h1>
+                        <p class="subtitle">Contact our team of excellence-driven experts today to bring your project to life.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="bi bi-telephone"></i>
+                                <a href="telto:">713.953.5200</a>
+                            </div>
+                            <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                                <a href="mailto:info@HealthCentre.app">info@HealthCentre.app</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Join Team Box with Image -->
+                        <div class="join-team-box">
+                            <div class="join-team-content">
+                                <h2>Want to become an Affiliate Partner?<h2>
+                                <p class="job-board-btn">Visit our Affiliate Program & Start Earning today!!!<i class="fas fa-arrow-right"></i></p>
+                            </div>
+                            <div class="team-image-container">
+                                <img src="assets/images/female-doctor.png" alt="Team member" class="team-image">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row g-5 mt-4">
-                <div class="col-lg-12">
-                    <div class="contact-form-card">
-                        <h3>Send us a <span class="text-primary">Message</span></h3>
+                
+                <!-- Right Column - Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact-form">
                         <form id="contactForm">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Your Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                                    </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="last-name" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="last-name"
-                                            placeholder="Enter your name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Enter your email">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="phone-number" class="form-label">Phone Number</label>
-                                        <input type="text" class="form-control" id="phone-number"
-                                            placeholder="Enter subject">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mb-4">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="5"
-                                            placeholder="Enter your message"></textarea>
-                                    </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                                 </div>
                             </div>
-                            <div class="">
-                                <button type="submit" class="btn primary-btn">Send Message</button>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                                </div>
                             </div>
+                            
+                            <div class="mb-3">
+                                <label for="message">Tell Us About Your Project</label>
+                                <textarea class="form-control" id="message" rows="6" placeholder="Leave your message here"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">SUBMIT <i class="fas fa-arrow-right"></i></button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 <!-- Footer start -->
 <footer class="footer-section">
@@ -161,8 +166,7 @@
                     <li class="nav-item"><a href="/user-dashboard/hospitals.html" class="nav-link">Hospitals</a>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Pharmacies</a></li>
-                    <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Community Digital
-                            Health Assistants</a></li>
+                    <li class="nav-item"><a href="/user-dashboard/Chemists.html" class="nav-link">Certified Digital Health Practitioner</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Tech Support</a></li>
                     <li class="nav-item"><a href="/user-dashboard/complaints.html" class="nav-link">Complaints</a>
                     </li>

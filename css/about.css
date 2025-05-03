@@ -678,6 +678,10 @@ nav .primary-btn {
     padding: 70px 0;
   }
 
+.emergency-section {
+  padding-bottom: 250px !important;
+}
+
   .about-image {
     margin-bottom: 50px;
   }
@@ -706,6 +710,15 @@ nav .primary-btn {
     padding: 50px 0;
   }
 
+.emergency-img img{
+  margin-top: -50px;
+  margin-left: 0 !important;
+}
+
+.emergency-section {
+  padding-bottom: 350px !important;
+}
+
   .divider {
     margin: 15px 0;
   }
@@ -718,4 +731,43 @@ nav .primary-btn {
     padding: 8px 15px;
     font-size: 0.9rem;
   }
+}
+@media (max-width: 500px) {
+.emergency-img img{
+  /* margin-top: 50px; */
+  position: unset;
+  margin-left: 0 !important;
+}
+
+.emergency-section {
+  padding-bottom: 30px !important;
+}
+
+}
+
+.plan-card {
+  color: #1a1a1a !important;
+}
+.plan-card .plan-included p{
+  color: #6c757d !important;
+}
+
+#editionsTabs button{
+  padding: 7px 30px;
+  border-radius: 50px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  outline: none !important;
+  transition: 0.2s ease;
+}
+
+#editionsTabs button.active{
+    background: linear-gradient(to right, #0b6fc0, #0ae0fc) !important;
+  color: white !important;
+  border: 1px solid transparent !important;
+}
+
+.footer-content button {
+  padding: 7px  0 !important;
 }
