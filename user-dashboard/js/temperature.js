@@ -18,7 +18,7 @@ function initializeTemperatureChart() {
                     barPercentage: 0.4
                 },
                 {
-                    label: 'Fahrenheit (°F)',
+                    label: 'Farenhite (°F)',
                     data: [88, 92, 94, 83, 101, 93, 97, 92, 98, 89, 90 , 103],
                     backgroundColor: '#F97316', // Orange color
                     borderRadius: 8,
