@@ -786,6 +786,8 @@ nav .primary-btn {
 .select-plan-btn button{
     width: 70%  !important;
     margin: auto;
+    border-color: #0b6fc0;
+    color: #0b6fc0;
     transition: 0.2s linear;
     margin-top: 20px;
 }
