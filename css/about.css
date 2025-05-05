@@ -104,6 +104,9 @@ nav .primary-btn {
 
 
 /* Emergency start */
+.emergency-section {
+  background: #f0f8ff !important;
+}
 .about-hero-section {
   padding: 80px 0;
   background: var(--primary-color) !important;
@@ -227,16 +230,18 @@ nav .primary-btn {
 }
 
 .credential-card {
-  background-color: var(--light-color);
+  background-color: white ;
   border-radius: var(--border-radius);
   padding: 20px;
   height: 100%;
   transition: var(--transition);
   box-shadow: var(--box-shadow);
+  border-bottom: 4px solid transparent;
 }
 
 .credential-card:hover {
-  transform: translateY(-5px);
+ transform: translateY(-5px);
+  border-bottom-color: var(--primary-color);
 }
 
 .credential-card i {
@@ -770,4 +775,25 @@ nav .primary-btn {
 
 .footer-content button {
   padding: 7px  0 !important;
+}
+
+.select-plan-btn a{
+  display: flex;
+  justify-content: center;
+  margin: auto !important;
+}
+
+.select-plan-btn button{
+    width: 70%  !important;
+    margin: auto;
+    transition: 0.2s linear;
+    margin-top: 20px;
+}
+
+.select-plan-btn button:hover{
+    /* width: 70%  !important;
+    margin: auto; */
+    background: #0b6fc0 ;
+    color: white;
+    border: 2px solid #0b6fc0;
 }
