@@ -276,3 +276,6 @@ textarea.form-control {
 .contact-link:hover{
   color: #0099cc;
 }
+.iti {
+  width: 100% !important;
+}
