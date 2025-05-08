@@ -56,6 +56,11 @@ h1 {
 }
 
 /* Join Team Box Styles */
+.join-team-box li {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #0099cc;
+}
 .join-team-box {
   margin-top: 40px;
   position: relative;
@@ -144,6 +149,17 @@ label {
   font-size: 16px;
   color: #303030;
   display: block;
+}
+
+.form-select {
+  /* background-color: #0099cc; */
+
+  /* width: 100% !important; */
+  border: 1px solid #0099cc;
+  color: #353535;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .form-control {
