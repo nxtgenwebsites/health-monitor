@@ -59,7 +59,8 @@ h1 {
 .join-team-box li {
   font-size: 14px;
   margin-top: 10px;
-  color: #0099cc;
+  color: #002147;
+  font-weight: 400;
 }
 .join-team-box {
   margin-top: 40px;
