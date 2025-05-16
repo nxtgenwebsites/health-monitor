@@ -924,7 +924,7 @@
                     <h4>Grant Access</h4>
                 </a>
             </div>
-            <div class="user-info mt-3 text-center my-4">
+            <div class="user-info mt-3 text-center my-4" id="user-details">
                 <h2>Brandon Peters</h2>
                 <h5>Lagos, Nigeria | Male | June 28, 1985</h5>
             </div>
@@ -1522,11 +1522,13 @@
                 patientLink.classList.add('d-none');
                 normalMonitorsMenu.classList.add('d-none');
                 normalMonitorsMobile.classList.add('d-none');
+                document.getElementById('user-details').classList.remove('d-none');
             } else {
                 patientDropDown.classList.add('d-none');
                 cdhaProfile.classList.add('d-lg-none');
                 dhaMonitorsMenu.classList.add('d-none');
                 dhaMonitorsMobile.classList.add('d-none');
+                document.getElementById('user-details').classList.add('d-none');
             }
 
         let inactivityTime = 120000;

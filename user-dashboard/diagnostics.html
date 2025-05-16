@@ -909,7 +909,7 @@
         <div class="main-content">
 
             <div class="welcome-box mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex flex-wrap flex-md-row justify-content-between align-items-center mb-4">
                     <h4 class="text-primary">Diagnoser</h4>
                     <a href="symptom-viewer.html">
                         <button class="symptom-viewer-btn bg-white">
@@ -1231,15 +1231,15 @@
         const addVideoPupup = document.getElementById('add-2-popup');
         const addImgClose = document.getElementById('add-close-btn');
 
-        addVideo.addEventListener(('click'), () => {
-            addVideoPupup.classList.remove('d-none')
-        })
+        // addVideo.addEventListener(('click'), () => {
+        //     addVideoPupup.classList.remove('d-none')
+        // })
 
-        addVideoPupup.addEventListener(('click'), (e) => {
-            if (e.target === addVideoPupup) {
-                addVideoPupup.classList.add('d-none')
-            }
-        })
+        // addVideoPupup.addEventListener(('click'), (e) => {
+        //     if (e.target === addVideoPupup) {
+        //         addVideoPupup.classList.add('d-none')
+        //     }
+        // })
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
