@@ -31,8 +31,9 @@
   }
 
 .navbar-brand img {
-  width: 170px !important;
-  height: 160px !important;
+  width: 180px !important;
+  height: 70px !important;
+  margin-top: 15px;
 }
 
   .trustpilot img {
@@ -388,6 +389,7 @@
   }
 
 .navbar-brand img {
+    margin-top: 15px;
   width: 120px !important;
   height: 110px !important;
 }
@@ -412,8 +414,9 @@
 
 @media (max-width: 425px) {
 .navbar-brand img {
-  width: 110px !important;
-  height: 100px !important;
+  width: 180px !important;
+  height: 70px !important;
+  margin-top: 15px;
 }
 
     .trustpilot img {
@@ -531,8 +534,9 @@
 
 @media (max-width: 390px) {
   .navbar-brand img {
-  width: 110px !important;
-  height: 100px !important;
+  width: 120px !important;
+  height: 55px !important;
+  margin-top: 15px;
 }
 
     .trustpilot img {

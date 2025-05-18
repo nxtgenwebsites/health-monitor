@@ -35,7 +35,7 @@ body {
   transition: 0.2s ease;
 }
 
-.register-btn{
+.register-btn {
   background: linear-gradient(to right, #0b6fc0, #0ae0fc) !important;
   color: white !important;
   border: 1px solid transparent !important;
@@ -54,7 +54,7 @@ body {
   align-items: center;
   background: url("../assets/images/loading\ bg\ gradient.svg") bottom no-repeat;
   background-size: cover;
-    z-index: 10000;
+  z-index: 10000;
 }
 
 @keyframes zoomIn {
@@ -89,7 +89,7 @@ body {
   z-index: 100;
 }
 
-.cookies-banner  p{
+.cookies-banner p {
   /* display: none; */
   font-size: 14px;
 }
@@ -186,8 +186,9 @@ body {
 
 /* Navbar Start*/
 .navbar-brand img {
-  width: 190px !important;
-  height: 180px !important;
+  width: 230px !important;
+    margin-top: 15px;
+  height: 90px !important;
 }
 
 .trustpilot img {
