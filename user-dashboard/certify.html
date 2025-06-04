@@ -4,18 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCentreApp | CareConnect</title>
+    <title>HealthCentreApp | Access Control</title>
     <link rel="shortcut icon" href="../assets/images/logo loading screen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/care-request.css">
+    <link rel="stylesheet" href="css/certify.css">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/share.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <style>
-        /* Font Imports */
-    </style>
-</head>
 
 <body>
     <!-- Header -->
@@ -158,50 +153,61 @@
             <!-- User Dropdown (visible on desktop) -->
             <!-- User Dashborad User Dropdown -->
             <div class="dropdown d-none d-lg-block" id="user-profile">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
                     <img src="assets/1.png" alt="" class="user-avatar">
                     <span class="d-none d-lg-inline">Bohdan Peter</span>
                 </div>
                 <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
                             <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
                             Profile
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Sponsorship
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
                             <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
                             Print
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
                             <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
                             Password & 2FA
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/national-policies.html">
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
                             Certify
                         </a></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/privacy-policy.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/privacy-policy.html">
                             <i class="bi bi-shield-check text-muted" style="font-size: 20px;"></i>
                             Privacy Policy
                         </a></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/reviews.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/reviews.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Reviews
                         </a></li>
@@ -209,13 +215,15 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CdHP
                         </a>
                     </li>
@@ -223,37 +231,46 @@
             </div>
             <!-- Certified Digital Health Associates Dashborad User Dropdown -->
             <div class="dropdown d-none d-lg-block" id="cdha-profile">
-                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" style="cursor: pointer;">
+                <div class="dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+                    style="cursor: pointer;">
                     <img src="assets/1.png" alt="" class="user-avatar">
                     <span class="d-none d-lg-inline">Bohdan Peter</span>
                 </div>
                 <ul class="dropdown-menu shadow" style="width: 313px; padding: 16px; border-radius: 0px; border: none;">
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-profile.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-profile.html">
                             <i class="bi bi-person-circle text-muted" style="font-size: 20px;"></i>
                             Profile
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/new-sponsorship.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/new-sponsorship.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Sponsorship
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-print.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-print.html">
                             <i class="bi bi-printer text-muted" style="font-size: 20px;"></i>
                             Print
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-change-pin.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-change-pin.html">
                             <i class="bi bi-key text-muted" style="font-size: 20px;"></i>
                             Password & 2FA
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/remote-access.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/remote-access.html">
                             <i class="bi bi-shield-lock text-muted" style="font-size: 20px;"></i>
                             Access Control
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/national-policies.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/national-policies.html">
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-in.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-in.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 37.5V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V20.8333M8.33301 29.1667H27.083"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -262,8 +279,10 @@
                             </svg>
                             Transfer In
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/dha-transfer-out.html">
-                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/dha-transfer-out.html">
+                            <svg width="20" height="20" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M8.33301 39.5833V43.75H41.6663V14.5833L24.9997 6.25L8.33301 14.5833V18.75M27.083 29.1667H8.33301"
                                     stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -272,21 +291,25 @@
                             </svg>
                             Transfer Out
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
                             Certify
                         </a></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/privacy-policy.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/privacy-policy.html">
                             <i class="bi bi-shield-check text-muted" style="font-size: 20px;"></i>
                             Privacy Policy
                         </a></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/reviews.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/reviews.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Reviews
                         </a></li>
@@ -294,13 +317,15 @@
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-            
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
                             Delete Account
                         </a></li>
                     <li class="border-top mt-2 pt-2">
-                        <a class="dropdown-item py-2 text-primary fw-semibold" href="/user-dashboard/upgrade-to-dha.html">
+                        <a class="dropdown-item py-2 text-primary fw-semibold"
+                            href="/user-dashboard/upgrade-to-dha.html">
                             Upgrade to CdHP
                         </a>
                     </li>
@@ -349,36 +374,40 @@
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
-    
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monitors.html">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
                             System
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
                             Certify
                         </a></li>
-    
+
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/privacy-policy.html">
                             <i class="bi bi-shield-check text-muted" style="font-size: 20px;"></i>
                             Privacy Policy
                         </a></li>
-    
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/reviews.html">
+
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/reviews.html">
                             <i class="bi bi-star text-muted" style="font-size: 20px;"></i>
                             Reviews
                         </a></li>
-    
+
                     <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
                             Share link
                         </button></li>
-    
+
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
                             href="/user-dashboard/user-delete-acc.html">
                             <i class="bi bi-trash text-muted" style="font-size: 20px;"></i>
@@ -395,6 +424,8 @@
         </div>
     </div>
 
+
+
     <!-- Mobile Profile Menu Offcanvas -->
     <div class="offcanvas offcanvas-start sidebar-menu" id="sidebar-menu" tabindex="-1"
         style="background-color: white; height: auto; top: 70px; width: 80%; max-width: 300px;" aria-hidden="true">
@@ -404,8 +435,8 @@
                 <!-- Menu Items -->
                 <a href="/user-dashboard/overview.html">
                     <div class="m-menu-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#9197B3"
-                            class="icon m-sidebar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                            fill="#9197B3" class="icon m-sidebar-icon">
                             <g clip-path="url(#clip0_1304_4047)">
                                 <path
                                     d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.80429 6.05357 7.92893 7.92893C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.80429 23.9464 12.3478 25 15 25ZM20.625 9.375L17.5 17.5L9.375 20.625L12.5 12.5L20.625 9.375ZM15 16.25C15.3315 16.25 15.6495 16.1183 15.8839 15.8839C16.1183 15.6495 16.25 15.3315 16.25 15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15C13.75 15.3315 13.8817 15.6495 14.1161 15.8839C14.3505 16.1183 14.6685 16.25 15 16.25Z"
@@ -420,7 +451,7 @@
                         <span class="menu-text">Dashboard</span>
                     </div>
                 </a>
-    
+
                 <a href="/user-dashboard/emergency.html">
                     <div class="m-menu-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -441,7 +472,7 @@
                         <span class="menu-text">Emergency</span>
                     </div>
                 </a>
-    
+
                 <a href="/user-dashboard/remote-care.html">
                     <div class="m-menu-item">
                         <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -463,11 +494,11 @@
                                 </clipPath>
                             </defs>
                         </svg>
-    
+
                         <span class="menu-text">Remote Care</span>
                     </div>
                 </a>
-    
+
                 <!-- Symptom Checker Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -494,11 +525,11 @@
                     <ul class="custom-bullets">
                         <li><a href="/user-dashboard/manage-care-requests.html"
                                 class="dropdown-item-custom">CareRequests</a></li>
-    
+
                         <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                     </ul>
                 </div>
-    
+
                 <a href="/user-dashboard/manage-careConnect.html">
                     <div class="menu-item">
                         <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
@@ -506,7 +537,7 @@
                         <span class="menu-text">CareConnect</span>
                     </div>
                 </a>
-    
+
                 <!-- HealthCentreApps Dropdown -->
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
@@ -555,7 +586,7 @@
                                     class="dropdown-item-custom">Appointments</a></li>
                         </ul>
                     </div>
-    
+
                     <div id="normal-monitors-mobile">
                         <ul class="custom-bullets">
                             <li>
@@ -586,13 +617,14 @@
                                 <a href='/user-dashboard/medication.html' class="dropdown-item-custom">Medications</a>
                             </li>
                             <li>
-                                <a href='/user-dashboard/appointments.html' class="dropdown-item-custom">Appointments</a>
+                                <a href='/user-dashboard/appointments.html'
+                                    class="dropdown-item-custom">Appointments</a>
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
-    
+
                 <a href="/user-dashboard/find-dha.html">
                     <div class="menu-item">
                         <img src="/user-dashboard/assets/healthcare.png" class="icon sidebar-icon" style="opacity: 50%;"
@@ -600,7 +632,7 @@
                         <span class="menu-text">CdHPs</span>
                     </div>
                 </a>
-    
+
                 <div class="menu-item-dropdown m-menu-dropdown">
                     <div class="menu-icon-wrapper">
                         <svg width="25" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -620,12 +652,12 @@
                 </div>
                 <div class="dropdown-content m-dropdown-content ps-4">
                     <ul class="custom-bullets">
-                        <li><a href="/user-dashboard/health-info.html" class="dropdown-item-custom">Medical Fact Checker</a>
-                        </li>
+                        <li><a href="/user-dashboard/health-info.html" class="dropdown-item-custom">Medical Fact
+                                Checker</a></li>
                         <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Support</a></li>
                     </ul>
                 </div>
-    
+
                 <a href="/user-dashboard/complaints.html">
                     <div class="menu-item">
                         <img src="/user-dashboard/assets/report.png" class="icon sidebar-icon" style="opacity: 50%;"
@@ -633,7 +665,7 @@
                         <span class="menu-text">Complaints</span>
                     </div>
                 </a>
-    
+
                 <a href="https://nxtgenwebsites.com/healthcentreapp/">
                     <div class="menu-item">
                         <svg class="icon sidebar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -651,7 +683,7 @@
                         <span class="menu-text">Community</span>
                     </div>
                 </a>
-    
+
             </div>
             <button class="m-log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -668,7 +700,7 @@
             <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="bi bi-chevron-left"></i>
             </button>
-        
+
             <!-- Menu Items -->
             <a href="/user-dashboard/overview.html">
                 <div class="menu-item active">
@@ -688,7 +720,7 @@
                     <span class="menu-text">Dashboard</span>
                 </div>
             </a>
-        
+
             <a href="/user-dashboard/emergency.html">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"
@@ -709,12 +741,12 @@
                     <span class="menu-text">Emergency</span>
                 </div>
             </a>
-        
+
             <!-- Patient Dropdown -->
             <div class="menu-item-dropdown" id="patient-drop-down">
                 <div class="menu-icon-wrapper">
-                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 46 47"
-                        fill="none">
+                    <svg class="icon sidebar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24"
+                        viewBox="0 0 46 47" fill="none">
                         <path
                             d="M17.0864 19.8076C21.2804 19.8076 24.6803 16.4077 24.6803 12.2136C24.6803 8.01957 21.2804 4.61963 17.0864 4.61963C12.8923 4.61963 9.49237 8.01957 9.49237 12.2136C9.49237 16.4077 12.8923 19.8076 17.0864 19.8076Z"
                             stroke="#9197B3" stroke-width="1.82256"></path>
@@ -739,8 +771,8 @@
                     </li>
                 </ul>
             </div>
-        
-        
+
+
             <!-- Symptom Checker Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -765,19 +797,21 @@
             </div>
             <div class="dropdown-content ps-4">
                 <ul class="custom-bullets">
-                    <li><a href="/user-dashboard/manage-care-requests.html" class="dropdown-item-custom">CareRequests</a></li>
-        
+                    <li><a href="/user-dashboard/manage-care-requests.html"
+                            class="dropdown-item-custom">CareRequests</a></li>
+
                     <li><a href="/user-dashboard/diagnostics.html" class="dropdown-item-custom">Diagnoser</a></li>
                 </ul>
             </div>
-        
+
             <a href="/user-dashboard/manage-careConnect.html">
                 <div class="menu-item">
-                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <img src="/user-dashboard/assets/system.png" class="icon sidebar-icon" style="opacity: 50%;"
+                        alt="a">
                     <span class="menu-text">CareConnect</span>
                 </div>
             </a>
-        
+
             <!-- HealthCentreApps Dropdown -->
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
@@ -825,7 +859,7 @@
                                 class="dropdown-item-custom">Appointments</a></li>
                     </ul>
                 </div>
-        
+
                 <div id="normal-monitors-menu">
                     <ul class="custom-bullets">
                         <li>
@@ -857,16 +891,17 @@
                         </li>
                     </ul>
                 </div>
-        
+
             </div>
-        
+
             <a href="/user-dashboard/find-dha.html">
                 <div class="menu-item">
-                    <img src="/user-dashboard/assets/healthcare.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <img src="/user-dashboard/assets/healthcare.png" class="icon sidebar-icon" style="opacity: 50%;"
+                        alt="a">
                     <span class="menu-text">CdHPs</span>
                 </div>
             </a>
-        
+
             <div class="menu-item-dropdown">
                 <div class="menu-icon-wrapper">
                     <svg class="icon sidebar-icon" width="25" height="24" viewBox="0 0 24 24" fill="none"
@@ -892,16 +927,17 @@
                     <li><a href="/user-dashboard/tech-support.html" class="dropdown-item-custom">Support</a></li>
                 </ul>
             </div>
-        
+
             <a href="/user-dashboard/complaints.html">
                 <div class="menu-item">
-                    <img src="/user-dashboard/assets/report.png" class="icon sidebar-icon" style="opacity: 50%;" alt="a">
+                    <img src="/user-dashboard/assets/report.png" class="icon sidebar-icon" style="opacity: 50%;"
+                        alt="a">
                     <span class="menu-text">Complaints</span>
                 </div>
             </a>
-        
-        
-        
+
+
+
             <a href="https://nxtgenwebsites.com/healthcentreapp/">
                 <div class="menu-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -922,14 +958,35 @@
                     <span class="menu-text">Community</span>
                 </div>
             </a>
-        
+
+            <!-- Communities Dropdown -->
+            <!-- <div class="menu-item-dropdown">
+                <div class="menu-icon-wrapper">
+
+                    <span class="menu-text">Communities</span>
+                </div>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+            <div class="dropdown-content ps-4">
+                <ul class="custom-bullets">
+                    <li><a href="/user-dashboard/care-providers.html" class="dropdown-item-custom">Care Providers</a>
+                    </li>
+                    </li>
+                    <li><a href="/user-dashboard/reviews.html" class="dropdown-item-custom">Reviews</a></li>
+                    <li><a href="/user-dashboard/privacy-policy.html" class="dropdown-item-custom">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div> -->
+
+
+
             <!-- <a href="/user-dashboard/user-transfer.html">
-                                <div class="menu-item">
-                                    <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
-                                    <span class="menu-text">Transfers</span>
-                                </div>
-                            </a> -->
-        
+                <div class="menu-item">
+                    <img src="assets/transfer-horizontal-svgrepo-com 1.svg" alt="" class="sidebar-icon">
+                    <span class="menu-text">Transfers</span>
+                </div>
+            </a> -->
+
             <!-- Logout Button -->
             <button class="log-out-btn">
                 <i class="bi bi-box-arrow-right me-2"></i>
@@ -937,164 +994,42 @@
             </button>
         </div>
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
         <!-- Main Content -->
         <div class="main-content">
-            <div class="care-pages">
-                <div class="row row-gap-2">
-                    <div class="col-6 col-md-3 text-center">
-                        <a href="/user-dashboard/care-connect.html">
-                            <h4 class="active text-decoration-underline">CareConnect</h4>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 text-center">
-                        <a href="/user-dashboard/add-medical-records.html">
-                            <h4>Add Medical Records</h4>
-                        </a>
-
-                    </div>
-                    <div class="col-6 col-md-3 text-center">
-                        <a href="/user-dashboard/preview-care-connect.html">
-                            <h4>Preview CareConnect</h4>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 text-center">
-                        <a href="/user-dashboard/care-connect-access.html">
-                            <h4>Grant Access</h4>
-                        </a>
-                    </div>
-                </div>
+            <div class="mb-4 py-2 px-2">
+                <h3 class="text-primary">Certificate</h3>
             </div>
-            <div class="user-info mt-3 text-center mt-4" id="user-details">
-                <h2>Brandon Peters</h2>
-                <h5>Lagos, Nigeria | Male | June 28, 1985</h5>
-            </div>
-            <div class="bg-white p-4 rounded-2 mt-4">
-                <div class="row">
-                    <div class="col-12">
-                        <textarea placeholder="In your own words state your symptoms" class="form-control" id=""
-                            cols="20" rows="5"></textarea>
+            <div class="container">
+                <div class="row row-gap-4">
+                    <div class="col-12 col-md-6">
+                        <img src="assets/Certificate.png" width="100%" class="img-fluid" alt="">
                     </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">When did your symptoms start?</h5>
-                        <input type="date" id="startDate" class="form-control" />
-                    </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">How long have you had these symptoms?</h5>
-                        <input id="duration" class="form-control text-area" readonly disabled />
-                    </div>
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">Have you had this symptom before?</h5>
-                        <select class="form-select" id="symptoms-dropdown">
-                            <option value="" disabled selected>Select</option>
-                            <option value="yes" class="form-option">Yes</option>
-                            <option value="no" class="form-option">No</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12 col-md-6 inp-container">
-                        <h5 class="my-2">How long did it last?</h5>
-                        <input type="text" class="form-control symptom-dependent" disabled="">
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What treatment did you take for those previous symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">How would you rate your pain on a scale of 1 to 10 (10 being the highest)?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Describe any changes in the symptom since it started.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What do you think caused your symptoms?</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Describe any existing health issues.</h5>
-                        <textarea placeholder="Write your answer here." class="symptom-dependent form-control"
-                            disabled></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">State any medication you have?</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">State any allergies you have.</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">Give detail of any illness in the last 4 weeks.</h5>
-                        <textarea placeholder="Write your answer here."
-                            class="medication-dependent form-control"></textarea>
-                    </div>
-
-                    <div class="col-12 inp-container">
-                        <h5 class="my-2">What help do you need with this symptoms</h5>
-                        <textarea placeholder="Write your answer here." class="form-control text-area"></textarea>
-                    </div>
-                    <div class="col-12 chk-container">
-                        <h5 class="my-2">Do you have any images of your symptoms?</h5>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="form-check mb-0">
-                                <input type="radio" name="symptoms-images" class="form-check-input" id="yes">
-                                <label class="form-check-label" for="yes">Yes</label>
-                            </div>
-                            <div class="form-check mb-0">
-                                <input type="radio" name="symptoms-images" class="form-check-input" id="no">
-                                <label class="form-check-label" for="no">No</label>
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <div class="card py-4 px-4">
+                                <div >
+                                    <label class="text-muted mb-1">Date Issued</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-muted mb-1">Assessment Score</label>
+                                    <input type="number" class="form-control" max="100" min="0"  placeholder="90/100">
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-muted mb-1">Notes</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mt-3">
+                                    <div class="upload-box">
+                                        <input type="file" id="file-upload" hidden="">
+                                        <label for="file-upload" class="upload-label">
+                                            <i class="bi bi-upload"></i>
+                                            <span class="upload-text">Upload</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-3 d-flex gap-3 d-none" id="upload-symptoms-images">
-                        <div class="upload-box">
-                            <i class="bi bi-cloud-upload fs-3"></i>
-                            <h6>Click to <br> upload</h6>
-                            <input class="d-none" type="file" accept="image/*">
-                        </div>
-                        <div class="upload-box">
-                            <i class="bi bi-plus-circle fs-3"></i>
-                            <h6 class="mt-2">Add More</h6>
-                            <input class="d-none" type="file" accept="image/*">
-                        </div>
-                    </div>
-                    <div class="col-12 chk-container mt-4">
-                        <h5 class="my-2">In order for healthcare professionals to understand your situation better, it
-                            is advisable to add your last 4 weeks
-                            health monitor readings with this CareRequest, are you happy for them to be included?</h5>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="form-check mb-0">
-                                <input type="radio" name="remote-care" class="form-check-input" id="yes">
-                                <label class="form-check-label" for="yes">Yes</label>
-                            </div>
-                            <div class="form-check mb-0">
-                                <input type="radio" name="remote-care" class="form-check-input" id="no">
-                                <label class="form-check-label" for="no">No</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5 d-flex gap-4">
-                        <button class="primary-btn" id="submit-btn">Save</button>
-                        <a href="/user-dashboard/upload-details.html">
-                            <button class="primary-btn">Next</button>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -1113,25 +1048,71 @@
                 </div>
             </div>
         </div>
+        <!-- Access Confirmation Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="access-confirmation-popup">
+            <div class="access-box bg-white rounded position-relative ">
+                <h5 class="my-3">New Access Control Confirmation</h5>
+                <div class="w-100">
+                    <p class="my-3 second-text">I have <span class="highlight-text">granted access</span> to view my
+                        health records.</p>
+                </div>
+                <p class="my-3"><span class="highlight-text">I confirm</span> that I am aware of the implications of
+                    granting this access and understand my right to extend, edit, or revoke this
+                    access at any time.</p>
+                <p class="my-3 w-100">Please send this unique access code xyz to XYZ via this email xyz@xyz.com.</p>
+
+                <div class="access-token-code">
+                    <h6>HP2 M33</h6>
+                </div>
+                <div class="mt-3 d-flex gap-4 justify-content-center">
+                    <button class="btn access-popup-btn" id="access-confirmation-proceed">Proceed</button>
+                    <button class="btn access-popup-btn" id="access-confirmation-edit">Edit</button>
+                </div>
+            </div>
+        </div>
+        <!-- Access Granted Popup -->
+        <div class="popup d-none justify-content-center align-items-center" id="access-granted-popup">
+            <div class="granted-box bg-white rounded text-center position-relative ">
+                <h5 class="mt-3">Access Granted!</h5>
+                <p>Dr. Kewain can now view your profile..</p>
+                <div class="mt-4">
+                    <div class="d-flex w-75 m-auto justify-content-between">
+                        <h6>Starting From</h6>
+                        <h6>04 Jan, 2024</h6>
+                    </div>
+                    <div class="d-flex w-75 m-auto justify-content-between">
+                        <h6>Ends On</h6>
+                        <h6>04 Jan, 2024</h6>
+                    </div>
+                </div>
+                <div class="close-btn">
+                    <button class="btn border-0" type="submit" id="granted-close-btn"><img src="assets/icons/close.svg"
+                            alt="close"></button>
+                </div>
+            </div>
+        </div>
         <!-- Share Profile Popup -->
         <div class="popup d-none justify-content-center align-items-center" id="share-profile-popup">
             <div class="profile-box bg-white rounded text-center position-relative w-100">
+                <h5 class="mt-3">Share My Profile</h5>
                 <div
-                    class="profile-link w-100 mt-5 d-flex flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
-                    <h6>Copy Link</h6>
+                    class="profile-link w-100 mt-5 d-flex align-items-center flex-md-row flex-column gap-3 align-items-center justify-content-lg-between">
                     <h6 id="profile-url">https://health-monitor-sa.vercel.app/user-dashboard/user-profile.html</h6>
                     <div class="d-flex">
                         <button class="btn py-0 bg-white border-0" id="prfile-copy-btn">
                             <img src="assets/copy.svg" alt="icon">
                         </button>
-                        <div class="dropdown">
-                            <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="assets/share.svg" alt="icon">
-                            </button>
-                            <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Forward</a></li>
-                            </ul>
+                        <div>
+
+                            <div class="dropdown">
+                                <button class="btn py-0 bg-white border-0 " id="dropdownMenuButton"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/share.svg" alt="icon">
+                                </button>
+                                <ul class="dropdown-menu profle-drop-down" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Forward</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1205,77 +1186,55 @@
             </div>
         </div>
     </div>
-    <div class="modal fade show d-none" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel"
-        aria-modal="true" role="dialog" style="display: block;">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content preview-modal">
-                <!-- Close button -->
-                <button type="button" id="btn-close preview" class="btn-close preview-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-
-                <!-- Modal body -->
+    <!-- <div class="modal fade" id="bloodPressureAlert" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
+            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
                 <div class="modal-body p-4">
-                    <!-- Title -->
-                    <h2 class="preview-title">Panadol - Completed</h2>
-
-                    <!-- Prescribed by -->
-                    <p class="preview-text">Prescribed by Dr. Mannu</p>
-
-                    <!-- Date Range -->
-                    <p class="preview-text">
-                        <span class="fst-italic">From</span> Tues, 12 June, 2024
-                        <span class="fst-italic">To</span> Tues, 12 July, 2024
-                    </p>
-
-                    <!-- History Section -->
-                    <div class="preview-history">
-                        <h3 class="preview-history-title">History</h3>
-
-                        <div class="timeline-entries">
-                            <div class="timeline-entry">
-                                <span>Tues, 12 June, 2024</span>
-                                <span>11:30 am</span>
-                            </div>
-                            <div class="timeline-entry">
-                                <span>Tues, 17 June 2024</span>
-                                <span>12:00 pm</span>
-                            </div>
-                            <div class="timeline-entry">
-                                <span>Tues, 25 June 2024</span>
-                                <span>01:30 pm</span>
-                            </div>
-                            <div class="timeline-entry fst-italic" id="addagain">
-                                Add Record
-                            </div>
-                            <div class="w-100 d-flex justify-content-between align-items-center">
-                                <button class="popup-btn mt-4">Live</button>
-                                <div class="preview-actions">
-                                    <a href="add-a-medicine.html">
-                                        <button class="action-btn">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                    </a>
-                                    <div class="share-icon">
-                                        <i class="bi bi-share"></i>
-                                        <div class="share-dropdown">
-                                            <button class="share-dropdown-item">Forward</button>
-                                            <button class="share-dropdown-item">Print</button>
-                                            <button class="share-dropdown-item">Download Pdf</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center" style="margin-top: 25px;">
+                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px; margin-bottom: 30px;">
+                            Alert: Blood Pressure Threshold Exceeded
+                        </h2>
+                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333;">
+                            Your blood pressure readings have surpassed the threshold.
+                            <br>
+                            Immediate action is required. Please contact your healthcare 
+                            provider or seek medical attention immediately.
+                        </p>
+                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
+                                style="background-color: white; color: #FF4D67; border: 2px solid #FF4D67; font-size: 14px;margin-top: 10px;"
+                                onclick="switchModals()">
+                            Call Now
+                        </button>
                     </div>
-
-                    <!-- Action buttons -->
-
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="noPairedDeviceAlert" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 572px; margin: auto;">
+            <div class="modal-content border-0 rounded-4" style="background-color: #ffffff; height: 282px; flex-shrink: 0;">
+                <div class="modal-body p-4">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center" style="margin-top: 30px;">
+                        <h2 class="modal-title fw-bold mb-3" style="color: #FF4D67; font-size: 25px;">
+                            No Paired Device!
+                        </h2>
+                        <p class="mb-3" style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
+                            You haven't paired any device to Call your Remote Care DHA.
+                            <br>
+                            Please connect a device to make a call.
+                        </p>
+                        <button class="btn btn-lg px-5 rounded-pill fw-semibold" 
+                                style="background-color: white; color: #0C75C2; border: 2px solid #0C75C2; font-size: 14px; margin-top: 15px;"
+                                data-bs-dismiss="modal">
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- Share Message start -->
     <div class="share-message">
         <div class="share-card p-3">
@@ -1294,88 +1253,28 @@
             </div>
         </div>
     </div>
-    <!-- Share Message end -->
     <script>
-        document.querySelectorAll(".upload-box").forEach(box => {
-            let input = box.querySelector("input");
-
-            box.addEventListener("click", () => {
-                input.click();
-            });
-
-            input.addEventListener("change", (event) => {
-                const file = event.target.files[0];
-            });
-        });
-
         document.addEventListener("DOMContentLoaded", function () {
-            const yesRadio = document.getElementById("yes");
-            const noRadio = document.getElementById("no");
-            const uploadContainer = document.getElementById("upload-symptoms-images");
+            const offcanvasElements = document.querySelectorAll(".offcanvas");
 
-            yesRadio.addEventListener("change", function () {
-                uploadContainer.classList.remove("d-none");
-            });
-
-            noRadio.addEventListener("change", function () {
-                uploadContainer.classList.add("d-none");
-            });
-        });
-
-
-        document.getElementById("symptoms-dropdown").addEventListener("change", function () {
-            let isYesSelected = this.value === "yes";
-            let dependentInputs = document.querySelectorAll(".symptom-dependent");
-
-            dependentInputs.forEach(input => {
-                input.disabled = !isYesSelected; // Enable if "Yes", Disable if "No"
+            offcanvasElements.forEach((offcanvas) => {
+                offcanvas.addEventListener("show.bs.offcanvas", function () {
+                    offcanvasElements.forEach((oc) => {
+                        if (oc !== this) {
+                            const bsOffcanvas = bootstrap.Offcanvas.getInstance(oc);
+                            if (bsOffcanvas) bsOffcanvas.hide();
+                        }
+                    });
+                });
             });
         });
 
-        document.getElementById("startDate").addEventListener("change", function () {
-            let startDate = new Date(this.value);
-            let today = new Date();
-            today.setHours(0, 0, 0, 0); // Ensure time doesn't affect comparison
-
-            let durationInput = document.getElementById("duration");
-
-            if (startDate > today) {
-                alert("Future dates cannot be selected.");
-                this.value = "";
-                durationInput.value = "";
-                durationInput.disabled = true;
-                return;
-            }
-
-            durationInput.disabled = false; // Enable input
-
-            let years = today.getFullYear() - startDate.getFullYear();
-            let months = today.getMonth() - startDate.getMonth();
-            let days = today.getDate() - startDate.getDate();
-
-            if (days < 0) {
-                months--;
-                let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-                days += prevMonth.getDate();
-            }
-
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-
-            let durationText = "";
-            if (years > 0) durationText += years + (years > 1 ? " years " : " year ");
-            if (months > 0) durationText += months + (months > 1 ? " months " : " month ");
-            if (days > 0) durationText += days + (days > 1 ? " days" : " day");
-
-            durationInput.value = durationText.trim();
-        });
 
         function redirectToPatientSearch(pageURL) {
             localStorage.setItem("redirectAfterPopup", pageURL);
             window.location.href = "/user-dashboard/dha-search-patient.html";
         }
+
 
         const cdhaProfile = document.getElementById('cdha-profile');
         const userProfile = document.getElementById('user-profile');
@@ -1396,13 +1295,11 @@
             patientLink.classList.add('d-none');
             normalMonitorsMenu.classList.add('d-none');
             normalMonitorsMobile.classList.add('d-none');
-            document.getElementById('user-details').classList.remove('d-none');
         } else {
             patientDropDown.classList.add('d-none');
             cdhaProfile.classList.add('d-lg-none');
             dhaMonitorsMenu.classList.add('d-none');
             dhaMonitorsMobile.classList.add('d-none');
-            document.getElementById('user-details').classList.add('d-none');
         }
 
         let inactivityTime = 120000;
@@ -1425,22 +1322,28 @@
 
         resetTimer();
 
-        // Share Message
-        const previewBtn = document.getElementById('preview-button');
-
-
-        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
-        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
-
         const remoteCareBtn = document.querySelectorAll('.remote-care-btn');
+        const accessPopup = document.getElementById('access-confirmation-popup');
+        const grantedPopup = document.getElementById('access-granted-popup');
         const pairDevicePopop = document.getElementById('paired-device-popup');
         const pairedBackBtn = document.getElementById('paired-black-btn');
         const pairedCloseBtn = document.getElementById('paired-close-btn');
-
+        const accessBtn = document.getElementById('access-granted-btn');
+        const grantedCloseBtn = document.getElementById('granted-close-btn');
+        const accessProceed = document.getElementById('access-confirmation-proceed');
+        const accessEdit = document.getElementById('access-confirmation-edit');
+        const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
+        const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const shareProfilePopup = document.getElementById('share-profile-popup');
         const shareProfileBtn = document.getElementById('share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
 
+        for (let i = 0; i < remoteCareBtn.length; i++) {
+            remoteCareBtn[i].addEventListener('click', () => {
+                pairDevicePopop.classList.remove('d-none');
+                pairDevicePopop.classList.add('d-flex');
+            })
+        }
 
         ProfileCloseBtn.addEventListener('click', () => {
             shareProfilePopup.classList.toggle('d-none')
@@ -1450,23 +1353,37 @@
             shareProfilePopup.classList.remove('d-none');
             shareProfilePopup.classList.add('d-flex');
         })
+        accessBtn.addEventListener('click', () => {
+            accessPopup.classList.remove('d-none');
+            accessPopup.classList.add('d-flex');
+        })
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const dropdownMenu = document.querySelector(".menu-item-dropdown .dropdown-menu");
-            if (dropdownMenu) {
-                dropdownMenu.classList.add("show");
-            }
+        accessProceed.addEventListener('click', () => {
+            grantedPopup.classList.remove('d-none');
+            grantedPopup.classList.add('d-flex');
+        })
 
-            const arrowIcon = document.querySelector(".menu-item-dropdown .main-arrow");
-            if (arrowIcon) {
-                arrowIcon.style.transform = "rotate(90deg)";
+        accessPopup.addEventListener('click', (e) => {
+            if (e.target === accessPopup) {
+                accessPopup.classList.add('d-none');
             }
-        });
+        })
+        grantedCloseBtn.addEventListener('click', () => {
+            grantedPopup.classList.add('d-none');
+        })
+        pairedBackBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        pairedCloseBtn.addEventListener('click', () => {
+            pairDevicePopop.classList.add('d-none');
+        })
+        accessEdit.addEventListener('click', () => {
+            accessPopup.classList.add('d-none');
+        })
 
         const addImg = document.getElementById('add-1-img');
         const addImgPupup = document.getElementById('add-1-popup');
         const addImgClose = document.getElementById('add-close-btn');
-
 
         addImgPupup.addEventListener(('click'), (e) => {
             if (e.target === addImgPupup) {
@@ -1477,25 +1394,6 @@
         addImg.addEventListener(('click'), () => {
             addImgPupup.classList.remove('d-none')
         })
-
-        addImgClose.addEventListener(('click'), () => {
-            addImgPupup.classList.add('d-none')
-        })
-
-        for (let i = 0; i < remoteCareBtn.length; i++) {
-            remoteCareBtn[i].addEventListener('click', () => {
-                pairDevicePopop.classList.remove('d-none');
-                pairDevicePopop.classList.add('d-flex');
-            })
-        }
-
-        pairedBackBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-        pairedCloseBtn.addEventListener('click', () => {
-            pairDevicePopop.classList.add('d-none');
-        })
-
         const closeButton = document.getElementById("prfile-copy-btn");
         const profileUrl = document.getElementById("profile-url");
 
@@ -1509,12 +1407,11 @@
             alert("Link copied to clipboard.");
         });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/sidebar.js"></script>
     <script src="js/overview.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
 </body>
 
 </html>
