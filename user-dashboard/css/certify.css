@@ -1861,3 +1861,14 @@ body {
     cursor: pointer;
     color: #8B8D97 !important;
 }
+
+.total-gender {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notes-textarea {
+  height: 65px !important;
+}
