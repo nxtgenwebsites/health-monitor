@@ -1872,3 +1872,33 @@ body {
 .notes-textarea {
   height: 65px !important;
 }
+
+.certificate-unlock {
+  /* background-color: ; */
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.unlock-container{
+  text-align: center;
+}
+
+.unlock-container h3{
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.unlock-container i{
+ color: #0959a3;
+ font-size: 3rem;
+ margin-bottom: 20px;
+}
+
+.certificate-container {
+  position: relative;
+}
