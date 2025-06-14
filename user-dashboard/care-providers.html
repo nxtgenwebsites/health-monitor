@@ -190,9 +190,10 @@
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monetization.html ">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
+                            Monetisation
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
@@ -210,7 +211,7 @@
                         </a></li>
                     <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
+                            Refer Someone
                         </button></li>
             
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
@@ -275,9 +276,10 @@
                             </svg>
                             Transfer Out
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monetization.html ">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
+                            Monetisation
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
@@ -295,7 +297,7 @@
                         </a></li>
                     <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
+                            Refer Someone
                         </button></li>
             
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/user-delete-acc.html">
@@ -352,14 +354,10 @@
                             <i class="bi bi-flag text-muted" style="font-size: 20px;"></i>
                             App Version
                         </a></li>
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
+                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
+                            href="/user-dashboard/monetization.html ">
                             <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
-                        </a></li>
-    
-                    <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/monitors.html">
-                            <i class="bi bi-display text-muted" style="font-size: 20px;"></i>
-                            System
+                            Monetisation
                         </a></li>
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3" href="/user-dashboard/certify.html">
                             <i class="bi bi-patch-check text-muted" style="font-size: 20px;"></i>
@@ -379,7 +377,7 @@
     
                     <li><button class="dropdown-item py-2 d-flex align-items-center gap-3" id="share-profile-btn">
                             <i class="bi bi-share text-muted" style="font-size: 20px;"></i>
-                            Share link
+                            Refer Someone
                         </button></li>
     
                     <li><a class="dropdown-item py-2 d-flex align-items-center gap-3"
@@ -1365,10 +1363,10 @@
             normalMonitorsMenu.classList.add('d-none');
             normalMonitorsMobile.classList.add('d-none');
         } else {
-            patientDropDown.classList.add('d-none');
-            cdhaProfile.classList.add('d-lg-none');
-            dhaMonitorsMenu.classList.add('d-none');
-            dhaMonitorsMobile.classList.add('d-none');
+            patientDropDown.classList.remove('d-none');
+            userProfile.classList.add('d-lg-none');
+            normalMonitorsMenu.classList.add('d-none');
+            normalMonitorsMobile.classList.add('d-none');
         }
 
         let inactivityTime = 120000;

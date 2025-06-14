@@ -419,7 +419,7 @@ gap: 10px;
 
 .map-container {
     height: 400px;
-    background-color: #E5E7EB;
+    /* background-color: #E5E7EB; */
     border-radius: 12px;
     margin-bottom: 24px;
 }
@@ -449,7 +449,7 @@ height: calc(100vh - 128px);
 
 .map-container {
 height: 100%;
-background-color: #E5E7EB;
+/* background-color: #E5E7EB; */
 border-radius: 12px;
 }
 
@@ -1774,7 +1774,7 @@ line-height: normal;
 
 .map-container {
     height: 100%;
-    background-color: #E5E7EB;
+    /* background-color: #E5E7EB; */
     border-radius: 12px;
     overflow: hidden;
 }
