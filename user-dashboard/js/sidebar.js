@@ -2,6 +2,7 @@ const shareProfileBtns = document.querySelectorAll('#share-profile-btn');
 const shareProfilePopup1 = document.getElementById('share-profile-popup');
 const ProfileCloseBtn1 = document.getElementById('profile-close-btn');
 
+console.log(ProfileCloseBtn1);
 
 shareProfileBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -11,7 +12,7 @@ shareProfileBtns.forEach((btn) => {
 })
 
 ProfileCloseBtn1.addEventListener('click', () => {
-    shareProfilePopup1.classList.toggle('d-none')
+    shareProfilePopup1.classList.add('d-none');
 })
 
 // Handle all sidebar functionality
