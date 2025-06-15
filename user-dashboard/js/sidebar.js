@@ -1,3 +1,19 @@
+const shareProfileBtns = document.querySelectorAll('#share-profile-btn');
+const shareProfilePopup1 = document.getElementById('share-profile-popup');
+const ProfileCloseBtn1 = document.getElementById('profile-close-btn');
+
+
+shareProfileBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        shareProfilePopup1.classList.remove('d-none');
+        shareProfilePopup1.classList.add('d-flex');
+    })
+})
+
+ProfileCloseBtn1.addEventListener('click', () => {
+    shareProfilePopup1.classList.toggle('d-none')
+})
+
 // Handle all sidebar functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown menu items

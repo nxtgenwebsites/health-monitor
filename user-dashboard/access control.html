@@ -1636,7 +1636,7 @@
         const remoteCareDropdown = document.getElementById('m-remote-care-dropdown');
         const remoteCareDropdownBtn = document.getElementById('remote-care-dropdown');
         const shareProfilePopup = document.getElementById('share-profile-popup');
-        const shareProfileBtn = document.getElementById('share-profile-btn');
+        const shareProfileBtn = document.querySelectorAll('#share-profile-btn');
         const ProfileCloseBtn = document.getElementById('profile-close-btn');
 
         for (let i = 0; i < remoteCareBtn.length; i++) {
@@ -1650,10 +1650,13 @@
             shareProfilePopup.classList.toggle('d-none')
         })
 
-        shareProfileBtn.addEventListener('click', () => {
-            shareProfilePopup.classList.remove('d-none');
-            shareProfilePopup.classList.add('d-flex');
+        shareProfileBtn.forEach((btn) =>{
+            btn.addEventListener('click', () => {
+                shareProfilePopup.classList.remove('d-none');
+                shareProfilePopup.classList.add('d-flex');
+            })
         })
+        
         accessBtn.addEventListener('click', () => {
             accessPopup.classList.remove('d-none');
             accessPopup.classList.add('d-flex');

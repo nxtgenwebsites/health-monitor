@@ -186,9 +186,12 @@ body {
 
 /* Navbar Start*/
 .navbar-brand img {
-  width: 230px !important;
-    margin-top: 15px;
-  height: 90px !important;
+  width: 260px !important;
+  height: 105px !important;
+}
+.footer-img img {
+  width: 260px !important;
+  height: 105px !important;
 }
 
 .trustpilot img {
