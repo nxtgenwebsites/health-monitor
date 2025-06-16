@@ -1837,3 +1837,13 @@ body {
 .underline {
   text-decoration: underline;
 }
+
+/* .text-content{
+  text-align: center !important;
+} */
+
+@media (max-width: 768px) {
+  .text-content{
+    text-align: center !important;
+  }
+}
